@@ -23,7 +23,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
-	public function test(){
+
+	public function welcome() {
+
+	}
+
+	public function testing() {
 		
 	}
 
