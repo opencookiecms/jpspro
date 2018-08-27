@@ -24,6 +24,10 @@ class Welcome extends CI_Controller {
 	}
 
 	public function welcome() {
+
+	}
+
+	public function test() {
 		
 	}
 }
