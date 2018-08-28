@@ -51,7 +51,7 @@
                 <label class="col-sm-2">Tempoh Siap Kerja</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="tempoh" placeholder="Tempoh Siap Kerja"></input>
+                  <input type="text" class="form-control" id="tempoh" placeholder="Tempoh Siap Kerja">
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@
                 <label class="col-sm-3">Harga Dokumen Sebutharga</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="tempoh" placeholder="Harga Dokumen"></input>
+                  <input type="text" class="form-control" id="tempoh" placeholder="Harga Dokumen">
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@
                 <label class="col-sm-3">Tarikh Notis Dikeluarkan</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="notiskeluar"></input>
+                  <input type="date" class="form-control" id="notiskeluar">
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@
                 <label class="col-sm-3">Tarikh Lawat Tapak/Taklimat</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="lawattapak"></input>
+                  <input type="date" class="form-control" id="lawattapak">
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@
                 <label class="col-sm-3">Tarikh Dokumen Mula Dijual</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="docmula"></input>
+                  <input type="date" class="form-control" id="docmula">
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@
                 <label class="col-sm-3">Tarikh Akhir Dokumen Dijual</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="docakhir"></input>
+                  <input type="date" class="form-control" id="docakhir">
                 </div>
               </div>
             </div>
@@ -111,7 +111,7 @@
                 <label class="col-sm-3">Tarikh Sebutharga Ditutup</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="sebuttutup"></input>
+                  <input type="date" class="form-control" id="sebuttutup">
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@
                 <label class="col-sm-3">Jurutera Daerah</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="juruterakanan" placeholder="Jurutera Daerah"></input>
+                  <input type="text" class="form-control" id="juruterakanan" placeholder="Jurutera Daerah">
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@
                 <label class="col-sm-3">Jurutera</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="jurutera" placeholder="Jurutera"></input>
+                  <input type="text" class="form-control" id="jurutera" placeholder="Jurutera">
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@
                 <label class="col-sm-3">Penolong Jurutera Kanan J36</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="penolongkanan" placeholder="Penolong Kanan J36"></input>
+                  <input type="text" class="form-control" id="penolongkanan" placeholder="Penolong Kanan J36">
                 </div>
               </div>
             </div>
@@ -151,7 +151,7 @@
                 <label class="col-sm-3">Penolong Jurutera JA29</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="penolong" placeholder="Penolong Jurutera JA29"></input>
+                  <input type="text" class="form-control" id="penolong" placeholder="Penolong Jurutera JA29">
                 </div>
               </div>
             </div>
@@ -161,13 +161,13 @@
                 <label class="col-sm-3">Vot</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="vot" placeholder="Vot"></input>
+                  <input type="text" class="form-control" id="vot" placeholder="Vot">
                 </div>
 
                 <label class="col-sm-3">Peruntukan</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="peruntukan" placeholder="Negeri"></input>
+                  <input type="text" class="form-control" id="peruntukan" placeholder="Negeri">
                 </div>
               </div>
             </div>
@@ -177,7 +177,7 @@
                 <label class="col-sm-3">Baki Peruntukan Semasa</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="baki" placeholder="Baki Peruntukan Semasa"></input>
+                  <input type="text" class="form-control" id="baki" placeholder="Baki Peruntukan Semasa">
                 </div>
               </div>
             </div>
