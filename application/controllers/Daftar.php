@@ -25,6 +25,8 @@ class Daftar extends CI_Controller{
       $this->load->view('template/sidebar');
       $this->load->view('pages/stepone');
       $this->load->view('template/footer');
+      $data['records'] = $this->load->model('models/modelview');
+      $this->modelview->getData();
   }
 
   public function stepdua(){
