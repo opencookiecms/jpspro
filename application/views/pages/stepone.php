@@ -12,6 +12,7 @@
 
     <!-- Main content -->
     <section class="content">
+     
       <div class="row">
         <div class="col-lg-12">
           <div class="box box-info">
@@ -23,7 +24,7 @@
                 <label class="col-sm-1">No Sebutharga</label>
 
                 <div class="col-sm-3">
-                  <input type="text" class="form-control" id="nosebut" placeholder="No Fail Sebutharga">
+                  <input type="text" class="form-control" id="nosebut" placeholder="No Fail Sebutharga" required>
                 </div>
                 <label class="col-sm-1">Tarikh Permohonan</label>
 
@@ -48,16 +49,17 @@
                 </div>
               </div>
             </div>
-              <div class="box-footer">
-                <button type="submit" class="btn btn-default">Seterusnya</button>
-        
-              </div>
-              </div>
+            <div class="box-footer">
+              <button type="submit" class="btn btn-default">Seterusnya</button>
+
             </div>
-          </div><!--end of row-->
+          </div>
+        </div>
+      </div><!--end of row-->
 
 
-        </section>
-        <!-- /.content -->
-      </div>
-      <!-- /.content-wrapper -->
+    </section>
+    <!-- /.content -->
+    
+  </div>
+  <!-- /.content-wrapper -->

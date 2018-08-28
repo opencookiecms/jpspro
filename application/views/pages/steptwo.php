@@ -160,14 +160,17 @@
               <div class="form-group">
                 <label class="col-sm-3">Vot</label>
 
-                <div class="col-sm-2">
-                  <input type="text" class="form-control" id="vot" placeholder="Vot">
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="vot" placeholder="Vot" required>
                 </div>
 
-                <label class="col-sm-3">Peruntukan</label>
+                <label class="col-sm-2">Peruntukan</label>
 
-                <div class="col-sm-4">
-                  <input type="text" class="form-control" id="peruntukan" placeholder="Negeri">
+                <div class="col-sm-2">
+                  <select type="text" class="form-control" id="peruntukan" placeholder="Negeri">
+                    <option value="negeri">Negeri</option>
+                    <option value="persekutuan">Persekutuan</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -187,14 +190,6 @@
               <a href="<?php echo site_url('daftar/steptiga') ?>">step3</a>
 
             </div>
-
-
-
-
-
-
-
-
           </div>
         </div>
       </div><!--end of row-->

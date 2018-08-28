@@ -35,7 +35,7 @@
         </a>
         <ul class="treeview-menu">
           <li class="active"><a href="<?php echo site_url('home') ?>"><i class="fa fa-circle-o"></i>Dashboard Pages Here</a></li>
-          <li><a href="index2.html"><i class="fa fa-circle-o"></i>menu b</a></li>
+          <li><a href="<?php echo site_url('projek') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
         </ul>
       </li>
 
