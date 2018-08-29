@@ -186,8 +186,7 @@
             </div>
 
             <div class="box-footer">
-              <button type="submit" class="btn btn-default">Seterusnya</button>
-              <a href="<?php echo site_url('daftar/steptiga') ?>">step3</a>
+            <a href="<?php echo site_url('daftar/steptiga') ?>" class="btn btn-info" role="button">Seterusnya</a>
 
             </div>
           </div>

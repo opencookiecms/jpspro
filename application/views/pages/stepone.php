@@ -15,11 +15,13 @@
      
       <div class="row">
         <div class="col-lg-12">
+
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Daftar</h3>
             </div><!-- end of box header-->
             <div class="box-body">
+            <form method="post" action="<?php echo base_url()?>main/form_validation"></form>
               <div class="form-group">
                 <label class="col-sm-1">No Sebutharga</label>
 
@@ -50,8 +52,8 @@
               </div>
             </div>
             <div class="box-footer">
-              <button type="submit" class="btn btn-default">Seterusnya</button>
-
+              <button type="submit" class="btn btn-default">Simpan</button>
+              <a href="<?php echo site_url('daftar/stepdua') ?>" class="btn btn-info" role="button">Seterusnya</a>
             </div>
           </div>
         </div>
