@@ -62,10 +62,10 @@ folder instead of downloading all of them to reduce the load. -->
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
+              <span class="label label-success">20</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
+              <li class="header">You have 20 messages</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
@@ -100,8 +100,8 @@ folder instead of downloading all of them to reduce the load. -->
         <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="">
 
         <p>
-          Alexander Pierce - Web Developer
-          <small>Member since Nov. 2012</small>
+          Jabatan Pengairan dan Saliran
+          <small>Member since Sept. 2018</small>
         </p>
       </li>
       <!-- Menu Body -->
@@ -125,7 +125,7 @@ folder instead of downloading all of them to reduce the load. -->
           <a href="#" class="btn btn-default btn-flat">Profile</a>
         </div>
         <div class="pull-right">
-          <a href="#" class="btn btn-default btn-flat">Sign out</a>
+          <a href="#" class="btn btn-default btn-flat">Log Keluar</a>
         </div>
       </li>
     </ul>

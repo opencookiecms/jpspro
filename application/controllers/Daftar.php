@@ -39,8 +39,6 @@ class Daftar extends CI_Controller{
       $this->load->view('template/sidebar');
       $this->load->view('pages/stepthree');
       $this->load->view('template/footer');
-  }
-
-  
+  }  
 
 }

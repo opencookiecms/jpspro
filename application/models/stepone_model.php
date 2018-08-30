@@ -1,19 +1,15 @@
 <?php  
-	
-
+defined('BASEPATH') OR exit('No direct script access allowed')	
+//
 	class StepOne_model extends CI_Model {
 
-		public function __construct() {
-			$this->load->database();
-		}
-
-		public function get_stepone($id) {
-			if($id != FALSE) {
-				$query = $this->db->get_where('stepone', array('id' => $id));
-				return $query->row_array();
+		public function saveStepone($data){
+			{
+				$this->db->insert('dp_project', $data);
+				$emp_id = $this->db->insertid();
 			}
-			else
-				return FALSE;
+
+			return $id;
 		}
 	}
 ?>
