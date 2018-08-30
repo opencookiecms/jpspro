@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class StepOne extends CI_Controller{
+class Stepone extends CI_Controller{
 
 
   public function __construct() {
@@ -9,7 +9,7 @@ class StepOne extends CI_Controller{
     parent::__construct();
     $this->load->model('stepone_model');
     $this->load->helper(array('form', 'url'));
-  }  
+  }
 
   public function index()
   {

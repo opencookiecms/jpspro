@@ -1,7 +1,7 @@
-<?php  
-defined('BASEPATH') OR exit('No direct script access allowed')	
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed')
 //
-	class StepOne_model extends CI_Model {
+	class Stepone_model extends CI_Model {
 
 		public function saveStepone($data){
 			{
