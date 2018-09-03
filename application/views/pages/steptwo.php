@@ -14,7 +14,7 @@
     <section class="content">
       <div class="row">
         <div class="col-lg-12">
-        <form  method="post" action="<?php echo base_url('pages/steptwo'); ?>">
+        <form  method="post" action="<?php echo base_url('daftar/stepdua'); ?>">
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Daftar</h3>
