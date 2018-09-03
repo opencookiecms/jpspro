@@ -15,7 +15,8 @@
      
       <div class="row">
         <div class="col-lg-12">
-        <form  method="post" action="<?php echo base_url('stepsatu/stepone'); ?>"></form>
+
+        <form  method="post" action="<?php echo base_url('pages/stepone'); ?>">
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Daftar</h3>
@@ -35,7 +36,7 @@
                 <label class="col-sm-1">Jenis Sebutharga</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="jenissebut" placeholder="Tarikh Permohonan">
+                  <input type="text" class="form-control" id="jenissebut" placeholder="Jenis Sebutharga">
                 </div>
               </div>
 
@@ -46,7 +47,7 @@
                 <label class="col-sm-1">Tajuk Projek</label>
 
                 <div class="col-sm-6">
-                  <textarea type="text" class="form-control" id="tajukprojek" placeholder="No Fail Sebutharga"></textarea>
+                  <textarea type="text" class="form-control" id="tajukprojek" placeholder="Tajuk Projek"></textarea>
                 </div>
               </div>
             </div>
@@ -55,6 +56,7 @@
               <a href="<?php echo site_url('daftar/stepdua') ?>" class="btn btn-info" role="button">Seterusnya</a>
             </div>
           </div>
+        </form>  
         </div>
       </div><!--end of row-->
 
