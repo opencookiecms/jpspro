@@ -14,6 +14,7 @@
     <section class="content">
       <div class="row">
         <div class="col-lg-12">
+        <form  method="post" action="<?php echo base_url('stepsatu/stepone'); ?>"></form>
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Daftar</h3>
@@ -186,7 +187,7 @@
             </div>
 
             <div class="box-footer">
-            <button type="submit" class="btn btn-default">Simpan</button>
+            <button type="submit" name-"insert" class="btn btn-default">Simpan</button>
             <a href="<?php echo site_url('daftar/steptiga') ?>" class="btn btn-info" role="button">Seterusnya</a>
 
             </div>

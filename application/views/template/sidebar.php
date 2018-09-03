@@ -29,12 +29,13 @@
         </a>
         <ul class="treeview-menu">
           <li class="active"><a href="<?php echo site_url('home') ?>"><i class="fa fa-circle-o"></i>Dashboard Pages Here</a></li>
-          <li><a href="<?php echo site_url('projek') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
+          
         </ul>
       </li>
 
       <li><a href="#"><i class="fa fa-book"></i> <span>User Manual</span></a></li>
       <li><a href="<?php echo site_url('daftar') ?>"><i class="fa fa-book"></i> <span>Daftar</span></a></li>
+      <li><a href="<?php echo site_url('projek') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
       <li class="header">LABELS</li>
       <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
       <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
