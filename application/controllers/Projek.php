@@ -20,8 +20,14 @@ class Projek extends CI_Controller{
       $this->load->view('template/footer');
   }
 
-  
+  public function Stepone(){
+    //for futute use example
+  }
 
-  
+
+
+
+
+
 
 }
