@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Laman Web Rasmi | Jabatan Pengairan dan Saliran</title>
+<title>JPSPRO</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.7 -->
@@ -62,10 +62,10 @@ folder instead of downloading all of them to reduce the load. -->
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">20</span>
+              <span class="label label-success">0</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 20 messages</li>
+              <li class="header">You have 0 messages</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">

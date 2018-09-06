@@ -26,13 +26,13 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('daftar/stepsatu') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url('daftar/rekodkerja') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-green">
+          <div class="small-box bg-red">
             <div class="inner">
               <h3>2<sup style="font-size: 20px"></sup></h3>
 
@@ -41,7 +41,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('daftar/stepdua') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -56,7 +56,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('daftar/steptiga') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

@@ -36,7 +36,7 @@
       <li><a href="#"><i class="fa fa-book"></i> <span>User Manual</span></a></li>
       <li><a href="<?php echo site_url('daftar') ?>"><i class="fa fa-book"></i> <span>Daftar</span></a></li>
       <li><a href="<?php echo site_url('projek') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
-      <li><a href="<?php echo site_url('bayaran') ?>"><i class="fa fa-circle-o"></i>Bayaran Sebutharga</a></li>
+      <li><a href="<?php echo site_url('bayaransebut') ?>"><i class="fa fa-circle-o"></i>Bayaran Sebutharga</a></li>
       <li class="header">LABELS</li>
       <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
       <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
