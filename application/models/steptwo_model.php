@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 
 		function create($data){
-			$this->db->insert('dp_projek', $data);
+			$this->db->insert('dp_projekinfo', $data);
 			return TRUE;
 		}
 	}
