@@ -14,7 +14,12 @@
     <section class="content">
       <div class="row">
         <div class="col-lg-12">
-        <form  method="post" action="<?php echo site_url('daftar/steptiga'); ?>">
+        <?php if (isset($_SESSION['success'])) { ?>
+          <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
+        <?php
+          } ?>
+        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>  
+        <form  method="POST" action="<?php echo site_url('Insert_stepthree/submit') ?>">
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Lokasi dan Sistem</h3>
@@ -26,13 +31,13 @@
                 <label class="col-sm-2">Latitud (N)</label>
 
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="lata">
+                  <input type="text" class="form-control" id="lata" name="lata">
                 </div>
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="latb">
+                  <input type="text" class="form-control" id="latb" name="latb">
                 </div>
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="latc">
+                  <input type="text" class="form-control" id="latc" name="latc">
                 </div>
               </div>
             </div>
@@ -43,20 +48,20 @@
                 <label class="col-sm-2">Longitud (E)</label>
 
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="longa">
+                  <input type="text" class="form-control" id="longa" name="longa">
                 </div>
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="longb">
+                  <input type="text" class="form-control" id="longb" name="longb">
                 </div>
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="longc">
+                  <input type="text" class="form-control" id="longc" name="longc">
                 </div>
               </div>
 
               <label class="col-sm-2">Lembangan Sungai:</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="sungai" placeholder="Sungai">
+                  <input type="text" class="form-control" id="sungai" name="sungai" placeholder="Sungai">
                 </div>
             </div>
 
@@ -65,13 +70,13 @@
                 <label class="col-sm-1">Sistem:</label>
 
                 <div class="col-sm-3">
-                  <input type="text" class="form-control" id="sistem" placeholder="Sistem">
+                  <input type="text" class="form-control" id="sistem" name="sistem" placeholder="Sistem">
                 </div>
 
                 <label class="col-sm-1">Sub Sistem:</label>
 
                 <div class="col-sm-3">
-                  <input type="text" class="form-control" id="subsistem" placeholder="Sub Sistem">
+                  <input type="text" class="form-control" id="subsistem" name="subsistem" placeholder="Sub Sistem">
                 </div>
               </div>
             </div>
@@ -81,13 +86,13 @@
                 <label class="col-sm-1">Komponen:</label>
 
                 <div class="col-sm-3">
-                  <input type="text" class="form-control" id="komponen" placeholder="Komponen">
+                  <input type="text" class="form-control" id="komponen" name="komponen" placeholder="Komponen">
                 </div>
 
                 <label class="col-sm-1">Dimensi:</label>
 
                 <div class="col-sm-3">
-                  <input type="text" class="form-control" id="dimensi" placeholder="Dimensi">
+                  <input type="text" class="form-control" id="dimensi" name="dimensi" placeholder="Dimensi">
                 </div>
               </div>
             </div>
