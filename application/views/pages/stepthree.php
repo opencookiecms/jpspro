@@ -18,8 +18,12 @@
           <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
         <?php
           } ?>
-        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>  
-        <form  method="POST" action="<?php echo site_url('Insert_stepthree/submit') ?>">
+        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+          <h2><?php echo $title; ?></h2>
+
+          <?php echo validation_errors(); ?>
+
+          <?php echo form_open('daftar/steptiga'); ?>
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Lokasi dan Sistem</h3>
@@ -97,7 +101,7 @@
               </div>
             </div>
 
-            
+
 
             <div class="box-footer">
               <button type="submit" name-"insert" class="btn btn-default">Simpan</button>
@@ -105,7 +109,7 @@
             </div>
 
           </div>
-        </form>  
+        </form>
         </div>
       </div><!--end of row-->
 

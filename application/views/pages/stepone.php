@@ -12,7 +12,7 @@
 
     <!-- Main content -->
     <section class="content">
-     
+
       <div class="row">
         <div class="col-lg-12">
 
@@ -21,7 +21,13 @@
         <?php
           } ?>
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
-        <form  method="POST" action="<?php echo site_url('Insert_stepone/submit') ?>">
+        <!--<form  method="POST" action="?php echo site_url('Projek/insert_stepone') ?>">-->
+
+        <h2><?php echo $title; ?></h2>
+
+        <?php echo validation_errors(); ?>
+
+        <?php echo form_open('daftar/stepsatu'); ?>
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Daftar</h3>
@@ -31,28 +37,28 @@
                 <label class="col-sm-1">No Sebutharga</label>
 
                 <div class="col-sm-3">
-                  <input type="text" class="form-control" id="nosebut" name="nosebut" required="required" placeholder="No Fail Sebutharga">
+                  <input type="text" class="form-control" name="nosebut"  placeholder="No Fail Sebutharga">
                 </div>
                 <label class="col-sm-1">Tarikh Permohonan</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="tarikhmohon" name="tarikhmohon"  required="required"  placeholder="Tarikh Permohonan">
+                  <input type="date" class="form-control" name="tarikhmohon"placeholder="Tarikh Permohonan">
                 </div>
                 <label class="col-sm-1">Jenis Sebutharga</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="jenissebut"  name="jenissebut"   required="required"  placeholder="Jenis Sebutharga">
+                  <input type="text" class="form-control" name="jenissebut"  placeholder="Jenis Sebutharga">
                 </div>
               </div>
 
             </div><!--end of body-->
-            
+
             <div class="box-body">
               <div class="form-group">
                 <label class="col-sm-1">Tajuk Projek</label>
 
                 <div class="col-sm-6">
-                  <textarea type="text" class="form-control" id="tajukprojek"  name="tajukprojek" placeholder="Tajuk Projek"></textarea>
+                  <textarea type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"></textarea>
                 </div>
               </div>
             </div>
@@ -60,13 +66,13 @@
               <button type="submit" name="submit" class="btn btn-default">Seterusnya</button>
             </div>
           </div>
-        </form>  
+        </form>
         </div>
       </div><!--end of row-->
 
 
     </section>
     <!-- /.content -->
-    
+
   </div>
   <!-- /.content-wrapper -->

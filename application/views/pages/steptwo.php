@@ -20,8 +20,13 @@
           <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
         <?php
           } ?>
-        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>  
-        <form  method="POST" action="<?php echo site_url('Insert_steptwo/submit') ?>">
+        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+        <!--<form  method="POST" action="?php echo site_url('Insert_steptwo/submit') ?>">-->
+        <h2><?php echo $title; ?></h2>
+
+        <?php echo validation_errors(); ?>
+
+        <?php echo form_open('daftar/stepdua'); ?>
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Daftar</h3>
@@ -32,34 +37,34 @@
                 <label class="col-sm-1">Gred</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="gred" name="gred" placeholder="Gred" required="required">
+                  <input type="text" class="form-control" name="gred" placeholder="Gred">
                 </div>
                 <label class="col-sm-1">Kategori</label>
 
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="kategori" name="kategori" placeholder="Kategori" required="required">
+                  <input type="text" class="form-control" name="kategori" placeholder="Kategori">
                 </div>
                 <label class="col-sm-2">Pengkhususan</label>
 
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="khusus" name="khusus" placeholder="Pengkhususan" required="required">
+                  <input type="text" class="form-control"name="khusus" placeholder="Pengkhususan">
                 </div>
 
                 <label class="col-sm-1">Taraf</label>
 
                 <div class="col-sm-1">
-                  <input type="text" class="form-control" id="taraf" name="taraf" placeholder="Taraf" required="required">
+                  <input type="text" class="form-control"  name="taraf" placeholder="Taraf">
                 </div>
               </div>
 
             </div><!--end of body-->
-            
+
             <div class="box-body">
               <div class="form-group">
                 <label class="col-sm-2">Tempoh Siap Kerja</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="tempoh" name="tempoh" placeholder="Tempoh Siap Kerja" required="required">
+                  <input type="text" class="form-control"  name="tempoh" placeholder="Tempoh Siap Kerja">
                 </div>
               </div>
             </div>
@@ -69,7 +74,7 @@
                 <label class="col-sm-3">Harga Dokumen Sebutharga</label>
 
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="doc" name="doc" placeholder="Harga Dokumen" required="required">
+                  <input type="text" class="form-control"name="doc" placeholder="Harga Dokumen">
                 </div>
               </div>
             </div>
@@ -79,7 +84,7 @@
                 <label class="col-sm-3">Tarikh Notis Dikeluarkan</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="notiskeluar" name="notiskeluar" required="required">
+                  <input type="date" class="form-control" name="notiskeluar" >
                 </div>
               </div>
             </div>
@@ -89,7 +94,7 @@
                 <label class="col-sm-3">Tarikh Lawat Tapak/Taklimat</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="lawattapak" name="lawattapak" required="required">
+                  <input type="date" class="form-control"name="lawattapak">
                 </div>
               </div>
             </div>
@@ -99,7 +104,7 @@
                 <label class="col-sm-3">Tarikh Dokumen Mula Dijual</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="docmula" name="docmula" required="required">
+                  <input type="date" class="form-control" name="docmula">
                 </div>
               </div>
             </div>
@@ -109,7 +114,7 @@
                 <label class="col-sm-3">Tarikh Akhir Dokumen Dijual</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="docakhir" name="docakhir" required="required">
+                  <input type="date" class="form-control" name="docakhir">
                 </div>
               </div>
             </div>
@@ -119,7 +124,7 @@
                 <label class="col-sm-3">Tarikh Sebutharga Ditutup</label>
 
                 <div class="col-sm-2">
-                  <input type="date" class="form-control" id="sebuttutup" name="sebuttutup" required="required">
+                  <input type="date" class="form-control"  name="sebuttutup">
                 </div>
               </div>
             </div>
@@ -129,7 +134,7 @@
                 <label class="col-sm-3">Jurutera Daerah</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="juruterakanan" name="juruterakanan" placeholder="Jurutera Daerah" required="required">
+                  <input type="text" class="form-control"  name="juruterakanan" placeholder="Jurutera Daerah">
                 </div>
               </div>
             </div>
@@ -139,7 +144,7 @@
                 <label class="col-sm-3">Jurutera</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="jurutera" name="jurutera" placeholder="Jurutera" required="required">
+                  <input type="text" class="form-control"  name="jurutera" placeholder="Jurutera">
                 </div>
               </div>
             </div>
@@ -149,7 +154,7 @@
                 <label class="col-sm-3">Penolong Jurutera Kanan J36</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="penolongkanan" name="penolongkanan" placeholder="Penolong Kanan J36" required="required">
+                  <input type="text" class="form-control"  name="penolongkanan" placeholder="Penolong Kanan J36">
                 </div>
               </div>
             </div>
@@ -159,7 +164,7 @@
                 <label class="col-sm-3">Penolong Jurutera JA29</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="penolong" name="penolong" placeholder="Penolong Jurutera JA29" required="required">
+                  <input type="text" class="form-control" name="penolong" placeholder="Penolong Jurutera JA29">
                 </div>
               </div>
             </div>
@@ -169,13 +174,13 @@
                 <label class="col-sm-3">Vot</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="vot" name="vot" placeholder="Vot" required="required">
+                  <input type="text" class="form-control"  name="vot" placeholder="Vot">
                 </div>
 
                 <label class="col-sm-2">Peruntukan</label>
 
                 <div class="col-sm-2">
-                  <select type="text" class="form-control" id="peruntukan" name="peruntukan" placeholder="Negeri" required="required">
+                  <select type="text" class="form-control"  name="peruntukan" placeholder="Negeri">
                     <option value="negeri">Negeri</option>
                     <option value="persekutuan">Persekutuan</option>
                   </select>
@@ -188,7 +193,7 @@
                 <label class="col-sm-3">Baki Peruntukan Semasa</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="baki" name="baki" placeholder="Baki Peruntukan Semasa" required="required">
+                  <input type="text" class="form-control"  name="baki" placeholder="Baki Peruntukan Semasa">
                 </div>
               </div>
             </div>
@@ -198,7 +203,7 @@
 
             </div>
           </div>
-        </form>  
+        </form>
         </div>
       </div><!--end of row-->
 

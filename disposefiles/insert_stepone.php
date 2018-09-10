@@ -35,7 +35,7 @@ class Insert_stepone extends CI_Controller{
 
     $this->stepone_model->create($data);
 
-    redirect(base_url('daftar/stepdua/'));          
+  
 
   }
 
@@ -43,12 +43,12 @@ class Insert_stepone extends CI_Controller{
   {
 
     $data['h']=$this->Stepone_model->getData();
-    print_r("<pre>");  
+    print_r("<pre>");
     print_r($data['h']);
     die;
     $this->load->view('projek', $data);
   }
-  
+
 }
 
 
