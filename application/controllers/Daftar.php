@@ -20,10 +20,12 @@ class Daftar extends CI_Controller{
     $this->load->view('template/footer');
   }
 
-  public function stepsatu(){
+  public function stepsatu()
+  {
 
     $data['title'] = 'Step Satu';
 
+    //form validation function
     $this->form_validation->set_rules('nosebut','Sila Masukkan No Sebut Harga','required');
     $this->form_validation->set_rules('tarikhmohon','Tarikh Mohon','required');
     $this->form_validation->set_rules('jenissebut','Jenis Sebut','required');
@@ -38,7 +40,7 @@ class Daftar extends CI_Controller{
 
     else
     {
-      $this->projek_model->create_stepone();
+      $this->projek_model->create_stepone();//load from model
       redirect(base_url('daftar/stepdua/'));
     }
 
@@ -61,7 +63,7 @@ class Daftar extends CI_Controller{
     }
     else
     {
-      $this->projek_model->create_steptwo();
+      $this->projek_model->create_steptwo();//load from model
       redirect(base_url('daftar/steptiga/'));
     }
 
@@ -84,7 +86,7 @@ class Daftar extends CI_Controller{
       $this->load->view('template/footer');
     }
     else {
-      $this->projek_model->create_stepthree();
+      $this->projek_model->create_stepthree();//load from model 
       redirect(base_url('projek/'));
     }
 

@@ -9,10 +9,10 @@ class Projek_model extends CI_Model{
     //Codeigniter : Write Less Do More
   }
 
+  //insert funtion for step one
   public function create_stepone()
 
   {
-
 
     $this->load->helper('url');
 
@@ -33,6 +33,7 @@ class Projek_model extends CI_Model{
 
   }
 
+  //insert funtion for step two
   public function create_steptwo()
   {
 
@@ -83,6 +84,7 @@ class Projek_model extends CI_Model{
 
   }
 
+  //insert funtion for step three
   public function create_stepthree()
   {
 
@@ -117,6 +119,12 @@ class Projek_model extends CI_Model{
       );
 
         return $this->db->insert('dp_gps', $data);
+  }
+
+  public function get_projekview()
+  {
+    //this section for view the data
+    //create a table
   }
 
 

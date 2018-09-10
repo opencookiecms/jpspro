@@ -1,66 +1,66 @@
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <center>
-        <h2>
-          Maklumat Projek
-        </h2>
-      </center>
-    </section>
-    <br>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <center>
+      <h2>
+        Maklumat Projek
+      </h2>
+    </center>
+  </section>
+  <br>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="table-responsive"></div>
-        <div class="col-md-12">
-          <!-- Custom Tabs -->
-          <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1" data-toggle="tab">LANGKAH 1</a></li>
-              <li><a href="#tab_2" data-toggle="tab">LANGKAH 2</a></li>
-              <li><a href="#tab_3" data-toggle="tab">LANGKAH 3</a></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane active" id="tab_1">
-                <p><b>No Sebutharga :</b><?php echo $h[0]->df_nosebutharga ?></p>
-                <p><b>Tarikh Mohon :</b><?php echo $h[0]->df_tarikmohon ?></p>
-                <p><b>Jenis Sebutharga :</b><?php echo $h[0]->df_jsebutharga ?></p>
-                <p><b>Tajuk Projek :</b><?php echo $h[0]->df_tajuk ?></p>
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="table-responsive"></div>
+      <div class="col-md-12">
 
-              </div>
-              <!-- /.tab-pane -->
-              <div class="tab-pane" id="tab_2">
-                <p><b>Gred :</b></p>
-                <p><b>Kategori :</b></p>
-                <p><b>Pengkhususan :</b></p>
-                <p><b>Taraf :</b></p>
-                <p><b>Tempoh Siap Kerja :</b></p>
-              </div>
-              <!-- /.tab-pane -->
-              <div class="tab-pane" id="tab_3">
-                <p><b>Koordinat Lokasi Projek : Latitud(N) : </b></p>
-                <p><b>Lembangan Sungai :</b></p>
-                <p><b>Sistem :</b></p>
-                <p><b>Sub Sistem :</b></p>
-                <p><b>Komponen :</b></p>
-                <p><b>Dimensi :</b></p>
-              </div>
-              <!-- /.tab-pane -->
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Data Table With Full Features</h3>
             </div>
-            <!-- /.tab-content -->
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kod Vot</th>
+                  <th>Tajuk Projek</th>
+                  <th>Daerah</th>
+                  <th>No Sebut Harga</th>
+                  <th>Sungai</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><a href="<?php echo site_url('projek/view_data') ?>" >No sebut harga example</a></td>
+                  <td>example</td>
+                  <td>exampe</td>
+                  <td> exampe</td>
+                  <td>exampe</td>
+                </tr>
+
+
+
+                </tbody>
+
+              </table>
+            </div>
+            <!-- /.box-body -->
           </div>
-          <!-- nav-tabs-custom -->
-        </div>
-        <!-- /.col -->
+          <!-- /.box -->
+
       </div>
+      <!-- /.col -->
+    </div>
 
 
 
 
-    </section>
-    <!-- /.content -->
-    
-  </div>
-  <!-- /.content-wrapper -->
+  </section>
+  <!-- /.content -->
+
+</div>
+</div>
+<!-- /.content-wrapper -->
