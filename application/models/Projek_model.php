@@ -29,7 +29,7 @@ class Projek_model extends CI_Model{
       );
 
       return $this->db->insert('dp_projek', $data);
-
+      //this return for inserting data from this table
 
   }
 
@@ -81,6 +81,7 @@ class Projek_model extends CI_Model{
       );
 
       return $this->db->insert('dp_projekinfo', $data);
+      //this return for inserting data from this table
 
   }
 
@@ -119,6 +120,7 @@ class Projek_model extends CI_Model{
       );
 
         return $this->db->insert('dp_gps', $data);
+        //this return for inserting data from this table
   }
 
   public function get_projekview()
