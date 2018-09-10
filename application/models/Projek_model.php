@@ -6,7 +6,7 @@ class Projek_model extends CI_Model{
   public function __construct()
   {
      $this->load->database();
-    //Codeigniter : Write Less Do More
+
   }
 
   //insert funtion for step one

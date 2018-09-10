@@ -86,14 +86,14 @@ class Daftar extends CI_Controller{
       $this->load->view('template/footer');
     }
     else {
-      $this->projek_model->create_stepthree();//load from model 
+      $this->projek_model->create_stepthree();//load from model
       redirect(base_url('projek/'));
     }
 
   }
 
- //Zaty Please read this what do u thing
-  //I thing we should seperate this controller for this item in below..do u thing
+ //Zaty Please read this...
+  //I thing we should seperate this controller for this item in below..what do you thing ????
 
   // public function bayaransebut(){
   //   $this->load->view('template/header');
