@@ -4,7 +4,7 @@
   <section class="sidebar">
     <!-- Sidebar user panel -->
     <div class="user-panel">
-      
+
     </div>
     <!-- search form -->
     <form action="#" method="get" class="sidebar-form">
@@ -29,13 +29,13 @@
         </a>
         <ul class="treeview-menu">
           <li class="active"><a href="<?php echo site_url('home') ?>"><i class="fa fa-circle-o"></i>Dashboard Pages Here</a></li>
-          
+
         </ul>
       </li>
 
       <li><a href="#"><i class="fa fa-book"></i> <span>User Manual</span></a></li>
       <li><a href="<?php echo site_url('daftar') ?>"><i class="fa fa-book"></i> <span>Daftar</span></a></li>
-      <li><a href="<?php echo site_url('projek/view_data') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
+      <li><a href="<?php echo site_url('projek') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
       <li><a href="<?php echo site_url('bayaransebut') ?>"><i class="fa fa-circle-o"></i>Bayaran Sebutharga</a></li>
       <li class="header">LABELS</li>
       <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
