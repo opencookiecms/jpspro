@@ -125,8 +125,7 @@ class Projek_model extends CI_Model{
 
   public function get_projekview()
   {
-    //this section for view the data
-    //create a table
+  
   }
 
 
