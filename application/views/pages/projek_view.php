@@ -18,9 +18,9 @@
           <!-- Custom Tabs -->
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1" data-toggle="tab">LANGKAH 1</a></li>
-              <li><a href="#tab_2" data-toggle="tab">LANGKAH 2</a></li>
-              <li><a href="#tab_3" data-toggle="tab">LANGKAH 3</a></li>
+              <li class="active"><a href="#tab_1" data-toggle="tab">Info</a></li>
+              <li><a href="#tab_2" data-toggle="tab">Projek</a></li>
+              <li><a href="#tab_3" data-toggle="tab">Lokasi</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="tab_1">

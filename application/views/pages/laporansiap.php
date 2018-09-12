@@ -282,7 +282,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('daftar/rekodkerjatiga') ?>" class="btn btn-info" role="button">MRK - 03</a>
+                <a href="<?php echo site_url('mrk/rekodkerjatiga') ?>" class="btn btn-info" role="button">MRK - 03</a>
               </div>
             </div>
           </form>  

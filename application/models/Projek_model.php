@@ -28,7 +28,10 @@ class Projek_model extends CI_Model{
       'df_tajuk' => $df_tajuk
       );
 
-      return $this->db->insert('dp_projek', $data);
+      $this->db->insert('dp_projek', $data);
+      $lastId = $this->db->insert_id();//statement to return last id after insert data
+
+      return $lastId; //return last id
       //this return for inserting data from this table
 
   }
@@ -41,7 +44,7 @@ class Projek_model extends CI_Model{
     $this->load->helper('url');
 
     $df_gred = $this->input->post("gred");
-    $df_katergori = $this->input->post("kategori");
+    $df_kategori = $this->input->post("kategori");
     $df_khusus = $this->input->post("khusus");
     $df_taraf = $this->input->post("taraf");
     $df_tempohsiap = $this->input->post("tempoh");
@@ -61,7 +64,7 @@ class Projek_model extends CI_Model{
 
       $data = array(
         'df_gred' => $df_gred,
-        'df_katergori' => $df_katergori,
+        'df_kategori' => $df_kategori,
         'df_khusus' => $df_khusus,
         'df_taraf' => $df_taraf,
         'df_tempohsiap' => $df_tempohsiap,
@@ -125,6 +128,7 @@ class Projek_model extends CI_Model{
 
   public function get_projekview()
   {
+
   
   }
 

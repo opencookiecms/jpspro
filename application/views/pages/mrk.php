@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-lg-5 col-xs-6">
       <h1>
-        Bayaran Sebutharga
+        Maklumat Rekod Kerja
       </h1>
         </div>
       </div>
@@ -21,27 +21,27 @@
             <div class="inner">
               <h3>1</h3>
 
-              <p>MAKLUMAT REKOD KERJA</p>
+              <p>MRK - 01</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('daftar/rekodkerja') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url('mrk/rekodkerja') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-red">
+          <div class="small-box bg-green">
             <div class="inner">
               <h3>2<sup style="font-size: 20px"></sup></h3>
 
-              <p>LAPORAN SIAP KERJA</p>
+              <p>MRK - 02</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url('mrk/rekodkerjadua') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -51,12 +51,12 @@
             <div class="inner">
               <h3>3</h3>
 
-              <p>SURAT-MENYURAT</p>
+              <p>MRK - 03</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url('mrk/rekodkerjatiga') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

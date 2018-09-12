@@ -18,27 +18,34 @@
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
+              <h3 class="box-title">Senarai Projek</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                  <th>Bil</th>
                   <th>Kod Vot</th>
+                  <th>No Sebutharga</th>
+                  <th>Tarikh Permohonan</th>
+                  <th>Jenis Sebutharga</th>
                   <th>Tajuk Projek</th>
-                  <th>Daerah</th>
-                  <th>No Sebut Harga</th>
-                  <th>Sungai</th>
+                  <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
+                  <td>1</td>
                   <td><a href="<?php echo site_url('projek/view_data') ?>" >No sebut harga example</a></td>
                   <td>example</td>
-                  <td>exampe</td>
-                  <td> exampe</td>
-                  <td>exampe</td>
+                  <td>example</td>
+                  <td>example</td>
+                  <td>example</td>
+                  <td><a href="<?php echo base_url('daftar/stepsatu') ?>" role="button">Edit</a>
+                  <a href="" role="button">Delete</a>
+                  <a href="" role="button">Print</a>
+                  </td>
                 </tr>
 
 

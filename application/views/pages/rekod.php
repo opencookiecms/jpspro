@@ -31,7 +31,7 @@
                   <label class="col-sm-1">Gred</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="peruntukan" placeholder="Negeri">
+                    <select type="text" class="form-control" id="peruntukan" placeholder="gred">
                       <option value="g1">G1 | Sehingga RM200,000.00</option>
                       <option value="g2">G2 | RM200,001.00 Hingga RM500,000.00</option>
                       <option value="g3">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
@@ -228,7 +228,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('daftar/rekodkerjadua') ?>" class="btn btn-info" role="button">MRK - 02</a>
+                <a href="<?php echo site_url('mrk/rekodkerjadua') ?>" class="btn btn-info" role="button">MRK - 02</a>
               </div>
             </div>
           </form>  

@@ -20,27 +20,11 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
-      <li class="active treeview">
-        <a href="">
-          <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class="active"><a href="<?php echo site_url('home') ?>"><i class="fa fa-circle-o"></i>Dashboard Pages Here</a></li>
 
-        </ul>
-      </li>
-
-      <li><a href="#"><i class="fa fa-book"></i> <span>User Manual</span></a></li>
       <li><a href="<?php echo site_url('daftar') ?>"><i class="fa fa-book"></i> <span>Daftar</span></a></li>
       <li><a href="<?php echo site_url('projek') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
-      <li><a href="<?php echo site_url('bayaransebut') ?>"><i class="fa fa-circle-o"></i>Bayaran Sebutharga</a></li>
-      <li class="header">LABELS</li>
-      <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-      <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-      <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+      <li><a href="<?php echo site_url('mrk') ?>"><i class="fa fa-circle-o"></i>MRK</a></li>
+      <li><a href="<?php echo site_url('surat') ?>"><i class="fa fa-circle-o"></i>Surat-Menyurat</a></li>
     </ul>
   </section>
   <!-- /.sidebar -->

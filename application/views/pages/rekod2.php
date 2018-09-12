@@ -263,7 +263,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('daftar/laporansiapkerja') ?>" class="btn btn-info" role="button">Laporan Siap Kerja</a>
+                <a href="<?php echo site_url('mrk/laporansiapkerja') ?>" class="btn btn-info" role="button">Laporan Siap Kerja</a>
               </div>
             </div>
           </form>  

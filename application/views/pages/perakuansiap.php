@@ -99,7 +99,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('daftar/laporansiapkerja') ?>" class="btn btn-info" role="button">Senarai Semak</a>
+                <a href="<?php echo site_url('mrk/senaraisemak') ?>" class="btn btn-info" role="button">Senarai Semakan</a>
               </div>
             </div>
           </form>  
