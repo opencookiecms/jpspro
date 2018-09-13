@@ -25,13 +25,14 @@ class Projek extends CI_Controller
     $this->load->view('template/footer');
   }
 
-  public function view_data()
+  public function view_data($value="")
   {
 
    $this->load->database();
    $this->load->view('template/header');
    $this->load->view('template/sidebar');
-   $this->load->view('pages/projek_view');
+   $data['get_detail']=$this->Projek_model->get_projekdetail($value);
+   $this->load->view('pages/projek_view', $data);
    $this->load->view('template/footer');
  }
 

@@ -45,7 +45,7 @@
 
                  <tr>
                   <td><?php echo $row->id?></td>
-                  <td><a href="<?php echo site_url('projek/view_data') ?>" ><?php echo $row->df_nosebutharga?></a></td> <!--Show data in list view-->
+                  <td><a href="<?php echo site_url('projek/view_data/'.$row->id); ?>" ><?php echo $row->df_nosebutharga?></a></td> <!--Show data in list view-->
                   <td><?php echo $row->df_nosebutharga?></td>
                   <td><?php echo $row->df_tarikmohon?></td>
                   <td><?php echo $row->df_jsebutharga?></td>

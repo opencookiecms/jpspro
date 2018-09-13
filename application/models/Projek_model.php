@@ -132,6 +132,17 @@ class Projek_model extends CI_Model{
     return $query->result();  
   }
 
+  public function get_projekdetail($id)
+  {
+  
+       $this->db->select('*');
+       $this->db->from('dp_projek');
+       $this->db->where('id', $id);
+       $query = $this->db->get();
+
+       return $query->result();
+  }
+
 
 
 

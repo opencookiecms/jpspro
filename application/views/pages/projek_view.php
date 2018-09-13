@@ -24,10 +24,10 @@
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="tab_1">
-                <p><b>No Sebutharga :</b><?php echo $h[0]->df_nosebutharga ?></p>
-                <p><b>Tarikh Mohon :</b><?php echo $h[0]->df_tarikmohon ?></p>
-                <p><b>Jenis Sebutharga :</b><?php echo $h[0]->df_jsebutharga ?></p>
-                <p><b>Tajuk Projek :</b><?php echo $h[0]->df_tajuk ?></p>
+                <p><b>No Sebutharga :</b><?php echo $get_detail[0]->df_nosebutharga ?></p>
+                <p><b>Tarikh Mohon :</b><?php echo $get_detail[0]->df_tarikmohon ?></p>
+                <p><b>Jenis Sebutharga :</b><?php echo $get_detail[0]->df_jsebutharga ?></p>
+                <p><b>Tajuk Projek :</b><?php echo $get_detail[0]->df_tajuk ?></p>
 
               </div>
               <!-- /.tab-pane -->
