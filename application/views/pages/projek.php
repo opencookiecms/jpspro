@@ -16,14 +16,14 @@
       <div class="table-responsive"></div>
       <div class="col-md-12">
 
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Senarai Projek</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title">Senarai Projek</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
                 <tr>
                   <th>Bil</th>
                   <th>Kod Vot</th>
@@ -33,30 +33,40 @@
                   <th>Tajuk Projek</th>
                   <th></th>
                 </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><a href="<?php echo site_url('projek/view_data') ?>" >No sebut harga example</a></td>
-                  <td>example</td>
-                  <td>example</td>
-                  <td>example</td>
-                  <td>example</td>
+              </thead>
+
+              <tbody>
+               <?php 
+               $i = 1; 
+
+               foreach ($get_projek as $row){  
+
+                 ?> 
+
+                 <tr>
+                  <td><?php echo $row->id?></td>
+                  <td><a href="<?php echo site_url('projek/view_data') ?>" ><?php echo $row->df_nosebutharga?></a></td> <!--Show data in list view-->
+                  <td><?php echo $row->df_nosebutharga?></td>
+                  <td><?php echo $row->df_tarikmohon?></td>
+                  <td><?php echo $row->df_jsebutharga?></td>
+                  <td><?php echo $row->df_tajuk?></td>
                   <td><a href="<?php echo base_url('daftar/stepsatu') ?>" role="button">Edit</a>
-                  <a href="" role="button">Delete</a>
-                  <a href="" role="button">Print</a>
+                    <a href="" role="button">Delete</a>
+                    <a href="" role="button">Print</a>
                   </td>
                 </tr>
 
 
+                <?php } ?>
 
-                </tbody>
+              </tbody>
 
-              </table>
-            </div>
-            <!-- /.box-body -->
+            </table>
+
           </div>
-          <!-- /.box -->
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
 
       </div>
       <!-- /.col -->

@@ -128,8 +128,8 @@ class Projek_model extends CI_Model{
 
   public function get_projekview()
   {
-
-  
+    $query = $this->db->get('dp_projek');
+    return $query->result();  
   }
 
 
