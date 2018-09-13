@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Daftar extends CI_Controller{
 
+  public function __construct() {
+    parent::__construct();
+    //$lastId = $this->projek_model->create_stepone();//load from model and call last id
+      //$this->load->model('ProjekMdl');
+    //  $this->load->helper('form');
+    //  $this->load->library('form_validation');
+  }
 
   public function index()
   {
@@ -63,8 +70,9 @@ class Daftar extends CI_Controller{
     }
     else
     {
+
       $this->projek_model->create_steptwo();//load from model
-      redirect(base_url('daftar/steptiga/'));
+      redirect(base_url('daftar/steptiga/' ));
     }
 
 
