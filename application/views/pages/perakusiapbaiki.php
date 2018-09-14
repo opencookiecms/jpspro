@@ -84,7 +84,7 @@
               <div class="box-body">
                 <div class="form-group">
 
-                  <label class="col-sm-1">Gred</label>
+                  <label class="col-sm-2">Gred</label>
 
                   <div class="col-sm-4">
                     <select type="text" class="form-control" id="peruntukan" placeholder="gred">
@@ -140,12 +140,106 @@
                       <option value="g6">B 05 | Kerja cerucuk</option>
                       <option value="g6">B 07 | Hiasan dalaman</option>
                       <option value="g6">B 10 | Sistem paip air dalaman</option>
+                      <option value="g6">B 15 | Pemasangan bumbung</option>
+                      <option value="g6">B 18 | Kerja-kerja logam</option>
+                      <option value="g6">B 24 | Kerja penyenggaraan bangunan</option>
+                      <option value="g6">B 28 | Kerja-kerja ubahsuai</option>
                     </select>
                   </div>
                 </div>
               </div>
 
               <hr>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-1">(a) # :</label>
+                  <label class="col-sm-4">(i) ** No Kewangan Jaminan Bank/Insuran</label>
+
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="nokewangan" placeholder="No Kewangan Jaminan Bank/Insuran">
+                  </div>
+
+                  <label class="col-sm-1">Harga</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="harga" placeholder="RM">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-1"></label>
+                  <label class="col-sm-4">(ii) ** Baki Wang Jaminan Perlaksanaan</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="bakiwangjaminan" placeholder="RM">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-1">(b) # :</label>
+                  <label class="col-sm-4">(i) ** No Kewangan Jaminan Bank/Insuran</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="nokewangan" placeholder="No Kewangan Jaminan Bank/Insuran">
+                  </div>
+
+                  <label class="col-sm-1">Harga</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="harga" placeholder="RM">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-1"></label>
+                  <label class="col-sm-4">** Wang Jaminan Perlaksanaan</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="wangjaminan" placeholder="RM">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-1"></label>
+                  <label class="col-sm-4">(ii) ** Tambahan Kos Bon Perlaksanaan</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="kosbon" placeholder="RM">
+                  </div>
+
+                  <label class="col-sm-2">Pegawai Penguasa</label>
+
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="pegawai" placeholder="Pegawai Penguasa">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-1"></label>
+                  <label class="col-sm-4">** Baki Kos Bon Perlaksanaan</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="bakibon" placeholder="RM">
+                  </div>
+
+                  <label class="col-sm-2">Jawatan</label>
+
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="jawatan" placeholder="Jawatan">
+                  </div>
+                </div>
+              </div>
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>

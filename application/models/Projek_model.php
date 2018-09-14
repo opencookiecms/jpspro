@@ -28,10 +28,11 @@ class Projek_model extends CI_Model{
       'df_tajuk' => $df_tajuk
       );
 
-      $this->db->insert('dp_projek', $data);
-      $lastId = $this->db->insert_id();//statement to return last id after insert data
 
-      return $lastId; //return last id
+      //$lastId = $this->db->insert_id();//statement to return last id after insert data
+      //$lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('dp_projek')->row('id');
+
+      return $this->db->insert('dp_projek', $data); //return last id
       //this return for inserting data from this table
 
   }
@@ -61,6 +62,7 @@ class Projek_model extends CI_Model{
     $df_kodvot = $this->input->post("vot");
     $df_peruntukan = $this->input->post("peruntukan");
     $df_bakiperuntukan = $this->input->post("baki");
+    $dp_id = $this->input->post("dp_idpost");
 
       $data = array(
         'df_gred' => $df_gred,
@@ -80,7 +82,9 @@ class Projek_model extends CI_Model{
         'df_penolong' => $df_penolong,
         'df_kodvot ' => $df_kodvot,
         'df_peruntukan' => $df_peruntukan,
-        'df_bakiperuntukan ' => $df_bakiperuntukan
+        'df_bakiperuntukan ' => $df_bakiperuntukan,
+        'dp_id'=> $dp_id
+
       );
 
       return $this->db->insert('dp_projekinfo', $data);
@@ -106,6 +110,7 @@ class Projek_model extends CI_Model{
     $dp_subsistem= $this->input->post("subsistem");
     $dp_komponen = $this->input->post("komponen");
     $dp_dimensi = $this->input->post("dimensi");
+    $dp_id = $this->input->post("dp_idpost");
 
 
       $data = array(
@@ -119,7 +124,8 @@ class Projek_model extends CI_Model{
         'dp_sistem' => $dp_sistem,
         'dp_subsistem' => $dp_subsistem,
         'dp_komponen' => $dp_komponen,
-        'dp_dimensi' => $dp_dimensi
+        'dp_dimensi' => $dp_dimensi,
+        'dp_id'=> $dp_id
       );
 
         return $this->db->insert('dp_gps', $data);
@@ -129,18 +135,25 @@ class Projek_model extends CI_Model{
   public function get_projekview()
   {
     $query = $this->db->get('dp_projek');
-    return $query->result();  
+    return $query->result();
   }
 
-  public function get_projekdetail($id)
+  public function get_projekdetail($id) //view data
   {
-  
+
        $this->db->select('*');
        $this->db->from('dp_projek');
        $this->db->where('id', $id);
        $query = $this->db->get();
 
        return $query->result();
+  }
+
+  public function getLastid()
+  {
+    $lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('dp_projek')->row('id');
+
+    return $lastId; //return last id
   }
 
 
