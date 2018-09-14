@@ -20,6 +20,7 @@
           } ?>
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
           <h2><?php echo $title; ?></h2>
+          <?php echo $idval; ?>
 
           <?php echo validation_errors(); ?>
 
@@ -36,6 +37,8 @@
 
                 <div class="col-sm-1">
                   <input type="text" class="form-control" id="lata" name="lata">
+                    <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
+
                 </div>
                 <div class="col-sm-1">
                   <input type="text" class="form-control" id="latb" name="latb">
