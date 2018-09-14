@@ -54,15 +54,20 @@ class Daftar extends CI_Controller{
 
   }
 
-  public function stepdua()
+  public function stepdua($idvalue = '')
   {
     $data['title'] = 'Langkah Dua';
+    $data['idvalues'] = $idvalue;
+
+
 
     $this->form_validation->set_rules('vot','Kod Vot Diperlukan','required');
 
 
     if($this->form_validation->run() === FALSE)
     {
+
+
       $this->load->view('template/header');
       $this->load->view('template/sidebar');
       $this->load->view('pages/steptwo',$data);

@@ -23,6 +23,8 @@
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
         <!--<form  method="POST" action="?php echo site_url('Insert_steptwo/submit') ?>">-->
         <h2><?php echo $title; ?></h2>
+      <?php echo $idvalues;?>
+
 
         <?php echo validation_errors(); ?>
 
