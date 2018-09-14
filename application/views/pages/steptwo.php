@@ -23,6 +23,7 @@
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
         <!--<form  method="POST" action="?php echo site_url('Insert_steptwo/submit') ?>">-->
         <h2><?php echo $title; ?></h2>
+        <?php echo $idval; ?>
 
         <?php echo validation_errors(); ?>
 
@@ -38,6 +39,7 @@
 
                 <div class="col-sm-2">
                   <input type="text" class="form-control" name="gred" placeholder="Gred">
+                  <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
                 </div>
                 <label class="col-sm-1">Kategori</label>
 

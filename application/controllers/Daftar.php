@@ -3,12 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Daftar extends CI_Controller{
 
+
   public function __construct() {
     parent::__construct();
-    //$lastId = $this->projek_model->create_stepone();//load from model and call last id
-      //$this->load->model('ProjekMdl');
-    //  $this->load->helper('form');
-    //  $this->load->library('form_validation');
+
   }
 
   public function index()
@@ -32,6 +30,8 @@ class Daftar extends CI_Controller{
 
     $data['title'] = 'Langkah Satu';
 
+
+
     //form validation function
     $this->form_validation->set_rules('nosebut','Sila Masukkan No Sebut Harga','required');
     $this->form_validation->set_rules('tarikhmohon','Tarikh Mohon','required');
@@ -47,16 +47,20 @@ class Daftar extends CI_Controller{
 
     else
     {
-      $lastId = $this->projek_model->create_stepone();//load from model and call last id
+      $this->projek_model->create_stepone();//load from model and call last id
+      $lastId=$this->projek_model->getLastid();
       redirect(base_url('daftar/stepdua/'.$lastId)); //redirect last id to another step
     }
 
 
   }
 
-  public function stepdua()
+  public function stepdua($idvalue='')
   {
     $data['title'] = 'Langkah Dua';
+    $data['idval'] = $idvalue;
+
+    echo $idvalue;
 
     $this->form_validation->set_rules('vot','Kod Vot Diperlukan','required');
 
@@ -72,16 +76,18 @@ class Daftar extends CI_Controller{
     {
 
       $this->projek_model->create_steptwo();//load from model
-      redirect(base_url('daftar/steptiga/' ));
+      $lastId=$this->projek_model->getLastid();
+      redirect(base_url('daftar/steptiga/'.$lastId ));
     }
 
 
   }
 
-  public function steptiga()
+  public function steptiga($idvalue='')
   {
 
     $data['title'] = 'Langkah Tiga';
+    $data['idval'] = $idvalue;
 
     $this->form_validation->set_rules('lata','Latitud Diperlukan','required');
 
