@@ -26,7 +26,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('mrk/rekodkerja') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -41,7 +41,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('mrk/rekodkerjadua') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -56,7 +56,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('mrk/rekodkerjatiga') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
