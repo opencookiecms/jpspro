@@ -32,20 +32,20 @@
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="tab_2">
-                <p><b>Gred :</b></p>
-                <p><b>Kategori :</b></p>
-                <p><b>Pengkhususan :</b></p>
-                <p><b>Taraf :</b></p>
-                <p><b>Tempoh Siap Kerja :</b></p>
+                <p><b>Gred :</b> <?php echo $get_detail[0]->df_gred ?></p>
+                <p><b>Kategori :</b> <?php echo $get_detail[0]->df_kategori ?></p>
+                <p><b>Pengkhususan :</b> <?php echo $get_detail[0]->df_khusus ?></p>
+                <p><b>Taraf :</b> <?php echo $get_detail[0]->df_taraf ?></p>
+                <p><b>Tempoh Siap Kerja :</b> <?php echo $get_detail[0]->df_tempohsiap ?></p>
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="tab_3">
-                <p><b>Koordinat Lokasi Projek : Latitud(N) : </b></p>
-                <p><b>Lembangan Sungai :</b></p>
-                <p><b>Sistem :</b></p>
-                <p><b>Sub Sistem :</b></p>
-                <p><b>Komponen :</b></p>
-                <p><b>Dimensi :</b></p>
+                <p><b>Koordinat Lokasi Projek : Latitud(N) : </b>A: <?php echo $get_detail[0]->dp_lata ?>  B: <?php echo $get_detail[0]->dp_latb ?>  C: <?php echo $get_detail[0]->dp_latc ?></p>
+                <p><b>Lembangan Sungai :</b><?php echo $get_detail[0]->dp_sungai ?></p>
+                <p><b>Sistem :</b><?php echo $get_detail[0]->dp_sistem ?></p>
+                <p><b>Sub Sistem :</b><?php echo $get_detail[0]->dp_subsistem ?></p>
+                <p><b>Komponen :</b><?php echo $get_detail[0]->dp_komponen ?></p>
+                <p><b>Dimensi :</b><?php echo $get_detail[0]->dp_dimensi ?></p>
               </div>
               <!-- /.tab-pane -->
             </div>
