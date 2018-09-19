@@ -41,6 +41,7 @@
               <!-- /.tab-pane -->
               <div class="tab-pane" id="tab_3">
                 <p><b>Koordinat Lokasi Projek : Latitud(N) : </b>A: <?php echo $get_detail[0]->dp_lata ?>  B: <?php echo $get_detail[0]->dp_latb ?>  C: <?php echo $get_detail[0]->dp_latc ?></p>
+                <p><b>Koordinat Lokasi Projek : Longitud(E) : </b>A: <?php echo $get_detail[0]->dp_longa ?>  B: <?php echo $get_detail[0]->dp_longb ?>  C: <?php echo $get_detail[0]->dp_longc ?></p>
                 <p><b>Lembangan Sungai :</b><?php echo $get_detail[0]->dp_sungai ?></p>
                 <p><b>Sistem :</b><?php echo $get_detail[0]->dp_sistem ?></p>
                 <p><b>Sub Sistem :</b><?php echo $get_detail[0]->dp_subsistem ?></p>

@@ -50,9 +50,9 @@
                   <td><?php echo $row->df_tarikmohon?></td>
                   <td><?php echo $row->df_jsebutharga?></td>
                   <td><?php echo $row->df_tajuk?></td>
-                  <td><a href="<?php echo base_url('daftar/stepsatu') ?>" role="button">Edit</a>
-                    <a href="" role="button">Delete</a>
-                    <a href="" role="button">Print</a>
+                  <td><button type="edit" name="edit" class="btn btn-default">Edit</button>
+                    <button type="delete" name="delete" class="btn btn-default">Delete</button>
+                    <button type="print" name="print" class="btn btn-default">Print</button>
                   </td>
                 </tr>
 

@@ -102,7 +102,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('mrk/senaraisemak') ?>" class="btn btn-info" role="button">Pelepasan Jaminan Bank</a>
+                <a href="<?php echo base_url('surat') ?>" class="btn btn-info" role="button">Surat</a>
               </div>
             </div>
           </form>  

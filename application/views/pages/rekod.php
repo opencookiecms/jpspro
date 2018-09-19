@@ -16,7 +16,15 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <form  method="post" action="<?php echo site_url('daftar/rekodkerja'); ?>">
+        <?php if(isset($_SESSION['success'])) { ?>
+          <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+        <?php
+          } ?>
+        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+
+        <?php echo validation_errors(); ?>
+
+          <?php echo form_open('mrk/rekodkerja'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Maklumat Rekod Kerja - MRK 01</h3>
@@ -26,12 +34,12 @@
                   <label class="col-sm-2">No Pendaftaran PKK</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nopkk" placeholder="No Pendaftaran PKK" required>
+                    <input type="text" class="form-control" id="nopkk" name="nopkk" placeholder="No Pendaftaran PKK" required>
                   </div>
                   <label class="col-sm-1">Gred</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="peruntukan" placeholder="gred">
+                    <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
                       <option value="g1">G1 | Sehingga RM200,000.00</option>
                       <option value="g2">G2 | RM200,001.00 Hingga RM500,000.00</option>
                       <option value="g3">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
@@ -50,13 +58,13 @@
                   <label class="col-sm-1">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" placeholder="Nama Kontraktor">
+                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor">
                   </div>
 
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="alamat" placeholder="Alamat"></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
                   </div>
                 </div>
               </div>
@@ -66,13 +74,13 @@
                   <label class="col-sm-1">No Kontrak</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nokon" placeholder="No Kontrak">
+                    <input type="text" class="form-control" id="nokon" name="nokon" placeholder="No Kontrak">
                   </div>
 
                   <label class="col-sm-2">No Inden/Pesanan tempatan</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="noinden" placeholder="No Inden">
+                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden">
                   </div>
                 </div>
               </div>
@@ -82,16 +90,16 @@
                   <label class="col-sm-1">Tajuk Kerja</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="tajukkerjamrk" placeholder="Tajuk Kerja"></textarea>
+                    <textarea type="text" class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"></textarea>
                   </div>
 
                   <label class="col-sm-1">Kategori</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="kategori" placeholder="kat">
-                      <option value="g4">CE | Pembinaan Kejuruteraan Awam</option>
-                      <option value="g5">B | Pembinaan Bangunan</option>
-                      <option value="g6">ME | Mekanikal & Elektrikal</option>
+                    <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
+                      <option value="CE">CE | Pembinaan Kejuruteraan Awam</option>
+                      <option value="B">B | Pembinaan Bangunan</option>
+                      <option value="ME">ME | Mekanikal & Elektrikal</option>
                     </select>
                   </div>
                 </div>
@@ -101,51 +109,51 @@
                   <label class="col-sm-1">Daerah</label>
 
                   <div class="col-sm-2">
-                    <select type="text" class="form-control" id="daerah">
-                      <option value="km">Kuala Muda</option>
-                      <option value="s">Sik</option>
-                      <option value="b">Baling</option>
+                    <select type="text" class="form-control" id="daerah" name="daerah">
+                      <option value="kuala muda">Kuala Muda</option>
+                      <option value="sik">Sik</option>
+                      <option value="baling">Baling</option>
                     </select>
                   </div>
 
                   <label class="col-sm-1">Negeri</label>
 
                   <div class="col-sm-2">
-                    <select type="text" class="form-control" id="negeri">
-                      <option value="km">Kedah</option>
-                      <option value="s">Perlis</option>
-                      <option value="b">Pulau Pinang</option>
-                      <option value="b">Perak</option>
+                    <select type="text" class="form-control" id="negeri" name="negeri">
+                      <option value="kedah">Kedah</option>
+                      <option value="perlis">Perlis</option>
+                      <option value="pulau pinang">Pulau Pinang</option>
+                      <option value="perak">Perak</option>
                     </select>
                   </div>
 
                   <label class="col-sm-2">Pengkhususan</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="kategori" placeholder="kat">
-                      <option value="g4">CE 02 | Pembinaan Jambatan & Jeti</option>
-                      <option value="g5">CE 04 | Empangan</option>
-                      <option value="g6">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
-                      <option value="g4">CE 12 | Kerja penyiasatan tanah</option>
-                      <option value="g5">CE 13 | Pemasangan papan iklan</option>
-                      <option value="g6">CE 14 | Landskap di luar bangunan</option>
-                      <option value="g4">CE 21 | Pembinaan kejuruteraan awam</option>
-                      <option value="g5">CE 26 | Struktur berukir (Sculptured structures)</option>
-                      <option value="g6">CE 32 | Kerja-kerja penyenggaraan kejuruteraan awam</option>
-                      <option value="g4">CE 33 | Telaga tiub</option>
-                      <option value="g5">CE 36 | Kerja-kerja tanah</option>
-                      <option value="g6">M 01 | Sistem hawa dingin dan pengedaran udara</option>
-                      <option value="g6">M 15 | Kelengkapan mekanikal pelbagai</option>
-                      <option value="g6">M 20 | Penyelengaraan am mekanikal</option>
-                      <option value="g6">M 22 | Sistem pam</option>
-                      <option value="g6">M 23 | Sistem SCADA dan telemetri</option>
-                      <option value="g6">E 02 | Sistem pengawasan dan keselamatan</option>
-                      <option value="g6">E 07 | Sistem telekomunikasi dalaman</option>
-                      <option value="g6">E 14 | Kabel rangkaian komputer</option>
-                      <option value="g6">B 04 | Kerja-kerja Pembinaan bangunan</option>
-                      <option value="g6">B 05 | Kerja cerucuk</option>
-                      <option value="g6">B 07 | Hiasan dalaman</option>
-                      <option value="g6">B 10 | Sistem paip air dalaman</option>
+                    <select type="text" class="form-control" id="khusus" placeholder="khusus" name="khusus">
+                      <option value="CE 02">CE 02 | Pembinaan Jambatan & Jeti</option>
+                      <option value="CE 04">CE 04 | Empangan</option>
+                      <option value="CE 06">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
+                      <option value="CE 12">CE 12 | Kerja penyiasatan tanah</option>
+                      <option value="CE 13">CE 13 | Pemasangan papan iklan</option>
+                      <option value="CE 14">CE 14 | Landskap di luar bangunan</option>
+                      <option value="CE 21">CE 21 | Pembinaan kejuruteraan awam</option>
+                      <option value="CE 26">CE 26 | Struktur berukir (Sculptured structures)</option>
+                      <option value="CE 32">CE 32 | Kerja-kerja penyenggaraan kejuruteraan awam</option>
+                      <option value="CE 33">CE 33 | Telaga tiub</option>
+                      <option value="CE 36">CE 36 | Kerja-kerja tanah</option>
+                      <option value="M 01">M 01 | Sistem hawa dingin dan pengedaran udara</option>
+                      <option value="M 15">M 15 | Kelengkapan mekanikal pelbagai</option>
+                      <option value="M 20">M 20 | Penyelengaraan am mekanikal</option>
+                      <option value="M 22">M 22 | Sistem pam</option>
+                      <option value="M 23">M 23 | Sistem SCADA dan telemetri</option>
+                      <option value="E 02">E 02 | Sistem pengawasan dan keselamatan</option>
+                      <option value="E 07">E 07 | Sistem telekomunikasi dalaman</option>
+                      <option value="E 14">E 14 | Kabel rangkaian komputer</option>
+                      <option value="B 04">B 04 | Kerja-kerja Pembinaan bangunan</option>
+                      <option value="B 05">B 05 | Kerja cerucuk</option>
+                      <option value="B 07">B 07 | Hiasan dalaman</option>
+                      <option value="B 10">B 10 | Sistem paip air dalaman</option>
                     </select>
                   </div>
                 </div>
@@ -155,14 +163,14 @@
                 <div class="form-group">
                   <label class="col-sm-2">Tarikh Mula Kontrak</label>
 
-                  <div class="col-sm-3">
-                    <input type="date" class="form-control" id="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
+                  <div class="col-sm-2">
+                    <input type="date" class="form-control" id="tarikhmulakon" name="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
                   </div>
 
                   <label class="col-sm-3">Tarikh Jangka Siap Kontrak</label>
 
-                  <div class="col-sm-3">
-                    <input type="date" class="form-control" id="tarikhjangka">
+                  <div class="col-sm-2">
+                    <input type="date" class="form-control" id="tarikhjangka" name="tarikhjangka">
                   </div>
                 </div>
               </div>
@@ -171,40 +179,40 @@
                 <div class="form-group">
                   <label class="col-sm-1">Pegawai</label>
                   <div class="col-sm-3">
-                    <select type="text" class="form-control" id="negeri">
-                      <option value="km">Mohamad Ridzam B. Jusoh</option>
-                      <option value="s">Nazar Shah B. Awang</option>
-                      <option value="b">Shuhel B. Mohd Saad</option>
-                      <option value="b">Azhar B. Ahmadd</option>
-                      <option value="km">Shahriful Azhar B. Mohd. Hassan</option>
-                      <option value="s">Mohd. Tarmizi B. Taib</option>
-                      <option value="b">Ku Izham B. Ku Din</option>
-                      <option value="b">Noorzita Bt. Mustaffa</option>
-                      <option value="km">Haji Shukri B. Man</option>
-                      <option value="s">Othman B. Shariff</option>
-                      <option value="b">Intan Zahida Bt. Abu Bakar</option>
-                      <option value="b">Jamil B. Ahmad</option>
-                      <option value="b">Rosli B. Shaari</option>
-                      <option value="km">Roshidi B. Ismail</option>
-                      <option value="s">Shaari Bin Abdullah</option>
-                      <option value="b">Hafizah Binti Yahaya</option>
-                      <option value="b">Mohamed Radzi Bin Ishak</option>
-                      <option value="b">Juhari Bin Md. Ali</option>
-                      <option value="b">Johari Bin Ali</option>
+                    <select type="text" class="form-control" id="pegawai" name="pegawai">
+                      <option value="mr">Mohamad Ridzam B. Jusoh</option>
+                      <option value="ns">Nazar Shah B. Awang</option>
+                      <option value="s">Shuhel B. Mohd Saad</option>
+                      <option value="a">Azhar B. Ahmadd</option>
+                      <option value="sa">Shahriful Azhar B. Mohd. Hassan</option>
+                      <option value="mt">Mohd. Tarmizi B. Taib</option>
+                      <option value="ki">Ku Izham B. Ku Din</option>
+                      <option value="n">Noorzita Bt. Mustaffa</option>
+                      <option value="hs">Haji Shukri B. Man</option>
+                      <option value="o">Othman B. Shariff</option>
+                      <option value="iz">Intan Zahida Bt. Abu Bakar</option>
+                      <option value="j">Jamil B. Ahmad</option>
+                      <option value="rs">Rosli B. Shaari</option>
+                      <option value="ri">Roshidi B. Ismail</option>
+                      <option value="sa">Shaari Bin Abdullah</option>
+                      <option value="hy">Hafizah Binti Yahaya</option>
+                      <option value="mr">Mohamed Radzi Bin Ishak</option>
+                      <option value="jma">Juhari Bin Md. Ali</option>
+                      <option value="ja">Johari Bin Ali</option>
                     </select>
                   </div>
 
                   <label class="col-sm-1">Jawatan</label>
 
                   <div class="col-sm-3">
-                    <select type="text" class="form-control" id="jawatan">
-                      <option value="km">Merinyu Taliair Kanan</option>
-                      <option value="s">Penolong Jurutera JA29</option>
-                      <option value="b">Penolong Jurutera JA36</option>
-                      <option value="b">Jurutera ( Kuala Muda/Sik )</option>
-                      <option value="s">Jurutera ( Baling )</option>
-                      <option value="b">Jurutera Daerah</option>
-                      <option value="b">Penolong Jurutera JA38</option>
+                    <select type="text" class="form-control" id="jawatan" name="jawatan">
+                      <option value="mtk">Merinyu Taliair Kanan</option>
+                      <option value="pjj">Penolong Jurutera JA29</option>
+                      <option value="pjja">Penolong Jurutera JA36</option>
+                      <option value="jkms">Jurutera ( Kuala Muda/Sik )</option>
+                      <option value="jb">Jurutera ( Baling )</option>
+                      <option value="jd">Jurutera Daerah</option>
+                      <option value="pja">Penolong Jurutera JA38</option>
                     </select>
                   </div>
                 </div>
@@ -215,13 +223,13 @@
                   <label class="col-sm-2">Kos Projek (RM)</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kosprojek" placeholder="RM">
+                    <input type="text" class="form-control" id="kosprojek" name="kosprojek" placeholder="RM">
                   </div>
 
                   <label class="col-sm-1">Tarikh</label>
 
                   <div class="col-sm-3">
-                    <input type="date" class="form-control" id="tarikh">
+                    <input type="date" class="form-control" id="tarikh" name="tarikh">
                   </div>
                 </div>
               </div>

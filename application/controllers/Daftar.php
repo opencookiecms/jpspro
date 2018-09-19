@@ -38,6 +38,7 @@ class Daftar extends CI_Controller{
     $this->form_validation->set_rules('jenissebut','Jenis Sebut','required');
 
     if($this->form_validation->run() === FALSE)
+      
     {
       $this->load->view('template/header');
       $this->load->view('template/sidebar',$data);
