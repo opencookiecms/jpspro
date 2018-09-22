@@ -27,13 +27,13 @@
                   <label class="col-sm-2">Rujukan Bank</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="rujukbank" placeholder="Rujukan Bank" required>
+                    <input type="text" class="form-control" id="rujukbank" name="rujukbank" placeholder="Rujukan Bank">
                   </div>
 
                   <label class="col-sm-3">Tarikh Mula Tanggungan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="mulatanggung">
+                    <input type="date" class="form-control" id="mulatanggung" name="mulatanggung">
                   </div>
                 </div>
 
@@ -44,13 +44,13 @@
                   <label class="col-sm-2">Nama Bank</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="namabank" placeholder="Nama Bank" required>
+                    <input type="text" class="form-control" id="namabank" name="namabank" placeholder="Nama Bank">
                   </div>
 
                   <label class="col-sm-3">Tarikh Luput Tanggungan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="luputtanggung">
+                    <input type="date" class="form-control" id="luputtanggung" name="luputtanggung">
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@
                   <label class="col-sm-1">Alamat Bank</label>
 
                   <div class="col-sm-7">
-                    <textarea type="text" class="form-control" id="alamatbank" placeholder="Alamat Bank"></textarea>
+                    <textarea type="text" class="form-control" id="alamatbank" name="alamatbank" placeholder="Alamat Bank"></textarea>
                   </div>
                 </div>
               </div><!--end of body-->
@@ -72,13 +72,13 @@
                   <label class="col-sm-1">Nama Jurutera</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namajuru" placeholder="Nama Jurutera">
+                    <input type="text" class="form-control" id="namajuru" name="namajuru" placeholder="Nama Jurutera">
                   </div>
 
                   <label class="col-sm-1">Jawatan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="jawatan" placeholder="Jawatan">
+                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan">
                   </div>
                 </div>
               </div>
@@ -89,13 +89,13 @@
                   <label class="col-sm-1">Nama Pemborong</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namaborong" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namaborong" name="namaborong" placeholder="Nama Pemborong">
                   </div>
 
                   <label class="col-sm-1">Alamat Pemborong</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamatborong" placeholder="Alamat Pemborong"></textarea>
+                    <textarea type="text" class="form-control" id="alamatborong" name="alamatborong" placeholder="Alamat Pemborong"></textarea>
                   </div>
                 </div>
               </div>

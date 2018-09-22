@@ -26,13 +26,13 @@
                   <label class="col-sm-2">No Pendaftaran Kontraktor</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nokontr" placeholder="No Pendaftaran Kontraktor" required>
+                    <input type="text" class="form-control" id="nokontr" name="nokontr" placeholder="No Pendaftaran Kontraktor">
                   </div>
 
                   <label class="col-sm-1">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" placeholder="Nama Kontraktor">
+                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor">
                   </div>
                 </div>
 
@@ -43,13 +43,13 @@
                   <label class="col-sm-2">No Inden/Pesanan Tempatan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="noinden" placeholder="No Inden/Pesanan Tempatan">
+                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden/Pesanan Tempatan">
                   </div>
 
                   <label class="col-sm-1">Tajuk Kerja</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="tajukkerjamrk" placeholder="Tajuk Kerja"></textarea>
+                    <textarea type="text" class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"></textarea>
                   </div>
                 </div>
               </div>
@@ -59,13 +59,13 @@
                   <label class="col-sm-2">Tarikh Mula</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhmulakon" placeholder="Tarikh Mula">
+                    <input type="date" class="form-control" id="tarikhmulakon" name="tarikhmulakon" placeholder="Tarikh Mula">
                   </div>
 
                   <label class="col-sm-3">Tarikh Jangka Siap</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhjangka">
+                    <input type="date" class="form-control" id="tarikhjangka" name="tarikhjangka">
                   </div>
                 </div>
               </div>
@@ -75,13 +75,13 @@
                   <label class="col-sm-2">Dilanjutkan Masa</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tariklanjut">
+                    <input type="date" class="form-control" id="tariklanjut" name="tariklanjut">
                   </div>
 
                   <label class="col-sm-3">Tarikh Siap Sebenar</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhkerjasempurna">
+                    <input type="date" class="form-control" id="tarikhkerjasempurna" name="tarikhkerjasempurna">
                   </div>
                 </div>
               </div>
@@ -91,13 +91,13 @@
                   <label class="col-sm-2">Kos Projek RM</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kosprojek" placeholder="RM">
+                    <input type="text" class="form-control" id="kosprojek" name="kosprojek" placeholder="RM">
                   </div>
 
                   <label class="col-sm-2">Kos Sebenar RM</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kossebenar" placeholder="RM">
+                    <input type="text" class="form-control" id="kossebenar" name="kossebenar" placeholder="RM">
                   </div>
                 </div>
               </div>

@@ -48,10 +48,25 @@ class MRK extends CI_Controller{
     public function rekodkerjadua()
     {
 
-    	$this->load->view('template/header');
-    	$this->load->view('template/sidebar');
-    	$this->load->view('pages/rekod2');
-    	$this->load->view('template/footer');
+    	//form validation
+        $this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
+
+        if($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('pages/rekod2');
+            $this->load->view('template/footer');
+        }
+
+        else
+        {
+            $this->Mrk_model->create_mrkdua();
+            $lastId=$this->Mrk_model->getLastid();
+            redirect(base_url('mrk/laporansiapkerja/'.$lastId));
+        }
+
+        
 
     }
 

@@ -26,13 +26,13 @@
                   <label class="col-sm-2">Nama Pemborong</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nokontr" placeholder="Nama Pemborong" required>
+                    <input type="text" class="form-control" id="nokontr" name="nokontr" placeholder="Nama Pemborong">
                   </div>
 
                   <label class="col-sm-1">Alamat Pemborong</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamat" placeholder="Alamat"></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
                   </div>
                 </div>
 
@@ -43,13 +43,13 @@
                   <label class="col-sm-2">No Rujukan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="norujuk" placeholder="no Rujukan">
+                    <input type="text" class="form-control" id="norujuk" name="norujuk" placeholder="no Rujukan">
                   </div>
 
                   <label class="col-sm-1">No Kontrak</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="nokontrak" placeholder="No Kontrak">
+                    <input type="text" class="form-control" id="nokontrak" name="nokontrak" placeholder="No Kontrak">
                   </div>
                 </div>
               </div>
@@ -59,7 +59,7 @@
                   <label class="col-sm-2">Tajuk Kerja</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="tajukkerja" placeholder="Tajuk Kerja"></textarea>
+                    <textarea type="text" class="form-control" id="tajukkerja" name="tajukkerja" placeholder="Tajuk Kerja"></textarea>
                   </div>
 
                 </div>
@@ -70,13 +70,13 @@
                   <label class="col-sm-2">Tarikh Mula Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="mula cacat">
+                    <input type="date" class="form-control" id="mulacacat" name="mulacacat">
                   </div>
 
                   <label class="col-sm-3">Tarikh Tamat Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="cacattamat">
+                    <input type="date" class="form-control" id="cacattamat" name="cacattamat">
                   </div>
                 </div>
               </div>
@@ -87,24 +87,24 @@
                   <label class="col-sm-2">Gred</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="peruntukan" placeholder="gred">
-                      <option value="g1">G1 | Sehingga RM200,000.00</option>
-                      <option value="g2">G2 | RM200,001.00 Hingga RM500,000.00</option>
-                      <option value="g3">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
-                      <option value="g4">G4 | RM1 000,001.00 Hingga RM3 000,000.00</option>
-                      <option value="g5">G5 | RM300,001.00 Hingga RM5 000,000.00</option>
-                      <option value="g6">G6 | RM5 000,001.00 Hingga RM10 000,000.00</option>
-                      <option value="g7">G7 | RM 10 000,001.00 Ke Atas</option>
+                    <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
+                      <option value="G1 | Sehingga RM200,000.00">G1 | Sehingga RM200,000.00</option>
+                      <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2 | RM200,001.00 Hingga RM500,000.00</option>
+                      <option value="G3 | RM500,001.00 Hingga RM1 000,000.00">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
+                      <option value="G4 | RM1 000,001.00 Hingga RM3 000,000.00">G4 | RM1 000,001.00 Hingga RM3 000,000.00</option>
+                      <option value="G5 | RM300,001.00 Hingga RM5 000,000.00">G5 | RM300,001.00 Hingga RM5 000,000.00</option>
+                      <option value="G6 | RM5 000,001.00 Hingga RM10 000,000.00">G6 | RM5 000,001.00 Hingga RM10 000,000.00</option>
+                      <option value="G7 | RM 10 000,001.00 Ke Atas">G7 | RM 10 000,001.00 Ke Atas</option>
                     </select>
                   </div>
 
                   <label class="col-sm-1">Kategori</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="kategori" placeholder="kat">
-                      <option value="g4">CE | Pembinaan Kejuruteraan Awam</option>
-                      <option value="g5">B | Pembinaan Bangunan</option>
-                      <option value="g6">ME | Mekanikal & Elektrikal</option>
+                    <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
+                      <option value="CE | Pembinaan Kejuruteraan Awam">CE | Pembinaan Kejuruteraan Awam</option>
+                      <option value="B | Pembinaan Bangunan">B | Pembinaan Bangunan</option>
+                      <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option>
                     </select>
                   </div>
                 </div>
@@ -116,34 +116,34 @@
               <label class="col-sm-2">Pengkhususan</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="kategori" placeholder="kat">
-                      <option value="g4">CE 02 | Pembinaan Jambatan & Jeti</option>
-                      <option value="g5">CE 04 | Empangan</option>
-                      <option value="g6">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
-                      <option value="g4">CE 12 | Kerja penyiasatan tanah</option>
-                      <option value="g5">CE 13 | Pemasangan papan iklan</option>
-                      <option value="g6">CE 14 | Landskap di luar bangunan</option>
-                      <option value="g4">CE 21 | Pembinaan kejuruteraan awam</option>
-                      <option value="g5">CE 26 | Struktur berukir (Sculptured structures)</option>
-                      <option value="g6">CE 32 | Kerja-kerja penyenggaraan kejuruteraan awam</option>
-                      <option value="g4">CE 33 | Telaga tiub</option>
-                      <option value="g5">CE 36 | Kerja-kerja tanah</option>
-                      <option value="g6">M 01 | Sistem hawa dingin dan pengedaran udara</option>
-                      <option value="g6">M 15 | Kelengkapan mekanikal pelbagai</option>
-                      <option value="g6">M 20 | Penyelengaraan am mekanikal</option>
-                      <option value="g6">M 22 | Sistem pam</option>
-                      <option value="g6">M 23 | Sistem SCADA dan telemetri</option>
-                      <option value="g6">E 02 | Sistem pengawasan dan keselamatan</option>
-                      <option value="g6">E 07 | Sistem telekomunikasi dalaman</option>
-                      <option value="g6">E 14 | Kabel rangkaian komputer</option>
-                      <option value="g6">B 04 | Kerja-kerja Pembinaan bangunan</option>
-                      <option value="g6">B 05 | Kerja cerucuk</option>
-                      <option value="g6">B 07 | Hiasan dalaman</option>
-                      <option value="g6">B 10 | Sistem paip air dalaman</option>
-                      <option value="g6">B 15 | Pemasangan bumbung</option>
-                      <option value="g6">B 18 | Kerja-kerja logam</option>
-                      <option value="g6">B 24 | Kerja penyenggaraan bangunan</option>
-                      <option value="g6">B 28 | Kerja-kerja ubahsuai</option>
+                    <select type="text" class="form-control" id="khusus" name="khusus" placeholder="kat">
+                      <option value="CE 02 | Pembinaan Jambatan & Jeti">CE 02 | Pembinaan Jambatan & Jeti</option>
+                      <option value="CE 04 | Empangan">CE 04 | Empangan</option>
+                      <option value="CE 06 | Struktur saliran, pengairan dan kawalan banjir">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
+                      <option value="CE 12 | Kerja penyiasatan tanah">CE 12 | Kerja penyiasatan tanah</option>
+                      <option value="CE 13 | Pemasangan papan iklan">CE 13 | Pemasangan papan iklan</option>
+                      <option value="CE 14 | Landskap di luar bangunan">CE 14 | Landskap di luar bangunan</option>
+                      <option value="CE 21 | Pembinaan kejuruteraan awam">CE 21 | Pembinaan kejuruteraan awam</option>
+                      <option value="CE 26 | Struktur berukir (Sculptured structures)">CE 26 | Struktur berukir (Sculptured structures)</option>
+                      <option value="CE 32 | Kerja-kerja penyenggaraan kejuruteraan awam">CE 32 | Kerja-kerja penyenggaraan kejuruteraan awam</option>
+                      <option value="CE 33 | Telaga tiub">CE 33 | Telaga tiub</option>
+                      <option value="CE 36 | Kerja-kerja tanah">CE 36 | Kerja-kerja tanah</option>
+                      <option value="M 01 | Sistem hawa dingin dan pengedaran udara">M 01 | Sistem hawa dingin dan pengedaran udara</option>
+                      <option value="M 15 | Kelengkapan mekanikal pelbagai">M 15 | Kelengkapan mekanikal pelbagai</option>
+                      <option value="M 20 | Penyelengaraan am mekanikal">M 20 | Penyelengaraan am mekanikal</option>
+                      <option value="M 22 | Sistem pam">M 22 | Sistem pam</option>
+                      <option value="M 23 | Sistem SCADA dan telemetri">M 23 | Sistem SCADA dan telemetri</option>
+                      <option value="E 02 | Sistem pengawasan dan keselamatan">E 02 | Sistem pengawasan dan keselamatan</option>
+                      <option value="E 07 | Sistem telekomunikasi dalaman">E 07 | Sistem telekomunikasi dalaman</option>
+                      <option value="E 14 | Kabel rangkaian komputer">E 14 | Kabel rangkaian komputer</option>
+                      <option value="B 04 | Kerja-kerja Pembinaan bangunan">B 04 | Kerja-kerja Pembinaan bangunan</option>
+                      <option value="B 05 | Kerja cerucuk">B 05 | Kerja cerucuk</option>
+                      <option value="B 07 | Hiasan dalaman">B 07 | Hiasan dalaman</option>
+                      <option value="B 10 | Sistem paip air dalaman">B 10 | Sistem paip air dalaman</option>
+                      <option value="B 15 | Pemasangan bumbung">B 15 | Pemasangan bumbung</option>
+                      <option value="B 18 | Kerja-kerja logam">B 18 | Kerja-kerja logam</option>
+                      <option value="B 24 | Kerja penyenggaraan bangunan">B 24 | Kerja penyenggaraan bangunan</option>
+                      <option value="B 28 | Kerja-kerja ubahsuai">B 28 | Kerja-kerja ubahsuai</option>
                     </select>
                   </div>
                 </div>
@@ -157,13 +157,13 @@
                   <label class="col-sm-4">(i) ** No Kewangan Jaminan Bank/Insuran</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nokewangan" placeholder="No Kewangan Jaminan Bank/Insuran">
+                    <input type="text" class="form-control" id="nokewangan" name="nokewangan" placeholder="No Kewangan Jaminan Bank/Insuran">
                   </div>
 
                   <label class="col-sm-1">Harga</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="harga" placeholder="RM">
+                    <input type="text" class="form-control" id="harga" name="harga" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -174,7 +174,7 @@
                   <label class="col-sm-4">(ii) ** Baki Wang Jaminan Perlaksanaan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="bakiwangjaminan" placeholder="RM">
+                    <input type="text" class="form-control" id="bakiwangjaminan" name="bakiwangjaminan" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -185,13 +185,13 @@
                   <label class="col-sm-4">(i) ** No Kewangan Jaminan Bank/Insuran</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="nokewangan" placeholder="No Kewangan Jaminan Bank/Insuran">
+                    <input type="text" class="form-control" id="nokewangan" name="nokewangan" placeholder="No Kewangan Jaminan Bank/Insuran">
                   </div>
 
                   <label class="col-sm-1">Harga</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="harga" placeholder="RM">
+                    <input type="text" class="form-control" id="harga1" name="harga1" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@
                   <label class="col-sm-4">** Wang Jaminan Perlaksanaan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="wangjaminan" placeholder="RM">
+                    <input type="text" class="form-control" id="wangjaminan" name="wangjaminan" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -213,13 +213,13 @@
                   <label class="col-sm-4">(ii) ** Tambahan Kos Bon Perlaksanaan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kosbon" placeholder="RM">
+                    <input type="text" class="form-control" id="kosbon" name="kosbon" placeholder="RM">
                   </div>
 
                   <label class="col-sm-2">Pegawai Penguasa</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="pegawai" placeholder="Pegawai Penguasa">
+                    <input type="text" class="form-control" id="pegawai" name="pegawai" placeholder="Pegawai Penguasa">
                   </div>
                 </div>
               </div>
@@ -230,13 +230,13 @@
                   <label class="col-sm-4">** Baki Kos Bon Perlaksanaan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="bakibon" placeholder="RM">
+                    <input type="text" class="form-control" id="bakibon" name="bakibon" placeholder="RM">
                   </div>
 
                   <label class="col-sm-2">Jawatan</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="jawatan" placeholder="Jawatan">
+                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan">
                   </div>
                 </div>
               </div>

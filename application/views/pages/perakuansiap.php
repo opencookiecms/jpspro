@@ -26,13 +26,13 @@
                   <label class="col-sm-2">Nama Pemborong</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nokontr" placeholder="Nama Pemborong" required>
+                    <input type="text" class="form-control" id="nokontr" name="nokontr" placeholder="Nama Pemborong">
                   </div>
 
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamat" placeholder="Alamat"></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
                   </div>
                 </div>
 
@@ -43,13 +43,13 @@
                   <label class="col-sm-2">Fail Rujukan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="failrujuk" placeholder="Fail Rujukan">
+                    <input type="text" class="form-control" id="failrujuk" name="failrujuk" placeholder="Fail Rujukan">
                   </div>
 
                   <label class="col-sm-1">No Sebutharga</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="nosebut" placeholder="No Sebutharga">
+                    <input type="text" class="form-control" id="nosebut" name="nosebut" placeholder="No Sebutharga">
                   </div>
                 </div>
               </div>
@@ -59,7 +59,7 @@
                   <label class="col-sm-2">Butiran Kerja</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="butirkerja" placeholder="Butiran Kerja"></textarea>
+                    <textarea type="text" class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"></textarea>
                   </div>
 
                 </div>
@@ -70,13 +70,13 @@
                   <label class="col-sm-2">Tarikh Siap Sebenar</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhsiapsebenar">
+                    <input type="date" class="form-control" id="tarikhsiapsebenar" name="tarikhsiapsebenar">
                   </div>
 
                   <label class="col-sm-3">Tarikh Ambik Milik</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhambikmilik">
+                    <input type="date" class="form-control" id="tarikhambikmilik" name="tarikhambikmilik">
                   </div>
                 </div>
               </div>
@@ -86,13 +86,13 @@
                   <label class="col-sm-2">Tarikh Mula Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="mula cacat">
+                    <input type="date" class="form-control" id="mulacacat" name="mulacacat">
                   </div>
 
                   <label class="col-sm-3">Tarikh Tamat Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="cacattamat">
+                    <input type="date" class="form-control" id="cacattamat" name="cacattamat">
                   </div>
                 </div>
               </div>

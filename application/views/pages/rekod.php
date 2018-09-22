@@ -34,19 +34,19 @@
                   <label class="col-sm-2">No Pendaftaran PKK</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nopkk" name="nopkk" placeholder="No Pendaftaran PKK" required>
+                    <input type="text" class="form-control" id="nopkk" name="nopkk" placeholder="No Pendaftaran PKK">
                   </div>
                   <label class="col-sm-1">Gred</label>
 
                   <div class="col-sm-4">
                     <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
-                      <option value="g1">G1 | Sehingga RM200,000.00</option>
-                      <option value="g2">G2 | RM200,001.00 Hingga RM500,000.00</option>
-                      <option value="g3">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
-                      <option value="g4">G4 | RM1 000,001.00 Hingga RM3 000,000.00</option>
-                      <option value="g5">G5 | RM300,001.00 Hingga RM5 000,000.00</option>
-                      <option value="g6">G6 | RM5 000,001.00 Hingga RM10 000,000.00</option>
-                      <option value="g7">G7 | RM 10 000,001.00 Ke Atas</option>
+                      <option value="G1 | Sehingga RM200,000.00">G1 | Sehingga RM200,000.00</option>
+                      <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2 | RM200,001.00 Hingga RM500,000.00</option>
+                      <option value="G3 | RM500,001.00 Hingga RM1 000,000.00">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
+                      <option value="G4 | RM1 000,001.00 Hingga RM3 000,000.00">G4 | RM1 000,001.00 Hingga RM3 000,000.00</option>
+                      <option value="G5 | RM300,001.00 Hingga RM5 000,000.00">G5 | RM300,001.00 Hingga RM5 000,000.00</option>
+                      <option value="G6 | RM5 000,001.00 Hingga RM10 000,000.00">G6 | RM5 000,001.00 Hingga RM10 000,000.00</option>
+                      <option value="G7 | RM 10 000,001.00 Ke Atas">G7 | RM 10 000,001.00 Ke Atas</option>
                     </select>
                   </div>
                 </div>
@@ -97,9 +97,9 @@
 
                   <div class="col-sm-4">
                     <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
-                      <option value="CE">CE | Pembinaan Kejuruteraan Awam</option>
-                      <option value="B">B | Pembinaan Bangunan</option>
-                      <option value="ME">ME | Mekanikal & Elektrikal</option>
+                      <option value="CE | Pembinaan Kejuruteraan Awam">CE | Pembinaan Kejuruteraan Awam</option>
+                      <option value="B | Pembinaan Bangunan">B | Pembinaan Bangunan</option>
+                      <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option>
                     </select>
                   </div>
                 </div>
@@ -180,25 +180,25 @@
                   <label class="col-sm-1">Pegawai</label>
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="pegawai" name="pegawai">
-                      <option value="mr">Mohamad Ridzam B. Jusoh</option>
-                      <option value="ns">Nazar Shah B. Awang</option>
-                      <option value="s">Shuhel B. Mohd Saad</option>
-                      <option value="a">Azhar B. Ahmadd</option>
-                      <option value="sa">Shahriful Azhar B. Mohd. Hassan</option>
-                      <option value="mt">Mohd. Tarmizi B. Taib</option>
-                      <option value="ki">Ku Izham B. Ku Din</option>
-                      <option value="n">Noorzita Bt. Mustaffa</option>
-                      <option value="hs">Haji Shukri B. Man</option>
-                      <option value="o">Othman B. Shariff</option>
-                      <option value="iz">Intan Zahida Bt. Abu Bakar</option>
-                      <option value="j">Jamil B. Ahmad</option>
-                      <option value="rs">Rosli B. Shaari</option>
-                      <option value="ri">Roshidi B. Ismail</option>
-                      <option value="sa">Shaari Bin Abdullah</option>
-                      <option value="hy">Hafizah Binti Yahaya</option>
-                      <option value="mr">Mohamed Radzi Bin Ishak</option>
-                      <option value="jma">Juhari Bin Md. Ali</option>
-                      <option value="ja">Johari Bin Ali</option>
+                      <option value="Mohamad Ridzam B. Jusoh">Mohamad Ridzam B. Jusoh</option>
+                      <option value="Nazar Shah B. Awang">Nazar Shah B. Awang</option>
+                      <option value="Shuhel B. Mohd Saad">Shuhel B. Mohd Saad</option>
+                      <option value="Azhar B. Ahmad">Azhar B. Ahmad</option>
+                      <option value="Shahriful Azhar B. Mohd. Hassan">Shahriful Azhar B. Mohd. Hassan</option>
+                      <option value="Mohd. Tarmizi B. Taib">Mohd. Tarmizi B. Taib</option>
+                      <option value="Ku Izham B. Ku Din">Ku Izham B. Ku Din</option>
+                      <option value="Noorzita Bt. Mustaffa">Noorzita Bt. Mustaffa</option>
+                      <option value="Haji Shukri B. Man">Haji Shukri B. Man</option>
+                      <option value="Othman B. Shariff">Othman B. Shariff</option>
+                      <option value="Intan Zahida Bt. Abu Bakar">Intan Zahida Bt. Abu Bakar</option>
+                      <option value="Jamil B. Ahmad">Jamil B. Ahmad</option>
+                      <option value="Rosli B. Shaari">Rosli B. Shaari</option>
+                      <option value="Roshidi B. Ismail">Roshidi B. Ismail</option>
+                      <option value="Shaari Bin Abdullah">Shaari Bin Abdullah</option>
+                      <option value="Hafizah Binti Yahaya">Hafizah Binti Yahaya</option>
+                      <option value="Mohamed Radzi Bin Ishak">Mohamed Radzi Bin Ishak</option>
+                      <option value="Juhari Bin Md. Ali">Juhari Bin Md. Ali</option>
+                      <option value="Johari Bin Ali">Johari Bin Ali</option>
                     </select>
                   </div>
 
@@ -206,13 +206,13 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan" name="jawatan">
-                      <option value="mtk">Merinyu Taliair Kanan</option>
-                      <option value="pjj">Penolong Jurutera JA29</option>
-                      <option value="pjja">Penolong Jurutera JA36</option>
-                      <option value="jkms">Jurutera ( Kuala Muda/Sik )</option>
-                      <option value="jb">Jurutera ( Baling )</option>
-                      <option value="jd">Jurutera Daerah</option>
-                      <option value="pja">Penolong Jurutera JA38</option>
+                      <option value="Merinyu Taliair Kanan">Merinyu Taliair Kanan</option>
+                      <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
+                      <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
+                      <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
+                      <option value="Jurutera ( Baling )">Jurutera ( Baling )</option>
+                      <option value="Jurutera Daerah">Jurutera Daerah</option>
+                      <option value="Penolong Jurutera JA38">Penolong Jurutera JA38</option>
                     </select>
                   </div>
                 </div>
