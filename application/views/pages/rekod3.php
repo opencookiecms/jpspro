@@ -16,7 +16,15 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <form  method="post" action="<?php echo site_url('daftar/rekodkerja'); ?>">
+        <?php if(isset($_SESSION['success'])) { ?>
+          <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+        <?php
+          } ?>
+        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+
+        <?php echo validation_errors(); ?>
+
+          <?php echo form_open('mrk/rekodkerjatiga'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Maklumat Rekod Kerja - MRK 03</h3>
@@ -40,13 +48,23 @@
 
               <div class="box-body">
                 <div class="form-group">
+                  <label class="col-sm-2">No Kontrak</label>
+
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="nokontrak" name="nokontrak" placeholder="No Kontrak">
+                  </div>
+
                   <label class="col-sm-2">No Inden/Pesanan Tempatan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden/Pesanan Tempatan">
+                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden">
                   </div>
+                </div>
+              </div>
 
-                  <label class="col-sm-1">Tajuk Kerja</label>
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">Tajuk Kerja</label>
 
                   <div class="col-sm-5">
                     <textarea type="text" class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"></textarea>
@@ -98,6 +116,36 @@
 
                   <div class="col-sm-2">
                     <input type="text" class="form-control" id="kossebenar" name="kossebenar" placeholder="RM">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">L.A.D Dikenakan</label>
+
+                  <label class="col-sm-2">Dari</label>
+
+                  <div class="col-sm-2">
+                    <input type="date" class="form-control" id="laddari" name="laddari">
+                  </div>
+
+                  <label class="col-sm-2">Sehingga</label>
+
+                  <div class="col-sm-2">
+                    <input type="date" class="form-control" id="ladsehingga" name="ladsehingga">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2"></label>
+
+                  <label class="col-sm-2">RM</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="rmsehari" name="rmsehari" placeholder="RM/Sehari">
                   </div>
                 </div>
               </div>

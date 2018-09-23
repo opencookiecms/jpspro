@@ -72,26 +72,66 @@ class MRK extends CI_Controller{
 
     public function laporansiapkerja()
     {
-    	$this->load->view('template/header');
-    	$this->load->view('template/sidebar');
-    	$this->load->view('pages/laporansiap');
-    	$this->load->view('template/footer');
+    	$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
+
+        if($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('pages/laporansiap');
+            $this->load->view('template/footer');
+        }
+        else
+        {
+            $this->Mrk_model->create_laporansiapkerja();
+            $lastId=$this->Mrk_model->getLastid();
+            redirect(base_url('mrk/rekodkerjatiga/'.$lastId));
+        }
+
+        
     }
 
     public function rekodkerjatiga()
     {
-    	$this->load->view('template/header');
-    	$this->load->view('template/sidebar');
-    	$this->load->view('pages/rekod3');
-    	$this->load->view('template/footer');
+    	$this->form_validation->set_rules('nokontr', 'No Pendaftaran PKK', 'required');
+        $this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
+
+        if($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('pages/rekod3');
+            $this->load->view('template/footer');
+        }
+        else
+        {
+            $this->Mrk_model->create_mrktiga();
+            $lastId=$this->Mrk_model->getLastid();
+            redirect(base_url('mrk/perakuansiapkerja/'.$lastId));
+        }
+
+        
     }
 
     public function perakuansiapkerja()
     {
-    	$this->load->view('template/header');
-    	$this->load->view('template/sidebar');
-    	$this->load->view('pages/perakuansiap');
-    	$this->load->view('template/footer');
+    	$this->form_validation->set_rules('failrujuk', 'Fail Rujukan', 'required');
+
+        if($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('pages/perakuansiap');
+            $this->load->view('template/footer');
+        }
+        else
+        {
+            $this->Mrk_model->create_perakusiap();
+            $lastId=$this->Mrk_model->getLastid();
+            redirect(base_url('mrk/senaraisemak/'.$lastId));
+        }
+
+        
     }
 
     public function senaraisemak()
