@@ -16,7 +16,15 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <form  method="post" action="<?php echo site_url('daftar/rekodkerja'); ?>">
+        <?php if(isset($_SESSION['success'])) { ?>
+          <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+        <?php
+          } ?>
+        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+
+        <?php echo validation_errors(); ?>
+
+          <?php echo form_open('mrk/jaminanbank'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Surat Pelepasan Jaminan Bank</h3>

@@ -16,7 +16,15 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <form  method="post" action="<?php echo site_url('daftar/rekodkerja'); ?>">
+        <?php if(isset($_SESSION['success'])) { ?>
+          <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+        <?php
+          } ?>
+        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+
+        <?php echo validation_errors(); ?>
+
+          <?php echo form_open('mrk/siapbaiki'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Perakuan Siap Membaiki Kecacatan</h3>
@@ -26,7 +34,7 @@
                   <label class="col-sm-2">Nama Pemborong</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nokontr" name="nokontr" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namapem" name="namapem" placeholder="Nama Pemborong">
                   </div>
 
                   <label class="col-sm-1">Alamat Pemborong</label>

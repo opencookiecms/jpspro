@@ -144,18 +144,45 @@ class MRK extends CI_Controller{
 
     public function siapbaiki()
     {
-    	$this->load->view('template/header');
-    	$this->load->view('template/sidebar');
-    	$this->load->view('pages/perakusiapbaiki');
-    	$this->load->view('template/footer');
+    	$this->form_validation->set_rules('norujuk', 'No Rujukan', 'required');
+        $this->form_validation->set_rules('nokontrak', 'No Kontrak', 'required');
+
+        if($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('pages/perakusiapbaiki');
+            $this->load->view('template/footer');
+        }
+        else
+        {
+            $this->Mrk_model->create_siapbaiki();
+            $lastId=$this->Mrk_model->getLastid();
+            redirect(base_url('mrk/jaminanbank/'.$lastId));
+        }
+
+        
     }
 
     public function jaminanbank()
     {
-    	$this->load->view('template/header');
-    	$this->load->view('template/sidebar');
-    	$this->load->view('pages/jaminanbank');
-    	$this->load->view('template/footer');
+    	$this->form_validation->set_rules('rujukbank', 'Rujukan Bank', 'required');
+
+        if($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('pages/jaminanbank');
+            $this->load->view('template/footer');
+        }
+        else
+        {
+            $this->Mrk_model->create_jaminanbank();
+            $lastId=$this->Mrk_model->getLastid();
+            redirect(base_url('mrk'));
+        }
     }
+
+
 
 }

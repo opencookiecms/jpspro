@@ -251,6 +251,82 @@ class Mrk_model extends CI_Model{
     return $this->db->insert('mrk_perakuansiap', $data);
   }
 
+  public function create_siapbaiki()
+  {
+    $mrk_namapemb = $this->input->post('namapem');
+    $mrk_alamatpem = $this->input->post('alamat');
+    $mrk_failrujuk = $this->input->post('norujuk');
+    $mrk_nokontrak = $this->input->post('nokontrak');
+    $mrk_tajukkerja = $this->input->post('tajukkerja');
+    $mrk_tarikhmulatanggung = $this->input->post('mulacacat');
+    $mrk_tarikhsiapbaikicacat = $this->input->post('cacattamat');
+    $mrk_gred = $this->input->post('gred');
+    $mrk_kategori = $this->input->post('kategori');
+    $mrk_khusus = $this->input->post('khusus');
+    $mrk_nowangjaminansatu = $this->input->post('nokewangan');
+    $mrk_hargasatu = $this->input->post('harga');
+    $mrk_bakiwangjamin = $this->input->post('bakiwangjaminan');
+    $mrk_nowangjaminandua = $this->input->post('nokewangan');
+    $mrk_hargadua = $this->input->post('harga1');
+    $mrk_wangjaminlaksana = $this->input->post('wangjaminan');
+    $mrk_tambahbonlaksana = $this->input->post('kosbon');
+    $mrk_bakibonlaksana = $this->input->post('bakibon');
+    $mrk_pegawaipenguasa = $this->input->post('pegawai');
+    $mrk_jawatanpp = $this->input->post('jawatan');
+
+    $data = array(
+      'mrk_namapemb' => $mrk_namapemb,
+      'mrk_alamatpem' => $mrk_alamatpem,
+      'mrk_failrujuk' => $mrk_failrujuk,
+      'mrk_nokontrak' => $mrk_nokontrak,
+      'mrk_tajukkerja' => $mrk_tajukkerja,
+      'mrk_tarikhmulatanggung' => $mrk_tarikhmulatanggung,
+      'mrk_tarikhsiapbaikicacat' => $mrk_tarikhsiapbaikicacat,
+      'mrk_gred' => $mrk_gred,
+      'mrk_kategori' => $mrk_kategori,
+      'mrk_khusus' => $mrk_khusus,
+      'mrk_nowangjaminandua' => $mrk_nowangjaminansatu,
+      'mrk_hargasatu' => $mrk_hargasatu,
+      'mrk_bakiwangjamin' => $mrk_bakiwangjamin,
+      'mrk_nowangjaminandua' => $mrk_nowangjaminandua,
+      'mrk_hargadua' => $mrk_hargadua,
+      'mrk_wangjaminlaksana' => $mrk_wangjaminlaksana,
+      'mrk_tambahbonlaksana' => $mrk_tambahbonlaksana,
+      'mrk_bakibonlaksana' => $mrk_bakibonlaksana,
+      'mrk_pegawaipenguasa' => $mrk_pegawai,
+      'mrk_jawatanpp' => $mrk_jawatanpp
+      );
+
+    return $this->db->insert('mrk_perakuansiapbaikicacat', $data);
+  }
+
+  public function create_jaminanbank()
+  {
+    $mrk_rujukanbank = $this->input->post('rujukbank');
+    $mrk_namabank = $this->input->post('namabank');
+    $mrk_alamatbank = $this->input->post('alamatbank');
+    $mrk_tarikhmulatanggung = $this->input->post('mulatanggung');
+    $mrk_tarikhluputtanggung = $this->input->post('luputtanggung');
+    $mrk_namajurutera = $this->input->post('namajuru');
+    $mrk_jawatanjuru = $this->input->post('jawatan');
+    $mrk_namapem = $this->input->post('namaborong');
+    $mrk_alamatpem = $this->input->post('alamatborong');
+
+    $data = array(
+      'mrk_rujukanbank' => $mrk_rujukanbank,
+      'mrk_namabank' => $mrk_namabank,
+      'mrk_alamatbank' => $mrk_alamatbank,
+      'mrk_tarikhmulatanggung' => $mrk_tarikhmulatanggung,
+      'mrk_tarikhluputtanggung' => $mrk_tarikhluputtanggung,
+      'mrk_namajurutera' => $mrk_namajurutera,
+      'mrk_jawatanjuru' => $mrk_jawatanjuru,
+      'mrk_namapem' => $mrk_namapem,
+      'mrk_alamatpem' => $mrk_alamatpem
+      );
+
+    return $this->db->insert('mrk_jaminanbank', $data);
+  }
+
   public function getLastid()
   {
     $lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('mrk_satu')->row('id');
