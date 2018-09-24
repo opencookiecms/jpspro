@@ -19,13 +19,6 @@ class Surat extends CI_Controller
     $this->load->view('template/footer');
   }
 
-  public function view_data()
-  {
-
-
-  }
-
-
 }
 
 ?>

@@ -334,4 +334,10 @@ class Mrk_model extends CI_Model{
     return $lastId; //return last id
   }
 
+  public function get_rekodview()
+  {
+    $query = $this->db->get('mrk_satu');
+    return $query->result();
+  }
+
 }
