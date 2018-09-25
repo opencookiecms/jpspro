@@ -25,6 +25,7 @@
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
+                  <th>No</th>
                   <th>No Pendaftaran PKK</th>
                   <th>No Kontrak</th>
                   <th>Nama Kontraktor</th>
