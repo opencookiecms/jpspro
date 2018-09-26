@@ -24,7 +24,7 @@
 
         <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/jaminanbank'); ?>
+          <?php echo form_open('surat/suratkebenaran'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Surat Kebenaran Khas</h3>

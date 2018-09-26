@@ -24,7 +24,7 @@
 
         <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/jaminanbank'); ?>
+          <?php echo form_open('surat/suratwjp'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Surat Pelepasan Wang Jaminan Perlaksanaan</h3>

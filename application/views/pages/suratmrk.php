@@ -24,7 +24,7 @@
 
         <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/jaminanbank'); ?>
+          <?php echo form_open('surat/suratmrk'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Surat Maklumat Rekod Kerja</h3>
@@ -58,7 +58,7 @@
                   <label class="col-sm-3">Jenis Borang MRK</label>
 
                   <div class="col-sm-2">
-                    <select type="text" class="form-control" id="gred" name="mrk">
+                    <select type="text" class="form-control" id="mrk" name="mrk">
                       <option value="MRK 01">MRK 01</option>
                       <option value="MRK 02">MRK 02</option>
                       <option value="MRK 03">MRK 03</option>
