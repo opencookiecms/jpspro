@@ -20,12 +20,14 @@ class Projek_model extends CI_Model{
     $df_tarikmohon = $this->input->post("tarikhmohon");
     $df_jsebutharga = $this->input->post("jenissebut");
     $df_tajuk = $this->input->post("tajukprojek");
+    $df_daerah = $this->input->post('daerah');
 
     $data = array(
       'df_nosebutharga' => $df_nosebutharga,
       'df_tarikmohon' => $df_tarikmohon,
       'df_jsebutharga' => $df_jsebutharga,
-      'df_tajuk' => $df_tajuk
+      'df_tajuk' => $df_tajuk,
+      'df_daerah' => $df_daerah
       );
 
 

@@ -181,7 +181,6 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan" name="jawatan">
-                      <option value="Merinyu Taliair Kanan">Merinyu Taliair Kanan</option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
@@ -213,9 +212,8 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan1" name="jawatan1">
-                      <option value="Merinyu Taliair Kanan">Merinyu Taliair Kanan</option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
-                      <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
+                      <option value="Penolong Jurutera Kanan JA36">Penolong Jurutera Kanan JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
                       <option value="Jurutera ( Baling )">Jurutera ( Baling )</option>
                       <option value="Jurutera Daerah">Jurutera Daerah</option>
@@ -242,9 +240,8 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan2" name="jawatan2">
-                      <option value="Merinyu Taliair Kanan">Merinyu Taliair Kanan</option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
-                      <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
+                      <option value="Penolong Jurutera Kanan JA36">Penolong Jurutera Kanan JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
                       <option value="Jurutera ( Baling )">Jurutera ( Baling )</option>
                       <option value="Jurutera Daerah">Jurutera Daerah</option>

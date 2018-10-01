@@ -150,6 +150,113 @@
                 </div>
               </div>
 
+              <hr>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-3">Pengurusan Tapak Bina</label>
+                  <input type="checkbox" name="urustapak" value="urustapak">
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-3">Pentadbiran</label>
+                  <input type="checkbox" name="tadbir" value="tadbir">
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-3">Perancangan/Pentadbiran</label>
+                  <input type="checkbox" name="rancang" value="rancang">
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-3">Mutu Kerangka</label>
+                  <input type="checkbox" name="urustapak" value="urustapak">
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-3">Mutu Kerja-kerja</label>
+                  <input type="checkbox" name="urustapak" value="urustapak">
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-3">Mutu Kemasan</label>
+                  <input type="checkbox" name="urustapak" value="urustapak">
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-3">Mutu Kerja-kerja Luar</label>
+                  <input type="checkbox" name="urustapak" value="urustapak">
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-3">Pengawasan Kontraktor</label>
+                  <input type="checkbox" name="urustapak" value="urustapak">
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">Sokongan/Ulasan</label>
+
+                  <div class="col-sm-6">
+                  <textarea type="text" class="form-control" name="sokongan"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">Kesimpulan</label>
+
+                  <div class="col-sm-6">
+                  <textarea type="text" class="form-control" name="kesimpulan"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">Pegawai</label>
+
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="pegawai" name="pegawai" placeholder="Pegawai">
+                  </div>
+
+                  <label class="col-sm-2">Jawatan</label>
+
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">Tarikh</label>
+
+                  <div class="col-sm-2">
+                    <input type="date" class="form-control" id="tarikh" name="tarikh">
+                  </div>
+                </div>
+              </div>
+
+
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
                 <a href="<?php echo site_url('mrk/perakuansiapkerja') ?>" class="btn btn-info" role="button">Perakuan Siap Kerja</a>
