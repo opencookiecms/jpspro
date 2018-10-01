@@ -257,7 +257,7 @@
 
             <script>
               function myFunction() {
-                alert("DATA DISIMPAN");
+                alert("SIMPAN DATA");
               }
             </script>
           </div>
