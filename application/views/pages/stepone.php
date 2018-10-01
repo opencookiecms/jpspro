@@ -60,6 +60,12 @@
                 <div class="col-sm-6">
                   <textarea type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"></textarea>
                 </div>
+
+                <label class="col-sm-1">Daerah</label>
+
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" name="daerah"  placeholder="Daerah">
+                </div>
               </div>
             </div>
             <div class="box-footer">

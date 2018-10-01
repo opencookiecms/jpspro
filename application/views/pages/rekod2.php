@@ -211,7 +211,7 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-2">L. A. D Dikenakan RM </label>
+                  <label class="col-sm-2">L. A. D Dikenakan (RM) </label>
 
                   <div class="col-sm-2">
                     <input type="text" class="form-control" id="rm" name="rm" placeholder="RM/Sehari">

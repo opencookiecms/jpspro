@@ -106,13 +106,13 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-2">Kos Projek RM</label>
+                  <label class="col-sm-2">Kos Projek (RM)</label>
 
                   <div class="col-sm-2">
                     <input type="text" class="form-control" id="kosprojek" name="kosprojek" placeholder="RM">
                   </div>
 
-                  <label class="col-sm-2">Kos Sebenar RM</label>
+                  <label class="col-sm-2">Kos Sebenar (RM)</label>
 
                   <div class="col-sm-2">
                     <input type="text" class="form-control" id="kossebenar" name="kossebenar" placeholder="RM">

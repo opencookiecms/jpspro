@@ -81,7 +81,7 @@
                     <input type="date" class="form-control" id="tarikhsiapsebenar" name="tarikhsiapsebenar">
                   </div>
 
-                  <label class="col-sm-3">Tarikh Ambik Milik</label>
+                  <label class="col-sm-3">Tarikh Ambil Milik</label>
 
                   <div class="col-sm-2">
                     <input type="date" class="form-control" id="tarikhambikmilik" name="tarikhambikmilik">

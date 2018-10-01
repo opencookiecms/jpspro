@@ -73,7 +73,7 @@
 
             <div class="box-body">
               <div class="form-group">
-                <label class="col-sm-3">Harga Dokumen Sebutharga</label>
+                <label class="col-sm-3">Harga Dokumen Sebutharga (RM)</label>
 
                 <div class="col-sm-2">
                   <input type="text" class="form-control"name="doc" placeholder="Harga Dokumen">
@@ -153,10 +153,10 @@
 
             <div class="box-body">
               <div class="form-group">
-                <label class="col-sm-3">Penolong Jurutera Kanan J36</label>
+                <label class="col-sm-3">Penolong Jurutera Kanan JA36</label>
 
                 <div class="col-sm-4">
-                  <input type="text" class="form-control"  name="penolongkanan" placeholder="Penolong Kanan J36">
+                  <input type="text" class="form-control"  name="penolongkanan" placeholder="Penolong Kanan JA36">
                 </div>
               </div>
             </div>
