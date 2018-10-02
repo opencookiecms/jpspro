@@ -36,6 +36,13 @@ class Projek extends CI_Controller
    $this->load->view('template/footer');
  }
 
+  public function cetak()
+ {
+
+  $this->load->library('fpdf');
+
+ }
+
 
 
 }

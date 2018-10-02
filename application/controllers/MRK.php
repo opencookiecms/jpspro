@@ -8,6 +8,8 @@ class MRK extends CI_Controller{
 		parent::__construct();
     //Codeigniter : Write Less Do More
 		$this->load->model('Mrk_model');
+         //$this->load->helper('url');
+         //$this->load->model('Projek_model');
 	}
 
 	public function index()
@@ -181,6 +183,18 @@ class MRK extends CI_Controller{
             $lastId=$this->Mrk_model->getLastid();
             redirect(base_url('mrk'));
         }
+    }
+
+    public function try($value="")
+    {
+     
+
+         $this->load->database();
+         //$this->load->view('template/header');
+         //$this->load->view('template/sidebar');
+         $data['get_detail']=$this->Projek_model->get_projekdetail($value);
+         $this->load->view('pages/try', $data);
+        // $this->load->view('template/footer');
     }
 
     
