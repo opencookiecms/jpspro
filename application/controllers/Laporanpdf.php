@@ -35,16 +35,6 @@ Class Laporanpdf extends CI_Controller{
         $pdf->SetFont('Arial','U',12);
         $pdf->Cell(190,7,'BAHAGIAN A',0,1,'L');
 
-        $query = "SELECT * FROM mrk_satu WHERE id = '".$mrk_nopkk."'"; 
-        $result = $this->db->query($query);
-        foreach($result->result_array() as $row){
-        $data[] = array($row['mrk_nopkk'],  //THIS IS THE ARRAY THAT I NEED TO GET
-        $row['mrk_gred'], 
-        $row['mrk_namakon'], 
-        );
-
-        $this->session->set_userdata('session_data',$data);
-
         //space & FONT
         $pdf->SetFont('Arial','',12);
         $pdf->Cell(10,7,'',0,1);
