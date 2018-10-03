@@ -236,6 +236,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
+                <a href="<?php echo site_url('mrk/mrksatu_view') ?>" class="btn btn-info" role="button">CETAK</a>
                 <a href="<?php echo site_url('mrk/rekodkerjadua') ?>" class="btn btn-info" role="button">MRK - 02</a>
               </div>
             </div>

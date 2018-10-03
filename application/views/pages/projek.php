@@ -52,7 +52,7 @@
                   <td><?php echo $row->df_tajuk?></td>
                   <td><button type="edit" name="edit" class="btn btn-default">Edit</button>
                     <button type="delete" name="delete" class="btn btn-default">Delete</button>
-                    <button type="print" name="print" class="btn btn-default">Print</button>
+                    <a href="<?php echo site_url('projek/daftar_view') ?>" class="btn btn-info" role="button">CETAK</a>
                   </td>
                 </tr>
 

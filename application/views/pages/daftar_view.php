@@ -1,0 +1,36 @@
+<?php
+
+
+ ?>
+
+<html>
+<head>
+	<title>Jabatan Pengairan dan Saliran</title>
+</head>
+<body>
+
+<br>
+
+<center><h3>MAKLUMAT DAFTAR PROJEK<h3></center>
+<br>
+<h4>NO SEBUTHARGA :</h4>
+<h4>TAJUK PROJEK :</h4>
+<h4>KATEGORI PENDAFTARAN: GRED:</h4>
+<h4>TEMPOH SIAP KERJA :</h4>
+<h4>HARGA DOKUMEN SEBUTHARGA (RM) :</h4>
+<h4>TARIKH NOTIS DIKELUARKAN :</h4>
+<h4>TARIKH LAWAT TAPAK/TAKLIMAT :</h4>
+<h4>TARIKH DOKUMEN MULA DIJUAL :</h4>
+<h4>TARIKH AKHIR DOKUMEN DIJUAL :</h4>
+<h4>TARIKH SEBUTHARGA DITUTUP :</h4>
+<h4>JURUTERA DAERAH	:</h4>
+<h4>JURUTERA :</h4>
+<h4>PENOLONG JURUTERA KANAN JA36 :</h4>
+<h4>PENOLONG JURUTERA JA29 :</h4>
+<h4>KOD VOT :</h4>
+<h4>PERUNTUKAN :</h4>
+<h4>PERUNTUKAN SEMASA (RM) :</h4>
+<h4>KOORDINAT LOKASI PROJEK :</h4>
+
+</body>
+</html>

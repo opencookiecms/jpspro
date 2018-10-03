@@ -197,7 +197,12 @@ class MRK extends CI_Controller{
         // $this->load->view('template/footer');
     }
 
-    
+    public function mrksatu_view()
+    {
+        
+        $this->load->view('pages/mrksatu_view');
+        
+    }
 
 
 }

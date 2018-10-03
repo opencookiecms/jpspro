@@ -43,6 +43,11 @@ class Projek extends CI_Controller
 
  }
 
+ public function daftar_view()
+ {
+  $this->load->view('pages/daftar_view');
+ }
+
 
 
 }
