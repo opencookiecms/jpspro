@@ -35,7 +35,7 @@
                   <label class="col-sm-2">No Pendaftaran PKK</label>
 
                   <div class="col-sm-3">
-                    <p><?php echo $get_detail[0]->mrk_nopkk ?></p>
+                    <input type="text" class="form-control" id="nopkk" name="nopkk" placeholder="No Pendaftaran PKK" readonly>
                   </div>
 
                   <label class="col-sm-1">Nama Kontraktor</label>
