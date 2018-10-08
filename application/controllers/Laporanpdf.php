@@ -10,7 +10,7 @@ Class Laporanpdf extends CI_Controller{
 
         $this->load->helper('url');
     }
-    
+
     function index(){
         $pdf = new FPDF('p','mm','A4');
         // membuat halaman baru
