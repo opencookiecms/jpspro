@@ -340,4 +340,20 @@ class Mrk_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_projekdetail($id) //view data
+  {
+
+       $this->db->select('*');
+       $this->db->from('mrk_satu');
+
+       //Tambah join 2 table.,.,
+       $this->db->join('mrk_dua', 'mrk_dua.mrkdua_id = mrk_satu.id');
+       $this->db->join('mrk_tiga', 'mrk_tiga.mrktiga_id = mrk_satu.id');
+       $this->db->where('mrk_satu.id', $id);
+       $query = $this->db->get();
+
+       return $query->result();
+  }
+
+
 }

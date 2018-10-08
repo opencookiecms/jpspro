@@ -35,13 +35,13 @@
                   <label class="col-sm-2">No Pendaftaran PKK</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nopkk" name="nopkk" placeholder="No Pendaftaran PKK">
+                    <p><?php echo $get_detail[0]->mrk_nopkk ?></p>
                   </div>
 
                   <label class="col-sm-1">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor">
+                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor" readonly>
                   </div>
                 </div>
 
@@ -52,7 +52,7 @@
                   <label class="col-sm-2">No Inden/Pesanan tempatan</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden">
+                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden" readonly>
                   </div>
 
                   <label class="col-sm-2">Kos Projek (RM)</label>
@@ -68,7 +68,7 @@
                   <label class="col-sm-1">No Kontrak</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nokon" name="nokon" placeholder="No Kontrak">
+                    <input type="text" class="form-control" id="nokon" name="nokon" placeholder="No Kontrak" readonly>
                   </div>
 
                   <label class="col-sm-1">Tarikh Mula Kontrak</label>
