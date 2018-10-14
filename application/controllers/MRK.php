@@ -28,20 +28,17 @@ class MRK extends CI_Controller{
 		$this->form_validation->set_rules('nokon', 'No kontrak', 'required');
 		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
 
-		if($this->form_validation->run() == FALSE)
+				if($this->form_validation->run() == FALSE)
 
-		{
-			$this->load->view('template/header');
-			$this->load->view('template/sidebar');
-			$this->load->view('pages/rekod');
-			$this->load->view('template/footer');
-		}
-		else
-		{
-
-        	$this->Mrk_model->create_mrksatu();//load from model and call last id
-        	$lastId=$this->Mrk_model->getLastid();
-        	redirect(base_url('mrk/rekodkerjadua/'.$lastId)); //redirect last id to another step
+				{
+					$this->load->view('template/header');
+					$this->load->view('template/sidebar');
+					$this->load->view('pages/rekod');
+					$this->load->view('template/footer');
+				}
+				else
+				{
+						$this->Mrk_model->create_mrksatu();//load from model and call last id
         }
 
 
@@ -64,11 +61,10 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_mrkdua();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/laporansiapkerja/'.$lastId));
+
         }
 
-        
+
 
     }
 
@@ -86,11 +82,10 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_laporansiapkerja();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/rekodkerjatiga/'.$lastId));
+
         }
 
-        
+
     }
 
     public function rekodkerjatiga()
@@ -108,11 +103,9 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_mrktiga();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/perakuansiapkerja/'.$lastId));
         }
 
-        
+
     }
 
     public function perakuansiapkerja()
@@ -129,11 +122,10 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_perakusiap();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/senaraisemak/'.$lastId));
+
         }
 
-        
+
     }
 
     public function senaraisemak()
@@ -159,11 +151,9 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_siapbaiki();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/jaminanbank/'.$lastId));
         }
 
-        
+
     }
 
     public function jaminanbank()
@@ -180,8 +170,6 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_jaminanbank();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk'));
         }
     }
 
@@ -202,7 +190,7 @@ class MRK extends CI_Controller{
 
     $this->load->view('pages/mrksatu_view');
 
-}
+	 }
 
    public function view_data($value="")
    {
@@ -213,7 +201,7 @@ class MRK extends CI_Controller{
     $data['get_detail']=$this->Mrk_model->get_projekdetail($value);
     $this->load->view('pages/rekod2', $data);
     $this->load->view('template/footer');
-}
+   }
 
 
 }

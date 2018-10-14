@@ -155,6 +155,8 @@ class Projek_model extends CI_Model{
        return $query->result();
   }
 
+
+  //get last id function here//////
   public function getLastid()
   {
     $lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('dp_projek')->row('id');

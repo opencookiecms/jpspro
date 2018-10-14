@@ -12,48 +12,48 @@ class Mrk_model extends CI_Model{
 
   public function create_mrksatu()
   {
-  	
+
     $this->load->helper('url');
 
-  	$mrk_nopkk = $this->input->post("nopkk");
-  	$mrk_gred = $this->input->post("gred");
-  	$mrk_namakon = $this->input->post("namakon");
-  	$mrk_alamatkon = $this->input->post("alamat");
-  	$mrk_nokontrak = $this->input->post("nokon");
-  	$mrk_noinden = $this->input->post("noinden");
-  	$mrk_tajukkerja = $this->input->post("tajukkerjamrk");
-  	$mrk_kategori = $this->input->post("kategori");
-  	$mrk_daerah = $this->input->post("daerah");
-  	$mrk_negeri = $this->input->post("negeri");
-  	$mrk_khusus = $this->input->post("khusus");
-  	$mrk_tarikhmulakon = $this->input->post("tarikhmulakon");
-  	$mrk_tarikhjangkasiap = $this->input->post("tarikhjangka");
-  	$mrk_pegawai = $this->input->post("pegawai");
-  	$mrk_jawatan = $this->input->post("jawatan");
-  	$mrk_kosprojek = $this->input->post("kosprojek");
-  	$mrk_tarikh = $this->input->post("tarikh");
+    $mrk_nopkk = $this->input->post("nopkk");
+    $mrk_gred = $this->input->post("gred");
+    $mrk_namakon = $this->input->post("namakon");
+    $mrk_alamatkon = $this->input->post("alamat");
+    $mrk_nokontrak = $this->input->post("nokon");
+    $mrk_noinden = $this->input->post("noinden");
+    $mrk_tajukkerja = $this->input->post("tajukkerjamrk");
+    $mrk_kategori = $this->input->post("kategori");
+    $mrk_daerah = $this->input->post("daerah");
+    $mrk_negeri = $this->input->post("negeri");
+    $mrk_khusus = $this->input->post("khusus");
+    $mrk_tarikhmulakon = $this->input->post("tarikhmulakon");
+    $mrk_tarikhjangkasiap = $this->input->post("tarikhjangka");
+    $mrk_pegawai = $this->input->post("pegawai");
+    $mrk_jawatan = $this->input->post("jawatan");
+    $mrk_kosprojek = $this->input->post("kosprojek");
+    $mrk_tarikh = $this->input->post("tarikh");
 
-  	$data = array(
-  		'mrk_nopkk' => $mrk_nopkk,
-  		'mrk_gred' => $mrk_gred,
-  		'mrk_namakon' => $mrk_namakon,
-  		'mrk_alamatkon' => $mrk_alamatkon,
-  		'mrk_nokontrak' => $mrk_nokontrak,
-  		'mrk_noinden' => $mrk_noinden,
-  		'mrk_tajukkerja' => $mrk_tajukkerja,
-  		'mrk_kategori' => $mrk_kategori,
-  		'mrk_daerah' => $mrk_daerah,
-  		'mrk_negeri' => $mrk_negeri,
-  		'mrk_khusus' => $mrk_khusus,
-  		'mrk_tarikhmulakon' => $mrk_tarikhmulakon,
-  		'mrk_tarikhjangkasiap' => $mrk_tarikhjangkasiap,
-  		'mrk_pegawai' => $mrk_pegawai,
-  		'mrk_jawatan' => $mrk_jawatan,
-  		'mrk_kosprojek' => $mrk_kosprojek,
-  		'mrk_tarikh' => $mrk_tarikh
-  		);
+    $data = array(
+      'mrk_nopkk' => $mrk_nopkk,
+      'mrk_gred' => $mrk_gred,
+      'mrk_namakon' => $mrk_namakon,
+      'mrk_alamatkon' => $mrk_alamatkon,
+      'mrk_nokontrak' => $mrk_nokontrak,
+      'mrk_noinden' => $mrk_noinden,
+      'mrk_tajukkerja' => $mrk_tajukkerja,
+      'mrk_kategori' => $mrk_kategori,
+      'mrk_daerah' => $mrk_daerah,
+      'mrk_negeri' => $mrk_negeri,
+      'mrk_khusus' => $mrk_khusus,
+      'mrk_tarikhmulakon' => $mrk_tarikhmulakon,
+      'mrk_tarikhjangkasiap' => $mrk_tarikhjangkasiap,
+      'mrk_pegawai' => $mrk_pegawai,
+      'mrk_jawatan' => $mrk_jawatan,
+      'mrk_kosprojek' => $mrk_kosprojek,
+      'mrk_tarikh' => $mrk_tarikh
+    );
 
-  	return $this->db->insert('mrk_satu', $data);
+    return $this->db->insert('mrk_satu', $data);
 
 
   }
@@ -89,7 +89,7 @@ class Mrk_model extends CI_Model{
     $mrk_pegawai = $this->input->post('pegawai');
     $mrk_jawatan = $this->input->post('jawatan');
     $mrk_tarikhlaporan = $this->input->post('tarikhlaporan');
-  
+
 
     $data = array(
       'mrk_nopkk' => $mrk_nopkk,
@@ -119,7 +119,7 @@ class Mrk_model extends CI_Model{
       'mrk_pegawai' => $mrk_pegawai,
       'mrk_jawatan' => $mrk_jawatan,
       'mrk_tarikhlaporan' => $mrk_tarikhlaporan
-      );
+    );
 
     return $this->db->insert('mrk_dua', $data);
   }
@@ -181,7 +181,7 @@ class Mrk_model extends CI_Model{
       'mrk_jawatanjuruterad' => $mrk_jawatanjuruterad,
       'mrk_perkeso' => $mrk_perkeso,
       'mrk_liability' => $mrk_liability
-      );
+    );
 
     return $this->db->insert('mrk_laporansiap', $data);
 
@@ -219,7 +219,7 @@ class Mrk_model extends CI_Model{
       'mrk_laddari' => $mrk_laddari,
       'mrk_ladsehingga' => $mrk_ladsehingga,
       'mrk_ladsehari' => $mrk_ladsehari
-      );
+    );
 
     return $this->db->insert('mrk_tiga', $data);
   }
@@ -246,7 +246,7 @@ class Mrk_model extends CI_Model{
       'mrk_tarikhambikmilik' => $mrk_tarikhambikmilik,
       'mrk_tarikhmulatanggungcacat' => $mrk_tarikhmulatanggungcacat,
       'mrk_tarikhtamattanggungcacat' => $mrk_tarikhtamattanggungcacat
-      );
+    );
 
     return $this->db->insert('mrk_perakuansiap', $data);
   }
@@ -295,7 +295,7 @@ class Mrk_model extends CI_Model{
       'mrk_bakibonlaksana' => $mrk_bakibonlaksana,
       'mrk_pegawaipenguasa' => $mrk_pegawai,
       'mrk_jawatanpp' => $mrk_jawatanpp
-      );
+    );
 
     return $this->db->insert('mrk_perakuansiapbaikicacat', $data);
   }
@@ -322,18 +322,18 @@ class Mrk_model extends CI_Model{
       'mrk_jawatanjuru' => $mrk_jawatanjuru,
       'mrk_namapem' => $mrk_namapem,
       'mrk_alamatpem' => $mrk_alamatpem
-      );
+    );
 
     return $this->db->insert('mrk_jaminanbank', $data);
   }
 
-  public function getLastid()
-  {
-    $lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('mrk_satu')->row('id');
-
-    return $lastId; //return last id
-  }
-
+  //public function getLastid()
+  //{
+  //  $lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('mrk_satu')->row('id');
+  //
+  //  return $lastId; //return last id
+  //}
+  
   public function get_rekodview()
   {
     $query = $this->db->get('mrk_satu');
@@ -343,16 +343,16 @@ class Mrk_model extends CI_Model{
   public function get_projekdetail($id) //view data
   {
 
-       $this->db->select('*');
-       $this->db->from('mrk_satu');
+    $this->db->select('*');
+    $this->db->from('mrk_satu');
 
-       //Tambah join 2 table.,.,
-       $this->db->join('mrk_dua', 'mrk_dua.mrkdua_id = mrk_satu.id');
-       $this->db->join('mrk_tiga', 'mrk_tiga.mrktiga_id = mrk_satu.id');
-       $this->db->where('mrk_satu.id', $id);
-       $query = $this->db->get();
+    //Tambah join 2 table.,.,
+    $this->db->join('mrk_dua', 'mrk_dua.mrkdua_id = mrk_satu.id');
+    $this->db->join('mrk_tiga', 'mrk_tiga.mrktiga_id = mrk_satu.id');
+    $this->db->where('mrk_satu.id', $id);
+    $query = $this->db->get();
 
-       return $query->result();
+    return $query->result();
   }
 
 

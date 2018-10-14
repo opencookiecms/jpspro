@@ -38,7 +38,7 @@ class Daftar extends CI_Controller{
     $this->form_validation->set_rules('jenissebut','Jenis Sebut','required');
 
     if($this->form_validation->run() === FALSE)
-      
+
     {
       $this->load->view('template/header');
       $this->load->view('template/sidebar',$data);
@@ -108,50 +108,5 @@ class Daftar extends CI_Controller{
     }
 
   }
-
- //Zaty Please read this...
-  //I thing we should seperate this controller for this item in below..what do you thing ????
-
-  // public function bayaransebut(){
-  //   $this->load->view('template/header');
-  //   $this->load->view('template/sidebar');
-  //   $this->load->view('pages/bayar_sebut');
-  //   $this->load->view('template/footer');
-  // }
-  //
-  // public function rekodkerja(){
-  //   $this->load->view('template/header');
-  //   $this->load->view('template/sidebar');
-  //   $this->load->view('pages/rekod');
-  //   $this->load->view('template/footer');
-  // }
-  //
-  // public function rekodkerjadua(){
-  //   $this->load->view('template/header');
-  //   $this->load->view('template/sidebar');
-  //   $this->load->view('pages/rekod2');
-  //   $this->load->view('template/footer');
-  // }
-  //
-  // public function laporansiapkerja(){
-  //   $this->load->view('template/header');
-  //   $this->load->view('template/sidebar');
-  //   $this->load->view('pages/laporansiap');
-  //   $this->load->view('template/footer');
-  // }
-  //
-  // public function rekodkerjatiga(){
-  //   $this->load->view('template/header');
-  //   $this->load->view('template/sidebar');
-  //   $this->load->view('pages/rekod3');
-  //   $this->load->view('template/footer');
-  // }
-  //
-  // public function perakuansiapkerja(){
-  //   $this->load->view('template/header');
-  //   $this->load->view('template/sidebar');
-  //   $this->load->view('pages/perakuansiap');
-  //   $this->load->view('template/footer');
-  // }
 
 }
