@@ -36,12 +36,17 @@
               </thead>
 
               <tbody>
-               <?php 
-               $i = 1; 
+               <?php
+               $i = 1;
 
-               foreach ($get_projek as $row){  
+               foreach ($get_projek as $row){
 
-                 ?> 
+                 //using this foreach ($variable as $key => $value) {
+                   // code...
+                   //get_projek as $row
+                 }
+
+                 ?>
 
                  <tr>
                   <td><?php echo $row->id?></td>
