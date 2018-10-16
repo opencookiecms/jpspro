@@ -41,6 +41,7 @@
 
           <div class="box-body">
             <div class="form-group">
+              <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
               <label class="col-sm-2">Kategori Pendaftaran</label>
 
               <label class="col-sm-1"></label>
@@ -49,7 +50,7 @@
 
               <div class="col-sm-2">
                 <select type="text" class="form-control" name="gred" placeholder="Gred">
-                  <!--<select type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">-->
+
                   <option value="G1">G1</option>
                   <option value="G2">G2</option>
                   <option value="G3">G3</option>

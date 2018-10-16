@@ -17,7 +17,7 @@
         <div class="col-md-12">
             <div class="box box-solid bg-light-blue-gradient">
               <div class="box-header">
-                  <h3 class="box-title">Inden No : </h3>
+                  <h3 class="box-title">Inden No : <?php echo $get_detail[0]->df_kodvot ?></h3>
               </div>
               <div class="box-footer text-black">
                 <table class="table table-bordered">
@@ -40,8 +40,9 @@
                       <td>Surat - Menyurat</td>
                     </tr>
                     <tr>
+                        <?php foreach ($get_detail as $rowdetail): ?>
                       <td>1</td>
-                      <td width="300">Kerja Kerja Mebuat macacm-mcacm afafafafafafaaafafafafaf</td>
+                      <td width="300"><?php echo $rowdetail->df_tajuk?></td>
                       <td><img src="<?php echo base_url();?>/assets/images/success.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/success.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/success.png"></td>
@@ -53,6 +54,8 @@
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
                     </tr>
+
+                                  <?php endforeach; ?>
                   </table>
               </div>
             </div>

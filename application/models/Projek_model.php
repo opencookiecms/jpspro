@@ -136,11 +136,20 @@ class Projek_model extends CI_Model{
 
   public function get_projekview()
   {
-    $query = $this->db->get('dp_projek');
+
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+
+    //Tambah join 2 table.,.,
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.id');
+    $query = $this->db->get();
     return $query->result();
   }
 
-  public function get_projekdetail($id) //view data
+
+
+  public function get_projekdetail($indenNo) //view data
   {
 
        $this->db->select('*');
@@ -149,10 +158,29 @@ class Projek_model extends CI_Model{
        //Tambah join 2 table.,.,
        $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
        $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.id');
-       $this->db->where('dp_projek.id', $id);
+       $this->db->where('dp_projekinfo.df_kodvot', $indenNo);
        $query = $this->db->get();
 
        return $query->result();
+  }
+
+  public function get_projectdetailformrk($nosbutharga)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+
+    //Tambah join 2 table.,.,
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.id');
+    $this->db->where('dp_projekinfo.df_kodvot', $nosbutharga);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function get_kontraktor()
+  {
+     
   }
 
 

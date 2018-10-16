@@ -36,21 +36,12 @@
               </thead>
 
               <tbody>
-               <?php
-               $i = 1;
 
-               foreach ($get_projek as $row){
-
-                 //using this foreach ($variable as $key => $value) {
-                   // code...
-                   //get_projek as $row
-                 }
-
-                 ?>
+                <?php foreach ($get_projek as $row): ?>
 
                  <tr>
                   <td><?php echo $row->id?></td>
-                  <td><a href="<?php echo site_url('projek/view_data/'.$row->id); ?>" ><?php echo $row->df_nosebutharga?></a></td> <!--Show data in list view-->
+                  <td><a href="<?php echo site_url('projek/view_data/'.$row->df_kodvot); ?>" ><?php echo $row->df_kodvot?></a></td> <!--Show data in list view-->
                   <td><?php echo $row->df_nosebutharga?></td>
                   <td><?php echo $row->df_tarikmohon?></td>
                   <td><?php echo $row->df_jsebutharga?></td>
@@ -61,8 +52,8 @@
                   </td>
                 </tr>
 
+              <?php endforeach; ?>
 
-                ?>
 
               </tbody>
 
