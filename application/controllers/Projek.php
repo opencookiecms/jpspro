@@ -17,7 +17,7 @@ class Projek extends CI_Controller
 
   public function index()
   {
-       $this->load->database();
+   $this->load->database();
     $this->load->view('template/header');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Projek_model->get_projekview();

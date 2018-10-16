@@ -333,26 +333,33 @@ class Mrk_model extends CI_Model{
   //
   //  return $lastId; //return last id
   //}
-  
+
   public function get_rekodview()
   {
     $query = $this->db->get('mrk_satu');
     return $query->result();
   }
 
-  public function get_projekdetail($id) //view data
+
+
+
+  public function get_projectdetailformrk($nosbutharga)
   {
-
     $this->db->select('*');
-    $this->db->from('mrk_satu');
-
-    //Tambah join 2 table.,.,
-    $this->db->join('mrk_dua', 'mrk_dua.mrkdua_id = mrk_satu.id');
-    $this->db->join('mrk_tiga', 'mrk_tiga.mrktiga_id = mrk_satu.id');
-    $this->db->where('mrk_satu.id', $id);
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->where('dp_projek.df_nosebutharga', $nosbutharga);
     $query = $this->db->get();
 
     return $query->result();
+  }
+
+  public function getLastKodVod()
+  {
+    $KodVod = $this->db->select('mrk_noinden')->order_by('mrk_noinden','desc')->limit(1)->get('mrk_satu')->row('mrk_noinden');
+
+    return $KodVod; //return last id
   }
 
 

@@ -24,17 +24,33 @@
 
         <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/rekodkerja'); ?>
+
+
+          <?php
+
+              $pkkNo = $get_detail[0]->mrk_nopkk;
+                if($pkkNo == null){
+                    echo form_open('mrk/MRK_01');
+                }
+                else {
+                  echo form_open('mrk/MRK_01_Update');
+                }
+
+
+
+
+
+          ?>
             <div class="box box-info">
               <div class="box-header with-border">
-                <h3 class="box-title">Maklumat Rekod Kerja - MRK 01</h3>
+                <h3 class="box-title">Maklumat Rekod Kerja - MRK 01  No PKK : </h3>
               </div><!-- end of box header-->
               <div class="box-body">
                 <div class="form-group">
                   <label class="col-sm-2">No Pendaftaran PKK</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nopkk" name="nopkk" placeholder="No Pendaftaran PKK">
+                    <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
                   </div>
                   <label class="col-sm-1">Gred</label>
 
@@ -64,7 +80,7 @@
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon ?></textarea>
                   </div>
                 </div>
               </div>
@@ -74,13 +90,13 @@
                   <label class="col-sm-1">No Kontrak</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nokon" name="nokon" placeholder="No Kontrak">
+                    <input type="text" class="form-control" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
                   </div>
 
                   <label class="col-sm-2">No Inden/Pesanan tempatan</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden">
+                    <input type="text" class="form-control" id="noinden" readonly name="noinden"value="<?php echo $get_detail[0]->df_kodvot ?>" placeholder="No Inden">
                   </div>
                 </div>
               </div>
@@ -90,7 +106,7 @@
                   <label class="col-sm-1">Tajuk Kerja</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"></textarea>
+                    <textarea type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
                   </div>
 
                   <label class="col-sm-1">Kategori</label>
@@ -236,17 +252,16 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('mrk/mrksatu_view') ?>" class="btn btn-info" role="button">CETAK</a>
-                <a href="<?php echo site_url('mrk/rekodkerjadua') ?>" class="btn btn-info" role="button">MRK - 02</a>
+
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 
 
     </section>
     <!-- /.content -->
-    
+
   </div>
   <!-- /.content-wrapper -->

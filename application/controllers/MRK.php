@@ -8,7 +8,7 @@ class MRK extends CI_Controller{
 		parent::__construct();
     //Codeigniter : Write Less Do More
 		$this->load->model('Mrk_model');
-         //$this->load->helper('url');
+    $this->load->helper('url');
          //$this->load->model('Projek_model');
 	}
 
@@ -20,25 +20,32 @@ class MRK extends CI_Controller{
 		$this->load->view('template/footer');
 	}
 
-	public function rekodkerja()
+	public function MRK_01($value="")
 	{
 
   //form validation function
+	  $this->load->database();
+	  $data['get_detail']=$this->Mrk_model->get_projectdetailformrk($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 		$this->form_validation->set_rules('nokon', 'No kontrak', 'required');
 		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
 
+
+
 				if($this->form_validation->run() == FALSE)
 
 				{
+
 					$this->load->view('template/header');
 					$this->load->view('template/sidebar');
-					$this->load->view('pages/rekod');
+					$this->load->view('pages/MRK01',$data);
 					$this->load->view('template/footer');
 				}
 				else
 				{
 						$this->Mrk_model->create_mrksatu();//load from model and call last id
+						$KodVod=$this->Mrk_model->getLastKodVod();
+						redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
         }
 
 
@@ -61,6 +68,7 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_mrkdua();
+
 
         }
 

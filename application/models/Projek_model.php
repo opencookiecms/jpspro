@@ -164,23 +164,11 @@ class Projek_model extends CI_Model{
        return $query->result();
   }
 
-  public function get_projectdetailformrk($nosbutharga)
-  {
-    $this->db->select('*');
-    $this->db->from('dp_projek');
 
-    //Tambah join 2 table.,.,
-    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
-    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.id');
-    $this->db->where('dp_projekinfo.df_kodvot', $nosbutharga);
-    $query = $this->db->get();
-
-    return $query->result();
-  }
 
   public function get_kontraktor()
   {
-     
+
   }
 
 
