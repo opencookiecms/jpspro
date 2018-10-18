@@ -304,6 +304,39 @@ class MRK extends CI_Controller{
 
     }
 
+    public function mrkperakuansiapbaikicacat_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkperakuansiapbaikicacat_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkpelepasanbank_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkpelepasanbank_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkperakuanpemulangan_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkperakuanpemulangan_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
 
 
 }
