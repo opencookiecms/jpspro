@@ -334,11 +334,7 @@ class Mrk_model extends CI_Model{
   //  return $lastId; //return last id
   //}
 
-  public function get_rekodview()
-  {
-    $query = $this->db->get('mrk_satu');
-    return $query->result();
-  }
+  
 
 
 
@@ -419,7 +415,17 @@ class Mrk_model extends CI_Model{
 
 
 
+
+
   ///////////////////////////end of mrk update////////////////////////////////////////////////////////////////////////////////////
+
+  public function get_rekodview()
+  {
+    $query = $this->db->get('mrk_satu');
+    $query = $this->db->get('mrk_dua');
+    $query = $this->db->get('mrk_tiga');
+    return $query->result();
+  }
 
 
 }

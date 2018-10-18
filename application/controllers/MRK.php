@@ -249,5 +249,61 @@ class MRK extends CI_Controller{
 
 	 /////end of update
 
+    public function mrksatu_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrksatu_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkdua_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkdua_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrktiga_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrktiga_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrklaporansiap_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrklaporansiap_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkperakuansiap_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkperakuansiap_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+
 
 }
