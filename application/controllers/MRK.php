@@ -31,7 +31,6 @@ class MRK extends CI_Controller{
 		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
 
 
-
 				if($this->form_validation->run() == FALSE)
 
 				{
@@ -50,6 +49,8 @@ class MRK extends CI_Controller{
 
 
     }
+
+
 
     public function rekodkerjadua()
     {
@@ -210,6 +211,43 @@ class MRK extends CI_Controller{
     $this->load->view('pages/rekod2', $data);
     $this->load->view('template/footer');
    }
+
+
+	 /////MRK AND OTHER UPDATE GOOSE HERE//////////////////////////////////////////////////////////////
+
+
+	 public function MRK_01_Update()
+	 {
+		 //form validation function
+			$this->load->database();
+			//$data['get_detail']=$this->Mrk_model->get_projekdetail($value);
+			$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
+			$this->form_validation->set_rules('nokon', 'No kontrak', 'required');
+			$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
+
+
+					if($this->form_validation->run() == FALSE)
+
+					{
+
+						$this->load->view('template/header');
+						$this->load->view('template/sidebar');
+						$this->load->view('pages/MRK01');
+						$this->load->view('template/footer');
+					}
+					else
+					{
+							$this->Mrk_model->mrk01update($data ,$this->input->post('nokon'));//load from model and call last id
+							$KodVod=$this->Mrk_model->getLastKodVod();
+							redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+					 }
+
+	 }
+
+
+
+
+	 /////end of update
 
 
 }

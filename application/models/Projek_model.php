@@ -134,6 +134,14 @@ class Projek_model extends CI_Model{
         //this return for inserting data from this table
   }
 
+
+  //////this is mrk Update function goes heree/////////////////////////////////////////////////
+
+
+
+
+  ///////end of update function//////////////////////////////////////////////////////////////////
+
   public function get_projekview()
   {
 

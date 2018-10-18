@@ -56,6 +56,7 @@
 
                   <div class="col-sm-4">
                     <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
+                      <option value="<?php echo $get_detail[0]->mrk_gred ?>"><?php echo $get_detail[0]->mrk_gred ?></option>
                       <option value="G1 | Sehingga RM200,000.00">G1 | Sehingga RM200,000.00</option>
                       <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2 | RM200,001.00 Hingga RM500,000.00</option>
                       <option value="G3 | RM500,001.00 Hingga RM1 000,000.00">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
@@ -74,7 +75,7 @@
                   <label class="col-sm-1">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor">
+                    <input type="text" class="form-control" id="namakon" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
                   </div>
 
                   <label class="col-sm-1">Alamat</label>
@@ -113,6 +114,7 @@
 
                   <div class="col-sm-4">
                     <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
+                      <option value="<?php echo $get_detail[0]->mrk_kategori ?>"><?php echo $get_detail[0]->mrk_kategori ?></option>
                       <option value="CE | Pembinaan Kejuruteraan Awam">CE | Pembinaan Kejuruteraan Awam</option>
                       <option value="B | Pembinaan Bangunan">B | Pembinaan Bangunan</option>
                       <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option>
@@ -126,6 +128,7 @@
 
                   <div class="col-sm-2">
                     <select type="text" class="form-control" id="daerah" name="daerah">
+                      <option value="<?php echo $get_detail[0]->mrk_daerah ?>"><?php echo $get_detail[0]->mrk_daerah ?></option>
                       <option value="kuala muda">Kuala Muda</option>
                       <option value="sik">Sik</option>
                       <option value="baling">Baling</option>
@@ -136,6 +139,7 @@
 
                   <div class="col-sm-2">
                     <select type="text" class="form-control" id="negeri" name="negeri">
+                      <option value="<?php echo $get_detail[0]->mrk_negeri ?>"><?php echo $get_detail[0]->mrk_negeri ?></option>
                       <option value="kedah">Kedah</option>
                       <option value="perlis">Perlis</option>
                       <option value="pulau pinang">Pulau Pinang</option>
@@ -147,6 +151,7 @@
 
                   <div class="col-sm-4">
                     <select type="text" class="form-control" id="khusus" placeholder="khusus" name="khusus">
+                          <option value="<?php echo $get_detail[0]->mrk_khusus ?>"><?php echo $get_detail[0]->mrk_khusus ?></option>
                       <option value="CE 02">CE 02 | Pembinaan Jambatan & Jeti</option>
                       <option value="CE 04">CE 04 | Empangan</option>
                       <option value="CE 06">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
@@ -180,13 +185,13 @@
                   <label class="col-sm-2">Tarikh Mula Kontrak</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhmulakon" name="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
+                    <input type="date" class="form-control" id="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>"name="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
                   </div>
 
                   <label class="col-sm-3">Tarikh Jangka Siap Kontrak</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhjangka" name="tarikhjangka">
+                    <input type="date" class="form-control" id="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" name="tarikhjangka">
                   </div>
                 </div>
               </div>
@@ -196,6 +201,7 @@
                   <label class="col-sm-1">Pegawai</label>
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="pegawai" name="pegawai">
+                          <option value="<?php echo $get_detail[0]->mrk_pegawai ?>"><?php echo $get_detail[0]->mrk_pegawai ?></option>
                       <option value="Mohamad Ridzam B. Jusoh">Mohamad Ridzam B. Jusoh</option>
                       <option value="Nazar Shah B. Awang">Nazar Shah B. Awang</option>
                       <option value="Shuhel B. Mohd Saad">Shuhel B. Mohd Saad</option>
@@ -222,6 +228,7 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan" name="jawatan">
+                          <option value="<?php echo $get_detail[0]->mrk_jawatan ?>"><?php echo $get_detail[0]->mrk_jawatan ?></option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
@@ -238,13 +245,13 @@
                   <label class="col-sm-2">Kos Projek (RM)</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kosprojek" name="kosprojek" placeholder="RM">
+                    <input type="text" class="form-control" id="kosprojek" value="<?php echo $get_detail[0]->mrk_kosprojek ?>" name="kosprojek" placeholder="RM">
                   </div>
 
                   <label class="col-sm-1">Tarikh</label>
 
                   <div class="col-sm-3">
-                    <input type="date" class="form-control" id="tarikh" name="tarikh">
+                    <input type="date" class="form-control" value="<?php echo $get_detail[0]->mrk_tarikh ?>" id="tarikh" name="tarikh">
                   </div>
                 </div>
               </div>
