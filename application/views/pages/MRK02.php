@@ -24,24 +24,34 @@
 
         <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/rekodkerjadua'); ?>
+
+                  <?php
+
+              $pkkNo = $get_detail[0]->mrk_nopkk;
+                if($pkkNo == null){
+                  echo form_open('mrk/MRK_01');
+                }
+                  else {
+                  echo form_open('mrk/MRK_01_Update');
+                }
+            ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Maklumat Rekod Kerja - MRK 02</h3>
               </div><!-- end of box header-->
-              
+
               <div class="box-body">
                 <div class="form-group">
                   <label class="col-sm-2">No Pendaftaran PKK</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nopkk" name="nopkk" placeholder="No Pendaftaran PKK" readonly>
+                    <input type="text" class="form-control" id="nopkk" name="nopkk" value="    <?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK" readonly>
                   </div>
 
                   <label class="col-sm-1">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor" readonly>
+                    <input type="text" class="form-control" id="namakon" name="namakon" value="<?php echo $get_detail[0]->mrk_namakon ?>" placeholder="Nama Kontraktor" readonly>
                   </div>
                 </div>
 
@@ -52,14 +62,14 @@
                   <label class="col-sm-2">No Inden/Pesanan tempatan</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden" readonly>
+                    <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->df_kodvot ?>" name="noinden" placeholder="No Inden" readonly>
                   </div>
 
                   <label class="col-sm-2">Kos Projek (RM)</label>
 
                   <div class="col-sm-2">
                     <input type="text" class="form-control" id="kosprojek" name="kosprojek" placeholder="RM">
-                  </div> 
+                  </div>
                 </div>
               </div>
 
@@ -275,13 +285,13 @@
                 <a href="<?php echo site_url('mrk/laporansiapkerja') ?>" class="btn btn-info" role="button">Laporan Siap Kerja</a>
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 
 
     </section>
     <!-- /.content -->
-    
+
   </div>
   <!-- /.content-wrapper -->

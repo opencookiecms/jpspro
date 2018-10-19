@@ -44,7 +44,7 @@
                       <td>1</td>
                       <td width="300"><?php echo $rowdetail->df_tajuk?></td>
                       <td><a href="<?php echo site_url('mrk/MRK_01/'. $rowdetail->df_nosebutharga); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
-                      <td><img src="<?php echo base_url();?>/assets/images/success.png"></td>
+                      <td><a href="<?php echo site_url('mrk/MRK_02/'. $rowdetail->df_nosebutharga); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
                       <td><img src="<?php echo base_url();?>/assets/images/success.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
