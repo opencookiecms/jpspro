@@ -8,7 +8,7 @@ class MRK extends CI_Controller{
 		parent::__construct();
     //Codeigniter : Write Less Do More
 		$this->load->model('Mrk_model');
-         //$this->load->helper('url');
+    $this->load->helper('url');
          //$this->load->model('Projek_model');
 	}
 
@@ -20,55 +20,65 @@ class MRK extends CI_Controller{
 		$this->load->view('template/footer');
 	}
 
-	public function rekodkerja()
+	public function MRK_01($value="")
 	{
 
   //form validation function
+	  $this->load->database();
+	  $data['get_detail']=$this->Mrk_model->get_projectdetailformrk($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 		$this->form_validation->set_rules('nokon', 'No kontrak', 'required');
 		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
 
-		if($this->form_validation->run() == FALSE)
 
-		{
-			$this->load->view('template/header');
-			$this->load->view('template/sidebar');
-			$this->load->view('pages/rekod');
-			$this->load->view('template/footer');
-		}
-		else
-		{
+				if($this->form_validation->run() == FALSE)
 
-        	$this->Mrk_model->create_mrksatu();//load from model and call last id
-        	$lastId=$this->Mrk_model->getLastid();
-        	redirect(base_url('mrk/rekodkerjadua/'.$lastId)); //redirect last id to another step
+				{
+
+					$this->load->view('template/header');
+					$this->load->view('template/sidebar');
+					$this->load->view('pages/MRK01',$data);
+					$this->load->view('template/footer');
+				}
+				else
+				{
+						$this->Mrk_model->create_mrksatu();//load from model and call last id
+						$KodVod=$this->Mrk_model->getLastKodVod();
+						redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
         }
 
 
     }
 
-    public function rekodkerjadua()
+
+
+    public function MRK_02($value="")
     {
 
     	//form validation
+				$this->load->database();
+			 	$data['get_detail']=$this->Mrk_model->get_projectdetailformrk($value);
         $this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
+
 
         if($this->form_validation->run() == FALSE)
         {
             $this->load->view('template/header');
             $this->load->view('template/sidebar');
-            $this->load->view('pages/rekod2');
+        	  $this->load->view('pages/MRK02',$data);
             $this->load->view('template/footer');
         }
 
         else
         {
             $this->Mrk_model->create_mrkdua();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/laporansiapkerja/'.$lastId));
+						$KodVod=$this->Mrk_model->getLastKodVod();
+						redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+
+
         }
 
-        
+
 
     }
 
@@ -86,11 +96,10 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_laporansiapkerja();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/rekodkerjatiga/'.$lastId));
+
         }
 
-        
+
     }
 
     public function rekodkerjatiga()
@@ -108,11 +117,9 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_mrktiga();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/perakuansiapkerja/'.$lastId));
         }
 
-        
+
     }
 
     public function perakuansiapkerja()
@@ -129,11 +136,10 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_perakusiap();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/senaraisemak/'.$lastId));
+
         }
 
-        
+
     }
 
     public function senaraisemak()
@@ -159,11 +165,9 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_siapbaiki();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk/jaminanbank/'.$lastId));
         }
 
-        
+
     }
 
     public function jaminanbank()
@@ -180,8 +184,6 @@ class MRK extends CI_Controller{
         else
         {
             $this->Mrk_model->create_jaminanbank();
-            $lastId=$this->Mrk_model->getLastid();
-            redirect(base_url('mrk'));
         }
     }
 
@@ -202,7 +204,7 @@ class MRK extends CI_Controller{
 
     $this->load->view('pages/mrksatu_view');
 
-}
+	 }
 
    public function view_data($value="")
    {
@@ -213,7 +215,133 @@ class MRK extends CI_Controller{
     $data['get_detail']=$this->Mrk_model->get_projekdetail($value);
     $this->load->view('pages/rekod2', $data);
     $this->load->view('template/footer');
-}
+   }
+
+
+	 /////MRK AND OTHER UPDATE GOOSE HERE//////////////////////////////////////////////////////////////
+
+
+	 public function MRK_01_Update()
+	 {
+		 //form validation function
+			$this->load->database();
+			//$data['get_detail']=$this->Mrk_model->get_projekdetail($value);
+			$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
+			$this->form_validation->set_rules('nokon', 'No kontrak', 'required');
+			$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
+
+
+					if($this->form_validation->run() == FALSE)
+
+					{
+
+						$this->load->view('template/header');
+						$this->load->view('template/sidebar');
+						$this->load->view('pages/MRK01');
+						$this->load->view('template/footer');
+					}
+					else
+					{
+							$this->Mrk_model->mrk01update($data ,$this->input->post('nokon'));//load from model and call last id
+							$KodVod=$this->Mrk_model->getLastKodVod();
+							redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+					 }
+
+	 }
+
+
+
+
+	 /////end of update
+
+    public function mrksatu_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrksatu_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkdua_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkdua_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrktiga_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrktiga_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrklaporansiap_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrklaporansiap_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkperakuansiap_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkperakuansiap_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkperakuansiapbaikicacat_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkperakuansiapbaikicacat_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkpelepasanbank_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkpelepasanbank_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function mrkperakuanpemulangan_details()
+    {
+
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $data['get_projek']=$this->Mrk_model->get_rekodview();
+        $this->load->view('pages/mrkperakuanpemulangan_details', $data);
+        $this->load->view('template/footer');
+
+    }
+
 
 
 }

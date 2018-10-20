@@ -4,7 +4,7 @@
   <section class="content-header">
     <center>
       <h2>
-        Maklumat Projek
+        Maklumat Rekod Kerja
       </h2>
     </center>
   </section>
@@ -18,7 +18,7 @@
 
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Senarai Projek</h3>
+            <h3 class="box-title">Perakuan Siap Membaiki Kecacatan</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -26,10 +26,9 @@
               <thead>
                 <tr>
                   <th>Bil</th>
-                  <th>Kod Vot</th>
-                  <th>No Sebutharga</th>
-                  <th>Tarikh Permohonan</th>
-                  <th>Jenis Sebutharga</th>
+                  <th>No Pendaftaran PKK</th>
+                  <th>Nama Kontraktor</th>
+                  <th>No Inden/Pesanan Tempatan</th>
                   <th>Tajuk Projek</th>
                   <th></th>
                 </tr>
@@ -41,14 +40,12 @@
 
                  <tr>
                   <td><?php echo $row->id?></td>
-                  <td><a href="<?php echo site_url('projek/view_data/'.$row->df_kodvot); ?>" ><?php echo $row->df_kodvot?></a></td> <!--Show data in list view-->
-                  <td><?php echo $row->df_nosebutharga?></td>
-                  <td><?php echo $row->df_tarikmohon?></td>
-                  <td><?php echo $row->df_jsebutharga?></td>
-                  <td><?php echo $row->df_tajuk?></td>
-                  <td><button type="edit" name="edit" class="btn btn-default">Edit</button>
-                    <button type="delete" name="delete" class="btn btn-default">Delete</button>
-                  </td>
+                  <td><a href="#" ><?php echo $row->mrk_nopkk?></a></td> <!--Show data in list view-->
+                  <td><?php echo $row->mrk_namakon?></td>
+                  <td><?php echo $row->mrk_noinden?></td>
+                  <td><?php echo $row->mrk_tajukkerja?></td>
+                  <td><button type="edit" name="view" class="btn btn-default">View</button>
+                  <button type="delete" name="delete" class="btn btn-default">Delete</button></td>
                 </tr>
 
               <?php endforeach; ?>
