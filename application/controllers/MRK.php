@@ -249,6 +249,19 @@ class MRK extends CI_Controller{
 
 	 }
 
+    public function delete()
+    {
+        $this->load->model('Mrk_model');
+
+        $id = $this->input->get('id');
+
+        if($this->Mrk_model->deleteuser($id))
+        {
+            $data['get_projek']=$this->Mrk_model->get_rekodview();
+            $this->load->view('pages/mrksatu_details', $data);
+        }
+    }
+
 
 
 

@@ -340,6 +340,15 @@ class Mrk_model extends CI_Model{
     return $query->result();
   }
 
+  function deleteuser($id)
+  {
+    $this->load->database();
+    $this->db->where('id', $id);
+    $this->db->delete();
+
+    return true;
+  }
+
 
 
 
