@@ -17,7 +17,7 @@
         <div class="col-md-12">
             <div class="box box-solid bg-blue-gradient">
               <div class="box-header">
-                  <h3 class="box-title">Inden No : <?php echo $get_detail[0]->df_kodvot ?></h3>
+                  <h3 class="box-title">Kod Vot : <?php echo $get_detail[0]->df_kodvot ?></h3>
               </div>
               <div class="box-footer text-black">
                 <table class="table table-bordered">
