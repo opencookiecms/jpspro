@@ -24,7 +24,7 @@
 
         <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/rekodkerjatiga'); ?>
+          <?php echo form_open('mrk/MRK_03'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Maklumat Rekod Kerja - MRK 03</h3>
@@ -34,13 +34,13 @@
                   <label class="col-sm-2">No Pendaftaran Kontraktor</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nokontr" name="nokontr" placeholder="No Pendaftaran Kontraktor">
+                    <input type="text" class="form-control" id="nokontr" value="  <?php echo $get_detail[0]->mrk_nopkk?>" name="nokontr" placeholder="No Pendaftaran Kontraktor" readonly>
                   </div>
 
                   <label class="col-sm-1">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor">
+                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor" value="  <?php echo $get_detail[0]->mrk_namakon?>" readonly>
                   </div>
                 </div>
 
@@ -51,13 +51,13 @@
                   <label class="col-sm-2">No Kontrak</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nokontrak" name="nokontrak" placeholder="No Kontrak">
+                    <input type="text" class="form-control" id="nokontrak" name="nokontrak" placeholder="No Kontrak" value="  <?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                   </div>
 
                   <label class="col-sm-2">No Inden/Pesanan Tempatan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden">
+                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden" value="  <?php echo $get_detail[0]->df_kodvot?>" readonly>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@
                   <label class="col-sm-2">Tajuk Kerja</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"></textarea>
+                    <textarea type="text" class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja" readonly>  <?php echo $get_detail[0]->df_tajuk?></textarea>
                   </div>
                 </div>
               </div>
@@ -77,13 +77,13 @@
                   <label class="col-sm-2">Tarikh Mula</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhmulakon" name="tarikhmulakon" placeholder="Tarikh Mula">
+                    <input type="date" class="form-control" id="tarikhmulakon" name="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>" placeholder="Tarikh Mula" readonly>
                   </div>
 
                   <label class="col-sm-3">Tarikh Jangka Siap</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhjangka" name="tarikhjangka">
+                    <input type="date" class="form-control" id="tarikhjangka" name="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" readonly>
                   </div>
                 </div>
               </div>
@@ -93,13 +93,13 @@
                   <label class="col-sm-2">Dilanjutkan Masa</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tariklanjut" name="tariklanjut">
+                    <input type="date" class="form-control" id="tariklanjut" name="tariklanjut" value="<?php echo $get_detail[0]->lsk_lanjutmasa ?>" readonly>
                   </div>
 
                   <label class="col-sm-3">Tarikh Siap Sebenar</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhkerjasempurna" name="tarikhkerjasempurna">
+                    <input type="date" class="form-control" id="tarikhkerjasempurna" name="tarikhkerjasempurna" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>" readonly>
                   </div>
                 </div>
               </div>
@@ -109,13 +109,13 @@
                   <label class="col-sm-2">Kos Projek (RM)</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kosprojek" name="kosprojek" placeholder="RM">
+                    <input type="text" class="form-control" id="kosprojek" name="kosprojek" value="<?php echo $get_detail[0]->mrk_kosprojek?>" placeholder="RM" readonly>
                   </div>
 
                   <label class="col-sm-2">Kos Sebenar (RM)</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kossebenar" name="kossebenar" placeholder="RM">
+                    <input type="text" class="form-control" id="kossebenar" name="kossebenar" value="" placeholder="RM" readonly>
                   </div>
                 </div>
               </div>
@@ -127,13 +127,13 @@
                   <label class="col-sm-2">Dari</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="laddari" name="laddari">
+                    <input type="date" class="form-control" id="laddari" name="laddari" value="<?php echo $get_detail[0]->mrk_laddari?>" readonly>
                   </div>
 
                   <label class="col-sm-2">Sehingga</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="ladsehingga" name="ladsehingga">
+                    <input type="date" class="form-control" id="ladsehingga" name="ladsehingga" value="<?php echo $get_detail[0]->mrk_ladsehingga?>" readonly>
                   </div>
                 </div>
               </div>
@@ -145,7 +145,7 @@
                   <label class="col-sm-2">RM</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="rmsehari" name="rmsehari" placeholder="RM/Sehari">
+                    <input type="text" class="form-control" id="rmsehari" name="rmsehari" placeholder="RM/Sehari" value="<?php echo $get_detail[0]->mrk_ladsehari?>" readonly>
                   </div>
                 </div>
               </div>
@@ -262,13 +262,13 @@
                 <a href="<?php echo site_url('mrk/perakuansiapkerja') ?>" class="btn btn-info" role="button">Perakuan Siap Kerja</a>
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 
 
     </section>
     <!-- /.content -->
-    
+
   </div>
   <!-- /.content-wrapper -->

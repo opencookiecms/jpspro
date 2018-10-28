@@ -62,14 +62,6 @@ class Mrk_model extends CI_Model{
   {
     $this->load->helper('url');
 
-    $mrk_nopkk = $this->input->post("nopkk");
-    $mrk_namakon = $this->input->post('namakon');
-    $mrk_noinden = $this->input->post('noinden');
-    $mrk_kosprojek = $this->input->post('kosprojek');
-    $mrk_nokontrak = $this->input->post('nokon');
-    $mrk_tarikhmulakon = $this->input->post('tarikhmulakon');
-    $mrk_tarikhjangkasiap = $this->input->post('tarikhjangka');
-    $mrk_tajukkerja = $this->input->post('tajukkerjamrk');
     $mrk_majukerja = $this->input->post('ikutjadual');
     $mrk_majukerjasebenar = $this->input->post('kerjasebenar');
     $mrk_bayarmajusemasa = $this->input->post('bayarmaju');
@@ -89,23 +81,18 @@ class Mrk_model extends CI_Model{
     $mrk_pegawai = $this->input->post('pegawai');
     $mrk_jawatan = $this->input->post('jawatan');
     $mrk_tarikhlaporan = $this->input->post('tarikhlaporan');
+    $mrk_satuid = $this->input->post('mrksatuid');
+    $mrk_noinden = $this->input->post('noinden');
 
 
     $data = array(
-      'mrk_nopkk' => $mrk_nopkk,
-      'mrk_namakon' => $mrk_namakon,
-      'mrk_noinden' => $mrk_noinden,
-      'mrk_kosprojek' => $mrk_kosprojek,
-      'mrk_nokontrak' => $mrk_nokontrak,
-      'mrk_tarikhmulakon' => $mrk_tarikhmulakon,
-      'mrk_tarikhjangkasiap' => $mrk_tarikhjangkasiap,
-      'mrk_tajukkerja' => $mrk_tajukkerja,
+
       'mrk_majukerja' => $mrk_majukerja,
       'mrk_majukerjasebenar' => $mrk_majukerjasebenar,
       'mrk_bayarmajusemasa' => $mrk_bayarmajusemasa,
       'mrk_jumlahbayarmaju' => $mrk_jumlahbayarmaju,
       'mrk_masalah' => $mrk_masalah,
-      'mrk_sebaboleh' => $mrk_sebabboleh,
+      'mrk_sebaboleh' => $mrk_sebaboleh ,
       'mrk_lainlain' => $mrk_lainlain,
       'mrk_lanjutmasa' => $mrk_lanjutmasa,
       'mrk_dari' => $mrk_dari,
@@ -118,22 +105,29 @@ class Mrk_model extends CI_Model{
       'mrk_projekmansuh' => $mrk_projekmansuh,
       'mrk_pegawai' => $mrk_pegawai,
       'mrk_jawatan' => $mrk_jawatan,
-      'mrk_tarikhlaporan' => $mrk_tarikhlaporan
+      'mrk_tarikhlaporan' => $mrk_tarikhlaporan,
+      'mrksatu_id' => $mrk_satuid,
+      'mrk2_noinden' => $mrk_noinden
     );
 
     return $this->db->insert('mrk_dua', $data);
   }
 
+
+
+
+
   public function create_laporansiapkerja()
   {
     $this->load->helper('url');
 
-    $mrk_nopkk = $this->input->post('nopkk');
+    //$mrk_nopkk = $this->input->post('nopkk');
     $mrk_namapemb = $this->input->post('namapem');
     $mrk_alamatpemb = $this->input->post('alamat');
-    $mrk_tajukkerja = $this->input->post('butiran');
-    $mrk_nokontrak = $this->input->post('nosebut');
-    $mrk_noinden = $this->input->post('nopesanan');
+    $mrk_butirkerja = $this->input->post('butiran');
+    //$mrk_nosbtharga = $this->input->post('nosebut');
+    $mrk_nopesanan = $this->input->post('nopesanan');
+    $mrk_noinden = $this->input->post('noinden');
     $mrk_hargapesanan = $this->input->post('hargapesanan');
     $mrk_hargasebenar = $this->input->post('hargasebenar');
     $mrk_tarikhmulakerja = $this->input->post('tarikhmula');
@@ -153,34 +147,37 @@ class Mrk_model extends CI_Model{
     $mrk_jawatanjuruterad = $this->input->post('jawatan3');
     $mrk_perkeso = $this->input->post('perkeso');
     $mrk_liability = $this->input->post('publiability');
+    $mrk_hiddenid = $this->input->post('hiddenid');
 
     $data = array(
-      'mrk_nopkk' => $mrk_nopkk,
-      'mrk_namapemb' => $mrk_namapemb,
-      'mrk_alamatpemb' => $mrk_alamatpemb,
-      'mrk_tajukkerja' => $mrk_tajukkerja,
-      'mrk_nokontrak' => $mrk_nokontrak,
-      'mrk_noinden'=> $mrk_noinden,
-      'mrk_hargapesanan' => $mrk_hargapesanan,
-      'mrk_hargasebenar' => $mrk_hargasebenar,
-      'mrk_tarikhmulakerja' => $mrk_tarikhmulakerja,
-      'mrk_tarikhkerjatamat' => $mrk_tarikhkerjatamat,
-      'mrk_lanjutmasa' => $mrk_lanjutmasa,
-      'mrk_tarikhkerjasiap' => $mrk_tarikhkerjasiap,
-      'mrk_peruntukan' => $mrk_peruntukan,
-      'mrk_laporanpegawai' => $mrk_peruntukan,
-      'mrk_laporanpegawai' => $mrk_laporanpegawai,
-      'mrk_pegawaipenyelia' => $mrk_pegawaipenyelia,
-      'mrk_jawatanpen' => $mrk_jawatanpen,
-      'mrk_tarikhperakui' => $mrk_tarikhperakui,
-      'mrk_ketuabahagian' => $mrk_ketuabahagian,
-      'mrk_jawatanketuab' => $mrk_jawatanketuab,
-      'mrk_juruteraj' => $mrk_juruteraj,
-      'mrk_jawatanjuruteraj' => $mrk_jawatanjuruteraj,
-      'mrk_juruterad' => $mrk_juruterad,
-      'mrk_jawatanjuruterad' => $mrk_jawatanjuruterad,
-      'mrk_perkeso' => $mrk_perkeso,
-      'mrk_liability' => $mrk_liability
+      //'mrk_nopkk' => $mrk_nopkk,
+      'lsk_namapemb' => $mrk_namapemb,
+      'lsk_alamatpemb' => $mrk_alamatpemb,
+      'lsk_butirkerja' => $mrk_butirkerja,
+      //'lsk_nosebutharga' => $mrk_nosbtharga,
+      'lsk_noinden' =>   $mrk_noinden,
+      'lsk_nopesanan'=>   $mrk_nopesanan,
+      'lsk_hargapesanan' => $mrk_hargapesanan,
+      'lsk_hargasebenar' => $mrk_hargasebenar,
+      'lsk_tarikhmulakerja' => $mrk_tarikhmulakerja,
+      'lsk_tarikhkerjatamat' => $mrk_tarikhkerjatamat,
+      'lsk_lanjutmasa' => $mrk_lanjutmasa,
+      'lsk_tarikhkerjasiap' => $mrk_tarikhkerjasiap,
+      'lsk_peruntukan' => $mrk_peruntukan,
+      'lsk_laporanpegawai' => $mrk_peruntukan,
+      'lsk_laporanpegawai' => $mrk_laporanpegawai,
+      'lsk_pegawaipenyelia' => $mrk_pegawaipenyelia,
+      'lsk_jawatanpen' => $mrk_jawatanpen,
+      'lsk_tarikhperakui' => $mrk_tarikhperakui,
+      'lsk_ketuabahagian' => $mrk_ketuabahagian,
+      'lsk_jawatanketuab' => $mrk_jawatanketuab,
+      'lsk_juruteraj' => $mrk_juruteraj,
+      'lsk_jawatanjuruteraj' => $mrk_jawatanjuruteraj,
+      'lsk_juruterad' => $mrk_juruterad,
+      'lsk_jawatanjuruterad' => $mrk_jawatanjuruterad,
+      'lsk_perkeso' => $mrk_perkeso,
+      'lsk_liability' => $mrk_liability,
+      'lskmrksatuid' =>   $mrk_hiddenid
     );
 
     return $this->db->insert('mrk_laporansiap', $data);
@@ -189,36 +186,19 @@ class Mrk_model extends CI_Model{
 
   public function create_mrktiga()
   {
-    $mrk_nopkk = $this->input->post('nokontr');
-    $mrk_namakon = $this->input->post('namakon');
-    $mrk_nokontrak = $this->input->post('nokontrak');
-    $mrk_noinden = $this->input->post('noinden');
-    $mrk_tajukkerja = $this->input->post('tajukkerjamrk');
-    $mrk_tarikhmulakon = $this->input->post('tarikhmulakon');
-    $mrk_tarikhjangkasiap = $this->input->post('tarikhjangka');
-    $mrk_lanjutmasa = $this->input->post('tariklanjut');
-    $mrk_siapsebenar = $this->input->post('tarikhkerjasempurna');
-    $mrk_kosprojek = $this->input->post('kosprojek');
-    $mrk_kossebenar = $this->input->post('kossebenar');
-    $mrk_laddari = $this->input->post('laddari');
-    $mrk_ladsehingga = $this->input->post('ladsehingga');
-    $mrk_ladsehari = $this->input->post('rmsehari');
+    $this->load->helper('url');
+
+    //$mrk_nopkk = $this->input->post('nopkk');
+    $mrk_namapemb = $this->input->post('namapem');
+    $mrk_alamatpemb = $this->input->post('alamat');
+    $mrk_butirkerja = $this->input->post('butiran');
+
 
     $data = array(
       'mrk_nopkk' => $mrk_nopkk,
       'mrk_namakon' => $mrk_namakon,
-      'mrk_nokontrak' => $mrk_nokontrak,
-      'mrk_noinden' => $mrk_noinden,
-      'mrk_tajukkerja' => $mrk_tajukkerja,
-      'mrk_tarikhmulakon' => $mrk_tarikhmulakon,
-      'mrk_tarikhjangkasiap' => $mrk_tarikhjangkasiap,
-      'mrk_lanjutmasa' => $mrk_lanjutmasa,
-      'mrk_siapsebenar' => $mrk_siapsebenar,
-      'mrk_kosprojek' => $mrk_kosprojek,
-      'mrk_kossebenar' => $mrk_kossebenar,
-      'mrk_laddari' => $mrk_laddari,
-      'mrk_ladsehingga' => $mrk_ladsehingga,
-      'mrk_ladsehari' => $mrk_ladsehari
+      'mrk_nokontrak' => $mrk_nokontrak
+
     );
 
     return $this->db->insert('mrk_tiga', $data);
@@ -327,12 +307,6 @@ class Mrk_model extends CI_Model{
     return $this->db->insert('mrk_jaminanbank', $data);
   }
 
-  //public function getLastid()
-  //{
-  //  $lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('mrk_satu')->row('id');
-  //
-  //  return $lastId; //return last id
-  //}
 
   public function get_rekodview()
   {
@@ -351,19 +325,84 @@ class Mrk_model extends CI_Model{
 
 
 
-
-  public function get_projectdetailformrk($nosbutharga)
+/////////////////////load mrk ///////////////////////////////////////////////////////////////////////////////////////////////////////
+          //
+  public function get_projectdetailformrk01($id)
   {
     $this->db->select('*');
     $this->db->from('dp_projek');
     $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
     $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
-    $this->db->where('dp_projek.df_nosebutharga', $nosbutharga);
+
+
+    $this->db->where('dp_projek.id', $id);
     $query = $this->db->get();
 
     return $query->result();
   }
 
+  public function get_projectdetailformrk02($id)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+
+
+    $this->db->where('dp_projek.id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function get_projectdetailforLSK($id)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
+
+
+    $this->db->where('dp_projek.id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function get_projectdetailforMRK03($id)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+
+
+    $this->db->where('dp_projek.id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function get_projectdetailforPSK($id)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+
+
+    $this->db->where('dp_projek.id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function getLastKodVod()
   {
@@ -371,6 +410,21 @@ class Mrk_model extends CI_Model{
 
     return $KodVod; //return last id
   }
+
+  public function getLastKodVodMRK2()
+  {
+    $KodVod = $this->db->select('mrk2_noinden')->order_by('mrk2_noinden','desc')->limit(1)->get('mrk_dua')->row('mrk2_noinden');
+
+    return $KodVod; //return last id
+  }
+
+  public function getLastKodVodLSK()
+  {
+    $KodVod = $this->db->select('lsk_noinden')->order_by('lsk_noinden','desc')->limit(1)->get('mrk_laporansiap')->row('lsk_noinden');
+
+    return $KodVod; //return last id
+  }
+
 
 
   /////////////////////////////////////////mrk update/////////////////////////////////////////////////////////////////////////////
@@ -422,6 +476,137 @@ class Mrk_model extends CI_Model{
 
         $this->db->update('mrk_satu', $data);
   }
+
+  public function mrk02update($data ,$update)
+  {
+
+    $this->load->helper('url');
+    $mrk_noinden = $this->input->post('noinden');
+    $mrk_tajukkerja = $this->input->post('tajukkerjamrk');
+    $mrk_majukerja = $this->input->post('ikutjadual');
+    $mrk_majukerjasebenar = $this->input->post('kerjasebenar');
+    $mrk_bayarmajusemasa = $this->input->post('bayarmaju');
+    $mrk_jumlahbayarmaju = $this->input->post('jumlahbayarmaju');
+    $mrk_masalah = $this->input->post('modal');
+    $mrk_sebaboleh = $this->input->post('sebab');
+    $mrk_lainlain = $this->input->post('lainlain');
+    $mrk_lanjutmasa = $this->input->post('masa');
+    $mrk_dari = $this->input->post('dari');
+    $mrk_sehingga = $this->input->post('sehingga');
+    $mrk_disebab = $this->input->post('disebab');
+    $mrk_ladsehari = $this->input->post('rm');
+    $mrk_laddari = $this->input->post('dari2');
+    $mrk_ladsehingga = $this->input->post('sehingga1');
+    $mrk_perakukerjataksiap = $this->input->post('tarikhperaku');
+    $mrk_projekmansuh = $this->input->post('projekmansuh');
+    $mrk_pegawai = $this->input->post('pegawai');
+    $mrk_jawatan = $this->input->post('jawatan');
+    $mrk_tarikhlaporan = $this->input->post('tarikhlaporan');
+    $mrk_satuid = $this->input->post('mrksatuid');
+
+
+
+    $data = array(
+     'mrk2_noinden' => $mrk_noinden,
+      'mrk_majukerja' => $mrk_majukerja,
+      'mrk_majukerjasebenar' => $mrk_majukerjasebenar,
+      'mrk_bayarmajusemasa' => $mrk_bayarmajusemasa,
+      'mrk_jumlahbayarmaju' => $mrk_jumlahbayarmaju,
+      'mrk_masalah' => $mrk_masalah,
+      'mrk_sebaboleh' => $mrk_sebaboleh,
+      'mrk_lainlain' => $mrk_lainlain,
+      'mrk_lanjutmasa' => $mrk_lanjutmasa,
+      'mrk_dari' => $mrk_dari,
+      'mrk_sehingga' => $mrk_sehingga,
+      'mrk_disebab' => $mrk_disebab,
+      'mrk_ladsehari' => $mrk_ladsehari,
+      'mrk_laddari' => $mrk_laddari,
+      'mrk_ladsehingga' => $mrk_ladsehingga,
+      'mrk_perakukerjataksiap' => $mrk_perakukerjataksiap,
+      'mrk_projekmansuh' => $mrk_projekmansuh,
+      'mrk_pegawai' => $mrk_pegawai,
+      'mrk_jawatan' => $mrk_jawatan,
+      'mrk_tarikhlaporan' => $mrk_tarikhlaporan,
+      'mrksatu_id' => $mrk_satuid
+    );
+
+    $this->db->where('mrksatu_id', $update);
+
+    $this->db->update('mrk_dua', $data);
+
+  }
+
+  public function LSKUpdate($data ,$update)
+  {
+    $this->load->helper('url');
+
+    //$mrk_nopkk = $this->input->post('nopkk');
+    $mrk_namapemb = $this->input->post('namapem');
+    $mrk_alamatpemb = $this->input->post('alamat');
+    $mrk_butirkerja = $this->input->post('butiran');
+    //$mrk_nosbtharga = $this->input->post('nosebut');
+    $mrk_nopesanan = $this->input->post('nopesanan');
+    $mrk_noinden = $this->input->post('noinden');
+    $mrk_hargapesanan = $this->input->post('hargapesanan');
+    $mrk_hargasebenar = $this->input->post('hargasebenar');
+    $mrk_tarikhmulakerja = $this->input->post('tarikhmula');
+    $mrk_tarikhkerjatamat = $this->input->post('tarikhtamat');
+    $mrk_lanjutmasa = $this->input->post('tariklanjut');
+    $mrk_tarikhkerjasiap = $this->input->post('tarikhkerjasempurna');
+    $mrk_peruntukan = $this->input->post('peruntukan');
+    $mrk_laporanpegawai = $this->input->post('laporanpegawai');
+    $mrk_pegawaipenyelia = $this->input->post('pegawaiselia');
+    $mrk_jawatanpen = $this->input->post('jawatan');
+    $mrk_tarikhperakui = $this->input->post('tarikhperakui');
+    $mrk_ketuabahagian = $this->input->post('ketua');
+    $mrk_jawatanketuab = $this->input->post('jawatan1');
+    $mrk_juruteraj = $this->input->post('juruj');
+    $mrk_jawatanjuruteraj = $this->input->post('jawatan2');
+    $mrk_juruterad = $this->input->post('jurudaerah');
+    $mrk_jawatanjuruterad = $this->input->post('jawatan3');
+    $mrk_perkeso = $this->input->post('perkeso');
+    $mrk_liability = $this->input->post('publiability');
+    $mrk_hiddenid = $this->input->post('hiddenid');
+
+    $data = array(
+      //'mrk_nopkk' => $mrk_nopkk,
+      'lsk_namapemb' => $mrk_namapemb,
+      'lsk_alamatpemb' => $mrk_alamatpemb,
+      'lsk_butirkerja' => $mrk_butirkerja,
+      //'lsk_nosebutharga' => $mrk_nosbtharga,
+      'lsk_noinden' =>   $mrk_noinden,
+      'lsk_nopesanan'=>   $mrk_nopesanan,
+      'lsk_hargapesanan' => $mrk_hargapesanan,
+      'lsk_hargasebenar' => $mrk_hargasebenar,
+      'lsk_tarikhmulakerja' => $mrk_tarikhmulakerja,
+      'lsk_tarikhkerjatamat' => $mrk_tarikhkerjatamat,
+      'lsk_lanjutmasa' => $mrk_lanjutmasa,
+      'lsk_tarikhkerjasiap' => $mrk_tarikhkerjasiap,
+      'lsk_peruntukan' => $mrk_peruntukan,
+      'lsk_laporanpegawai' => $mrk_peruntukan,
+      'lsk_laporanpegawai' => $mrk_laporanpegawai,
+      'lsk_pegawaipenyelia' => $mrk_pegawaipenyelia,
+      'lsk_jawatanpen' => $mrk_jawatanpen,
+      'lsk_tarikhperakui' => $mrk_tarikhperakui,
+      'lsk_ketuabahagian' => $mrk_ketuabahagian,
+      'lsk_jawatanketuab' => $mrk_jawatanketuab,
+      'lsk_juruteraj' => $mrk_juruteraj,
+      'lsk_jawatanjuruteraj' => $mrk_jawatanjuruteraj,
+      'lsk_juruterad' => $mrk_juruterad,
+      'lsk_jawatanjuruterad' => $mrk_jawatanjuruterad,
+      'lsk_perkeso' => $mrk_perkeso,
+      'lsk_liability' =>$mrk_liability,
+      'lskmrksatuid' =>$mrk_hiddenid
+
+    );
+
+      $this->db->where('lskmrksatuid', $update);
+
+      $this->db->update('mrk_laporansiap', $data);
+
+  }
+
+
 
   ///////////////////////////end of mrk update////////////////////////////////////////////////////////////////////////////////////
 
