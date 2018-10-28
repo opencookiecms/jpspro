@@ -209,7 +209,7 @@ class Mrk_model extends CI_Model{
     $mrk_namapemb = $this->input->post('namapomb');
     $mrk_alamatpem = $this->input->post('alamat');
     $mrk_failrujuk = $this->input->post('failrujuk');
-    $mrk_nosebutharga = $this->input->post('nosebut');
+    //$mrk_nosebutharga = $this->input->post('nosebut');
     $mrk_butirankerja = $this->input->post('butirkerja');
     $mrk_tarikhsiapsebenar = $this->input->post('tarikhsiapsebenar');
     $mrk_tarikhambikmilik = $this->input->post('tarikhambikmilik');
@@ -220,7 +220,7 @@ class Mrk_model extends CI_Model{
       'mrk_namapemb' => $mrk_namapemb,
       'mrk_alamatpem' => $mrk_alamatpem,
       'mrk_failrujuk' => $mrk_failrujuk,
-      'mrk_nosebutharga' => $mrk_nosebutharga,
+    //  'mrk_nosebutharga' => $mrk_nosebutharga,
       'mrk_butirankerja' => $mrk_butirankerja,
       'mrk_tarikhsiapsebenar' => $mrk_tarikhsiapsebenar,
       'mrk_tarikhambikmilik' => $mrk_tarikhambikmilik,
