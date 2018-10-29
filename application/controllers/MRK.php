@@ -185,27 +185,27 @@ class MRK extends CI_Controller{
 				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 			}
 
-		}
+        }
 
-		public function MRK_02_Update()
-		{
-			$this->load->database();
-			$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
+        public function MRK_02_Update()
+        {
+            $this->load->database();
+            $this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 
 
 
-			if($this->form_validation->run() == FALSE)
-			{
-				$this->load->view('template/header');
-				$this->load->view('template/sidebar');
-				$this->load->view('pages/MRK02');
-				$this->load->view('template/footer');
-			}
+            if($this->form_validation->run() == FALSE)
+            {
+                $this->load->view('template/header');
+                $this->load->view('template/sidebar');
+                $this->load->view('pages/MRK02');
+                $this->load->view('template/footer');
+            }
 
-			else
-			{
-				$this->Mrk_model->mrk02update($data ,$this->input->post('mrksatuid'));
-				$KodVod=$this->Mrk_model->getLastKodVodMRK2();
+            else
+            {
+                $this->Mrk_model->mrk02update($data ,$this->input->post('mrksatuid'));
+                $KodVod=$this->Mrk_model->getLastKodVodMRK2();
 				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 			}
 
