@@ -28,10 +28,10 @@
 
               $pkkNo = $get_detail[0]->mrk_nopkk;
                 if($pkkNo == null){
-                  echo form_open('mrk/MRK_01');
+                  echo form_open('mrk/LSK');
                 }
                   else {
-                  echo form_open('mrk/MRK_01_Update');
+                  echo form_open('mrk/LSK_Update');
                 }
             ?>
 
