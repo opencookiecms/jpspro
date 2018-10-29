@@ -61,7 +61,7 @@
 
                   <div class="col-sm-3">
 
-  
+
 
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk?>" placeholder="No Pendaftaran PKK" readonly>
 
@@ -74,7 +74,7 @@
                   <label class="col-sm-1">Nama Pemborong</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namapem" name="namapem" value="<?php echo $get_detail[0]->lsk_namapemb?>" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namapem" name="namapem" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong" readonly>
                   </div>
                 </div>
 
@@ -85,7 +85,7 @@
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-7">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->lsk_alamatpemb?></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@
                   <label class="col-sm-1">Butiran Kerja</label>
 
                   <div class="col-sm-7">
-                    <textarea type="text" class="form-control"  name="butiran" placeholder="Butiran Kerja"><?php echo $get_detail[0]->lsk_butirkerja?></textarea>
+                    <textarea type="text" class="form-control"  name="butiran" placeholder="Butiran Kerja" readonly><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@
                   <label class="col-sm-2">No Pesanan Kerja</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" name="nopesanan" placeholder="No Pesanan Kerja" value="<?php echo $get_detail[0]->lsk_nopesanan?>">
+                    <input type="text" class="form-control" name="nopesanan" placeholder="No Pesanan Kerja" value="<?php echo $get_detail[0]->df_kodvot?>" readonly>
                   </div>
                 </div>
               </div>
@@ -130,13 +130,13 @@
                   <label class="col-sm-2">Harga Pesanan RM</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" value="<?php echo $get_detail[0]->lsk_hargapesanan?>"  name="hargapesanan" placeholder="RM">
+                    <input type="text" class="form-control" value="<?php echo $get_detail[0]->mrk_kosprojek?>"  name="hargapesanan" placeholder="RM" readonly>
                   </div>
 
                   <label class="col-sm-2">Harga Sebenar RM</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control"  name="hargasebenar" value="<?php echo $get_detail[0]->lsk_hargasebenar?>" placeholder="RM">
+                    <input type="text" class="form-control"  name="hargasebenar" value="<?php echo $get_detail[0]->lks_hargasebenar?>" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -145,13 +145,13 @@
                   <label class="col-sm-2">Tarikh Permulaan Kerja</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tarikhmula" value="<?php echo $get_detail[0]->lsk_tarikhmulakerja?>">
+                    <input type="date" class="form-control" name="tarikhmula" value="<?php echo $get_detail[0]->mrk_tarikhmulakon?>" readonly>
                   </div>
 
                   <label class="col-sm-2">Tarikh Kerja Tamat</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control"  name="tarikhtamat" value="<?php echo $get_detail[0]->lsk_tarikhkerjatamat?>">
+                    <input type="date" class="form-control"  name="tarikhtamat" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap?>" readonly>
                   </div>
                 </div>
               </div>

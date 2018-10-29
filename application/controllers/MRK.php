@@ -148,6 +148,8 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_perakusiap();
+			$KodVod=$this->Mrk_model->getLastKodVodPSK();
+			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 
 		}
 
@@ -206,7 +208,7 @@ class MRK extends CI_Controller{
             {
                 $this->Mrk_model->mrk02update($data ,$this->input->post('mrksatuid'));
                 $KodVod=$this->Mrk_model->getLastKodVodMRK2();
-				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+								redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 			}
 
 		}

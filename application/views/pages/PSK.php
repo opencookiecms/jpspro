@@ -24,7 +24,7 @@
 
         <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/perakuansiapkerja'); ?>
+          <?php echo form_open('mrk/PSK'); ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Perakuan Siap Kerja</h3>
@@ -32,7 +32,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label class="col-sm-2">Nama Pemborong</label>
-
+                  <input type="text" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->lsk_namapemb?>" placeholder="Nama Pemborong">
                   </div>
@@ -51,7 +51,7 @@
                   <label class="col-sm-2">Fail Rujukan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="failrujuk" name="failrujuk" placeholder="Fail Rujukan">
+                    <input type="text" class="form-control" id="failrujuk" name="failrujuk" placeholder="Fail Rujukan" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                   </div>
 
                   <label class="col-sm-1">No Sebutharga</label>
@@ -70,6 +70,15 @@
                     <textarea type="text" class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->lsk_butirkerja?></textarea>
                   </div>
 
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">Inden No</label>
+                  <div class="col-sm-4">
+                  <input type="text" class="form-control" name="indenno" placeholder="Inden No" value="<?php echo $get_detail[0]->mrk_noinden?>" readonly>
+                </div>
                 </div>
               </div>
 

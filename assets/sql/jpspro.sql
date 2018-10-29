@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2018 at 06:36 PM
+-- Generation Time: Oct 29, 2018 at 03:56 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -142,19 +142,10 @@ CREATE TABLE `mrk_dua` (
   `mrk_ladsehingga` date DEFAULT NULL,
   `mrk_perakukerjataksiap` date DEFAULT NULL,
   `mrk_projekmansuh` date DEFAULT NULL,
-  `mrk_pegawai` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_jawatan` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrk_tarikhlaporan` date DEFAULT NULL,
   `mrksatu_id` int(11) DEFAULT NULL,
   `mrk2_noinden` varchar(150) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Dumping data for table `mrk_dua`
---
-
-INSERT INTO `mrk_dua` (`mrkduaid`, `mrk_majukerja`, `mrk_majukerjasebenar`, `mrk_bayarmajusemasa`, `mrk_jumlahbayarmaju`, `mrk_masalah`, `mrk_sebaboleh`, `mrk_lainlain`, `mrk_lanjutmasa`, `mrk_dari`, `mrk_sehingga`, `mrk_disebab`, `mrk_ladsehari`, `mrk_laddari`, `mrk_ladsehingga`, `mrk_perakukerjataksiap`, `mrk_projekmansuh`, `mrk_pegawai`, `mrk_jawatan`, `mrk_tarikhlaporan`, `mrksatu_id`, `mrk2_noinden`) VALUES
-(6, 100, '2018-10-09', 10, '10', NULL, 'TEST', 'TEST', 'ENAM', '2018-10-06', '2018-10-18', 'TANAH', '3', '2018-10-18', '2018-10-10', '2018-10-11', '2018-10-18', 'KIKI', 'IR', '2018-10-16', 15, '23NNADAF');
 
 -- --------------------------------------------------------
 
@@ -191,16 +182,9 @@ INSERT INTO `mrk_jaminanbank` (`id`, `mrk_rujukanbank`, `mrk_namabank`, `mrk_ala
 
 CREATE TABLE `mrk_laporansiap` (
   `lskid` int(11) NOT NULL,
-  `lsk_namapemb` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `lsk_alamatpemb` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `lsk_butirkerja` text COLLATE utf8_bin,
   `lsk_noinden` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `lsk_nopesanan` varchar(150) COLLATE utf8_bin DEFAULT NULL,
-  `lsk_hargapesanan` decimal(11,0) DEFAULT NULL,
-  `lsk_hargasebenar` decimal(11,0) DEFAULT NULL,
-  `lsk_tarikhmulakerja` date DEFAULT NULL,
-  `lsk_tarikhkerjatamat` date DEFAULT NULL,
   `lsk_lanjutmasa` date DEFAULT NULL,
+  `lks_hargasebenar` decimal(10,0) DEFAULT NULL,
   `lsk_tarikhkerjasiap` date DEFAULT NULL,
   `lsk_peruntukan` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lsk_laporanpegawai` varchar(255) COLLATE utf8_bin DEFAULT NULL,
@@ -218,13 +202,6 @@ CREATE TABLE `mrk_laporansiap` (
   `lskmrksatuid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Dumping data for table `mrk_laporansiap`
---
-
-INSERT INTO `mrk_laporansiap` (`lskid`, `lsk_namapemb`, `lsk_alamatpemb`, `lsk_butirkerja`, `lsk_noinden`, `lsk_nopesanan`, `lsk_hargapesanan`, `lsk_hargasebenar`, `lsk_tarikhmulakerja`, `lsk_tarikhkerjatamat`, `lsk_lanjutmasa`, `lsk_tarikhkerjasiap`, `lsk_peruntukan`, `lsk_laporanpegawai`, `lsk_pegawaipenyelia`, `lsk_jawatanpen`, `lsk_tarikhperakui`, `lsk_ketuabahagian`, `lsk_jawatanketuab`, `lsk_juruteraj`, `lsk_jawatanjuruteraj`, `lsk_juruterad`, `lsk_jawatanjuruterad`, `lsk_perkeso`, `lsk_liability`, `lskmrksatuid`) VALUES
-(5, 'Hisham', 'Alamat', 'Butiran', '23NNADAF', 'JKSP3234/2343', '1233', '5632', '2018-10-17', '2018-10-10', '2018-10-05', '2018-10-18', 'update', 'Laporan', 'Shuhel B. Mohd Saad', 'Penolong Jurutera JA36', '2018-10-10', 'Yahaya B. Shariff', 'Penolong Jurutera Kanan JA36', 'Mohd. Daud Hamid', 'Penolong Jurutera Kanan JA36', 'Zainuddin bin Yusoff, AMP., BCK', 'Merinyu Taliair Kanan', 'PE22', 'ss', 15);
-
 -- --------------------------------------------------------
 
 --
@@ -233,11 +210,7 @@ INSERT INTO `mrk_laporansiap` (`lskid`, `lsk_namapemb`, `lsk_alamatpemb`, `lsk_b
 
 CREATE TABLE `mrk_perakuansiap` (
   `id` int(11) NOT NULL,
-  `mrk_namapemb` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_alamatpem` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_failrujuk` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_nosebutharga` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_butirankerja` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_pskinden` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `mrk_tarikhsiapsebenar` date DEFAULT NULL,
   `mrk_tarikhambikmilik` date DEFAULT NULL,
   `mrk_tarikhmulatanggungcacat` date DEFAULT NULL,
@@ -315,7 +288,7 @@ CREATE TABLE `mrk_satu` (
 --
 
 INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mrk_alamatkon`, `mrk_nokontrak`, `mrk_noinden`, `mrk_tajukkerja`, `mrk_kategori`, `mrk_daerah`, `mrk_negeri`, `mrk_khusus`, `mrk_tarikhmulakon`, `mrk_tarikhjangkasiap`, `mrk_pegawai`, `mrk_jawatan`, `mrk_kosprojek`, `mrk_tarikh`, `mrksatu_id`) VALUES
-(15, 'JKL23323', 'G1 | Sehingga RM200,000.00', 'JJ K', 'ALAMAT', 'JKTEST', '23NNADAF', 'TAJUK PROJEK', 'CE | Pembinaan Kejuruteraan Awam', 'kuala muda', 'kedah', 'CE 02', '2018-10-11', '2018-10-17', 'Othman B. Shariff', 'Penolong Jurutera JA36', '120000', '2018-10-11', 0);
+(16, 'PKKJPS1234', 'G1 | Sehingga RM200,000.00', 'ARAS VENTURES', 'NO, 218, BAKAR KAPUR', 'JKTEST', '23NNADAF', 'TAJUK PROJEK', 'CE | Pembinaan Kejuruteraan Awam', 'kuala muda', 'kedah', 'CE 12', '2017-11-15', '2017-12-12', 'Mohamad Ridzam B. Jusoh', 'Penolong Jurutera JA29', '3610927', '2017-11-15', 0);
 
 -- --------------------------------------------------------
 
@@ -542,7 +515,7 @@ ALTER TABLE `mrk_perakuansiapbaikicacat`
 -- AUTO_INCREMENT for table `mrk_satu`
 --
 ALTER TABLE `mrk_satu`
-  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratkhas`

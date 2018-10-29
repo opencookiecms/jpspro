@@ -206,26 +206,22 @@ class Mrk_model extends CI_Model{
 
   public function create_perakusiap()
   {
-    $mrk_namapemb = $this->input->post('namapomb');
-    $mrk_alamatpem = $this->input->post('alamat');
-    $mrk_failrujuk = $this->input->post('failrujuk');
-    //$mrk_nosebutharga = $this->input->post('nosebut');
-    $mrk_butirankerja = $this->input->post('butirkerja');
+
     $mrk_tarikhsiapsebenar = $this->input->post('tarikhsiapsebenar');
     $mrk_tarikhambikmilik = $this->input->post('tarikhambikmilik');
     $mrk_tarikhmulatanggungcacat = $this->input->post('mulacacat');
     $mrk_tarikhtamattanggungcacat = $this->input->post('cacattamat');
+    $mrk_pskmrkid = $this->input->post('hiddenid');
+    $mrk_pskinden = $this->input->post('indenno');
 
     $data = array(
-      'mrk_namapemb' => $mrk_namapemb,
-      'mrk_alamatpem' => $mrk_alamatpem,
-      'mrk_failrujuk' => $mrk_failrujuk,
-    //  'mrk_nosebutharga' => $mrk_nosebutharga,
-      'mrk_butirankerja' => $mrk_butirankerja,
+
       'mrk_tarikhsiapsebenar' => $mrk_tarikhsiapsebenar,
       'mrk_tarikhambikmilik' => $mrk_tarikhambikmilik,
       'mrk_tarikhmulatanggungcacat' => $mrk_tarikhmulatanggungcacat,
-      'mrk_tarikhtamattanggungcacat' => $mrk_tarikhtamattanggungcacat
+      'mrk_tarikhtamattanggungcacat' => $mrk_tarikhtamattanggungcacat,
+      'pskmrksatuid'=>$mrk_pskmrkid,
+      'mrk_pskinden'=>$mrk_pskinden
     );
 
     return $this->db->insert('mrk_perakuansiap', $data);
@@ -395,6 +391,7 @@ class Mrk_model extends CI_Model{
     $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
     $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
 
 
     $this->db->where('dp_projek.id', $id);
@@ -421,6 +418,13 @@ class Mrk_model extends CI_Model{
   public function getLastKodVodLSK()
   {
     $KodVod = $this->db->select('lsk_noinden')->order_by('lsk_noinden','desc')->limit(1)->get('mrk_laporansiap')->row('lsk_noinden');
+
+    return $KodVod; //return last id
+  }
+
+  public function getLastKodVodPSK()
+  {
+    $KodVod = $this->db->select('mrk_pskinden')->order_by('mrk_pskinden','desc')->limit(1)->get('mrk_perakuansiap')->row('mrk_pskinden');
 
     return $KodVod; //return last id
   }
