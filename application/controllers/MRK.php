@@ -115,7 +115,7 @@ class MRK extends CI_Controller{
 		{
 			$this->load->view('template/header');
 			$this->load->view('template/sidebar');
-			$this->load->view('pages/LSK',$data);
+			$this->load->view('pages/MRK03',$data);
 			$this->load->view('template/footer');
 		}
 		else
