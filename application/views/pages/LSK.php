@@ -61,12 +61,12 @@
 
                   <div class="col-sm-3">
 
-                    <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>">
+  
 
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk?>" placeholder="No Pendaftaran PKK" readonly>
 
 
-                    <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk?>" placeholder="No Pendaftaran PKK" readonly>
+
                   </div>
 
                   <input type="hidden" value="<?php echo $get_detail[0]->mrksatuid?>" name="hiddenid">
