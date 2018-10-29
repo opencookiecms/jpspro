@@ -40,14 +40,23 @@
                       <td>Surat - Menyurat</td>
                     </tr>
                     <tr>
-                        <?php foreach ($get_detail as $rowdetail): ?>
+                      <?php foreach ($get_detail as $rowdetail): ?>
+
                       <td>1</td>
                       <td width="300"><?php echo $rowdetail->df_tajuk?></td>
+<<<<<<< HEAD
                       <td><a href="<?php echo site_url('mrk/MRK_01/'. $rowdetail->df_nosebutharga); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
                       <td><a href="<?php echo site_url('mrk/MRK_02/'. $rowdetail->df_nosebutharga); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
-                      <td><img src="<?php echo base_url();?>/assets/images/success.png"></td>
+                      <td><a href="<?php echo site_url('mrk/laporansiapkerja/'. $rowdetail->df_nosebutharga); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
+                      <td><a href="<?php echo site_url('mrk/rekodkerjatiga/'. $rowdetail->df_nosebutharga); ?>"><img src="<?php echo base_url();?>/assets/images/error.png"></a></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
-                      <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
+=======
+                      <td><a href="<?php echo site_url('mrk/MRK_01/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
+                      <td><a href="<?php echo site_url('mrk/MRK_02/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
+                      <td><a href="<?php echo site_url('mrk/LSK/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
+                      <td><a href="<?php echo site_url('mrk/MRK_03/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
+                      <td><a href="<?php echo site_url('mrk/PSK/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
+>>>>>>> a6fb6f48c038d92f2a0d788a29e338f964b3b388
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
@@ -55,7 +64,7 @@
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
                     </tr>
 
-                                  <?php endforeach; ?>
+                   <?php endforeach; ?>
                   </table>
               </div>
             </div>

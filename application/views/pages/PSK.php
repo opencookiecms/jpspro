@@ -34,13 +34,13 @@
                   <label class="col-sm-2">Nama Pemborong</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="namapombr" name="namapomb" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->lsk_namapemb?>" placeholder="Nama Pemborong">
                   </div>
 
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->lsk_alamatpemb?></textarea>
                   </div>
                 </div>
 
@@ -57,7 +57,7 @@
                   <label class="col-sm-1">No Sebutharga</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="nosebut" name="nosebut" placeholder="No Sebutharga">
+                    <input type="text" class="form-control" id="nosebut" name="nosebut" placeholder="No Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@
                   <label class="col-sm-2">Butiran Kerja</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"></textarea>
+                    <textarea type="text" class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->lsk_butirkerja?></textarea>
                   </div>
 
                 </div>
@@ -110,13 +110,13 @@
                 <a href="<?php echo site_url('mrk/senaraisemak') ?>" class="btn btn-info" role="button">Senarai Semakan</a>
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 
 
     </section>
     <!-- /.content -->
-    
+
   </div>
   <!-- /.content-wrapper -->

@@ -34,7 +34,7 @@ class Projek extends CI_Controller
    $data['get_detail']=$this->Projek_model->get_projekdetail($value);
    $this->load->view('pages/projek_view', $data);
    $this->load->view('template/footer');
- }
+  }
 
 
  public function daftar_view()

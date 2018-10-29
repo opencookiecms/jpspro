@@ -24,7 +24,37 @@
 
         <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/laporansiapkerja'); ?>
+<<<<<<< HEAD:application/views/pages/laporansiap.php
+                <?php
+
+              $pkkNo = $get_detail[0]->mrk_nopkk;
+                if($pkkNo == null){
+                  echo form_open('mrk/MRK_01');
+                }
+                  else {
+                  echo form_open('mrk/MRK_01_Update');
+                }
+            ?>
+
+
+
+=======
+        <?php
+
+            $pkkNo = $get_detail[0]->lsk_noinden;
+              if($pkkNo == null){
+                  echo form_open('mrk/LSK');
+              }
+              else {
+                echo form_open('mrk/LSK_Update');
+              }
+
+
+
+
+
+        ?>
+>>>>>>> a6fb6f48c038d92f2a0d788a29e338f964b3b388:application/views/pages/LSK.php
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Laporan Siap Kerja</h3>
@@ -34,13 +64,19 @@
                   <label class="col-sm-2">No Pendaftaran PKK</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nopkk" name="nopkk" placeholder="No Pendaftaran PKK">
+<<<<<<< HEAD:application/views/pages/laporansiap.php
+                    <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>">
+=======
+                    <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk?>" placeholder="No Pendaftaran PKK" readonly>
+>>>>>>> a6fb6f48c038d92f2a0d788a29e338f964b3b388:application/views/pages/LSK.php
                   </div>
+
+                  <input type="hidden" value="<?php echo $get_detail[0]->mrksatuid?>" name="hiddenid">
 
                   <label class="col-sm-1">Nama Pemborong</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namapem" name="namapem" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namapem" name="namapem" value="<?php echo $get_detail[0]->lsk_namapemb?>" placeholder="Nama Pemborong">
                   </div>
                 </div>
 
@@ -51,7 +87,7 @@
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-7">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->lsk_alamatpemb?></textarea>
                   </div>
                 </div>
               </div>
@@ -61,7 +97,7 @@
                   <label class="col-sm-1">Butiran Kerja</label>
 
                   <div class="col-sm-7">
-                    <textarea type="text" class="form-control" id="butiran" name="butiran" placeholder="Butiran Kerja"></textarea>
+                    <textarea type="text" class="form-control"  name="butiran" placeholder="Butiran Kerja"><?php echo $get_detail[0]->lsk_butirkerja?></textarea>
                   </div>
                 </div>
               </div>
@@ -71,14 +107,23 @@
                   <label class="col-sm-1">No Sebutharga</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nosebut" name="nosebut" placeholder="No Sebutharga">
+                    <input type="text" class="form-control"  name="nosebut" placeholder="No Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                   </div>
 
                   <label class="col-sm-2">No Pesanan Kerja</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="nopesanan" name="nopesanan" placeholder="No Pesanan Kerja">
+                    <input type="text" class="form-control" name="nopesanan" placeholder="No Pesanan Kerja" value="<?php echo $get_detail[0]->lsk_nopesanan?>">
                   </div>
+                </div>
+              </div>
+              <div class="box-body">
+                <div class="form-group">
+                      <label class="col-sm-1">No Inden</label>
+
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" name="noinden" value="<?php echo $get_detail[0]->df_kodvot?>"  placeholder="Inden No" readonly>
+                      </div>
                 </div>
               </div>
 
@@ -87,13 +132,13 @@
                   <label class="col-sm-2">Harga Pesanan RM</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="hargapesanan" name="hargapesanan" placeholder="RM">
+                    <input type="text" class="form-control" value="<?php echo $get_detail[0]->lsk_hargapesanan?>"  name="hargapesanan" placeholder="RM">
                   </div>
 
                   <label class="col-sm-2">Harga Sebenar RM</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="hargasebenar" name="hargasebenar" placeholder="RM">
+                    <input type="text" class="form-control"  name="hargasebenar" value="<?php echo $get_detail[0]->lsk_hargasebenar?>" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -102,13 +147,13 @@
                   <label class="col-sm-2">Tarikh Permulaan Kerja</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhmula" name="tarikhmula">
+                    <input type="date" class="form-control" name="tarikhmula" value="<?php echo $get_detail[0]->lsk_tarikhmulakerja?>">
                   </div>
 
                   <label class="col-sm-2">Tarikh Kerja Tamat</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhtamat" name="tarikhtamat">
+                    <input type="date" class="form-control"  name="tarikhtamat" value="<?php echo $get_detail[0]->lsk_tarikhkerjatamat?>">
                   </div>
                 </div>
               </div>
@@ -118,13 +163,13 @@
                   <label class="col-sm-2">Tarikh Dilanjutkan Masa</label>
 
                   <div class="col-sm-3">
-                    <input type="date" class="form-control" id="tariklanjut" name="tariklanjut">
+                    <input type="date" class="form-control" name="tariklanjut" value="<?php echo $get_detail[0]->lsk_lanjutmasa?>">
                   </div>
 
                   <label class="col-sm-3">Tarikh Kerja Siap Sempurna</label>
 
                   <div class="col-sm-3">
-                    <input type="date" class="form-control" id="tarikhkerjasempurna" name="tarikhkerjasempurna">
+                    <input type="date" class="form-control"  name="tarikhkerjasempurna" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
                   </div>
                 </div>
               </div>
@@ -134,7 +179,7 @@
                   <label class="col-sm-2">Peruntukan</label>
 
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="peruntukan" name="peruntukan">
+                    <input type="text" class="form-control"  name="peruntukan" value="<?php echo $get_detail[0]->lsk_peruntukan?>">
                   </div>
                 </div>
               </div>
@@ -145,7 +190,7 @@
                   <h3 class="box-title">Laporan Pegawai Penjaga</h3>
                   </div>
                   <div class="col-sm-11">
-                    <textarea type="text" class="form-control" id="laporanpegawai" name="laporanpegawai"></textarea>
+                    <textarea type="text" class="form-control"  name="laporanpegawai"><?php echo $get_detail[0]->lsk_laporanpegawai?></textarea>
                   </div>
                 </div>
               </div>
@@ -154,7 +199,8 @@
                 <div class="form-group">
                   <label class="col-sm-1">Pegawai</label>
                   <div class="col-sm-3">
-                    <select type="text" class="form-control" id="pegawaiselia" name="pegawaiselia">
+                    <select type="text" class="form-control"  name="pegawaiselia">
+                      <option value="<?php echo $get_detail[0]->lsk_pegawaipenyelia?>"><?php echo $get_detail[0]->lsk_pegawaipenyelia?></option>
                       <option value="Mohamad Ridzam B. Jusoh">Mohamad Ridzam B. Jusoh</option>
                       <option value="Nazar Shah B. Awang">Nazar Shah B. Awang</option>
                       <option value="Shuhel B. Mohd Saad">Shuhel B. Mohd Saad</option>
@@ -181,6 +227,7 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan" name="jawatan">
+                        <option value="<?php echo $get_detail[0]->lsk_jawatanpen?>"><?php echo $get_detail[0]->lsk_jawatanpen?></option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
@@ -189,11 +236,11 @@
                       <option value="Penolong Jurutera JA38">Penolong Jurutera JA38</option>
                     </select>
                   </div>
-      
+
                   <label class="col-sm-2">Tarikh Diperakui</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhperakui" name="tarikhperakui">
+                    <input type="date" class="form-control" id="tarikhperakui" name="tarikhperakui" value="<?php echo $get_detail[0]->lsk_tarikhperakui?>">
                   </div>
                 </div>
               </div>
@@ -203,6 +250,7 @@
                   <label class="col-sm-1">Ketua Bahagian</label>
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="ketua" name="ketua">
+                        <option value="<?php echo $get_detail[0]->lsk_ketuabahagian?>"><?php echo $get_detail[0]->lsk_ketuabahagian?></option>
                       <option value="Mohd. Amin B. Ahmad">Mohd. Amin B. Ahmad</option>
                       <option value="Yahaya B. Shariff">Yahaya B. Shariff</option>
                     </select>
@@ -212,6 +260,7 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan1" name="jawatan1">
+                      <option value="<?php echo $get_detail[0]->lsk_jawatanketuab?>"><?php echo $get_detail[0]->lsk_jawatanketuab?></option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera Kanan JA36">Penolong Jurutera Kanan JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
@@ -228,6 +277,7 @@
                   <label class="col-sm-1">Jurutera J41/J44</label>
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="juruj" name="juruj">
+                      <option value="<?php echo $get_detail[0]->lsk_juruteraj?>"><?php echo $get_detail[0]->lsk_juruteraj?></option>
                       <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
                       <option value="Mohd. Daud Hamid">Mohd. Daud Hamid</option>
                       <option value="Hasan bin Abdul Majid">Hasan bin Abdul Majid</option>
@@ -240,6 +290,7 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan2" name="jawatan2">
+                      <option value="<?php echo $get_detail[0]->lsk_jawatanjuruteraj?>"><?php echo $get_detail[0]->lsk_jawatanjuruteraj?></option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera Kanan JA36">Penolong Jurutera Kanan JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
@@ -256,6 +307,7 @@
                   <label class="col-sm-1">Jurutera Daerah</label>
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jurudaerah" name="jurudaerah">
+                      <option value="<?php echo $get_detail[0]->lsk_juruterad?>"><?php echo $get_detail[0]->lsk_juruterad?></option>
                       <option value="Idris B. Yussof">Idris B. Yussof</option>
                       <option value="Zainuddin bin Yusoff, AMP., BCK">Zainuddin bin Yusoff, AMP., BCK</option>
                       <option value="Kamarudin Bin Saleh">Kamarudin Bin Saleh</option>
@@ -267,6 +319,7 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan3" name="jawatan3">
+                      <option value="<?php echo $get_detail[0]->lsk_jawatanjuruterad?>"><?php echo $get_detail[0]->lsk_jawatanjuruterad?></option>
                       <option value="Merinyu Taliair Kanan">Merinyu Taliair Kanan</option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
@@ -284,13 +337,13 @@
                   <label class="col-sm-2">W.C/PERKESO</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="perkeso" name="perkeso">
+                    <input type="text" class="form-control" id="perkeso" name="perkeso" value="<?php echo $get_detail[0]->lsk_perkeso?>">
                   </div>
 
                   <label class="col-sm-2">Public Liability</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="publiability" name="publiability">
+                    <input type="text" class="form-control" id="publiability" name="publiability" value="<?php echo $get_detail[0]->lsk_liability?>">
                   </div>
                 </div>
               </div>
@@ -300,13 +353,13 @@
                 <a href="<?php echo site_url('mrk/rekodkerjatiga') ?>" class="btn btn-info" role="button">MRK - 03</a>
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 
 
     </section>
     <!-- /.content -->
-    
+
   </div>
   <!-- /.content-wrapper -->
