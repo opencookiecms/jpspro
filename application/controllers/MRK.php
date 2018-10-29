@@ -237,10 +237,6 @@ class MRK extends CI_Controller{
 	/////MRK AND OTHER UPDATE GOOSE HERE//////////////////////////////////////////////////////////////
 
 
-
-
-
-
 	public function senaraisemak()
 	{
 		$this->load->view('template/header');
