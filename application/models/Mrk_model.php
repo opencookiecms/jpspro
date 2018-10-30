@@ -122,13 +122,13 @@ class Mrk_model extends CI_Model{
     $this->load->helper('url');
 
     //$mrk_nopkk = $this->input->post('nopkk');
-    $mrk_namapemb = $this->input->post('namapem');
-    $mrk_alamatpemb = $this->input->post('alamat');
-    $mrk_butirkerja = $this->input->post('butiran');
+    //$mrk_namapemb = $this->input->post('namapem');
+    //$mrk_alamatpemb = $this->input->post('alamat');
+    //$mrk_butirkerja = $this->input->post('butiran');
     //$mrk_nosbtharga = $this->input->post('nosebut');
-    $mrk_nopesanan = $this->input->post('nopesanan');
+    //$mrk_nopesanan = $this->input->post('nopesanan');
     $mrk_noinden = $this->input->post('noinden');
-    $mrk_hargapesanan = $this->input->post('hargapesanan');
+    //$mrk_hargapesanan = $this->input->post('hargapesanan');
     $mrk_hargasebenar = $this->input->post('hargasebenar');
     $mrk_tarikhmulakerja = $this->input->post('tarikhmula');
     $mrk_tarikhkerjatamat = $this->input->post('tarikhtamat');
