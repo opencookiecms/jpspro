@@ -121,14 +121,7 @@ class Mrk_model extends CI_Model{
   {
     $this->load->helper('url');
 
-    //$mrk_nopkk = $this->input->post('nopkk');
-    //$mrk_namapemb = $this->input->post('namapem');
-    //$mrk_alamatpemb = $this->input->post('alamat');
-    //$mrk_butirkerja = $this->input->post('butiran');
-    //$mrk_nosbtharga = $this->input->post('nosebut');
-    //$mrk_nopesanan = $this->input->post('nopesanan');
     $mrk_noinden = $this->input->post('noinden');
-    //$mrk_hargapesanan = $this->input->post('hargapesanan');
     $mrk_hargasebenar = $this->input->post('hargasebenar');
     $mrk_tarikhmulakerja = $this->input->post('tarikhmula');
     $mrk_tarikhkerjatamat = $this->input->post('tarikhtamat');
@@ -150,13 +143,12 @@ class Mrk_model extends CI_Model{
     $mrk_hiddenid = $this->input->post('hiddenid');
 
     $data = array(
-      //'mrk_nopkk' => $mrk_nopkk,
+
       'lsk_namapemb' => $mrk_namapemb,
       'lsk_alamatpemb' => $mrk_alamatpemb,
       'lsk_butirkerja' => $mrk_butirkerja,
-      //'lsk_nosebutharga' => $mrk_nosbtharga,
-      'lsk_noinden' =>   $mrk_noinden,
-      'lsk_nopesanan'=>   $mrk_nopesanan,
+      'lsk_noinden' =>$mrk_noinden,
+      'lsk_nopesanan'=>$mrk_nopesanan,
       'lsk_hargapesanan' => $mrk_hargapesanan,
       'lsk_hargasebenar' => $mrk_hargasebenar,
       'lsk_tarikhmulakerja' => $mrk_tarikhmulakerja,
@@ -177,7 +169,7 @@ class Mrk_model extends CI_Model{
       'lsk_jawatanjuruterad' => $mrk_jawatanjuruterad,
       'lsk_perkeso' => $mrk_perkeso,
       'lsk_liability' => $mrk_liability,
-      'lskmrksatuid' =>   $mrk_hiddenid
+      'lskmrksatuid' =>$mrk_hiddenid
     );
 
     return $this->db->insert('mrk_laporansiap', $data);
