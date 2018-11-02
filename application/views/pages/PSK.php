@@ -34,13 +34,13 @@
                   <label class="col-sm-2">Nama Pemborong</label>
                   <input type="text" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->lsk_namapemb?>" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong">
                   </div>
 
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->lsk_alamatpemb?></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                   </div>
                 </div>
 
@@ -67,7 +67,7 @@
                   <label class="col-sm-2">Butiran Kerja</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->lsk_butirkerja?></textarea>
+                    <textarea type="text" class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
                   </div>
 
                 </div>

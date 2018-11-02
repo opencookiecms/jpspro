@@ -5,6 +5,7 @@
       <center>
         <h1>
           Maklumat Rekod Kerja
+
         </h1>
       </center>
     </section>
@@ -24,16 +25,7 @@
 
         <?php echo validation_errors(); ?>
 
-                <?php
 
-              $pkkNo = $get_detail[0]->mrk_nopkk;
-                if($pkkNo == null){
-                  echo form_open('mrk/LSK');
-                }
-                  else {
-                  echo form_open('mrk/LSK_Update');
-                }
-            ?>
 
         <?php
 
@@ -50,6 +42,7 @@
 
 
         ?>
+
 
             <div class="box box-info">
               <div class="box-header with-border">

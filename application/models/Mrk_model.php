@@ -78,8 +78,6 @@ class Mrk_model extends CI_Model{
     $mrk_ladsehingga = $this->input->post('sehingga1');
     $mrk_perakukerjataksiap = $this->input->post('tarikhperaku');
     $mrk_projekmansuh = $this->input->post('projekmansuh');
-    $mrk_pegawai = $this->input->post('pegawai');
-    $mrk_jawatan = $this->input->post('jawatan');
     $mrk_tarikhlaporan = $this->input->post('tarikhlaporan');
     $mrk_satuid = $this->input->post('mrksatuid');
     $mrk_noinden = $this->input->post('noinden');
@@ -103,8 +101,6 @@ class Mrk_model extends CI_Model{
       'mrk_ladsehingga' => $mrk_ladsehingga,
       'mrk_perakukerjataksiap' => $mrk_perakukerjataksiap,
       'mrk_projekmansuh' => $mrk_projekmansuh,
-      'mrk_pegawai' => $mrk_pegawai,
-      'mrk_jawatan' => $mrk_jawatan,
       'mrk_tarikhlaporan' => $mrk_tarikhlaporan,
       'mrksatu_id' => $mrk_satuid,
       'mrk2_noinden' => $mrk_noinden
@@ -144,15 +140,10 @@ class Mrk_model extends CI_Model{
 
     $data = array(
 
-      'lsk_namapemb' => $mrk_namapemb,
-      'lsk_alamatpemb' => $mrk_alamatpemb,
-      'lsk_butirkerja' => $mrk_butirkerja,
       'lsk_noinden' =>$mrk_noinden,
-      'lsk_nopesanan'=>$mrk_nopesanan,
-      'lsk_hargapesanan' => $mrk_hargapesanan,
-      'lsk_hargasebenar' => $mrk_hargasebenar,
-      'lsk_tarikhmulakerja' => $mrk_tarikhmulakerja,
-      'lsk_tarikhkerjatamat' => $mrk_tarikhkerjatamat,
+
+
+      'lks_hargasebenar' => $mrk_hargasebenar,
       'lsk_lanjutmasa' => $mrk_lanjutmasa,
       'lsk_tarikhkerjasiap' => $mrk_tarikhkerjasiap,
       'lsk_peruntukan' => $mrk_peruntukan,
