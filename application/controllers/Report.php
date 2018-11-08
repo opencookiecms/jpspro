@@ -9,10 +9,10 @@ class Report extends CI_Controller{
 
   }
 
-  function Report_MRK_01()
+  function Report_MRK_01($value="")
   {
-
-    $this->load->view('print/MRK01_Report');
+    $data['get_test'] = $value;
+    $this->load->view('print/MRK01_Report',$data);
 
   }
 
