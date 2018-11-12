@@ -7,18 +7,13 @@ span.cls_004{font-family:Arial,serif;font-size:12.0px;color:rgb(0,0,0);font-weig
 div.cls_004{font-family:Arial,serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 span.cls_009{font-family:Arial,serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: underline}
 div.cls_009{font-family:Arial,serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-span.cls_007{font:"Haettenschweiler",serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-div.cls_007{font:"Haettenschweiler",serif;font-size:12.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 span.cls_005{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 div.cls_005{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 span.cls_006{font-family:Arial,serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 div.cls_006{font-family:Arial,serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-span.cls_008{font:"Haettenschweiler",serif;font-size:8.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-div.cls_008{font:"Haettenschweiler",serif;font-size:8.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+
 </style>
 <page backtop="5mm" backbottom="5mm" backleft="5mm" backright="120mm">
-
-
 <div style="position:absolute;left:0%;margin-left:0px;top:0px;width:800px;height:842px;border-style:outset;overflow:hidden">
 <div style="position:absolute;left:595.22px;top:36.36px" class="cls_003"><span class="cls_003">BORANG MRK 01</span></div>
 <div style="position:absolute;left:130.57px;top:57.54px; width:700px;" class="cls_002"><span class="cls_002">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNTUK DIISI SEMASA PERMULAAN PROJEK</span></div>
@@ -26,7 +21,7 @@ div.cls_008{font:"Haettenschweiler",serif;font-size:8.0px;color:rgb(0,0,0);font-
 <div style="position:absolute;left:37.02px;top:99.43px" class="cls_009"><span class="cls_009">BAHAGIAN  A</span></div>
 <div style="position:absolute;left:40.02px;top:129.52px" class="cls_007"><span class="cls_007">1.</span></div>
 <div style="position:absolute;left:58.02px;top:129.33px" class="cls_004"><span class="cls_004">No. PENDAFTARAN PKK:</span></div>
-<div style="position:absolute;left:214.21px;top:129.43px" class="cls_004"><span class="cls_004"><?php echo $get_test ?></span></div>
+<div style="position:absolute;left:214.21px;top:129.43px" class="cls_004"><span class="cls_004"></span></div>
 <div style="position:absolute;left:40.02px;top:153.46px" class="cls_007"><span class="cls_007">2.</span></div>
 <div style="position:absolute;left:58.02px;top:153.24px" class="cls_004"><span class="cls_004">NAMA KONTRAKTOR</span></div>
 <div style="position:absolute;left:214.21px;top:153.36px" class="cls_004"><span class="cls_004">RB MAWAR ENTERPRISE</span></div>
