@@ -24,8 +24,6 @@
 
         <?php echo validation_errors(); ?>
 
-
-
           <?php
 
               $pkkNo = $get_detail[0]->mrk_nopkk;
@@ -35,10 +33,6 @@
                 else {
                   echo form_open('mrk/MRK_01_Update');
                 }
-
-
-
-
 
           ?>
             <div class="box box-info">
