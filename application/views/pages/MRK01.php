@@ -252,6 +252,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
+                <a href="<?php echo site_url('Report/Report_MRK_01') ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
 
               </div>
             </div>
