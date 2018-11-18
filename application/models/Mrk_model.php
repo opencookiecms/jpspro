@@ -210,6 +210,55 @@ class Mrk_model extends CI_Model{
     return $this->db->insert('mrk_perakuansiap', $data);
   }
 
+
+  public function create_ss()
+  {
+    $ss_chk1 = $this->input->post('chk1');
+    $ss_chk2 = $this->input->post('chk2');
+    $ss_chk3 = $this->input->post('chk3');
+    $ss_chk4 = $this->input->post('chk4');
+    $ss_chk5 = $this->input->post('chk5');
+    $ss_chk6 = $this->input->post('chk6');
+    $ss_chk7 = $this->input->post('chk7');
+    $ss_chk8 = $this->input->post('chk8');
+    $ss_chk9 = $this->input->post('chk9');
+    $ss_chk10 = $this->input->post('chk10');
+    $ss_chk11 = $this->input->post('chk11');
+    $ss_chk12 = $this->input->post('chk12');
+    $ss_chk13 = $this->input->post('chk13');
+    $ss_chk14 = $this->input->post('chk14');
+    $ss_chk15 = $this->input->post('chk15');
+    $ss_chk16 = $this->input->post('chk16');
+    $ss_chk17 = $this->input->post('chk17');
+    $ss_chk18 = $this->input->post('chk18');
+
+    $data = array(
+
+      'cb1' => $ss_chk1,
+      'cb2' => $ss_chk2,
+      'cb3' => $ss_chk3,
+      'cb4' => $ss_chk4,
+      'cb5' => $ss_chk5,
+      'cb6' => $ss_chk6,
+      'cb7' => $ss_chk7,
+      'cb8' => $ss_chk8,
+      'cb9' => $ss_chk9,
+      'cb10' => $ss_chk10,
+      'cb11' => $ss_chk11,
+      'cb12' => $ss_chk12,
+      'cb13' => $ss_chk13,
+      'cb14' => $ss_chk14,
+      'cb15' => $ss_chk15,
+      'cb16' => $ss_chk16,
+      'cb17' => $ss_chk17,
+      'cb18' => $ss_chk18
+
+
+    );
+
+    return $this->db->insert('mrk_ss', $data);
+  }
+
   public function create_siapbaiki()
   {
     $mrk_namapemb = $this->input->post('namapem');

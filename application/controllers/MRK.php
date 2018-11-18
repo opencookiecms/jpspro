@@ -241,10 +241,16 @@ class MRK extends CI_Controller{
 
 	public function senaraisemak()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('pages/semak');
-		$this->load->view('template/footer');
+
+
+
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/semak');
+			$this->load->view('template/footer');
+
+				$this->Mrk_model->create_ss();
+		
 	}
 
 	public function siapbaiki()

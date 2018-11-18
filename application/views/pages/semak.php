@@ -16,37 +16,161 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <form  method="post" action="<?php echo site_url('daftar/rekodkerja'); ?>">
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Senarai Semakan</h3>
               </div><!-- end of box header-->
+
+                        <?php echo form_open('mrk/senaraisemak');?>
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-2">Surat Tuntutan</label>
-                  <input type="checkbox" name="surat" value="suratl">
-                </div>
-  
-                <div class="form-group">
-                  <label class="col-sm-2">Inden/Nota Minta</label>
-                  <input type="checkbox" name="inden" value="inden">
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Surat Tuntutan</label>
+                    <input type="checkbox" name="chk1" value="1">
+                  </div>
+
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Keputusan Panel</label>
+                    <input type="checkbox" name="chk2" value="1">
+                  </div>
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Surat Tawaran Kerja</label>
+                    <input type="checkbox" name="chk3" value="1">
+                  </div>
+
                 </div>
 
-                <div class="form-group">
-                  <label class="col-sm-2">Laporan Siap Kerja</label>
-                  <input type="checkbox" name="siap" value="siap">
-                </div>
 
-                <div class="form-group">
-                  <label class="col-sm-2">Salinan Sijil PKK</label>
-                  <input type="checkbox" name="sijil" value="sijil">
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2">Salinan Sijil CIDB</label>
-                  <input type="checkbox" name="cidb" value="cidb">
-                </div>
               </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Inden / No Minta</label>
+                    <input type="checkbox" name="chk4" value="1">
+                  </div>
+
+
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Perakuan Siap Kerja</label>
+                    <input type="checkbox" name="chk5" value="1">
+                  </div>
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Detail Butiran Tawaran Terus</label>
+                    <input type="checkbox" name="chk6" value="1">
+                  </div>
+
+                </div>
+
+
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Laporan Siap Kerja</label>
+                    <input type="checkbox" name="chk7" value="1">
+                  </div>
+
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Salinan Penyata Bank</label>
+                    <input type="checkbox" name="chk8" value="1">
+                  </div>
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Perakuan Perubahan Kerja</label>
+                    <input type="checkbox" name="chk9" value="1">
+                  </div>
+
+                </div>
+
+
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Salinan Sijil PKK</label>
+                    <input type="checkbox" name="chk10" value="1">
+                  </div>
+
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Surat Akaun Sumpah</label>
+                    <input type="checkbox" name="chk11" value="1">
+                  </div>
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Borang MRK03</label>
+                    <input type="checkbox" name="chk12" value="1">
+                  </div>
+
+                </div>
+
+
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Salinan Sijil CIDB</label>
+                    <input type="checkbox" name="chk13" value="1">
+                  </div>
+
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Gambar</label>
+                    <input type="checkbox" name="chk14" value="1">
+                  </div>
+
+
+                </div>
+
+
+              </div>
+
+              <div class="box-body">
+                <div class="col-md-12">
+                  <span>Bon Perlaksaanan</span>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Jaminan Bank/ Insurans</label>
+                    <input type="checkbox" name="chk15" value="1">
+                  </div>
+
+                  <div class="col-sm-3">
+                    <label style="margin-right:20px;font-size:12px;">Wang Jaminan Perlaksanaan</label>
+                    <input type="checkbox" name="chk16" value="1">
+                  </div>
+
+
+                </div>
+
+
+              </div>
+
+
+                            <div class="box-body">
+                              <div class="col-md-12">
+                                <span>Polisi Insurans</span>
+                              </div>
+                              <div class="form-group">
+                                <div class="col-sm-3">
+                                  <label style="margin-right:20px;font-size:12px;">Publik Liabiliti</label>
+                                  <input type="checkbox" name="chk17" value="1">
+                                </div>
+
+                                <div class="col-sm-3">
+                                  <label style="margin-right:20px;font-size:12px;">Workman/Compasation/PERKESO</label>
+                                  <input type="checkbox" name="chk18" value="1">
+                                </div>
+
+
+                              </div>
+
+
+                            </div>
+
+
+
+
 
               <div class="box-body">
                 <div class="form-group">
@@ -83,20 +207,20 @@
                 </div>
               </div>
 
-              
+
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('mrk/siapbaiki') ?>" class="btn btn-info" role="button">Perakuan Siap Membaiki</a>
+
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 
 
     </section>
     <!-- /.content -->
-    
+
   </div>
   <!-- /.content-wrapper -->

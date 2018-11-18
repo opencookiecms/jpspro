@@ -51,7 +51,7 @@
                       <td><a href="<?php echo site_url('mrk/MRK_03/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
                       <td><a href="<?php echo site_url('mrk/PSK/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
 
-                      <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
+                      <td><a href="<?php echo site_url('mrk/senaraisemak/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
