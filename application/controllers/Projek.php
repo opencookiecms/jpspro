@@ -42,6 +42,15 @@ class Projek extends CI_Controller
   $this->load->view('pages/daftar_view');
  }
 
+ public function delete($id)
+  {
+    $this->db->where('id', $id);
+    $this->db->delete('dp_projek');
+
+    redirect(base_url('projek'));
+
+  }
+
 
 
 }
