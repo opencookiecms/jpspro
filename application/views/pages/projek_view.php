@@ -45,11 +45,11 @@
                       <td>1</td>
                       <td width="300"><?php echo $rowdetail->df_tajuk?></td>
 
-                      <td><a href="<?php echo site_url('mrk/MRK_01/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
-                      <td><a href="<?php echo site_url('mrk/MRK_02/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
-                      <td><a href="<?php echo site_url('mrk/LSK/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
-                      <td><a href="<?php echo site_url('mrk/MRK_03/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
-                      <td><a href="<?php echo site_url('mrk/PSK/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
+                      <td><a href="<?php echo site_url('mrk/MRK_01/'. $rowdetail->dp_id); ?>"></a></td>
+                      <td><a href="<?php echo site_url('mrk/MRK_02/'. $rowdetail->dp_id); ?>"></a></td>
+                      <td><a href="<?php echo site_url('mrk/LSK/'. $rowdetail->dp_id); ?>"></a></td>
+                      <td><a href="<?php echo site_url('mrk/MRK_03/'. $rowdetail->dp_id); ?>"></a></td>
+                      <td><a href="<?php echo site_url('mrk/PSK/'. $rowdetail->dp_id); ?>"></a></td>
 
                       <td><a href="<?php echo site_url('mrk/senaraisemak/'. $rowdetail->dp_id); ?>"><img src="<?php echo base_url();?>/assets/images/success.png"></a></td>
                       <td><img src="<?php echo base_url();?>/assets/images/error.png"></td>
