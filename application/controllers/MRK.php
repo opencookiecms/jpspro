@@ -290,6 +290,16 @@ class MRK extends CI_Controller{
 		}
 	}
 
+	public function pulangwang()
+	{
+
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('pages/pulangwang');
+		$this->load->view('template/footer');
+		
+	}
+
 	public function try($value="")
 	{
 
