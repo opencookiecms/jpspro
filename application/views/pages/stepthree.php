@@ -113,13 +113,8 @@
 
 
           <div class="box-footer">
-            <button onclick="myFunction()" type="submit" name="submit" class="btn btn-default">Seterusnya</button>
+            <button type="submit" name="submit" class="btn btn-default">Seterusnya</button>
 
-            <script>
-              function myFunction() {
-                alert("SIMPAN DATA");
-              }
-            </script>
           </div>
 
         </div>
