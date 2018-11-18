@@ -46,8 +46,7 @@
                   <td><?php echo $row->df_tarikmohon?></td>
                   <td><?php echo $row->df_jsebutharga?></td>
                   <td><?php echo $row->df_tajuk?></td>
-                  <td><a href="<?php echo site_url("projek/delete/" . $row->id); ?>" onclick="return confirm('Delete Data?')">DELETE
-                  </td>
+                  <td><a href="<?php echo site_url("projek/delete/" . $row->id); ?>" class="btn btn-info" role="button" onclick="return confirm('Delete Data?')"">DELETE</a></td>
                 </tr>
 
               <?php endforeach; ?>
