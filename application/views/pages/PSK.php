@@ -43,7 +43,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label class="col-sm-2">Nama Pemborong</label>
-                  <input type="text" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
+                  <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong" readonly>
                   </div>
@@ -89,7 +89,7 @@
                   <label class="col-sm-2">Inden No</label>
                   <div class="col-sm-4">
                   <input type="text" class="form-control" name="indenno" placeholder="Inden No" value="<?php echo $get_detail[0]->mrk_noinden?>" readonly>
-                  <input type="text" name="kodvods" value=" <?php echo $get_detail[0]->df_kodvot?>">
+                  <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                 </div>
                 </div>
               </div>

@@ -41,7 +41,7 @@
                   <label class="col-sm-3">Tarikh Mula Tanggungan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="mulatanggung" name="mulatanggung">
+                    <input type="date" class="form-control" id="mulatanggung" name="mulatanggung" readonly>
                   </div>
                 </div>
 
@@ -58,7 +58,7 @@
                   <label class="col-sm-3">Tarikh Luput Tanggungan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="luputtanggung" name="luputtanggung">
+                    <input type="date" class="form-control" id="luputtanggung" name="luputtanggung" readonly>
                   </div>
                 </div>
               </div>
@@ -80,13 +80,13 @@
                   <label class="col-sm-1">Nama Jurutera</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namajuru" name="namajuru" placeholder="Nama Jurutera">
+                    <input type="text" class="form-control" id="namajuru" name="namajuru" placeholder="Nama Jurutera" readonly>
                   </div>
 
                   <label class="col-sm-1">Jawatan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan">
+                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan" readonly>
                   </div>
                 </div>
               </div>
@@ -97,13 +97,13 @@
                   <label class="col-sm-1">Nama Pemborong</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namaborong" name="namaborong" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namaborong" name="namaborong" placeholder="Nama Pemborong" readonly>
                   </div>
 
                   <label class="col-sm-1">Alamat Pemborong</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamatborong" name="alamatborong" placeholder="Alamat Pemborong"></textarea>
+                    <textarea type="text" class="form-control" readonly id="alamatborong" name="alamatborong" placeholder="Alamat Pemborong"></textarea>
                   </div>
                 </div>
               </div>
@@ -113,7 +113,7 @@
                 <a href="<?php echo base_url('surat') ?>" class="btn btn-info" role="button">Surat</a>
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 

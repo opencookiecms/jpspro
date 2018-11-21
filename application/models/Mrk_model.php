@@ -277,12 +277,15 @@ class Mrk_model extends CI_Model{
     $mrk_wangjaminlaksana = $this->input->post('wangjaminan');
     $mrk_tambahbonlaksana = $this->input->post('kosbon');
     $mrk_bakibonlaksana = $this->input->post('bakibon');
-    $mrk_pegawaipenguasa = $this->input->post('pegawai');
+    $mrk_pegawai = $this->input->post('pegawai');
     $mrk_jawatanpp = $this->input->post('jawatan');
+    $mrk_mrkkodvot = $this->input->post('kodvods');
+    $mrk_satuid = $this->input->post('mrkid');
+    $mrk_noinden = $this->input->post('indenno');
 
     $data = array(
 
-      'mrk_nowangjaminandua' => $mrk_nowangjaminansatu,
+      'mrk_nowangjaminansatu' => $mrk_nowangjaminansatu,
       'mrk_hargasatu' => $mrk_hargasatu,
       'mrk_bakiwangjamin' => $mrk_bakiwangjamin,
       'mrk_nowangjaminandua' => $mrk_nowangjaminandua,
@@ -291,7 +294,10 @@ class Mrk_model extends CI_Model{
       'mrk_tambahbonlaksana' => $mrk_tambahbonlaksana,
       'mrk_bakibonlaksana' => $mrk_bakibonlaksana,
       'mrk_pegawaipenguasa' => $mrk_pegawai,
-      'mrk_jawatanpp' => $mrk_jawatanpp
+      'mrk_jawatanpp' => $mrk_jawatanpp,
+      'mrkid_id' => $mrk_satuid,
+      'psmk_kodvots' => $mrk_mrkkodvot,
+      'psmk_inden' => $mrk_noinden
     );
 
     return $this->db->insert('mrk_perakuansiapbaikicacat', $data);
@@ -306,8 +312,6 @@ class Mrk_model extends CI_Model{
     $mrk_tarikhluputtanggung = $this->input->post('luputtanggung');
     $mrk_namajurutera = $this->input->post('namajuru');
     $mrk_jawatanjuru = $this->input->post('jawatan');
-    $mrk_namapem = $this->input->post('namaborong');
-    $mrk_alamatpem = $this->input->post('alamatborong');
 
     $data = array(
       'mrk_rujukanbank' => $mrk_rujukanbank,
@@ -342,8 +346,8 @@ class Mrk_model extends CI_Model{
 
 
 
-/////////////////////load mrk ///////////////////////////////////////////////////////////////////////////////////////////////////////
-          //
+  /////////////////////load mrk ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  //
   public function get_projectdetailformrk01($id)
   {
     $this->db->select('*');
@@ -430,6 +434,7 @@ class Mrk_model extends CI_Model{
     $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiapbaikicacat','mrk_perakuansiapbaikicacat.mrkid_id =mrk_satu.mrksatuid ','left');
 
 
     $this->db->where('dp_projek.id', $id);
@@ -438,8 +443,13 @@ class Mrk_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_projectdetailforJB($id)
+  {
+    
+  }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public function getLastKodVod()
   {
@@ -469,6 +479,16 @@ class Mrk_model extends CI_Model{
     return $KodVod; //return last id
   }
 
+  public function getLastKodVodPSMK()
+  {
+    $KodVod = $this->db->select('psmk_kodvots')->order_by('psmk_kodvots','desc')->limit(1)->get('mrk_perakuansiapbaikicacat')->row('psmk_kodvots');
+
+    return $KodVod; //return last id
+  }
+
+
+
+
 
 
   /////////////////////////////////////////mrk update/////////////////////////////////////////////////////////////////////////////
@@ -476,49 +496,49 @@ class Mrk_model extends CI_Model{
   public function mrk01update($data ,$update)
   {
 
-        $this->load->helper('url');
+    $this->load->helper('url');
 
-        $mrk_nopkk = $this->input->post("nopkk");
-        $mrk_gred = $this->input->post("gred");
-        $mrk_namakon = $this->input->post("namakon");
-        $mrk_alamatkon = $this->input->post("alamat");
-        $mrk_nokontrak = $this->input->post("nokon");
-        $mrk_noinden = $this->input->post("noinden");
-        $mrk_tajukkerja = $this->input->post("tajukkerjamrk");
-        $mrk_kategori = $this->input->post("kategori");
-        $mrk_daerah = $this->input->post("daerah");
-        $mrk_negeri = $this->input->post("negeri");
-        $mrk_khusus = $this->input->post("khusus");
-        $mrk_tarikhmulakon = $this->input->post("tarikhmulakon");
-        $mrk_tarikhjangkasiap = $this->input->post("tarikhjangka");
-        $mrk_pegawai = $this->input->post("pegawai");
-        $mrk_jawatan = $this->input->post("jawatan");
-        $mrk_kosprojek = $this->input->post("kosprojek");
-        $mrk_tarikh = $this->input->post("tarikh");
+    $mrk_nopkk = $this->input->post("nopkk");
+    $mrk_gred = $this->input->post("gred");
+    $mrk_namakon = $this->input->post("namakon");
+    $mrk_alamatkon = $this->input->post("alamat");
+    $mrk_nokontrak = $this->input->post("nokon");
+    $mrk_noinden = $this->input->post("noinden");
+    $mrk_tajukkerja = $this->input->post("tajukkerjamrk");
+    $mrk_kategori = $this->input->post("kategori");
+    $mrk_daerah = $this->input->post("daerah");
+    $mrk_negeri = $this->input->post("negeri");
+    $mrk_khusus = $this->input->post("khusus");
+    $mrk_tarikhmulakon = $this->input->post("tarikhmulakon");
+    $mrk_tarikhjangkasiap = $this->input->post("tarikhjangka");
+    $mrk_pegawai = $this->input->post("pegawai");
+    $mrk_jawatan = $this->input->post("jawatan");
+    $mrk_kosprojek = $this->input->post("kosprojek");
+    $mrk_tarikh = $this->input->post("tarikh");
 
-        $data = array(
-          'mrk_nopkk' => $mrk_nopkk,
-          'mrk_gred' => $mrk_gred,
-          'mrk_namakon' => $mrk_namakon,
-          'mrk_alamatkon' => $mrk_alamatkon,
-          'mrk_nokontrak' => $mrk_nokontrak,
-          'mrk_noinden' => $mrk_noinden,
-          'mrk_tajukkerja' => $mrk_tajukkerja,
-          'mrk_kategori' => $mrk_kategori,
-          'mrk_daerah' => $mrk_daerah,
-          'mrk_negeri' => $mrk_negeri,
-          'mrk_khusus' => $mrk_khusus,
-          'mrk_tarikhmulakon' => $mrk_tarikhmulakon,
-          'mrk_tarikhjangkasiap' => $mrk_tarikhjangkasiap,
-          'mrk_pegawai' => $mrk_pegawai,
-          'mrk_jawatan' => $mrk_jawatan,
-          'mrk_kosprojek' => $mrk_kosprojek,
-          'mrk_tarikh' => $mrk_tarikh
-        );
+    $data = array(
+      'mrk_nopkk' => $mrk_nopkk,
+      'mrk_gred' => $mrk_gred,
+      'mrk_namakon' => $mrk_namakon,
+      'mrk_alamatkon' => $mrk_alamatkon,
+      'mrk_nokontrak' => $mrk_nokontrak,
+      'mrk_noinden' => $mrk_noinden,
+      'mrk_tajukkerja' => $mrk_tajukkerja,
+      'mrk_kategori' => $mrk_kategori,
+      'mrk_daerah' => $mrk_daerah,
+      'mrk_negeri' => $mrk_negeri,
+      'mrk_khusus' => $mrk_khusus,
+      'mrk_tarikhmulakon' => $mrk_tarikhmulakon,
+      'mrk_tarikhjangkasiap' => $mrk_tarikhjangkasiap,
+      'mrk_pegawai' => $mrk_pegawai,
+      'mrk_jawatan' => $mrk_jawatan,
+      'mrk_kosprojek' => $mrk_kosprojek,
+      'mrk_tarikh' => $mrk_tarikh
+    );
 
-        $this->db->where('mrk_nokontrak', $update);
+    $this->db->where('mrk_nokontrak', $update);
 
-        $this->db->update('mrk_satu', $data);
+    $this->db->update('mrk_satu', $data);
   }
 
   public function mrk02update($data ,$update)
@@ -549,7 +569,7 @@ class Mrk_model extends CI_Model{
 
 
     $data = array(
-     'mrk2_noinden' => $mrk_noinden,
+      'mrk2_noinden' => $mrk_noinden,
       'mrk_majukerja' => $mrk_majukerja,
       'mrk_majukerjasebenar' => $mrk_majukerjasebenar,
       'mrk_bayarmajusemasa' => $mrk_bayarmajusemasa,
@@ -580,17 +600,7 @@ class Mrk_model extends CI_Model{
   {
     $this->load->helper('url');
 
-    //$mrk_nopkk = $this->input->post('nopkk');
-    //$mrk_namapemb = $this->input->post('namapem');
-    //$mrk_alamatpemb = $this->input->post('alamat');
-    //$mrk_butirkerja = $this->input->post('butiran');
-    //$mrk_nosbtharga = $this->input->post('nosebut');
-    //$mrk_nopesanan = $this->input->post('nopesanan');
-    //$mrk_noinden = $this->input->post('noinden');
-    //$mrk_hargapesanan = $this->input->post('hargapesanan');
     $mrk_hargasebenar = $this->input->post('hargasebenar');
-    //$mrk_tarikhmulakerja = $this->input->post('tarikhmula');
-  //  $mrk_tarikhkerjatamat = $this->input->post('tarikhtamat');
     $mrk_lanjutmasa = $this->input->post('tariklanjut');
     $mrk_tarikhkerjasiap = $this->input->post('tarikhkerjasempurna');
     $mrk_peruntukan = $this->input->post('peruntukan');
@@ -609,17 +619,8 @@ class Mrk_model extends CI_Model{
     $mrk_hiddenid = $this->input->post('hiddenid');
 
     $data = array(
-      //'mrk_nopkk' => $mrk_nopkk,
-      //'lsk_namapemb' => $mrk_namapemb,
-      //'lsk_alamatpemb' => $mrk_alamatpemb,
-      //'lsk_butirkerja' => $mrk_butirkerja,
-      //'lsk_nosebutharga' => $mrk_nosbtharga,
-      //'lsk_noinden' =>   $mrk_noinden,
-      //'lsk_nopesanan'=>   $mrk_nopesanan,
-      //'lsk_hargapesanan' => $mrk_hargapesanan,
+
       'lks_hargasebenar' => $mrk_hargasebenar,
-      //'lsk_tarikhmulakerja' => $mrk_tarikhmulakerja,
-      //'lsk_tarikhkerjatamat' => $mrk_tarikhkerjatamat,
       'lsk_lanjutmasa' => $mrk_lanjutmasa,
       'lsk_tarikhkerjasiap' => $mrk_tarikhkerjasiap,
       'lsk_peruntukan' => $mrk_peruntukan,
@@ -640,15 +641,77 @@ class Mrk_model extends CI_Model{
 
     );
 
-      $this->db->where('lskmrksatuid', $update);
+    $this->db->where('lskmrksatuid', $update);
 
-      $this->db->update('mrk_laporansiap', $data);
+    $this->db->update('mrk_laporansiap', $data);
 
   }
 
-  public function PSK_Update($data, $update)
+  public function PSKUpdate($data, $update)
   {
-    
+
+    $mrk_tarikhsiapsebenar = $this->input->post('tarikhsiapsebenar');
+    $mrk_tarikhambikmilik = $this->input->post('tarikhambikmilik');
+    $mrk_tarikhmulatanggungcacat = $this->input->post('mulacacat');
+    $mrk_tarikhtamattanggungcacat = $this->input->post('cacattamat');
+    $mrk_pskmrkid = $this->input->post('hiddenid');
+    $mrk_pskinden = $this->input->post('indenno');
+    $psk_kodvots = $this->input->post('kodvods');
+
+    $data = array(
+
+      'mrk_tarikhsiapsebenar' => $mrk_tarikhsiapsebenar,
+      'mrk_tarikhambikmilik' => $mrk_tarikhambikmilik,
+      'mrk_tarikhmulatanggungcacat' => $mrk_tarikhmulatanggungcacat,
+      'mrk_tarikhtamattanggungcacat' => $mrk_tarikhtamattanggungcacat,
+      'pskmrksatuid'=>$mrk_pskmrkid,
+      'mrk_pskinden'=>$mrk_pskinden,
+      'psk_kodvots' =>$psk_kodvots
+    );
+
+    $this->db->where('pskmrksatuid', $update);
+
+    $this->db->update('mrk_perakuansiap', $data);
+
+  }
+
+  public function PSMKUpdate($data, $update)
+  {
+    $this->load->helper('url');
+    $mrk_nowangjaminansatu = $this->input->post('nokewangan');
+    $mrk_hargasatu = $this->input->post('harga');
+    $mrk_bakiwangjamin = $this->input->post('bakiwangjaminan');
+    $mrk_nowangjaminandua = $this->input->post('nokewangan');
+    $mrk_hargadua = $this->input->post('harga1');
+    $mrk_wangjaminlaksana = $this->input->post('wangjaminan');
+    $mrk_tambahbonlaksana = $this->input->post('kosbon');
+    $mrk_bakibonlaksana = $this->input->post('bakibon');
+    $mrk_pegawai = $this->input->post('pegawai');
+    $mrk_jawatanpp = $this->input->post('jawatan');
+    $mrk_mrkkodvot = $this->input->post('kodvods');
+    $mrk_satuid = $this->input->post('mrkid');
+    $mrk_noinden = $this->input->post('indenno');
+
+    $data = array(
+
+      'mrk_nowangjaminansatu' => $mrk_nowangjaminansatu,
+      'mrk_hargasatu' => $mrk_hargasatu,
+      'mrk_bakiwangjamin' => $mrk_bakiwangjamin,
+      'mrk_nowangjaminandua' => $mrk_nowangjaminandua,
+      'mrk_hargadua' => $mrk_hargadua,
+      'mrk_wangjaminlaksana' => $mrk_wangjaminlaksana,
+      'mrk_tambahbonlaksana' => $mrk_tambahbonlaksana,
+      'mrk_bakibonlaksana' => $mrk_bakibonlaksana,
+      'mrk_pegawaipenguasa' => $mrk_pegawai,
+      'mrk_jawatanpp' => $mrk_jawatanpp,
+      'mrkid_id' => $mrk_satuid,
+      'psmk_kodvots' => $mrk_mrkkodvot,
+      'psmk_inden' => $mrk_noinden
+    );
+
+    $this->db->where('mrkid_id', $update);
+
+    $this->db->update('mrk_perakuansiapbaikicacat', $data);
   }
 
 

@@ -22,9 +22,19 @@
           } ?>
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
 
-        <?php echo validation_errors(); ?>
+          <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/siapbaiki'); ?>
+            <?php
+
+                $pkkNo = $get_detail[0]->psmk_kodvots;
+                  if($pkkNo == null){
+                      echo form_open('mrk/MRK_PSMK');
+                  }
+                  else {
+                    echo form_open('mrk/PSMK_Update');
+                  }
+
+            ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Perakuan Siap Membaiki Kecacatan</h3>
@@ -168,13 +178,13 @@
                   <label class="col-sm-4">(i) ** No Kewangan Jaminan Bank/Insuran</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nokewangan" name="nokewangan" placeholder="No Kewangan Jaminan Bank/Insuran">
+                    <input type="text" class="form-control" id="nokewangan" name="nokewangan" value="<?php echo $get_detail[0]->mrk_nowangjaminansatu?>" placeholder="No Kewangan Jaminan Bank/Insuran">
                   </div>
 
                   <label class="col-sm-1">Harga</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="harga" name="harga" placeholder="RM">
+                    <input type="text" class="form-control" id="harga" name="harga" value="<?php echo $get_detail[0]->mrk_hargasatu?>" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -185,7 +195,7 @@
                   <label class="col-sm-4">(ii) ** Baki Wang Jaminan Perlaksanaan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="bakiwangjaminan" name="bakiwangjaminan" placeholder="RM">
+                    <input type="text" class="form-control" id="bakiwangjaminan" name="bakiwangjaminan" value="<?php echo $get_detail[0]->mrk_bakiwangjamin?>" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -196,13 +206,13 @@
                   <label class="col-sm-4">(i) ** No Kewangan Jaminan Bank/Insuran</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="nokewangan" name="nokewangan" placeholder="No Kewangan Jaminan Bank/Insuran">
+                    <input type="text" class="form-control" id="nokewangan" name="nokewangan" value="<?php echo $get_detail[0]->mrk_nowangjaminandua?>" placeholder="No Kewangan Jaminan Bank/Insuran">
                   </div>
 
                   <label class="col-sm-1">Harga</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="harga1" name="harga1" placeholder="RM">
+                    <input type="text" class="form-control" id="harga1" name="harga1" placeholder="RM" value="<?php echo $get_detail[0]->mrk_hargadua?>">
                   </div>
                 </div>
               </div>
@@ -213,7 +223,7 @@
                   <label class="col-sm-4">** Wang Jaminan Perlaksanaan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="wangjaminan" name="wangjaminan" placeholder="RM">
+                    <input type="text" class="form-control" id="wangjaminan" name="wangjaminan" value="<?php echo $get_detail[0]->mrk_wangjaminlaksana?>" placeholder="RM">
                   </div>
                 </div>
               </div>
@@ -224,13 +234,13 @@
                   <label class="col-sm-4">(ii) ** Tambahan Kos Bon Perlaksanaan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kosbon" name="kosbon" placeholder="RM">
+                    <input type="text" class="form-control" id="kosbon" name="kosbon" value="<?php echo $get_detail[0]->mrk_tambahbonlaksana?>" placeholder="RM">
                   </div>
 
                   <label class="col-sm-2">Pegawai Penguasa</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="pegawai" name="pegawai" placeholder="Pegawai Penguasa">
+                    <input type="text" class="form-control" id="pegawai" name="pegawai" value="<?php echo $get_detail[0]->mrk_pegawaipenguasa?>" placeholder="Pegawai Penguasa">
                   </div>
                 </div>
               </div>
@@ -241,13 +251,16 @@
                   <label class="col-sm-4">** Baki Kos Bon Perlaksanaan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="bakibon" name="bakibon" placeholder="RM">
+                    <input type="text" class="form-control" id="bakibon" name="bakibon" placeholder="RM" value="<?php echo $get_detail[0]->mrk_bakibonlaksana?>">
                   </div>
 
                   <label class="col-sm-2">Jawatan</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan">
+                    <input type="text" class="form-control" id="jawatan" name="jawatan" value="<?php echo $get_detail[0]->mrk_jawatanpp?>" placeholder="Jawatan">
+                    <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
+                    <input type="hidden" name="indenno" value="<?php echo $get_detail[0]->mrk_noinden?>">
+                    <input type="hidden" name="mrkid" value="<?php echo $get_detail[0]->mrksatu_id?>">
                   </div>
                 </div>
               </div>
