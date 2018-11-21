@@ -104,7 +104,8 @@
                   <label class="col-sm-2">No Pesanan Kerja</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" name="nopesanan" placeholder="No Pesanan Kerja" value="<?php echo $get_detail[0]->df_kodvot?>" readonly>
+                    <input type="text" class="form-control" name="nopesanan" placeholder="No Pesanan Kerja" value="<?php echo $get_detail[0]->mrk_noinden?>" readonly>
+                    <input type="text" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                   </div>
                 </div>
               </div>
@@ -113,7 +114,7 @@
                       <label class="col-sm-1">No Inden</label>
 
                       <div class="col-sm-5">
-                        <input type="text" class="form-control" name="noinden" value="<?php echo $get_detail[0]->df_kodvot?>"  placeholder="Inden No" readonly>
+                        <input type="text" class="form-control" name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>"  placeholder="Inden No" readonly>
                       </div>
                 </div>
               </div>

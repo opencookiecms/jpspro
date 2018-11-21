@@ -78,13 +78,13 @@
                   <label class="col-sm-2">Tarikh Mula Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="mulacacat" name="mulacacat" readonly>
+                    <input type="date" class="form-control" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>" readonly>
                   </div>
 
                   <label class="col-sm-3">Tarikh Tamat Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="cacattamat" name="cacattamat" readonly>
+                    <input type="date" class="form-control" id="cacattamat" name="cacattamat" value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>" readonly>
                   </div>
                 </div>
               </div>
@@ -95,24 +95,26 @@
                   <label class="col-sm-2">Gred</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
-                      <option value="G1 | Sehingga RM200,000.00">G1 | Sehingga RM200,000.00</option>
+                    <select type="text" class="form-control" id="gred" name="gred" placeholder="gred" readonly>
+                      <option value="<?php echo $get_detail[0]->mrk_gred?>"><?php echo $get_detail[0]->mrk_gred?></option>
+                      <!-- <option value="G1 | Sehingga RM200,000.00">G1 | Sehingga RM200,000.00</option>
                       <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2 | RM200,001.00 Hingga RM500,000.00</option>
                       <option value="G3 | RM500,001.00 Hingga RM1 000,000.00">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
                       <option value="G4 | RM1 000,001.00 Hingga RM3 000,000.00">G4 | RM1 000,001.00 Hingga RM3 000,000.00</option>
                       <option value="G5 | RM300,001.00 Hingga RM5 000,000.00">G5 | RM300,001.00 Hingga RM5 000,000.00</option>
                       <option value="G6 | RM5 000,001.00 Hingga RM10 000,000.00">G6 | RM5 000,001.00 Hingga RM10 000,000.00</option>
-                      <option value="G7 | RM 10 000,001.00 Ke Atas">G7 | RM 10 000,001.00 Ke Atas</option>
+                      <option value="G7 | RM 10 000,001.00 Ke Atas">G7 | RM 10 000,001.00 Ke Atas</option> -->
                     </select>
                   </div>
 
                   <label class="col-sm-1">Kategori</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
-                      <option value="CE | Pembinaan Kejuruteraan Awam">CE | Pembinaan Kejuruteraan Awam</option>
+                    <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat" readonly>
+                      <option value="<?php echo $get_detail[0]->mrk_kategori?>"><?php echo $get_detail[0]->mrk_kategori?></option>
+                      <!-- <option value="CE | Pembinaan Kejuruteraan Awam">CE | Pembinaan Kejuruteraan Awam</option>
                       <option value="B | Pembinaan Bangunan">B | Pembinaan Bangunan</option>
-                      <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option>
+                      <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option> -->
                     </select>
                   </div>
                 </div>
@@ -124,8 +126,9 @@
               <label class="col-sm-2">Pengkhususan</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="khusus" name="khusus" placeholder="kat">
-                      <option value="CE 02 | Pembinaan Jambatan & Jeti">CE 02 | Pembinaan Jambatan & Jeti</option>
+                    <select type="text" class="form-control" id="khusus" name="khusus" placeholder="kat" readonly>
+                      <option value="<?php echo $get_detail[0]->mrk_khusus?>"><?php echo $get_detail[0]->mrk_khusus?></option>
+                      <!-- <option value="CE 02 | Pembinaan Jambatan & Jeti">CE 02 | Pembinaan Jambatan & Jeti</option>
                       <option value="CE 04 | Empangan">CE 04 | Empangan</option>
                       <option value="CE 06 | Struktur saliran, pengairan dan kawalan banjir">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
                       <option value="CE 12 | Kerja penyiasatan tanah">CE 12 | Kerja penyiasatan tanah</option>
@@ -151,7 +154,7 @@
                       <option value="B 15 | Pemasangan bumbung">B 15 | Pemasangan bumbung</option>
                       <option value="B 18 | Kerja-kerja logam">B 18 | Kerja-kerja logam</option>
                       <option value="B 24 | Kerja penyenggaraan bangunan">B 24 | Kerja penyenggaraan bangunan</option>
-                      <option value="B 28 | Kerja-kerja ubahsuai">B 28 | Kerja-kerja ubahsuai</option>
+                      <option value="B 28 | Kerja-kerja ubahsuai">B 28 | Kerja-kerja ubahsuai</option> -->
                     </select>
                   </div>
                 </div>

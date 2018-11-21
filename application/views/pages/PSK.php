@@ -22,9 +22,20 @@
           } ?>
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
 
-        <?php echo validation_errors(); ?>
+          <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/PSK'); ?>
+
+          <?php
+
+              $pkkNo = $get_detail[0]->mrk_pskinden;
+                if($pkkNo == null){
+                    echo form_open('mrk/PSK');
+                }
+                else {
+                  echo form_open('mrk/PSK_Update');
+                }
+
+          ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Perakuan Siap Kerja</h3>
@@ -34,13 +45,13 @@
                   <label class="col-sm-2">Nama Pemborong</label>
                   <input type="text" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong" readonly>
                   </div>
 
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                   </div>
                 </div>
 
@@ -67,7 +78,7 @@
                   <label class="col-sm-2">Butiran Kerja</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
+                    <textarea type="text" readonly class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
                   </div>
 
                 </div>
@@ -78,6 +89,7 @@
                   <label class="col-sm-2">Inden No</label>
                   <div class="col-sm-4">
                   <input type="text" class="form-control" name="indenno" placeholder="Inden No" value="<?php echo $get_detail[0]->mrk_noinden?>" readonly>
+                  <input type="text" name="kodvods" value=" <?php echo $get_detail[0]->df_kodvot?>">
                 </div>
                 </div>
               </div>
@@ -87,13 +99,13 @@
                   <label class="col-sm-2">Tarikh Siap Sebenar</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhsiapsebenar" name="tarikhsiapsebenar">
+                    <input type="date" class="form-control" id="tarikhsiapsebenar" name="tarikhsiapsebenar" value="<?php echo $get_detail[0]->mrk_tarikhsiapsebenar?>">
                   </div>
 
                   <label class="col-sm-3">Tarikh Ambil Milik</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhambikmilik" name="tarikhambikmilik">
+                    <input type="date" class="form-control" id="tarikhambikmilik" name="tarikhambikmilik" value="<?php echo $get_detail[0]->mrk_tarikhambikmilik?>">
                   </div>
                 </div>
               </div>
@@ -103,13 +115,13 @@
                   <label class="col-sm-2">Tarikh Mula Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="mulacacat" name="mulacacat">
+                    <input type="date" class="form-control" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>">
                   </div>
 
                   <label class="col-sm-3">Tarikh Tamat Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="cacattamat" name="cacattamat">
+                    <input type="date" class="form-control" id="cacattamat" name="cacattamat"  value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>">
                   </div>
                 </div>
               </div>

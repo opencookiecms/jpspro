@@ -46,6 +46,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label class="col-sm-2">No Pendaftaran PKK</label>
+                  <input type="text" value="<?php echo $get_detail[0]->df_kodvot ?>" name="kodvods">
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="    <?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK" readonly>
@@ -65,7 +66,7 @@
                   <label class="col-sm-2">No Inden/Pesanan tempatan</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->df_kodvot ?>" name="noinden" placeholder="No Inden" readonly>
+                    <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden" placeholder="No Inden" readonly>
                   </div>
 
                   <label class="col-sm-2">Kos Projek (RM)</label>
@@ -266,13 +267,13 @@
                   <label class="col-sm-1">Pegawai</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="pegawai" value="<?php echo $get_detail[0]->mrk_pegawai?>" name="pegawai">
+                    <input type="text" class="form-control" readonly id="pegawai" value="<?php echo $get_detail[0]->mrk_pegawai?>" name="pegawai">
                   </div>
 
                   <label class="col-sm-1">Jawatan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="jawatan" value="<?php echo $get_detail[0]->mrk_jawatan?>" name="jawatan">
+                    <input type="text" class="form-control" readonly id="jawatan" value="<?php echo $get_detail[0]->mrk_jawatan?>" name="jawatan">
                   </div>
 
                   <label class="col-sm-2">Tarikh Laporan</label>

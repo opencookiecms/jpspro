@@ -42,6 +42,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label class="col-sm-2">No Pendaftaran PKK</label>
+                  <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
@@ -91,7 +92,7 @@
                   <label class="col-sm-2">No Inden/Pesanan tempatan</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="noinden" readonly name="noinden"value="<?php echo $get_detail[0]->df_kodvot ?>" placeholder="No Inden">
+                    <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden"  placeholder="No Inden">
                   </div>
                 </div>
               </div>

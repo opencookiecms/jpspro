@@ -135,7 +135,7 @@ class MRK extends CI_Controller{
 	public function PSK($value="")
 	{
 		$this->load->database();
-		$data['get_detail']=$this->Mrk_model->get_projectdetailforMRK03($value);
+		$data['get_detail']=$this->Mrk_model->get_projectdetailforPSK($value);
 		$this->form_validation->set_rules('failrujuk', 'Fail Rujukan', 'required');
 
 		if($this->form_validation->run() == FALSE)

@@ -57,7 +57,8 @@
                   <label class="col-sm-2">No Inden/Pesanan Tempatan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden" value="  <?php echo $get_detail[0]->df_kodvot?>" readonly>
+                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden" value="  <?php echo $get_detail[0]->mrk_noinden?>" readonly>
+                    <input type="text" name="kodvods" value=" <?php echo $get_detail[0]->df_kodvot?>">
                   </div>
                 </div>
               </div>
