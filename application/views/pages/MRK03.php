@@ -259,7 +259,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('mrk/perakuansiapkerja') ?>" class="btn btn-info" role="button">Perakuan Siap Kerja</a>
+                <a href="<?php echo site_url('Report/Report_MRK_03') ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
               </div>
             </div>
           </form>

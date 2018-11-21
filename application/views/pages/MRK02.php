@@ -36,7 +36,7 @@
               }
 
         ?>
-        
+
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Maklumat Rekod Kerja - MRK 02</h3>
@@ -285,7 +285,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('mrk/laporansiapkerja') ?>" class="btn btn-info" role="button">Laporan Siap Kerja</a>
+                <a href="<?php echo site_url('Report/Report_MRK_02') ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
               </div>
             </div>
           </form>

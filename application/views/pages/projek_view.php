@@ -51,8 +51,8 @@
                       <td><a href="<?php echo site_url('mrk/MRK_03/'. $rowdetail->dp_id); ?>">MRK - 03</a></td>
                       <td><a href="<?php echo site_url('mrk/PSK/'. $rowdetail->dp_id); ?>">PSK</a></td>
 
-                      <td><a href="<?php echo site_url('mrk/senaraisemak/'. $rowdetail->dp_id); ?>">SS</a></td>
-                      <td><a href="<?php echo site_url('mrk/siapbaiki'); ?>">PSMK</a></td>
+                      <td><a href="<?php echo site_url('mrk/Senarai_Semak/'. $rowdetail->dp_id); ?>">SS</a></td>
+                      <td><a href="<?php echo site_url('mrk/MRK_PSMK/'.$rowdetail->dp_id); ?>">PSMK</a></td>
                       <td><a href="<?php echo site_url('mrk/jaminanbank'); ?>">PJM</a></td>
                       <td><a href="<?php echo site_url('mrk/pulangwang'); ?>">PPW</a></td>
                       <td><a href="<?php echo site_url('surat'); ?>">Surat</a></td>

@@ -116,7 +116,8 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('mrk/senaraisemak') ?>" class="btn btn-info" role="button">Senarai Semakan</a>
+                <a href="<?php echo site_url('Report/Report_PSK_01') ?>" class="btn btn-success" role="button" target="_blank">Cetak PSK1</a>
+                <a href="<?php echo site_url('Report/Report_PSK_02') ?>" class="btn btn-success" role="button" target="_blank">Cetak PSK2</a>
               </div>
             </div>
           </form>

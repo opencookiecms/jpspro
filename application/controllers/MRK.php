@@ -156,6 +156,30 @@ class MRK extends CI_Controller{
 
 	}
 
+	public function MRK_PSMK($value="")
+	{
+		$this->load->database();
+		$data['get_detail']=$this->Mrk_model->get_projectdetailforPSMK($value);
+		$this->form_validation->set_rules('norujuk', 'No Rujukan', 'required');
+		$this->form_validation->set_rules('nokontrak', 'No Kontrak', 'required');
+
+		if($this->form_validation->run() == FALSE)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/PSMK',$data);
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Mrk_model->create_siapbaiki();
+			$KodVod=$this->Mrk_model->getLastKodVodPSK();
+			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+		}
+
+
+	}
+
 
 
 
@@ -239,39 +263,21 @@ class MRK extends CI_Controller{
 	/////MRK AND OTHER UPDATE GOOSE HERE//////////////////////////////////////////////////////////////
 
 
-	public function senaraisemak()
+	public function Senarai_Semak()
 	{
 
 
 
 			$this->load->view('template/header');
 			$this->load->view('template/sidebar');
-			$this->load->view('pages/semak');
+			$this->load->view('pages/SS');
 			$this->load->view('template/footer');
 
 				$this->Mrk_model->create_ss();
-		
-	}
-
-	public function siapbaiki()
-	{
-		$this->form_validation->set_rules('norujuk', 'No Rujukan', 'required');
-		$this->form_validation->set_rules('nokontrak', 'No Kontrak', 'required');
-
-		if($this->form_validation->run() == FALSE)
-		{
-			$this->load->view('template/header');
-			$this->load->view('template/sidebar');
-			$this->load->view('pages/perakusiapbaiki');
-			$this->load->view('template/footer');
-		}
-		else
-		{
-			$this->Mrk_model->create_siapbaiki();
-		}
-
 
 	}
+
+
 
 	public function jaminanbank()
 	{
@@ -297,7 +303,7 @@ class MRK extends CI_Controller{
 		$this->load->view('template/sidebar');
 		$this->load->view('pages/pulangwang');
 		$this->load->view('template/footer');
-		
+
 	}
 
 	public function try($value="")

@@ -34,13 +34,13 @@
                   <label class="col-sm-2">Nama Pemborong</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="namapem" name="namapem" placeholder="Nama Pemborong">
+                    <input type="text" class="form-control" id="namapem" name="namapem" value="<?php echo $get_detail[0]->mrk_namakon?>" readonly>
                   </div>
 
                   <label class="col-sm-1">Alamat Pemborong</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                   </div>
                 </div>
 
@@ -51,13 +51,13 @@
                   <label class="col-sm-2">No Rujukan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="norujuk" name="norujuk" placeholder="no Rujukan">
+                    <input type="text" class="form-control" id="norujuk" name="norujuk"value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                   </div>
 
                   <label class="col-sm-1">No Kontrak</label>
 
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="nokontrak" name="nokontrak" placeholder="No Kontrak">
+                    <input type="text" class="form-control" id="nokontrak" name="nokontrak" value="<?php echo $get_detail[0]->df_kodvot?>"readonly>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@
                   <label class="col-sm-2">Tajuk Kerja</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="tajukkerja" name="tajukkerja" placeholder="Tajuk Kerja"></textarea>
+                    <textarea type="text" class="form-control" id="tajukkerja" name="tajukkerja" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                   </div>
 
                 </div>
@@ -78,13 +78,13 @@
                   <label class="col-sm-2">Tarikh Mula Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="mulacacat" name="mulacacat">
+                    <input type="date" class="form-control" id="mulacacat" name="mulacacat" readonly>
                   </div>
 
                   <label class="col-sm-3">Tarikh Tamat Tanggungan Kecacatan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="cacattamat" name="cacattamat">
+                    <input type="date" class="form-control" id="cacattamat" name="cacattamat" readonly>
                   </div>
                 </div>
               </div>
@@ -254,13 +254,13 @@
                 <a href="<?php echo site_url('mrk/jaminanbank') ?>" class="btn btn-info" role="button">Pelepasan Jaminan Bank</a>
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 
 
     </section>
     <!-- /.content -->
-    
+
   </div>
   <!-- /.content-wrapper -->

@@ -261,16 +261,7 @@ class Mrk_model extends CI_Model{
 
   public function create_siapbaiki()
   {
-    $mrk_namapemb = $this->input->post('namapem');
-    $mrk_alamatpem = $this->input->post('alamat');
-    $mrk_failrujuk = $this->input->post('norujuk');
-    $mrk_nokontrak = $this->input->post('nokontrak');
-    $mrk_tajukkerja = $this->input->post('tajukkerja');
-    $mrk_tarikhmulatanggung = $this->input->post('mulacacat');
-    $mrk_tarikhsiapbaikicacat = $this->input->post('cacattamat');
-    $mrk_gred = $this->input->post('gred');
-    $mrk_kategori = $this->input->post('kategori');
-    $mrk_khusus = $this->input->post('khusus');
+
     $mrk_nowangjaminansatu = $this->input->post('nokewangan');
     $mrk_hargasatu = $this->input->post('harga');
     $mrk_bakiwangjamin = $this->input->post('bakiwangjaminan');
@@ -283,16 +274,7 @@ class Mrk_model extends CI_Model{
     $mrk_jawatanpp = $this->input->post('jawatan');
 
     $data = array(
-      'mrk_namapemb' => $mrk_namapemb,
-      'mrk_alamatpem' => $mrk_alamatpem,
-      'mrk_failrujuk' => $mrk_failrujuk,
-      'mrk_nokontrak' => $mrk_nokontrak,
-      'mrk_tajukkerja' => $mrk_tajukkerja,
-      'mrk_tarikhmulatanggung' => $mrk_tarikhmulatanggung,
-      'mrk_tarikhsiapbaikicacat' => $mrk_tarikhsiapbaikicacat,
-      'mrk_gred' => $mrk_gred,
-      'mrk_kategori' => $mrk_kategori,
-      'mrk_khusus' => $mrk_khusus,
+
       'mrk_nowangjaminandua' => $mrk_nowangjaminansatu,
       'mrk_hargasatu' => $mrk_hargasatu,
       'mrk_bakiwangjamin' => $mrk_bakiwangjamin,
@@ -416,6 +398,23 @@ class Mrk_model extends CI_Model{
   }
 
   public function get_projectdetailforPSK($id)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
+
+
+    $this->db->where('dp_projek.id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function get_projectdetailforPSMK($id)
   {
     $this->db->select('*');
     $this->db->from('dp_projek');
