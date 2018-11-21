@@ -197,6 +197,8 @@ class MRK extends CI_Controller{
 			else
 			{
 				$this->Mrk_model->create_jaminanbank();
+				$KodVod=$this->Mrk_model->getLastKodVodJB();
+				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 			}
 		}
 
@@ -321,6 +323,11 @@ class MRK extends CI_Controller{
 			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 		}
 
+	}
+
+	public function JB_Update()
+	{
+		
 	}
 
 

@@ -308,21 +308,21 @@ class Mrk_model extends CI_Model{
     $mrk_rujukanbank = $this->input->post('rujukbank');
     $mrk_namabank = $this->input->post('namabank');
     $mrk_alamatbank = $this->input->post('alamatbank');
-    $mrk_tarikhmulatanggung = $this->input->post('mulatanggung');
-    $mrk_tarikhluputtanggung = $this->input->post('luputtanggung');
-    $mrk_namajurutera = $this->input->post('namajuru');
-    $mrk_jawatanjuru = $this->input->post('jawatan');
+    $js_mrkid = $this->input->post('hiddenid');
+    $js_kodvot = $this->input->post('kodvot');
+    $js_inden = $this->input->post('noinden');
+
 
     $data = array(
       'mrk_rujukanbank' => $mrk_rujukanbank,
       'mrk_namabank' => $mrk_namabank,
       'mrk_alamatbank' => $mrk_alamatbank,
-      'mrk_tarikhmulatanggung' => $mrk_tarikhmulatanggung,
-      'mrk_tarikhluputtanggung' => $mrk_tarikhluputtanggung,
-      'mrk_namajurutera' => $mrk_namajurutera,
-      'mrk_jawatanjuru' => $mrk_jawatanjuru,
-      'mrk_namapem' => $mrk_namapem,
-      'mrk_alamatpem' => $mrk_alamatpem
+      'js_mrkid' => $js_mrkid,
+      'js_kodvot' => $js_kodvot,
+      'js_inden' => $js_inden
+
+
+
     );
 
     return $this->db->insert('mrk_jaminanbank', $data);
@@ -445,7 +445,21 @@ class Mrk_model extends CI_Model{
 
   public function get_projectdetailforJB($id)
   {
-    
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiapbaikicacat','mrk_perakuansiapbaikicacat.mrkid_id =mrk_satu.mrksatuid ','left');
+    $this->db->join('mrk_jaminanbank','mrk_jaminanbank.js_mrkid=mrk_satu.mrksatuid','left');
+
+
+    $this->db->where('dp_projek.id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
   }
 
 
@@ -482,6 +496,13 @@ class Mrk_model extends CI_Model{
   public function getLastKodVodPSMK()
   {
     $KodVod = $this->db->select('psmk_kodvots')->order_by('psmk_kodvots','desc')->limit(1)->get('mrk_perakuansiapbaikicacat')->row('psmk_kodvots');
+
+    return $KodVod; //return last id
+  }
+
+  public function getLastKodVodJB()
+  {
+    $KodVod = $this->db->select('js_kodvot')->order_by('js_kodvot','desc')->limit(1)->get('mrk_jaminanbank')->row('js_kodvot');
 
     return $KodVod; //return last id
   }
