@@ -85,6 +85,25 @@ class Surat extends CI_Controller
 
   }
 
+  public function Letter_DTS()
+  {
+    $this->load->view('template/header');
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/letter_dts');
+    $this->load->view('template/footer');
+  }
+
+  public function SuratMRK_DTS()
+  {
+    $this->load->database();
+
+    $this->load->view('template/header');
+    $this->load->view('template/sidebar');
+    $data['get_suratmrk']=$this->Surat_model->get_suratmrkview();
+    $this->load->view('pages/suratmrk_dts');
+    $this->load->view('template/footer');
+  }
+
 
 }
 

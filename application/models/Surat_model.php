@@ -104,6 +104,16 @@ class Surat_model extends CI_Model{
   	return $this->db->insert('mrk_suratwjp', $data);
   }
 
+  public function get_suratmrkview()
+  {
+
+    $this->db->select('*');
+    $this->db->from('mrk_suratmrk');
+    
+    $query = $this->db->get();
+    return $query->result();
+  }
+
 
 
 
