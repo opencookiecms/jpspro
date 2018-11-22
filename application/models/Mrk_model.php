@@ -462,6 +462,25 @@ class Mrk_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_projectdetailforPPWJP($id)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiapbaikicacat','mrk_perakuansiapbaikicacat.mrkid_id =mrk_satu.mrksatuid ','left');
+    $this->db->join('mrk_jaminanbank','mrk_jaminanbank.js_mrkid=mrk_satu.mrksatuid','left');
+
+
+    $this->db->where('dp_projek.id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -733,6 +752,34 @@ class Mrk_model extends CI_Model{
     $this->db->where('mrkid_id', $update);
 
     $this->db->update('mrk_perakuansiapbaikicacat', $data);
+  }
+
+  public function JBupdate($data, $update)
+  {
+    $this->load->helper('url');
+    $mrk_rujukanbank = $this->input->post('rujukbank');
+    $mrk_namabank = $this->input->post('namabank');
+    $mrk_alamatbank = $this->input->post('alamatbank');
+    $js_mrkid = $this->input->post('hiddenid');
+    $js_kodvot = $this->input->post('kodvot');
+    $js_inden = $this->input->post('noinden');
+
+
+    $data = array(
+      'mrk_rujukanbank' => $mrk_rujukanbank,
+      'mrk_namabank' => $mrk_namabank,
+      'mrk_alamatbank' => $mrk_alamatbank,
+      'js_mrkid' => $js_mrkid,
+      'js_kodvot' => $js_kodvot,
+      'js_inden' => $js_inden
+
+
+
+    );
+
+    $this->db->where('js_mrkid', $update);
+
+    $this->db->update('mrk_jaminanbank', $data);
   }
 
 

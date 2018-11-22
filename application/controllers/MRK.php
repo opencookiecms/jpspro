@@ -181,7 +181,8 @@ class MRK extends CI_Controller{
 	}
 
 
-		public function Jaminan_Bank($value=""){
+		public function Jaminan_Bank($value="")
+		{
 
 			$this->load->database();
 		  $data['get_detail']=$this->Mrk_model->get_projectdetailforJB($value);
@@ -200,6 +201,29 @@ class MRK extends CI_Controller{
 				$KodVod=$this->Mrk_model->getLastKodVodJB();
 				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 			}
+		}
+
+		public function PP_WJP($value="")
+		{
+			$this->load->database();
+		  $data['get_detail']=$this->Mrk_model->get_projectdetailforPPWJP($value);
+			$this->form_validation->set_rules('rujukbank', 'Rujukan Bank', 'required');
+
+			if($this->form_validation->run()== FALSE)
+			{
+				$this->load->view('template/header');
+				$this->load->view('template/sidebar');
+				$this->load->view('pages/PP_WJP',$data);
+				$this->load->view('template/footer');
+			}
+			else
+			{
+				$this->Mrk_model->create_ppwjp();
+				$KodVod=$this->Mrk_model->getLastKodVodPPWJP();
+				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			}
+
+
 		}
 
 
@@ -327,7 +351,22 @@ class MRK extends CI_Controller{
 
 	public function JB_Update()
 	{
-		
+		$this->load->database();
+		$this->form_validation->set_rules('rujukbank', 'Rujukan Bank', 'required');
+
+		if($this->form_validation->run() == FALSE)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/JBank');
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Mrk_model->JBupdate($data, $this->input->post('hiddenid'));
+			$KodVod=$this->Mrk_model->getLastKodVodJB();
+			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+		}
 	}
 
 
@@ -350,15 +389,7 @@ class MRK extends CI_Controller{
 
 
 
-	public function pulangwang()
-	{
 
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('pages/pulangwang');
-		$this->load->view('template/footer');
-
-	}
 
 	public function try($value="")
 	{
