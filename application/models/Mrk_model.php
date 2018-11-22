@@ -328,6 +328,35 @@ class Mrk_model extends CI_Model{
     return $this->db->insert('mrk_jaminanbank', $data);
   }
 
+  public function create_ppwjp()
+  {
+    $ppwjp_rt = $this->input->post('rujuktuan');
+    $ppwjp_rk = $this->input->post('rujukkami');
+    $ppwjp_kepada = $this->input->post('kepada');
+    $ppwjp_alamat = $this->input->post('alamat');
+    $ppwjp_kos = $this->input->post('koswjp');
+    $ppwjp_pegawai = $this->input->post('pegawaikuasa');
+    $ppwjp_jawatan = $this->input->post('jawatan');
+    $ppwjp_mrkid = $this->input->post('hiddenid');
+    $ppwjp_inden = $this->input->post('indenno');
+    $ppwjp_kodvot = $this->input->post('kodvot');
+
+    $data = array(
+      'ppwjp_rt' => $ppwjp_rt,
+      'ppwjp_rk' => $ppwjp_rk,
+      'ppwjp_kepada' => $ppwjp_kepada,
+      'ppwjp_alamat' => $ppwjp_alamat,
+      'ppwjp_kos' => $ppwjp_kos,
+      'ppwjp_pegawai' => $ppwjp_pegawai,
+      'ppwjp_jawatan' => $ppwjp_jawatan,
+      'ppwjp_mrkid' => $ppwjp_mrkid,
+      'ppwjp_inden' => $ppwjp_inden,
+      'ppwjp_kodvot' => $ppwjp_kodvot
+    );
+
+    return $this->db->insert('mrk_ppwjp', $data);
+  }
+
 
   public function get_rekodview()
   {
@@ -473,6 +502,7 @@ class Mrk_model extends CI_Model{
     $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_perakuansiapbaikicacat','mrk_perakuansiapbaikicacat.mrkid_id =mrk_satu.mrksatuid ','left');
     $this->db->join('mrk_jaminanbank','mrk_jaminanbank.js_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('mrk_ppwjp','mrk_ppwjp.ppwjp_mrkid=mrk_satu.mrksatuid','left');
 
 
     $this->db->where('dp_projek.id', $id);
@@ -525,6 +555,15 @@ class Mrk_model extends CI_Model{
 
     return $KodVod; //return last id
   }
+
+  public function getLastKodVodPPWJP()
+  {
+    $KodVod = $this->db->select('ppwjp_kodvot')->order_by('ppwjp_kodvot	','desc')->limit(1)->get('mrk_ppwjp')->row('ppwjp_kodvot');
+
+    return $KodVod; //return last id
+  }
+
+
 
 
 
@@ -780,6 +819,36 @@ class Mrk_model extends CI_Model{
     $this->db->where('js_mrkid', $update);
 
     $this->db->update('mrk_jaminanbank', $data);
+  }
+
+  public function PPWJPupdate($data, $update)
+  {
+    $ppwjp_rt = $this->input->post('rujuktuan');
+    $ppwjp_rk = $this->input->post('rujukkami');
+    $ppwjp_kepada = $this->input->post('kepada');
+    $ppwjp_alamat = $this->input->post('alamat');
+    $ppwjp_kos = $this->input->post('koswjp');
+    $ppwjp_pegawai = $this->input->post('pegawaikuasa');
+    $ppwjp_jawatan = $this->input->post('jawatan');
+    $ppwjp_mrkid = $this->input->post('hiddenid');
+    $ppwjp_inden = $this->input->post('indenno');
+    $ppwjp_kodvot = $this->input->post('kodvot');
+
+    $data = array(
+      'ppwjp_rt' => $ppwjp_rt,
+      'ppwjp_rk' => $ppwjp_rk,
+      'ppwjp_kepada' => $ppwjp_kepada,
+      'ppwjp_alamat' => $ppwjp_alamat,
+      'ppwjp_kos' => $ppwjp_kos,
+      'ppwjp_pegawai' => $ppwjp_pegawai,
+      'ppwjp_jawatan' => $ppwjp_jawatan,
+      'ppwjp_mrkid' => $ppwjp_mrkid,
+      'ppwjp_inden' => $ppwjp_inden,
+      'ppwjp_kodvot' => $ppwjp_kodvot
+    );
+
+    $this->db->where('ppwjp_mrkid', $update);
+    $this->db->update('mrk_ppwjp',$data);
   }
 
 

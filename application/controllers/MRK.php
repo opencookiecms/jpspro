@@ -207,7 +207,7 @@ class MRK extends CI_Controller{
 		{
 			$this->load->database();
 		  $data['get_detail']=$this->Mrk_model->get_projectdetailforPPWJP($value);
-			$this->form_validation->set_rules('rujukbank', 'Rujukan Bank', 'required');
+			$this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
 
 			if($this->form_validation->run()== FALSE)
 			{
@@ -367,6 +367,28 @@ class MRK extends CI_Controller{
 			$KodVod=$this->Mrk_model->getLastKodVodJB();
 			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 		}
+	}
+
+	public function PPWJP_Update()
+	{
+		$this->load->database();
+		$this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
+
+		if($this->form_validation->run()== FALSE)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/PP_WJP');
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Mrk_model->PPWJPupdate($data, $this->input->post('hiddenid'));
+			$KodVod=$this->Mrk_model->getLastKodVodPPWJP();
+			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+		}
+
+
 	}
 
 

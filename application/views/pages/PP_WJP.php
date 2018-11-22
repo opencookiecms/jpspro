@@ -22,9 +22,19 @@
           } ?>
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
 
-        <?php echo validation_errors(); ?>
+          <?php echo validation_errors(); ?>
 
-          <?php echo form_open('mrk/jaminanbank'); ?>
+            <?php
+
+                $pkkNo = $get_detail[0]->ppwjp_kodvot;
+                  if($pkkNo == null){
+                      echo form_open('mrk/PP_WJP');
+                  }
+                  else {
+                    echo form_open('mrk/PPWJP_Update');
+                  }
+
+            ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">PERAKUAN PEMULANGAN WANG JAMINAN PERLAKSANAAN</h3>
@@ -35,13 +45,13 @@
                   <label class="col-sm-2">Rujukan Tuan</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan">
+                    <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->ppwjp_rt?>">
                   </div>
 
                   <label class="col-sm-3">Nama Pemborong</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="namaborong" name="namaborong">
+                    <input type="text" class="form-control" id="namaborong" name="namaborong" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
                   </div>
                 </div>
 
@@ -52,13 +62,13 @@
                   <label class="col-sm-2">Rujukan Kami</label>
 
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami">
+                    <input type="text" class="form-control" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami" value="<?php echo $get_detail[0]->ppwjp_rk?>">
                   </div>
 
                   <label class="col-sm-3">No Kontrak</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="nokon" name="nokon">
+                    <input type="text" class="form-control" id="nokon" name="nokon" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                   </div>
                 </div>
               </div>
@@ -69,13 +79,16 @@
                   <label class="col-sm-1">Kepada</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="kepada" name="kepada" placeholder="Kepada">
+                    <input type="text" class="form-control" id="kepada" name="kepada" placeholder="Kepada" value="<?php echo $get_detail[0]->ppwjp_kepada?>">
                   </div>
 
                   <label class="col-sm-1">Kos WJP</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="koswjp" name="koswjp" placeholder="Kos WJP">
+                    <input type="text" class="form-control" id="koswjp" name="koswjp" placeholder="Kos WJP" value="<?php echo $get_detail[0]->ppwjp_kos?>">
+                    <input type="hidden" name="indenno" value="<?php echo $get_detail[0]->mrk_noinden?>">
+                      <input type="hidden" name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>">
+                        <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
                   </div>
                  </div>
               </div>
@@ -87,9 +100,9 @@
                   <label class="col-sm-1">Alamat</label>
 
                   <div class="col-sm-4">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->ppwjp_alamat?></textarea>
                   </div>
-                
+
                   <label class="col-sm-2">Pegawai Penguasa</label>
 
                   <div class="col-sm-2">
@@ -130,17 +143,17 @@
                   <label class="col-sm-1">Tajuk Kerja</label>
 
                   <div class="col-sm-6">
-                    <textarea type="text" class="form-control" id="alamatborong" name="alamatborong" placeholder="Alamat Pemborong"></textarea>
+                    <textarea type="text" class="form-control" id="alamatborong" name="alamatborong" placeholder="Alamat Pemborong" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                   </div>
                 </div>
               </div>
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo base_url('surat') ?>" class="btn btn-info" role="button">Surat</a>
+                <a href="<?php echo base_url('surat') ?>" class="btn btn-info" role="button">Preview</a>
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 

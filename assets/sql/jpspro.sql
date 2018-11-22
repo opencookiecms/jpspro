@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2018 at 09:03 AM
+-- Generation Time: Nov 22, 2018 at 04:17 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -167,7 +167,7 @@ CREATE TABLE `mrk_jaminanbank` (
 --
 
 INSERT INTO `mrk_jaminanbank` (`id`, `mrk_rujukanbank`, `mrk_namabank`, `mrk_alamatbank`, `js_mrkid`, `js_kodvot`, `js_inden`) VALUES
-(2, 'RHB0021/2123', 'RHB BANK', 'TAMAN EMAS', 18, 'JPS0001922', '0002991882');
+(2, 'RHB0021/2123', 'RHB BANK', 'TAMAN EMAS LUBUK', 18, 'JPS0001922', '0002991882');
 
 -- --------------------------------------------------------
 
@@ -279,6 +279,13 @@ CREATE TABLE `mrk_ppwjp` (
   `ppwjp_kodvot` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `mrk_ppwjp`
+--
+
+INSERT INTO `mrk_ppwjp` (`ppwjp_id`, `ppwjp_rt`, `ppwjp_rk`, `ppwjp_kepada`, `ppwjp_alamat`, `ppwjp_kos`, `ppwjp_pegawai`, `ppwjp_jawatan`, `ppwjp_mrkid`, `ppwjp_inden`, `ppwjp_kodvot`) VALUES
+(1, 'JPS/22/22/23312', 'JPS/22/22/23312', 'BANK NEGARA', 'DAMANSARA, KUALA LUMPUR', '37999', 'Idris Bin Yussof', 'Penolong Jurutera JA29', 18, '0002991882', 'JPS0001922');
+
 -- --------------------------------------------------------
 
 --
@@ -355,7 +362,10 @@ CREATE TABLE `mrk_ss` (
 INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, `cb8`, `cb9`, `cb10`, `cb11`, `cb12`, `cb13`, `cb14`, `cb15`, `cb16`, `cb17`, `cb18`, `ss_inden`, `ss_mrkid`, `ss_nosebuthaga`, `ss_disediakan`, `ss_date`) VALUES
 (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -364,17 +374,20 @@ INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, 
 --
 
 CREATE TABLE `mrk_suratkhas` (
-  `id` int(11) NOT NULL,
-  `mrk_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_nosebutharga` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_tajukkerja` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_gred` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mek_kategori` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_khusus` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL
+  `skhas_id` int(11) NOT NULL,
+  `skhas_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `skhas_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `skhas_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `skhas_nosebutharga` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `skhas_tajukkerja` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `skhas_gred` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `skhas_kategori` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `skhas_khusus` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `skhas_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `skhas_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `skhas_inden` varchar(150) DEFAULT NULL,
+  `skhas_kodvot` varchar(150) DEFAULT NULL,
+  `skhas_mrkid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -385,16 +398,18 @@ CREATE TABLE `mrk_suratkhas` (
 
 CREATE TABLE `mrk_suratmrk` (
   `id` int(11) NOT NULL,
-  `mrk_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_tarikhtuan` date DEFAULT NULL,
-  `mrk_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_jenisborang` varchar(11) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_nokon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_noinden` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_nosebutharga` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL
+  `s_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `s_tarikhtuan` date DEFAULT NULL,
+  `s_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `s_jenisborang` varchar(11) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `s_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `s_nokon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `s_noinden` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `s_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `s_nosebutharga` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `s_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `s_mrkid` int(11) DEFAULT NULL,
+  `s_kodvot` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -405,17 +420,20 @@ CREATE TABLE `mrk_suratmrk` (
 
 CREATE TABLE `mrk_suratwjp` (
   `id` int(11) NOT NULL,
-  `mrk_kepada` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_alamat` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_nokon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `mrk_melalui` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_wangjamin` decimal(10,0) DEFAULT NULL,
-  `mrk_alamatlalu` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `mrk_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL
+  `swjp_kepada` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_alamat` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_nokon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_melalui` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_wangjamin` decimal(10,0) DEFAULT NULL,
+  `swjp_alamatlalu` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `swjp_inden` varchar(150) DEFAULT NULL,
+  `swjp_kodvot` varchar(150) DEFAULT NULL,
+  `swjp_mrkid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -505,7 +523,7 @@ ALTER TABLE `mrk_ss`
 -- Indexes for table `mrk_suratkhas`
 --
 ALTER TABLE `mrk_suratkhas`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`skhas_id`);
 
 --
 -- Indexes for table `mrk_suratmrk`
@@ -581,7 +599,7 @@ ALTER TABLE `mrk_perakuansiapbaikicacat`
 -- AUTO_INCREMENT for table `mrk_ppwjp`
 --
 ALTER TABLE `mrk_ppwjp`
-  MODIFY `ppwjp_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ppwjp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `mrk_satu`
@@ -593,13 +611,13 @@ ALTER TABLE `mrk_satu`
 -- AUTO_INCREMENT for table `mrk_ss`
 --
 ALTER TABLE `mrk_ss`
-  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratkhas`
 --
 ALTER TABLE `mrk_suratkhas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `skhas_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratmrk`

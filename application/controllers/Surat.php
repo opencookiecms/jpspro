@@ -10,18 +10,18 @@ class Surat extends CI_Controller
     parent::__construct();
 
     $this->load->model('Surat_model');
-    
+
   }
 
   public function index()
   {
     $this->load->view('template/header');
     $this->load->view('template/sidebar');
-    $this->load->view('pages/surat');
+    $this->load->view('pages/Letter');
     $this->load->view('template/footer');
   }
 
-  public function suratmrk()
+  public function Surat_MRK()
   {
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
     $this->form_validation->set_rules('rujukkami', 'Rujukan Kami', 'required');
@@ -30,7 +30,7 @@ class Surat extends CI_Controller
     {
       $this->load->view('template/header');
       $this->load->view('template/sidebar');
-      $this->load->view('pages/suratmrk');
+      $this->load->view('pages/SMRK');
       $this->load->view('template/footer');
     }
     else
@@ -39,10 +39,10 @@ class Surat extends CI_Controller
       redirect(base_url('surat/suratkebenaran'));
     }
 
-    
+
   }
 
-  public function suratkebenaran()
+  public function Surat_Khas()
   {
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
     $this->form_validation->set_rules('rujukkami' , 'Rujukan Kami', 'required');
@@ -52,7 +52,7 @@ class Surat extends CI_Controller
     {
       $this->load->view('template/header');
       $this->load->view('template/sidebar');
-      $this->load->view('pages/suratkebenaran');
+      $this->load->view('pages/SKHAS');
       $this->load->view('template/footer');
     }
     else
@@ -61,10 +61,10 @@ class Surat extends CI_Controller
       redirect(base_url('surat/suratwjp'));
     }
 
-    
+
   }
 
-  public function suratwjp()
+  public function Surat_WJP()
   {
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
     $this->form_validation->set_rules('rujukkami', 'Rujukan Kami', 'required');
@@ -73,7 +73,7 @@ class Surat extends CI_Controller
     {
       $this->load->view('template/header');
       $this->load->view('template/sidebar');
-      $this->load->view('pages/suratwjp');
+      $this->load->view('pages/SWJP');
       $this->load->view('template/footer');
     }
     else
@@ -82,7 +82,7 @@ class Surat extends CI_Controller
       redirect(base_url('surat'));
     }
 
-    
+
   }
 
 
