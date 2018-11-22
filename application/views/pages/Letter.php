@@ -26,7 +26,8 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('surat/Surat_MRK/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+
+            <a href="<?php echo site_url('surat/Surat_MRK/'.$get_detail[0]->dp_id) ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -41,7 +42,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('surat/Surat_Khas/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url('surat/Surat_Khas/'.$get_detail[0]->dp_id) ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -56,7 +57,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo site_url('surat/Surat_WJP/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url('surat/Surat_WJP/'.$get_detail[0]->dp_id) ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

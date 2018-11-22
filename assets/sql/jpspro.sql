@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2018 at 04:17 PM
+-- Generation Time: Nov 22, 2018 at 06:49 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -365,7 +365,11 @@ INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, 
 (3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -376,19 +380,19 @@ INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, 
 CREATE TABLE `mrk_suratkhas` (
   `skhas_id` int(11) NOT NULL,
   `skhas_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `skhas_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `skhas_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `skhas_nosebutharga` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `skhas_tajukkerja` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `skhas_gred` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `skhas_kategori` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `skhas_khusus` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `skhas_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `skhas_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `skhas_inden` varchar(150) DEFAULT NULL,
   `skhas_kodvot` varchar(150) DEFAULT NULL,
   `skhas_mrkid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mrk_suratkhas`
+--
+
+INSERT INTO `mrk_suratkhas` (`skhas_id`, `skhas_rujuktuan`, `skhas_pegawaikuasa`, `skhas_jawatanpp`, `skhas_inden`, `skhas_kodvot`, `skhas_mrkid`) VALUES
+(1, 'JPS/22/22/23312', 'Mohd. Amin B. Ahmad', 'Penolong Jurutera JA38', '0002991882', 'JPS0001922', 18);
 
 -- --------------------------------------------------------
 
@@ -400,17 +404,20 @@ CREATE TABLE `mrk_suratmrk` (
   `id` int(11) NOT NULL,
   `s_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `s_tarikhtuan` date DEFAULT NULL,
-  `s_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `s_jenisborang` varchar(11) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `s_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `s_nokon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `s_noinden` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `s_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `s_nosebutharga` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `s_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `s_mrkid` int(11) DEFAULT NULL,
   `s_kodvot` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mrk_suratmrk`
+--
+
+INSERT INTO `mrk_suratmrk` (`id`, `s_rujuktuan`, `s_tarikhtuan`, `s_jenisborang`, `s_noinden`, `s_pegawaikuasa`, `s_jawatanpp`, `s_mrkid`, `s_kodvot`) VALUES
+(3, 'JPS/22/22/23312', '2018-11-21', 'MRK 03', '0002991882', 'KIKI', 'IR', 18, 'JPS0001922');
 
 -- --------------------------------------------------------
 
@@ -423,9 +430,6 @@ CREATE TABLE `mrk_suratwjp` (
   `swjp_kepada` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `swjp_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `swjp_alamat` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `swjp_rujukkami` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `swjp_namakon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `swjp_nokon` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `swjp_melalui` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `swjp_wangjamin` decimal(10,0) DEFAULT NULL,
   `swjp_alamatlalu` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
@@ -435,6 +439,13 @@ CREATE TABLE `mrk_suratwjp` (
   `swjp_kodvot` varchar(150) DEFAULT NULL,
   `swjp_mrkid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mrk_suratwjp`
+--
+
+INSERT INTO `mrk_suratwjp` (`id`, `swjp_kepada`, `swjp_rujuktuan`, `swjp_alamat`, `swjp_melalui`, `swjp_wangjamin`, `swjp_alamatlalu`, `swjp_pegawaikuasa`, `swjp_jawatanpp`, `swjp_inden`, `swjp_kodvot`, `swjp_mrkid`) VALUES
+(1, 'BANK NEGARA MALAYSIA', 'JPS/22/22/23312', 'PERAK', 'KL', NULL, 'KUALA LUMPUR', 'KIKI', 'IR', '0002991882', 'JPS0001922', 18);
 
 -- --------------------------------------------------------
 
@@ -611,25 +622,25 @@ ALTER TABLE `mrk_satu`
 -- AUTO_INCREMENT for table `mrk_ss`
 --
 ALTER TABLE `mrk_ss`
-  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratkhas`
 --
 ALTER TABLE `mrk_suratkhas`
-  MODIFY `skhas_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `skhas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratmrk`
 --
 ALTER TABLE `mrk_suratmrk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratwjp`
 --
 ALTER TABLE `mrk_suratwjp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `mrk_tiga`

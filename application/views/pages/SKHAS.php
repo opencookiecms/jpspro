@@ -21,10 +21,19 @@
         <?php
           } ?>
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+          <?php echo validation_errors(); ?>
 
-        <?php echo validation_errors(); ?>
+            <?php
 
-          <?php echo form_open('surat/suratkebenaran'); ?>
+                $pkkNo = $get_detail[0]->skhas_kodvot;
+                  if($pkkNo == null){
+                      echo form_open('Surat/Surat_Khas');
+                  }
+                  else {
+                    echo form_open('Surat/Surat_Khas_Update');
+                  }
+
+            ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Surat Kebenaran Khas</h3>
@@ -35,13 +44,13 @@
                   <label class="col-sm-2">Rujukan Tuan</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan">
+                    <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->skhas_rujuktuan?>">
                   </div>
 
                   <label class="col-sm-2">Rujukan Kami</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami">
+                    <input type="text" class="form-control" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                   </div>
                 </div>
 
@@ -52,13 +61,16 @@
                   <label class="col-sm-2">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor">
+                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
                   </div>
 
                   <label class="col-sm-2">No Sebutharga</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nosebutharga" name="nosebutharga" placeholder="No Sebutharga">
+                    <input type="text" class="form-control" id="nosebutharga" name="nosebutharga" placeholder="No Sebutharga" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                          <input type="text"  name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>">
+                                <input type="text"  name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
+                                        <input type="text"  name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>">
                   </div>
                 </div>
               </div>
@@ -69,7 +81,7 @@
                   <label class="col-sm-2">Tajuk Projek</label>
 
                   <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="tajukprojek" name="tajukprojek" placeholder="Tajuk Projek"></textarea>
+                    <textarea type="text" class="form-control" id="tajukprojek" name="tajukprojek" placeholder="Tajuk Projek" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                   </div>
                 </div>
               </div>
@@ -82,6 +94,7 @@
 
                   <div class="col-sm-1">
                     <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
+                    <option value="<?php echo $get_detail[0]->mrk_gred?>"><?php echo $get_detail[0]->mrk_gred?></option>
                       <option value="G1 | Sehingga RM200,000.00">G1</option>
                       <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2</option>
                       <option value="G3 | RM500,001.00 Hingga RM1 000,000.00">G3</option>
@@ -95,7 +108,9 @@
                   <label class="col-sm-1">Kategori</label>
 
                   <div class="col-sm-1">
+
                     <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
+                  <option value="<?php echo $get_detail[0]->mrk_kategori?>"><?php echo $get_detail[0]->mrk_kategori?></option>
                       <option value="CE | Pembinaan Kejuruteraan Awam">CE</option>
                       <option value="B | Pembinaan Bangunan">B</option>
                       <option value="ME | Mekanikal & Elektrikal">ME</option>
@@ -105,7 +120,9 @@
                   <label class="col-sm-2">Pengkhususan</label>
 
                   <div class="col-sm-4">
+
                     <select type="text" class="form-control" id="khusus" name="khusus" placeholder="kat">
+                          <option value="<?php echo $get_detail[0]->mrk_khusus?>"><?php echo $get_detail[0]->mrk_khusus?></option>
                       <option value="CE 02 | Pembinaan Jambatan & Jeti">CE 02 | Pembinaan Jambatan & Jeti</option>
                       <option value="CE 04 | Empangan">CE 04 | Empangan</option>
                       <option value="CE 06 | Struktur saliran, pengairan dan kawalan banjir">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
@@ -147,6 +164,7 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="pegawaikuasa" name="pegawaikuasa">
+                          <option value="<?php echo $get_detail[0]->skhas_pegawaikuasa?>"><?php echo $get_detail[0]->skhas_pegawaikuasa?></option>
                       <option value="Idris Bin Yussof">Idris Bin Yussof</option>
                       <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
                       <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
@@ -174,6 +192,7 @@
 
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="jawatan" name="jawatan">
+                        <option value="<?php echo $get_detail[0]->skhas_jawatanpp?>"><?php echo $get_detail[0]->skhas_jawatanpp?></option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
@@ -190,7 +209,7 @@
                 <a href="<?php echo base_url('surat') ?>" class="btn btn-info" role="button">Surat</a>
               </div>
             </div>
-          </form>  
+          </form>
         </div>
       </div><!--end of row-->
 
