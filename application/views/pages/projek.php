@@ -40,13 +40,14 @@
                 <?php foreach ($get_projek as $row): ?>
 
                  <tr>
-                  <td><?php echo $row->id?></td>
+                  <td><?php echo $row->projek_id?></td>
                   <td><a href="<?php echo site_url('projek/view_data/'.$row->df_kodvot); ?>" ><?php echo $row->df_kodvot?></a></td> <!--Show data in list view-->
                   <td><?php echo $row->df_nosebutharga?></td>
                   <td><?php echo $row->df_tarikmohon?></td>
                   <td><?php echo $row->df_jsebutharga?></td>
                   <td><?php echo $row->df_tajuk?></td>
-                  <td><a href="<?php echo site_url("projek/delete/" . $row->id); ?>" class="btn btn-info" role="button" onclick="return confirm('Delete Data?')"">DELETE</a></td>
+                  <td><a href="<?php echo site_url("projek/delete/" . $row->projek_id); ?>" class="btn btn-info" role="button" onclick="return confirm('Delete Data?')">DELETE</a>
+                  <a href="<?php echo site_url("projek/Update_Projek01/" . $row->projek_id); ?>" class="btn btn-warning" role="button" onclick="return confirm('Delete Data?')">UPDATE</a></td>
                 </tr>
 
               <?php endforeach; ?>

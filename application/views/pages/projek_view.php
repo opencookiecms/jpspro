@@ -55,7 +55,7 @@
                       <td><a href="<?php echo site_url('mrk/MRK_PSMK/'.$rowdetail->dp_id); ?>">PSMK</a></td>
                       <td><a href="<?php echo site_url('mrk/Jaminan_Bank/'.$rowdetail->dp_id); ?>">PJM</a></td>
                       <td><a href="<?php echo site_url('mrk/PP_WJP/'.$rowdetail->dp_id); ?>">PPW</a></td>
-                      <td><a href="<?php echo site_url('surat'); ?>">Surat</a></td>
+                      <td><a href="<?php echo site_url('Surat/letter_board/'.$rowdetail->dp_id); ?>">Surat</a></td>
                     </tr>
 
                    <?php endforeach; ?>

@@ -36,6 +36,68 @@ class Projek extends CI_Controller
    $this->load->view('template/footer');
   }
 
+  public function Update_Projek01($value="")
+  {
+    $this->load->database();
+    $data['get_detail']=$this->Projek_model->get_updateprojek($value);
+
+    if($this->form_validation->run() == FALSE)
+    {
+      $this->load->view('template/header');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/ProjekUpdate01', $data);
+      $this->load->view('template/footer');
+    }
+    else {
+      $this->Mrk_model->create_mrksatu();//load from model and call last id
+			$KodVod=$this->Mrk_model->getLastKodVod();
+			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+    }
+
+  }
+
+  public function Update_Projek02($value="")
+  {
+    $this->load->database();
+    $data['get_detail']=$this->Projek_model->get_updateprojek($value);
+
+    if($this->form_validation->run() == FALSE)
+    {
+      $this->load->view('template/header');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/ProjekUpdate02', $data);
+      $this->load->view('template/footer');
+    }
+    else {
+      $this->Mrk_model->create_mrksatu();//load from model and call last id
+      $KodVod=$this->Mrk_model->getLastKodVod();
+      redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+    }
+
+  }
+
+
+  public function Update_Projek03($value="")
+  {
+    $this->load->database();
+    $data['get_detail']=$this->Projek_model->get_updateprojek($value);
+
+    if($this->form_validation->run() == FALSE)
+    {
+      $this->load->view('template/header');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/ProjekUpdate03', $data);
+      $this->load->view('template/footer');
+    }
+    else {
+      $this->Mrk_model->create_mrksatu();//load from model and call last id
+			$KodVod=$this->Mrk_model->getLastKodVod();
+			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+    }
+
+  }
+
+
 
  public function daftar_view()
  {
