@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2018 at 06:49 PM
+-- Generation Time: Nov 22, 2018 at 07:40 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `dp_gps` (
-  `id` int(11) NOT NULL,
+  `gps_id` int(11) NOT NULL,
   `dp_lata` int(11) DEFAULT NULL,
   `dp_latb` int(11) DEFAULT NULL,
   `dp_latc` int(11) DEFAULT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE `dp_gps` (
 -- Dumping data for table `dp_gps`
 --
 
-INSERT INTO `dp_gps` (`id`, `dp_lata`, `dp_latb`, `dp_latc`, `dp_longa`, `dp_longb`, `dp_longc`, `dp_sungai`, `dp_sistem`, `dp_subsistem`, `dp_komponen`, `dp_dimensi`, `dp_id`) VALUES
+INSERT INTO `dp_gps` (`gps_id`, `dp_lata`, `dp_latb`, `dp_latc`, `dp_longa`, `dp_longb`, `dp_longc`, `dp_sungai`, `dp_sistem`, `dp_subsistem`, `dp_komponen`, `dp_dimensi`, `dp_id`) VALUES
 (11, 3, 3, 3, 3, 3, 3, 'SUNGAI', 'SISTEM', 'SUB', 'KOM', 'DIM', 20);
 
 -- --------------------------------------------------------
@@ -58,7 +58,7 @@ INSERT INTO `dp_gps` (`id`, `dp_lata`, `dp_latb`, `dp_latc`, `dp_longa`, `dp_lon
 --
 
 CREATE TABLE `dp_projek` (
-  `id` int(11) NOT NULL,
+  `projek_id` int(11) NOT NULL,
   `df_nosebutharga` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `df_tarikmohon` date DEFAULT NULL,
   `df_jsebutharga` varchar(255) COLLATE utf8_bin DEFAULT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE `dp_projek` (
 -- Dumping data for table `dp_projek`
 --
 
-INSERT INTO `dp_projek` (`id`, `df_nosebutharga`, `df_tarikmohon`, `df_jsebutharga`, `df_tajuk`, `df_daerah`) VALUES
+INSERT INTO `dp_projek` (`projek_id`, `df_nosebutharga`, `df_tarikmohon`, `df_jsebutharga`, `df_tajuk`, `df_daerah`) VALUES
 (20, 'JKL/ST/201888/OP/200', '2018-11-07', 'Lantikan Terus', 'PROTECTIVE FUNCTION ANALOG MULTIMETER', 'Kuala Muda');
 
 -- --------------------------------------------------------
@@ -80,7 +80,7 @@ INSERT INTO `dp_projek` (`id`, `df_nosebutharga`, `df_tarikmohon`, `df_jsebuthar
 --
 
 CREATE TABLE `dp_projekinfo` (
-  `id` int(11) NOT NULL,
+  `info_id` int(11) NOT NULL,
   `df_gred` varchar(10) COLLATE utf8_bin DEFAULT NULL,
   `df_kategori` varchar(10) COLLATE utf8_bin DEFAULT NULL,
   `df_khusus` varchar(10) COLLATE utf8_bin DEFAULT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE `dp_projekinfo` (
 -- Dumping data for table `dp_projekinfo`
 --
 
-INSERT INTO `dp_projekinfo` (`id`, `df_gred`, `df_kategori`, `df_khusus`, `df_taraf`, `df_tempohsiap`, `df_hargadoc`, `df_tarikhnotis`, `df_tarikhlawat`, `df_tarikhdocmula`, `df_tarikhdocakhir`, `df_tarikhtutup`, `df_juruterad`, `df_jurutera`, `df_penolongkanan`, `df_penolong`, `df_kodvot`, `df_peruntukan`, `df_bakiperuntukan`, `dp_id`) VALUES
+INSERT INTO `dp_projekinfo` (`info_id`, `df_gred`, `df_kategori`, `df_khusus`, `df_taraf`, `df_tempohsiap`, `df_hargadoc`, `df_tarikhnotis`, `df_tarikhlawat`, `df_tarikhdocmula`, `df_tarikhdocakhir`, `df_tarikhtutup`, `df_juruterad`, `df_jurutera`, `df_penolongkanan`, `df_penolong`, `df_kodvot`, `df_peruntukan`, `df_bakiperuntukan`, `dp_id`) VALUES
 (12, 'G3', 'B | Pembin', 'CE23', 'Bukan Bumi', '3', '10', '2018-11-21', '2018-11-21', '2018-11-21', '2018-11-21', '2018-11-21', 'Zainuddin bin Yusoff, AMP., BCK', 'Nurul', 'A.A', 'A.A', 'JPS0001922', 'persekutua', '20.00', 20);
 
 -- --------------------------------------------------------
@@ -468,19 +468,19 @@ CREATE TABLE `mrk_tiga` (
 -- Indexes for table `dp_gps`
 --
 ALTER TABLE `dp_gps`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`gps_id`);
 
 --
 -- Indexes for table `dp_projek`
 --
 ALTER TABLE `dp_projek`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`projek_id`);
 
 --
 -- Indexes for table `dp_projekinfo`
 --
 ALTER TABLE `dp_projekinfo`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`info_id`);
 
 --
 -- Indexes for table `mrk_dua`
@@ -562,19 +562,19 @@ ALTER TABLE `mrk_tiga`
 -- AUTO_INCREMENT for table `dp_gps`
 --
 ALTER TABLE `dp_gps`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `gps_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `dp_projek`
 --
 ALTER TABLE `dp_projek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `projek_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `dp_projekinfo`
 --
 ALTER TABLE `dp_projekinfo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `info_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `mrk_dua`
@@ -634,7 +634,7 @@ ALTER TABLE `mrk_suratkhas`
 -- AUTO_INCREMENT for table `mrk_suratmrk`
 --
 ALTER TABLE `mrk_suratmrk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratwjp`

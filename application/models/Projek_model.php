@@ -149,8 +149,8 @@ class Projek_model extends CI_Model{
     $this->db->from('dp_projek');
 
     //Tambah join 2 table.,.,
-    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
-    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.id');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
     $query = $this->db->get();
     return $query->result();
   }
@@ -164,12 +164,26 @@ class Projek_model extends CI_Model{
        $this->db->from('dp_projek');
 
        //Tambah join 2 table.,.,
-       $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
-       $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.id');
+       $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+       $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
        $this->db->where('dp_projekinfo.df_kodvot', $indenNo);
        $query = $this->db->get();
 
        return $query->result();
+  }
+
+  public function get_updateprojek($id)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+    $this->db->join('dp_gps','dp_gps.dp_id = dp_projek.projek_id','left');
+
+
+    $this->db->where('dp_projek.projek_id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
   }
 
 
