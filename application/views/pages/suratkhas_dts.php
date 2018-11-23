@@ -4,7 +4,7 @@
   <section class="content-header">
     <center>
       <h2>
-        Surat Maklumat Rekod Kerja
+        Surat Kebenaran Khas
       </h2>
     </center>
   </section>
@@ -18,7 +18,7 @@
 
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Surat Maklumat Rekod Kerja</h3>
+            <h3 class="box-title">Surat Kebenaran Khas</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -27,11 +27,10 @@
                 <tr>
                   <th>Bil</th>
                   <th>Rujukan Tuan</th>
-                  <th>Tarikh</th>
                   <th>Rujukan Kami</th>
-                  <th>Jenis Borang MRK</th>
                   <th>Nama Kontraktor</th>
-                  <th>No Kontraktor</th>
+                  <th>No Sebutharga</th>
+                  <th>Tajuk Kerja</th>
                   <th></th>
                 </tr>
               </thead>
@@ -41,18 +40,17 @@
                 <?php
                 $i = 1; 
 
-                foreach ($get_mrksurat as $row) {
+                foreach ($get_suratkhas as $row) {
                   
                   ?>
 
                  <tr>
-                  <td><?php echo $row->id?></td>
-                  <td><a href="#" ><?php echo $row->s_rujuktuan?></a></td> <!--Show data in list view-->
-                  <td><?php echo $row->s_tarikhtuan?></td>
-                  <td><?php echo $row->s_rujukkami?></td>
-                  <td><?php echo $row->s_jenisborang?></td>
-                  <td><?php echo $row->s_namakon?></td>
-                  <td><?php echo $row->s_nokon?></td>
+                  <td><?php echo $row->skhas_id?></td>
+                  <td><a href="#" ><?php echo $row->skhas_rujuktuan?></a></td> <!--Show data in list view-->
+                  <td><?php echo $row->skhas_rujukkami?></td>
+                  <td><?php echo $row->skhas_namakon?></td>
+                  <td><?php echo $row->skhas_nosebutharga?></td>
+                  <td><?php echo $row->skhas_tajukkerja?></td>
                   <td><button type="edit" name="view" class="btn btn-default">View</button>
                   <button type="delete" name="delete" class="btn btn-default">Delete</button></td>
                 </tr>

@@ -41,7 +41,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url('surat/suratkhas_dts/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -56,7 +56,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url('surat/suratwjp_dts/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

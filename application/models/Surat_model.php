@@ -6,6 +6,7 @@ class Surat_model extends CI_Model{
   public function __construct()
   {
      parent::__construct();
+     $this->load->database();
 
   }
 
@@ -105,7 +106,6 @@ class Surat_model extends CI_Model{
     $this->db->join('mrk_jaminanbank','mrk_jaminanbank.js_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('mrk_ppwjp','mrk_ppwjp.ppwjp_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('mrk_suratmrk', 'mrk_suratmrk.s_mrkid=mrk_satu.mrksatuid','left');
-
 
 
     $this->db->where('dp_projek.id', $id);
@@ -281,15 +281,24 @@ class Surat_model extends CI_Model{
   }
 
 
-
-
   public function get_suratmrkview()
   {
-
-    $this->db->select('*');
-    $this->db->from('mrk_suratmrk');
     
-    $query = $this->db->get();
+    $query = $this->db->get('mrk_suratmrk');
+    return $query->result();
+  }
+
+  public function get_suratkhasview()
+  {
+    
+    $query = $this->db->get('mrk_suratkhas');
+    return $query->result();
+  }
+
+  public function get_suratwjpview()
+  {
+    
+    $query = $this->db->get('mrk_suratwjp');
     return $query->result();
   }
 
