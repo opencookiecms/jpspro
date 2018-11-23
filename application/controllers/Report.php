@@ -10,9 +10,10 @@ class Report extends CI_Controller{
 
   }
 
-  public function Report_MRK_01()
+  public function Report_MRK_01($value="")
   {
-    $this->load->view('print/MRK01_Report');
+  	$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
+    $this->load->view('webprint/MRK01P',$data);
   }
 
   public function Report_MRK_02()
@@ -22,7 +23,7 @@ class Report extends CI_Controller{
 
   public function Report_LSK()
   {
-    $this->load->view('print/LSK_Report');
+    $this->load->view('webprint/LSKP');
   }
 
   public function Report_MRK_03()
