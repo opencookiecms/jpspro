@@ -3,7 +3,7 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META http-equiv="X-UA-Compatible" content="IE=8">
-<TITLE>bcl_271490220.htm</TITLE>
+<TITLE>Borang  MRK 01</TITLE>
 <META name="generator" content="BCL easyConverter SDK 5.0.140">
 <STYLE type="text/css">
 
@@ -100,7 +100,7 @@ body {margin-top: 0px;margin-left: 0px;}
 
 
 <DIV id="id1_1">
-<P class="p0 ft0">BORANG MRK O1</P>
+<P class="p0 ft0">BORANG MRK 01</P>
 <P class="p1 ft1">UNTUK DIISI SEMASA PERMULAAN PROJEK</P>
 <P class="p2 ft2">( SILA ISI BAHAGIAN A SAHAJA )</P>
 <P class="p3 ft3">BAHAGIAN A</P>
@@ -109,26 +109,26 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr0 td0"><P class="p5 ft6">2.</P></TD>
 	<TD class="tr0 td1"><P class="p6 ft2">NAMA KONTRAKTOR</P></TD>
-	<TD class="tr0 td2"><P class="p7 ft2">RB MAW<SPAN class="ft3">A</SPAN>R EN<SPAN class="ft3">T</SPAN>ERP<SPAN class="ft3">RIS</SPAN>E</P></TD>
+	<TD class="tr0 td2"><P class="p7 ft2"><SPAN class="ft3"><?php echo $get_detail[0]->mrk_namakon?></SPAN></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p7 ft6">3.</P></TD>
 	<TD class="tr1 td1"><P class="p6 ft2">NO. KONTRAK</P></TD>
-	<TD class="tr1 td2"><P class="p7 ft2"><NOBR><SPAN class="ft3">J</SPAN>PS.<SPAN class="ft3">KMS</SPAN>B(SH-KM<SPAN class="ft3">)N/B</SPAN>/P/<SPAN class="ft3">1</SPAN>6<SPAN class="ft3">/20</SPAN>12</NOBR></P></TD>
+	<TD class="tr1 td2"><P class="p7 ft2"><SPAN class="ft3"><?php echo $get_detail[0]->mrk_nokontrak?></SPAN></P></TD>
 </TR>
 </TABLE>
-<P class="p8 ft2"><SPAN class="ft6">4.</SPAN><SPAN class="ft7">NO. INDEN / PESANAN TEMPATAN : l </SPAN><SPAN class="ft3">1</SPAN>20<SPAN class="ft3">22</SPAN>00<SPAN class="ft3">00</SPAN>013</P>
-<P class="p9 ft9"><SPAN class="ft6">5.</SPAN><SPAN class="ft8">TAJUK </SPAN><NOBR><SPAN class="ft2">KERJA :</SPAN>KERJA-KERJA</NOBR> MENEBAS, MENCUCI, MEMBUANG SAMPAH SARAP, REBA KAYU SERTA <NOBR>LAIN-LAIN</NOBR> KERJA BERKAITAN DI <NOBR>KEDUA-DUA</NOBR> CERUN SISI SEPANJANG PARIT/ALOR/SUNGAI, SKIM SALIRAN TERKAWAL BAN MERBOK, KUALA MUDA.</P>
+<P class="p8 ft2"><SPAN class="ft6">4.</SPAN><SPAN class="ft7">NO. INDEN / PESANAN TEMPATAN : </SPAN><SPAN class="ft3"><?php echo $get_detail[0]->mrk_noinden?></SPAN></P>
+<P class="p9 ft9"><SPAN class="ft6">5.</SPAN><SPAN class="ft8">TAJUK </SPAN><NOBR><SPAN class="ft2">KERJA : <?php echo $get_detail[0]->mrk_tajukkerja?></SPAN></P>
 <TABLE cellpadding=0 cellspacing=0 class="t1">
 <TR>
-	<TD class="tr2 td3"><P class="p7 ft2"><SPAN class="ft6">6. </SPAN>TEMPAT PROJEK Daerah: K<SPAN class="ft3">ua</SPAN>la <SPAN class="ft3">Mud</SPAN>a</P></TD>
-	<TD class="tr2 td4"><P class="p7 ft2">Negeri: K<SPAN class="ft3">ed</SPAN>ah</P></TD>
+	<TD class="tr2 td3"><P class="p7 ft2"><SPAN class="ft6">6. </SPAN>TEMPAT PROJEK Daerah: <SPAN class="ft3"><?php echo $get_detail[0]->mrk_daerah?></span></P></TD>
+	<TD class="tr2 td4"><P class="p7 ft2">Negeri: <SPAN class="ft3"> <?php echo $get_detail[0]->mrk_negeri?></P></TD>
 </TR>
 </TABLE>
-<P class="p10 ft2"><SPAN class="ft6">7.</SPAN><SPAN class="ft7">KOS PROJEK ( RM ) </SPAN><SPAN class="ft3">5</SPAN>6<SPAN class="ft3">,</SPAN>4<SPAN class="ft3">8</SPAN>0.92</P>
+<P class="p10 ft2"><SPAN class="ft6">7.</SPAN><SPAN class="ft7">KOS PROJEK ( RM ) </SPAN><SPAN class="ft3"><?php echo $get_detail[0]->mrk_kosprojek?></SPAN></P>
 <TABLE cellpadding=0 cellspacing=0 class="t2">
 <TR>
-	<TD class="tr2 td5"><P class="p7 ft2"><SPAN class="ft6">8. </SPAN>TARIKH MULA KONTRAK: <NOBR>26-02-2012</NOBR></P></TD>
+	<TD class="tr2 td5"><P class="p7 ft2"><SPAN class="ft6">8. </SPAN>TARIKH MULA KONTRAK: <?php echo $get_detail[0]->mrk_tarikhmulakon?></P></TD>
 	<TD class="tr2 td6"><P class="p7 ft10">( Tarikh Milik Tapak )</P></TD>
 </TR>
 </TABLE>
