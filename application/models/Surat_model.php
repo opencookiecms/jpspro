@@ -97,7 +97,7 @@ class Surat_model extends CI_Model{
   {
     $this->db->select('*');
     $this->db->from('dp_projek');
-    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
     $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
     $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
@@ -108,7 +108,7 @@ class Surat_model extends CI_Model{
     $this->db->join('mrk_suratmrk', 'mrk_suratmrk.s_mrkid=mrk_satu.mrksatuid','left');
 
 
-    $this->db->where('dp_projek.id', $id);
+    $this->db->where('dp_projek.projek_id', $id);
     $query = $this->db->get();
 
     return $query->result();
@@ -118,7 +118,7 @@ class Surat_model extends CI_Model{
   {
     $this->db->select('*');
     $this->db->from('dp_projek');
-    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
     $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
     $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
@@ -131,7 +131,7 @@ class Surat_model extends CI_Model{
 
 
 
-    $this->db->where('dp_projek.id', $id);
+    $this->db->where('dp_projek.projek_id', $id);
     $query = $this->db->get();
 
     return $query->result();
@@ -141,7 +141,7 @@ class Surat_model extends CI_Model{
   {
     $this->db->select('*');
     $this->db->from('dp_projek');
-    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.id');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
     $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
     $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
@@ -155,7 +155,7 @@ class Surat_model extends CI_Model{
 
 
 
-    $this->db->where('dp_projek.id', $id);
+    $this->db->where('dp_projek.projek_id', $id);
     $query = $this->db->get();
 
     return $query->result();
@@ -283,21 +283,21 @@ class Surat_model extends CI_Model{
 
   public function get_suratmrkview()
   {
-    
+
     $query = $this->db->get('mrk_suratmrk');
     return $query->result();
   }
 
   public function get_suratkhasview()
   {
-    
+
     $query = $this->db->get('mrk_suratkhas');
     return $query->result();
   }
 
   public function get_suratwjpview()
   {
-    
+
     $query = $this->db->get('mrk_suratwjp');
     return $query->result();
   }
