@@ -34,56 +34,56 @@ class Report extends CI_Controller{
 
   public function Report_PSK_01()
   {
-    $this->load->view('print/PSKA_Report');
+    $this->load->view('webprint/PSK01P');
   }
 
   public function Report_PSK_02()
   {
-    $this->load->view('print/PSKB_Report');
+    $this->load->view('webprint/PSK02P');
   }
 
   public function Report_SS()
   {
-    $this->load->view('print/SSC_Report');
+    $this->load->view('webprint/CLP');
   }
 
   public function Report_PSMK()
   {
-
+      $this->load->view('webprint/PSMKP');
   }
 
   public function Report_PJB()
   {
-
+      $this->load->view('webprint/JBP');
   }
 
   public function Report_Pemulangan_WJB()
   {
-
+    $this->load->view('webprint/WJPP');
   }
 
   public function Report_PKK01()
   {
-
+    $this->load->view('webprint/SPKK01');
   }
 
   public function Report_PKK02()
   {
-
+    $this->load->view('webprint/SPKK02');
   }
 
   public function Report_Khas01()
   {
-
+    $this->load->view('webprint/SKHAS01');
   }
 
   public function Report_Khas02()
   {
-
+    $this->load->view('webprint/SKHAS02');
   }
 
   public function Report_Cover_PWJP()
   {
-
+    $this->load->view('webprint/SWJP');
   }
 }
