@@ -3,7 +3,7 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META http-equiv="X-UA-Compatible" content="IE=8">
-<TITLE>bcl_527085953.htm</TITLE>
+<TITLE>Laporan Siap Kerja</TITLE>
 <META name="generator" content="BCL easyConverter SDK 5.0.140">
 <STYLE type="text/css">
 
@@ -115,9 +115,9 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr0 td0"><P class="p2 ft2">1</P></TD>
 	<TD class="tr0 td1"><P class="p3 ft1">Nama Pemborong</P></TD>
-	<TD colspan=2 class="tr0 td2"><P class="p4 ft3"><SPAN class="ft1">: </SPAN>DY TEGUH ENTERPRISE</P></TD>
+	<TD colspan=2 class="tr0 td2"><P class="p4 ft3"><SPAN class="ft1">: </SPAN><?php echo $get_detail[0]->mrk_namakon?></P></TD>
 	<TD class="tr0 td3"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD colspan=2 class="tr0 td4"><P class="p6 ft5">Gred :</P></TD>
+	<TD colspan=2 class="tr0 td4"><P class="p6 ft5">Gred : <?php echo $get_detail[0]->mrk_gred?></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p5 ft6">&nbsp;</P></TD>
@@ -157,33 +157,15 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr7 td0"><P class="p2 ft2">3</P></TD>
 	<TD class="tr7 td1"><P class="p3 ft1">Butir - Butir Kerja</P></TD>
-	<TD colspan=5 class="tr7 td15"><P class="p4 ft3"><SPAN class="ft1">: </SPAN><NOBR>KERJA-KERJA</NOBR> MENEBAS, MENCUCI <NOBR>CERUN-CERUN</NOBR> SISI SERTA</P></TD>
+	<TD colspan=5 class="tr7 td15"><P class="p4 ft3"><SPAN class="ft1">: </SPAN><?php echo $get_detail[0]->mrk_tajukkerja?></P></TD>
 </TR>
-<TR>
-	<TD class="tr3 td0"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr3 td1"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr3 td5"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD colspan=4 class="tr4 td16"><P class="p7 ft3">MERACUN SEPERTI ARAHAN PEGAWAI PENJAGA DI SKIM SUNGAI</P></TD>
-</TR>
-<TR>
-	<TD class="tr4 td0"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr4 td1"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr4 td5"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD colspan=4 class="tr5 td17"><P class="p7 ft8">GELAM DAN SKIM TANDOP PEKAN MERBOK, DAERAH KUALA MUDA,</P></TD>
-</TR>
-<TR>
-	<TD class="tr4 td0"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr4 td1"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr4 td5"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr5 td13"><P class="p7 ft3">KEDAH DARULAMAN.</P></TD>
-	<TD class="tr5 td14"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr5 td18"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr5 td19"><P class="p5 ft4">&nbsp;</P></TD>
-</TR>
+
+
+
 <TR>
 	<TD class="tr2 td0"><P class="p2 ft2">4</P></TD>
 	<TD class="tr2 td1"><P class="p3 ft1">Pesanan Kerja No.</P></TD>
-	<TD colspan=2 class="tr2 td2"><P class="p3 ft3"><SPAN class="ft1">: </SPAN>l 120220000011</P></TD>
+	<TD colspan=2 class="tr2 td2"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><?php echo $get_detail[0]->mrk_noinden?></P></TD>
 	<TD class="tr2 td3"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr2 td8"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr2 td10"><P class="p5 ft4">&nbsp;</P></TD>
@@ -197,7 +179,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr2 td0"><P class="p2 ft2">5</P></TD>
 	<TD class="tr2 td1"><P class="p3 ft1">Sebutharga No.</P></TD>
-	<TD colspan=5 class="tr2 td15"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><NOBR>JPS.KMSB(SH-KM)N/B/P/15/2012</NOBR></P></TD>
+	<TD colspan=5 class="tr2 td15"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><NOBR><?php echo $get_detail[0]->df_nosebutharga?></NOBR></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p5 ft6">&nbsp;</P></TD>
@@ -209,8 +191,8 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr2 td0"><P class="p2 ft2">6</P></TD>
 	<TD class="tr2 td1"><P class="p3 ft1">Insuran/Policy No.</P></TD>
-	<TD colspan=2 class="tr2 td2"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><SPAN class="ft5">WC- </SPAN><NOBR>561750008999-00</NOBR></P></TD>
-	<TD colspan=3 class="tr2 td22"><P class="p8 ft3"><SPAN class="ft5">PL - </SPAN><NOBR>561750008998-00</NOBR></P></TD>
+	<TD colspan=2 class="tr2 td2"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><SPAN class="ft5">WC- </SPAN><NOBR><?php echo $get_detail[0]->lsk_perkeso?></NOBR></P></TD>
+	<TD colspan=3 class="tr2 td22"><P class="p8 ft3"><SPAN class="ft5">PL - </SPAN><NOBR><?php echo $get_detail[0]->lsk_liability?></NOBR></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p5 ft6">&nbsp;</P></TD>
@@ -221,7 +203,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr2 td0"><P class="p2 ft2">7</P></TD>
 	<TD class="tr2 td1"><P class="p3 ft1">Peruntukan</P></TD>
-	<TD colspan=5 class="tr2 td15"><P class="p3 ft3"><SPAN class="ft1">: </SPAN>B16/016000/100000/109020/B0332202/G005000000000000</P></TD>
+	<TD colspan=5 class="tr2 td15"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><?php echo $get_detail[0]->lsk_peruntukan?></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p5 ft6">&nbsp;</P></TD>
@@ -233,8 +215,8 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr2 td0"><P class="p2 ft2">8</P></TD>
 	<TD class="tr2 td1"><P class="p3 ft1">Harga Pesanan</P></TD>
-	<TD colspan=2 class="tr2 td2"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><SPAN class="ft5">RM </SPAN>25,474.00</P></TD>
-	<TD colspan=3 class="tr2 td22"><P class="p5 ft5">Harga Sebenar RM: <SPAN class="ft3">36,109.27</SPAN></P></TD>
+	<TD colspan=2 class="tr2 td2"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><SPAN class="ft5">RM </SPAN><?php echo $get_detail[0]->mrk_kosprojek?></P></TD>
+	<TD colspan=3 class="tr2 td22"><P class="p5 ft5">Harga Sebenar RM: <SPAN class="ft3"><?php echo $get_detail[0]->mrk_kosprojek?></SPAN></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p5 ft6">&nbsp;</P></TD>
@@ -248,7 +230,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr2 td0"><P class="p2 ft2">9</P></TD>
 	<TD class="tr2 td1"><P class="p3 ft1">Tarikh Permulaan Kerja</P></TD>
-	<TD colspan=2 class="tr2 td2"><P class="p3 ft3"><SPAN class="ft9">: </SPAN><NOBR>26-02-2012</NOBR></P></TD>
+	<TD colspan=2 class="tr2 td2"><P class="p3 ft3"><SPAN class="ft9">: </SPAN><NOBR><?php echo $get_detail[0]->mrk_tarikhmulakon?></NOBR></P></TD>
 	<TD class="tr2 td3"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr2 td8"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr2 td10"><P class="p5 ft4">&nbsp;</P></TD>
@@ -265,7 +247,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr7 td0"><P class="p2 ft2">10</P></TD>
 	<TD class="tr7 td1"><P class="p3 ft1">Tarikh Kerja Tamat</P></TD>
-	<TD colspan=2 class="tr7 td2"><P class="p3 ft3"><SPAN class="ft10">: </SPAN><NOBR>25-03-2012</NOBR></P></TD>
+	<TD colspan=2 class="tr7 td2"><P class="p3 ft3"><SPAN class="ft10">: </SPAN><NOBR><?php echo $get_detail[0]->mrk_tarikhjangkasiap?></NOBR></P></TD>
 	<TD class="tr7 td3"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr7 td8"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr7 td10"><P class="p5 ft4">&nbsp;</P></TD>
@@ -273,8 +255,8 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr9 td0"><P class="p9 ft2">11</P></TD>
 	<TD class="tr9 td1"><P class="p3 ft1">Tarikh Dilanjutkan Masa</P></TD>
-	<TD class="tr9 td5"><P class="p9 ft1">:</P></TD>
-	<TD class="tr7 td11"><P class="p5 ft4">&nbsp;</P></TD>
+	<TD colspan==2 class="tr9 td5"><P class="p9 ft1">:</P></TD>
+	<TD class="tr7 td11"><P class="p5 ft4">&nbsp;</P><?php echo $get_detail[0]->lsk_lanjutmasa?></TD>
 	<TD class="tr7 td12"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr7 td24"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr7 td25"><P class="p5 ft4">&nbsp;</P></TD>
@@ -282,7 +264,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr7 td0"><P class="p2 ft2">12</P></TD>
 	<TD class="tr7 td1"><P class="p3 ft1">Tarikh Kerja Siap Sempurna</P></TD>
-	<TD colspan=2 class="tr7 td2"><P class="p3 ft3"><SPAN class="ft11">: </SPAN><NOBR>20-11-2017</NOBR></P></TD>
+	<TD colspan=2 class="tr7 td2"><P class="p3 ft3"><SPAN class="ft11">: </SPAN><NOBR><?php echo $get_detail[0]->lsk_tarikhkerjasiap?></NOBR></P></TD>
 	<TD class="tr7 td3"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr7 td8"><P class="p5 ft4">&nbsp;</P></TD>
 	<TD class="tr7 td10"><P class="p5 ft4">&nbsp;</P></TD>
@@ -296,7 +278,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr7 td0"><P class="p2 ft2">13</P></TD>
 	<TD class="tr7 td1"><P class="p3 ft1">Laporan Pegawai Penjaga</P></TD>
-	<TD colspan=5 class="tr7 td15"><P class="p3 ft3"><SPAN class="ft1">: </SPAN>KERJA YANG TELAH DILAKSANAKAN SIAP DENGAN MEMUASKAN.</P></TD>
+	<TD colspan=5 class="tr7 td15"><P class="p3 ft3"><SPAN class="ft1">: </SPAN><?php echo $get_detail[0]->lsk_laporanpegawai?>.</P></TD>
 </TR>
 <TR>
 	<TD class="tr3 td0"><P class="p5 ft4">&nbsp;</P></TD>
@@ -319,20 +301,20 @@ body {margin-top: 0px;margin-left: 0px;}
 </TABLE>
 <TABLE cellpadding=0 cellspacing=0 class="t1">
 <TR>
-	<TD class="tr3 td26"><P class="p5 ft3"><SPAN class="ft2">Tarikh: </SPAN><NOBR>20-11-2017</NOBR></P></TD>
-	<TD class="tr3 td27"><P class="p10 ft8">Intan Zahida Bt. Abu Bakar</P></TD>
+	<TD class="tr3 td26"><P class="p5 ft3"><SPAN class="ft2">Tarikh: </SPAN><NOBR><?php echo $get_detail[0]->lsk_tarikhperakui?></NOBR></P></TD>
+	<TD class="tr3 td27"><P class="p10 ft8"><?php echo $get_detail[0]->lsk_pegawaipenyelia?></P></TD>
 </TR>
 <TR>
 	<TD class="tr0 td26"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr0 td27"><P class="p11 ft12">Penolong Jurutera JA29</P></TD>
+	<TD class="tr0 td27"><P class="p11 ft12"><?php echo $get_detail[0]->lsk_jawatanpen?></P></TD>
 </TR>
 <TR>
 	<TD class="tr10 td26"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr10 td27"><P class="p12 ft3">Nurul Syariza Bt. Ramli</P></TD>
+	<TD class="tr10 td27"><P class="p12 ft3"><?php echo $get_detail[0]->lsk_juruteraj?></P></TD>
 </TR>
 <TR>
-	<TD class="tr5 td26"><P class="p5 ft4">&nbsp;</P></TD>
-	<TD class="tr5 td27"><P class="p13 ft13">Jurutera</P></TD>
+	<TD class="tr5 td26"><P class="p5 ft4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P></TD>
+	<TD class="tr5 td27"><P class="p13 ft13">&nbsp;&nbsp;&nbsp;<?php echo $get_detail[0]->lsk_jawatanjuruteraj?></P></TD>
 </TR>
 <TR>
 	<TD class="tr0 td26"><P class="p14 ft14">Jabatan Pengairan dan Saliran</P></TD>

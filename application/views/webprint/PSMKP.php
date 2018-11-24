@@ -3,7 +3,7 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META http-equiv="X-UA-Compatible" content="IE=8">
-<TITLE>bcl_2048950235.htm</TITLE>
+<TITLE>Perakuan Siap Memperbaiki Kecatatan</TITLE>
 <META name="generator" content="BCL easyConverter SDK 5.0.140">
 <STYLE type="text/css">
 
@@ -148,16 +148,16 @@ body {margin-top: 0px;margin-left: 0px;}
 
 
 <P class="p0 ft0">PERAKUAN SlAP MEMPERBAIKI KECACATAN</P>
-<P class="p1 ft2"><SPAN class="ft1">Rujukan: </SPAN><NOBR>JPS.KM/S/B-(SH/KM)</NOBR> N/JM/80/2016</P>
+<P class="p1 ft2"><SPAN class="ft1">Rujukan: </SPAN><NOBR><?php echo $get_detail[0]->df_nosebutharga?></P>
 <P class="p2 ft3"><SPAN class="ft1">Pejabat: </SPAN>Jabatan Pengairan dan Saliran Daerah KualaMuda/Sik/Baling 08000 Sungai Petani,</P>
 <P class="p3 ft3">Kedah Darul Aman.</P>
 <P class="p4 ft1">Tarikh:</P>
-<P class="p5 ft4"><SPAN class="ft1">Kepada: </SPAN>ZM ONAL ENTERPRISE</P>
-<P class="p6 ft5">NO 16, KOMPLEK NIAGA 2, PEKAN YAN KECIL, 06900 YAN</P>
+<P class="p5 ft4"><SPAN class="ft1">Kepada: </SPAN><?php echo $get_detail[0]->mrk_namakon?></P>
+<P class="p6 ft5"><?php echo $get_detail[0]->mrk_alamatkon?></P>
 <P class="p7 ft2">KEDAH DARULAMAN.</P>
-<P class="p8 ft3">Berdaftar dengan PKK dalam Gred <SPAN class="ft6">G6</SPAN></P>
-<P class="p1 ft4"><SPAN class="ft3">Kontrak No. : </SPAN>JPS.KM/S/B (SH/KM)N/JM/80/2016</P>
-<P class="p9 ft4"><SPAN class="ft3">Kontrak untuk :</SPAN>KERJA KERJA PENYELENGGARAAN JALAN LADANG DI SKIM PENGAIRAN KOTA II,</P>
+<P class="p8 ft3">Berdaftar dengan PKK dalam Gred <SPAN class="ft6"><?php echo $get_detail[0]->mrk_gred?></SPAN></P>
+<P class="p1 ft4"><SPAN class="ft3">Kontrak No. : </SPAN><?php echo $get_detail[0]->df_nosebutharga?></P>
+<P class="p9 ft4"><SPAN class="ft3">Kontrak untuk :</SPAN><?php echo $get_detail[0]->df_tajuk?></P>
 <P class="p10 ft4">DAERAH KUALA MUDA KEDAH.</P>
 <P class="p11 ft3">Bahagian*: ……………..…………..……………………………………………………………………………...</P>
 <P class="p12 ft3"><SPAN class="ft3">1.</SPAN><SPAN class="ft7">Menurut Klausa 45(c) </SPAN><NOBR>Syarat-syarat</NOBR> kontrak, maka adalah dengan ini diperakui bahawa segala kecacatan, ketidaksempurnaan, kesusutan dan <NOBR>apa-apa</NOBR> kerosakan lain apajua pun terhadap <NOBR>Kerja-kerja</NOBR> yang tersebut diatas, yang dikehendaki diperbaiki oleh tuan di bawah Syarat <NOBR>-Syarat</NOBR> Kontrak, telah</P>
@@ -165,22 +165,22 @@ body {margin-top: 0px;margin-left: 0px;}
 <TABLE cellpadding=0 cellspacing=0 class="t0">
 <TR>
 	<TD class="tr0 td0"><P class="p14 ft3">menyempurnakannya) pada</P></TD>
-	<TD class="tr0 td1"><P class="p15 ft4"><NOBR>24-06-2017</NOBR></P></TD>
+	<TD class="tr0 td1"><P class="p15 ft4"><NOBR><?php echo $get_detail[0]->mrk_tarikhjangkasiap?></NOBR></P></TD>
 	<TD class="tr0 td2"><P class="p15 ft3">.</P></TD>
 </TR>
 </TABLE>
 <P class="p16 ft3"><SPAN class="ft3">2.</SPAN><SPAN class="ft8">(a) # Menurut Klausa 37(d) </SPAN><NOBR>Syarat-Syarat</NOBR> Kontrak. Bon Perlaksanaan atau <NOBR>mana-mana</NOBR> bahagian darinya adalah dengan ini dilepaskan.</P>
 <TABLE cellpadding=0 cellspacing=0 class="t1">
 <TR>
-	<TD colspan=3 class="tr1 td3"><P class="p14 ft3">(i) ** Gerenti Bank/Insurans/Syarikat Kewangan No. <SPAN class="ft0">________________ </SPAN>berharga RM</P></TD>
-	<TD class="tr1 td4"><P class="p17 ft4">0.00</P></TD>
+	<TD colspan=3 class="tr1 td3"><P class="p14 ft3">(i) ** Gerenti Bank/Insurans/Syarikat Kewangan No. <SPAN class="ft0">__<?php echo $get_detail[0]->mrk_nowangjaminansatu?>__ </SPAN>berharga RM</P></TD>
+	<TD class="tr1 td4"><P class="p17 ft4"><?php echo $get_detail[0]->mrk_hargasatu?></P></TD>
 </TR>
 <TR>
 	<TD colspan=4 class="tr2 td5"><P class="p18 ft3">yang merupakan Bon Perlaksanaan di bawah Kontrak ini adalah dengan ini dilepaskan.</P></TD>
 </TR>
 <TR>
 	<TD class="tr3 td6"><P class="p19 ft3">(ii) ** Baki Wang Jaminan Pelaksanaan berjumlah RM</P></TD>
-	<TD class="tr3 td7"><P class="p20 ft4">37,006.49</P></TD>
+	<TD class="tr3 td7"><P class="p20 ft4"><?php echo $get_detail[0]->mrk_wangjaminlaksana?></P></TD>
 	<TD colspan=2 class="tr3 td8"><P class="p15 ft3">yang merupakan Bon</P></TD>
 </TR>
 <TR>
@@ -204,11 +204,11 @@ body {margin-top: 0px;margin-left: 0px;}
 </TR>
 <TR>
 	<TD class="tr4 td11"><P class="p14 ft10">( b ) # ( i ) **</P></TD>
-	<TD colspan=3 class="tr4 td12"><P class="p14 ft3">Tuntutan terhadap Gerenti Bank/Insurans/Syarikat Kewangan No.______________</P></TD>
+	<TD colspan=3 class="tr4 td12"><P class="p14 ft3">Tuntutan terhadap Gerenti Bank/Insurans/Syarikat Kewangan No._<?php echo $get_detail[0]->mrk_nowangjaminandua?>__</P></TD>
 </TR>
 <TR>
 	<TD colspan=2 class="tr5 td13"><P class="p21 ft10">berharga RM</P></TD>
-	<TD class="tr5 td14"><P class="p22 ft4">0.00</P></TD>
+	<TD class="tr5 td14"><P class="p22 ft4"><?php echo $get_detail[0]->mrk_hargadua?></P></TD>
 	<TD class="tr5 td15"><P class="p23 ft10">yang merupakan Bon Perlaksanaan di bawah Kontrak ini</P></TD>
 </TR>
 </TABLE>
@@ -248,13 +248,13 @@ body {margin-top: 0px;margin-left: 0px;}
 </TR>
 <TR>
 	<TD colspan=6 class="tr6 td24"><P class="p27 ft13">adalah dikehendaki untuk membayar kepada Kerajaan sebanyak RM</P></TD>
-	<TD class="tr6 td25"><P class="p28 ft4">0.00</P></TD>
+	<TD class="tr6 td25"><P class="p28 ft4"><?php echo $get_detail[0]->mrk_bakibonlaksana?></P></TD>
 </TR>
 <TR>
 	<TD class="tr8 td16"><P class="p14 ft10">*</P></TD>
 	<TD colspan=2 class="tr8 td17"><P class="p25 ft3">Terdapat baki sebanyak RM</P></TD>
 	<TD class="tr8 td18"><P class="p14 ft9">&nbsp;</P></TD>
-	<TD class="tr8 td19"><P class="p29 ft4">0.00</P></TD>
+	<TD class="tr8 td19"><P class="p29 ft4"><?php echo $get_detail[0]->mrk_bakiwangjamin?></P></TD>
 	<TD colspan=2 class="tr8 td20"><P class="p22 ft10">daripada Bon Perlaksanaan yang akan</P></TD>
 </TR>
 <TR>
@@ -268,8 +268,8 @@ body {margin-top: 0px;margin-left: 0px;}
 </TABLE>
 <P class="p30 ft14">……….………………………</P>
 <P class="p31 ft14">Pegawai Penguasa</P>
-<P class="p32 ft3">Nama Penuh …………….…………………<SPAN class="ft15">NOR ROZAINI BT ABDULLAH</SPAN></P>
-<P class="p33 ft10">Nama Jawatan ………………………………<SPAN class="ft16">Jurutera Daerah</SPAN></P>
+<P class="p32 ft3">Nama Penuh …………….…………………<SPAN class="ft15"><?php echo $get_detail[0]->mrk_pegawaipenguasa?></SPAN></P>
+<P class="p33 ft10">Nama Jawatan ………………………………<SPAN class="ft16"><?php echo $get_detail[0]->mrk_jawatanpp?></SPAN></P>
 <P class="p34 ft17"><SPAN class="ft17">#</SPAN><SPAN class="ft18">Batalkan keseluruhan 2(b) jika kerja kecacatan disiapkan oleh kontraktor sendiri atau batalkan keseluruhan 2(a) jika kerja kecacatan disiapkan oleh pihak ketiga.</SPAN></P>
 <P class="p35 ft17"><SPAN class="ft1">**</SPAN><SPAN class="ft19">Batalkan salah satu daripada perenggan yang berkenaan di bawah 2a(i) atau 2b(i) mengikut bentuk bon pelaksanaan yang diambil.</SPAN></P>
 <P class="p36 ft10"><SPAN class="ft20">*</SPAN><SPAN class="ft21">Batalkan salah satu perenggan atau </SPAN><NOBR>kedua-duanya</NOBR> jika tidak berkenaan.</P>

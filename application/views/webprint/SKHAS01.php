@@ -3,7 +3,7 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META http-equiv="X-UA-Compatible" content="IE=8">
-<TITLE>bcl_1824808529.htm</TITLE>
+<TITLE>Surat Khas 01</TITLE>
 <META name="generator" content="BCL easyConverter SDK 5.0.140">
 <STYLE type="text/css">
 
@@ -79,15 +79,15 @@ body {margin-top: 0px;margin-left: 0px;}
 <TABLE cellpadding=0 cellspacing=0 class="t0">
 <TR>
 	<TD class="tr0 td0"><P class="p0 ft0">Ruj. Tuan</P></TD>
-	<TD class="tr0 td1"><P class="p1 ft1">:</P></TD>
+	<TD class="tr0 td1"><P class="p1 ft1">: <?php echo $get_detail[0]->skhas_rujuktuan?></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p0 ft0">Ruj. Ka<SPAN class="ft1">mi</SPAN></P></TD>
-	<TD class="tr1 td1"><P class="p1 ft2"><SPAN class="ft1">: </SPAN>JPS.KMSB(SH/S)P/P/SG/107/2016</P></TD>
+	<TD class="tr1 td1"><P class="p1 ft2"><SPAN class="ft1">: <?php echo $get_detail[0]->df_nosebutharga?> </SPAN></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p0 ft0">Tarikh</P></TD>
-	<TD class="tr1 td1"><P class="p1 ft1">:</P></TD>
+	<TD class="tr1 td1"><P class="p1 ft1">: </P></TD>
 </TR>
 </TABLE>
 <P class="p2 ft3">CIDB NEGERI KEDAH</P>
@@ -107,9 +107,9 @@ body {margin-top: 0px;margin-left: 0px;}
 	<TD class="tr2 td5"><P class="p0 ft6">&nbsp;</P></TD>
 </TR>
 <TR>
-	<TD class="tr1 td2"><P class="p0 ft3">UNTUK GRED</P></TD>
-	<TD class="tr1 td3"><P class="p0 ft3">KATEGORI:</P></TD>
-	<TD class="tr1 td4"><P class="p0 ft3">PENGKHUSUSAN</P></TD>
+	<TD class="tr1 td2"><P class="p0 ft3">UNTUK GRED : <?php echo $get_detail[0]->mrk_gred?></P></TD>
+	<TD class="tr1 td3"><P class="p0 ft3">KATEGORI : <?php echo $get_detail[0]->mrk_kategori?></P></TD>
+	<TD class="tr1 td4"><P class="p0 ft3">PENGKHUSUSAN : <?php echo $get_detail[0]->mrk_khusus?></P></TD>
 	<TD class="tr1 td5"><P class="p4 ft3">.</P></TD>
 </TR>
 </TABLE>
@@ -118,16 +118,16 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr0 td7"><P class="p0 ft1">Nama</P></TD>
 	<TD class="tr0 td8"><P class="p6 ft1">:</P></TD>
-	<TD class="tr0 td9"><P class="p7 ft2">BERSAMA BAKTI ENTERPRISE</P></TD>
+	<TD class="tr0 td9"><P class="p7 ft2"><?php echo $get_detail[0]->mrk_namakon?></P></TD>
 </TR>
 <TR>
 	<TD colspan=2 class="tr3 td10"><P class="p6 ft1">No. Sebutharga :</P></TD>
-	<TD class="tr3 td9"><P class="p0 ft2">JPS.KMSB(SH/S)P/P/SG/107/2016</P></TD>
+	<TD class="tr3 td9"><P class="p0 ft2"><?php echo $get_detail[0]->df_nosebutharga?></P></TD>
 </TR>
 <TR>
 	<TD class="tr4 td7"><P class="p0 ft1">Projek</P></TD>
 	<TD class="tr4 td8"><P class="p6 ft1">:</P></TD>
-	<TD class="tr4 td9"><P class="p7 ft2">PROJEK CUBAAN</P></TD>
+	<TD class="tr4 td9"><P class="p7 ft2"><?php echo $get_detail[0]->df_tajuk?></P></TD>
 </TR>
 </TABLE>
 <P class="p8 ft1"><SPAN class="ft1">2.</SPAN><NOBR><SPAN class="ft7">Bersama-sama</SPAN></NOBR> ini disertakan Salinan Perakuan Siap Kerja dan Surat Kebenaran Khas tersebut.</P>
@@ -135,8 +135,8 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p10 ft1">Sekian, terima kasih.</P>
 <P class="p11 ft8">“BERKHIDMAT UNTUK NEGARA” “CINTAILAH SUNGAI KITA”</P>
 <P class="p12 ft1">Saya yang menurut perintah,</P>
-<P class="p13 ft9">KAMARUDIN BIN SALEH</P>
-<P class="p14 ft3">JURUTERA DAERAH</P>
+<P class="p13 ft9"><?php echo $get_detail[0]->skhas_pegawaikuasa?></P>
+<P class="p14 ft3"><?php echo $get_detail[0]->skhas_jawatanpp?></P>
 <P class="p15 ft1">Jabatan Pengairan Dan Saliran,</P>
 <P class="p3 ft1">Daerah Kuala Muda/Sik/Baling,</P>
 <P class="p3 ft1">Sungai Petani, Kedah.</P>

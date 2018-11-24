@@ -87,9 +87,9 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p1 ft1">KERAJAAN NEGERI KEDAH DARUL AMAN</P>
 <P class="p2 ft1">JABATAN PENGAIRAN DAN SALIRAN</P>
 <P class="p3 ft2">PERAKUAN SIAP KERJA</P>
-<TABLE cellpadding=0 cellspacing=0 class="t0">
+<TABLE cellpadding=0 cellspacing=0 class="t0" border=0>
 <TR>
-	<TD class="tr0 td0"><P class="p4 ft4"><SPAN class="ft3">Rujukan : </SPAN>BIL(2)DLM.AGAMA/K/993e SK.5</P></TD>
+	<TD class="tr0 td0"><P class="p4 ft4"><SPAN class="ft3">Rujukan : </SPAN><?php echo $get_detail[0]->df_nosebutharga?></P></TD>
 	<TD class="tr0 td1"><P class="p4 ft3">Pejabat :</P></TD>
 	<TD class="tr0 td2"><P class="p4 ft4">Jabatan Pengairan dan Saliran</P></TD>
 </TR>
@@ -114,45 +114,44 @@ body {margin-top: 0px;margin-left: 0px;}
 	<TD class="tr3 td2"><P class="p4 ft7">&nbsp;</P></TD>
 </TR>
 <TR>
-	<TD class="tr3 td0"><P class="p4 ft1"><SPAN class="ft3">Kepada :</SPAN>ARAS VENTURES</P></TD>
+	<TD class="tr3 td0"><P class="p4 ft1"><SPAN class="ft3">Kepada :</SPAN><?php echo $get_detail[0]->mrk_namakon?></P></TD>
 	<TD class="tr3 td1"><P class="p4 ft7">&nbsp;</P></TD>
 	<TD class="tr3 td2"><P class="p4 ft7">&nbsp;</P></TD>
 </TR>
 <TR>
-	<TD class="tr0 td0"><P class="p5 ft4">NO.218, BAKAR KAPUR,</P></TD>
+	<TD class="tr0 td0"><P class="p5 ft4"><?php echo $get_detail[0]->mrk_alamatkon?></P></TD>
 	<TD class="tr0 td1"><P class="p4 ft7">&nbsp;</P></TD>
 	<TD class="tr0 td2"><P class="p4 ft7">&nbsp;</P></TD>
 </TR>
 <TR>
-	<TD class="tr4 td0"><P class="p5 ft4">08000, SUNGAI PETANI,</P></TD>
+	<TD class="tr4 td0"><P class="p5 ft4"></P></TD>
 	<TD class="tr4 td1"><P class="p4 ft7">&nbsp;</P></TD>
 	<TD class="tr4 td2"><P class="p4 ft7">&nbsp;</P></TD>
 </TR>
 <TR>
-	<TD class="tr2 td0"><P class="p5 ft4">KEDAH.</P></TD>
+	<TD class="tr2 td0"><P class="p5 ft4"></P></TD>
 	<TD class="tr2 td1"><P class="p4 ft7">&nbsp;</P></TD>
 	<TD class="tr2 td2"><P class="p4 ft7">&nbsp;</P></TD>
 </TR>
 </TABLE>
 <P class="p6 ft4">Berdaftar dengan PKK dalam <SPAN class="ft8">Gred</SPAN></P>
-<P class="p7 ft1"><SPAN class="ft4">Sebutharga Bilangan : </SPAN>BIL(2)DLM.AGAMA/K/993e SK.5</P>
-<P class="p8 ft10"><SPAN class="ft9">Sebutharga untuk : </SPAN><NOBR>KERJA-KERJA</NOBR> BAGI MENGGANTIKAN DAN MENAIKTARAF PAGAR</P>
-<P class="p9 ft10">PEJABAT AGAMA KUALA MUDA</P>
+<P class="p7 ft1"><SPAN class="ft4">Sebutharga Bilangan : </SPAN><?php echo $get_detail[0]->df_nosebutharga?></P>
+<P class="p8 ft10"><SPAN class="ft9">Sebutharga untuk : </SPAN><?php echo $get_detail[0]->mrk_tajukkerja?></P>
 <P class="p10 ft4">Dengan ini adalah diperakui bahawa <NOBR>kerja-kerja</NOBR> seperti yang tersebut diatas dengan harga berjumlah</P>
 <TABLE cellpadding=0 cellspacing=0 class="t1">
 <TR>
-	<TD class="tr5 td3"><P class="p11 ft1"><SPAN class="ft11">RM </SPAN><SPAN class="ft2">36,109.27</SPAN></P></TD>
+	<TD class="tr5 td3"><P class="p11 ft1"><SPAN class="ft11">RM </SPAN><SPAN class="ft2"><?php echo $get_detail[0]->lks_hargasebenar?></SPAN></P></TD>
 	<TD class="tr5 td4"><P class="p12 ft4">telah disiapkan dengan memuaskan pada</P></TD>
-	<TD class="tr5 td5"><P class="p13 ft2"><NOBR>20-11-2017</NOBR></P></TD>
+	<TD class="tr5 td5"><P class="p13 ft2"><NOBR><?php echo $get_detail[0]->lsk_tarikhkerjasiap?></NOBR></P></TD>
 	<TD class="tr5 td6"><P class="p14 ft4">dan diambil milik pada</P></TD>
 </TR>
 <TR>
-	<TD class="tr6 td3"><P class="p15 ft12"><NOBR>21-11-2017</NOBR></P></TD>
+	<TD class="tr6 td3"><P class="p15 ft12"><NOBR><?php echo $get_detail[0]->mrk_tarikhmulakon?></NOBR></P></TD>
 	<TD colspan=3 class="tr6 td7"><P class="p4 ft4">dan dengan ini Tempoh Tanggungan Kecacatan untuk <NOBR>kerja-kerja</NOBR> tersebut bermula pada</P></TD>
 </TR>
 <TR>
-	<TD class="tr7 td3"><P class="p15 ft12"><NOBR>21-11-2017</NOBR></P></TD>
-	<TD class="tr7 td4"><P class="p4 ft4">dan akan berakhir pada <NOBR><SPAN class="ft2">03-06-2018</SPAN><SPAN class="ft8"> .</SPAN></NOBR></P></TD>
+	<TD class="tr7 td3"><P class="p15 ft12"><NOBR><?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?></NOBR></P></TD>
+	<TD class="tr7 td4"><P class="p4 ft4">dan akan berakhir pada <NOBR><SPAN class="ft2"><?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?></SPAN><SPAN class="ft8"> .</SPAN></NOBR></P></TD>
 	<TD class="tr7 td5"><P class="p4 ft7">&nbsp;</P></TD>
 	<TD class="tr7 td6"><P class="p4 ft7">&nbsp;</P></TD>
 </TR>

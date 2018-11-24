@@ -1,6 +1,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
+  <!-- Content Header (Page header)
   <section class="content-header">
     <center>
       <h1>
@@ -8,6 +8,7 @@
       </h1>
     </center>
   </section>
+  -->
   <br>
 
   <!-- Main content -->
@@ -109,9 +110,9 @@
 
                 <div class="col-sm-4">
                   <input type="text" class="form-control" id="namaborong" name="namaborong" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
-                  <input type="text" name="noinden" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->mrk_noinden?>">
-                  <input type="text"  name="kodvot" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->df_kodvot?>">
-                  <input type="text"  name="hiddenid" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->mrksatuid?>">
+                  <input type="hidden" name="noinden" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->mrk_noinden?>">
+                  <input type="hidden"  name="kodvot" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->df_kodvot?>">
+                  <input type="hidden"  name="hiddenid" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->mrksatuid?>">
                 </div>
 
                 <label class="col-sm-1">Alamat Pemborong</label>
@@ -124,7 +125,7 @@
 
             <div class="box-footer">
               <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-              <a href="<?php echo base_url('surat') ?>" class="btn btn-info" role="button">Surat</a>
+            <a href="<?php echo site_url('Report/Report_PJB/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
             </div>
           </div>
         </form>

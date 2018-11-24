@@ -7,6 +7,7 @@ class Report extends CI_Controller{
     parent::__construct();
     $this->load->library('Html2pdflib');
     $this->load->model('Mrk_model');
+    $this->load->model('Surat_model');
 
   }
 
@@ -16,14 +17,17 @@ class Report extends CI_Controller{
     $this->load->view('webprint/MRK01P',$data);
   }
 
-  public function Report_MRK_02()
+  public function Report_MRK_02($value="")
   {
+    $this->load->database();
+    $data['get_detail']=$this->Mrk_model->get_projectdetailformrk02($value);
     $this->load->view('webprint/MRK02P',$data);
   }
 
-  public function Report_LSK()
+  public function Report_LSK($value="")
   {
-    $this->load->view('webprint/LSKP');
+    $data['get_detail']=$this->Mrk_model->get_projectdetailforLSK($value);
+    $this->load->view('webprint/LSKP',$data);
   }
 
   public function Report_MRK_03($value="")
@@ -32,14 +36,16 @@ class Report extends CI_Controller{
     $this->load->view('webprint/MRK03P',$data);
   }
 
-  public function Report_PSK_01()
+  public function Report_PSK_01($value="")
   {
-    $this->load->view('webprint/PSK01P');
+    $data['get_detail']=$this->Mrk_model->get_projectdetailforPSK($value);
+    $this->load->view('webprint/PSK01P',$data);
   }
 
-  public function Report_PSK_02()
+  public function Report_PSK_02($value="")
   {
-    $this->load->view('webprint/PSK02P');
+    $data['get_detail']=$this->Mrk_model->get_projectdetailforPSK($value);
+    $this->load->view('webprint/PSK02P',$data);
   }
 
   public function Report_SS()
@@ -47,43 +53,57 @@ class Report extends CI_Controller{
     $this->load->view('webprint/CLP');
   }
 
-  public function Report_PSMK()
+  public function Report_PSMK($value="")
   {
-      $this->load->view('webprint/PSMKP');
+    $this->load->database();
+    $data['get_detail']=$this->Mrk_model->get_projectdetailforPSMK($value);
+    $this->load->view('webprint/PSMKP',$data);
   }
 
-  public function Report_PJB()
+  public function Report_PJB($value="")
   {
-      $this->load->view('webprint/JBP');
+      $this->load->database();
+      $data['get_detail']=$this->Mrk_model->get_projectdetailforJB($value);
+      $this->load->view('webprint/JBP',$data);
   }
 
-  public function Report_Pemulangan_WJB()
+  public function Report_Pemulangan_WJP()
   {
     $this->load->view('webprint/WJPP');
   }
 
-  public function Report_PKK01()
+  public function Report_PKK01($value="")
   {
-    $this->load->view('webprint/SPKK01');
+    $this->load->database();
+    $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
+    $this->load->view('webprint/SPKK01',$data);
   }
 
-  public function Report_PKK02()
+  public function Report_PKK02($value="")
   {
-    $this->load->view('webprint/SPKK02');
+    $this->load->database();
+    $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
+    $this->load->view('webprint/SPKK02',$data);
   }
 
-  public function Report_Khas01()
+  public function Report_Khas01($value="")
   {
-    $this->load->view('webprint/SKHAS01');
+    $this->load->database();
+    $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
+    $this->load->view('webprint/SKHAS01',$data);
   }
 
-  public function Report_Khas02()
+  public function Report_Khas02($value="")
   {
-    $this->load->view('webprint/SKHAS02');
+    $this->load->database();
+    $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
+    $this->load->view('webprint/SKHAS02',$data);
   }
 
-  public function Report_Cover_PWJP()
+  public function Report_Cover_PWJP($value="")
   {
-    $this->load->view('webprint/SWJP');
+    $this->load->database();
+    $data['get_detail']=$this->Surat_model->get_projectalldetailSuratWJP($value);
+    $this->load->view('webprint/SWJP',$data);
   }
 }

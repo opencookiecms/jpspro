@@ -1,6 +1,6 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+    <!-- Content Header (Page header)
     <section class="content-header">
       <center>
         <h1>
@@ -8,6 +8,7 @@
         </h1>
       </center>
     </section>
+  -->
     <br>
 
     <!-- Main content -->
@@ -267,7 +268,7 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('mrk/jaminanbank') ?>" class="btn btn-info" role="button">Pelepasan Jaminan Bank</a>
+              <a href="<?php echo site_url('Report/Report_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
               </div>
             </div>
           </form>

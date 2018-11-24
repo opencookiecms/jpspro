@@ -3,7 +3,7 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META http-equiv="X-UA-Compatible" content="IE=8">
-<TITLE>bcl_920070683.htm</TITLE>
+<TITLE>Pelepasan Jaminan Bank</TITLE>
 <META name="generator" content="BCL easyConverter SDK 5.0.140">
 <STYLE type="text/css">
 
@@ -88,11 +88,11 @@ body {margin-top: 0px;margin-left: 0px;}
 	<TD class="tr0 td1"><P class="p3 ft0">Tarikh :</P></TD>
 </TR>
 <TR>
-	<TD class="tr1 td0"><P class="p4 ft3">MALAYSIAN ASSURANCE</P></TD>
+	<TD class="tr1 td0"><P class="p4 ft3"><?php echo $get_detail[0]->mrk_namabank?></P></TD>
 	<TD class="tr1 td1"><P class="p2 ft2">&nbsp;</P></TD>
 </TR>
 <TR>
-	<TD class="tr2 td0"><P class="p4 ft4">ALLIANCE BERHAD,</P></TD>
+	<TD class="tr2 td0"><P class="p4 ft4"><?php echo $get_detail[0]->mrk_alamatbank?>,</P></TD>
 	<TD class="tr2 td1"><P class="p2 ft2">&nbsp;</P></TD>
 </TR>
 <TR>
@@ -112,22 +112,22 @@ body {margin-top: 0px;margin-left: 0px;}
 	<TD class="tr5 td1"><P class="p2 ft2">&nbsp;</P></TD>
 </TR>
 <TR>
-	<TD class="tr3 td2"><P class="p5 ft3"><SPAN class="ft6">RUJ. TUAN : </SPAN><NOBR>010800220044-00</NOBR></P></TD>
+	<TD class="tr3 td2"><P class="p5 ft3"><SPAN class="ft6">RUJ. TUAN : </SPAN><NOBR><?php echo $get_detail[0]->mrk_rujukanbank?></NOBR></P></TD>
 	<TD class="tr3 td3"><P class="p2 ft2">&nbsp;</P></TD>
 </TR>
 </TABLE>
-<P class="p7 ft0">Sukacita kami merujuk Jaminan Bank / Insurans yang tuan keluarkan bernombor <NOBR><SPAN class="ft7">010800220044-00</SPAN></NOBR></P>
+<P class="p7 ft0">Sukacita kami merujuk Jaminan Bank / Insurans yang tuan keluarkan bernombor <NOBR><SPAN class="ft7"><?php echo $get_detail[0]->mrk_rujukanbank?></SPAN></NOBR></P>
 <TABLE cellpadding=0 cellspacing=0 class="t1">
 <TR>
 	<TD class="tr6 td4"><P class="p2 ft0">( disebut sebagai ‘Jaminan’ ) yang dikeluarkan bagi pihak</P></TD>
-	<TD class="tr6 td5"><P class="p2 ft3">ZM ONAL ENTERPRISE</P></TD>
+	<TD class="tr6 td5"><P class="p2 ft3"><?php echo $get_detail[0]->mrk_namakon?></P></TD>
 </TR>
 <TR>
-	<TD class="tr7 td4"><P class="p2 ft4"><SPAN class="ft0">di alamat </SPAN>NO.6, LORONG MELOR 1/1A, TAMAN MELOR,</P></TD>
-	<TD class="tr7 td5"><P class="p8 ft0">pada tarikh <NOBR><SPAN class="ft3">24-11-2016</SPAN></NOBR><SPAN class="ft3"> </SPAN>kepada</P></TD>
+	<TD class="tr7 td4"><P class="p2 ft4"><SPAN class="ft0">di alamat </SPAN><?php echo $get_detail[0]->mrk_alamatkon?>,</P></TD>
+	<TD class="tr7 td5"><P class="p8 ft0">pada tarikh <NOBR><SPAN class="ft3"><?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?></SPAN></NOBR><SPAN class="ft3"> </SPAN>kepada</P></TD>
 </TR>
 </TABLE>
-<P class="p9 ft0">Kerajaan yang telah luput berkuatkuasa pada tarikh <NOBR><SPAN class="ft3">24-06-2017</SPAN></NOBR><SPAN class="ft3"> </SPAN>( Tarikh Luput ).</P>
+<P class="p9 ft0">Kerajaan yang telah luput berkuatkuasa pada tarikh <NOBR><SPAN class="ft3"><?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?></SPAN></NOBR><SPAN class="ft3"> </SPAN>( Tarikh Luput ).</P>
 <P class="p10 ft8">Kami dengan ini melepas sepenuhnya tanggungjawab pihak tuan berkaitan dengan jaminan tersebut mulai dari tarikh luput dan jaminan tersebut dengan ini dianggap batal. Salinan - salinan asal jaminan ini akan disimpan oleh pejabat ini sebagai rekod.</P>
 <P class="p11 ft9">“ CINTAILAH SUNGAI KITA ”</P>
 <P class="p12 ft11"><SPAN class="ft10">“ </SPAN>BERKHIDMAT UNTUK NEGARA <SPAN class="ft10">” Saya yang menurut perintah,</SPAN></P>

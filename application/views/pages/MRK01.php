@@ -1,6 +1,6 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+    <!-- Content Header (Page header)
     <section class="content-header">
       <center>
         <h1>
@@ -8,6 +8,7 @@
         </h1>
       </center>
     </section>
+    -->
     <br>
 
     <!-- Main content -->
@@ -240,7 +241,7 @@
                   <label class="col-sm-2">Kos Projek (RM)</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kosprojek" value="<?php echo $get_detail[0]->mrk_kosprojek ?>" name="kosprojek" placeholder="RM">
+                    <input type="text" class="form-control" id="kosprojek" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2) ?>" name="kosprojek" placeholder="RM">
                   </div>
 
                   <label class="col-sm-1">Tarikh</label>

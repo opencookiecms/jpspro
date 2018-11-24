@@ -83,7 +83,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <TABLE cellpadding=0 cellspacing=0 class="t0">
 <TR>
 	<TD class="tr0 td0"><P class="p4 ft3">Rujukan :</P></TD>
-	<TD class="tr0 td1"><P class="p5 ft4">BIL(2)DLM.AGAMA/K/993e SK.5</P></TD>
+	<TD class="tr0 td1"><P class="p5 ft4"><?php echo $get_detail[0]->df_nosebutharga?></P></TD>
 	<TD class="tr0 td2"><P class="p4 ft3">Pejabat :</P></TD>
 	<TD class="tr0 td3"><P class="p4 ft4">Jabatan Pengairan dan Saliran</P></TD>
 </TR>
@@ -113,43 +113,43 @@ body {margin-top: 0px;margin-left: 0px;}
 </TR>
 <TR>
 	<TD class="tr4 td0"><P class="p4 ft3">Kepada :</P></TD>
-	<TD class="tr4 td1"><P class="p4 ft1">ARAS VENTURES</P></TD>
+	<TD class="tr4 td1"><P class="p4 ft1"><?php echo $get_detail[0]->mrk_namakon?></P></TD>
 	<TD class="tr4 td2"><P class="p4 ft5">&nbsp;</P></TD>
 	<TD class="tr4 td3"><P class="p4 ft5">&nbsp;</P></TD>
 </TR>
 <TR>
 	<TD class="tr0 td0"><P class="p4 ft5">&nbsp;</P></TD>
-	<TD class="tr0 td1"><P class="p4 ft4">NO.218, BAKAR KAPUR,</P></TD>
+	<TD class="tr0 td1"><P class="p4 ft4"><?php echo $get_detail[0]->mrk_alamatkon?></P></TD>
 	<TD class="tr0 td2"><P class="p4 ft5">&nbsp;</P></TD>
 	<TD class="tr0 td3"><P class="p4 ft5">&nbsp;</P></TD>
 </TR>
 <TR>
 	<TD class="tr2 td0"><P class="p4 ft5">&nbsp;</P></TD>
-	<TD class="tr2 td1"><P class="p4 ft4">08000, SUNGAI PETANI,</P></TD>
+	<TD class="tr2 td1"><P class="p4 ft4"></P></TD>
 	<TD class="tr2 td2"><P class="p4 ft5">&nbsp;</P></TD>
 	<TD class="tr2 td3"><P class="p4 ft5">&nbsp;</P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p4 ft5">&nbsp;</P></TD>
-	<TD class="tr1 td1"><P class="p4 ft4">KEDAH.</P></TD>
+	<TD class="tr1 td1"><P class="p4 ft4"></P></TD>
 	<TD class="tr1 td2"><P class="p4 ft5">&nbsp;</P></TD>
 	<TD class="tr1 td3"><P class="p4 ft5">&nbsp;</P></TD>
 </TR>
 </TABLE>
 <P class="p6 ft4">Berdaftar dengan PKK dalam <SPAN class="ft6">Gred</SPAN></P>
-<P class="p7 ft1"><SPAN class="ft4">Sebutharga Bilangan : </SPAN>BIL(2)DLM.AGAMA/K/993e SK.5</P>
-<P class="p8 ft7">Sebutharga untuk : <NOBR>KERJA-KERJA</NOBR> BAGI MENGGANTIKAN DAN MENAIKTARAF PAGAR PEJABAT AGAMA KUALA MUDA</P>
+<P class="p7 ft1"><SPAN class="ft4">Sebutharga Bilangan : </SPAN><?php echo $get_detail[0]->df_nosebutharga?></P>
+<P class="p8 ft7">Sebutharga untuk : <NOBR><?php echo $get_detail[0]->df_tajuk?></P>
 <P class="p6 ft4">Dengan ini adalah diperakui bahawa <NOBR>kerja-kerja</NOBR> seperti yang tersebut diatas dengan harga berjumlah</P>
 <TABLE cellpadding=0 cellspacing=0 class="t1">
 <TR>
 	<TD class="tr5 td4"><P class="p4 ft4">RM</P></TD>
-	<TD class="tr5 td5"><P class="p9 ft4"><SPAN class="ft2">36,109.27</SPAN> telah disiapkan dengan memuaskan pada</P></TD>
-	<TD class="tr5 td6"><P class="p10 ft2"><NOBR>20-11-2017</NOBR></P></TD>
+	<TD class="tr5 td5"><P class="p9 ft4"><SPAN class="ft2"><?php echo number_format($get_detail[0]->lks_hargasebenar,2)?></SPAN> telah disiapkan dengan memuaskan pada</P></TD>
+	<TD class="tr5 td6"><P class="p10 ft2"><NOBR><?php echo $get_detail[0]->lsk_tarikhkerjasiap?></NOBR></P></TD>
 	<TD class="tr5 td7"><P class="p11 ft4">dan diambil milik</P></TD>
 </TR>
 <TR>
 	<TD class="tr6 td4"><P class="p4 ft4">pada</P></TD>
-	<TD class="tr6 td5"><P class="p12 ft1"><NOBR><SPAN class="ft2">21-11-2017</SPAN><SPAN class="ft8"> .</SPAN></NOBR></P></TD>
+	<TD class="tr6 td5"><P class="p12 ft1"><NOBR><SPAN class="ft2"><?php echo $get_detail[0]->mrk_tarikhmulakon?></SPAN><SPAN class="ft8"> .</SPAN></NOBR></P></TD>
 	<TD class="tr6 td6"><P class="p4 ft5">&nbsp;</P></TD>
 	<TD class="tr6 td7"><P class="p4 ft5">&nbsp;</P></TD>
 </TR>

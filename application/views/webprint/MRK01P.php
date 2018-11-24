@@ -132,20 +132,20 @@ body {margin-top: 0px;margin-left: 0px;}
 	<TD class="tr2 td6"><P class="p7 ft10">( Tarikh Milik Tapak )</P></TD>
 </TR>
 </TABLE>
-<P class="p8 ft2"><SPAN class="ft6">9.</SPAN><SPAN class="ft11">TARIKH JANGKA SIAP KONTRAK: </SPAN><NOBR>25-<SPAN class="ft3">0</SPAN>3<SPAN class="ft3">-2</SPAN>012</NOBR></P>
+<P class="p8 ft2"><SPAN class="ft6">9.</SPAN><SPAN class="ft11">TARIKH JANGKA SIAP KONTRAK: </SPAN><SPAN class="ft3"><?php echo $get_detail[0]->mrk_tarikhjangkasiap?></SPAN></P>
 <P class="p8 ft2"><SPAN class="ft6">10.</SPAN><SPAN class="ft12">BUTIRAN PEMBUAT LAPORAN :</SPAN></P>
 <TABLE cellpadding=0 cellspacing=0 class="t3">
 <TR>
 	<TD class="tr3 td7"><P class="p7 ft13">&nbsp;</P></TD>
-	<TD colspan=3 class="tr3 td8"><P class="p11 ft9"><SPAN class="ft2">NAMA PEGAWAI : </SPAN>I<SPAN class="ft14">n</SPAN>t<SPAN class="ft14">a</SPAN>n Zah<SPAN class="ft14">i</SPAN>da <SPAN class="ft14">B</SPAN>t. Abu <SPAN class="ft14">Baka</SPAN>r</P></TD>
-	<TD class="tr3 td9"><P class="p7 ft9"><SPAN class="ft2">Jawatan: </SPAN>Penolong Jurutera JA29</P></TD>
+	<TD colspan=3 class="tr3 td8"><P class="p11 ft9"><SPAN class="ft2">NAMA PEGAWAI : </SPAN><SPAN class="ft14"><?php echo $get_detail[0]->mrk_pegawai?></SPAN></P></TD>
+	<TD class="tr3 td9"><P class="p7 ft9"><SPAN class="ft2">Jawatan: </SPAN><?php echo $get_detail[0]->mrk_jawatan?></P></TD>
 </TR>
 <TR>
 	<TD class="tr4 td7"><P class="p7 ft13">&nbsp;</P></TD>
 	<TD class="tr4 td10"><P class="p7 ft13">&nbsp;</P></TD>
 	<TD class="tr4 td11"><P class="p7 ft13">&nbsp;</P></TD>
 	<TD class="tr4 td12"><P class="p7 ft13">&nbsp;</P></TD>
-	<TD class="tr4 td9"><P class="p7 ft2">Tarikh Laporan: <NOBR><SPAN class="ft3">2</SPAN>9-<SPAN class="ft3">0</SPAN>3-<SPAN class="ft3">20</SPAN>12</NOBR></P></TD>
+	<TD class="tr4 td9"><P class="p7 ft2">Tarikh Laporan: <SPAN class="ft3"><?php echo $get_detail[0]->mrk_tarikh?></SPAN></P></TD>
 </TR>
 <TR>
 	<TD class="tr5 td7"><P class="p7 ft13">&nbsp;</P></TD>

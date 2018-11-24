@@ -1,6 +1,6 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+    <!-- Content Header (Page header)
     <section class="content-header">
       <center>
         <h1>
@@ -8,6 +8,7 @@
         </h1>
       </center>
     </section>
+    -->
     <br>
 
     <!-- Main content -->
@@ -128,8 +129,8 @@
 
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('Report/Report_PSK_01') ?>" class="btn btn-success" role="button" target="_blank">Cetak PSK1</a>
-                <a href="<?php echo site_url('Report/Report_PSK_02') ?>" class="btn btn-success" role="button" target="_blank">Cetak PSK2</a>
+                  <a href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
+                  <a href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
               </div>
             </div>
           </form>

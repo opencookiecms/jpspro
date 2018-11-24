@@ -3,7 +3,7 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META http-equiv="X-UA-Compatible" content="IE=8">
-<TITLE>bcl_260336897.htm</TITLE>
+<TITLE>Pulangan Wang Jaminan Perlaksanaan</TITLE>
 <META name="generator" content="BCL easyConverter SDK 5.0.140">
 <STYLE type="text/css">
 
@@ -84,33 +84,33 @@ body {margin-top: 0px;margin-left: 0px;}
 <TABLE cellpadding=0 cellspacing=0 class="t0">
 <TR>
 	<TD class="tr0 td0"><P class="p0 ft0">Ruj. Tuan</P></TD>
-	<TD class="tr0 td1"><P class="p1 ft1">:</P></TD>
+	<TD class="tr0 td1"><P class="p1 ft1">:<?php echo $get_detail[0]->swjp_rujuktuan?></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p0 ft0">Ruj. Ka<SPAN class="ft1">mi</SPAN></P></TD>
-	<TD class="tr1 td1"><P class="p1 ft3"><SPAN class="ft2">: </SPAN>JPS.KMSB(SH/S)P/P/SG/107/2016</P></TD>
+	<TD class="tr1 td1"><P class="p1 ft3"><SPAN class="ft2">: </SPAN><?php echo $get_detail[0]->df_nosebutharga?></P></TD>
 </TR>
 <TR>
 	<TD class="tr2 td0"><P class="p0 ft0">Tarikh</P></TD>
 	<TD class="tr2 td1"><P class="p1 ft1">:</P></TD>
 </TR>
 </TABLE>
-<P class="p2 ft4">KETUA AKAUNTAN,</P>
+<P class="p2 ft4"><?php echo $get_detail[0]->swjp_kepada?>,</P>
 <P class="p3 ft5">JABATAN AKAUNTAN NEGERI KEDAH,</P>
 <P class="p4 ft5">ALOR STAR.</P>
 <P class="p5 ft1">melalui</P>
-<P class="p6 ft5">PENGARAH</P>
+<P class="p6 ft5"><?php echo $get_detail[0]->swjp_melalui?></P>
 <P class="p7 ft5">JABATAN PENGAIRAN DAN SALIRAN,</P>
 <P class="p7 ft5">NEGERI KEDAH DARUL AMAN,</P>
 <P class="p7 ft5">ALOR STAR</P>
 <P class="p8 ft1">Tuan,</P>
-<P class="p9 ft7">Pemulangan Wang Jaminan Perlaksanaan Bernilai RM <SPAN class="ft6">37,006.49</SPAN></P>
+<P class="p9 ft7">Pemulangan Wang Jaminan Perlaksanaan Bernilai RM <SPAN class="ft6"><?php echo number_format($get_detail[0]->lks_hargasebenar,2)?></SPAN></P>
 <TABLE cellpadding=0 cellspacing=0 class="t1">
 <TR>
 	<TD class="tr3 td2"><P class="p0 ft7">Kontraktor –</P></TD>
-	<TD class="tr3 td3"><P class="p10 ft8">ZM ONAL ENTERPRISE</P></TD>
+	<TD class="tr3 td3"><P class="p10 ft8"><?php echo $get_detail[0]->mrk_namakon?></P></TD>
 	<TD class="tr3 td4"><P class="p11 ft7">Kontrak No.:</P></TD>
-	<TD class="tr3 td5"><P class="p10 ft8">JPS.KMSB(SH/S)P/P/SG/107/2016</P></TD>
+	<TD class="tr3 td5"><P class="p10 ft8"><?php echo $get_detail[0]->df_nosebutharga?></P></TD>
 	<TD class="tr1 td6"><P class="p0 ft9">&nbsp;</P></TD>
 </TR>
 </TABLE>
@@ -124,8 +124,8 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p12 ft1">Sekian, terima kasih.</P>
 <P class="p17 ft7">“BERKHIDMAT UNTUK NEGARA” “CINTAILAH SUNGAI KITA”</P>
 <P class="p9 ft1">Saya yang menurut perintah,</P>
-<P class="p18 ft16">KAMARUDIN BIN SALEH</P>
-<P class="p4 ft3">JURUTERA DAERAH</P>
+<P class="p18 ft16"><?php echo $get_detail[0]->swjp_pegawaikuasa?></P>
+<P class="p4 ft3"><?php echo $get_detail[0]->swjp_jawatanpp?></P>
 <P class="p19 ft1">Jabatan Pengairan dan Saliran,</P>
 <P class="p19 ft1">Daerah Kuala Muda/Sik/Baling,</P>
 <P class="p7 ft1">Sg. Petani, Kedah Darul Aman</P>

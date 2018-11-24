@@ -71,11 +71,11 @@ body {margin-top: 0px;margin-left: 0px;}
 <TABLE cellpadding=0 cellspacing=0 class="t0">
 <TR>
 	<TD class="tr0 td0"><P class="p0 ft0">Ruj. Tuan</P></TD>
-	<TD class="tr0 td1"><P class="p1 ft1">:</P></TD>
+	<TD class="tr0 td1"><P class="p1 ft1">:<?php echo $get_detail[0]->skhas_rujuktuan?></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p0 ft0">Ruj. Ka<SPAN class="ft1">mi</SPAN></P></TD>
-	<TD class="tr1 td1"><P class="p1 ft2"><SPAN class="ft1">: </SPAN>JPS.KMSB(SH/S)P/P/SG/107/2016</P></TD>
+	<TD class="tr1 td1"><P class="p1 ft2"><SPAN class="ft1">: </SPAN><?php echo $get_detail[0]->df_nosebutharga?></P></TD>
 </TR>
 <TR>
 	<TD class="tr1 td0"><P class="p0 ft0">Tarikh</P></TD>
@@ -92,9 +92,9 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p5 ft3">KEBENARAN KHAS BAGI MEMASUKI TAWARAN</P>
 <TABLE cellpadding=0 cellspacing=0 class="t1">
 <TR>
-	<TD class="tr1 td2"><P class="p0 ft3">UNTUK GRED :</P></TD>
-	<TD class="tr1 td3"><P class="p0 ft3">KATEGORI :</P></TD>
-	<TD class="tr1 td4"><P class="p0 ft5">PENGKHUSUSAN :</P></TD>
+	<TD class="tr1 td2"><P class="p0 ft3">UNTUK GRED : <?php echo $get_detail[0]->mrk_gred?></P></TD>
+	<TD class="tr1 td3"><P class="p0 ft3">KATEGORI : <?php echo $get_detail[0]->mrk_kategori?></P></TD>
+	<TD class="tr1 td4"><P class="p0 ft5">PENGKHUSUSAN : <?php echo $get_detail[0]->mrk_khusus?></P></TD>
 </TR>
 </TABLE>
 <P class="p6 ft1">Merujuk kepada perkara di atas, dukacita dimaklumkan bahawa kontraktor seperti nama yang tertera di bawah ini telah tidak berjaya didalam tawaran Jabatan ini yang dimasuki beliau sebelum ini;</P>
@@ -102,16 +102,16 @@ body {margin-top: 0px;margin-left: 0px;}
 <TR>
 	<TD class="tr2 td5"><P class="p0 ft1">Nama</P></TD>
 	<TD class="tr2 td6"><P class="p7 ft1">:</P></TD>
-	<TD class="tr2 td7"><P class="p8 ft2">BERSAMA BAKTI ENTERPRISE</P></TD>
+	<TD class="tr2 td7"><P class="p8 ft2"><?php echo $get_detail[0]->mrk_namakon?></P></TD>
 </TR>
 <TR>
 	<TD colspan=2 class="tr3 td8"><P class="p7 ft1">No. Sebutharga :</P></TD>
-	<TD class="tr3 td7"><P class="p9 ft2">JPS.KMSB(SH/S)P/P/SG/107/2016</P></TD>
+	<TD class="tr3 td7"><P class="p9 ft2"><?php echo $get_detail[0]->df_nosebutharga?></P></TD>
 </TR>
 <TR>
 	<TD class="tr4 td5"><P class="p0 ft1">Projek</P></TD>
 	<TD class="tr4 td6"><P class="p7 ft1">:</P></TD>
-	<TD class="tr4 td7"><P class="p0 ft2">PROJEK CUBAAN</P></TD>
+	<TD class="tr4 td7"><P class="p0 ft2"><?php echo $get_detail[0]->df_tajuk?></P></TD>
 </TR>
 </TABLE>
 <P class="p10 ft1"><SPAN class="ft1">2.</SPAN><NOBR><SPAN class="ft6">Bersama-sama</SPAN></NOBR> ini disertakan Salinan Surat Kebenaran Khas tersebut.</P>
@@ -120,8 +120,8 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p5 ft1">Sekian, terima kasih.</P>
 <P class="p12 ft5">“BERKHIDMAT UNTUK NEGARA” “CINTAILAH SUNGAI KITA”</P>
 <P class="p13 ft1">Saya yang menurut perintah,</P>
-<P class="p14 ft7">KAMARUDIN BIN SALEH</P>
-<P class="p15 ft3">JURUTERA DAERAH</P>
+<P class="p14 ft7"><?php echo $get_detail[0]->skhas_pegawaikuasa?></P>
+<P class="p15 ft3"><?php echo $get_detail[0]->skhas_jawatanpp?></P>
 <P class="p15 ft1">Jabatan Pengairan Dan Saliran,</P>
 <P class="p3 ft1">Daerah Kuala Muda/Sik/Baling,</P>
 <P class="p3 ft1">Sungai Petani, Kedah.</P>
