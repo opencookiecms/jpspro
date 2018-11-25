@@ -120,8 +120,8 @@ class MRK extends CI_Controller{
 		}
 		else
 		{
-			$this->Mrk_model->create_laporansiapkerja();
-			$KodVod=$this->Mrk_model->getLastKodVodLSK();
+			$this->Mrk_model->create_mrktiga();
+			$KodVod=$this->Mrk_model->getLastKodVodMRK3();
 			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 
 		}
@@ -223,8 +223,35 @@ class MRK extends CI_Controller{
 				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 			}
 
+		}
+
+		public function Senarai_Semak($value="")
+		{
+			$this->load->database();
+			$data['get_detail']=$this->Mrk_model->get_projectdetailforSS($value);
+
+			$id = $this->input->post('hiddenid');
+			echo $id;
+			if($id == null)
+			{
+				$this->load->view('template/header');
+				$this->load->view('template/sidebar');
+				$this->load->view('pages/SS',$data);
+				$this->load->view('template/footer');
+			}
+			else {
+				$this->Mrk_model->create_ss();
+				$KodVod=$this->Mrk_model->getLastKodVodSS();
+				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			}
+
+
+
 
 		}
+
+
+
 
 
 
@@ -300,6 +327,29 @@ class MRK extends CI_Controller{
 		{
 			$this->Mrk_model->LSKUpdate($data ,$this->input->post('hiddenid'));
 			$KodVod=$this->Mrk_model->getLastKodVodLSK();
+			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+
+		}
+
+	}
+
+	public function MRK_03_Update()
+	{
+		$this->load->database();
+		$this->form_validation->set_rules('nokontr', 'No Pendaftaran PKK', 'required');
+		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
+
+		if($this->form_validation->run() == FALSE)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/MRK03');
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Mrk_model->MRK3Update($data ,$this->input->post('hiddenid'));
+			$KodVod=$this->Mrk_model->getLastKodVodMRK3();
 			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 
 		}
@@ -391,23 +441,31 @@ class MRK extends CI_Controller{
 
 	}
 
+	public function SS_Update()
+	{
+		$this->load->database();
+		$id = $this->input->post('hiddenid');
+		echo $id;
+		if($id == null)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/SS');
+			$this->load->view('template/footer');
+		}
+		else {
+			$this->Mrk_model->SSupdate($data, $this->input->post('hiddenid'));
+			$KodVod=$this->Mrk_model->getLastKodVodSS();
+			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+		}
+
+
+	}
+
 
 	/////MRK AND OTHER UPDATE GOOSE HERE//////////////////////////////////////////////////////////////
 
 
-	public function Senarai_Semak()
-	{
-
-
-		
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('pages/SS');
-		$this->load->view('template/footer');
-
-		$this->Mrk_model->create_ss();
-
-	}
 
 
 	public function mrksatu_view()

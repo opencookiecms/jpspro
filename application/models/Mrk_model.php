@@ -177,15 +177,55 @@ class Mrk_model extends CI_Model{
     $this->load->helper('url');
 
     //$mrk_nopkk = $this->input->post('nopkk');
-    $mrk_namapemb = $this->input->post('namapem');
-    $mrk_alamatpemb = $this->input->post('alamat');
-    $mrk_butirkerja = $this->input->post('butiran');
+    $mrksatutiga_id = $this->input->post('hiddenid');
+    $mrk_tigainden = $this->input->post('noinden');
+    $mrktiga_kodvots = $this->input->post('kodvot');
+    $tiga_bina = $this->input->post('bina');
+    $tiga_tadbir = $this->input->post('tadbir');
+    $tiga_kemajuan = $this->input->post('ran');
+    $tiga_kerangka = $this->input->post('ka');
+    $tiga_kerja = $this->input->post('ker');
+    $tiga_kemasan = $this->input->post('mas');
+    $tiga_luar = $this->input->post('luar');
+    $tiga_kontraktor = $this->input->post('kon');
+    $tiga_pegawai = $this->input->post('pegawai');
+    $tiga_jawatan = $this->input->post('jawatan');
+    $tiga_tarikah = $this->input->post('tarikh');
+    $tiga_catat1 =  $this->input->post('catat1');
+    $tiga_catat2 =  $this->input->post('catat2');
+    $tiga_catat3 =  $this->input->post('catat3');
+    $tiga_catat4 =  $this->input->post('catat4');
+    $tiga_catat5 =  $this->input->post('catat5');
+    $tiga_catat6 = $this->input->post('catat6');
+    $tiga_catat7 =  $this->input->post('catat7');
+    $tiga_catat8 =  $this->input->post('catat8');
+
 
 
     $data = array(
-      'mrk_nopkk' => $mrk_nopkk,
-      'mrk_namakon' => $mrk_namakon,
-      'mrk_nokontrak' => $mrk_nokontrak
+      'mrksatutiga_id' => $mrksatutiga_id,
+      'mrk_tigainden' => $mrk_tigainden,
+      'mrktiga_kodvots' => $mrktiga_kodvots,
+      'tiga_bina' => $tiga_bina,
+      'tiga_tadbir' =>  $tiga_tadbir,
+      'tiga_kemajuan' =>$tiga_kemajuan,
+      'tiga_kerangka' =>$tiga_kerangka,
+      'tiga_kerja' =>$tiga_kerja,
+      'tiga_kemasan' =>$tiga_kemasan,
+      'tiga_luar' => $tiga_luar,
+      'tiga_kontraktor' =>$tiga_kontraktor,
+      'tiga_pegawai' =>$tiga_pegawai,
+      'tiga_jawatan' =>  $tiga_jawatan,
+      'tiga_tarikah' =>  $tiga_tarikah,
+      'tiga_catat1'=>  $tiga_catat1,
+      'tiga_catat2'=>  $tiga_catat2,
+      'tiga_catat3'=>  $tiga_catat3,
+      'tiga_catat4'=>  $tiga_catat4,
+      'tiga_catat5'=>  $tiga_catat5,
+      'tiga_catat6'=>  $tiga_catat6,
+      'tiga_catat7'=>  $tiga_catat7,
+      'tiga_catat8'=>  $tiga_catat8
+
 
     );
 
@@ -220,6 +260,7 @@ class Mrk_model extends CI_Model{
 
   public function create_ss()
   {
+    //1 value
     $ss_chk1 = $this->input->post('chk1');
     $ss_chk2 = $this->input->post('chk2');
     $ss_chk3 = $this->input->post('chk3');
@@ -238,8 +279,14 @@ class Mrk_model extends CI_Model{
     $ss_chk16 = $this->input->post('chk16');
     $ss_chk17 = $this->input->post('chk17');
     $ss_chk18 = $this->input->post('chk18');
+    $ss_inden = $this->input->post('noinden');
+    $ss_mrkid = $this->input->post('hiddenid');
+    $ss_kodvot = $this->input->post('kodvot');
+    $ss_disediakan = $this->input->post('sedia');
+    $ss_date = $this->input->post('tarikhsedia');
 
     $data = array(
+
 
       'cb1' => $ss_chk1,
       'cb2' => $ss_chk2,
@@ -258,7 +305,12 @@ class Mrk_model extends CI_Model{
       'cb15' => $ss_chk15,
       'cb16' => $ss_chk16,
       'cb17' => $ss_chk17,
-      'cb18' => $ss_chk18
+      'cb18' => $ss_chk18,
+      'ss_inden' => $ss_inden,
+      'ss_mrkid'=>   $ss_mrkid,
+      'ss_kodvot' => $ss_kodvot,
+      'ss_disediakan' => $ss_disediakan,
+      'ss_date' =>  $ss_date
 
 
     );
@@ -429,6 +481,7 @@ class Mrk_model extends CI_Model{
     $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
     $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_tiga','mrk_tiga.mrksatutiga_id = mrk_satu.mrksatuid ','left' );
 
 
     $this->db->where('dp_projek.projek_id', $id);
@@ -511,6 +564,27 @@ class Mrk_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_projectdetailforSS($id)
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiapbaikicacat','mrk_perakuansiapbaikicacat.mrkid_id =mrk_satu.mrksatuid ','left');
+    $this->db->join('mrk_jaminanbank','mrk_jaminanbank.js_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('mrk_ppwjp','mrk_ppwjp.ppwjp_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('mrk_ss','mrk_ss.ss_mrkid=mrk_satu.mrksatuid','left');
+
+
+    $this->db->where('dp_projek.projek_id', $id);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -562,6 +636,21 @@ class Mrk_model extends CI_Model{
 
     return $KodVod; //return last id
   }
+
+  public function getLastKodVodSS()
+  {
+    $KodVod = $this->db->select('ss_kodvot')->order_by('ss_kodvot','desc')->limit(1)->get('mrk_ss')->row('ss_kodvot');
+
+    return $KodVod; //return last id
+  }
+
+  public function getLastKodVodMRK3()
+  {
+    $KodVod = $this->db->select('mrktiga_kodvots')->order_by('mrktiga_kodvots','desc')->limit(1)->get('mrk_tiga')->row('mrktiga_kodvots');
+
+    return $KodVod; //return last id
+  }
+
 
 
 
@@ -849,6 +938,129 @@ class Mrk_model extends CI_Model{
 
     $this->db->where('ppwjp_mrkid', $update);
     $this->db->update('mrk_ppwjp',$data);
+  }
+
+  public function SSupdate($data, $update)
+  {
+    //1 value
+    $ss_chk1 = $this->input->post('chk1');
+    $ss_chk2 = $this->input->post('chk2');
+    $ss_chk3 = $this->input->post('chk3');
+    $ss_chk4 = $this->input->post('chk4');
+    $ss_chk5 = $this->input->post('chk5');
+    $ss_chk6 = $this->input->post('chk6');
+    $ss_chk7 = $this->input->post('chk7');
+    $ss_chk8 = $this->input->post('chk8');
+    $ss_chk9 = $this->input->post('chk9');
+    $ss_chk10 = $this->input->post('chk10');
+    $ss_chk11 = $this->input->post('chk11');
+    $ss_chk12 = $this->input->post('chk12');
+    $ss_chk13 = $this->input->post('chk13');
+    $ss_chk14 = $this->input->post('chk14');
+    $ss_chk15 = $this->input->post('chk15');
+    $ss_chk16 = $this->input->post('chk16');
+    $ss_chk17 = $this->input->post('chk17');
+    $ss_chk18 = $this->input->post('chk18');
+    $ss_inden = $this->input->post('noinden');
+    $ss_mrkid = $this->input->post('hiddenid');
+    $ss_kodvot = $this->input->post('kodvot');
+    $ss_disediakan = $this->input->post('sedia');
+    $ss_date = $this->input->post('tarikhsedia');
+
+    $data = array(
+
+
+      'cb1' => $ss_chk1,
+      'cb2' => $ss_chk2,
+      'cb3' => $ss_chk3,
+      'cb4' => $ss_chk4,
+      'cb5' => $ss_chk5,
+      'cb6' => $ss_chk6,
+      'cb7' => $ss_chk7,
+      'cb8' => $ss_chk8,
+      'cb9' => $ss_chk9,
+      'cb10' => $ss_chk10,
+      'cb11' => $ss_chk11,
+      'cb12' => $ss_chk12,
+      'cb13' => $ss_chk13,
+      'cb14' => $ss_chk14,
+      'cb15' => $ss_chk15,
+      'cb16' => $ss_chk16,
+      'cb17' => $ss_chk17,
+      'cb18' => $ss_chk18,
+      'ss_inden' => $ss_inden,
+      'ss_mrkid'=>   $ss_mrkid,
+      'ss_kodvot' => $ss_kodvot,
+      'ss_disediakan' => $ss_disediakan,
+      'ss_date' =>  $ss_date
+
+
+    );
+
+
+        $this->db->where('ss_mrkid', $update);
+        $this->db->update('mrk_ss',$data);
+  }
+
+  public function MRK3Update($data, $update)
+  {
+    $this->load->helper('url');
+
+    //$mrk_nopkk = $this->input->post('nopkk');
+    $mrksatutiga_id = $this->input->post('hiddenid');
+    $mrk_tigainden = $this->input->post('noinden');
+    $mrktiga_kodvots = $this->input->post('kodvot');
+    $tiga_bina = $this->input->post('bina');
+    $tiga_tadbir = $this->input->post('tadbir');
+    $tiga_kemajuan = $this->input->post('ran');
+    $tiga_kerangka = $this->input->post('ka');
+    $tiga_kerja = $this->input->post('ker');
+    $tiga_kemasan = $this->input->post('mas');
+    $tiga_luar = $this->input->post('luar');
+    $tiga_kontraktor = $this->input->post('kon');
+    $tiga_pegawai = $this->input->post('pegawai');
+    $tiga_jawatan = $this->input->post('jawatan');
+    $tiga_tarikah = $this->input->post('tarikh');
+    $tiga_catat1 =  $this->input->post('catat1');
+    $tiga_catat2 =  $this->input->post('catat2');
+    $tiga_catat3 =  $this->input->post('catat3');
+    $tiga_catat4 =  $this->input->post('catat4');
+    $tiga_catat5 =  $this->input->post('catat5');
+    $tiga_catat6 = $this->input->post('catat6');
+    $tiga_catat7 =  $this->input->post('catat7');
+    $tiga_catat8 =  $this->input->post('catat8');
+
+
+
+    $data = array(
+      'mrksatutiga_id' => $mrksatutiga_id,
+      'mrk_tigainden' => $mrk_tigainden,
+      'mrktiga_kodvots' => $mrktiga_kodvots,
+      'tiga_bina' => $tiga_bina,
+      'tiga_tadbir' =>  $tiga_tadbir,
+      'tiga_kemajuan' =>$tiga_kemajuan,
+      'tiga_kerangka' =>$tiga_kerangka,
+      'tiga_kerja' =>$tiga_kerja,
+      'tiga_kemasan' =>$tiga_kemasan,
+      'tiga_luar' => $tiga_luar,
+      'tiga_kontraktor' =>$tiga_kontraktor,
+      'tiga_pegawai' =>$tiga_pegawai,
+      'tiga_jawatan' =>  $tiga_jawatan,
+      'tiga_tarikah' =>  $tiga_tarikah,
+      'tiga_catat1'=>  $tiga_catat1,
+      'tiga_catat2'=>  $tiga_catat2,
+      'tiga_catat3'=>  $tiga_catat3,
+      'tiga_catat4'=>  $tiga_catat4,
+      'tiga_catat5'=>  $tiga_catat5,
+      'tiga_catat6'=>  $tiga_catat6,
+      'tiga_catat7'=>  $tiga_catat7,
+      'tiga_catat8'=>  $tiga_catat8
+
+
+    );
+
+    $this->db->where('mrksatutiga_id', $update);
+    $this->db->update('mrk_tiga',$data);
   }
 
 

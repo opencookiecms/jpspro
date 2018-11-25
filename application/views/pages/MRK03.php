@@ -22,10 +22,19 @@
         <?php
           } ?>
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+          <?php echo validation_errors(); ?>
 
-        <?php echo validation_errors(); ?>
+            <?php
 
-          <?php echo form_open('mrk/MRK_03'); ?>
+                $pkkNo = $get_detail[0]->mrktiga_kodvots;
+                  if($pkkNo == null){
+                      echo form_open('mrk/MRK_03');
+                  }
+                  else {
+                    echo form_open('mrk/MRK_03_Update');
+                  }
+
+            ?>
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Maklumat Rekod Kerja - MRK 03</h3>
@@ -153,82 +162,107 @@
               </div>
 
               <hr>
+<div class="box-body">
+  <div class="col-md-12">
+  <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#ffff;background: #606c88;}
+.tg .tg-s6z2{text-align:center}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-s268{text-align:center;vertical-align:top}
+.tg .tg-0lax{text-align:center;vertical-align:top}
+</style>
+<?php
 
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-3">Pengurusan Tapak Bina</label>
-                  <input type="radio" name="urustapak" value="urustapak">
-                </div>
-              </div>
 
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-3">Pentadbiran</label>
-                  <input type="radio" name="tadbir" value="tadbir">
-                </div>
-              </div>
 
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-3">Perancangan/Pentadbiran</label>
-                  <input type="radio" name="rancang" value="rancang">
-                </div>
-              </div>
+ ?>
+<table class="tg" style="undefined;table-layout: fixed; width: 713px">
+<colgroup>
+<col style="width: 161px">
+<col style="width: 87px">
+<col style="width: 80px">
+<col style="width: 80px">
+<col style="width: 125px">
+<col style="width: 250px">
+</colgroup>
+  <tr>
+    <th class="tg-s268"></th>
+    <th class="tg-baqh">Terbaik<br>90% Keatas</th>
+    <th class="tg-baqh">Baik<br>75% - 89%</th>
+    <th class="tg-baqh">Sederhana<br>50% - 74%</th>
+    <th class="tg-s6z2">Tidak Memuaskan<br>50% kebawah</th>
+    <th class="tg-s6z2">Catatan</th>
+  </tr>
+  <tr>
+    <td class="tg-s268">Pengurusan Tapak Bina</td>
+    <td class="tg-0lax"><input type="radio" name="bina" value="90% - Keatas" <?php if($get_detail[0]->tiga_bina=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="bina" value="75% - 89%" <?php if($get_detail[0]->tiga_bina=="75% - 89%"){ echo "checked";}else{echo "unchecked";} ?> ></td>
+    <td class="tg-0lax"><input type="radio" name="bina" value="50% - 74%" <?php if($get_detail[0]->tiga_bina=="50% - 74%"){ echo "checked";}else{echo "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="bina" value="50% kebawah" <?php if($get_detail[0]->tiga_bina=="50% kebawah"){ echo "checked";}else{echo "unchecked";} ?>> </td>
+    <td class="tg-s268"><input type="text" class="form-control"name="catat1" value="<?php echo $get_detail[0]->tiga_catat1?>"></td>
 
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-3">Mutu Kerangka</label>
-                  <input type="radio" name="urustapak" value="urustapak">
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-3">Mutu Kerja-kerja</label>
-                  <input type="radio" name="urustapak" value="urustapak">
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-3">Mutu Kemasan</label>
-                  <input type="radio" name="urustapak" value="urustapak">
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-3">Mutu Kerja-kerja Luar</label>
-                  <input type="radio" name="urustapak" value="urustapak">
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-3">Pengawasan Kontraktor</label>
-                  <input type="radio" name="urustapak" value="urustapak">
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">Sokongan/Ulasan</label>
-
-                  <div class="col-sm-6">
-                  <textarea type="text" class="form-control" name="sokongan"></textarea>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">Kesimpulan</label>
-
-                  <div class="col-sm-6">
-                  <textarea type="text" class="form-control" name="kesimpulan"></textarea>
-                  </div>
-                </div>
-              </div>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Pentadbiran</td>
+    <td class="tg-0lax"><input type="radio" name="tadbir" value="90% - Keatas"<?php if($get_detail[0]->tiga_tadbir=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="tadbir" value="75% - 89%"<?php if($get_detail[0]->tiga_tadbir=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="tadbir" value="50% - 74%"<?php if($get_detail[0]->tiga_tadbir=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="tadbir" value="50% kebawah"<?php if($get_detail[0]->tiga_tadbir=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="text" class="form-control" name="catat2" value="<?php echo $get_detail[0]->tiga_catat2?>"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Perancagan/Kemajuan</td>
+    <td class="tg-0lax"><input type="radio" name="ran" value="90% - Keatas"<?php if($get_detail[0]->tiga_kemajuan=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="ran" value="75% - 89%"<?php if($get_detail[0]->tiga_kemajuan=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="ran" value="50% - 74%"<?php if($get_detail[0]->tiga_kemajuan=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="ran" value="50% kebawah"<?php if($get_detail[0]->tiga_kemajuan=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="text" class="form-control" name="catat3" value="<?php echo $get_detail[0]->tiga_catat3?>"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Mutu Kerangka</td>
+    <td class="tg-0lax"><input type="radio" name="ka" value="90% - Keatas"<?php if($get_detail[0]->tiga_kerangka=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="ka" value="75% - 89%"<?php if($get_detail[0]->tiga_kerangka=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="ka" value="50% - 74%"<?php if($get_detail[0]->tiga_kerangka=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="ka" value="50% kebawah"<?php if($get_detail[0]->tiga_kerangka=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="text" class="form-control" name="catat4" value="<?php echo $get_detail[0]->tiga_catat4?>"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Mutu Kerja-Kerja</td>
+    <td class="tg-0lax"><input type="radio" name="ker" value="90% - Keatas"<?php if($get_detail[0]->tiga_kerja=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="ker" value="75% - 89%"<?php if($get_detail[0]->tiga_kerja=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="ker" value="50% - 74%"<?php if($get_detail[0]->tiga_kerja=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="ker" value="50% kebawah"<?php if($get_detail[0]->tiga_kerja=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="text" class="form-control" name="catat5" value="<?php echo $get_detail[0]->tiga_catat5?>"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Mutu Kemasan</td>
+    <td class="tg-0lax"><input type="radio" name="mas" value="90% - Keatas"<?php if($get_detail[0]->tiga_kemasan=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="mas" value="75% - 89%"<?php if($get_detail[0]->tiga_kemasan=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="mas" value="50% - 74%"<?php if($get_detail[0]->tiga_kemasan=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="mas" value="50% kebawah"<?php if($get_detail[0]->tiga_kemasan=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="text" class="form-control" name="catat6" value="<?php echo $get_detail[0]->tiga_catat6?>"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Mutu Kerja-Kerja Luar</td>
+    <td class="tg-0lax"><input type="radio" name="luar" value="90% - Keatas"<?php if($get_detail[0]->tiga_luar=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="luar" value="75% - 89%"<?php if($get_detail[0]->tiga_luar=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="luar" value="50% - 74%"<?php if($get_detail[0]->tiga_luar=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="luar" value="50% kebawah"<?php if($get_detail[0]->tiga_luar=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="text" class="form-control" name="catat7" value="<?php echo $get_detail[0]->tiga_catat7?>"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Pengawasan Kontraktor</td>
+    <td class="tg-0lax"><input type="radio" name="kon" value="90% - Keatas"<?php if($get_detail[0]->tiga_kontraktor=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
+    <td class="tg-0lax"><input type="radio" name="kon" value="75% - 89%"<?php if($get_detail[0]->tiga_kontraktor=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="kon" value="50% - 74%"<?php if($get_detail[0]->tiga_kontraktor=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="radio" name="kon" value="50% kebawah"<?php if($get_detail[0]->tiga_kontraktor=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
+    <td class="tg-0lax"><input type="text" class="form-control" name="catat8" value="<?php echo $get_detail[0]->tiga_catat8?>"></td>
+  </tr>
+</table>
+</div>
+</div>
 
               <hr>
 
@@ -237,13 +271,16 @@
                   <label class="col-sm-2">Pegawai</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="pegawai" name="pegawai" placeholder="Pegawai">
+                    <input type="text" class="form-control" id="pegawai" name="pegawai" placeholder="Pegawai" value="<?php echo $get_detail[0]->tiga_pegawai?>">
+                    <input type="hidden"  name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>" >
+                    <input type="hidden"  name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>">
+                  <input type="hidden" name="hiddenid"  value="<?php echo $get_detail[0]->mrksatuid?>">
                   </div>
 
                   <label class="col-sm-2">Jawatan</label>
 
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan">
+                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan" value="<?php echo $get_detail[0]->tiga_jawatan?>">
                   </div>
                 </div>
               </div>
@@ -253,7 +290,7 @@
                   <label class="col-sm-2">Tarikh</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikh" name="tarikh">
+                    <input type="date" class="form-control" id="tarikh" name="tarikh" value="<?php echo $get_detail[0]->tiga_tarikah?>">
                   </div>
                 </div>
               </div>

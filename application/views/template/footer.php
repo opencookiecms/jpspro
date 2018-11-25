@@ -257,5 +257,18 @@
     })
   })
 </script>
+<script type="text/javascript">
+    // when page is ready
+    $(document).ready(function() {
+         // on form submit
+        $("#form").on('submit', function() {
+            // to each unchecked checkbox
+            $(this + 'input[type=checkbox]:not(:checked)').each(function () {
+                // set value 0 and check it
+                $(this).attr('checked', true).val(0);
+            });
+        })
+    })
+</script>
 </body>
 </html>

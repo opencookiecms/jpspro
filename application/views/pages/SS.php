@@ -22,21 +22,42 @@
                 <h3 class="box-title">Senarai Semakan</h3>
               </div><!-- end of box header-->
 
-                        <?php echo form_open('mrk/senaraisemak');?>
+
+                      <?php echo validation_errors(); ?>
+
+
+                      <?php
+
+                          $pkkNo = $get_detail[0]->ss_kodvot;
+                            if($pkkNo == null){
+                                echo form_open('mrk/Senarai_Semak');
+                            }
+                            else {
+                              echo form_open('mrk/SS_Update');
+                            }
+
+                      ?>
+
               <div class="box-body">
                 <div class="form-group">
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Surat Tuntutan</label>
-                    <input type="checkbox" name="chk1" value="1">
+                    <?php $check=$get_detail[0]->cb1; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+                    <input type="checkbox" name="chk1" value="1" <?php echo $ch1?> >
+
                   </div>
 
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Keputusan Panel</label>
-                    <input type="checkbox" name="chk2" value="1">
+                    <?php $check=$get_detail[0]->cb2; if($check==1){$ch2='checked';}else{$ch2='null';}?>
+                    <input type="checkbox" name="chk2" value="1" <?php echo $ch2 ?>>
+
                   </div>
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Surat Tawaran Kerja</label>
-                    <input type="checkbox" name="chk3" value="1">
+                    <?php $check=$get_detail[0]->cb3; if($check==1){$ch3='checked';}else{$ch3='null';}?>
+                    <input type="checkbox" name="chk3" value="1" <?php echo $ch3?>>
+
                   </div>
 
                 </div>
@@ -48,17 +69,23 @@
                 <div class="form-group">
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Inden / No Minta</label>
-                    <input type="checkbox" name="chk4" value="1">
+                    <?php $check=$get_detail[0]->cb4; if($check==1){$ch4='checked';}else{$ch4='null';}?>
+                    <input type="checkbox" name="chk4" value="1" <?php echo $ch4?>>
+
                   </div>
 
 
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Perakuan Siap Kerja</label>
-                    <input type="checkbox" name="chk5" value="1">
+                    <?php $check=$get_detail[0]->cb5; if($check==1){$ch5='checked';}else{$ch5='null';}?>
+                    <input type="checkbox" name="chk5" value="1" <?php echo $ch5?>>
+
                   </div>
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Detail Butiran Tawaran Terus</label>
-                    <input type="checkbox" name="chk6" value="1">
+                    <?php $check=$get_detail[0]->cb6; if($check==1){$ch6='checked';}else{$ch6='null';}?>
+                    <input type="checkbox" name="chk6" value="1" <?php echo $ch6?>>
+
                   </div>
 
                 </div>
@@ -70,16 +97,22 @@
                 <div class="form-group">
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Laporan Siap Kerja</label>
-                    <input type="checkbox" name="chk7" value="1">
+                    <?php $check=$get_detail[0]->cb7; if($check==1){$ch7='checked';}else{$ch7='null';}?>
+                    <input type="checkbox" name="chk7" value="1" <?php echo $ch7?>>
+
                   </div>
 
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Salinan Penyata Bank</label>
-                    <input type="checkbox" name="chk8" value="1">
+                    <?php $check=$get_detail[0]->cb8; if($check==1){$ch8='checked';}else{$ch8='null';}?>
+                    <input type="checkbox" name="chk8" value="1" <?php echo $ch8?>>
+
                   </div>
                   <div class="col-sm-3">
+                    <?php $check=$get_detail[0]->cb9; if($check==1){$ch9='checked';}else{$ch9='null';}?>
                     <label style="margin-right:20px;font-size:12px;">Perakuan Perubahan Kerja</label>
-                    <input type="checkbox" name="chk9" value="1">
+                    <input type="checkbox" name="chk9" value="1" <?php echo $ch9?>>
+
                   </div>
 
                 </div>
@@ -91,16 +124,23 @@
                 <div class="form-group">
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Salinan Sijil PKK</label>
-                    <input type="checkbox" name="chk10" value="1">
+                    <?php $check=$get_detail[0]->cb10; if($check==1){$ch10='checked';}else{$ch10='null';}?>
+                    <input type="checkbox" name="chk10" value="1" <?php echo $ch10;?>>
+
+
                   </div>
 
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Surat Akaun Sumpah</label>
-                    <input type="checkbox" name="chk11" value="1">
+                    <?php $check=$get_detail[0]->cb11; if($check==1){$ch11='checked';}else{$ch11='null';}?>
+                    <input type="checkbox" name="chk11" value="1" <?php echo $ch11?>>
+
                   </div>
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Borang MRK03</label>
-                    <input type="checkbox" name="chk12" value="1">
+                    <?php $check=$get_detail[0]->cb12; if($check==1){$ch12='checked';}else{$ch12='null';}?>
+                    <input type="checkbox" name="chk12" value="1" <?php echo $ch12?>>
+
                   </div>
 
                 </div>
@@ -112,12 +152,16 @@
                 <div class="form-group">
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Salinan Sijil CIDB</label>
-                    <input type="checkbox" name="chk13" value="1">
+                    <?php $check=$get_detail[0]->cb13; if($check==1){$ch13='checked';}else{$ch13='null';}?>
+                    <input type="checkbox" name="chk13" value="1" <?php echo $ch13?>>
+
                   </div>
 
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Gambar</label>
-                    <input type="checkbox" name="chk14" value="1">
+                    <?php $check=$get_detail[0]->cb14; if($check==1){$ch14='checked';}else{$ch14='null';}?>
+                    <input type="checkbox" name="chk14" value="1" <?php echo $ch14?>>
+
                   </div>
 
 
@@ -133,12 +177,16 @@
                 <div class="form-group">
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Jaminan Bank/ Insurans</label>
-                    <input type="checkbox" name="chk15" value="1">
+                    <?php $check=$get_detail[0]->cb15; if($check==1){$ch15='checked';}else{$ch15='null';}?>
+                    <input type="checkbox" name="chk15" value="1" <?php echo $ch15?>>
+
                   </div>
 
                   <div class="col-sm-3">
                     <label style="margin-right:20px;font-size:12px;">Wang Jaminan Perlaksanaan</label>
-                    <input type="checkbox" name="chk16" value="1">
+                      <?php $check=$get_detail[0]->cb16; if($check==1){$ch16='checked';}else{$ch16='null';}?>
+                    <input type="checkbox" name="chk16" value="1" <?php echo $ch16?>>
+
                   </div>
 
 
@@ -155,12 +203,16 @@
                               <div class="form-group">
                                 <div class="col-sm-3">
                                   <label style="margin-right:20px;font-size:12px;">Publik Liabiliti</label>
-                                  <input type="checkbox" name="chk17" value="1">
+                                  <?php $check=$get_detail[0]->cb17; if($check==1){$ch17='checked';}else{$ch17='null';}?>
+                                  <input type="checkbox" name="chk17" value="1" <?php echo $ch17?>>
+
                                 </div>
 
                                 <div class="col-sm-3">
                                   <label style="margin-right:20px;font-size:12px;">Workman/Compasation/PERKESO</label>
-                                  <input type="checkbox" name="chk18" value="1">
+                                  <?php $check=$get_detail[0]->cb18; if($check==1){$ch18='checked';}else{$ch18='null';}?>
+                                  <input type="checkbox" name="chk18" value="1" <?php echo $ch18?>>
+
                                 </div>
 
 
@@ -177,7 +229,8 @@
                 <div class="form-group">
                   <label class="col-sm-2">Disediakan Oleh :</label>
                   <div class="col-sm-3">
-                    <select type="text" class="form-control" id="sedia">
+                    <select type="text" class="form-control" id="sedia" name="sedia">
+                      <option value="<?php echo $get_detail[0]->ss_disediakan?>"><?php echo $get_detail[0]->ss_disediakan?></option>
                       <option value="km">Mohamad Ridzam B. Jusoh</option>
                       <option value="s">Nazar Shah B. Awang</option>
                       <option value="b">Shuhel B. Mohd Saad</option>
@@ -203,13 +256,15 @@
                   <label class="col-sm-2">Tarikh Penyediaan</label>
 
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhsedia">
+                    <input type="date" class="form-control" id="tarikhsedia" name="tarikhsedia" value="<?php echo $get_detail[0]->ss_date?>">
                   </div>
                 </div>
               </div>
 
 
-
+              <input type="hidden" readonly name="hiddenid"  value="<?php echo $get_detail[0]->mrksatuid?>">
+              <input type="hidden" readonly  name="kodvot"  value="<?php echo $get_detail[0]->df_kodvot?>">
+              <input type="hidden" readonly  name="noinden"  value="<?php echo $get_detail[0]->mrk_noinden?>">
               <div class="box-footer">
                 <button type="submit" name="submit" class="btn btn-default">Simpan</button>
                 <a href="<?php echo site_url('Report/Report_SS/20') ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
