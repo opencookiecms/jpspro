@@ -1,10 +1,10 @@
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper b" >
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="row">
         <div class="col-lg-3 col-xs-6">
-      <h2>
+      <h2 style="color:#fff; font-weight:bold;">
         Daftar Projek
       </h2>
         </div>
@@ -44,9 +44,9 @@
             <a href="<?php echo site_url('daftar/stepdua') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <!-- ./col 
+        <!-- ./col
         <div class="col-lg-3 col-xs-6">
-          <!-- small box 
+          <!-- small box
           <div class="small-box bg-yellow">
             <div class="inner">
               <h3>3</h3>

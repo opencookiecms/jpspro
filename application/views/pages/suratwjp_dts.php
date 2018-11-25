@@ -1,6 +1,6 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-  <!-- Content Header (Page header) -->
+<div class="content-wrapper b">
+  <!-- Content Header (Page header)
   <section class="content-header">
     <center>
       <h2>
@@ -8,6 +8,7 @@
       </h2>
     </center>
   </section>
+-->
   <br>
 
   <!-- Main content -->
@@ -38,10 +39,10 @@
               <tbody>
 
                 <?php
-                $i = 1; 
+                $i = 1;
 
                 foreach ($get_suratwjp as $row) {
-                  
+
                   ?>
 
                  <tr>
@@ -49,8 +50,8 @@
                   <td><a href="#" ><?php echo $row->swjp_kepada?></a></td> <!--Show data in list view-->
                   <td><?php echo $row->swjp_rujuktuan?></td>
                   <td><?php echo $row->swjp_alamat?></td>
-                  <td><?php echo $row->swjp_rujukkami?></td>
-                  <td><?php echo $row->swjp_nokon?></td>
+                  <td><?php echo $row->df_nosebutharga?></td>
+                  <td><?php echo $row->mrk_namakon?></td>
                   <td><button type="edit" name="view" class="btn btn-default">View</button>
                   <button type="delete" name="delete" class="btn btn-default">Delete</button></td>
                 </tr>

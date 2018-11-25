@@ -1,9 +1,9 @@
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper b">
     <!-- Content Header (Page header) -->
     <section class="content-header">
 
-        <h2>
+        <h2 class="f">
           Maklumat Projek
         </h2>
 

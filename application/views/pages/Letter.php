@@ -1,10 +1,10 @@
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper b">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="row">
         <div class="col-lg-5 col-xs-6">
-      <h1>
+      <h1 class="f">
         Surat-Menyurat
       </h1>
         </div>

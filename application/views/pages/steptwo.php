@@ -3,8 +3,8 @@
     .error {color: #FF0000;}
   </style>
 
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+  <div class="content-wrapper b">
+    <!-- Content Header (Page header)
     <section class="content-header">
       <center>
         <h1>
@@ -12,6 +12,7 @@
         </h1>
       </center>
     </section>
+    -->
     <br>
 
     <!-- Main content -->
@@ -26,7 +27,7 @@
         } ?>
         <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
         <!--<form  method="POST" action="?php echo site_url('Insert_steptwo/submit') ?>">-->
-        <h2><?php echo $title; ?></h2>
+        <h2 class="f"><?php echo $title; ?></h2>
         <?php echo $idval; ?>
 
         <?php echo validation_errors(); ?>
@@ -256,7 +257,7 @@
           <div class="box-footer">
             <button type="submit" name="submit" class="btn btn-default">Seterusnya</button>
 
-            
+
           </div>
         </div>
       </form>

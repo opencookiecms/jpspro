@@ -50,7 +50,10 @@
 
     </div>
   </div>
+  <!--
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+-->
+  <script src="<?php echo base_url();?>/assets/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.countdown.min.js"></script>
   <script type="text/javascript">
