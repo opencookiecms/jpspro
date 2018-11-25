@@ -2,14 +2,14 @@
 <style>
 .error {color: #FF0000;}
 </style>
-<div class="content-wrapper">
+<div class="content-wrapper b">
   <!-- Content Header (Page header) -->
   <section class="content-header">
-    <center>
-      <h1>
-        Daftar Projek
+
+      <h1 class="f">
+        Kemaskini Sebut Harga
       </h1>
-    </center>
+
   </section>
   <br>
 
@@ -33,7 +33,7 @@
           <?php
 
 
-            echo form_open('mrk/Projek_Update');
+            echo form_open('projek/Update_Projek01');
 
 
           ?>
@@ -46,13 +46,14 @@
 
             </div><!-- end of box header-->
 
-            <h5><span class="error"> * Dikehendaki mengisi semua bahagian</span></h5>
+            <h5><span class="error" style="padding-left:10px;"> * Dikehendaki mengisi semua bahagian</span></h5>
             <div class="box-body">
               <div class="form-group">
                 <label class="col-sm-1">No Sebutharga</label>
 
                 <div class="col-sm-3">
                   <input type="text" class="form-control" name="nosebut"  placeholder="No Fail Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                  <input type="hidden" readonly class="form-control" name="hiddenid"  value="<?php echo $get_detail[0]->projek_id?>">
                 </div>
                 <label class="col-sm-2">Tarikh Permohonan</label>
 

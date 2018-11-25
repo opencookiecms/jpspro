@@ -1,6 +1,6 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-  <!-- Content Header (Page header) -->
+<div class="content-wrapper b">
+  <!-- Content Header (Page header)
   <section class="content-header">
     <center>
       <h2>
@@ -8,6 +8,7 @@
       </h2>
     </center>
   </section>
+-->
   <br>
 
   <!-- Main content -->

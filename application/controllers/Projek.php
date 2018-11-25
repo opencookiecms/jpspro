@@ -38,30 +38,37 @@ class Projek extends CI_Controller
 
   public function Update_Projek01($value="")
   {
-    $this->load->database();
-    $data['get_detail']=$this->Projek_model->get_updateprojek($value);
+      $this->load->database();
+      $data['get_detail']=$this->Projek_model->get_updateprojek($value);
 
-    if($this->form_validation->run() == FALSE)
-    {
-      $this->load->view('template/header');
-      $this->load->view('template/sidebar');
-      $this->load->view('pages/ProjekUpdate01', $data);
-      $this->load->view('template/footer');
-    }
-    else {
-      $this->Mrk_model->create_mrksatu();//load from model and call last id
-			$KodVod=$this->Mrk_model->getLastKodVod();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+     $id = $this->input->post('hiddenid');
+     echo $id;
+      if ($id==null)
+      {
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('pages/ProjekUpdate01', $data);
+        $this->load->view('template/footer');
+      }
+      else {
+        $this->Projek_model->ProjectUpdate01($data ,$this->input->post('hiddenid'));
+       redirect(base_url('projek/Update_Projek01/'.$id)); //redirect last id to another step
+      }
+
     }
 
-  }
+
+
 
   public function Update_Projek02($value="")
   {
     $this->load->database();
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
+    $id = $this->input->post('hiddenid');
+    echo $id;
 
-    if($this->form_validation->run() == FALSE)
+
+    if($id == null)
     {
       $this->load->view('template/header');
       $this->load->view('template/sidebar');
@@ -69,9 +76,8 @@ class Projek extends CI_Controller
       $this->load->view('template/footer');
     }
     else {
-      $this->Mrk_model->create_mrksatu();//load from model and call last id
-      $KodVod=$this->Mrk_model->getLastKodVod();
-      redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+      $this->Projek_model->ProjectUpdate02($data ,$this->input->post('hiddenid'));
+      redirect(base_url('projek/Update_Projek02/'.$id)); //redirect last id to another step
     }
 
   }
@@ -81,8 +87,10 @@ class Projek extends CI_Controller
   {
     $this->load->database();
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
+    $id = $this->input->post('dp_idpost');
+    echo $id;
 
-    if($this->form_validation->run() == FALSE)
+    if($id == null)
     {
       $this->load->view('template/header');
       $this->load->view('template/sidebar');
@@ -90,9 +98,8 @@ class Projek extends CI_Controller
       $this->load->view('template/footer');
     }
     else {
-      $this->Mrk_model->create_mrksatu();//load from model and call last id
-			$KodVod=$this->Mrk_model->getLastKodVod();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+      $this->Projek_model->ProjectUpdate03($data ,$this->input->post('dp_idpost'));
+      redirect(base_url('projek/Update_Projek03/'.$id)); //redirect last id to another step
     }
 
   }

@@ -109,4 +109,6 @@ class Daftar extends CI_Controller{
 
   }
 
+
+
 }
