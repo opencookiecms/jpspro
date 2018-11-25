@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2018 at 07:40 PM
+-- Generation Time: Nov 25, 2018 at 07:06 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -203,7 +203,7 @@ CREATE TABLE `mrk_laporansiap` (
 --
 
 INSERT INTO `mrk_laporansiap` (`lskid`, `lsk_noinden`, `lsk_lanjutmasa`, `lks_hargasebenar`, `lsk_tarikhkerjasiap`, `lsk_peruntukan`, `lsk_laporanpegawai`, `lsk_pegawaipenyelia`, `lsk_jawatanpen`, `lsk_tarikhperakui`, `lsk_ketuabahagian`, `lsk_jawatanketuab`, `lsk_juruteraj`, `lsk_jawatanjuruteraj`, `lsk_juruterad`, `lsk_jawatanjuruterad`, `lsk_perkeso`, `lsk_liability`, `lskmrksatuid`, `lks_kodvots`) VALUES
-(1, '0002991882', '2018-11-01', '90', '2018-11-21', '002992/12393-211/0024', 'Laporan-Laporan Sekolah', 'Haji Shukri B. Man', 'Penolong Jurutera JA29', '2018-11-21', 'Yahaya B. Shariff', 'Penolong Jurutera JA29', 'Mohd. Daud Hamid', 'Penolong Jurutera JA29', 'Zainuddin bin Yusoff, AMP., BCK', 'Jurutera ( Baling )', 'PK2932PP', 'PL33922', 18, 'JPS0001922');
+(1, '0002991882', '2018-11-01', '326523', '2018-11-21', '002992/12393-211/0024', 'Laporan-Laporan Sekolah', 'Haji Shukri B. Man', 'Penolong Jurutera JA29', '2018-11-21', 'Yahaya B. Shariff', 'Penolong Jurutera JA29', 'Mohd. Daud Hamid', 'Penolong Jurutera JA29', 'Zainuddin bin Yusoff, AMP., BCK', 'Jurutera ( Baling )', 'PK2932PP', 'PL33922', 18, 'JPS0001922');
 
 -- --------------------------------------------------------
 
@@ -257,7 +257,7 @@ CREATE TABLE `mrk_perakuansiapbaikicacat` (
 --
 
 INSERT INTO `mrk_perakuansiapbaikicacat` (`id`, `mrk_nowangjaminansatu`, `mrk_hargasatu`, `mrk_bakiwangjamin`, `mrk_nowangjaminandua`, `mrk_hargadua`, `mrk_wangjaminlaksana`, `mrk_tambahbonlaksana`, `mrk_bakibonlaksana`, `mrk_pegawaipenguasa`, `mrk_jawatanpp`, `mrkid_id`, `psmk_kodvots`, `psmk_inden`) VALUES
-(4, 'JK/2093/SSS', '20', '20', 'JK/2093/SSS', '20', '50', '50', '50', 'HELLO BOS', 'IR', 18, 'JPS0001922', '0002991882');
+(4, 'JK/2093/SSS', '20', '20', 'JK/2093/SSS', '20', '50', '50', '50', 'Nama Pegawai', 'IR', 18, 'JPS0001922', '0002991882');
 
 -- --------------------------------------------------------
 
@@ -320,7 +320,7 @@ CREATE TABLE `mrk_satu` (
 --
 
 INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mrk_alamatkon`, `mrk_nokontrak`, `mrk_noinden`, `mrk_tajukkerja`, `mrk_kategori`, `mrk_daerah`, `mrk_negeri`, `mrk_khusus`, `mrk_tarikhmulakon`, `mrk_tarikhjangkasiap`, `mrk_pegawai`, `mrk_jawatan`, `mrk_kosprojek`, `mrk_tarikh`, `mrksatu_id`, `mrks_kodvot`) VALUES
-(18, 'PKK299393', 'G1 | Sehingga RM200,000.00', 'RCS  SYSTEM COMPUTER', 'TAMAN DELIMA', 'JKL/ST/201888/OP/200', '0002991882', 'PROTECTIVE FUNCTION ANALOG MULTIMETER', 'CE | Pembinaan Kejuruteraan Awam', 'kuala muda', 'kedah', 'CE 02', '2018-11-07', '2018-11-14', 'Haji Shukri B. Man', 'Penolong Jurutera JA29', '1200', '2018-11-15', 0, 'JPS0001922');
+(18, 'PKK299393', 'G1', 'RCS  SYSTEM COMPUTER', 'TAMAN DELIMA', 'JKL/ST/201888/OP/200', '0002991882', 'PROTECTIVE FUNCTION ANALOG MULTIMETER', 'CE', 'kuala muda', 'kedah', 'CE 02', '2018-11-07', '2018-11-14', 'Haji Shukri B. Man', 'Penolong Jurutera JA29', '576533', '2018-11-15', 0, 'JPS0001922');
 
 -- --------------------------------------------------------
 
@@ -331,7 +331,7 @@ INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mr
 CREATE TABLE `mrk_ss` (
   `ss_id` int(11) NOT NULL,
   `cb1` tinyint(1) DEFAULT NULL,
-  `cb2` tinyint(1) DEFAULT NULL,
+  `cb2` int(1) DEFAULT NULL,
   `cb3` tinyint(1) DEFAULT NULL,
   `cb4` tinyint(1) DEFAULT NULL,
   `cb5` tinyint(1) DEFAULT NULL,
@@ -348,9 +348,9 @@ CREATE TABLE `mrk_ss` (
   `cb16` tinyint(1) DEFAULT NULL,
   `cb17` tinyint(1) DEFAULT NULL,
   `cb18` tinyint(1) DEFAULT NULL,
-  `ss_inden` int(11) DEFAULT NULL,
+  `ss_inden` varchar(150) DEFAULT NULL,
   `ss_mrkid` int(11) DEFAULT NULL,
-  `ss_nosebuthaga` varchar(150) DEFAULT NULL,
+  `ss_kodvot` varchar(150) DEFAULT NULL,
   `ss_disediakan` varchar(200) DEFAULT NULL,
   `ss_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -359,17 +359,8 @@ CREATE TABLE `mrk_ss` (
 -- Dumping data for table `mrk_ss`
 --
 
-INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, `cb8`, `cb9`, `cb10`, `cb11`, `cb12`, `cb13`, `cb14`, `cb15`, `cb16`, `cb17`, `cb18`, `ss_inden`, `ss_mrkid`, `ss_nosebuthaga`, `ss_disediakan`, `ss_date`) VALUES
-(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, `cb8`, `cb9`, `cb10`, `cb11`, `cb12`, `cb13`, `cb14`, `cb15`, `cb16`, `cb17`, `cb18`, `ss_inden`, `ss_mrkid`, `ss_kodvot`, `ss_disediakan`, `ss_date`) VALUES
+(48, 1, 1, 1, 1, 1, NULL, NULL, 1, NULL, NULL, NULL, 1, NULL, NULL, 1, 1, 1, 1, '0002991882', 18, 'JPS0001922', 'b', '2018-11-15');
 
 -- --------------------------------------------------------
 
@@ -417,7 +408,7 @@ CREATE TABLE `mrk_suratmrk` (
 --
 
 INSERT INTO `mrk_suratmrk` (`id`, `s_rujuktuan`, `s_tarikhtuan`, `s_jenisborang`, `s_noinden`, `s_pegawaikuasa`, `s_jawatanpp`, `s_mrkid`, `s_kodvot`) VALUES
-(3, 'JPS/22/22/23312', '2018-11-21', 'MRK 03', '0002991882', 'KIKI', 'IR', 18, 'JPS0001922');
+(3, 'JPS/22/22/23312', '2018-11-21', 'MRK 03', '0002991882', 'Nama jurutera', 'IR', 18, 'JPS0001922');
 
 -- --------------------------------------------------------
 
@@ -445,7 +436,7 @@ CREATE TABLE `mrk_suratwjp` (
 --
 
 INSERT INTO `mrk_suratwjp` (`id`, `swjp_kepada`, `swjp_rujuktuan`, `swjp_alamat`, `swjp_melalui`, `swjp_wangjamin`, `swjp_alamatlalu`, `swjp_pegawaikuasa`, `swjp_jawatanpp`, `swjp_inden`, `swjp_kodvot`, `swjp_mrkid`) VALUES
-(1, 'BANK NEGARA MALAYSIA', 'JPS/22/22/23312', 'PERAK', 'KL', NULL, 'KUALA LUMPUR', 'KIKI', 'IR', '0002991882', 'JPS0001922', 18);
+(1, 'KETUA AKAUNTAN', 'JPS/22/22/23312', 'JABATAN AKAUNTAN NEGERI KEDAH,\r\nALOR STAR.', 'PENGARAH', NULL, 'JABATAN AKAUNTAN NEGERI KEDAH DARUL AMAN,\r\nALOR STAR.', 'NAMA JURUTERA', 'IR', '0002991882', 'JPS0001922', 18);
 
 -- --------------------------------------------------------
 
@@ -457,8 +448,34 @@ CREATE TABLE `mrk_tiga` (
   `mrktigaid` int(11) NOT NULL,
   `mrksatutiga_id` int(11) DEFAULT NULL,
   `mrk_tigainden` varchar(150) COLLATE utf8_bin DEFAULT NULL,
-  `mrktiga_kodvots` varchar(150) COLLATE utf8_bin DEFAULT NULL
+  `mrktiga_kodvots` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_bina` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_tadbir` varchar(250) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_kemajuan` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_kerangka` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_kerja` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_kemasan` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_luar` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_kontraktor` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_pegawai` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_jawatan` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_tarikah` date DEFAULT NULL,
+  `tiga_catat1` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_catat2` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_catat3` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_catat4` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_catat5` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_catat6` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_catat7` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `tiga_catat8` varchar(150) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `mrk_tiga`
+--
+
+INSERT INTO `mrk_tiga` (`mrktigaid`, `mrksatutiga_id`, `mrk_tigainden`, `mrktiga_kodvots`, `tiga_bina`, `tiga_tadbir`, `tiga_kemajuan`, `tiga_kerangka`, `tiga_kerja`, `tiga_kemasan`, `tiga_luar`, `tiga_kontraktor`, `tiga_pegawai`, `tiga_jawatan`, `tiga_tarikah`, `tiga_catat1`, `tiga_catat2`, `tiga_catat3`, `tiga_catat4`, `tiga_catat5`, `tiga_catat6`, `tiga_catat7`, `tiga_catat8`) VALUES
+(1, 18, '0002991882', 'JPS0001922', '90% - Keatas', '75% - 89%', '50% - 74%', '75% - 89%', '50% - 74%', '50% - 74%', '50% - 74%', '50% - 74%', 'TEST', 'IR', '2018-11-22', 'catat1', 'catat1gr', 'catat1', 'catat1', 'catat1', 'catat1', 'catat1', 'catat1');
 
 --
 -- Indexes for dumped tables
@@ -622,7 +639,7 @@ ALTER TABLE `mrk_satu`
 -- AUTO_INCREMENT for table `mrk_ss`
 --
 ALTER TABLE `mrk_ss`
-  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratkhas`
@@ -646,7 +663,7 @@ ALTER TABLE `mrk_suratwjp`
 -- AUTO_INCREMENT for table `mrk_tiga`
 --
 ALTER TABLE `mrk_tiga`
-  MODIFY `mrktigaid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `mrktigaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
