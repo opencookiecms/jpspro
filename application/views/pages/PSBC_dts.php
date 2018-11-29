@@ -39,7 +39,7 @@
                 <?php foreach ($get_projek as $row): ?>
 
                  <tr>
-                  <td><?php echo $row->id?></td>
+                  <td><?php echo $row->mrksatuid?></td>
                   <td><a href="#" ><?php echo $row->mrk_nopkk?></a></td> <!--Show data in list view-->
                   <td><?php echo $row->mrk_namakon?></td>
                   <td><?php echo $row->mrk_noinden?></td>

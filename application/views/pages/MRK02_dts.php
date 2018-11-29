@@ -39,13 +39,13 @@
                 <?php foreach ($get_projek as $row): ?>
 
                  <tr>
-                  <td><?php echo $row->id?></td>
+                  <td><?php echo $row->mrksatuid?></td>
                   <td><a href="#" ><?php echo $row->mrk_nopkk?></a></td> <!--Show data in list view-->
                   <td><?php echo $row->mrk_namakon?></td>
                   <td><?php echo $row->mrk_noinden?></td>
                   <td><?php echo $row->mrk_tajukkerja?></td>
                   <td><button type="edit" name="view" class="btn btn-default">View</button>
-                  <button type="delete" name="delete" class="btn btn-default">Delete</button></td>
+                  <a href="#" class="delete_data" id="<?php echo $row->mrksatuid; ?>">Delete</a></td>
                 </tr>
 
               <?php endforeach; ?>

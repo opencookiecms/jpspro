@@ -33,7 +33,7 @@ class Rekod extends CI_Controller
     $this->load->view('template/header');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_rekodview();
-    $this->load->view('pages/mrkdua_details', $data);
+    $this->load->view('pages/MRK02_dts', $data);
     $this->load->view('template/footer');
 
   }
@@ -44,7 +44,7 @@ class Rekod extends CI_Controller
     $this->load->view('template/header');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_rekodview();
-    $this->load->view('pages/mrktiga_details', $data);
+    $this->load->view('pages/mrk03_dts', $data);
     $this->load->view('template/footer');
 
   }
@@ -55,7 +55,7 @@ class Rekod extends CI_Controller
     $this->load->view('template/header');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_rekodview();
-    $this->load->view('pages/mrklaporansiap_details', $data);
+    $this->load->view('pages/lsk_dts', $data);
     $this->load->view('template/footer');
 
   }
@@ -77,7 +77,7 @@ class Rekod extends CI_Controller
     $this->load->view('template/header');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_rekodview();
-    $this->load->view('pages/mrkperakuansiapbaikicacat_details', $data);
+    $this->load->view('pages/psbc_dts', $data);
     $this->load->view('template/footer');
 
   }

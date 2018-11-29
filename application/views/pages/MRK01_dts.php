@@ -45,7 +45,7 @@
                   <td><?php echo $row->mrk_namakon?></td>
                   <td><?php echo $row->mrk_noinden?></td>
                   <td><?php echo $row->mrk_tajukkerja?></td>
-                  <td><button type="edit" name="view" class="btn btn-default">View</button>
+                  <td><a href="<?php echo site_url('projek') ?>">View</a>
                   <a href="#" class="delete_data" id="<?php echo $row->mrksatuid; ?>">Delete</a></td>
                 </tr>
 
