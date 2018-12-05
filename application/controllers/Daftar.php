@@ -20,7 +20,7 @@ class Daftar extends CI_Controller{
 
       //good luck
     $this->load->view('template/header');
-    $this->load->view('template/sidebar');
+    //$this->load->view('template/sidebar');
     $this->load->view('pages/daftar');
     $this->load->view('template/footer');
   }

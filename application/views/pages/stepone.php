@@ -34,13 +34,14 @@
       <?php echo form_open('daftar/stepsatu'); ?>
       <div class="box box-info">
         <div class="box-header with-border">
-          <h3 class="box-title">Daftar</h3>
+          <h3 class="box-title">Borang Daftar Sebut Harga</h3>
         </div><!-- end of box header-->
-
+        <div class="box-body">
         <h5><span class="error"> * Dikehendaki mengisi semua bahagian</span></h5>
+      </div>
         <div class="box-body">
           <div class="form-group">
-            <label class="col-sm-1">No Sebutharga</label>
+            <label class="col-sm-2">No Sebutharga</label>
 
             <div class="col-sm-3">
               <input type="text" class="form-control" name="nosebut"  placeholder="No Fail Sebutharga">
@@ -50,6 +51,12 @@
             <div class="col-sm-2">
               <input type="date" class="form-control" name="tarikhmohon"placeholder="Tarikh Permohonan">
             </div>
+
+          </div>
+
+        </div><!--end of body-->
+        <div class="box-body">
+          <div class="form-group">
             <label class="col-sm-2">Jenis Sebutharga</label>
 
             <div class="col-sm-2">
@@ -61,33 +68,39 @@
               </select>
             </div>
           </div>
-
-        </div><!--end of body-->
+        </div>
 
         <div class="box-body">
           <div class="form-group">
-            <label class="col-sm-1">Tajuk Projek</label>
+            <label class="col-sm-2">Tajuk Projek</label>
 
             <div class="col-sm-6">
               <textarea type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"></textarea>
             </div>
 
-            <label class="col-sm-1">Daerah</label>
-
-            <div class="col-sm-2">
-              <select type="text" class="form-control" name="daerah">
-                <option value=""></option>
-                <option value="Sik">Sik</option>
-                <option value="Baling">Baling</option>
-                <option value="Kuala Muda">Kuala Muda</option>
-              </select>
-            </div>
           </div>
         </div>
 
+                <div class="box-body">
+                  <div class="form-group">
+
+                    <label class="col-sm-2">Daerah</label>
+
+                    <div class="col-sm-2">
+                      <select type="text" class="form-control" name="daerah">
+                        <option value=""></option>
+                        <option value="Sik">Sik</option>
+                        <option value="Baling">Baling</option>
+                        <option value="Kuala Muda">Kuala Muda</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+
 
         <div class="box-footer">
-          <button type="submit" name="submit" class="btn btn-default">Seterusnya</button>
+          <button type="submit" name="submit" class="btn btn-primary">Seterusnya</button>
         </div>
       </div>
     </form>

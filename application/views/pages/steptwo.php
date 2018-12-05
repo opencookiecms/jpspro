@@ -35,10 +35,12 @@
         <?php echo form_open('daftar/stepdua'); ?>
         <div class="box box-info">
           <div class="box-header with-border">
-            <h3 class="box-title">Daftar</h3>
+            <h3 class="box-title">Borang Daftar Sebut Harga</h3>
           </div>
 
+          <div class="box-body">
           <h5><span class="error"> * Dikehendaki mengisi semua bahagian</span></h5>
+        </div>
 
           <div class="box-body">
             <div class="form-group">
@@ -67,9 +69,9 @@
 
               <div class="col-sm-2">
                 <select type="text" class="form-control" name="kategori" placeholder="Kategori">
-                  <option value="CE | Pembinaan Kejuruteraan Awam">CE</option>
-                  <option value="B | Pembinaan Bangunan">B</option>
-                  <option value="ME | Mekanikal & Elektrikal">ME</option>
+                  <option value="CE">CE</option>
+                  <option value="B">B</option>
+                  <option value="ME">ME</option>
                 </select>
               </div>
             </div>
@@ -118,6 +120,13 @@
               <label class="col-sm-1">Bulan</label>
             </div>
           </div>
+          <div class="box-body">
+            <div class="form-group">
+              <div class="box-header with-border">
+              <h3 class="box-title"></h3>
+              </div>
+            </div>
+          </div>
 
           <div class="box-body">
             <div class="form-group">
@@ -135,7 +144,7 @@
               <label class="col-sm-3">Tarikh Notis Dikeluarkan</label>
 
               <div class="col-sm-2">
-                <input type="date" class="form-control" name="notiskeluar" >
+                <input type="text" class="form-control" name="notiskeluar" >
               </div>
             </div>
           </div>
@@ -145,7 +154,7 @@
               <label class="col-sm-3">Tarikh Lawat Tapak/Taklimat</label>
 
               <div class="col-sm-2">
-                <input type="date" class="form-control"name="lawattapak">
+                <input type="text" class="form-control"name="lawattapak">
               </div>
             </div>
           </div>
@@ -155,7 +164,7 @@
               <label class="col-sm-3">Tarikh Dokumen Mula Dijual</label>
 
               <div class="col-sm-2">
-                <input type="date" class="form-control" name="docmula">
+                <input type="text" class="form-control" name="docmula">
               </div>
             </div>
           </div>
@@ -165,7 +174,7 @@
               <label class="col-sm-3">Tarikh Akhir Dokumen Dijual</label>
 
               <div class="col-sm-2">
-                <input type="date" class="form-control" name="docakhir">
+                <input type="text" class="form-control" name="docakhir">
               </div>
             </div>
           </div>
@@ -176,6 +185,13 @@
 
               <div class="col-sm-2">
                 <input type="date" class="form-control"  name="sebuttutup">
+              </div>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="form-group">
+              <div class="box-header with-border">
+              <h3 class="box-title"></h3>
               </div>
             </div>
           </div>

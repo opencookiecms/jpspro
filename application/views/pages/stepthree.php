@@ -4,7 +4,7 @@
   </style>
 
   <div class="content-wrapper b">
-    <!-- Content Header (Page header) 
+    <!-- Content Header (Page header)
     <section class="content-header">
       <center>
         <h1>
@@ -34,12 +34,13 @@
           <div class="box-header with-border">
             <h3 class="box-title">Lokasi dan Sistem</h3>
           </div><!-- end of box header-->
-
+          <div class="box-body">
           <h5><span class="error"> * Dikehendaki mengisi semua bahagian</span></h5>
+        </div>
 
           <div class="box-body">
             <div class="form-group">
-              <label class="col-sm-3">Koordinat Lokasi Projek :</label>
+              <label class="col-sm-2">Koordinat Lokasi Projek :</label>
               <label class="col-sm-2">Latitud (N)</label>
 
               <div class="col-sm-1">
@@ -58,7 +59,8 @@
 
           <div class="box-body">
             <div class="form-group">
-              <label class="col-sm-3">(Down Stream)</label>
+
+              <label class="col-sm-2"></label>
               <label class="col-sm-2">Longitud (E)</label>
 
               <div class="col-sm-1">
@@ -72,10 +74,22 @@
               </div>
             </div>
 
-            <label class="col-sm-2">Lembangan Sungai:</label>
+          </div>
+          <div class="box-body">
+            <div class="form-group">
+              <div class="box-header with-border">
+              <h3 class="box-title"></h3>
+              </div>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="form-group">
 
-            <div class="col-sm-2">
-              <input type="text" class="form-control" id="sungai" name="sungai" placeholder="Sungai">
+                          <label class="col-sm-2">Lembangan Sungai:</label>
+
+                          <div class="col-sm-2">
+                            <input type="text" class="form-control" id="sungai" name="sungai" placeholder="Sungai">
+                          </div>
             </div>
           </div>
 
@@ -114,7 +128,7 @@
 
 
           <div class="box-footer">
-            <button type="submit" name="submit" class="btn btn-default">Seterusnya</button>
+            <button type="submit" name="submit" class="btn btn-primary">Seterusnya</button>
 
           </div>
 
