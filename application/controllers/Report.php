@@ -5,7 +5,7 @@ class Report extends CI_Controller{
 
   public function __construct() {
     parent::__construct();
-    $this->load->library('Html2pdflib');
+    $this->load->library('Phpwordlibs');
     $this->load->model('Mrk_model');
     $this->load->model('Surat_model');
 
@@ -105,5 +105,11 @@ class Report extends CI_Controller{
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetailSuratWJP($value);
     $this->load->view('webprint/SWJP',$data);
+  }
+
+  public function WordPHP()
+  {
+      $this->load->view('pages/wordtest');
+
   }
 }
