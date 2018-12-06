@@ -10,6 +10,7 @@ class Projek extends CI_Controller
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('Projek_model');
+
       //$this->load->model('ProjekMdl');
     //  $this->load->helper('form');
     //  $this->load->library('form_validation');
@@ -31,6 +32,7 @@ class Projek extends CI_Controller
    $this->load->database();
    $this->load->view('template/header');
    $this->load->view('template/sidebar');
+   $data['get_progress']=$this->Projek_model->get_projectprogress($value);
    $data['get_detail']=$this->Projek_model->get_projekdetail($value);
    $this->load->view('pages/projek_view', $data);
    $this->load->view('template/footer');
