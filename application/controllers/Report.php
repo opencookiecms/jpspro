@@ -32,8 +32,8 @@ class Report extends CI_Controller{
 
   public function Report_MRK_03($value="")
   {
-    $data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
-    $this->load->view('webprint/MRK03P',$data);
+    $data['get_detail']=$this->Mrk_model->get_projectdetailforMRK03($value);
+    $this->load->view('print/MRK03_Report',$data);
   }
 
   public function Report_PSK_01($value="")
@@ -107,9 +107,11 @@ class Report extends CI_Controller{
     $this->load->view('webprint/SWJP',$data);
   }
 
-  public function WordPHP()
+  public function WordPHP($value="")
   {
-      $this->load->view('pages/wordtest');
+      $this->load->database();
+      $data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
+      $this->load->view('pages/wordtest',$data);
 
   }
 }
