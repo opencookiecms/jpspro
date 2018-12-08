@@ -22,6 +22,7 @@ foreach($pointbina as $x => $x_value) {
     $docx->set($x,$uncheckmar);
     }
 }
+//arrary
 
 
 
