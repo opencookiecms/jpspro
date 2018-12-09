@@ -1,5 +1,6 @@
 <?php
-$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\MRK03.docx');
+//$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\MRK03.docx'); //for windowss
+$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/MRK03.docx');// for mac
 $bina = $get_detail[0]->tiga_bina;
 $tadbir = $get_detail[0]->tiga_tadbir;
 $kemajuan = $get_detail[0]->tiga_kemajuan;
@@ -22,10 +23,6 @@ foreach($pointbina as $x => $x_value) {
     $docx->set($x,$uncheckmar);
     }
 }
-//arrary
-
-
-
 
 
 $docx->saveAs('MRK03.docx');
