@@ -1,4 +1,7 @@
 <?php
+
+//remove slash kalau nak guna versi windows dan tutup untuk trader_mac
+
 //$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\MRK03.docx'); //for windowss
 $docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/MRK03.docx');// for mac
 $bina = $get_detail[0]->tiga_bina;
@@ -46,6 +49,65 @@ foreach ($pointkemajuan as $keymaju => $k_value) {
     $docx->set($keymaju, $uncheckmark);
   }
 }
+
+$pointrangka = array("mt"=>"90% - Keatas","mb"=>"75% - 89%","ms"=>"50% - 74%","mm"=>"50% kebawah");
+foreach ($pointrangka as $keyrangka => $r_value) {
+  if($kerangka == $r_value)
+  {
+    $docx->set($keyrangka, $checkmark);
+  }
+  else {
+    $docx->set($keyrangka,$uncheckmark);
+  }
+}
+
+$pointkerja = array("qt"=>"90% - Keatas","qb"=>"75% - 89%","qs"=>"50% - 74%","qm"=>"50% kebawah");
+foreach ($pointkerja as $keykerja => $pk_value) {
+  if($kerja == $pk_value)
+  {
+    $docx->set($keykerja, $checkmark);
+  }
+  else {
+    $docx->set($keykerja,$uncheckmark);
+  }
+}
+
+
+
+
+$pointkemasan = array("ft"=>"90% - Keatas","fb"=>"75% - 89%","fs"=>"50% - 74%","fm"=>"50% kebawah");
+foreach ($pointkemasan as $keykemasan => $mas_value) {
+  if($kemasan == $mas_value)
+  {
+    $docx->set($keykemasan, $checkmark);
+  }
+  else {
+    $docx->set($keykemasan,$uncheckmark);
+  }
+}
+
+$pointwork = array("wt"=>"90% - Keatas","wb"=>"75% - 89%","ws"=>"50% - 74%","wm"=>"50% kebawah");
+foreach ($pointwork as $keywork => $work_value) {
+  if($luar == $work_value)
+  {
+    $docx->set($keywork, $checkmark);
+  }
+  else {
+    $docx->set($keywork,$uncheckmark);
+  }
+}
+
+$pointkon = array("st"=>"90% - Keatas","sb"=>"75% - 89%","ss"=>"50% - 74%","sm"=>"50% kebawah");
+foreach ($pointkon as $keykon => $kon_value) {
+  if($kontraktor == $kon_value)
+  {
+    $docx->set($keykon, $checkmark);
+  }
+  else {
+    $docx->set($keykon,$uncheckmark);
+  }
+}
+
 
 
 $docx->saveAs('MRK03.docx');
