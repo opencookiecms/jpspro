@@ -1,6 +1,6 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper b">
-    <!-- Content Header (Page header) 
+    <!-- Content Header (Page header)
     <section class="content-header">
       <center>
         <h1>
@@ -150,8 +150,38 @@
               </div>
 
               <div class="box-footer">
-                <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-          <a href="<?php echo site_url('Report/Report_Cover_PWJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
+                <div class="form-group">
+                <div class="col-md-1">
+                <button type="submit" name="submit" class="btn btn-primary">Save</button>
+                </div>
+<div class="col-md-1">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Print
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Surat KHAS 01</a></li>
+                      <li><a href="#">Surat KHAS 02</a></li>
+
+                    </ul>
+                  </div>
+                </div>
+
+
+
+
+              <div class="col-sm-6">
+
+                  <a href="<?php echo site_url('surat/Surat_Khas/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">Surat Khas</a>
+
+
+
+              </div>
+
+              <div class="col-md-2">
+                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-danger" role="button">Close</a>
+
+              </div>
+            </div>
               </div>
             </div>
           </form>

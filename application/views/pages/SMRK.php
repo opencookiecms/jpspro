@@ -1,6 +1,6 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper b">
-    <!-- Content Header (Page header) 
+    <!-- Content Header (Page header)
     <section class="content-header">
       <center>
         <h1>
@@ -140,9 +140,38 @@
               </div>
 
               <div class="box-footer">
-                <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('Report/Report_PKK01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak 01</a>
-                  <a href="<?php echo site_url('Report/Report_PKK02/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button" target="_blank">Cetak 02</a>
+                <div class="form-group">
+                <div class="col-md-2">
+                <button type="submit" name="submit" class="btn btn-primary">Save</button>
+                </div>
+<div class="col-md-2">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Print
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Surat MRK 01</a></li>
+                      <li><a href="#">Surat MRK 02</a></li>
+
+                    </ul>
+                  </div>
+                </div>
+
+
+
+
+              <div class="col-sm-6">
+
+                  <a href="<?php echo site_url('mrk/PP_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">Perakuan Pemulangan WJP</a>
+
+                  <a href="<?php echo site_url('surat/Surat_Khas/'.$get_detail[0]->projek_id) ?>" class="btn btn-info" role="button">Surat Kebenaran Khas</a>
+
+              </div>
+
+              <div class="col-md-2">
+                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-danger" role="button">Close</a>
+
+              </div>
+            </div>
               </div>
             </div>
           </form>

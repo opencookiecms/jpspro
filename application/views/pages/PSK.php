@@ -128,9 +128,38 @@
               </div>
 
               <div class="box-footer">
-                <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                  <a href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
-                  <a href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
+                <div class="form-group">
+                <div class="col-md-3">
+                <button type="submit" name="submit" class="btn btn-primary">Save</button>
+                </div>
+<div class="col-md-3">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Print
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">PSK 01</a></li>
+                      <li><a href="#">PSK 02</a></li>
+
+                    </ul>
+                  </div>
+                </div>
+
+
+
+
+              <div class="col-sm-3">
+
+                  <a href="<?php echo site_url('mrk/MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">MRK03</a>
+
+                  <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-info" role="button">Senarai Semakan</a>
+
+              </div>
+
+              <div class="col-md-3">
+                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-danger" role="button">Close</a>
+
+              </div>
+            </div>
               </div>
             </div>
           </form>

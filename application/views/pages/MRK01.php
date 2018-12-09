@@ -253,9 +253,21 @@
               </div>
 
               <div class="box-footer">
-                <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-                <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Cetak</a>
+                <div class="form-group">
+                <div class="col-md-4">
+                <button type="submit" name="submit" class="btn btn-primary">Save</button>
 
+              </div>
+              <div class="col-md-4">
+                  <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
+                <a href="<?php echo site_url('mrk/MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger" role="button">MRK02</a>
+              </div>
+
+              <div class="col-md-4">
+                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-warning" role="button">Close</a>
+
+              </div>
+            </div>
               </div>
             </div>
           </form>

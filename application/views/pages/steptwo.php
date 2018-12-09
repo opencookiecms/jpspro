@@ -144,7 +144,7 @@
               <label class="col-sm-3">Tarikh Notis Dikeluarkan</label>
 
               <div class="col-sm-2">
-                <input type="text" class="form-control" name="notiskeluar" >
+                <input type="date" class="form-control" name="notiskeluar" >
               </div>
             </div>
           </div>
@@ -156,6 +156,7 @@
               <div class="col-sm-2">
                 <input type="text" class="form-control"name="lawattapak">
               </div>
+                <label class="col-sm-3">Tarikh lawat tapak</label>
             </div>
           </div>
 
@@ -166,6 +167,7 @@
               <div class="col-sm-2">
                 <input type="text" class="form-control" name="docmula">
               </div>
+                <label class="col-sm-3">tarikh mula jual</label>
             </div>
           </div>
 
@@ -176,6 +178,7 @@
               <div class="col-sm-2">
                 <input type="text" class="form-control" name="docakhir">
               </div>
+                <label class="col-sm-3">Tarikh akhir</label>
             </div>
           </div>
 

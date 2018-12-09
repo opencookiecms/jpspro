@@ -206,9 +206,38 @@
               </div>
 
               <div class="box-footer">
-                <button type="submit" name="submit" class="btn btn-default">Simpan</button>
-              <a href="<?php echo site_url('Report/Report_Khas01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Surat Khas 01</a>
-                <a href="<?php echo site_url('Report/Report_Khas02/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button" target="_blank">Surat Khas 02</a>
+                <div class="form-group">
+                <div class="col-md-2">
+                <button type="submit" name="submit" class="btn btn-primary">Save</button>
+                </div>
+<div class="col-md-2">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Print
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Surat KHAS 01</a></li>
+                      <li><a href="#">Surat KHAS 02</a></li>
+
+                    </ul>
+                  </div>
+                </div>
+
+
+
+
+              <div class="col-sm-6">
+
+                  <a href="<?php echo site_url('surat/Surat_MRK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">Surat MRK</a>
+
+                  <a href="<?php echo site_url('surat/Surat_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-info" role="button">Surat Pelepasan WJP</a>
+
+              </div>
+
+              <div class="col-md-2">
+                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-danger" role="button">Close</a>
+
+              </div>
+            </div>
               </div>
             </div>
           </form>
