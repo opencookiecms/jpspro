@@ -11,7 +11,7 @@ $luar = $get_detail[0]->tiga_luar;
 $kontraktor = $get_detail[0]->tiga_kontraktor;
 
 $checkmark = "\u{2713}";
-$uncheckmar= "";
+$uncheckmark= "";
 
 $pointbina =array("bt"=>"90% - Keatas","bb"=>"75% - 89%","bs"=>"50% - 74%","bm"=>"50% kebawah");
 foreach($pointbina as $x => $x_value) {
@@ -20,8 +20,31 @@ foreach($pointbina as $x => $x_value) {
       $docx->set($x,$checkmark);
     }
     else {
-    $docx->set($x,$uncheckmar);
+    $docx->set($x,$uncheckmark);
     }
+}
+
+$pointtadbir = array("pt"=>"90% - Keatas","pb"=>"75% - 89%","ps"=>"50% - 74%","pm"=>"50% kebawah");
+foreach ($pointtadbir as $keytadbir => $p_value) {
+  if($tadbir == $p_value)
+  {
+    $docx->set($keytadbir, $checkmark);
+  }
+  else {
+    $docx->set($keytadbir,$uncheckmark);
+  }
+}
+
+$pointkemajuan = array("kt"=>"90% - Keatas","kb"=>"75% - 89%","ks"=>"50% - 74%","km"=>"50% kebawah");
+foreach ($pointkemajuan as $keymaju => $k_value) {
+  if($kemajuan == $k_value)
+  {
+    $docx->set($keymaju, $checkmark);
+  }
+  else
+  {
+    $docx->set($keymaju, $uncheckmark);
+  }
 }
 
 
