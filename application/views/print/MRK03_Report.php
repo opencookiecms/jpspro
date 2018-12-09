@@ -1,32 +1,37 @@
 <?php
-/**
- * Html2Pdf Library - example
- *
- * HTML => PDF converter
- * distributed under the OSL-3.0 License
- *
- * @package   Html2pdf
- * @author    Laurent MINGUET <webmaster@html2pdf.fr>
- * @copyright 2017 Laurent MINGUET
- */
-//require_once dirname(__FILE__).'/../vendor/autoload.php';
+$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\MRK03.docx');
+$bina = $get_detail[0]->tiga_bina;
+$tadbir = $get_detail[0]->tiga_tadbir;
+$kemajuan = $get_detail[0]->tiga_kemajuan;
+$kerangka = $get_detail[0]->tiga_kerangka;
+$kerja = $get_detail[0]->tiga_kerja;
+$kemasan = $get_detail[0]->tiga_kemasan;
+$luar = $get_detail[0]->tiga_luar;
+$kontraktor = $get_detail[0]->tiga_kontraktor;
 
-use Spipu\Html2Pdf\Html2Pdf;
-use Spipu\Html2Pdf\Exception\Html2PdfException;
-use Spipu\Html2Pdf\Exception\ExceptionFormatter;
+$checkmark = "\u{2713}";
+$uncheckmar= "";
 
-try {
-    ob_start();
-    include dirname(__file__).'\..\pdf\mrk03pdf.php';
-    $content = ob_get_clean();
-
-    $html2pdf = new Html2Pdf('P', 'A4', 'en', true, 'UTF-8', 3);
-    $html2pdf->pdf->SetDisplayMode('fullpage');
-    $html2pdf->writeHTML($content);
-    $html2pdf->output('example03.pdf');
-} catch (Html2PdfException $e) {
-    $html2pdf->clean();
-
-    $formatter = new ExceptionFormatter($e);
-    echo $formatter->getHtmlMessage();
+$pointbina =array("bt"=>"90% - Keatas","bb"=>"75% - 89%","bs"=>"50% - 74%","bm"=>"50% kebawah");
+foreach($pointbina as $x => $x_value) {
+    if ($bina == $x_value)
+    {
+      $docx->set($x,$checkmark);
+    }
+    else {
+    $docx->set($x,$uncheckmar);
+    }
 }
+//arrary
+
+
+
+
+
+$docx->saveAs('MRK03.docx');
+
+header("Content-Type:application/msword");
+header("Content-Disposition: attachment;filename=MRK03.docx");
+readfile('MRK03.docx');
+
+?>
