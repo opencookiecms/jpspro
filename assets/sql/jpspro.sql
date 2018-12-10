@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2018 at 06:10 AM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.8
+-- Generation Time: Dec 10, 2018 at 04:26 PM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -134,6 +134,11 @@ CREATE TABLE `mrk_dua` (
   `mrk_perakukerjataksiap` date DEFAULT NULL,
   `mrk_projekmansuh` date DEFAULT NULL,
   `mrk_tarikhlaporan` date DEFAULT NULL,
+  `mrk_modal` int(2) DEFAULT NULL,
+  `mrk_bahan` int(2) DEFAULT NULL,
+  `mrk_pekerja` int(2) DEFAULT NULL,
+  `mrk_tapak` int(2) DEFAULT NULL,
+  `mrk_cuaca` int(2) DEFAULT NULL,
   `mrksatu_id` int(11) DEFAULT NULL,
   `mrk2_noinden` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `mrk2_kodvots` varchar(150) COLLATE utf8_bin DEFAULT NULL
@@ -143,8 +148,8 @@ CREATE TABLE `mrk_dua` (
 -- Dumping data for table `mrk_dua`
 --
 
-INSERT INTO `mrk_dua` (`mrkduaid`, `mrk_majukerja`, `mrk_majukerjasebenar`, `mrk_bayarmajusemasa`, `mrk_jumlahbayarmaju`, `mrk_masalah`, `mrk_sebaboleh`, `mrk_lainlain`, `mrk_lanjutmasa`, `mrk_dari`, `mrk_sehingga`, `mrk_disebab`, `mrk_ladsehari`, `mrk_laddari`, `mrk_ladsehingga`, `mrk_perakukerjataksiap`, `mrk_projekmansuh`, `mrk_tarikhlaporan`, `mrksatu_id`, `mrk2_noinden`, `mrk2_kodvots`) VALUES
-(1, 50, '2018-11-21', 50, '20', NULL, 'EMPANGAN BOCOR', 'DLL', '9', '2018-11-09', '2018-11-07', 'DO', '20', '2018-11-15', '2018-11-14', '2018-11-08', '2018-11-14', '2018-11-07', 18, '0002991882', 'JPS0001922');
+INSERT INTO `mrk_dua` (`mrkduaid`, `mrk_majukerja`, `mrk_majukerjasebenar`, `mrk_bayarmajusemasa`, `mrk_jumlahbayarmaju`, `mrk_masalah`, `mrk_sebaboleh`, `mrk_lainlain`, `mrk_lanjutmasa`, `mrk_dari`, `mrk_sehingga`, `mrk_disebab`, `mrk_ladsehari`, `mrk_laddari`, `mrk_ladsehingga`, `mrk_perakukerjataksiap`, `mrk_projekmansuh`, `mrk_tarikhlaporan`, `mrk_modal`, `mrk_bahan`, `mrk_pekerja`, `mrk_tapak`, `mrk_cuaca`, `mrksatu_id`, `mrk2_noinden`, `mrk2_kodvots`) VALUES
+(1, 50, '2018-11-21', 50, '20', NULL, 'EMPANGAN BOCOR', 'DLL', '9', '2018-11-09', '2018-11-07', 'DO', '20', '2018-11-15', '2018-11-14', '2018-11-08', '2018-11-14', '2018-11-07', 1, NULL, 1, NULL, 1, 18, '0002991882', 'JPS0001922');
 
 -- --------------------------------------------------------
 
@@ -325,6 +330,18 @@ INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mr
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `mrk_setting`
+--
+
+CREATE TABLE `mrk_setting` (
+  `set_id` int(11) NOT NULL,
+  `set_slogan` varchar(150) DEFAULT NULL,
+  `set_keypeople` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mrk_ss`
 --
 
@@ -475,7 +492,7 @@ CREATE TABLE `mrk_tiga` (
 --
 
 INSERT INTO `mrk_tiga` (`mrktigaid`, `mrksatutiga_id`, `mrk_tigainden`, `mrktiga_kodvots`, `tiga_bina`, `tiga_tadbir`, `tiga_kemajuan`, `tiga_kerangka`, `tiga_kerja`, `tiga_kemasan`, `tiga_luar`, `tiga_kontraktor`, `tiga_pegawai`, `tiga_jawatan`, `tiga_tarikah`, `tiga_catat1`, `tiga_catat2`, `tiga_catat3`, `tiga_catat4`, `tiga_catat5`, `tiga_catat6`, `tiga_catat7`, `tiga_catat8`) VALUES
-(1, 18, '0002991882', 'JPS0001922', '90% - Keatas', '75% - 89%', '50% - 74%', '75% - 89%', '50% - 74%', '50% - 74%', '50% - 74%', '50% - 74%', 'TEST', 'IR', '2018-11-22', 'catat1', 'catat1gr', 'catat1', 'catat1', 'catat1', 'catat1', 'catat1', 'catat1');
+(1, 18, '0002991882', 'JPS0001922', '90% - Keatas', '75% - 89%', '50% - 74%', '50% kebawah', '50% kebawah', '50% - 74%', '50% - 74%', '50% - 74%', 'TEST', 'IR', '2018-11-22', 'catat1', 'catat1gr', 'catat1', 'catat1', 'catat1', 'catat1', 'catat1', 'catat1');
 
 --
 -- Indexes for dumped tables
@@ -540,6 +557,12 @@ ALTER TABLE `mrk_ppwjp`
 --
 ALTER TABLE `mrk_satu`
   ADD PRIMARY KEY (`mrksatuid`);
+
+--
+-- Indexes for table `mrk_setting`
+--
+ALTER TABLE `mrk_setting`
+  ADD PRIMARY KEY (`set_id`);
 
 --
 -- Indexes for table `mrk_ss`
@@ -634,6 +657,12 @@ ALTER TABLE `mrk_ppwjp`
 --
 ALTER TABLE `mrk_satu`
   MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `mrk_setting`
+--
+ALTER TABLE `mrk_setting`
+  MODIFY `set_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `mrk_ss`
