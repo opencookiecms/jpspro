@@ -14,14 +14,14 @@ class Report extends CI_Controller{
   public function Report_MRK_01($value="")
   {
   	$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
-    $this->load->view('webprint/MRK01P',$data);
+    $this->load->view('print/MRK01_Report',$data);
   }
 
   public function Report_MRK_02($value="")
   {
     $this->load->database();
     $data['get_detail']=$this->Mrk_model->get_projectdetailformrk02($value);
-    $this->load->view('webprint/MRK02P',$data);
+    $this->load->view('print/MRK02_Report',$data);
   }
 
   public function Report_LSK($value="")

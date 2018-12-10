@@ -81,6 +81,11 @@ class Mrk_model extends CI_Model{
     $mrk_perakukerjataksiap = $this->input->post('tarikhperaku');
     $mrk_projekmansuh = $this->input->post('projekmansuh');
     $mrk_tarikhlaporan = $this->input->post('tarikhlaporan');
+    $mrk_modal = $this->input->post('chk1');
+    $mrk_bahan = $this->input->post('chk2');
+    $mrk_pekerja = $this->input->post('chk3');
+    $mrk_tapak = $this->input->post('chk4');
+    $mrk_cuaca = $this->input->post('chk5');
     $mrk_satuid = $this->input->post('mrksatuid');
     $mrk_noinden = $this->input->post('noinden');
     $mrk_kodvots = $this->input->post('kodvods');
@@ -105,6 +110,11 @@ class Mrk_model extends CI_Model{
       'mrk_perakukerjataksiap' => $mrk_perakukerjataksiap,
       'mrk_projekmansuh' => $mrk_projekmansuh,
       'mrk_tarikhlaporan' => $mrk_tarikhlaporan,
+      'mrk_modal' => $mrk_modal,
+      'mrk_bahan' =>$mrk_bahan,
+      'mrk_pekerja' => $mrk_pekerja,
+      'mrk_tapak' =>$mrk_tapak,
+      'mrk_cuaca'=>$mrk_cuaca,
       'mrksatu_id' => $mrk_satuid,
       'mrk2_noinden' => $mrk_noinden,
       'mrk2_kodvots'=>$mrk_kodvots
@@ -453,7 +463,7 @@ class Mrk_model extends CI_Model{
       return $query->result();
 
   }
-  
+
   public function get_projectdetailformrk01($id)
   {
     $this->db->select('*');
@@ -758,6 +768,11 @@ class Mrk_model extends CI_Model{
     $mrk_projekmansuh = $this->input->post('projekmansuh');
     $mrk_tarikhlaporan = $this->input->post('tarikhlaporan');
     $mrk_satuid = $this->input->post('mrksatuid');
+    $mrk_modal = $this->input->post('chk1');
+    $mrk_bahan = $this->input->post('chk2');
+    $mrk_pekerja = $this->input->post('chk3');
+    $mrk_tapak = $this->input->post('chk4');
+    $mrk_cuaca = $this->input->post('chk5');
 
 
 
@@ -780,6 +795,11 @@ class Mrk_model extends CI_Model{
       'mrk_perakukerjataksiap' => $mrk_perakukerjataksiap,
       'mrk_projekmansuh' => $mrk_projekmansuh,
       'mrk_tarikhlaporan' => $mrk_tarikhlaporan,
+      'mrk_modal' => $mrk_modal,
+      'mrk_bahan' =>$mrk_bahan,
+      'mrk_pekerja' => $mrk_pekerja,
+      'mrk_tapak' =>$mrk_tapak,
+      'mrk_cuaca'=>$mrk_cuaca,
       'mrksatu_id' => $mrk_satuid
     );
 

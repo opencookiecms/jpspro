@@ -53,7 +53,7 @@
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="    <?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK" readonly>
                   </div>
 
-                  
+
                 </div>
 
               </div><!--end of body-->
@@ -175,9 +175,40 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">Modal</label>
-                  <input type="checkbox" name="modal" value="modal">
+                  <div class="col-md-2">
+                  <label class="">Modal</label>
+                      <?php $check=$get_detail[0]->mrk_modal; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+                  <input type="checkbox" name="chk1" value="1" <?php echo $ch1?>>
                 </div>
+
+
+              <div class="col-md-2">
+              <label class="">Kekurangan Bahan</label>
+                  <?php $check=$get_detail[0]->mrk_bahan; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+              <input type="checkbox" name="chk2" value="1" <?php echo $ch1?>>
+            </div>
+
+            <div class="col-md-2">
+            <label class="">Tiada Pekerja</label>
+                <?php $check=$get_detail[0]->mrk_pekerja; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+            <input type="checkbox" name="chk3" value="1" <?php echo $ch1?>>
+          </div>
+
+          <div class="col-md-2">
+          <label class="">Tapak</label>
+              <?php $check=$get_detail[0]->mrk_tapak; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+          <input type="checkbox" name="chk4" value="1" <?php echo $ch1?>>
+        </div>
+
+        <div class="col-md-2">
+        <label class="">Cuaca</label>
+        <?php $check=$get_detail[0]->mrk_cuaca; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+        <input type="checkbox" name="chk5" value="1" <?php echo $ch1?>>
+      </div>
+
+
+                </div>
+
               </div>
 
               <div class="box-body">
@@ -299,9 +330,9 @@
 
               </div>
               <div class="col-md-6">
-                  <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
+                  <a href="<?php echo site_url('Report/Report_MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" target="_blank" role="button">Print</a>
                     <a href="<?php echo site_url('mrk/MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger" role="button">MRK01</a>
-                
+
                   <a href="<?php echo site_url('mrk/LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger" role="button">Laporan Siap Kerja</a>
               </div>
 
