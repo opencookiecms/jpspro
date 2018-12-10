@@ -304,7 +304,7 @@
 
               </div>
               <div class="col-md-6">
-                  <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
+                  <a href="<?php echo site_url('Report/Report_MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
                     <a href="<?php echo site_url('mrk/LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">Laporan Siap Kerja</a>
 
                   <a href="<?php echo site_url('mrk/PSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-info" role="button">Perakuan Siap Kerja</a>
