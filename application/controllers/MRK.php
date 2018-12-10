@@ -281,8 +281,9 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->mrk01update($data ,$this->input->post('nokon'));//load from model and call last id
-			$KodVod=$this->Mrk_model->getLastKodVod();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			//$KodVod=$this->Mrk_model->getLastKodVod();
+			$id = $this->input->post('hiddenid');
+			redirect(base_url('mrk/MRK_01/'.$id)); //redirect last id to another step
 		}
 
 	}

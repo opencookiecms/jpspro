@@ -44,6 +44,7 @@
                 <div class="form-group">
                   <label class="col-sm-2">No Pendaftaran PKK</label>
                   <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
+                  <input type="text" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
