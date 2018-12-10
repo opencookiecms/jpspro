@@ -52,8 +52,8 @@
                   <td><?php echo $row->swjp_alamat?></td>
                   <td><?php echo $row->df_nosebutharga?></td>
                   <td><?php echo $row->mrk_namakon?></td>
-                  <td><button type="edit" name="view" class="btn btn-default">View</button>
-                  <a href="#" class="delete_data" id="<?php echo $row->mrksatuid; ?>">Delete</a></td>
+                  <td><a href="<?php echo site_url('projek') ?>" class="btn btn-info">View</a>
+                  <a href="#" class="btn btn-danger" role="button" onclick="return confirm('Delete Data?')">Delete</a></td>
                 </tr>
 
               <?php } ?>

@@ -47,7 +47,7 @@
                   <td><?php echo $row->df_jsebutharga?></td>
                   <td><?php echo $row->df_tajuk?></td>
                   <td><a href="<?php echo site_url("projek/delete/" . $row->projek_id); ?>" class="btn btn-info" role="button" onclick="return confirm('Delete Data?')">DELETE</a>
-                  <a href="<?php echo site_url("projek/Update_Projek01/" . $row->projek_id); ?>" class="btn btn-warning" role="button" onclick="return confirm('Delete Data?')">UPDATE</a></td>
+                  <a href="<?php echo site_url("projek/Update_Projek01/" . $row->projek_id); ?>" class="btn btn-warning" role="button" onclick="return confirm('Update Data?')">UPDATE</a></td>
                 </tr>
 
               <?php endforeach; ?>

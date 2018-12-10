@@ -45,8 +45,8 @@
                   <td><?php echo $row->mrk_namakon?></td>
                   <td><?php echo $row->mrk_noinden?></td>
                   <td><?php echo $row->mrk_tajukkerja?></td>
-                  <td><a href="<?php echo site_url('projek') ?>">View</a>
-                  <a href="#" class="delete_data" id="<?php echo $row->mrksatuid; ?>">Delete</a></td>
+                  <td><a href="<?php echo site_url('projek') ?>" class="btn btn-info">View</a>
+                  <a href="#" class="btn btn-danger" role="button" onclick="return confirm('Delete Data?')">Delete</a></td>
                 </tr>
 
               <?php endforeach; ?>
