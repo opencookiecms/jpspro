@@ -53,11 +53,7 @@
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="    <?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK" readonly>
                   </div>
 
-                  <label class="col-sm-1">Nama Kontraktor</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" name="namakon" value="<?php echo $get_detail[0]->mrk_namakon ?>" placeholder="Nama Kontraktor" readonly>
-                  </div>
+                  
                 </div>
 
               </div><!--end of body-->
@@ -80,19 +76,30 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">No Kontrak</label>
+                  <label class="col-sm-2">No Kontrak</label>
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" name="nokon" placeholder="No Kontrak" readonly>
                   </div>
 
-                  <label class="col-sm-1">Tarikh Mula Kontrak</label>
+                  <label class="col-sm-1">Nama Kontraktor</label>
+
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="namakon" name="namakon" value="<?php echo $get_detail[0]->mrk_namakon ?>" placeholder="Nama Kontraktor" readonly>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+
+                  <label class="col-sm-2">Tarikh Mula Kontrak</label>
 
                   <div class="col-sm-2">
                     <input type="date" class="form-control" id="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>" name="tarikhmulakon" placeholder="Tarikh Mula Kontrak" readonly>
                   </div>
 
-                  <label class="col-sm-2">Tarikh Jangka Siap Kontrak</label>
+                  <label class="col-sm-3">Tarikh Jangka Siap Kontrak</label>
 
                   <div class="col-sm-2">
                     <input type="date" class="form-control" id="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" name="tarikhjangka" readonly>
@@ -102,7 +109,7 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">Tajuk Kerja</label>
+                  <label class="col-sm-2">Tajuk Kerja</label>
 
                   <div class="col-sm-8">
                     <textarea type="text" class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja" readonly><?php echo $get_detail[0]->df_tajuk ?></textarea>
@@ -203,13 +210,13 @@
 
                   <label class="col-sm-1">Dari: </label>
 
-                  <div class="col-sm-3">
+                  <div class="col-sm-2">
                     <input type="date" class="form-control" id="dari" name="dari" value="<?php echo $get_detail[0]->mrk_dari?>">
                   </div>
 
                   <label class="col-sm-1">Sehingga </label>
 
-                  <div class="col-sm-3">
+                  <div class="col-sm-2">
                     <input type="date" class="form-control" id="sehingga" name="sehingga" value="<?php echo $get_detail[0]->mrk_sehingga?>">
                   </div>
                 </div>
@@ -273,7 +280,7 @@
 
                   <label class="col-sm-1">Jawatan</label>
 
-                  <div class="col-sm-2">
+                  <div class="col-sm-3">
                     <input type="text" class="form-control" readonly id="jawatan" value="<?php echo $get_detail[0]->mrk_jawatan?>" name="jawatan">
                   </div>
 

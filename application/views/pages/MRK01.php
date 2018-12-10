@@ -49,78 +49,35 @@
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
                   </div>
-                  <label class="col-sm-1">Gred</label>
-
-                  <div class="col-sm-4">
-                    <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
-                      <option value="<?php echo $get_detail[0]->mrk_gred ?>"><?php echo $get_detail[0]->mrk_gred ?></option>
-                      <option value="G1 | Sehingga RM200,000.00">G1 | Sehingga RM200,000.00</option>
-                      <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2 | RM200,001.00 Hingga RM500,000.00</option>
-                      <option value="G3 | RM500,001.00 Hingga RM1 000,000.00">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
-                      <option value="G4 | RM1 000,001.00 Hingga RM3 000,000.00">G4 | RM1 000,001.00 Hingga RM3 000,000.00</option>
-                      <option value="G5 | RM300,001.00 Hingga RM5 000,000.00">G5 | RM300,001.00 Hingga RM5 000,000.00</option>
-                      <option value="G6 | RM5 000,001.00 Hingga RM10 000,000.00">G6 | RM5 000,001.00 Hingga RM10 000,000.00</option>
-                      <option value="G7 | RM 10 000,001.00 Ke Atas">G7 | RM 10 000,001.00 Ke Atas</option>
-                    </select>
-                  </div>
                 </div>
 
               </div><!--end of body-->
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">Nama Kontraktor</label>
+                  <label class="col-sm-2">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="namakon" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
                   </div>
 
-                  <label class="col-sm-1">Alamat</label>
-
-                  <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon ?></textarea>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
                   <label class="col-sm-1">No Kontrak</label>
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
                   </div>
-
-                  <label class="col-sm-2">No Inden/Pesanan tempatan</label>
-
-                  <div class="col-sm-5">
-                    <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden"  placeholder="No Inden">
-                  </div>
                 </div>
               </div>
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">Tajuk Kerja</label>
 
-                  <div class="col-sm-6">
-                    <textarea type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
-                  </div>
-
-                  <label class="col-sm-1">Kategori</label>
+                  <label class="col-sm-2">Alamat</label>
 
                   <div class="col-sm-4">
-                    <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
-                      <option value="<?php echo $get_detail[0]->mrk_kategori ?>"><?php echo $get_detail[0]->mrk_kategori ?></option>
-                      <option value="CE | Pembinaan Kejuruteraan Awam">CE | Pembinaan Kejuruteraan Awam</option>
-                      <option value="B | Pembinaan Bangunan">B | Pembinaan Bangunan</option>
-                      <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option>
-                    </select>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon ?></textarea>
                   </div>
-                </div>
-              </div>
-              <div class="box-body">
-                <div class="form-group">
+
                   <label class="col-sm-1">Daerah</label>
 
                   <div class="col-sm-2">
@@ -143,10 +100,63 @@
                       <option value="perak">Perak</option>
                     </select>
                   </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  
+
+                  <label class="col-sm-2">No Inden/Pesanan tempatan</label>
+
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden"  placeholder="No Inden">
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">Tajuk Kerja</label>
+
+                  <div class="col-sm-6">
+                    <textarea type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+
+                  <label class="col-sm-2">Kategori</label>
+
+                  <div class="col-sm-2">
+                    <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
+                      <option value="<?php echo $get_detail[0]->mrk_kategori ?>"><?php echo $get_detail[0]->mrk_kategori ?></option>
+                      <option value="CE | Pembinaan Kejuruteraan Awam">CE | Pembinaan Kejuruteraan Awam</option>
+                      <option value="B | Pembinaan Bangunan">B | Pembinaan Bangunan</option>
+                      <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option>
+                    </select>
+                  </div>
+
+                  <label class="col-sm-1">Gred</label>
+
+                  <div class="col-sm-2">
+                    <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
+                      <option value="<?php echo $get_detail[0]->mrk_gred ?>"><?php echo $get_detail[0]->mrk_gred ?></option>
+                      <option value="G1 | Sehingga RM200,000.00">G1 | Sehingga RM200,000.00</option>
+                      <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2 | RM200,001.00 Hingga RM500,000.00</option>
+                      <option value="G3 | RM500,001.00 Hingga RM1 000,000.00">G3 | RM500,001.00 Hingga RM1 000,000.00</option>
+                      <option value="G4 | RM1 000,001.00 Hingga RM3 000,000.00">G4 | RM1 000,001.00 Hingga RM3 000,000.00</option>
+                      <option value="G5 | RM300,001.00 Hingga RM5 000,000.00">G5 | RM300,001.00 Hingga RM5 000,000.00</option>
+                      <option value="G6 | RM5 000,001.00 Hingga RM10 000,000.00">G6 | RM5 000,001.00 Hingga RM10 000,000.00</option>
+                      <option value="G7 | RM 10 000,001.00 Ke Atas">G7 | RM 10 000,001.00 Ke Atas</option>
+                    </select>
+                  </div>
 
                   <label class="col-sm-2">Pengkhususan</label>
 
-                  <div class="col-sm-4">
+                  <div class="col-sm-2">
                     <select type="text" class="form-control" id="khusus" placeholder="khusus" name="khusus">
                           <option value="<?php echo $get_detail[0]->mrk_khusus ?>"><?php echo $get_detail[0]->mrk_khusus ?></option>
                       <option value="CE 02">CE 02 | Pembinaan Jambatan & Jeti</option>
@@ -195,7 +205,7 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">Pegawai</label>
+                  <label class="col-sm-2">Pegawai</label>
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="pegawai" name="pegawai">
                           <option value="<?php echo $get_detail[0]->mrk_pegawai ?>"><?php echo $get_detail[0]->mrk_pegawai ?></option>
@@ -247,7 +257,7 @@
 
                   <label class="col-sm-1">Tarikh</label>
 
-                  <div class="col-sm-3">
+                  <div class="col-sm-2">
                     <input type="date" class="form-control" value="<?php echo $get_detail[0]->mrk_tarikh ?>" id="tarikh" name="tarikh">
                   </div>
                 </div>

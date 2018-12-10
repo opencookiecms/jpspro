@@ -64,19 +64,24 @@
                   </div>
 
                   <input type="hidden" value="<?php echo $get_detail[0]->mrksatuid?>" name="hiddenid">
-
-                  <label class="col-sm-1">Nama Pemborong</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namapem" name="namapem" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong" readonly>
-                  </div>
                 </div>
 
               </div><!--end of body-->
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">Alamat</label>
+
+                  <label class="col-sm-2">Nama Pemborong</label>
+
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="namapem" name="namapem" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong" readonly>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2">Alamat</label>
 
                   <div class="col-sm-7">
                     <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
@@ -86,7 +91,7 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">Butiran Kerja</label>
+                  <label class="col-sm-2">Butiran Kerja</label>
 
                   <div class="col-sm-7">
                     <textarea type="text" class="form-control"  name="butiran" placeholder="Butiran Kerja" readonly><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
@@ -96,11 +101,16 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-1">No Sebutharga</label>
+                  <label class="col-sm-2">No Sebutharga</label>
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control"  name="nosebut" placeholder="No Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                   </div>
+                </div>
+              </div>
+
+              <div class="box-body">
+                <div class="form-group">
 
                   <label class="col-sm-2">No Pesanan Kerja</label>
 
@@ -112,7 +122,7 @@
               </div>
               <div class="box-body">
                 <div class="form-group">
-                      <label class="col-sm-1">No Inden</label>
+                      <label class="col-sm-2">No Inden</label>
 
                       <div class="col-sm-5">
                         <input type="text" class="form-control" name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>"  placeholder="Inden No" readonly>
@@ -155,13 +165,13 @@
                 <div class="form-group">
                   <label class="col-sm-2">Tarikh Dilanjutkan Masa</label>
 
-                  <div class="col-sm-3">
+                  <div class="col-sm-2">
                     <input type="date" class="form-control" name="tariklanjut" value="<?php echo $get_detail[0]->lsk_lanjutmasa?>">
                   </div>
 
-                  <label class="col-sm-3">Tarikh Kerja Siap Sempurna</label>
+                  <label class="col-sm-2">Tarikh Kerja Siap Sempurna</label>
 
-                  <div class="col-sm-3">
+                  <div class="col-sm-2">
                     <input type="date" class="form-control"  name="tarikhkerjasempurna" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
                   </div>
                 </div>
