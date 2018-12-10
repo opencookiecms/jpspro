@@ -2,8 +2,8 @@
 
 //remove slash kalau nak guna versi windows dan tutup untuk trader_mac
 
-//$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\MRK03.docx'); //for windowss
-$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/MRK03.docx'); //for windowss
+$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\MRK03.docx'); //for windowss
+//$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/MRK03.docx'); //for windowss
 
 //$docx = new DOCXTemplate(site_url("assets/document/MRK03.docx"));// for mac
 $bina = $get_detail[0]->tiga_bina;
@@ -109,6 +109,24 @@ foreach ($pointkon as $keykon => $kon_value) {
     $docx->set($keykon,$uncheckmark);
   }
 }
+
+$docx->set('pkkno',$get_detail[0]->mrk_nopkk);
+$docx->set('namakot',$get_detail[0]->mrk_namakon);
+$docx->set('nosebutharga',$get_detail[0]->df_nosebutharga);
+$docx->set('noinden',$get_detail[0]->mrk_noinden);
+$docx->set('tajukkerja',$get_detail[0]->df_tajuk);
+$docx->set('kosprojek',number_format($get_detail[0]->mrk_kosprojek,2));
+$docx->set('kossebenar',number_format($get_detail[0]->lks_hargasebenar,2));
+$docx->set('tarikhmula',$get_detail[0]->mrk_tarikhmulakon);
+$docx->set('tarikhsiap',$get_detail[0]->lsk_tarikhkerjasiap);
+$docx->set('tarikhlanjutmasa',$get_detail[0]->mrk_dari);
+$docx->set('tarikhsebenar',$get_detail[0]->lsk_tarikhkerjasiap);
+$docx->set('ladsehari',$get_detail[0]->mrk_ladsehari);
+$docx->set('tarikhmulas',$get_detail[0]->mrk_laddari);
+$docx->set('tarikahsehigga',$get_detail[0]->mrk_ladsehingga);
+$docx->set('namapegawai',$get_detail[0]->tiga_pegawai);
+$docx->set('jawatanpegawai',$get_detail[0]->tiga_jawatan);
+
 
 
 

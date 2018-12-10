@@ -358,8 +358,8 @@
 
               </div>
               <div class="col-md-6">
-                
-                  <a href="<?php echo site_url('Report/LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
+
+                  <a href="<?php echo site_url('Report/Report_LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
                     <a href="<?php echo site_url('mrk/MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">MRK02</a>
 
                   <a href="<?php echo site_url('mrk/MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-info" role="button">MRK03</a>

@@ -1,32 +1,30 @@
 <?php
-/**
- * Html2Pdf Library - example
- *
- * HTML => PDF converter
- * distributed under the OSL-3.0 License
- *
- * @package   Html2pdf
- * @author    Laurent MINGUET <webmaster@html2pdf.fr>
- * @copyright 2017 Laurent MINGUET
- */
-//require_once dirname(__FILE__).'/../vendor/autoload.php';
 
-use Spipu\Html2Pdf\Html2Pdf;
-use Spipu\Html2Pdf\Exception\Html2PdfException;
-use Spipu\Html2Pdf\Exception\ExceptionFormatter;
+//remove slash kalau nak guna versi windows dan tutup untuk trader_mac
 
-try {
-    ob_start();
-    include dirname(__file__).'\..\pdf\psk02pdf.php';
-    $content = ob_get_clean();
+$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\PSK02.docx'); //for windowss
+//$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/MRK01.docx'); //for mac
 
-    $html2pdf = new Html2Pdf('P', 'A4', 'en', true, 'UTF-8', 3);
-    $html2pdf->pdf->SetDisplayMode('fullpage');
-    $html2pdf->writeHTML($content);
-    $html2pdf->output('example03.pdf');
-} catch (Html2PdfException $e) {
-    $html2pdf->clean();
+$docx->set('nosebutharga',$get_detail[0]->df_nosebutharga);
+$docx->set('namakon',$get_detail[0]->mrk_namakon);
+$docx->set('alamatkon',$get_detail[0]->mrk_alamatkon);
+$docx->set('gred',$get_detail[0]->mrk_gred);
 
-    $formatter = new ExceptionFormatter($e);
-    echo $formatter->getHtmlMessage();
-}
+$docx->set('tajukkerja',$get_detail[0]->mrk_negeri);
+$docx->set('kosprojek',number_format($get_detail[0]->mrk_kosprojek,2));
+$docx->set('tarikha',$get_detail[0]->lsk_tarikhkerjasiap);
+$docx->set('tarikhb',$get_detail[0]->mrk_tarikhjangkasiap);
+$docx->set('tarikhc',$get_detail[0]->mrk_tarikhmulatanggungcacat);
+$docx->set('tarikhd',$get_detail[0]->mrk_tarikhtamattanggungcacat);
+
+
+
+
+
+$docx->saveAs('PSK02.docx');
+
+header("Content-Type:application/msword");
+header("Content-Disposition: attachment;filename=PSK02.docx");
+readfile('PSK02.docx');
+
+?>

@@ -27,7 +27,7 @@ class Report extends CI_Controller{
   public function Report_LSK($value="")
   {
     $data['get_detail']=$this->Mrk_model->get_projectdetailforLSK($value);
-    $this->load->view('webprint/LSKP',$data);
+    $this->load->view('print/LSK_Report',$data);
   }
 
   public function Report_MRK_03($value="")
@@ -39,13 +39,13 @@ class Report extends CI_Controller{
   public function Report_PSK_01($value="")
   {
     $data['get_detail']=$this->Mrk_model->get_projectdetailforPSK($value);
-    $this->load->view('webprint/PSK01P',$data);
+    $this->load->view('print/PSKA_Report',$data);
   }
 
   public function Report_PSK_02($value="")
   {
     $data['get_detail']=$this->Mrk_model->get_projectdetailforPSK($value);
-    $this->load->view('webprint/PSK02P',$data);
+    $this->load->view('print/PSKB_Report',$data);
   }
 
   public function Report_SS()

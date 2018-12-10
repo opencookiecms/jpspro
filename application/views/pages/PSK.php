@@ -137,8 +137,8 @@
                   <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Print
                     <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                      <li><a href="#">PSK 01</a></li>
-                      <li><a href="#">PSK 02</a></li>
+                      <li><a href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>">PSK 01</a></li>
+                      <li><a href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>">PSK 02</a></li>
 
                     </ul>
                   </div>

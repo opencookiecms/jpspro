@@ -534,6 +534,7 @@ class Mrk_model extends CI_Model{
     $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_tiga','mrk_tiga.mrksatutiga_id = mrk_satu.mrksatuid ','left' );
 
 
     $this->db->where('dp_projek.projek_id', $id);
