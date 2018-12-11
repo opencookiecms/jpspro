@@ -156,7 +156,7 @@
 
               </div>
               <div class="col-md-6">
-                  <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
+                  <a href="<?php echo site_url('Report/Report_Pemulangan_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
                 <a href="<?php echo site_url('mrk/Jaminan_Bank/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">Jaminan Bank</a>
 
                   <a href="<?php echo site_url('surat/Surat_MRK/'.$get_detail[0]->projek_id) ?>" class="btn btn-info" role="button">Surat MRK</a>

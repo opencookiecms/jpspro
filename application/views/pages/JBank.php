@@ -130,7 +130,7 @@
 
             </div>
             <div class="col-md-6">
-                <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
+                <a href="<?php echo site_url('Report/Report_PJB/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
               <a href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">PSMK</a>
 
                 <a href="<?php echo site_url('mrk/PP_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-info" role="button">Perakuan Pemulangan WJP</a>

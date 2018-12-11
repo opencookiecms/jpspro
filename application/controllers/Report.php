@@ -64,12 +64,14 @@ class Report extends CI_Controller{
   {
       $this->load->database();
       $data['get_detail']=$this->Mrk_model->get_projectdetailforJB($value);
-      $this->load->view('webprint/JBP',$data);
+      $this->load->view('print/JB_Report',$data);
   }
 
-  public function Report_Pemulangan_WJP()
+  public function Report_Pemulangan_WJP($value="")
   {
-    $this->load->view('webprint/WJPP');
+      $this->load->database();
+      $data['get_detail']=$this->Mrk_model->get_projectdetailforPPWJP($value);
+      $this->load->view('print/WJP_Report',$data);
   }
 
   public function Report_PKK01($value="")

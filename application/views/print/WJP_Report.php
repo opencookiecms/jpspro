@@ -1,32 +1,28 @@
 <?php
-/**
- * Html2Pdf Library - example
- *
- * HTML => PDF converter
- * distributed under the OSL-3.0 License
- *
- * @package   Html2pdf
- * @author    Laurent MINGUET <webmaster@html2pdf.fr>
- * @copyright 2017 Laurent MINGUET
- */
-//require_once dirname(__FILE__).'/../vendor/autoload.php';
 
-use Spipu\Html2Pdf\Html2Pdf;
-use Spipu\Html2Pdf\Exception\Html2PdfException;
-use Spipu\Html2Pdf\Exception\ExceptionFormatter;
+//remove slash kalau nak guna versi windows dan tutup untuk trader_mac
 
-try {
-    ob_start();
-    include dirname(__file__).'\..\pdf\mrk01pdf.php';
-    $content = ob_get_clean();
+$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\PWJP.docx'); //for windowss
+//$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/jb.docx'); //for mac
 
-    $html2pdf = new Html2Pdf('P', 'A4', 'en', true, 'UTF-8', 3);
-    $html2pdf->pdf->SetDisplayMode('fullpage');
-    $html2pdf->writeHTML($content);
-    $html2pdf->output('example03.pdf');
-} catch (Html2PdfException $e) {
-    $html2pdf->clean();
+$docx->set('norujukan',$get_detail[0]->ppwjp_rt);
+$docx->set('kepada',$get_detail[0]->ppwjp_kepada);
+$docx->set('alamat',$get_detail[0]->ppwjp_alamat);
+$docx->set('pengarah',$get_detail[0]->ppwjp_kepada);
+$docx->set('alamatpengarah',$get_detail[0]->ppwjp_alamat);
+$docx->set('wang',$get_detail[0]->ppwjp_kos);
+$docx->set('namakon',$get_detail[0]->mrk_namakon);
+$docx->set('norujukan',$get_detail[0]->mrk_rujukanbank);
+$docx->set('slogan',$get_detail[0]->mrk_nopkk);
+$docx->set('namajurutera',$get_detail[0]->ppwjp_pegawai);
+$docx->set('jawatanjurutera',$get_detail[0]->ppwjp_jawatan);
 
-    $formatter = new ExceptionFormatter($e);
-    echo $formatter->getHtmlMessage();
-}
+
+
+$docx->saveAs('PWJP.docx');
+
+header("Content-Type:application/msword");
+header("Content-Disposition: attachment;filename=PWJP.docx");
+readfile('PWJP.docx');
+
+?>
