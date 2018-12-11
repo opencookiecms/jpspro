@@ -57,7 +57,7 @@ class Report extends CI_Controller{
   {
     $this->load->database();
     $data['get_detail']=$this->Mrk_model->get_projectdetailforPSMK($value);
-    $this->load->view('webprint/PSMKP',$data);
+    $this->load->view('print/PSMK_Report',$data);
   }
 
   public function Report_PJB($value="")
