@@ -3,8 +3,8 @@
 //remove slash kalau nak guna versi windows dan tutup untuk trader_mac
 //
 
-$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\MRK02.docx'); //for windows
-//$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/MRK02.docx'); //for mac
+//$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\MRK02.docx'); //for windows
+$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/MRK02.docx'); //for mac
 //
 $c1 = $get_detail[0]->mrk_modal;
 $c2 = $get_detail[0]->mrk_bahan;

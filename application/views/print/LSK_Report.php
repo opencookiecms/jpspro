@@ -2,8 +2,8 @@
 
 //remove slash kalau nak guna versi windows dan tutup untuk trader_mac
 
-$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\lsk.docx'); //for windowss
-//$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/MRK01.docx'); //for mac
+//$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\lsk.docx'); //for windowss
+$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/lsk.docx'); //for mac
 $docx->set('gred',$get_detail[0]->mrk_gred);
 $docx->set('namakon',$get_detail[0]->mrk_namakon);
 $docx->set('alamatkon',$get_detail[0]->mrk_alamatkon);
