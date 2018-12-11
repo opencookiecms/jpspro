@@ -6,6 +6,8 @@ class Daftar extends CI_Controller{
 
   public function __construct() {
     parent::__construct();
+    $this->load->helper('url');
+    $this->load->model('Projek_model');
 
   }
 
@@ -29,6 +31,7 @@ class Daftar extends CI_Controller{
   {
 
     $data['title'] = 'Langkah Satu';
+    $data['get_kontraktor'] = $this->Projek_model->getkontraktor();
 
 
 
@@ -36,6 +39,7 @@ class Daftar extends CI_Controller{
     $this->form_validation->set_rules('nosebut','Sila Masukkan No Sebut Harga','required');
     $this->form_validation->set_rules('tarikhmohon','Tarikh Mohon','required');
     $this->form_validation->set_rules('jenissebut','Jenis Sebut','required');
+    $this->form_validation->set_rules('nosebut','This values is not valid','is_unique[dp_projek.df_nosebutharga]');
 
     if($this->form_validation->run() === FALSE)
 
