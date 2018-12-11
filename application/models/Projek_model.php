@@ -191,7 +191,7 @@ class Projek_model extends CI_Model{
   //get last id function here//////
   public function getLastid()
   {
-    $lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('dp_projek')->row('id');
+    $lastId = $this->db->select('projek_id')->order_by('projek_id','desc')->limit(1)->get('dp_projek')->row('projek_id');
 
     return $lastId; //return last id
   }
@@ -339,6 +339,10 @@ class Projek_model extends CI_Model{
     $query = $this->db->get();
 
     return $query->result();
+  }
+
+  public function getkontraktor(){
+    
   }
 
 
