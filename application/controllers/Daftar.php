@@ -31,7 +31,7 @@ class Daftar extends CI_Controller{
   {
 
     $data['title'] = 'Langkah Satu';
-    $data['get_kontraktor'] = $this->Projek_model->getkontraktor();
+
 
 
 

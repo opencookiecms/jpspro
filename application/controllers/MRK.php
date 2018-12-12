@@ -20,6 +20,13 @@ class MRK extends CI_Controller{
 		$this->load->view('template/footer');
 	}
 	/////////////////////////////////LOAD DATA MRK////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public function getKontraktorName()
+	{
+		$data=$this->Mrk_model->getDataKon($value,$this->input->post('namakon'));
+		echo json_encode($data);
+	}
+
+
 	public function MRK_01($value="")
 	{
 

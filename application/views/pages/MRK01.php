@@ -44,7 +44,7 @@
                 <div class="form-group">
                   <label class="col-sm-2">No Pendaftaran PKK</label>
                   <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
-                  <input type="text" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
+                  <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
@@ -58,7 +58,7 @@
                   <label class="col-sm-2">Nama Kontraktor</label>
 
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
+                    <input type="text" class="form-control" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
                   </div>
 
                   <label class="col-sm-1">No Kontrak</label>
@@ -78,34 +78,39 @@
                     <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon ?></textarea>
                   </div>
 
-                  <label class="col-sm-1">Daerah</label>
+                </div>
+              </div>
+              <div class="box-body">
+                <div class="form-group">
 
-                  <div class="col-sm-2">
-                    <select type="text" class="form-control" id="daerah" name="daerah">
-                      <option value="<?php echo $get_detail[0]->mrk_daerah ?>"><?php echo $get_detail[0]->mrk_daerah ?></option>
-                      <option value="kuala muda">Kuala Muda</option>
-                      <option value="sik">Sik</option>
-                      <option value="baling">Baling</option>
-                    </select>
-                  </div>
+                                    <label class="col-sm-2">Daerah</label>
 
-                  <label class="col-sm-1">Negeri</label>
+                                    <div class="col-sm-2">
+                                      <select type="text" class="form-control" id="daerah" name="daerah">
+                                        <option value="<?php echo $get_detail[0]->mrk_daerah ?>"><?php echo $get_detail[0]->mrk_daerah ?></option>
+                                        <option value="kuala muda">Kuala Muda</option>
+                                        <option value="sik">Sik</option>
+                                        <option value="baling">Baling</option>
+                                      </select>
+                                    </div>
 
-                  <div class="col-sm-2">
-                    <select type="text" class="form-control" id="negeri" name="negeri">
-                      <option value="<?php echo $get_detail[0]->mrk_negeri ?>"><?php echo $get_detail[0]->mrk_negeri ?></option>
-                      <option value="kedah">Kedah</option>
-                      <option value="perlis">Perlis</option>
-                      <option value="pulau pinang">Pulau Pinang</option>
-                      <option value="perak">Perak</option>
-                    </select>
-                  </div>
+                                    <label class="col-sm-1">Negeri</label>
+
+                                    <div class="col-sm-2">
+                                      <select type="text" class="form-control" id="negeri" name="negeri">
+                                        <option value="<?php echo $get_detail[0]->mrk_negeri ?>"><?php echo $get_detail[0]->mrk_negeri ?></option>
+                                        <option value="kedah">Kedah</option>
+                                        <option value="perlis">Perlis</option>
+                                        <option value="pulau pinang">Pulau Pinang</option>
+                                        <option value="perak">Perak</option>
+                                      </select>
+                                    </div>
                 </div>
               </div>
 
               <div class="box-body">
                 <div class="form-group">
-                  
+
 
                   <label class="col-sm-2">No Inden/Pesanan tempatan</label>
 
@@ -285,9 +290,24 @@
         </div>
       </div><!--end of row-->
 
-
+<?php echo base_url();?>
     </section>
     <!-- /.content -->
+    <script type="text/javascript">
+      function autofill(){
+        var kon = $("#namakon").val();
+        $.ajax({
+
+          url:"<?php echo base_url(); ?>MRK/getKontraktorName",
+          data:'kontraktorId='+kon,
+        }).success(function(data){
+            alert('test');
+        });
+
+      }
+    </script>
+
+
 
   </div>
   <!-- /.content-wrapper -->
