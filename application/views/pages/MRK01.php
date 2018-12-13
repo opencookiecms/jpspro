@@ -43,8 +43,8 @@
               <div class="box-body">
                 <div class="form-group">
                   <label class="col-sm-2">No Pendaftaran PKK</label>
-                  <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
-                  <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
+                  <input type="text" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
+                  <input type="text" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
@@ -295,14 +295,18 @@
     <!-- /.content -->
     <script type="text/javascript">
       function autofill(){
-        var kon = $("#namakon").val();
         $.ajax({
-
-          url:"<?php echo base_url(); ?>MRK/getKontraktorName",
-          data:'kontraktorId='+kon,
-        }).success(function(data){
-            alert('test');
-        });
+          type: 'post',
+          url: 'http://localhost/jpspro/mrk/getKontraktorName',
+          data: { 'keyword' : $("#namakon").val()},
+          //ataType: 'json',
+          success: function(data)
+          {
+            var json = data,
+            objs = JSON.parse(json)
+            $("#alamat").val(objs.KonAlamat);
+          }
+      });
 
       }
     </script>

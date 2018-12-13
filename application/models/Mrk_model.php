@@ -1112,12 +1112,13 @@ class Mrk_model extends CI_Model{
     $this->db->update('mrk_tiga',$data);
   }
 
-  public function getDataKon($value="")
+  public function getDataKon($keyword)
   {
-    $this->db->select('konName,CONCAT((KonAlamat),'.',(konAlamatExts),(konAlamatExtD),(konPoskod),(konBandar),(konDaerah),(konNegeri)) AS fulladd',FALSE);
-    $this->db->order_by('kontraktorId','DESC');
-    $this->db->where('kontraktorId', $value);
-    return $this->db->get('kontraktor')->result_array();
+    //$this->db->select('konName');
+    $this->db->order_by('kontraktorId', 'DESC');
+    //$this->db->where('konName');
+    $this->db->like('konName',$keyword);
+    return $this->db->get('kontraktor')->row_array();
   }
 
 

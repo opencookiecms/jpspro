@@ -22,8 +22,9 @@ class MRK extends CI_Controller{
 	/////////////////////////////////LOAD DATA MRK////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public function getKontraktorName()
 	{
-		$data=$this->Mrk_model->getDataKon($value,$this->input->post('namakon'));
-		echo json_encode($data);
+		$keyword=$this->input->post('keyword');
+    $data=$this->Mrk_model->getDataKon($keyword);
+    echo  json_encode ($data);
 	}
 
 
