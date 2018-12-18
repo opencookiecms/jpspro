@@ -45,6 +45,7 @@
 
             <div class="col-sm-3">
               <input type="text" class="form-control" name="nosebut"  placeholder="No Fail Sebutharga">
+              <small id="nsebutharga" class="form-text text-muted">Sila isi no sebutharga mengikut spefikasi yang telah diberikan.</small>
             </div>
             <label class="col-sm-2">Tarikh Permohonan</label>
 
