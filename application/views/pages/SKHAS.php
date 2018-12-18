@@ -46,6 +46,7 @@
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->skhas_rujuktuan?>">
+                    <small id="rujuktuan" class="form-text text-muted">Pastikan Rujukan Tuan dinyatakan dengan betul.</small>
                   </div>
 
                   <label class="col-sm-2">Rujukan Kami</label>

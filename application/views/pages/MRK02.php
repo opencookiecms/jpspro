@@ -51,7 +51,9 @@
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="    <?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK" readonly>
+                    <small id="nopkk" class="form-text text-muted">Pastikan No Pendaftaran PKK dinyatakan dengan betul.</small>
                   </div>
+                  
 
 
                 </div>

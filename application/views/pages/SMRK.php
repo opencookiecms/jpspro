@@ -47,6 +47,7 @@
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Bank" value="<?php echo $get_detail[0]->s_rujuktuan?>">
+                    <small id="rujuktuan" class="form-text text-muted">Pastikan Rujukan Tuan dinyatakan dengan betul.</small>
                   </div>
 
                   <label class="col-sm-3">Bertarikh</label>

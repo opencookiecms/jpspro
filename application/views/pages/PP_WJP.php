@@ -47,6 +47,7 @@
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->ppwjp_rt?>">
+                    <small id="rujuktuan" class="form-text text-muted">Pastikan Rujukan Tuan dinyatakan dengan betul.</small>
                   </div>
 
                   <label class="col-sm-3">Nama Pemborong</label>
@@ -64,6 +65,7 @@
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami" value="<?php echo $get_detail[0]->ppwjp_rk?>">
+                    <small id="rujukkami" class="form-text text-muted">Pastikan Rujukan Kami dinyatakan dengan betul.</small>
                   </div>
 
                   <label class="col-sm-3">No Kontrak</label>
@@ -102,6 +104,7 @@
 
                   <div class="col-sm-4">
                     <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->ppwjp_alamat?></textarea>
+                    <small id="alamat" class="form-text text-muted">Pastikan Alamat dinyatakan dengan betul.</small>
                   </div>
 
                   <label class="col-sm-2">Pegawai Penguasa</label>

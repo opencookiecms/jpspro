@@ -45,6 +45,7 @@
                   <label class="col-sm-2">No Pendaftaran PKK</label>
                   <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                   <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
+                  <small id="nsebutharga" class="form-text text-muted">Pastikan No Pendaftaran PKK yang dinyatakan betul.</small>
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
@@ -66,6 +67,7 @@
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
                   </div>
+                  <small id="nsebutharga" class="form-text text-muted">Pastikan No Kontrak betul.</small>
                 </div>
               </div>
 
@@ -117,6 +119,7 @@
                   <div class="col-sm-5">
                     <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden"  placeholder="No Inden">
                   </div>
+                  <small id="nsebutharga" class="form-text text-muted">Pastikan No Inden/Tempatan dinyatakan dengan betul.</small>
                 </div>
               </div>
 
@@ -259,6 +262,7 @@
                   <div class="col-sm-2">
                     <input type="text" class="form-control" id="kosprojek" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2) ?>" name="kosprojek" placeholder="RM">
                   </div>
+                  <small id="nsebutharga" class="form-text text-muted">Pastikan Kos Projek dinyatakan dengan betul.</small>
 
                   <label class="col-sm-1">Tarikh</label>
 

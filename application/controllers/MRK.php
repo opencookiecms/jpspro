@@ -509,6 +509,15 @@ class MRK extends CI_Controller{
 		}
 	}
 
+	public function namakon()
+	{
+		$this->load->database();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('pages/namakon');
+		$this->load->view('template/footer');
+	}
+
 
 
 

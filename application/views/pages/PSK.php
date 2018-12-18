@@ -64,14 +64,17 @@
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="failrujuk" name="failrujuk" placeholder="Fail Rujukan" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                    <small id="failrujuk" class="form-text text-muted">Pastikan Fail Rujukan dinyatakan dengan betul.</small>
                   </div>
 
                   <label class="col-sm-1">No Sebutharga</label>
 
                   <div class="col-sm-5">
                     <input type="text" class="form-control" id="nosebut" name="nosebut" placeholder="No Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
+                    <small id="nosebut" class="form-text text-muted">Pastikan No Sebutharga dinyatakan dengan betul.</small>
                   </div>
                 </div>
+                
               </div>
 
               <div class="box-body">

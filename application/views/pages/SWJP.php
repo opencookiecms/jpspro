@@ -58,6 +58,7 @@
 
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->swjp_rujuktuan?>">
+                    <small id="rujuktuan" class="form-text text-muted">Pastikan Rujukan Tuan dinyatakan dengan betul.</small>
                   </div>
                 </div>
               </div>
@@ -69,6 +70,7 @@
 
                   <div class="col-sm-5">
                     <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->swjp_alamat?></textarea>
+                    <small id="alamat" class="form-text text-muted">Pastikan Alamat dinyatakan dengan betul.</small>
                   </div>
 
                   <label class="col-sm-2">Rujukan Kami</label>
@@ -117,6 +119,7 @@
 
                   <div class="col-sm-2">
                     <input type="text" class="form-control" id="wangjamin" name="wangjaminan" placeholder="RM" value="<?php echo $get_detail[0]->swjp_wangjamin?>">
+                    <small id="jumlahwang" class="form-text text-muted">Pastikan Jumlah Wang Perlaksanaan dinyatakan dengan betul.</small>
                   </div>
                 </div>
               </div>

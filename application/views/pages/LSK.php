@@ -64,7 +64,10 @@
                   </div>
 
                   <input type="hidden" value="<?php echo $get_detail[0]->mrksatuid?>" name="hiddenid">
+                  <small id="nopkk" class="form-text text-muted">Pastikan No Pendaftaran PKK dinyatakan dengan betul.</small>
                 </div>
+                
+
 
               </div><!--end of body-->
 
@@ -106,6 +109,8 @@
                   <div class="col-sm-4">
                     <input type="text" class="form-control"  name="nosebut" placeholder="No Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                   </div>
+                  <small id="nopkk" class="form-text text-muted">Pastikan No Sebutharga dinyatakan dengan betul.</small>
+
                 </div>
               </div>
 
@@ -349,6 +354,7 @@
                     <input type="text" class="form-control" id="publiability" name="publiability" value="<?php echo $get_detail[0]->lsk_liability?>">
                   </div>
                 </div>
+                <small id="nopkk" class="form-text text-muted">Pastikan W.C/PERKESO dan Public Liability dinyatakan dengan betul.</small>
               </div>
 
               <div class="box-footer">

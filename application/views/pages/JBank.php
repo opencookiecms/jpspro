@@ -48,7 +48,10 @@
 
                 <div class="col-sm-3">
                   <input type="text" class="form-control" id="rujukbank" name="rujukbank" placeholder="Rujukan Bank" value="<?php echo $get_detail[0]->mrk_rujukanbank?>">
+                  <small id="rujukbank" class="form-text text-muted">Pastikan Rujukan Bank dinyatakan dengan betul.</small>
                 </div>
+
+
 
                 <label class="col-sm-3">Tarikh Mula Tanggungan</label>
 
