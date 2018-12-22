@@ -58,15 +58,16 @@
 
 
                     <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk?>" placeholder="No Pendaftaran PKK" readonly>
+                                <small id="nopkk" class="form-text text-muted">Sila rujuk No Pendaftaran PKK dinyatakan dengan betul.</small>
 
 
 
                   </div>
 
                   <input type="hidden" value="<?php echo $get_detail[0]->mrksatuid?>" name="hiddenid">
-                  <small id="nopkk" class="form-text text-muted">Pastikan No Pendaftaran PKK dinyatakan dengan betul.</small>
+
                 </div>
-                
+
 
 
               </div><!--end of body-->
@@ -108,8 +109,9 @@
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control"  name="nosebut" placeholder="No Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
+                            <small id="nopkk" class="form-text text-muted">Pastikan No Sebutharga dinyatakan dengan betul.</small>
                   </div>
-                  <small id="nopkk" class="form-text text-muted">Pastikan No Sebutharga dinyatakan dengan betul.</small>
+
 
                 </div>
               </div>
@@ -198,6 +200,7 @@
                   <h3 class="box-title">Laporan Pegawai Penjaga</h3>
                   </div>
                   <div class="col-sm-11">
+                    <br>
                     <textarea type="text" class="form-control"  name="laporanpegawai"><?php echo $get_detail[0]->lsk_laporanpegawai?></textarea>
                   </div>
                 </div>

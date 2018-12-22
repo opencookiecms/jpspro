@@ -1121,6 +1121,14 @@ class Mrk_model extends CI_Model{
     return $this->db->get('kontraktor')->row_array();
   }
 
+  public function getDataSearchkon($namakons)
+  {
+    $this->db->like('konName', $namakons, 'BOTH');
+    $this->db->order_by('kontraktorId','ASC');
+    $this->db->limit(10);
+    return $this->db->get('kontraktor')->result();
+  }
+
 
 
   ///////////////////////////end of mrk update////////////////////////////////////////////////////////////////////////////////////

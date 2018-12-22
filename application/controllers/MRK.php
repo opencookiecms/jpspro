@@ -20,6 +20,19 @@ class MRK extends CI_Controller{
 		$this->load->view('template/footer');
 	}
 	/////////////////////////////////LOAD DATA MRK////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public function getKonSearch()
+	{
+		if(isset($_GET['term'])){
+			$result = $this->Mrk_model->getDataSearchkon($_GET['term']);
+			if (count($result) > 0){
+				foreach ($result as $row)
+					$result_array[] = $row->konName;
+					echo json_encode($result_array);
+
+			}
+		}
+	}
+
 	public function getKontraktorName()
 	{
 		$keyword=$this->input->post('keyword');
