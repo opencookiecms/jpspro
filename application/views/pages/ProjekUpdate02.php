@@ -40,7 +40,7 @@
         </div>
 
         <h5><span class="error"> * Dikehendaki mengisi semua bahagian</span></h5>
-        <input type="text" name="hiddenid" value="<?php echo $get_detail[0]->dp_id?>">
+        <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->dp_id?>">
         <div class="box-body">
           <div class="form-group">
 
@@ -82,16 +82,16 @@
         <div class="box-body">
           <div class="form-group">
 
-            <label class="col-sm-2">Pengkhususan</label>
+            <label class="col-sm-3">Pengkhususan</label>
 
             <div class="col-sm-1">
-              <input type="text" class="form-control" name="khusus" value="<?php echo $get_detail[0]->df_khusus?>">
+              <input type="text" class="form-control" name="khusus1" value="<?php echo $get_detail[0]->df_khusus1?>">
             </div>
             <div class="col-sm-1">
-              <input type="text" class="form-control" name="khusus">
+              <input type="text" class="form-control" name="khusus2" value="<?php echo $get_detail[0]->df_khusus2?>">
             </div>
             <div class="col-sm-1">
-              <input type="text" class="form-control" name="khusus">
+              <input type="text" class="form-control" name="khusus3" value="<?php echo $get_detail[0]->df_khusus3?>">
             </div>
 
             <label class="col-sm-2"></label>
@@ -110,16 +110,21 @@
         <div class="box-body">
           <div class="form-group">
 
-            <label class="col-sm-2">Tempoh Siap Kerja</label>
+            <label class="col-sm-3">Tempoh Siap Kerja</label>
 
             <div class="col-sm-1">
               <input type="text" class="form-control"  name="tempoh" value="<?php echo $get_detail[0]->df_tempohsiap?>">
             </div>
-            <label class="col-sm-1">Minggu</label>
-            <div class="col-sm-1">
-              <input type="text" class="form-control"  name="tempoh" placeholder="Bulan">
+
+            <div class="col-sm-2">
+              <select type="text" class="form-control" name="bulanming" placeholder="Minggu/Bulan">
+                <option value="<?php echo $get_detail[0]->dp_bulanmig?>"><?php echo $get_detail[0]->dp_bulanmig?></option>
+                <option value="Minggu">Minggu</option>
+                <option value="Bulan">Bulan</option>
+
+              </select>
             </div>
-            <label class="col-sm-1">Bulan</label>
+
           </div>
         </div>
 
@@ -140,6 +145,7 @@
 
             <div class="col-sm-2">
               <input type="date" class="form-control" name="notiskeluar" value="<?php echo $get_detail[0]->df_tarikhnotis?>" >
+              <?php $dates = $get_detail[0]->df_tarikhnotis ?>
             </div>
           </div>
         </div>
@@ -149,8 +155,14 @@
             <label class="col-sm-3">Tarikh Lawat Tapak/Taklimat</label>
 
             <div class="col-sm-2">
-              <input type="date" class="form-control"name="lawattapak" value="<?php echo $get_detail[0]->df_tarikhlawat?>">
+              <input type="text" class="form-control"name="lawattapak" value="<?php echo $get_detail[0]->df_tarikhlawat?>">
+
             </div>
+            <label class="col-sm-4"> :
+              <?php
+                echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhlawat} days"));
+              ?>
+            </label>
           </div>
         </div>
 
@@ -159,8 +171,13 @@
             <label class="col-sm-3">Tarikh Dokumen Mula Dijual</label>
 
             <div class="col-sm-2">
-              <input type="date" class="form-control" name="docmula" value="<?php echo $get_detail[0]->df_tarikhdocmula?>">
+              <input type="text" class="form-control" name="docmula" value="<?php echo $get_detail[0]->df_tarikhdocmula?>">
             </div>
+              <label class="col-sm-4">:
+                <?php
+                  echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhdocmula} days"));
+                ?>
+              </label>
           </div>
         </div>
 
@@ -169,8 +186,13 @@
             <label class="col-sm-3">Tarikh Akhir Dokumen Dijual</label>
 
             <div class="col-sm-2">
-              <input type="date" class="form-control" name="docakhir" value="<?php echo $get_detail[0]->df_tarikhdocakhir?>">
+              <input type="text" class="form-control" name="docakhir" value="<?php echo $get_detail[0]->df_tarikhdocakhir?>">
             </div>
+              <label class="col-sm-4">:
+                <?php
+                  echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhdocakhir} days"));
+                ?>
+              </label>
           </div>
         </div>
 
@@ -179,8 +201,14 @@
             <label class="col-sm-3">Tarikh Sebutharga Ditutup</label>
 
             <div class="col-sm-2">
-              <input type="date" class="form-control"  name="sebuttutup" value="<?php echo $get_detail[0]->df_tarikhtutup?>">
+              <input type="text" class="form-control"  name="sebuttutup" value="<?php echo $get_detail[0]->df_tarikhtutup?>">
+              <?php $tarikhtutup = $get_detail[0]->df_tarikhtutup?>
             </div>
+              <label class="col-sm-4">:
+                <?php
+                  echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhtutup} days"));
+                ?>
+               </label>
           </div>
         </div>
 
@@ -238,15 +266,7 @@
               <input type="text" class="form-control"  name="vot" placeholder="Vot" value="<?php echo $get_detail[0]->df_kodvot?>">
             </div>
 
-            <label class="col-sm-2">Peruntukan</label>
 
-            <div class="col-sm-2">
-              <select type="text" class="form-control"  name="peruntukan" placeholder="Negeri">
-                <option value="<?php echo $get_detail[0]->df_peruntukan?>"><?php echo $get_detail[0]->df_peruntukan?></option>
-                <option value="negeri">Negeri</option>
-                <option value="persekutuan">Persekutuan</option>
-              </select>
-            </div>
           </div>
         </div>
 
@@ -256,7 +276,16 @@
 
             <div class="col-sm-4">
               <input type="text" class="form-control"  name="baki" placeholder="Peruntukan Semasa" value="<?php echo $get_detail[0]->df_bakiperuntukan?>">
-              <input type="text" class="form-control" name="dp_idpost" value="<?php echo $get_detail[0]->projek_id?>">
+              <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $get_detail[0]->projek_id?>">
+            </div>
+            <label class="col-sm-2">Peruntukan</label>
+
+            <div class="col-sm-2">
+              <select type="text" class="form-control"  name="peruntukan" placeholder="Negeri">
+                <option value="<?php echo $get_detail[0]->df_peruntukan?>"><?php echo $get_detail[0]->df_peruntukan?></option>
+                <option value="Negeri">Negeri</option>
+                <option value="Persekutuan">Persekutuan</option>
+              </select>
             </div>
           </div>
         </div>

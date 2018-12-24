@@ -48,9 +48,12 @@ class Projek_model extends CI_Model{
 
     $df_gred = $this->input->post("gred");
     $df_kategori = $this->input->post("kategori");
-    $df_khusus = $this->input->post("khusus");
+    $df_khusus1 = $this->input->post("khusus1");
+    $df_khusus2 = $this->input->post("khusus2");
+    $df_khusus3 = $this->input->post("khusus3");
     $df_taraf = $this->input->post("taraf");
     $df_tempohsiap = $this->input->post("tempoh");
+    $dp_bulanming = $this->input->post("bulanming");
     $df_hargadoc = $this->input->post("doc");
     $df_tarikhnotis = $this->input->post("notiskeluar");
     $df_tarikhlawat = $this->input->post("lawattapak");
@@ -69,9 +72,12 @@ class Projek_model extends CI_Model{
       $data = array(
         'df_gred' => $df_gred,
         'df_kategori' => $df_kategori,
-        'df_khusus' => $df_khusus,
+        'df_khusus1' => $df_khusus1,
+        'df_khusus2' => $df_khusus2,
+        'df_khusus3' => $df_khusus3,
         'df_taraf' => $df_taraf,
         'df_tempohsiap' => $df_tempohsiap,
+        'dp_bulanmig'=> $dp_bulanming,
         'df_hargadoc' => $df_hargadoc,
         'df_tarikhnotis' => $df_tarikhnotis,
         'df_tarikhlawat' => $df_tarikhlawat,
@@ -229,9 +235,12 @@ class Projek_model extends CI_Model{
 
     $df_gred = $this->input->post("gred");
     $df_kategori = $this->input->post("kategori");
-    $df_khusus = $this->input->post("khusus");
+    $df_khusus1 = $this->input->post("khusus1");
+    $df_khusus2 = $this->input->post("khusus2");
+    $df_khusus3 = $this->input->post("khusus3");
     $df_taraf = $this->input->post("taraf");
     $df_tempohsiap = $this->input->post("tempoh");
+    $dp_bulanming = $this->input->post("bulanming");
     $df_hargadoc = $this->input->post("doc");
     $df_tarikhnotis = $this->input->post("notiskeluar");
     $df_tarikhlawat = $this->input->post("lawattapak");
@@ -250,9 +259,12 @@ class Projek_model extends CI_Model{
       $data = array(
         'df_gred' => $df_gred,
         'df_kategori' => $df_kategori,
-        'df_khusus' => $df_khusus,
+        'df_khusus1' => $df_khusus1,
+        'df_khusus2' => $df_khusus2,
+        'df_khusus3' => $df_khusus3,
         'df_taraf' => $df_taraf,
         'df_tempohsiap' => $df_tempohsiap,
+        'dp_bulanmig' => $dp_bulanming,
         'df_hargadoc' => $df_hargadoc,
         'df_tarikhnotis' => $df_tarikhnotis,
         'df_tarikhlawat' => $df_tarikhlawat,

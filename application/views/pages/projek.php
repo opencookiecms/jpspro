@@ -16,12 +16,12 @@
       <div class="table-responsive"></div>
       <div class="col-md-12">
 
-        <div class="box">
+        <div class="box box-solid bg-green">
           <div class="box-header">
             <h3 class="box-title">Senarai Projek</h3>
           </div>
           <!-- /.box-header -->
-          <div class="box-body">
+          <div class="box-footer text-black">
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>

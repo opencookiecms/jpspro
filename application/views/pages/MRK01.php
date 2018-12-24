@@ -61,8 +61,7 @@
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
-                    <input type="text" class="form-control" id="namakons" onkeyup="autofill()" value=""name="namakons" placeholder="Nama Kontraktor">
-
+                    
                   </div>
                   </div>
 

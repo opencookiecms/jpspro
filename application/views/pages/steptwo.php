@@ -113,11 +113,14 @@
               <div class="col-sm-1">
                 <input type="text" class="form-control"  name="tempoh" placeholder="Minggu">
               </div>
-              <label class="col-sm-1">Minggu</label>
-              <div class="col-sm-1">
-                <input type="text" class="form-control"  name="tempoh" placeholder="Bulan">
+              <div class="col-sm-2">
+                <select type="text" class="form-control" name="bulanming" placeholder="Minggu/Bulan">
+                  <option value="Minggu">Minggu</option>
+                  <option value="Bulan">Bulan</option>
+
+                </select>
               </div>
-              <label class="col-sm-1">Bulan</label>
+
             </div>
           </div>
           <div class="box-body">
@@ -187,7 +190,7 @@
               <label class="col-sm-3">Tarikh Sebutharga Ditutup</label>
 
               <div class="col-sm-2">
-                <input type="date" class="form-control"  name="sebuttutup">
+                <input type="text" class="form-control"  name="sebuttutup">
               </div>
             </div>
           </div>

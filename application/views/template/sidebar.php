@@ -24,7 +24,7 @@
       <li><a href="<?php echo site_url('daftar') ?>"><i class="fa fa-book"></i> <span>Daftar</span></a></li>
       <li><a href="<?php echo site_url('projek') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
       <li><a href="<?php echo site_url('mrk') ?>"><i class="fa fa-circle-o"></i>MRK</a></li>
-      <li><a href="<?php echo site_url('mrk/namakon') ?>"><i class="fa fa-circle-o"></i>Nama KON</a></li>
+      <li><a href="<?php echo site_url('Setting_con') ?>"><i class="fa fa-circle-o"></i>Setting</a></li>
     </ul>
   </section>
   <!-- /.sidebar -->
