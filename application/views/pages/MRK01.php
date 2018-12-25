@@ -61,7 +61,7 @@
 
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
-                    
+
                   </div>
                   </div>
 
@@ -221,7 +221,7 @@
                   <label class="col-sm-2">Pegawai</label>
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="pegawai" name="pegawai">
-                          <option value="<?php echo $get_detail[0]->mrk_pegawai ?>"><?php echo $get_detail[0]->mrk_pegawai ?></option>
+                      <option value="<?php echo $get_detail[0]->mrk_pegawai ?>"><?php echo $get_detail[0]->mrk_pegawai ?></option>
                       <option value="Mohamad Ridzam B. Jusoh">Mohamad Ridzam B. Jusoh</option>
                       <option value="Nazar Shah B. Awang">Nazar Shah B. Awang</option>
                       <option value="Shuhel B. Mohd Saad">Shuhel B. Mohd Saad</option>
