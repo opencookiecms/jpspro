@@ -27,42 +27,69 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group">
-                <div class="box-body">
-                  <a href="" class="btn btn-success" role="button">Add</a>
-                  <p>
-                  <p>
-                  <table class="table table-bordered" style="undefined;table-layout: fixed; width: 669px">
-                  <colgroup>
-                  <col style="width: 48px">
-                  <col style="width: 621px">
-                  </colgroup>
-                    <thead style="background-color:#0099ff;color:#fff;">
-                      <th class="tg-amwm">Bil</th>
-                      <th class="tg-hgcj">Nama</th>
-                    </thead>
-                    <tr>
-                      <td class="tg-baqh">1</td>
-                      <td class="tg-baqh"></td>
-                    </tr>
-                  </table>
+              <div class="box-body">
+                <div class="form-group">
+                  <div class="col-md-2">
+                      <a href="" class="btn btn-success" role="button">Add User</a>
+                  </div>
                 </div>
               </div>
               <div class="box-body">
                 <div class="form-group">
-                  <div class="box-header with-border">
-                  <h3 class="box-title">Slogan</h3>
-                  </div>
+                <div class="hiddeandseek">
+                <div class="col-md-1">
+                  <h4>Nama</h4>
                 </div>
-                <div class="form-group">
-                  <label class="col-sm-1">Slogan</label>
+                <div class="col-md-4">
+                  <input class="form-control" name="peoplename" id="people" value="Sila Masukkan nama">
+                </div>
+              </div>
+                </div>
+              </div>
+              <div class="box-body">
 
-                  <div class="col-sm-2">
-                    <input type="text" class="form-control" name="slogan" value="">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <table class="table table-bordered" style="undefined;table-layout: fixed; width: 669px">
+                    <colgroup>
+                    <col style="width: 48px">
+                    <col style="width: 621px">
+                    </colgroup>
+                      <thead style="background-color:#0099ff;color:#fff;">
+                        <th class="tg-amwm">Bil</th>
+                        <th class="tg-hgcj">Nama</th>
+                      </thead>
+                      <tr>
+                        <td class="tg-baqh">1</td>
+                        <td class="tg-baqh"></td>
+                      </tr>
+                    </table>
+                  </div>
+                  </div>
+
+              </div>
+              <div class="box-body">
+                <div class="form-group">
+                  <div class="col-md-1">
+                    <h4>Slogan</h4>
+                  </div>
+                  <div class="col-md-6">
+                      <input class="form-control" name="slogan" placeholder="Slogan">
                   </div>
                 </div>
               </div>
+
+              <div class="box-body">
+                <div class="form-group">
+                  <div class="col-md-2">
+                      <a href="" class="btn btn-primary" role="button">Save</a>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
+
           </div>
 
 

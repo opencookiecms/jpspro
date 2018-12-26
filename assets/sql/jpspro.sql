@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 18, 2018 at 03:35 AM
+-- Generation Time: Dec 26, 2018 at 03:56 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.0.32
 
@@ -86,21 +86,24 @@ CREATE TABLE `dp_projekinfo` (
   `info_id` int(11) NOT NULL,
   `df_gred` varchar(10) COLLATE utf8_bin DEFAULT NULL,
   `df_kategori` varchar(10) COLLATE utf8_bin DEFAULT NULL,
-  `df_khusus` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `df_khusus1` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `df_khusus2` varchar(20) COLLATE utf8_bin NOT NULL,
+  `df_khusus3` varchar(20) COLLATE utf8_bin NOT NULL,
   `df_taraf` varchar(10) COLLATE utf8_bin DEFAULT NULL,
   `df_tempohsiap` varchar(11) COLLATE utf8_bin DEFAULT NULL,
+  `dp_bulanmig` varchar(10) COLLATE utf8_bin DEFAULT NULL,
   `df_hargadoc` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `df_tarikhnotis` date DEFAULT NULL,
-  `df_tarikhlawat` date DEFAULT NULL,
-  `df_tarikhdocmula` date DEFAULT NULL,
-  `df_tarikhdocakhir` date DEFAULT NULL,
-  `df_tarikhtutup` date DEFAULT NULL,
+  `df_tarikhlawat` int(2) DEFAULT NULL,
+  `df_tarikhdocmula` int(2) DEFAULT NULL,
+  `df_tarikhdocakhir` int(2) DEFAULT NULL,
+  `df_tarikhtutup` int(2) DEFAULT NULL,
   `df_juruterad` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `df_jurutera` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `df_penolongkanan` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `df_penolong` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `df_kodvot` varchar(100) COLLATE utf8_bin DEFAULT NULL,
-  `df_peruntukan` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `df_peruntukan` varchar(20) COLLATE utf8_bin DEFAULT NULL,
   `df_bakiperuntukan` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `dp_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -109,9 +112,9 @@ CREATE TABLE `dp_projekinfo` (
 -- Dumping data for table `dp_projekinfo`
 --
 
-INSERT INTO `dp_projekinfo` (`info_id`, `df_gred`, `df_kategori`, `df_khusus`, `df_taraf`, `df_tempohsiap`, `df_hargadoc`, `df_tarikhnotis`, `df_tarikhlawat`, `df_tarikhdocmula`, `df_tarikhdocakhir`, `df_tarikhtutup`, `df_juruterad`, `df_jurutera`, `df_penolongkanan`, `df_penolong`, `df_kodvot`, `df_peruntukan`, `df_bakiperuntukan`, `dp_id`) VALUES
-(12, 'G3', 'B | Pembin', 'CE23', 'Bukan Bumi', '3', '10', '2018-11-21', '2018-11-21', '2018-11-21', '2018-11-21', '2018-11-21', 'Zainuddin bin Yusoff, AMP., BCK', 'Nurul', 'A.A', 'A.A', 'JPS0001922', 'persekutua', '20.00', 23),
-(13, 'G1', 'B', '', 'Bumiputera', '8', '70', '2018-12-12', '0000-00-00', '0000-00-00', '0000-00-00', '2018-12-12', 'Zainuddin bin Yusoff, AMP., BCK', 'HAZWANI', 'HISYAM', 'JUJU', 'KOV20312321', 'negeri', '90021', 24);
+INSERT INTO `dp_projekinfo` (`info_id`, `df_gred`, `df_kategori`, `df_khusus1`, `df_khusus2`, `df_khusus3`, `df_taraf`, `df_tempohsiap`, `dp_bulanmig`, `df_hargadoc`, `df_tarikhnotis`, `df_tarikhlawat`, `df_tarikhdocmula`, `df_tarikhdocakhir`, `df_tarikhtutup`, `df_juruterad`, `df_jurutera`, `df_penolongkanan`, `df_penolong`, `df_kodvot`, `df_peruntukan`, `df_bakiperuntukan`, `dp_id`) VALUES
+(12, 'G3', 'B | Pembin', 'C1', 'C2', 'C3', 'Bukan Bumi', '5', 'Bulan', '10', '2018-11-21', 4, 5, 6, 7, 'Zainuddin bin Yusoff, AMP., BCK', 'Nurul', 'A.A', 'A.A', 'JPS0001922', 'Persekutuan', '20.00', 23),
+(13, 'G1', 'B', '', '', '', 'Bumiputera', '8', 'Minggu', '70', '2018-12-12', 2, 3, 4, 5, 'Zainuddin bin Yusoff, AMP., BCK', 'HAZWANI', 'HISYAM', 'JUJU', 'KOV20312321', 'Negeri', '90021', 24);
 
 -- --------------------------------------------------------
 
@@ -742,6 +745,17 @@ INSERT INTO `mrk_jaminanbank` (`id`, `mrk_rujukanbank`, `mrk_namabank`, `mrk_ala
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `mrk_keypeople`
+--
+
+CREATE TABLE `mrk_keypeople` (
+  `p_id` int(11) NOT NULL,
+  `p_names` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mrk_laporansiap`
 --
 
@@ -890,19 +904,26 @@ CREATE TABLE `mrk_satu` (
 --
 
 INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mrk_alamatkon`, `mrk_nokontrak`, `mrk_noinden`, `mrk_tajukkerja`, `mrk_kategori`, `mrk_daerah`, `mrk_negeri`, `mrk_khusus`, `mrk_tarikhmulakon`, `mrk_tarikhjangkasiap`, `mrk_pegawai`, `mrk_jawatan`, `mrk_kosprojek`, `mrk_tarikh`, `mrksatu_id`, `mrks_kodvot`) VALUES
-(18, 'PKK299393', 'G1', 'RCS  SYSTEM COMPUTERS', 'TAMAN DELIMA', 'JKL/ST/201888/OP/200', '0002991882', 'PROTECTIVE FUNCTION ANALOG MULTIMETER', 'CE', 'kuala muda', 'kedah', 'CE 02', '2018-11-07', '2018-11-14', 'Haji Shukri B. Man', 'Penolong Jurutera JA29', '576', '2018-11-15', 0, 'JPS0001922');
+(18, 'PKK299393', 'G1', 'RCS  SYSTEM COMPUTERS', 'TAMAN DELIMA', 'JKL/ST/201888/OP/200', '0002991882', 'PROTECTIVE FUNCTION ANALOG MULTIMETER', 'CE', 'kuala muda', 'kedah', 'CE 02', '2018-11-07', '2018-11-14', 'Haji Shukri B. Man', 'Penolong Jurutera JA29', '576', '2018-11-15', 0, 'JPS0001922'),
+(19, 'PKK00298812-22', 'G2 | RM200,001.00 Hingga RM500,000.00', 'ADK SEJATI', 'NO. 1400, LORONG ANGSANA 41', 'JKL/ST/201888/OP/2002', 'K1930221', 'JABATAN PENGAIRAN DAN SALIRAN NEGERI KEDAH', 'CE | Pembinaan Kejuruteraan Awam', 'sik', 'kedah', 'CE 02', '2018-12-20', '2018-12-20', 'Nazar Shah B. Awang', 'Penolong Jurutera JA36', '209', '2018-12-20', 0, 'KOV20312321');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mrk_setting`
+-- Table structure for table `mrk_slogan`
 --
 
-CREATE TABLE `mrk_setting` (
+CREATE TABLE `mrk_slogan` (
   `set_id` int(11) NOT NULL,
-  `set_slogan` varchar(150) DEFAULT NULL,
-  `set_keypeople` varchar(150) DEFAULT NULL
+  `set_slogan` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mrk_slogan`
+--
+
+INSERT INTO `mrk_slogan` (`set_id`, `set_slogan`) VALUES
+(1, 'Cintailah Sungai Kita');
 
 -- --------------------------------------------------------
 
@@ -1100,6 +1121,12 @@ ALTER TABLE `mrk_jaminanbank`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `mrk_keypeople`
+--
+ALTER TABLE `mrk_keypeople`
+  ADD PRIMARY KEY (`p_id`);
+
+--
 -- Indexes for table `mrk_laporansiap`
 --
 ALTER TABLE `mrk_laporansiap`
@@ -1130,9 +1157,9 @@ ALTER TABLE `mrk_satu`
   ADD PRIMARY KEY (`mrksatuid`);
 
 --
--- Indexes for table `mrk_setting`
+-- Indexes for table `mrk_slogan`
 --
-ALTER TABLE `mrk_setting`
+ALTER TABLE `mrk_slogan`
   ADD PRIMARY KEY (`set_id`);
 
 --
@@ -1206,6 +1233,12 @@ ALTER TABLE `mrk_jaminanbank`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `mrk_keypeople`
+--
+ALTER TABLE `mrk_keypeople`
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `mrk_laporansiap`
 --
 ALTER TABLE `mrk_laporansiap`
@@ -1233,13 +1266,13 @@ ALTER TABLE `mrk_ppwjp`
 -- AUTO_INCREMENT for table `mrk_satu`
 --
 ALTER TABLE `mrk_satu`
-  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `mrk_setting`
+-- AUTO_INCREMENT for table `mrk_slogan`
 --
-ALTER TABLE `mrk_setting`
-  MODIFY `set_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `mrk_slogan`
+  MODIFY `set_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `mrk_ss`

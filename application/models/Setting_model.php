@@ -10,9 +10,34 @@ class Setting_model extends CI_Model{
 
   }
 
-  public function addSetting()
+  public function addUserSetting()
   {
-    
+    $this->load->helper('url');
+
+    $keypeople = $this->input->post("peoplename");
+
+    $data = array(
+      'p_names' => $keypeople
+    );
+
+    return $this->db->insert('mrk_keypeople',$data);
+  }
+
+  public function sloganSetting($data, $update)
+  {
+    $this->load->helper('url');
+
+    $df_projekid = $this->input->post('slogan');
+
+
+    $data = array(
+      'set_slogan' => $df_daerah
+      );
+
+
+      $this->db->where('set_id', $update);
+
+      $this->db->update('mrk_slogan', $data);
   }
 
 }
