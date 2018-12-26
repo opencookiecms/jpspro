@@ -10,6 +10,8 @@ class Setting_model extends CI_Model{
 
   }
 
+
+
   public function addUserSetting()
   {
     $this->load->helper('url');
@@ -38,6 +40,15 @@ class Setting_model extends CI_Model{
       $this->db->where('set_id', $update);
 
       $this->db->update('mrk_slogan', $data);
+  }
+
+  public function get_Datasetting()
+  {
+    $this->db->select('*');
+    $this->db->from('mrk_keypeople');
+    $this->db->order_by('p_id');
+    $query = $this->db->get();
+    return $query->result();
   }
 
 }
