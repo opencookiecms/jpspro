@@ -8,6 +8,7 @@ class MRK extends CI_Controller{
 		parent::__construct();
 		//Codeigniter : Write Less Do More
 		$this->load->model('Mrk_model');
+		$this->load->model('Setting_model');
 		$this->load->helper('url');
 		//$this->load->model('Projek_model');
 	}
@@ -46,6 +47,7 @@ class MRK extends CI_Controller{
 
 		//form validation function
 		$this->load->database();
+	  $data['get_usersetting']=$this->Setting_model->get_Datasetting();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 		$this->form_validation->set_rules('nokon', 'No kontrak', 'required');

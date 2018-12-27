@@ -222,25 +222,9 @@
                   <div class="col-sm-3">
                     <select type="text" class="form-control" id="pegawai" name="pegawai">
                       <option value="<?php echo $get_detail[0]->mrk_pegawai ?>"><?php echo $get_detail[0]->mrk_pegawai ?></option>
-                      <option value="Mohamad Ridzam B. Jusoh">Mohamad Ridzam B. Jusoh</option>
-                      <option value="Nazar Shah B. Awang">Nazar Shah B. Awang</option>
-                      <option value="Shuhel B. Mohd Saad">Shuhel B. Mohd Saad</option>
-                      <option value="Azhar B. Ahmad">Azhar B. Ahmad</option>
-                      <option value="Shahriful Azhar B. Mohd. Hassan">Shahriful Azhar B. Mohd. Hassan</option>
-                      <option value="Mohd. Tarmizi B. Taib">Mohd. Tarmizi B. Taib</option>
-                      <option value="Ku Izham B. Ku Din">Ku Izham B. Ku Din</option>
-                      <option value="Noorzita Bt. Mustaffa">Noorzita Bt. Mustaffa</option>
-                      <option value="Haji Shukri B. Man">Haji Shukri B. Man</option>
-                      <option value="Othman B. Shariff">Othman B. Shariff</option>
-                      <option value="Intan Zahida Bt. Abu Bakar">Intan Zahida Bt. Abu Bakar</option>
-                      <option value="Jamil B. Ahmad">Jamil B. Ahmad</option>
-                      <option value="Rosli B. Shaari">Rosli B. Shaari</option>
-                      <option value="Roshidi B. Ismail">Roshidi B. Ismail</option>
-                      <option value="Shaari Bin Abdullah">Shaari Bin Abdullah</option>
-                      <option value="Hafizah Binti Yahaya">Hafizah Binti Yahaya</option>
-                      <option value="Mohamed Radzi Bin Ishak">Mohamed Radzi Bin Ishak</option>
-                      <option value="Juhari Bin Md. Ali">Juhari Bin Md. Ali</option>
-                      <option value="Johari Bin Ali">Johari Bin Ali</option>
+                      <?php foreach($get_usersetting as $users){ ?>
+                        <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                      <?php } ?>
                     </select>
                   </div>
 
