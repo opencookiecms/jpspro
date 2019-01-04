@@ -22,7 +22,8 @@ class Daftar extends CI_Controller{
 
       //good luck
     $this->load->view('template/header');
-    //$this->load->view('template/sidebar');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
     $this->load->view('pages/daftar');
     $this->load->view('template/footer');
   }
@@ -41,8 +42,9 @@ class Daftar extends CI_Controller{
 
     {
       $this->load->view('template/header');
-      $this->load->view('template/sidebar',$data);
-      $this->load->view('pages/stepone');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/stepone',$data);
       $this->load->view('template/footer');
     }
 

@@ -1,31 +1,79 @@
-<!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar ">
-  <!-- sidebar: style can be found in sidebar.less -->
-  <section class="sidebar">
-    <!-- Sidebar user panel -->
-    <div class="user-panel">
 
-    </div>
-    <!-- search form -->
-    <form action="#" method="get" class="sidebar-form">
-      <div class="input-group">
-        <input type="text" name="q" class="form-control" placeholder="Search">
-        <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="user-wrapper">
+                <div class="profile-image">
+                  <img src="<?php echo base_url() ?>assets/staradmin/images/faces/face1.jpg" alt="profile image">
+                </div>
+                <div class="text-wrapper">
+                  <p class="profile-name">JPS</p>
+                  <div>
+                    <small class="designation text-muted">Admin</small>
+                    <span class="status-indicator online"></span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-success btn-block">+ Projek
+                <i class="mdi mdi-plus"></i>
               </button>
-            </span>
-      </div>
-    </form>
-    <!-- /.search form -->
-    <!-- sidebar menu: : style can be found in sidebar.less -->
-    <ul class="sidebar-menu" data-widget="tree">
-      <li class="header">MAIN NAVIGATION</li>
-
-      <li><a href="<?php echo site_url('daftar') ?>"><i class="fa fa-book"></i> <span>Daftar</span></a></li>
-      <li><a href="<?php echo site_url('projek') ?>"><i class="fa fa-circle-o"></i>Lihat Projek</a></li>
-      <li><a href="<?php echo site_url('mrk') ?>"><i class="fa fa-circle-o"></i>MRK</a></li>
-      <li><a href="<?php echo site_url('Setting_con') ?>"><i class="fa fa-circle-o"></i>Setting</a></li>
-    </ul>
-  </section>
-  <!-- /.sidebar -->
-</aside>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="menu-icon mdi mdi-television"></i>
+              <span class="menu-title">Halaman Utama</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="menu-icon mdi mdi-content-copy"></i>
+              <span class="menu-title">MRK</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/buttons.html">MRK_01</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">MRK_02</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">LSK</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">MRK_03</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">PSK</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">PSMK</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">PJB</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">PP WJP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">Surat Menyurat</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/font-awesome.html">
+              <i class="menu-icon mdi mdi-sticker"></i>
+              <span class="menu-title">Laporan</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
