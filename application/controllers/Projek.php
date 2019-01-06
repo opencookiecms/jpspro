@@ -20,6 +20,7 @@ class Projek extends CI_Controller
   {
    $this->load->database();
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Projek_model->get_projekview();
     $this->load->view('pages/projek', $data);
@@ -31,6 +32,7 @@ class Projek extends CI_Controller
 
    $this->load->database();
    $this->load->view('template/header');
+   $this->load->view('template/nav');
    $this->load->view('template/sidebar');
    $data['get_progress']=$this->Projek_model->get_projectprogress($value);
    $data['get_detail']=$this->Projek_model->get_projekdetail($value);

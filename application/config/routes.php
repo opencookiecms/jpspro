@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'Home';
 
-$route['daftar'] = 'Daftar';
+$route['mydashboard'] = 'Daftar';
 $route['mrk'] = 'MRK';
 $route['surat'] = 'Surat';
 $route['404_override'] = '';

@@ -73,6 +73,7 @@ class Daftar extends CI_Controller{
 
 
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/steptwo',$data);
       $this->load->view('template/footer');
@@ -100,8 +101,9 @@ class Daftar extends CI_Controller{
     if($this->form_validation->run() === FALSE)
     {
       $this->load->view('template/header');
-      $this->load->view('template/sidebar',$data);
-      $this->load->view('pages/stepthree');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/stepthree',$data);
       $this->load->view('template/footer');
     }
     else {

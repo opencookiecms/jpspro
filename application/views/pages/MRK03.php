@@ -1,329 +1,353 @@
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper b">
-    <!-- Content Header (Page header)
-    <section class="content-header">
-      <center>
-        <h1>
-          Maklumat Rekod Kerja
-        </h1>
-      </center>
-    </section>
-    -->
-    <br>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <div class="row">
-        <div class="col-lg-12">
-
-        <?php if(isset($_SESSION['success'])) { ?>
-          <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
-        <?php
-          } ?>
-        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
-          <?php echo validation_errors(); ?>
-
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">  <h2 class="f">MRK_03</h2>
+            <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
+            <?php if(isset($_SESSION['success'])) { ?>
+              <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
             <?php
+              } ?>
+            <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
 
-                $pkkNo = $get_detail[0]->mrktiga_kodvots;
-                  if($pkkNo == null){
-                      echo form_open('mrk/MRK_03');
-                  }
-                  else {
-                    echo form_open('mrk/MRK_03_Update');
-                  }
-
-            ?>
-            <div class="box box-info">
-              <div class="box-header with-border">
-                <h3 class="box-title">Maklumat Rekod Kerja - MRK 03</h3>
-              </div><!-- end of box header-->
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">No Pendaftaran Kontraktor</label>
-
-                  <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nokontr" value="  <?php echo $get_detail[0]->mrk_nopkk?>" name="nokontr" placeholder="No Pendaftaran Kontraktor" readonly>
-                  </div>
-
-                  <label class="col-sm-1">Nama Kontraktor</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor" value="  <?php echo $get_detail[0]->mrk_namakon?>" readonly>
-                  </div>
-                </div>
-
-              </div><!--end of body-->
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">No Kontrak</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nokontrak" name="nokontrak" placeholder="No Kontrak" value="  <?php echo $get_detail[0]->df_nosebutharga?>" readonly>
-                  </div>
-
-                  <label class="col-sm-2">No Inden/Pesanan Tempatan</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="noinden" name="noinden" placeholder="No Inden" value="  <?php echo $get_detail[0]->mrk_noinden?>" readonly>
-                    <input type="text" name="kodvods" value=" <?php echo $get_detail[0]->df_kodvot?>">
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">Tajuk Kerja</label>
-
-                  <div class="col-sm-5">
-                    <textarea type="text" class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja" readonly>  <?php echo $get_detail[0]->df_tajuk?></textarea>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">Tarikh Mula</label>
-
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhmulakon" name="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>" placeholder="Tarikh Mula" readonly>
-                  </div>
-
-                  <label class="col-sm-3">Tarikh Jangka Siap</label>
-
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhjangka" name="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" readonly>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">Dilanjutkan Masa</label>
-
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tariklanjut" name="tariklanjut" value="<?php echo $get_detail[0]->lsk_lanjutmasa ?>" readonly>
-                  </div>
-
-                  <label class="col-sm-3">Tarikh Siap Sebenar</label>
-
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikhkerjasempurna" name="tarikhkerjasempurna" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>" readonly>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">Kos Projek (RM)</label>
-
-                  <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kosprojek" name="kosprojek" value="<?php echo $get_detail[0]->mrk_kosprojek?>" placeholder="RM" readonly>
-                  </div>
-
-                  <label class="col-sm-2">Kos Sebenar (RM)</label>
-
-                  <div class="col-sm-2">
-                    <input type="text" class="form-control" id="kossebenar" name="kossebenar" value="" placeholder="RM" readonly>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">L.A.D Dikenakan</label>
-
-                  <label class="col-sm-2">Dari</label>
-
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="laddari" name="laddari" value="<?php echo $get_detail[0]->mrk_laddari?>" readonly>
-                  </div>
-
-                  <label class="col-sm-2">Sehingga</label>
-
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="ladsehingga" name="ladsehingga" value="<?php echo $get_detail[0]->mrk_ladsehingga?>" readonly>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2"></label>
-
-                  <label class="col-sm-2">RM</label>
-
-                  <div class="col-sm-2">
-                    <input type="text" class="form-control" id="rmsehari" name="rmsehari" placeholder="RM/Sehari" value="<?php echo $get_detail[0]->mrk_ladsehari?>" readonly>
-                  </div>
-                </div>
-              </div>
-
-              <hr>
-<div class="box-body">
-  <div class="col-md-12">
-  <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
-.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
-.tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#ffff;background: #606c88;}
-.tg .tg-s6z2{text-align:center}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-s268{text-align:center;vertical-align:top}
-.tg .tg-0lax{text-align:center;vertical-align:top}
-</style>
-<?php
-
-
-
- ?>
-<table class="tg" style="undefined;table-layout: fixed; width: 713px">
-<colgroup>
-<col style="width: 161px">
-<col style="width: 87px">
-<col style="width: 80px">
-<col style="width: 80px">
-<col style="width: 125px">
-<col style="width: 250px">
-</colgroup>
-  <tr>
-    <th class="tg-s268"></th>
-    <th class="tg-baqh">Terbaik<br>90% Keatas</th>
-    <th class="tg-baqh">Baik<br>75% - 89%</th>
-    <th class="tg-baqh">Sederhana<br>50% - 74%</th>
-    <th class="tg-s6z2">Tidak Memuaskan<br>50% kebawah</th>
-    <th class="tg-s6z2">Catatan</th>
-  </tr>
-  <tr>
-    <td class="tg-s268">Pengurusan Tapak Bina</td>
-    <td class="tg-0lax"><input type="radio" name="bina" value="90% - Keatas" <?php if($get_detail[0]->tiga_bina=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="bina" value="75% - 89%" <?php if($get_detail[0]->tiga_bina=="75% - 89%"){ echo "checked";}else{echo "unchecked";} ?> ></td>
-    <td class="tg-0lax"><input type="radio" name="bina" value="50% - 74%" <?php if($get_detail[0]->tiga_bina=="50% - 74%"){ echo "checked";}else{echo "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="bina" value="50% kebawah" <?php if($get_detail[0]->tiga_bina=="50% kebawah"){ echo "checked";}else{echo "unchecked";} ?>> </td>
-    <td class="tg-s268"><input type="text" class="form-control"name="catat1" value="<?php echo $get_detail[0]->tiga_catat1?>"></td>
-
-  </tr>
-  <tr>
-    <td class="tg-0lax">Pentadbiran</td>
-    <td class="tg-0lax"><input type="radio" name="tadbir" value="90% - Keatas"<?php if($get_detail[0]->tiga_tadbir=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="tadbir" value="75% - 89%"<?php if($get_detail[0]->tiga_tadbir=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="tadbir" value="50% - 74%"<?php if($get_detail[0]->tiga_tadbir=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="tadbir" value="50% kebawah"<?php if($get_detail[0]->tiga_tadbir=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="text" class="form-control" name="catat2" value="<?php echo $get_detail[0]->tiga_catat2?>"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Perancagan/Kemajuan</td>
-    <td class="tg-0lax"><input type="radio" name="ran" value="90% - Keatas"<?php if($get_detail[0]->tiga_kemajuan=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="ran" value="75% - 89%"<?php if($get_detail[0]->tiga_kemajuan=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="ran" value="50% - 74%"<?php if($get_detail[0]->tiga_kemajuan=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="ran" value="50% kebawah"<?php if($get_detail[0]->tiga_kemajuan=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="text" class="form-control" name="catat3" value="<?php echo $get_detail[0]->tiga_catat3?>"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Mutu Kerangka</td>
-    <td class="tg-0lax"><input type="radio" name="ka" value="90% - Keatas"<?php if($get_detail[0]->tiga_kerangka=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="ka" value="75% - 89%"<?php if($get_detail[0]->tiga_kerangka=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="ka" value="50% - 74%"<?php if($get_detail[0]->tiga_kerangka=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="ka" value="50% kebawah"<?php if($get_detail[0]->tiga_kerangka=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="text" class="form-control" name="catat4" value="<?php echo $get_detail[0]->tiga_catat4?>"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Mutu Kerja-Kerja</td>
-    <td class="tg-0lax"><input type="radio" name="ker" value="90% - Keatas"<?php if($get_detail[0]->tiga_kerja=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="ker" value="75% - 89%"<?php if($get_detail[0]->tiga_kerja=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="ker" value="50% - 74%"<?php if($get_detail[0]->tiga_kerja=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="ker" value="50% kebawah"<?php if($get_detail[0]->tiga_kerja=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="text" class="form-control" name="catat5" value="<?php echo $get_detail[0]->tiga_catat5?>"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Mutu Kemasan</td>
-    <td class="tg-0lax"><input type="radio" name="mas" value="90% - Keatas"<?php if($get_detail[0]->tiga_kemasan=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="mas" value="75% - 89%"<?php if($get_detail[0]->tiga_kemasan=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="mas" value="50% - 74%"<?php if($get_detail[0]->tiga_kemasan=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="mas" value="50% kebawah"<?php if($get_detail[0]->tiga_kemasan=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="text" class="form-control" name="catat6" value="<?php echo $get_detail[0]->tiga_catat6?>"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Mutu Kerja-Kerja Luar</td>
-    <td class="tg-0lax"><input type="radio" name="luar" value="90% - Keatas"<?php if($get_detail[0]->tiga_luar=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="luar" value="75% - 89%"<?php if($get_detail[0]->tiga_luar=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="luar" value="50% - 74%"<?php if($get_detail[0]->tiga_luar=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="luar" value="50% kebawah"<?php if($get_detail[0]->tiga_luar=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="text" class="form-control" name="catat7" value="<?php echo $get_detail[0]->tiga_catat7?>"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Pengawasan Kontraktor</td>
-    <td class="tg-0lax"><input type="radio" name="kon" value="90% - Keatas"<?php if($get_detail[0]->tiga_kontraktor=="90% - Keatas"){echo "checked";}else{echo  "unchecked";} ?>></td>
-    <td class="tg-0lax"><input type="radio" name="kon" value="75% - 89%"<?php if($get_detail[0]->tiga_kontraktor=="75% - 89%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="kon" value="50% - 74%"<?php if($get_detail[0]->tiga_kontraktor=="50% - 74%"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="radio" name="kon" value="50% kebawah"<?php if($get_detail[0]->tiga_kontraktor=="50% kebawah"){echo "checked";}else{echo  "unchecked";} ?>> </td>
-    <td class="tg-0lax"><input type="text" class="form-control" name="catat8" value="<?php echo $get_detail[0]->tiga_catat8?>"></td>
-  </tr>
-</table>
-</div>
-</div>
-
-              <hr>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">Pegawai</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" class="form-control" id="pegawai" name="pegawai" placeholder="Pegawai" value="<?php echo $get_detail[0]->tiga_pegawai?>">
-                    <input type="hidden"  name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>" >
-                    <input type="hidden"  name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>">
-                  <input type="hidden" name="hiddenid"  value="<?php echo $get_detail[0]->mrksatuid?>">
-                  </div>
-
-                  <label class="col-sm-2">Jawatan</label>
-
-                  <div class="col-sm-2">
-                    <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan" value="<?php echo $get_detail[0]->tiga_jawatan?>">
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2">Tarikh</label>
-
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" id="tarikh" name="tarikh" value="<?php echo $get_detail[0]->tiga_tarikah?>">
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="box-footer">
-                <div class="form-group">
-                <div class="col-md-2">
-                <button type="submit" name="submit" class="btn btn-primary">Save</button>
-
-
-              </div>
-              <div class="col-md-6">
-                  <a href="<?php echo site_url('Report/Report_MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-success" role="button">Print</a>
-                    <a href="<?php echo site_url('mrk/LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning" role="button">Laporan Siap Kerja</a>
-
-                  <a href="<?php echo site_url('mrk/PSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-info" role="button">Perakuan Siap Kerja</a>
-              </div>
-
-              <div class="col-md-4">
-                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-warning" role="button">Close</a>
-
-              </div>
-            </div>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
-      </div><!--end of row-->
+      </div>
+      <!--start col-md-12 for form-->
+      <div class="col-12 grid-margin">
+        <?php echo validation_errors(); ?>
 
 
-    </section>
-    <!-- /.content -->
+        <?php
 
+            $pkkNo = $get_detail[0]->mrk2_noinden;
+              if($pkkNo == null){
+                  echo form_open('mrk/MRK_02');
+              }
+              else {
+                echo form_open('mrk/MRK_02_Update');
+              }
+
+        ?>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Maklumat Rekod Kerja - MRK 03</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <label>No Pendaftaran PKK</label>
+                      <input type="hidden" value="<?php echo $get_detail[0]->df_kodvot ?>" name="kodvods">
+                      <input type="hidden" name="mrksatuid" value="<?php echo $get_detail[0]->mrksatuid?>">
+                      <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK" readonly>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <label>No Inden/Pesanan tempatan</label>
+                      <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden" placeholder="No Inden" readonly>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-4">
+                      <label>Kos Projek</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend bg-success border-primary">
+                          <span class="input-group-text bg-transparent text-white">RM</span>
+                        </div>
+                          <input type="text" class="form-control" id="kosprojek" value="<?php echo number_format( $get_detail[0]->mrk_kosprojek,2 )?>" name="kosprojek" placeholder="RM" readonly>
+                        <div class="input-group-append bg-success border-primary">
+                          <span class="input-group-text bg-transparent text-white">.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-6">
+                      <label>No Sebutharga:</label>
+                        <input type="text" class="form-control" id="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" name="nokon" placeholder="No Kontrak" readonly>
+                    </div>
+                    <div class="col-sm-6">
+                      <label>Nama Kontraktor:</label>
+                        <input type="text" class="form-control" id="namakon" name="namakon" value="<?php echo $get_detail[0]->mrk_namakon ?>" placeholder="Nama Kontraktor" readonly>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Tarikh Mula Kontrak</label>
+                      <input type="date" class="form-control" id="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>" name="tarikhmulakon" placeholder="Tarikh Mula Kontrak" readonly>
+                    </div>
+                    <div class="col-sm-3">
+                      <label>Tarikh Jangka Siap</label>
+                      <input type="date" class="form-control" id="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" name="tarikhjangka" readonly>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <label>Tajuk Kerja:</label>
+                        <textarea type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--end here col-md-12-->
+
+      <!--start col-md-12 for form-->
+      <div class="col-12 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Laporan Kemajuan Kerja Fizikal</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <p>
+                      <label>Kemajuan Kerja Mengikut Jadual : %</label>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control" id="ikutjadual" value="<?php echo $get_detail[0]->mrk_majukerja ?>" name="ikutjadual">
+                    </div>
+                    <div class="col-sm-3">
+                      <p>
+                      <label>Kemajuan Kerja Sebenar(Semasa) Sehingga</label>
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="date" class="form-control" id="kerjasebenar" value="<?php echo $get_detail[0]->mrk_majukerjasebenar?>" name="kerjasebenar">
+                    </div>
+                    <div class="col-sm-1">
+                      <p>
+                      <label>=</label>
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="kerjasebenarsatu" name="kerjasebenarsatu">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <p>
+                      <label>Bayaran Kemajuan Semasa  NO:</label>
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="text" class="form-control" id="bayarmaju" name="bayarmaju" value="<?php echo $get_detail[0]->mrk_bayarmajusemasa?>">
+                    </div>
+                    <div class="col-sm-3">
+                      <p>
+                      <label>Jumlah Bayaran Kemajuan (RM):</label>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="input-group">
+                        <div class="input-group-prepend bg-success border-primary">
+                          <span class="input-group-text bg-transparent text-white">RM</span>
+                        </div>
+                        <input type="text" class="form-control" id="jumlahbayarmaju" name="jumlahbayarmaju" value="<?php echo number_format($get_detail[0]->mrk_jumlahbayarmaju,2)?>">
+                        <div class="input-group-append bg-success border-primary">
+                          <span class="input-group-text bg-transparent text-white">.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--end here col-md-12-->
+      <!--start col-md-12 for form-->
+      <div class="col-12 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Kerja Tergendala Kerana Masalah: Tandakan ( / ) Pada Ruang Berkenaan.</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                        <?php $check=$get_detail[0]->mrk_modal; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+                        <input type="checkbox" class="" name="chk1" value="1" <?php echo $ch1?>> Modal
+                    </div>
+                    <div class="col-sm-3">
+                        <?php $check=$get_detail[0]->mrk_bahan; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+                        <input type="checkbox" name="chk2" value="1" <?php echo $ch1?>> Kekurangan Bahan
+                    </div>
+                    <div class="col-sm-2">
+
+                        <?php $check=$get_detail[0]->mrk_pekerja; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+                        <input type="checkbox" name="chk3" value="1" <?php echo $ch1?>> Tiada Pekerja
+                    </div>
+                    <div class="col-sm-2">
+
+                        <?php $check=$get_detail[0]->mrk_tapak; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+                        <input type="checkbox" name="chk4" value="1" <?php echo $ch1?>> Tapak
+                    </div>
+
+                    <div class="col-sm-2">
+
+                      <?php $check=$get_detail[0]->mrk_cuaca; if($check==1){$ch1='checked';}else{$ch1='null';}?>
+                      <input type="checkbox" name="chk5" value="1" <?php echo $ch1?>> Cuaca
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <p>
+                      <label>Disebabkan Oleh:</label>
+                      <input type="text" class="form-control" id="sebab" name="sebab" value="<?php echo $get_detail[0]->mrk_sebaboleh?>">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <p>
+                      <label>Lain-Lain(Nyatakan):</label>
+                       <input type="text" class="form-control" id="lainlain" name="lainlain"value="<?php echo $get_detail[0]->mrk_lainlain?>">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                      <p>
+                      <label>Lanjut Masa Ke</label>
+                       <input type="text" class="form-control" id="masa" name="masa" value="<?php echo $get_detail[0]->mrk_lanjutmasa?>">
+                    </div>
+                    <div class="col-sm-2">
+                      <p>
+                      <label>Dari</label>
+                         <input type="date" class="form-control" id="dari" name="dari" value="<?php echo $get_detail[0]->mrk_dari?>">
+                    </div>
+                    <div class="col-sm-2">
+                      <p>
+                      <label>Sehingga</label>
+                         <input type="date" class="form-control" id="sehingga" name="sehingga" value="<?php echo $get_detail[0]->mrk_sehingga?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-5">
+                      <p>
+                      <label>Disebabkan:</label>
+                      <input type="text" class="form-control" id="disebab" name="disebab" value="<?php echo $get_detail[0]->mrk_disebab?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                    <label>L. A. D Dikenakan (RM)</label>
+                    <input type="text" class="form-control" id="rm" name="rm" value="<?php echo $get_detail[0]->mrk_ladsehari?>" placeholder="RM/Sehari">
+                    </div>
+
+
+                    <div class="col-sm-3">
+                    <label>Dari</label>
+                      <input type="date" class="form-control" id="dari2" value="<?php echo $get_detail[0]->mrk_laddari?>"name="dari2">
+                    </div>
+
+
+                    <div class="col-sm-3">
+                    <label>Sehingga</label>
+                    <input type="date" class="form-control" id="sehingga1"value="<?php echo $get_detail[0]->mrk_ladsehingga?>" name="sehingga1">
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                    <label>Perakuan Kerja Tidak Siap Dikeluarkan Pada :</label>
+                      <input type="date" class="form-control" id="tarikhperaku" value="<?php echo $get_detail[0]->mrk_perakukerjataksiap?>" name="tarikhperaku">
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                      <div class="col-sm-3">
+                        <label>Projek Mansuh/Datamatkan</label><p>
+                        <input type="date" class="form-control" id="projekmansuh" value="<?php echo $get_detail[0]->mrk_projekmansuh?>" name="projekmansuh">
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                      <div class="col-sm-3">
+                        <label>Pegawai</label>
+                        <input type="text" class="form-control" readonly id="pegawai" value="<?php echo $get_detail[0]->mrk_pegawai?>" name="pegawai">
+                      </div>
+                      <div class="col-sm-3">
+                        <label>Jawatan</label>
+                        <input type="text" class="form-control" readonly id="jawatan" value="<?php echo $get_detail[0]->mrk_jawatan?>" name="jawatan">
+                      </div>
+                      <div class="col-sm-3">
+                        <label>Tarikh Laporan</label>
+                        <input type="date" class="form-control" id="tarikhlaporan" value="<?php echo $get_detail[0]->mrk_tarikhlaporan?>" name="tarikhlaporan">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                      <p>
+                      <p>
+                      <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
+                    </div>
+                    <div class="col-sm-6">
+                      <p>
+                      <p>
+                        <a href="<?php echo site_url('Report/Report_MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" target="_blank" role="button">Print</a>
+                        <a href="<?php echo site_url('mrk/MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">MRK01</a>
+                        <a href="<?php echo site_url('mrk/LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Laporan Siap Kerja</a>
+                    </div>
+                    <div class="col-sm-4">
+                    <p>
+                    <p>
+                    <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-warning mr-2 btn-rounded" role="button">Close</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--end here col-md-12-->
+      <!--end here col-md-12-->
+    </div>
+  </form>
   </div>
-  <!-- /.content-wrapper -->

@@ -19,15 +19,21 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-success btn-block">+ Projek
+              <a href="<?php echo site_url('daftar/stepsatu')?>" class="btn btn-success btn-block">+ Projek
                 <i class="mdi mdi-plus"></i>
-              </button>
+              </a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="<?php echo site_url('mydashboard')?>">
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Halaman Utama</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('projek')?>">
+              <i class="menu-icon mdi  mdi-source-fork"></i>
+              <span class="menu-title">Senarai Projek</span>
             </a>
           </li>
           <li class="nav-item">
@@ -72,6 +78,12 @@
             <a class="nav-link" href="pages/icons/font-awesome.html">
               <i class="menu-icon mdi mdi-sticker"></i>
               <span class="menu-title">Laporan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/font-awesome.html">
+              <i class="menu-icon mdi mdi-math-compass"></i>
+              <span class="menu-title">Setting</span>
             </a>
           </li>
         </ul>

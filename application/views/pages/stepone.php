@@ -6,17 +6,17 @@
                 <div class="card-body">
                   <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
                   <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
-
+                  <?php echo validation_errors(); ?>
                 </div>
               </div>
             </div>
             <div class="col-12 grid-margin">
-              <?php echo validation_errors(); ?>
+
 
               <?php echo form_open('daftar/stepsatu'); ?>
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Sebut Harga</h4>
+                  <h4 class="card-title">Borang Daftar Sebut Harga</h4>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">
@@ -77,7 +77,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-3">
-                            <button type="submit" name="submit" class="btn btn-success mr-2 btn-rounded ">Save</button>
+                            <button type="submit" name="submit" class="btn btn-success mr-2 btn-rounded ">Simpan</button>
                           </div>
                         </div>
                       </div>

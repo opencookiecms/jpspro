@@ -1,293 +1,320 @@
-  <!-- Content Wrapper. Contains page content -->
-  <style>
-    .error {color: #FF0000;}
-  </style>
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
+            <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
+            <?php echo $idval; ?>
 
-  <div class="content-wrapper b">
-    <!-- Content Header (Page header)
-    <section class="content-header">
-      <center>
-        <h1>
-          Daftar Projek
-        </h1>
-      </center>
-    </section>
-    -->
-    <br>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <div class="row">
-        <div class="col-lg-12">
-
-          <?php if (isset($_SESSION['success'])) { ?>
-          <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-          <?php
-        } ?>
-        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
-        <!--<form  method="POST" action="?php echo site_url('Insert_steptwo/submit') ?>">-->
-        <h2 class="f"><?php echo $title; ?></h2>
-        <?php echo $idval; ?>
-
+          </div>
+        </div>
+      </div>
+      <!--start col-md-12 for form-->
+      <div class="col-12 grid-margin">
         <?php echo validation_errors(); ?>
 
         <?php echo form_open('daftar/stepdua'); ?>
-        <div class="box box-info">
-          <div class="box-header with-border">
-            <h3 class="box-title">Borang Daftar Sebut Harga</h3>
+          <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Kategori Pendaftaran</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                      <label>Gred :</label>
+                      <select type="text" class="form-control" name="gred" placeholder="Gred">
+                        <option value="G1">G1</option>
+                        <option value="G2">G2</option>
+                        <option value="G3">G3</option>
+                        <option value="G4">G4</option>
+                        <option value="G5">G5</option>
+                        <option value="G6">G6</option>
+                        <option value="G7">G7</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-2">
+                      <label>Kategori :</label>
+                      <select type="text" class="form-control" name="kategori" placeholder="Kategori">
+                        <option value="CE">CE</option>
+                        <option value="B">B</option>
+                        <option value="ME">ME</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="card-title">Pengkhususan</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                      <label>K1</label>
+                      <input type="text" class="form-control" name="khusus1">
+                    </div>
+                    <div class="col-sm-2">
+                      <label>K2</label>
+                        <input type="text" class="form-control" name="khusus2">
+                    </div>
+                    <div class="col-sm-2">
+                      <label>K3</label>
+                      <input type="text" class="form-control" name="khusus3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                      <label>Taraf:</label>
+                      <select type="text" class="form-control"  name="taraf" placeholder="Taraf">
+                        <option value="Bumiputera">Bumiputera</option>
+                        <option value="Bukan Bumiputera">Bukan Bumiputera</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                      <label>Tempoh Siap Kerja:</label>
+                      <input type="text" class="form-control"  name="tempoh" placeholder="Hari">
+                    </div>
+                    <div class="col-sm-2">
+                      <label>Minggu/Bulan</label>
+                      <select type="text" class="form-control" name="bulanming" placeholder="Minggu/Bulan">
+                        <option value=""></option>
+                        <option value="Minggu">Minggu</option>
+                        <option value="Bulan">Bulan</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
-
-          <div class="box-body">
-          <h5><span class="error"> * Dikehendaki mengisi semua bahagian</span></h5>
         </div>
+      </div>
+      <!--end here col-md-12-->
 
-          <div class="box-body">
-            <div class="form-group">
-              <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
-              <label class="col-sm-2">Kategori Pendaftaran</label>
+      <!--start col-md-12 for form-->
+      <div class="col-12 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Harga Dokumen & Tarikh</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Harga Dokumen Sebutharga (RM)</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">RM</span>
+                        </div>
+                        <input type="text" class="form-control" name="doc" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <label></label>
+                      <div class="input-group">
+                        <div class="input-group-append bg-success border-success">
+                          <span class="input-group-text bg-transparent text-white">(Minimum RM10 | Maximum RM50)</span>
+                        </div>
+                      </div>
+                    </div>
 
-              <label class="col-sm-1"></label>
-
-              <label class="col-sm-1">Gred</label>
-
-              <div class="col-sm-2">
-                <select type="text" class="form-control" name="gred" placeholder="Gred">
-
-                  <option value="G1">G1</option>
-                  <option value="G2">G2</option>
-                  <option value="G3">G3</option>
-                  <option value="G4">G4</option>
-                  <option value="G5">G5</option>
-                  <option value="G6">G6</option>
-                  <option value="G7">G7</option>
-                </select>
+                  </div>
+                </div>
               </div>
-
-              <label class="col-sm-1"></label>
-              <label class="col-sm-1">Kategori</label>
-
-              <div class="col-sm-2">
-                <select type="text" class="form-control" name="kategori" placeholder="Kategori">
-                  <option value="CE">CE</option>
-                  <option value="B">B</option>
-                  <option value="ME">ME</option>
-                </select>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Tarikh Notis Dikeluarkan</label>
+                      <input type="date" class="form-control" name="notiskeluar" >
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-
-          </div><!--end of body-->
-
-          <div class="box-body">
-            <div class="form-group">
-
-              <label class="col-sm-2">Pengkhususan</label>
-
-              <div class="col-sm-1">
-                <input type="text" class="form-control" name="khusus">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Tarikh Lawat Tapak/Taklimat</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control"name="lawattapak">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">Hari</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-sm-1">
-                <input type="text" class="form-control" name="khusus">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Tarikh Dokumen Mula Dijual</label>
+                      <div class="input-group">
+                            <input type="text" class="form-control" name="docmula">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">Hari</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-sm-1">
-                <input type="text" class="form-control" name="khusus">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Tarikh Akhir Dokumen Dijual</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="docakhir">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">Hari</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <label class="col-sm-2"></label>
-              <label class="col-sm-1">Taraf</label>
-
-              <div class="col-sm-2">
-                <select type="text" class="form-control"  name="taraf" placeholder="Taraf">
-                  <option value="Bumiputera">Bumiputera</option>
-                  <option value="Bukan Bumiputera">Bukan Bumiputera</option>
-                </select>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Tarikh Sebutharga Ditutup</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control"  name="sebuttutup">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">Hari</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-
-              <label class="col-sm-2">Tempoh Siap Kerja</label>
-
-              <div class="col-sm-1">
-                <input type="text" class="form-control"  name="tempoh" placeholder="Minggu">
-              </div>
-              <div class="col-sm-2">
-                <select type="text" class="form-control" name="bulanming" placeholder="Minggu/Bulan">
-                  <option value="Minggu">Minggu</option>
-                  <option value="Bulan">Bulan</option>
-
-                </select>
-              </div>
-
-            </div>
-          </div>
-          <div class="box-body">
-            <div class="form-group">
-              <div class="box-header with-border">
-              <h3 class="box-title"></h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Harga Dokumen Sebutharga (RM)</label>
-
-              <div class="col-sm-2">
-                <input type="text" class="form-control"name="doc" placeholder="Harga Dokumen">
-              </div>
-              <label class="col-sm-3">(Minimum RM10 | Maximum RM50)</label>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Tarikh Notis Dikeluarkan</label>
-
-              <div class="col-sm-2">
-                <input type="date" class="form-control" name="notiskeluar" >
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Tarikh Lawat Tapak/Taklimat</label>
-
-              <div class="col-sm-2">
-                <input type="text" class="form-control"name="lawattapak">
-              </div>
-                <label class="col-sm-3">Tarikh lawat tapak</label>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Tarikh Dokumen Mula Dijual</label>
-
-              <div class="col-sm-2">
-                <input type="text" class="form-control" name="docmula">
-              </div>
-                <label class="col-sm-3">tarikh mula jual</label>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Tarikh Akhir Dokumen Dijual</label>
-
-              <div class="col-sm-2">
-                <input type="text" class="form-control" name="docakhir">
-              </div>
-                <label class="col-sm-3">Tarikh akhir</label>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Tarikh Sebutharga Ditutup</label>
-
-              <div class="col-sm-2">
-                <input type="text" class="form-control"  name="sebuttutup">
-              </div>
-            </div>
-          </div>
-          <div class="box-body">
-            <div class="form-group">
-              <div class="box-header with-border">
-              <h3 class="box-title"></h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Jurutera Daerah</label>
-
-              <div class="col-sm-4">
-                <select type="text" class="form-control"  name="juruterakanan" placeholder="Jurutera Daerah">
-                  <option value="Idris B. Yussof">Idris B. Yussof</option>
-                  <option value="Zainuddin bin Yusoff, AMP., BCK">Zainuddin bin Yusoff, AMP., BCK</option>
-                  <option value="Kamarudin Bin Saleh">Kamarudin Bin Saleh</option>
-                  <option value="Nor Rozaini BT. Abdullah">Nor Rozaini BT. Abdullah</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Jurutera</label>
-
-              <div class="col-sm-4">
-                <input type="text" class="form-control"  name="jurutera" placeholder="Jurutera">
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Penolong Jurutera Kanan JA36</label>
-
-              <div class="col-sm-4">
-                <input type="text" class="form-control"  name="penolongkanan" placeholder="Penolong Kanan JA36">
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Penolong Jurutera JA29</label>
-
-              <div class="col-sm-4">
-                <input type="text" class="form-control" name="penolong" placeholder="Penolong Jurutera JA29">
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Vot</label>
-
-              <div class="col-sm-4">
-                <input type="text" class="form-control"  name="vot" placeholder="Vot">
-              </div>
-
-              <label class="col-sm-2">Peruntukan</label>
-
-              <div class="col-sm-2">
-                <select type="text" class="form-control"  name="peruntukan" placeholder="Negeri">
-                  <option value="negeri">Negeri</option>
-                  <option value="persekutuan">Persekutuan</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-3">Peruntukan Semasa (RM)</label>
-
-              <div class="col-sm-4">
-                <input type="text" class="form-control"  name="baki" placeholder="Peruntukan Semasa">
-              </div>
-            </div>
-          </div>
-
-          <div class="box-footer">
-            <button type="submit" name="submit" class="btn btn-default">Seterusnya</button>
 
 
           </div>
         </div>
-      </form>
+      </div>
+      <!--end here col-md-12-->
+
+      <!--start col-md-12 for form-->
+      <div class="col-12 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Pegesahan</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Jurutera Dearah</label>
+                      <select type="text" class="form-control"  name="juruterakanan" placeholder="Jurutera Daerah">
+                        <option value="Idris B. Yussof">Idris B. Yussof</option>
+                        <option value="Zainuddin bin Yusoff, AMP., BCK">Zainuddin bin Yusoff, AMP., BCK</option>
+                        <option value="Kamarudin Bin Saleh">Kamarudin Bin Saleh</option>
+                        <option value="Nor Rozaini BT. Abdullah">Nor Rozaini BT. Abdullah</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Jurutera</label>
+                        <input type="text" class="form-control"  name="jurutera" placeholder="Jurutera">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Penolong Jurutera Kanan JA36</label>
+                        <input type="text" class="form-control"  name="penolongkanan" placeholder="Penolong Kanan JA36">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Penolong Jurutera JA29</label>
+                      <input type="text" class="form-control" name="penolong" placeholder="Penolong Jurutera JA29">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Kod Vot</label>
+                      <input type="text" class="form-control"  name="vot" placeholder="Vot">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Peruntukan</label>
+                      <select type="text" class="form-control"  name="peruntukan" placeholder="Negeri">
+                        <option value="negeri">Negeri</option>
+                        <option value="persekutuan">Persekutuan</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <label>Peruntukan Semasa (RM)</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">RM</span>
+                        </div>
+                        <input type="text" class="form-control" name="baki" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <button type="submit" name="submit" class="btn btn-success mr-2 btn-rounded ">Simpan</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--end here col-md-12-->
     </div>
-  </div><!--end of row-->
-
-
-</section>
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+  </form>
+  </div>

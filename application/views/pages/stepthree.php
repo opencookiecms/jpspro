@@ -1,144 +1,155 @@
-  <!-- Content Wrapper. Contains page content -->
-  <style>
-    .error {color: #FF0000;}
-  </style>
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
+            <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
+            <?php echo $idval; ?>
 
-  <div class="content-wrapper b">
-    <!-- Content Header (Page header)
-    <section class="content-header">
-      <center>
-        <h1>
-          Daftar Projek
-        </h1>
-      </center>
-    </section>
-  -->
-    <br>
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-lg-12">
-          <?php if (isset($_SESSION['success'])) { ?>
-          <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-          <?php
-        } ?>
-        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
-        <h2 class="f"><?php echo $title; ?></h2>
-        <?php echo $idval; ?>
-
+            <?php if (isset($_SESSION['success'])) { ?>
+            <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
+            <?php
+          } ?>
+          </div>
+        </div>
+      </div>
+      <!--start col-md-12 for form-->
+      <div class="col-12 grid-margin">
         <?php echo validation_errors(); ?>
 
         <?php echo form_open('daftar/steptiga'); ?>
-        <div class="box box-info">
-          <div class="box-header with-border">
-            <h3 class="box-title">Lokasi dan Sistem</h3>
-          </div><!-- end of box header-->
-          <div class="box-body">
-          <h5><span class="error"> * Dikehendaki mengisi semua bahagian</span></h5>
+          <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Lokasi & Sistem</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+
+                    <label class="col-sm-1 col-form-label">Latitud (N)</label>
+                    <div class="col-sm-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="lata" id="lata">
+                        <div class="input-group-append bg-dark border-primary">
+                          <span class="input-group-text bg-transparent text-white">0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="latb" id="latb">
+                        <div class="input-group-append bg-dark border-primary">
+                          <span class="input-group-text bg-transparent text-white">'</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="latc" id="latc">
+                        <div class="input-group-append bg-dark border-primary">
+                          <span class="input-group-text bg-transparent text-white">"</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+
+                    <label class="col-sm-1 col-form-label">Longitud (E)</label>
+                    <div class="col-sm-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="longa" id="longa">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="longb" id="longb">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">'</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="longc" id="longc">
+                        <div class="input-group-append bg-primary border-primary">
+                          <span class="input-group-text bg-transparent text-white">"</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+              <p>
+              <h4 class="card-title">Sungai</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                          <label>Lembangan Sungai</label>
+                      <input type="text" class="form-control" id="sungai" name="sungai" placeholder="Sungai">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                          <label>Sistem</label>
+                        <input type="text" class="form-control" id="sistem" name="sistem" placeholder="Sistem">
+
+                    </div>
+                    <div class="col-sm-2">
+                          <label>Sub Sistem</label>
+                      <input type="text" class="form-control" id="subsistem" name="subsistem" placeholder="Sub Sistem">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-2">
+                          <label>Komponen</label>
+                        <input type="text" class="form-control" id="komponen" name="komponen" placeholder="Komponen">
+
+                    </div>
+                    <div class="col-sm-2">
+                          <label>Dimensi</label>
+                      <input type="text" class="form-control" id="dimensi" name="dimensi" placeholder="Dimensi">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <p>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <div class="col-sm-3">
+                      <button type="submit" name="submit" class="btn btn-success mr-2 btn-rounded ">Simpan</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-2">Koordinat Lokasi Projek :</label>
-              <label class="col-sm-2">Latitud (N)</label>
-
-              <div class="col-sm-1">
-                <input type="text" class="form-control" id="lata" name="lata">
-                <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
-
-              </div>
-              <div class="col-sm-1">
-                <input type="text" class="form-control" id="latb" name="latb">
-              </div>
-              <div class="col-sm-1">
-                <input type="text" class="form-control" id="latc" name="latc">
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-
-              <label class="col-sm-2"></label>
-              <label class="col-sm-2">Longitud (E)</label>
-
-              <div class="col-sm-1">
-                <input type="text" class="form-control" id="longa" name="longa">
-              </div>
-              <div class="col-sm-1">
-                <input type="text" class="form-control" id="longb" name="longb">
-              </div>
-              <div class="col-sm-1">
-                <input type="text" class="form-control" id="longc" name="longc">
-              </div>
-            </div>
-
-          </div>
-          <div class="box-body">
-            <div class="form-group">
-              <div class="box-header with-border">
-              <h3 class="box-title"></h3>
-              </div>
-            </div>
-          </div>
-          <div class="box-body">
-            <div class="form-group">
-
-                          <label class="col-sm-2">Lembangan Sungai:</label>
-
-                          <div class="col-sm-2">
-                            <input type="text" class="form-control" id="sungai" name="sungai" placeholder="Sungai">
-                          </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-1">Sistem:</label>
-
-              <div class="col-sm-3">
-                <input type="text" class="form-control" id="sistem" name="sistem" placeholder="Sistem">
-              </div>
-
-              <label class="col-sm-1">Sub Sistem:</label>
-
-              <div class="col-sm-3">
-                <input type="text" class="form-control" id="subsistem" name="subsistem" placeholder="Sub Sistem">
-              </div>
-            </div>
-          </div>
-
-          <div class="box-body">
-            <div class="form-group">
-              <label class="col-sm-1">Komponen:</label>
-
-              <div class="col-sm-3">
-                <input type="text" class="form-control" id="komponen" name="komponen" placeholder="Komponen">
-              </div>
-
-              <label class="col-sm-1">Dimensi:</label>
-
-              <div class="col-sm-3">
-                <input type="text" class="form-control" id="dimensi" name="dimensi" placeholder="Dimensi">
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="box-footer">
-            <button type="submit" name="submit" class="btn btn-primary">Seterusnya</button>
-
-          </div>
-
-        </div>
-      </form>
+      </div>
+      <!--end here col-md-12-->
     </div>
-  </div><!--end of row-->
-
-
-</section>
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+  </form>
+  </div>
