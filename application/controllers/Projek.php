@@ -44,12 +44,14 @@ class Projek extends CI_Controller
   {
       $this->load->database();
       $data['get_detail']=$this->Projek_model->get_updateprojek($value);
+      $data['title'] = 'Kemaskini Maklumat Sebutharga';
 
      $id = $this->input->post('hiddenid');
      echo $id;
       if ($id==null)
       {
         $this->load->view('template/header');
+        $this->load->view('template/nav');
         $this->load->view('template/sidebar');
         $this->load->view('pages/ProjekUpdate01', $data);
         $this->load->view('template/footer');
@@ -66,6 +68,7 @@ class Projek extends CI_Controller
 
   public function Update_Projek02($value="")
   {
+    $data['title'] = 'Kemaskini Maklumat Sebutharga';
     $this->load->database();
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
     $id = $this->input->post('hiddenid');
@@ -75,6 +78,7 @@ class Projek extends CI_Controller
     if($id == null)
     {
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/ProjekUpdate02', $data);
       $this->load->view('template/footer');
@@ -93,10 +97,12 @@ class Projek extends CI_Controller
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
     $id = $this->input->post('dp_idpost');
     echo $id;
+      $data['title'] = 'Kemaskini Maklumat Sebutharga';
 
     if($id == null)
     {
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/ProjekUpdate03', $data);
       $this->load->view('template/footer');
