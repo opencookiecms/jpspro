@@ -1,6 +1,6 @@
 
       <div class="main-panel">
-        <div class="content-wrapper" style="background: #114357;background: -webkit-linear-gradient(to right, #F29492, #114357);background: linear-gradient(to right, #F29492, #114357);">
+        <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
           <div class="row purchace-popup">
             <div class="col-12">
               <span class="d-block d-md-flex align-items-center">
