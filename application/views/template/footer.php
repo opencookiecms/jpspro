@@ -1,13 +1,14 @@
 
 
-        <footer class="footer" style="border-top:0px;background: #654ea3;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        <footer class="footer" style="border-top:0px; background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 ">
           <div class="container-fluid clearfix">
-            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2019
-              <a href="#" target="_blank">Jabatan Pengairan Saliran Negeri Kedah</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><span style="color:#FFFF;">Hand-crafted & made with</span>
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block"><a style="color:#1D2671;">Copyright © 2019</a>
+              <a href="#" target="_blank">Jabatan Pengairan Saliran Negeri Kedah</a>. <a style="color:#1D2671;">All rights reserved.</a></span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><span style="color:#1D2671;">Hand-crafted & made with</span>
               <i class="mdi mdi-heart text-danger"></i>
             </span>
           </div>
