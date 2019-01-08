@@ -16,6 +16,7 @@ class Setting_con extends CI_Controller{
   {
     $data['get_usersetting']=$this->Setting_model->get_Datasetting();
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $this->load->view('pages/Setting',$data);
     $this->load->view('template/footer');
@@ -32,6 +33,7 @@ class Setting_con extends CI_Controller{
 
 		{
       $this->load->view('template/header');
+          $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/Setting');
       $this->load->view('template/footer');
@@ -55,6 +57,7 @@ class Setting_con extends CI_Controller{
 
     {
       $this->load->view('template/header');
+          $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/Setting2');
       $this->load->view('template/footer');

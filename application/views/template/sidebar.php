@@ -81,7 +81,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/icons/font-awesome.html">
+            <a class="nav-link" href="<?php echo site_url('Setting_con')?>">
               <i class="menu-icon mdi mdi-math-compass"></i>
               <span class="menu-title">Setting</span>
             </a>

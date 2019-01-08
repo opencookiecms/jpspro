@@ -1,117 +1,64 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper b">
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-
-      <h2 class="f">
-        Setting
-      </h2>
-
-  </section>
-  <br>
-
-  <!-- Main content -->
-  <section class="content">
+<div class="main-panel">
+<div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
     <div class="row">
-      <div class="table-responsive"></div>
-      <div class="col-md-12">
-        <?php if(isset($_SESSION['success'])) { ?>
-          <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
-          <?php
-        } ?>
-        <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
-
-
-          <?php echo validation_errors(); ?>
-
-          <?php
-
-            echo form_open('Setting_con/SaveSetting');
-
-
-          ?>
-          <div class="box box-solid bg-blue">
-            <div class="box-header">
-                <h3 class="box-title">Konfigurasi maklumat sistem</h3>
-            </div>
-            <div class="box-footer text-black">
-              <a href="<?php echo site_url('Setting_con') ?>" class="btn btn-warning" role="button">Users</a>
-              <div class="box-body">
-                <div class="form-group">
-                  <div class="box-header with-border">
-                  <h3 class="box-title">Slogan Surat</h3>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-md-2">
-                    <h4>Slogan</h4>
-                  </div>
-                  <div class="col-md-4">
-                      <input type="text" class="form-control" name="slogan" placeholder="Cintailah Sungai Kita">
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="box-body">
-
-                <div class="form-group">
-                  <div class="box-header with-border">
-                  <h3 class="box-title">Username & Password</h3>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-md-6">
-                    <h5>Tukar username / password jika perlu</h5>
-                  </div>
-                </div>
-
-              </div>
-              <div class="box-body">
-
-                                <div class="form-group">
-                                  <div class="col-md-2">
-                                    <h4>Username</h4>
-                                  </div>
-                                  <div class="col-md-3">
-                                      <input type="text" class="form-control" name="username" placeholder="username">
-                                  </div>
-
-                                  <div class="col-md-2">
-                                    <h4>Password</h4>
-                                  </div>
-                                  <div class="col-md-3">
-                                      <input type="password" class="form-control" name="password" placeholder="password">
-                                  </div>
-                                </div>
-              </div>
-
-
-              <div class="box-body">
-                <div class="form-group">
-                  <div class="col-md-2">
-                  <button type="submit" name="submit" class="btn btn-primary">Save</button>
-                  </div>
-                </div>
-              </div>
-            </form>
-
-            </div>
-
-          </div>
-
-
+      <div class="col-md-12 grid-margin stretch-card">
 
       </div>
-      <!-- /.col -->
+      <!--start col-md-12 for form-->
+      <div class="col-12 grid-margin">
+        <?php echo validation_errors(); ?>
 
+        <?php
+
+          echo form_open('Setting_con/SaveSetting');
+
+
+        ?>
+
+        <div class="card" style="border-radius:10px;">
+          <div class="card-body">
+            <p></p>
+            <p></p>
+            <a href="<?php echo site_url('Setting_con') ?>" class="btn btn-info mr-2 btn-rounded" role="button">Users</a>
+            <a href="<?php echo site_url('Setting_con/SaveSettingPassandSlogan') ?>" class="btn btn-success mr-2 btn-rounded" role="button">Slogan & Login</a>
+            <p></p>
+            <p></p>
+            <h4 class="card-title">Setting Slogan Surat / Username & Password</h4>
+              <div class="row">
+                <div class="col-md-4">
+                <label>Slogan</label>
+                  <input type="text" class="form-control" name="slogan" placeholder="Cintailah Sungai Kita">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <p></p>
+                  <p></p>
+                  <label>Username</label>
+                   <input type="text" class="form-control" name="username" placeholder="username">
+                </div>
+                <p></p>
+                <p></p>
+                <div class="col-sm-4">
+                  <p></p>
+                  <p></p>
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="password">
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="col-sm-3">
+                  <p></p>
+                  <p></p>
+                      <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded">Save</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--end here col-md-12-->
     </div>
-
-
-
-
-  </section>
-  <!-- /.content -->
-
-</div>
-<!-- /.content-wrapper -->
+  </form>
+  </div>
