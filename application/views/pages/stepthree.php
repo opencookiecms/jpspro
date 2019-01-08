@@ -1,8 +1,8 @@
 <div class="main-panel">
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: #114357;background: -webkit-linear-gradient(to right, #F29492, #114357);background: linear-gradient(to right, #F29492, #114357);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
@@ -21,7 +21,7 @@
 
         <?php echo form_open('daftar/steptiga'); ?>
           <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">Lokasi & Sistem</h4>
               <div class="row">

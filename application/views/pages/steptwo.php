@@ -1,8 +1,8 @@
 <div class="main-panel">
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: #114357;background: -webkit-linear-gradient(to right, #F29492, #114357);background: linear-gradient(to right, #F29492, #114357);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
@@ -17,7 +17,7 @@
 
         <?php echo form_open('daftar/stepdua'); ?>
           <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">Kategori Pendaftaran</h4>
               <div class="row">
@@ -103,7 +103,7 @@
 
       <!--start col-md-12 for form-->
       <div class="col-12 grid-margin">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">Harga Dokumen & Tarikh</h4>
               <div class="row">
@@ -212,7 +212,7 @@
 
       <!--start col-md-12 for form-->
       <div class="col-12 grid-margin">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">Pegesahan</h4>
               <div class="row">

@@ -1,8 +1,8 @@
 <div class="main-panel">
-  <div class="content-wrapper cnt">
+  <div class="content-wrapper" style="background: #114357;background: -webkit-linear-gradient(to right, #F29492, #114357);background: linear-gradient(to right, #F29492, #114357);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">Surat Pelepasan Wang Jaminan Perlaksanaan</h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
@@ -27,7 +27,7 @@
                   echo form_open('Surat/Surat_WJP_Update');
                 }
           ?>
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">Surat Pelepasan WJP</h4>
             <div class="row">

@@ -1,6 +1,6 @@
 
       <div class="main-panel">
-        <div class="content-wrapper">
+        <div class="content-wrapper cnt">
           <div class="row purchace-popup">
             <div class="col-12">
               <span class="d-block d-md-flex align-items-center">
@@ -10,7 +10,7 @@
           </div>
           <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
-              <div class="card card-statistics">
+              <div class="card card-statistics" style="border-radius:10px;">
                 <div class="card-body">
                   <div class="clearfix">
                     <div class="float-left">
@@ -30,7 +30,7 @@
               </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
-              <div class="card card-statistics">
+              <div class="card card-statistics" style="border-radius:10px;">
                 <div class="card-body">
                   <div class="clearfix">
                     <div class="float-left">

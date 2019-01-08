@@ -18,6 +18,7 @@ class Surat extends CI_Controller
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $this->load->view('pages/Letter',$data);
     $this->load->view('template/footer');
@@ -33,6 +34,7 @@ class Surat extends CI_Controller
     if($this->form_validation->run() == FALSE)
     {
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/SMRK',$data);
       $this->load->view('template/footer');
@@ -58,6 +60,7 @@ class Surat extends CI_Controller
     if($this->form_validation->run() == FALSE)
     {
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/SKHAS',$data);
       $this->load->view('template/footer');
@@ -82,6 +85,7 @@ class Surat extends CI_Controller
     if($this->form_validation->run() == FALSE)
     {
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/SWJP',$data);
       $this->load->view('template/footer');
@@ -106,6 +110,7 @@ class Surat extends CI_Controller
     if($this->form_validation->run() == FALSE)
     {
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/SMRK');
       $this->load->view('template/footer');
@@ -130,6 +135,7 @@ class Surat extends CI_Controller
     if($this->form_validation->run() == FALSE)
     {
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/SKHAS');
       $this->load->view('template/footer');
@@ -153,6 +159,7 @@ class Surat extends CI_Controller
     if($this->form_validation->run() == FALSE)
     {
       $this->load->view('template/header');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/SWJP');
       $this->load->view('template/footer');
@@ -171,6 +178,7 @@ class Surat extends CI_Controller
   public function Letter_DTS()
   {
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $this->load->view('pages/letter_dts');
     $this->load->view('template/footer');
@@ -181,6 +189,7 @@ class Surat extends CI_Controller
     $this->load->database();
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_mrksurat']=$this->Surat_model->get_suratmrkview();
     $this->load->view('pages/suratmrk_dts', $data);
@@ -192,6 +201,7 @@ class Surat extends CI_Controller
     $this->load->database();
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_suratkhas']=$this->Surat_model->get_suratkhasview();
     $this->load->view('pages/suratkhas_dts', $data);
@@ -203,6 +213,7 @@ class Surat extends CI_Controller
     $this->load->database();
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_suratwjp']=$this->Surat_model->get_suratwjpview();
     $this->load->view('pages/suratwjp_dts', $data);

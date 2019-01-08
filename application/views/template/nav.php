@@ -1,7 +1,11 @@
-<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-  <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background: #E8CBC0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+">
+<div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background:#8083aa;border-right:1px solid;">
     <a class="navbar-brand brand-logo" href="index.html">
-      <img src="<?php echo base_url() ?>assets/staradmin/images/logo.svg" alt="logo" />
+      <span style="color:white;">JPSKMB</span>
     </a>
     <a class="navbar-brand brand-logo-mini" href="index.html">
       <img src="<?php echo base_url() ?>assets/staradmin/images/logo-mini.svg" alt="logo" />
@@ -9,19 +13,12 @@
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center">
     <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
+
       <li class="nav-item">
-        <a href="#" class="nav-link">Schedule
-          <span class="badge badge-primary ml-1">New</span>
-        </a>
-      </li>
-      <li class="nav-item active">
         <a href="#" class="nav-link">
           <i class="mdi mdi-elevation-rise"></i>Reports</a>
       </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link">
-          <i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
-      </li>
+
     </ul>
     <ul class="navbar-nav navbar-nav-right">
       <li class="nav-item dropdown">
@@ -38,7 +35,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item preview-item">
             <div class="preview-thumbnail">
-              <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+              <img src="<?php echo base_url() ?>assets/staradmin/images/faces-clipart/pic-4.png" alt="image" class="profile-pic">
             </div>
             <div class="preview-item-content flex-grow">
               <h6 class="preview-subject ellipsis font-weight-medium text-dark">David Grey
@@ -136,8 +133,8 @@
       </li>
       <li class="nav-item dropdown d-none d-xl-inline-block">
         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-          <span class="profile-text">Hello, Richard V.Welsh !</span>
-          <img class="img-xs rounded-circle" src="images/faces/face1.jpg" alt="Profile image">
+          <span class="profile-text">Hello, Admin!</span>
+          <img class="img-xs rounded-circle" src="<?php echo base_url() ?>assets/staradmin/images/faces-clipart/pic-4.png" alt="Profile image">
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
           <a class="dropdown-item p-0">

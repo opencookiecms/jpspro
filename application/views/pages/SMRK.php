@@ -1,8 +1,8 @@
 <div class="main-panel">
-  <div class="content-wrapper cnt">
+  <div class="content-wrapper" style="background: #114357;background: -webkit-linear-gradient(to right, #F29492, #114357);background: linear-gradient(to right, #F29492, #114357);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">Surat Maklumat Rekod Kerja</h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
@@ -27,7 +27,7 @@
                   echo form_open('Surat/Surat_MRK_Update');
                 }
           ?>
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">Surat MRK</h4>
             <div class="row">
@@ -151,7 +151,7 @@
                   <div class="col-sm-1">
                   <p>
                   <p>
-                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-warning mr-2 btn-rounded" role="button">Close</a>
+                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
                   </div>
                 </div>
               </div>

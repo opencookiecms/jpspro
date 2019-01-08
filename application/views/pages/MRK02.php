@@ -1,5 +1,5 @@
 <div class="main-panel">
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: #114357;background: -webkit-linear-gradient(to right, #F29492, #114357);background: linear-gradient(to right, #F29492, #114357);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
@@ -332,13 +332,13 @@
                       <p>
                       <p>
                         <a href="<?php echo site_url('Report/Report_MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" target="_blank" role="button">Print</a>
-                        <a href="<?php echo site_url('mrk/MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">MRK01</a>
-                        <a href="<?php echo site_url('mrk/LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Laporan Siap Kerja</a>
+                        <a href="<?php echo site_url('mrk/MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button">MRK01</a>
+                        <a href="<?php echo site_url('mrk/LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button">Laporan Siap Kerja</a>
                     </div>
                     <div class="col-sm-4">
                     <p>
                     <p>
-                    <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-warning mr-2 btn-rounded" role="button">Close</a>
+                    <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
                     </div>
                   </div>
                 </div>

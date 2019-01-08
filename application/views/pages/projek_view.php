@@ -1,6 +1,6 @@
 <!-- partial -->
 <div class="main-panel">
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: #114357;background: -webkit-linear-gradient(to right, #F29492, #114357);background: linear-gradient(to right, #F29492, #114357);">
     <div class="row purchace-popup">
       <div class="col-12">
         <span class="d-block d-md-flex align-items-center">
@@ -12,7 +12,7 @@
       <div class="col-md-4 d-flex align-items-stretch grid-margin">
         <div class="row flex-grow">
           <div class="col-12">
-            <div class="card">
+            <div class="card" style="border-radius:10px;">
               <div class="card-body">
                 <h2 class="card-title text-primary">Kod Vot : <?php echo $get_detail[0]->df_kodvot ?></h2>
                 <p class="card-description">
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="col-md-8 grid-margin stretch-card">
-        <div class="card">
+        <div class="card" style="border-radius:10px;">
           <div class="card-body">
             <h4 class="card-title">Dokumen</h4>
             <div class="table-responsive">
