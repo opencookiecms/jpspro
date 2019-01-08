@@ -14,7 +14,7 @@
   <!-- plugin css for this page -->
 
 
-
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/styles.css"/>
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/vendor/DataTables/datatables.min.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/vendor/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css"/>

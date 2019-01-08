@@ -169,6 +169,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/PSK',$data);
 			$this->load->view('template/footer');
@@ -194,6 +195,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
+				$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/PSMK',$data);
 			$this->load->view('template/footer');
@@ -219,6 +221,7 @@ class MRK extends CI_Controller{
 			if($this->form_validation->run() == FALSE)
 			{
 				$this->load->view('template/header');
+				$this->load->view('template/nav');
 				$this->load->view('template/sidebar');
 				$this->load->view('pages/JBank',$data);
 				$this->load->view('template/footer');
@@ -240,6 +243,7 @@ class MRK extends CI_Controller{
 			if($this->form_validation->run()== FALSE)
 			{
 				$this->load->view('template/header');
+				$this->load->view('template/nav');
 				$this->load->view('template/sidebar');
 				$this->load->view('pages/PP_WJP',$data);
 				$this->load->view('template/footer');
@@ -263,6 +267,7 @@ class MRK extends CI_Controller{
 			if($id == null)
 			{
 				$this->load->view('template/header');
+				$this->load->view('template/nav');
 				$this->load->view('template/sidebar');
 				$this->load->view('pages/SS',$data);
 				$this->load->view('template/footer');
@@ -302,6 +307,7 @@ class MRK extends CI_Controller{
 		{
 
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/MRK01');
 			$this->load->view('template/footer');
@@ -326,6 +332,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/MRK02');
 			$this->load->view('template/footer');
@@ -348,6 +355,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/LSK');
 			$this->load->view('template/footer');
@@ -371,6 +379,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/MRK03');
 			$this->load->view('template/footer');
@@ -393,6 +402,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/PSK');
 			$this->load->view('template/footer');
@@ -415,6 +425,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/PSMK');
 			$this->load->view('template/footer');
@@ -436,6 +447,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/JBank');
 			$this->load->view('template/footer');
@@ -456,6 +468,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run()== FALSE)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/PP_WJP');
 			$this->load->view('template/footer');
@@ -478,6 +491,7 @@ class MRK extends CI_Controller{
 		if($id == null)
 		{
 			$this->load->view('template/header');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/SS');
 			$this->load->view('template/footer');
@@ -509,6 +523,7 @@ class MRK extends CI_Controller{
 
 		$this->load->database();
 		$this->load->view('template/header');
+		$this->load->view('template/nav');
 		$this->load->view('template/sidebar');
 		$data['get_detail']=$this->Mrk_model->get_projekdetail($value);
 		$this->load->view('pages/rekod2', $data);

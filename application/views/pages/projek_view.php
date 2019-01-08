@@ -52,7 +52,7 @@
                       <?php if($get_progress[0]->mrks_kodvot==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-success" href="<?php echo site_url('mrk/MRK_01/'. $get_detail[0]->dp_id); ?>">MRK - 01</a>
+                      <a class="btn btn-success  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_01/'. $get_detail[0]->dp_id); ?>">MRK - 01</a>
                     </td>
                   </tr>
                   <tr>
@@ -63,7 +63,7 @@
                       <?php if($get_progress[0]->mrk2_kodvots==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-primary" href="<?php echo site_url('mrk/MRK_02/'. $get_detail[0]->dp_id); ?>">MRK - 02</a>
+                      <a class="btn btn-primary  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_02/'. $get_detail[0]->dp_id); ?>">MRK - 02</a>
                     </td>
                   </tr>
                   <tr>
@@ -74,7 +74,7 @@
                       <?php if($get_progress[0]->lks_kodvots==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-warning" href="<?php echo site_url('mrk/LSK/'. $get_detail[0]->dp_id); ?>">LSK</a>
+                      <a class="btn btn-warning  mr-2 btn-rounded" href="<?php echo site_url('mrk/LSK/'. $get_detail[0]->dp_id); ?>">LSK</a>
                     </td>
                   </tr>
                   <tr>
@@ -85,7 +85,7 @@
                       <?php if($get_progress[0]->mrktiga_kodvots==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-danger" href="<?php echo site_url('mrk/MRK_03/'. $get_detail[0]->dp_id); ?>">MRK - 03</a>
+                      <a class="btn btn-danger  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_03/'. $get_detail[0]->dp_id); ?>">MRK - 03</a>
                     </td>
                   </tr>
                   <tr>
@@ -96,7 +96,7 @@
                       <?php if($get_progress[0]->psk_kodvots==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-success" href="<?php echo site_url('mrk/PSK/'. $get_detail[0]->dp_id); ?>">PSK</a>
+                      <a class="btn btn-success  mr-2 btn-rounded" href="<?php echo site_url('mrk/PSK/'. $get_detail[0]->dp_id); ?>">PSK</a>
                     </td>
                   </tr>
                   <tr>
@@ -107,7 +107,7 @@
                       <?php if($get_progress[0]->ss_kodvot==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-primary" href="<?php echo site_url('mrk/Senarai_Semak/'. $get_detail[0]->dp_id); ?>">SS</a>
+                      <a class="btn btn-primary  mr-2 btn-rounded" href="<?php echo site_url('mrk/Senarai_Semak/'. $get_detail[0]->dp_id); ?>">SS</a>
                     </td>
                   </tr>
                   <tr>
@@ -118,7 +118,7 @@
                       <?php if($get_progress[0]->psmk_kodvots==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-warning" href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->dp_id); ?>">PSMK</a>
+                      <a class="btn btn-warning  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->dp_id); ?>">PSMK</a>
                     </td>
                   </tr>
                   <tr>
@@ -129,7 +129,7 @@
                       <?php if($get_progress[0]->js_kodvot==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-danger" href="<?php echo site_url('mrk/Jaminan_Bank/'.$get_detail[0]->dp_id); ?>">PJM</a>
+                      <a class="btn btn-danger  mr-2 btn-rounded" href="<?php echo site_url('mrk/Jaminan_Bank/'.$get_detail[0]->dp_id); ?>">PJM</a>
                     </td>
                   </tr>
                   <tr>
@@ -140,7 +140,7 @@
                       <?php if($get_progress[0]->ppwjp_kodvot==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-success" href="<?php echo site_url('mrk/PP_WJP/'.$get_detail[0]->dp_id); ?>">PPW</a>
+                      <a class="btn btn-success  mr-2 btn-rounded" href="<?php echo site_url('mrk/PP_WJP/'.$get_detail[0]->dp_id); ?>">PPW</a>
                     </td>
                   </tr>
                   <tr>
@@ -151,7 +151,7 @@
                       status dokument
                     </td>
                     <td>
-                      <a class="btn btn-primary" href="<?php echo site_url('Surat/letter_board/'.$get_detail[0]->dp_id); ?>">Surat</a>
+                      <a class="btn btn-primary  mr-2 btn-rounded" href="<?php echo site_url('Surat/letter_board/'.$get_detail[0]->dp_id); ?>">Surat</a>
                     </td>
                   </tr>
 
