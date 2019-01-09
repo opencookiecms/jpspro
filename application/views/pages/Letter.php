@@ -9,7 +9,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-3 grid-margin stretch-card">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 grid-margin stretch-card">
               <div class="card card-statistics" style="border-radius:10px;">
                 <div class="card-body">
                   <div class="clearfix">
@@ -23,13 +23,13 @@
                       </div>
                     </div>
                   </div>
-                  <p class="text-muted mt-3 mb-0">
+                  <p class="text-muted mt-4 mb-0">
                     <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i><a href="<?php echo site_url('surat/Surat_MRK/'.$get_detail[0]->dp_id) ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-3 grid-margin stretch-card">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 grid-margin stretch-card">
               <div class="card card-statistics" style="border-radius:10px;">
                 <div class="card-body">
                   <div class="clearfix">
@@ -43,13 +43,13 @@
                       </div>
                     </div>
                   </div>
-                  <p class="text-muted mt-3 mb-0">
+                  <p class="text-muted mt-4 mb-0">
                     <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('surat/Surat_Khas/'.$get_detail[0]->dp_id) ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-3 grid-margin stretch-card">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 grid-margin stretch-card">
               <div class="card card-statistics" style="border-radius:10px;">
                 <div class="card-body">
                   <div class="clearfix">
@@ -63,7 +63,7 @@
                       </div>
                     </div>
                   </div>
-                  <p class="text-muted mt-3 mb-0">
+                  <p class="text-muted mt-4 mb-0">
                     <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('surat/Surat_WJP/'.$get_detail[0]->dp_id) ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
                   </p>
                 </div>
