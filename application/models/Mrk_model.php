@@ -10,6 +10,7 @@ class Mrk_model extends CI_Model{
     //Codeigniter : Write Less Do More
   }
 
+
   public function create_mrksatu()
   {
 
@@ -1127,6 +1128,14 @@ class Mrk_model extends CI_Model{
     $this->db->order_by('kontraktorId','ASC');
     $this->db->limit(10);
     return $this->db->get('kontraktor')->result();
+  }
+
+  public function getAllDataKon()
+  {
+    $this->db->select('*');
+    $this->db->from('kontraktor');
+    $query = $this->db->get();
+    return $query->result();
   }
 
 

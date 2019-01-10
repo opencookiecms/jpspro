@@ -9,10 +9,19 @@ class Rekod extends CI_Controller
   public function __construct() {
     parent::__construct();
     $this->load->helper('url');
-    $this->load->model('Mrk_model');
+    $this->load->model('Record_model');
       //$this->load->model('ProjekMdl');
     //  $this->load->helper('form');
     //  $this->load->library('form_validation');
+  }
+
+  public function index()
+  {
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/record');
+    $this->load->view('template/footer');
   }
 
 
@@ -20,8 +29,9 @@ class Rekod extends CI_Controller
   {
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
-    $data['get_projek']=$this->Mrk_model->get_allDateMRK();
+    $data['get_projek']=$this->Record_model->getdetail();
     $this->load->view('pages/MRK01_dts', $data);
     $this->load->view('template/footer');
 
@@ -31,6 +41,7 @@ class Rekod extends CI_Controller
   {
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_allDateMRK();
     $this->load->view('pages/MRK02_dts', $data);
@@ -42,6 +53,7 @@ class Rekod extends CI_Controller
   {
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_allDateMRK();
     $this->load->view('pages/mrk03_dts', $data);
@@ -53,6 +65,7 @@ class Rekod extends CI_Controller
   {
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_allDateMRK();
     $this->load->view('pages/lsk_dts', $data);
@@ -64,6 +77,7 @@ class Rekod extends CI_Controller
   {
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_allDateMRK();
     $this->load->view('pages/mrkperakuansiap_details', $data);
@@ -75,6 +89,7 @@ class Rekod extends CI_Controller
   {
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_allDateMRK();
     $this->load->view('pages/psbc_dts', $data);
@@ -86,6 +101,7 @@ class Rekod extends CI_Controller
   {
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_allDateMRK();
     $this->load->view('pages/mrkpelepasanbank_details', $data);
@@ -97,6 +113,7 @@ class Rekod extends CI_Controller
   {
 
     $this->load->view('template/header');
+    $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $data['get_projek']=$this->Mrk_model->get_allDateMRK();
     $this->load->view('pages/mrkperakuanpemulangan_details', $data);

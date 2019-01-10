@@ -15,11 +15,7 @@ class MRK extends CI_Controller{
 
 	public function index()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/nav');
-		$this->load->view('template/sidebar');
-		$this->load->view('pages/mrk');
-		$this->load->view('template/footer');
+
 	}
 	/////////////////////////////////LOAD DATA MRK////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public function getKonSearch()
@@ -49,6 +45,7 @@ class MRK extends CI_Controller{
 		//form validation function
 		$this->load->database();
 	  $data['get_usersetting']=$this->Setting_model->get_Datasetting();
+		$data['get_allkontraktor']=$this->Mrk_model->getAllDataKon();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 		$this->form_validation->set_rules('nokon', 'No kontrak', 'required');

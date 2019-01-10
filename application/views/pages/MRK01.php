@@ -50,8 +50,76 @@
                   <div class="form-group row">
                     <div class="col-sm-5">
                       <label>Nama Kontraktor</label>
-                        <input type="text" class="form-control" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
+                             <div class="input-group-append bg-success border-primary">
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-inverse-* btn-success">select</button>
+                          </div>
+                        </div>
                     </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document" style="margin-left:270px;">
+                        <div class="modal-content" style="background-color:white; width:800px;">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Kontraktor</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="table-responsive">
+                                    <table id="example" class="display" style="width:100%">
+                                      <thead>
+                                        <tr>
+                                          <th>
+                                            #
+                                          </th>
+                                          <th>
+                                            Kontraktor
+                                          </th>
+                                          <th>
+                                          Tindakan
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                          <?php $bil=0;?>
+                                      <?php foreach ($get_allkontraktor as $row):$bil++ ?>
+                                         <tr>
+                                          <td class="py-1"><?php echo $bil ?></td>
+                                          <td class="py-1"><?php echo $row->konName?></td> <!--Show data in list view-->
+                                          <td class="py-1"><button type="button" class="btn btn-info" data-dismiss="modal">Select</button></td>
+                                        </tr>
+
+                                            <?php endforeach; ?>
+                                      </tbody>
+                                    </table>
+
+                                    <script type="text/javascript">
+                                    $(document).ready(function() {
+                                      $('#example').DataTable( {
+                                        "responsive":        true,
+
+                                      } );
+                                    } );
+                                    </script>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  <!--end of modal-->
                     <div class="col-sm-5">
                       <label>No Sebutharga</label>
                           <input type="text" class="form-control" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
@@ -284,13 +352,7 @@
       <!--end here col-md-12-->
       <!--end here col-md-12-->
 
-        <script>
-          jQuery_1_12_4( function() {
-            $( "#namakon" ).autocomplete({
-              source:"<?php echo site_url('mrk/getKonSearch')?>"
-            });
-          } );
-          </script>
+
 
         <script type="text/javascript">
           function autofill(){
@@ -309,6 +371,19 @@
 
           }
         </script>
-    </div>
+
+        <script>
+          $(function() {
+            $("#namakon").autocomplete({
+              source:"echo site_url('mrk/getKonSearch')?>",
+            });
+          } );
+          </script>
+          <script type="text/javascript">
+          $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
+      </div>
   </form>
   </div>
