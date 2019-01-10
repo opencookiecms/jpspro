@@ -98,18 +98,16 @@
               </div>
             </div>
 
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="form-group row">
-                              <label class="col-sm-1 col-form-label">Alamat Pemborong</label>
-                              <div class="col-sm-3">
-                              <textarea type="text" class="form-control" readonly id="alamatborong" name="alamatborong" placeholder="Alamat Pemborong"><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
-                              </div>
-                            </div>
-                          </div>
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                      <label class="col-sm-1 col-form-label">Alamat Pemborong</label>
+                        <div class="col-sm-3">
+                          <textarea type="text" class="form-control" readonly id="alamatborong" name="alamatborong" placeholder="Alamat Pemborong"><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                         </div>
-
-
+                    </div>
+                 </div>
+              </div>
 
             <div class="row">
               <div class="col-md-12">
@@ -122,9 +120,9 @@
                   <div class="col-sm-8">
                     <p>
                     <p>
-                      <a href="<?php echo site_url('Report/Report_PJB/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button">Print</a>
+                    <a href="<?php echo site_url('Report/Report_PJB/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button">Print</a>
                     <a href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button">PSMK</a>
-                      <a href="<?php echo site_url('mrk/PP_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button">Perakuan Pemulangan WJP</a>
+                    <a href="<?php echo site_url('mrk/PP_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button">Perakuan Pemulangan WJP</a>
                   </div>
                   <div class="col-sm-2">
                   <p>

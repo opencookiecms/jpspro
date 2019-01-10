@@ -333,6 +333,7 @@ class MRK extends CI_Controller{
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/MRK02');
 			$this->load->view('template/footer');
+			
 		}
 
 		else
@@ -546,3 +547,4 @@ class MRK extends CI_Controller{
 
 	/////end of update
 }
+
