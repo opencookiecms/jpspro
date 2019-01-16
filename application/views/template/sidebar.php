@@ -37,10 +37,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" href="<?php echo site_url('mrk')?>">
               <i class="menu-icon mdi mdi-content-copy"></i>
               <span class="menu-title">MRK</span>
-              <i class="menu-arrow"></i>
+
             </a>
             <!--
             <div class="collapse" id="ui-basic">
@@ -77,7 +77,7 @@
           -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/icons/font-awesome.html">
+            <a class="nav-link" href="<?php echo site_url('Report/Laporan')?>">
               <i class="menu-icon mdi mdi-sticker"></i>
               <span class="menu-title">Laporan</span>
             </a>

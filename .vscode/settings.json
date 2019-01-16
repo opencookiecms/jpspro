@@ -1,4 +1,5 @@
 {
     "editor.fontSize": 14,
-    "editor.find.autoFindInSelection": true
+    "editor.find.autoFindInSelection": true,
+    "workbench.colorTheme": "Monokai Dimmed"
 }

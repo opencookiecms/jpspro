@@ -116,4 +116,13 @@ class Report extends CI_Controller{
       $this->load->view('pages/wordtest',$data);
 
   }
+
+  public function Laporan()
+  {
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/laporan');
+    $this->load->view('template/footer');
+  }
 }

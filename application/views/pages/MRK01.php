@@ -220,7 +220,7 @@
                     <div class="col-sm-3">
                       <label>Pengkhususan</label>
                       <select type="text" class="form-control" id="khusus" placeholder="khusus" name="khusus">
-                            <option value="<?php echo $get_detail[0]->mrk_khusus ?>"><?php echo $get_detail[0]->mrk_khusus ?></option>
+                        <option value="<?php echo $get_detail[0]->mrk_khusus ?>"><?php echo $get_detail[0]->mrk_khusus ?></option>
                         <option value="CE 02">CE 02 | Pembinaan Jambatan & Jeti</option>
                         <option value="CE 04">CE 04 | Empangan</option>
                         <option value="CE 06">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
