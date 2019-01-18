@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/styles.css"/>
 
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/vendor/DataTables/datatables.min.css"/>
+
 
 
 <!--

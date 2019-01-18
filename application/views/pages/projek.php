@@ -15,8 +15,8 @@
               <div class="card" style="border-radius:10px;">
                 <div class="card-body">
                   <h4 class="card-title">Senarai Projek</h4>
-                  <div class="table-responsive">
-                    <table id="example" class="table table-striped " style="width:100%">
+                  <div class="table-responsive dataTables_wrapper">
+                    <table id="example" class="display table table-striped">
                       <thead>
                         <tr>
                           <th>

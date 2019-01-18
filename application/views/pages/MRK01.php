@@ -71,8 +71,8 @@
                             <div class="container-fluid">
                               <div class="row">
                                 <div class="col-md-12">
-                                  <div class="table-responsive">
-                                    <table id="example" class="display" style="width:100%">
+                                  <div class="table-responsive dataTables_wrapper">
+                                    <table id="example" class="table table-striped">
                                       <thead>
                                         <tr>
                                           <th>
