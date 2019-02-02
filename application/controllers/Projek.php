@@ -27,6 +27,18 @@ class Projek extends CI_Controller
     $this->load->view('template/footer');
   }
 
+  public function main_projek_view($value="")
+  {
+    $this->load->database();
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+
+    $data['get_detail']=$this->Projek_model->get_projekdetail($value);
+    $this->load->view('pages/projek_view_main',$data);
+    $this->load->view('template/footer');
+  }
+
   public function view_data($value="")
   {
 
@@ -35,7 +47,7 @@ class Projek extends CI_Controller
    $this->load->view('template/nav');
    $this->load->view('template/sidebar');
    $data['get_progress']=$this->Projek_model->get_projectprogress($value);
-   $data['get_detail']=$this->Projek_model->get_projekdetail($value);
+   $data['get_detail']=$this->Projek_model->get_projekdetailbyid($value);
    $this->load->view('pages/projek_view', $data);
    $this->load->view('template/footer');
   }

@@ -30,14 +30,17 @@
             }
 
             ?>
-            <div class="card" style="border-radius:10px;">
+            <div class="card bgs" style="border-radius:10px;background: #614385;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #516395, #614385);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
               <div class="card-body">
                 <h4 class="card-title">Kategori Pendaftaran</h4>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group row">
                       <div class="col-sm-5">
-                        <label>No Pendaftaran PKK</label>
+                        <label class="tl">No Pendaftaran PKK</label>
                         <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                         <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
                         <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
@@ -49,7 +52,7 @@
                   <div class="col-md-12">
                     <div class="form-group row">
                       <div class="col-sm-5">
-                        <label>Nama Kontraktor</label>
+                        <label class="tl">Nama Kontraktor</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
                           <div class="input-group-append bg-success border-primary">
@@ -182,7 +185,7 @@
 
             <!--start col-md-12 for form-->
             <div class="col-12 grid-margin">
-              <div class="card" style="border-radius:10px;">
+              <div class="card bgs" style="border-radius:10px;">
                 <div class="card-body">
                   <h4 class="card-title">Inden & Maklumat Kontrak</h4>
                   <div class="row">

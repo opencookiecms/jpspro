@@ -163,7 +163,7 @@ class Projek_model extends CI_Model{
 
 
 
-  public function get_projekdetail($indenNo) //view data
+  public function get_projekdetail($kodvodnumber) //view data
   {
 
        $this->db->select('*');
@@ -172,7 +172,22 @@ class Projek_model extends CI_Model{
        //Tambah join 2 table.,.,
        $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
        $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
-       $this->db->where('dp_projekinfo.df_kodvot', $indenNo);
+       $this->db->where('dp_projekinfo.df_kodvot', $kodvodnumber);
+       $query = $this->db->get();
+
+       return $query->result();
+  }
+
+  public function get_projekdetailbyid($id) //view data
+  {
+
+       $this->db->select('*');
+       $this->db->from('dp_projek');
+
+       //Tambah join 2 table.,.,
+       $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+       $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
+       $this->db->where('dp_projek.projek_id', $id);
        $query = $this->db->get();
 
        return $query->result();
@@ -336,7 +351,7 @@ class Projek_model extends CI_Model{
     $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_tiga','mrk_tiga.mrksatutiga_id=mrk_satu.mrksatuid','left');
-        $this->db->join('mrk_ss','mrk_ss.ss_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('mrk_ss','mrk_ss.ss_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
     $this->db->join('mrk_perakuansiapbaikicacat','mrk_perakuansiapbaikicacat.mrkid_id =mrk_satu.mrksatuid ','left');
     $this->db->join('mrk_jaminanbank','mrk_jaminanbank.js_mrkid=mrk_satu.mrksatuid','left');
@@ -347,7 +362,7 @@ class Projek_model extends CI_Model{
 
 
 
-    $this->db->where('dp_projekinfo.df_kodvot', $id);
+    $this->db->where('dp_projek.projek_id', $id);
     $query = $this->db->get();
 
     return $query->result();

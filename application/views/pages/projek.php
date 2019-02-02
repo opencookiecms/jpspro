@@ -48,7 +48,7 @@
 
                          <tr>
                           <td class="py-1"><?php echo $row->projek_id?></td>
-                          <td class="py-1"><a href="<?php echo site_url('projek/view_data/'.$row->df_kodvot); ?>" ><?php echo $row->df_kodvot?></a></td> <!--Show data in list view-->
+                          <td class="py-1"><a href="<?php echo site_url('projek/main_projek_view/'.$row->df_kodvot); ?>" ><?php echo $row->df_kodvot?></a></td> <!--Show data in list view-->
                           <td style="white-space: normal !important;word-wrap: break-word;min-width: 250px;max-width: 250px;"><?php echo $row->df_tajuk?></td>
                           <td class="py-1"><?php echo $row->df_nosebutharga?></td>
                           <td class="py-1"><?php echo $row->df_tarikmohon?></td>
