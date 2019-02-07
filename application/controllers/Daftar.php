@@ -113,6 +113,37 @@ class Daftar extends CI_Controller{
 
   }
 
+  public function orderSebutharga()
+  {
+    $data['title'] = "Tempahan No. Sebutharga";
+
+    $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');
+
+    if($this->form_validation->run()===FALSE)
+    {
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/order',$data);
+      $this->load->view('template/footer');
+    }
+    else{
+      $this->projek_model->createOrder();
+      redirect(base_url('projek/'));
+    }
+
+  }
+
+  public function orderUpdateSebutharga()
+  {
+
+  }
+
+  public function orderDelete()
+  {
+
+  }
+
 
 
 }

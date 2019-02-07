@@ -4,7 +4,7 @@ background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, F
 
 ">
 <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background:#8083aa;border-right:1px solid;">
-    <a class="navbar-brand brand-logo" href="index.html">
+    <a class="navbar-brand brand-logo" href="<?php echo site_url('mydashboard')?>">
       <span style="color:white;">JPSKMB</span>
     </a>
     <a class="navbar-brand brand-logo-mini" href="index.html">
@@ -17,6 +17,10 @@ background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, F
       <li class="nav-item">
         <a href="#" class="nav-link">
           <i class="mdi mdi-elevation-rise"></i>Reports</a>
+      </li>
+      <li class="nav-item">
+        <a href="<?php echo site_url('Daftar/orderSebutharga')?>" class="nav-link">
+          <i class="mdi mdi-elevation-rise"></i>Order No. Sebutharga</a>
       </li>
 
     </ul>

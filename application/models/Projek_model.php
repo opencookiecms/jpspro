@@ -9,6 +9,40 @@ class Projek_model extends CI_Model{
 
   }
 
+  public function createOrder()
+  {
+    $this->load->helper('url');
+
+    $no_sebutharga = $this->input->post('nosebutharga');
+    $no_jenissebutharga = $this->input->post('jenissebut');
+    $no_pemilik  =$this->input->post('pemilik');
+    $no_tarikh = $this->input->post('tarikhmohon');
+
+    $data = array(
+      'no_sebutharga' => $no_sebutharga,
+      'no_tarikh' => $no_tarikh,
+      'no_pemilik'=> $no_pemilik,
+      'no_jenis'=> $no_jenissebutharga
+    );
+
+    return $this->db->insert('order_nsh', $data);
+  }
+
+  public function listOrder()
+  {
+
+  }
+
+  public function updateOrder()
+  {
+
+  }
+
+  public function deleteOrder()
+  {
+    
+  }
+
   //insert funtion for step one
   public function create_stepone()
 
