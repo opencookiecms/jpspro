@@ -13,18 +13,13 @@ class Daftar extends CI_Controller{
 
   public function index()
   {
-      //load the template header,sidebar,pages and footer
-      //this is a Daftar page please refer to link http://localhost/jpspro/daftar
-      //
-      // kalau nak tengok template boleh pergi ke
-      // view->pages (ada page dekat sini)
-      //       template (Web template dekat sini)
 
-      //good luck
+    $data['get_list']=$this->Projek_model->listOrder();
+
     $this->load->view('template/header');
     $this->load->view('template/nav');
     $this->load->view('template/sidebar');
-    $this->load->view('pages/daftar');
+    $this->load->view('pages/daftar',$data);
     $this->load->view('template/footer');
   }
 
@@ -134,7 +129,7 @@ class Daftar extends CI_Controller{
 
   }
 
-  public function orderUpdateSebutharga()
+  public function orderlistSebutharga()
   {
 
   }

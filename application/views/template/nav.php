@@ -18,9 +18,13 @@ background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, F
         <a href="#" class="nav-link">
           <i class="mdi mdi-elevation-rise"></i>Reports</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item dropdown">
+
+      </li>
+      <li class="nav-item dropdown">
         <a href="<?php echo site_url('Daftar/orderSebutharga')?>" class="nav-link">
           <i class="mdi mdi-elevation-rise"></i>Order No. Sebutharga</a>
+        </a>
       </li>
 
     </ul>

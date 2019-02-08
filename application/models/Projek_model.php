@@ -6,7 +6,6 @@ class Projek_model extends CI_Model{
   public function __construct()
   {
      $this->load->database();
-
   }
 
   public function createOrder()
@@ -30,7 +29,11 @@ class Projek_model extends CI_Model{
 
   public function listOrder()
   {
-
+    $this->db->select('*');
+    $this->db->from('order_nsh');
+    $query = $this->db->get();
+    
+    return $query->result();
   }
 
   public function updateOrder()
@@ -40,7 +43,7 @@ class Projek_model extends CI_Model{
 
   public function deleteOrder()
   {
-    
+
   }
 
   //insert funtion for step one
