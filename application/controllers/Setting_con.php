@@ -33,7 +33,7 @@ class Setting_con extends CI_Controller{
 
 		{
       $this->load->view('template/header');
-          $this->load->view('template/nav');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/Setting');
       $this->load->view('template/footer');
@@ -42,7 +42,6 @@ class Setting_con extends CI_Controller{
 		{
 			$this->Setting_model->addUserSetting();//load from model and call last id
       redirect(base_url('Setting_con')); //redirect last id to another step
-
 		}
 
   }
@@ -73,16 +72,35 @@ class Setting_con extends CI_Controller{
 
   public function logins()
   {
-
+    $this->load->view('template/header');
+    $this->load->view('pages/login');
+    $this->load->view('template/footer');
   }
 
   public function usersreg()
   {
-    $this->load->view('template/header');
-    $this->load->view('template/nav');
-    $this->load->view('template/sidebar');
-    $this->load->view('pages/register');
-    $this->load->view('template/footer');
+    $this->load->database();
+
+    $this->form_validation->set_rules('nama', 'Nama diperlukan', 'required');
+
+    if($this->form_validation->run() === FALSE)
+    {
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/register');
+      $this->load->view('template/footer');
+    }
+    else
+    {
+      $this->Setting_model->get_register();
+    }
+
+  }
+
+  public function info()
+  {
+    
   }
 
 }

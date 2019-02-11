@@ -51,4 +51,23 @@ class Setting_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_register()
+  {
+    $this->load->helper('url');
+
+    $nama = $this->input->post('nama');
+    $jawatan = $this->input->post('jawatan');
+    $email = $this->input->post('email');
+    $password = $this->input->post('pass');
+
+    $data = array(
+      'jps_name' => $nama,
+      'jps_email'=> $email,
+      'jps_password'=> md5($password),
+      'jps_position'=> $jawatan
+    );
+
+    return $this->db->insert('jps_users',$data);
+  }
+
 }

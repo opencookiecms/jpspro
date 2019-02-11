@@ -5,7 +5,7 @@
     <div class="col-12 grid-margin">
 
 
-      <?php echo form_open('daftar/orderSebutharga'); ?>
+      <?php echo form_open('setting_con/usersreg'); ?>
       <div class="card" style="border-radius:10px;">
         <div class="card-body">
           <p></p>
@@ -31,7 +31,7 @@
                 <div class="form-group row">
                   <div class="col-sm-4">
                     <label>Jawatan</label>
-                    <select type="text" class="form-control" id="jawatan" name="jawatab">
+                    <select type="text" class="form-control" id="jawatan" name="jawatan">
                       <option value=""></option>
                       <option value="Jurutera">Jurutera</option>
                       <option value="Jurutera G34">Jurutera G34</option>
