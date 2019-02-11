@@ -77,6 +77,20 @@ class Setting_con extends CI_Controller{
     $this->load->view('template/footer');
   }
 
+  public function verify()
+  {
+    $check = $this->Setting_model->get_verify();
+
+    if($check)
+    {
+      redirect(base_url('mydashboard')); //redirect last id to another step
+    }
+    else
+    {
+      redirect('login');
+    }
+  }
+
   public function usersreg()
   {
     $this->load->database();
@@ -100,7 +114,7 @@ class Setting_con extends CI_Controller{
 
   public function info()
   {
-    
+
   }
 
 }
