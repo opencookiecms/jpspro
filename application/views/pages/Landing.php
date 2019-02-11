@@ -41,7 +41,7 @@
             <br>
               <br>
                 <br>
-          <a href="<?php echo site_url('daftar')?>" class="btn btn-success" role="button">Masuk</a>
+          <a href="<?php echo site_url('login')?>" class="btn btn-success" role="button">Masuk</a>
 
 
         </div>
