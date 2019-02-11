@@ -53,12 +53,8 @@
                         <div class="form-group row">
                           <div class="col-sm-4">
                             <label>Pemilik</label>
-                            <select type="text" class="form-control" name="pemilik">
-                              <option value=""></option>
-                              <option value="Sik">Sik</option>
-                              <option value="Baling">Baling</option>
-                              <option value="Kuala Muda">Kuala Muda</option>
-                            </select>
+                            <input type="text" class="form-control" name="pemilik">
+
                           </div>
                         </div>
                       </div>

@@ -25,7 +25,7 @@ class Daftar extends CI_Controller{
 
   public function stepsatu()
   {
-
+    $data['get_nosebutharga'] = $this->Projek_model->listOrder();
     $data['title'] = 'Langkah Satu';
     //form validation function
     $this->form_validation->set_rules('nosebut','Sila Masukkan No Sebut Harga','required');
@@ -138,7 +138,5 @@ class Daftar extends CI_Controller{
   {
 
   }
-
-
 
 }

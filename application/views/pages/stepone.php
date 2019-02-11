@@ -22,9 +22,85 @@
                         <div class="form-group row">
                           <div class="col-sm-6">
                             <label>No Sebutharga :</label>
-                            <input type="text" class="form-control" name="nosebut"  placeholder="No Fail Sebutharga">
+                            <div class="input-group">
+                              <input type="text" class="form-control" id="nosebuts" onkeyup="autofill()" value=""name="nosebut" placeholder="Nama Kontraktor">
+                              <div class="input-group-append bg-success border-primary">
+                                <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-inverse-* btn-success">select</button>
+                              </div>
+                            </div>
+
                             <small id="nsebutharga" class="form-text text-muted">Sila isi no sebutharga mengikut spefikasi yang telah diberikan.</small>
                           </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document" style="margin-left:270px;">
+                              <div class="modal-content" style="background-color:white; width:800px;">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Senarai Tempahan No Sebutharga</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="container-fluid">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <div class="table-responsive dataTables_wrapper">
+                                          <table id="example" class="table table-striped">
+                                            <thead>
+                                              <tr>
+                                                <th>
+                                                  #
+                                                </th>
+                                                <th width:20>
+                                                  No Sebutharga
+                                                </th>
+                                                <th>
+                                                  Pemilik
+                                                </th>
+                                                <th>
+                                                  Tarikh
+                                                </th>
+                                                <th>
+                                                  Tindakan
+                                                </th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <?php $bil=0;?>
+                                              <?php foreach ($get_nosebutharga as $row):$bil++ ?>
+                                                <tr>
+                                                  <td class="py-1"><?php echo $bil ?></td>
+                                                  <td class="py-1"><span><?php echo $row->no_sebutharga?><span></td> <!--Show data in list view-->
+                                                  <td class="py-1"><span><?php echo $row->no_pemilik?><span></td> <!--Show data in list view-->
+                                                  <td class="py-1"><span><?php echo $row->no_tarikh?><span></td> <!--Show data in list view-->
+                                                  <td class="py-1"><button id="buttonselect"  value="<?php echo $row->no_sebutharga?>" class="btn btn-info" data-dismiss="modal">Select</button></td>
+                                                  </tr>
+
+                                                <?php endforeach; ?>
+                                              </tbody>
+                                            </table>
+
+                                            <script type="text/javascript">
+                                            $(document).ready(function() {
+                                              $('#example').DataTable( {
+                                                "responsive":true,
+                                              } );
+                                            } );
+                                            </script>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <!--end of modal-->
                           <div class="col-sm-3">
                             <label>Tarikh :</label>
                             <input type="date" class="form-control" name="tarikhmohon"placeholder="Tarikh Permohonan">
@@ -83,6 +159,25 @@
                       </div>
                     </div>
                   </form>
+                  <script type="text/javascript">
+                  $('#myModal').on('shown.bs.modal', function () {
+                    $('#myInput').trigger('focus')
+                  })
+                  </script>
+
+                  <script>
+                    $('.table tbody').on('click','#buttonselect',function(){
+
+                      var currow = $(this).closest('tr');
+                      var col1 = currow.find('td:eq(1)').text();
+                      //var col2 = currow.find('td:eq(2)').text();
+
+                      var result = col1;
+                      //var result2 = col2;
+                      $("#nosebuts").val(result);
+                      //$('#alamat').val(result2);
+                    })
+                  </script>
                 </div>
               </div>
             </div>

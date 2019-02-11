@@ -57,7 +57,7 @@ class Setting_con extends CI_Controller{
 
     {
       $this->load->view('template/header');
-          $this->load->view('template/nav');
+      $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/Setting2');
       $this->load->view('template/footer');
@@ -69,6 +69,20 @@ class Setting_con extends CI_Controller{
 
     }
 
+  }
+
+  public function logins()
+  {
+
+  }
+
+  public function usersreg()
+  {
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/register');
+    $this->load->view('template/footer');
   }
 
 }
