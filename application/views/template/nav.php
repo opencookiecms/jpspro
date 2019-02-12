@@ -141,7 +141,7 @@ background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, F
       </li>
       <li class="nav-item dropdown d-none d-xl-inline-block">
         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-          <span class="profile-text">Hello, Admin!</span>
+          <span class="profile-text">Hello, <?php echo $this->session->userdata("nama"); ?>!</span>
           <img class="img-xs rounded-circle" src="<?php echo base_url() ?>assets/staradmin/images/faces-clipart/pic-4.png" alt="Profile image">
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
@@ -159,7 +159,7 @@ background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, F
             </div>
           </a>
           <a class="dropdown-item mt-2">
-            Manage Accounts
+            <?php echo $get_sessionprofile[0]->jps_name ?>
           </a>
           <a class="dropdown-item">
             Change Password

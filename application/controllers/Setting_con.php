@@ -79,15 +79,34 @@ class Setting_con extends CI_Controller{
 
   public function verify()
   {
-    $check = $this->Setting_model->get_verify();
 
-    if($check)
+
+
+    $emaiv = $this->input->post('email');
+    $passv = $this->input->post('pass');
+
+    $where = array(
+      'jps_email' => $emaiv,
+      'jps_password'=> md5($passv)
+    );
+
+    $veri = $this->Setting_model->get_verify($where)->num_rows();
+
+    if($veri > 0)
     {
-      redirect(base_url('mydashboard')); //redirect last id to another step
+            $data_session = array(
+		            'nama' => $emaiv,
+		            'status' => "login"
+		         );
+
+	           $this->session->set_userdata($data_session);
+
+             redirect('mydashboard');
+
     }
     else
     {
-      redirect('login');
+      echo "salah";
     }
   }
 
@@ -111,10 +130,4 @@ class Setting_con extends CI_Controller{
     }
 
   }
-
-  public function info()
-  {
-
-  }
-
 }

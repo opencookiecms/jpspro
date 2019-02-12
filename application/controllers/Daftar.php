@@ -3,21 +3,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Daftar extends CI_Controller{
 
-
   public function __construct() {
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('Projek_model');
+    $this->load->model('Setting_model');
 
   }
 
   public function index()
   {
 
-    $data['get_list']=$this->Projek_model->listOrder();
+    $ss = $this->session->userdata("nama");
+    $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
 
+    $data['get_list']=$this->Projek_model->listOrder();
     $this->load->view('template/header');
-    $this->load->view('template/nav');
+    $this->load->view('template/nav',$profile);
     $this->load->view('template/sidebar');
     $this->load->view('pages/daftar',$data);
     $this->load->view('template/footer');

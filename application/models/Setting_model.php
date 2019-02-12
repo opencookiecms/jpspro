@@ -70,11 +70,19 @@ class Setting_model extends CI_Model{
     return $this->db->insert('jps_users',$data);
   }
 
-  public function get_verify()
+  public function get_verify($where)
   {
-    $arr['jps_email'] = $this->input->post('email');
-    $arr['jps_password'] = md5($this->input->post('pass'));
-    return $this->db->get_where('jps_users',$arr)->row();
+    return $this->db->get_where('jps_users', $where);
+  }
+
+  public function getprofiledetails($ss)
+  {
+    $this->db->select('*');
+    $this->db->from('jps_users');
+    $this->db->where('jps_email', $ss);
+    $query = $this->db->get();
+
+    return $query->result();
   }
 
 }
