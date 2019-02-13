@@ -81,8 +81,8 @@
                     <label>User Role</label>
                     <select type="text" class="form-control" id="roles" name="roles">
                       <option value=""></option>
-                      <option value="Admin">Admin</option>
-                      <option value="User">User</option>
+                      <option value="admin">Admin</option>
+                      <option value="user">User</option>
                     </select>
                   </div>
                 </div>

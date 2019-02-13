@@ -1,5 +1,4 @@
 
-
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <?php
@@ -70,8 +69,6 @@
           </li>
           <?php break;?>
           <?php endswitch; ?>
-
-
         </ul>
       </nav>
       <!-- partial -->
