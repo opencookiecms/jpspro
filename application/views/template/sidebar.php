@@ -2,6 +2,10 @@
 
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
+      <?php
+      $ssname = $this->session->userdata("name");
+      $ssroles = $this->session->userdata("roles");
+      ?>
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
@@ -12,9 +16,9 @@
                   <img src="<?php echo base_url() ?>assets/staradmin/images/faces-clipart/pic-4.png" alt="profile image">
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">JPS</p>
+                  <p class="profile-name"><?php echo $ssname?></p>
                   <div>
-                    <small class="designation text-muted">Admin</small>
+                    <small class="designation text-muted"><?php echo $ssroles?></small>
                     <span class="status-indicator online"></span>
                   </div>
                 </div>
@@ -24,12 +28,7 @@
               </a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('mydashboard')?>">
-              <i class="menu-icon mdi mdi-television"></i>
-              <span class="menu-title">Halaman Utama</span>
-            </a>
-          </li>
+          <?php switch($ssroles): case "admin" ?>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('projek')?>">
               <i class="menu-icon mdi  mdi-source-fork"></i>
@@ -40,41 +39,7 @@
             <a class="nav-link" href="<?php echo site_url('mrk')?>">
               <i class="menu-icon mdi mdi-content-copy"></i>
               <span class="menu-title">MRK</span>
-
             </a>
-            <!--
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/buttons.html">MRK_01</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">MRK_02</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">LSK</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">MRK_03</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">PSK</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">PSMK</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">PJB</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">PP WJP</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">Surat Menyurat</a>
-                </li>
-              </ul>
-            </div>
-          -->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('Report/Laporan')?>">
@@ -88,6 +53,25 @@
               <span class="menu-title">Setting</span>
             </a>
           </li>
+
+          <?php break; ?>
+          <?php case "user":?>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('projek')?>">
+              <i class="menu-icon mdi  mdi-source-fork"></i>
+              <span class="menu-title">Senarai Projek</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('mrk')?>">
+              <i class="menu-icon mdi mdi-content-copy"></i>
+              <span class="menu-title">MRK</span>
+            </a>
+          </li>
+          <?php break;?>
+          <?php endswitch; ?>
+
+
         </ul>
       </nav>
       <!-- partial -->

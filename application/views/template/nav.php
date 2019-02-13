@@ -3,6 +3,10 @@ background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  /* Chrome 10-2
 background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 ">
+<?php
+$ssname = $this->session->userdata("name");
+$ssroles = $this->session->userdata("roles");
+?>
 <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background:#8083aa;border-right:1px solid;">
     <a class="navbar-brand brand-logo" href="<?php echo site_url('mydashboard')?>">
       <span style="color:white;">JPSKMB</span>
@@ -141,7 +145,7 @@ background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, F
       </li>
       <li class="nav-item dropdown d-none d-xl-inline-block">
         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-          <span class="profile-text">Hello, <?php echo $this->session->userdata("nama"); ?>!</span>
+          <span class="profile-text">Hello, <?php echo $ssname ?>!</span>
           <img class="img-xs rounded-circle" src="<?php echo base_url() ?>assets/staradmin/images/faces-clipart/pic-4.png" alt="Profile image">
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
@@ -159,7 +163,7 @@ background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, F
             </div>
           </a>
           <a class="dropdown-item mt-2">
-            <?php echo $get_sessionprofile[0]->jps_name ?>
+          My Profile
           </a>
           <a class="dropdown-item">
             Change Password

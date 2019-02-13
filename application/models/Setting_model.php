@@ -59,20 +59,37 @@ class Setting_model extends CI_Model{
     $jawatan = $this->input->post('jawatan');
     $email = $this->input->post('email');
     $password = $this->input->post('pass');
+    $roles = $this->input->post('roles');
 
     $data = array(
       'jps_name' => $nama,
       'jps_email'=> $email,
       'jps_password'=> md5($password),
-      'jps_position'=> $jawatan
+      'jps_position'=> $jawatan,
+      'jps_userroles'=>$roles
     );
 
     return $this->db->insert('jps_users',$data);
   }
 
-  public function get_verify($where)
+  public function get_verify($emaiv,$passv)
   {
-    return $this->db->get_where('jps_users', $where);
+    $this->db->select('*');
+    $this->db->from('jps_users');
+    $this->db->where('jps_email', $emaiv);
+    $this->db->where('jps_password', $passv);
+    $this->db->limit(1);
+
+    $get_data = $this->db->get();
+
+    if($get_data->num_rows()==1)
+    {
+      return $get_data->result();
+    }
+    else
+    {
+      return false;
+    }
   }
 
   public function getprofiledetails($ss)

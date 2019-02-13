@@ -73,6 +73,22 @@
                 </div>
               </div>
             </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <div class="col-sm-4">
+                    <label>User Role</label>
+                    <select type="text" class="form-control" id="roles" name="roles">
+                      <option value=""></option>
+                      <option value="Admin">Admin</option>
+                      <option value="User">User</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group row">

@@ -9,6 +9,7 @@ class Setting_con extends CI_Controller{
 		//Codeigniter : Write Less Do More
 		$this->load->model('Setting_model');
 		$this->load->helper('url');
+    $this->load->library('session');
 		//$this->load->model('Projek_model');
 	}
 
@@ -79,35 +80,25 @@ class Setting_con extends CI_Controller{
 
   public function verify()
   {
-
-
-
     $emaiv = $this->input->post('email');
-    $passv = $this->input->post('pass');
+    $passv = md5($this->input->post('pass'));
 
-    $where = array(
-      'jps_email' => $emaiv,
-      'jps_password'=> md5($passv)
-    );
-
-    $veri = $this->Setting_model->get_verify($where)->num_rows();
-
-    if($veri > 0)
+    $veri = $this->Setting_model->get_verify($emaiv,$passv);
+    if($veri)
     {
-            $data_session = array(
-		            'nama' => $emaiv,
-		            'status' => "login"
-		         );
+      foreach ($veri as $row)
+      {
+        $this->session->set_userdata('email',$row->jps_email);
+        $this->session->set_userdata('name', $row->jps_name);
+        $this->session->set_userdata('roles',$row->jps_userroles);
 
-	           $this->session->set_userdata($data_session);
-
-             redirect('mydashboard');
-
+        redirect('mydashboard');
+      }
     }
-    else
-    {
-      echo "salah";
+    else {
+      redirect('login');
     }
+
   }
 
   public function usersreg()
@@ -127,6 +118,7 @@ class Setting_con extends CI_Controller{
     else
     {
       $this->Setting_model->get_register();
+      redirect('mydashboard');
     }
 
   }
