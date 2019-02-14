@@ -91,6 +91,7 @@ class Setting_con extends CI_Controller{
         $this->session->set_userdata('email',$row->jps_email);
         $this->session->set_userdata('name', $row->jps_name);
         $this->session->set_userdata('roles',$row->jps_userroles);
+        $this->session->set_userdata('jawatan',$row->jps_position);
 
         redirect('mydashboard');
       }
@@ -109,10 +110,11 @@ class Setting_con extends CI_Controller{
 
     if($this->form_validation->run() === FALSE)
     {
+      $data['get_user']=$this->Setting_model->get_userdatasetting();
       $this->load->view('template/header');
       $this->load->view('template/nav');
       $this->load->view('template/sidebar');
-      $this->load->view('pages/register');
+      $this->load->view('pages/register',$data);
       $this->load->view('template/footer');
     }
     else

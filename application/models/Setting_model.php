@@ -51,6 +51,15 @@ class Setting_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_userdatasetting()
+  {
+    $this->db->select('*');
+    $this->db->from('jps_users');
+    $this->db->order_by('user_id');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
   public function get_register()
   {
     $this->load->helper('url');

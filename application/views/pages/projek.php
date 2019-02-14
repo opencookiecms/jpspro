@@ -37,6 +37,9 @@
                           <th>
                             Jenis Sebutharga
                           </th>
+                          <th>
+                            Penyelia
+                          </th>
 
                           <th>
                             Tindakan
@@ -53,6 +56,7 @@
                           <td class="py-1"><?php echo $row->df_nosebutharga?></td>
                           <td class="py-1"><?php echo $row->df_tarikmohon?></td>
                           <td class="py-1"><?php echo $row->df_jsebutharga?></td>
+                          <td class="py-1"><?php echo $row->df_jsebutharga?></td>
 
                           <td class="py-1"><a href="<?php echo site_url("projek/delete/" . $row->projek_id); ?>" class="btn btn-info" role="button" onclick="return confirm('Delete Data?')"> <i class="menu-icon mdi mdi-content-cut"></i></a>
                           <a href="<?php echo site_url("projek/Update_Projek01/" . $row->projek_id); ?>" class="btn btn-warning" role="button" onclick="return confirm('Update Data?')"><i class="menu-icon mdi mdi-source-pull"></i></a></td>
@@ -65,8 +69,7 @@
                     <script type="text/javascript">
                     $(document).ready(function() {
                       $('#example').DataTable( {
-                        "responsive":        true,
-
+                        "responsive":true,
                       } );
                     } );
                     </script>
