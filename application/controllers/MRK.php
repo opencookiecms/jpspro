@@ -53,13 +53,11 @@ class MRK extends CI_Controller{
 	  $data['get_usersetting']=$this->Setting_model->get_Datasetting();
 		$data['get_allkontraktor']=$this->Mrk_model->getAllDataKon();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
-
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 		$this->form_validation->set_rules('nokon', 'No kontrak', 'required');
 		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
 
 		if($this->form_validation->run() == FALSE)
-
 		{
 			$this->load->view('template/header');
 			$this->load->view('template/nav');
@@ -69,17 +67,14 @@ class MRK extends CI_Controller{
 		}
 		else
 		{
-
 			$this->Mrk_model->create_mrksatu();//load from model and call last id
-			$this->error['success']="save";
-			//$KodVod=$this->Mrk_model->getLastKodVod();
-		  redirect(base_url('mrk/MRK_01/'.$lass)); //redirect last id to another step
-
+		  $this->session->set_userdata('success', 'data berjaya disimpan');
+		  //redirect(base_url()."mrk/successmsg"./$lass); //redirect last id to another step
+			redirect(base_url('mrk/MRK_01/'.$lass)); //redirect last id to another step
 		}
 
 
 	}
-
 
 	//mrk 2
 	public function MRK_02($value="")
@@ -129,13 +124,8 @@ class MRK extends CI_Controller{
 			$this->Mrk_model->create_laporansiapkerja();
 			$KodVod=$this->Mrk_model->getLastKodVodLSK();
 			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
-
 		}
-
-
-
 	}
-
 
 	public function MRK_03($value="")
 	{
@@ -550,6 +540,8 @@ class MRK extends CI_Controller{
 			$this->load->view('pages/mrksatu_details', $data);
 		}
 	}
+
+
 
 
 

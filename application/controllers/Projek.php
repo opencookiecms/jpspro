@@ -50,6 +50,8 @@ class Projek extends CI_Controller
    $data['get_detail']=$this->Projek_model->get_projekdetailbyid($value);
    $this->load->view('pages/projek_view', $data);
    $this->load->view('template/footer');
+
+   $this->session->unset_userdata('success');
   }
 
   public function Update_Projek01($value="")

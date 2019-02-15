@@ -6,11 +6,11 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">MRK_01</h2>
               <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-              <?php if(isset($error['success'])) { ?>
-                <div class="alert alert-success"><?php echo $error['success'] ?></div>
-                <?php
-              } ?>
-              <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+              <?php if(isset($_SESSION['success'])) { ?>
+                <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+              <?php
+                } ?>
+
 
               </div>
             </div>
