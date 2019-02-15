@@ -340,7 +340,7 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                                 <div class="col-sm-4">
                                   <p>
                                     <p>
-                                      <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
+                                      <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
                                     </div>
                                   </div>
                                 </div>

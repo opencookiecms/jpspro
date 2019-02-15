@@ -106,7 +106,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-5">
-                      <label>Tajuk Kerja:</label>
+                      <label>Tajuk Kerja:</label>x
                         <textarea type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
                     </div>
                   </div>
@@ -338,7 +338,7 @@
                     <div class="col-sm-4">
                     <p>
                     <p>
-                    <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->mrks_kodvot) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
+                    <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
                     </div>
                   </div>
                 </div>

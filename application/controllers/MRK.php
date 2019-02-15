@@ -84,12 +84,11 @@ class MRK extends CI_Controller{
 		$this->load->database();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailformrk02($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
-
-
+		//remove session for success msg
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
-				$this->load->view('template/nav');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/MRK02',$data);
 			$this->load->view('template/footer');
@@ -98,7 +97,8 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_mrkdua();
-			$KodVod=$this->Mrk_model->getLastKodVodMRK2();
+			//set again new session when data was save and give the msg
+			$this->session->set_userdata('success');
 			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
 		}
 	}

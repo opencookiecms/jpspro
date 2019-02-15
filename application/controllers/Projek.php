@@ -51,6 +51,7 @@ class Projek extends CI_Controller
    $this->load->view('pages/projek_view', $data);
    $this->load->view('template/footer');
 
+   //remove session for success msg
    $this->session->unset_userdata('success');
   }
 
