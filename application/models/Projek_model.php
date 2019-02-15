@@ -32,7 +32,7 @@ class Projek_model extends CI_Model{
     $this->db->select('*');
     $this->db->from('order_nsh');
     $query = $this->db->get();
-    
+
     return $query->result();
   }
 
@@ -99,7 +99,7 @@ class Projek_model extends CI_Model{
     $df_tarikhtutup = $this->input->post("sebuttutup");
     $df_juruterad = $this->input->post("juruterakanan");
     $df_jurutera = $this->input->post("jurutera");
-    $df_penolongkanan = $this->input->post("penolongkanan");
+    //$df_penolongkanan = $this->input->post("penolongkanan");
     $df_penolong = $this->input->post("penolong");
     $df_kodvot = $this->input->post("vot");
     $df_peruntukan = $this->input->post("peruntukan");
@@ -123,7 +123,7 @@ class Projek_model extends CI_Model{
         'df_tarikhtutup' => $df_tarikhtutup,
         'df_juruterad' => $df_juruterad,
         'df_jurutera' => $df_jurutera,
-        'df_penolongkanan' => $df_penolongkanan,
+        //'df_penolongkanan' => $df_penolongkanan,
         'df_penolong' => $df_penolong,
         'df_kodvot ' => $df_kodvot,
         'df_peruntukan' => $df_peruntukan,

@@ -22,12 +22,18 @@
                   </div>
                 </div>
               </div>
-              <a href="<?php echo site_url('daftar/stepsatu')?>" class="btn btn-success btn-block">+ Projek
+              <a href="<?php echo site_url('daftar/stepsatu')?>" data-toggle="tooltip" data-placement="top" title="Pastikan No Sebutharga didaftar sebelum prosess penambahan dilakukan" class="btn btn-success btn-block">+ Projek
                 <i class="mdi mdi-plus"></i>
               </a>
             </div>
           </li>
           <?php switch($ssroles): case "admin" ?>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('mydashboard')?>">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">Halaman Utama</span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('projek')?>">
               <i class="menu-icon mdi  mdi-source-fork"></i>
@@ -55,6 +61,12 @@
 
           <?php break; ?>
           <?php case "user":?>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('mydashboard')?>">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">Halaman Utama</span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('projek')?>">
               <i class="menu-icon mdi  mdi-source-fork"></i>

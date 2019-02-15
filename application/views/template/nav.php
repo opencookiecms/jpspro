@@ -26,8 +26,8 @@ $ssroles = $this->session->userdata("roles");
 
       </li>
       <li class="nav-item dropdown">
-        <a href="<?php echo site_url('Daftar/orderSebutharga')?>" class="nav-link">
-          <i class="mdi mdi-elevation-rise"></i>Order No. Sebutharga</a>
+        <a href="<?php echo site_url('Daftar/orderSebutharga')?>" class="nav-link" data-toggle="tooltip" data-placement="top" title="daftar no sebutharga">
+          <i class="mdi mdi-elevation-rise" ></i>Order No. Sebutharga</a>
         </a>
       </li>
 

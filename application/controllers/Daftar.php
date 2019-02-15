@@ -59,6 +59,8 @@ class Daftar extends CI_Controller{
   {
     $data['title'] = 'Langkah Dua';
     $data['idval'] = $idvalue;
+    $data['get_user']=$this->Setting_model->get_userdatasetting();
+    $data['get_keypeople']=$this->Setting_model->get_Datasetting();
 
     echo $idvalue;
 
@@ -113,6 +115,7 @@ class Daftar extends CI_Controller{
   public function orderSebutharga()
   {
     $data['title'] = "Tempahan No. Sebutharga";
+    $data['get_user']=$this->Setting_model->get_userdatasetting();
 
     $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');
 

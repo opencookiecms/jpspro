@@ -6,8 +6,8 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">MRK_01</h2>
               <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-              <?php if(isset($_SESSION['success'])) { ?>
-                <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+              <?php if(isset($error['success'])) { ?>
+                <div class="alert alert-success"><?php echo $error['success'] ?></div>
                 <?php
               } ?>
               <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
@@ -17,9 +17,11 @@
           </div>
           <!--start col-md-12 for form-->
           <div class="col-12 grid-margin">
+
             <?php echo validation_errors(); ?>
 
             <?php
+
 
             $pkkNo = $get_detail[0]->mrk_nopkk;
             if($pkkNo == null){
@@ -88,6 +90,15 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                                               Alamat
                                             </th>
                                             <th>
+                                              No Pkk
+                                            </th>
+                                            <th>
+                                              Daerah
+                                            </th>
+                                            <th>
+                                              Negeri
+                                            </th>
+                                            <th>
                                               Tindakan
                                             </th>
                                           </tr>
@@ -99,6 +110,9 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                                               <td class="py-1"><?php echo $bil ?></td>
                                               <td class="py-1"><span><?php echo $row->konName?><span></td> <!--Show data in list view-->
                                               <td class="py-1"><span><?php echo $row->KonAlamat?><span></td> <!--Show data in list view-->
+                                              <td class="py-1"><span><?php echo $row->sijilSPKKNo?><span></td> <!--Show data in list view-->
+                                              <td class="py-1"><span><?php echo $row->konDaerah?><span></td> <!--Show data in list view-->
+                                              <td class="py-1"><span><?php echo $row->konNegeri?><span></td> <!--Show data in list view-->
                                               <td class="py-1"><button id="buttonselect"  value="<?php echo $row->konName?>" class="btn btn-info" data-dismiss="modal">Select</button></td>
                                               </tr>
 
@@ -148,22 +162,13 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                       <div class="form-group row">
                         <div class="col-sm-3">
                           <label>Daerah</label>
-                          <select type="text" class="form-control" id="daerah" name="daerah">
-                            <option value="<?php echo $get_detail[0]->mrk_daerah ?>"><?php echo $get_detail[0]->mrk_daerah ?></option>
-                            <option value="kuala muda">Kuala Muda</option>
-                            <option value="sik">Sik</option>
-                            <option value="baling">Baling</option>
-                          </select>
+                          <input type="text" value="<?php echo $get_detail[0]->mrk_daerah ?>" class="form-control" id="daerah" name="daerah">
+
+
                         </div>
                         <div class="col-sm-3">
                           <label>Negeri</label>
-                          <select type="text" class="form-control" id="negeri" name="negeri">
-                            <option value="<?php echo $get_detail[0]->mrk_negeri ?>"><?php echo $get_detail[0]->mrk_negeri ?></option>
-                            <option value="kedah">Kedah</option>
-                            <option value="perlis">Perlis</option>
-                            <option value="pulau pinang">Pulau Pinang</option>
-                            <option value="perak">Perak</option>
-                          </select>
+                          <input value="<?php echo $get_detail[0]->mrk_negeri ?>" type="text" class="form-control" id="negeri" name="negeri">
                         </div>
                       </div>
                     </div>
@@ -280,24 +285,12 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                       <div class="form-group row">
                         <div class="col-sm-3">
                           <label>Pegawai</label>
-                          <select type="text" class="form-control" id="pegawai" name="pegawai">
-                            <option value="<?php echo $get_detail[0]->mrk_pegawai ?>"><?php echo $get_detail[0]->mrk_pegawai ?></option>
-                            <?php foreach($get_usersetting as $users){ ?>
-                              <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
-                            <?php } ?>
-                          </select>
+                          <input type="text" class="form-control" id="pegawai" value="<?php echo $this->session->userdata("name") ?>" name="pegawai" readonly>
+
                         </div>
                         <div class="col-sm-3">
                           <label>Jawatan</label>
-                          <select type="text" class="form-control" id="jawatan" name="jawatan">
-                            <option value="<?php echo $get_detail[0]->mrk_jawatan ?>"><?php echo $get_detail[0]->mrk_jawatan ?></option>
-                            <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
-                            <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
-                            <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
-                            <option value="Jurutera ( Baling )">Jurutera ( Baling )</option>
-                            <option value="Jurutera Daerah">Jurutera Daerah</option>
-                            <option value="Penolong Jurutera JA38">Penolong Jurutera JA38</option>
-                          </select>
+                          <input type="text" class="form-control" value="<?php echo $this->session->userdata("jawatan") ?>" id="jawatan" name="jawatan" readonly>
                         </div>
                       </div>
                     </div>
@@ -384,11 +377,18 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                   var currow = $(this).closest('tr');
                   var col1 = currow.find('td:eq(1)').text();
                   var col2 = currow.find('td:eq(2)').text();
+                  var col3 = currow.find('td:eq(3)').text();
+                  var daerah = currow.find('td:eq(4)').text();
+                  var negeri = currow.find('td:eq(5)').text();
 
                   var result = col1;
                   var result2 = col2;
+                  var result3 = col3;
                   $("#namakon").val(result);
                   $('#alamat').val(result2);
+                  $("#nopkk").val(result3);
+                  $("#daerah").val(daerah);
+                  $("#negeri").val(negeri);
                 })
               </script>
               <!--

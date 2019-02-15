@@ -17,6 +17,11 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
       </div>
       <!-- main-panel ends -->
     </div>
+    <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->

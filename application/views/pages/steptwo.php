@@ -220,11 +220,12 @@
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label>Jurutera Dearah</label>
-                      <select type="text" class="form-control"  name="juruterakanan" placeholder="Jurutera Daerah">
-                        <option value="Idris B. Yussof">Idris B. Yussof</option>
-                        <option value="Zainuddin bin Yusoff, AMP., BCK">Zainuddin bin Yusoff, AMP., BCK</option>
-                        <option value="Kamarudin Bin Saleh">Kamarudin Bin Saleh</option>
-                        <option value="Nor Rozaini BT. Abdullah">Nor Rozaini BT. Abdullah</option>
+
+                      <select type="text" class="form-control" id="juruterakanan" name="juruterakanan">
+                        <option value=""></option>
+                        <?php foreach($get_keypeople as $users){ ?>
+                          <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                        <?php } ?>
                       </select>
                     </div>
                   </div>
@@ -235,7 +236,13 @@
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label>Jurutera</label>
-                        <input type="text" class="form-control"  name="jurutera" placeholder="Jurutera">
+                        <select type="text" class="form-control" id="jurutera" name="jurutera">
+                          <option value=""></option>
+                          <?php foreach($get_keypeople as $users){ ?>
+                            <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                          <?php } ?>
+                        </select>
+
                     </div>
                   </div>
                 </div>
@@ -244,18 +251,14 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Penolong Jurutera Kanan JA36</label>
-                        <input type="text" class="form-control"  name="penolongkanan" placeholder="Penolong Kanan JA36">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group row">
-                    <div class="col-sm-3">
-                      <label>Penolong Jurutera JA29</label>
-                      <input type="text" class="form-control" name="penolong" placeholder="Penolong Jurutera JA29">
+                      <label>Penolong Jurutera JA29 / JA36</label>
+
+                      <select type="text" class="form-control" id="penolong" name="penolong">
+                        <option value=""></option>
+                        <?php foreach($get_user as $users){ ?>
+                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
+                        <?php } ?>
+                      </select>
                     </div>
                   </div>
                 </div>
