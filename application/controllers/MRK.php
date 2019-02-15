@@ -68,7 +68,8 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_mrksatu();//load from model and call last id
-		  $this->session->set_userdata('success', 'data berjaya disimpan');
+			$this->session->set_userdata('mrk01','Data MRK_01 berjaya disimpan');
+
 		  //redirect(base_url()."mrk/successmsg"./$lass); //redirect last id to another step
 			redirect(base_url('mrk/MRK_01/'.$lass)); //redirect last id to another step
 		}
@@ -82,6 +83,7 @@ class MRK extends CI_Controller{
 
 		//form validation
 		$this->load->database();
+		$lass = $this->input->post('hiddenid');
 		$data['get_detail']=$this->Mrk_model->get_projectdetailformrk02($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 		//remove session for success msg
@@ -98,8 +100,8 @@ class MRK extends CI_Controller{
 		{
 			$this->Mrk_model->create_mrkdua();
 			//set again new session when data was save and give the msg
-			$this->session->set_userdata('success');
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$this->session->set_userdata('mrk02','Data MRK_02 berjaya disimpan');
+			redirect(base_url('mrk/MRK_02/'.$lass)); //redirect last id to another step
 		}
 	}
 
@@ -107,6 +109,7 @@ class MRK extends CI_Controller{
 	public function LSK($value="")
 	{
 		$this->load->database();
+		$lass = $this->input->post('hiddensub');
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforLSK($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 
@@ -122,8 +125,8 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_laporansiapkerja();
-			$KodVod=$this->Mrk_model->getLastKodVodLSK();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$this->session->set_userdata('lsk','Data Laporan Siap Kerja berjaya disimpan');
+			redirect(base_url('mrk/LSK/'.$lass)); //redirect last id to another step
 		}
 	}
 

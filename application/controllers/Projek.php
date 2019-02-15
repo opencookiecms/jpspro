@@ -10,10 +10,26 @@ class Projek extends CI_Controller
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('Projek_model');
+  }
 
-      //$this->load->model('ProjekMdl');
-    //  $this->load->helper('form');
-    //  $this->load->library('form_validation');
+  public function unsetmsgsession()
+  {
+    $data = array(
+             'mrk01',
+             'mrk02',
+             'lsk',
+             'mrk03',
+             'psk',
+             'ss',
+             'psmk',
+             'pjb',
+             'wjp',
+             'smrk',
+             'skk',
+             'swjp',
+             'sk'
+           );
+    $this->session->unset_userdata($data);
   }
 
   public function index()
@@ -52,7 +68,7 @@ class Projek extends CI_Controller
    $this->load->view('template/footer');
 
    //remove session for success msg
-   $this->session->unset_userdata('success');
+   $this->unsetmsgsession();
   }
 
   public function Update_Projek01($value="")

@@ -6,8 +6,8 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">MRK_01</h2>
               <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-              <?php if(isset($_SESSION['success'])) { ?>
-                <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+              <?php if(isset($_SESSION['mrk01'])) { ?>
+                <div class="alert alert-success"><?php echo $_SESSION['mrk01'] ?></div>
               <?php
                 } ?>
 

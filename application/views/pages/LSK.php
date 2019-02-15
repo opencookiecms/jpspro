@@ -6,8 +6,8 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">Laporan Siap Kerja</h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-            <?php if(isset($_SESSION['success'])) { ?>
-              <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+            <?php if(isset($_SESSION['lsk'])) { ?>
+              <div class="alert alert-success"><?php echo $_SESSION['lsk'] ?></div>
             <?php
               } ?>
             <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
@@ -38,6 +38,7 @@
                       <label>No Pendaftaran PKK</label>
                       <input type="hidden" value="<?php echo $get_detail[0]->df_kodvot ?>" name="kodvods">
                       <input type="hidden" value="<?php echo $get_detail[0]->mrksatuid?>" name="hiddenid">
+                      <input type="hidden" value="<?php echo $get_detail[0]->projek_id?>" name="hiddensub">
                       <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk?>" placeholder="No Pendaftaran PKK" readonly>
                     </div>
                     <div class="col-sm-3">
