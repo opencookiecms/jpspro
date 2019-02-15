@@ -6,8 +6,8 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">Surat Pelepasan Wang Jaminan Perlaksanaan</h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-            <?php if(isset($_SESSION['success'])) { ?>
-              <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+            <?php if(isset($_SESSION['swjp'])) { ?>
+              <div class="alert alert-success"><?php echo $_SESSION['swjp'] ?></div>
             <?php
               } ?>
             <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
@@ -60,6 +60,7 @@
                     <input type="hidden" name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>" readonly>
                     <input type="hidden" name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>" readonly>
                     <input type="hidden" name="hiddenid"value="<?php echo $get_detail[0]->mrksatuid?>" readonly>
+                    <input type="hidden" name="hiddenids"value="<?php echo $get_detail[0]->projek_id?>" readonly>
                   </div>
                   <label class="col-sm-2 col-form-label">Rujukan Kami</label>
                   <div class="col-sm-3">

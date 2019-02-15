@@ -11,7 +11,7 @@ class MRK extends CI_Controller{
 		$this->load->model('Setting_model');
 		$this->load->helper('url');
 		$this->load->library('session');
-		 $this->load->library('form_validation');
+		$this->load->library('form_validation');
 		//$this->load->model('Projek_model');
 	}
 
@@ -30,8 +30,8 @@ class MRK extends CI_Controller{
 			$result = $this->Mrk_model->getDataSearchkon($_GET['term']);
 			if (count($result) > 0){
 				foreach ($result as $row)
-					$result_array[] = $row->konName;
-					echo json_encode($result_array);
+				$result_array[] = $row->konName;
+				echo json_encode($result_array);
 
 			}
 		}
@@ -40,8 +40,8 @@ class MRK extends CI_Controller{
 	public function getKontraktorName()
 	{
 		$keyword=$this->input->post('keyword');
-    $data=$this->Mrk_model->getDataKon($keyword);
-    echo  json_encode ($data);
+		$data=$this->Mrk_model->getDataKon($keyword);
+		echo  json_encode ($data);
 	}
 
 
@@ -50,7 +50,7 @@ class MRK extends CI_Controller{
 
 		$lass = $this->input->post('hiddenid');
 		$this->load->database();
-	  $data['get_usersetting']=$this->Setting_model->get_Datasetting();
+		$data['get_usersetting']=$this->Setting_model->get_Datasetting();
 		$data['get_allkontraktor']=$this->Mrk_model->getAllDataKon();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
@@ -70,7 +70,7 @@ class MRK extends CI_Controller{
 			$this->Mrk_model->create_mrksatu();//load from model and call last id
 			$this->session->set_userdata('mrk01','Data MRK_01 berjaya disimpan');
 
-		  //redirect(base_url()."mrk/successmsg"./$lass); //redirect last id to another step
+			//redirect(base_url()."mrk/successmsg"./$lass); //redirect last id to another step
 			redirect(base_url('mrk/MRK_01/'.$lass)); //redirect last id to another step
 		}
 
@@ -132,9 +132,10 @@ class MRK extends CI_Controller{
 
 	public function MRK_03($value="")
 	{
+		$lass = $this->input->post('hiddenids');
 		$this->load->database();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforMRK03($value);
-		$this->form_validation->set_rules('nokontr', 'No Pendaftaran PKK', 'required');
+	//	$this->form_validation->set_rules('nokontr', 'No Pendaftaran PKK', 'required');
 		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
 
 		if($this->form_validation->run() == FALSE)
@@ -148,19 +149,17 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_mrktiga();
-			$KodVod=$this->Mrk_model->getLastKodVodMRK3();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$this->session->set_userdata('mrk03','Data MRK_03 berjaya disimpan');
+			redirect(base_url('mrk/MRK_03/'.$lass)); //redirect last id to another step
 
 		}
 
 
 	}
 
-
-
-
 	public function PSK($value="")
 	{
+		$lass = $this->input->post('hiddenids');
 		$this->load->database();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforPSK($value);
 		$this->form_validation->set_rules('failrujuk', 'Fail Rujukan', 'required');
@@ -176,16 +175,39 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_perakusiap();
-			$KodVod=$this->Mrk_model->getLastKodVodPSK();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$this->session->set_userdata('psk','Data Perakuan Siap Kerja berjaya disimpan');
+			redirect(base_url('mrk/PSK/'.$lass)); //redirect last id to another step
 
 		}
+	}
 
+	public function Senarai_Semak($value="")
+	{
+		$lass = $this->input->post('hiddenids');
+		$this->load->database();
+		$data['get_detail']=$this->Mrk_model->get_projectdetailforSS($value);
+
+		$id = $this->input->post('hiddenid');
+		echo $id;
+		if($id == null)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/nav');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/SS',$data);
+			$this->load->view('template/footer');
+		}
+		else {
+			$this->Mrk_model->create_ss();
+			$this->session->set_userdata('ss','Data Senarai Semakan berjaya disimpan');
+			redirect(base_url('mrk/Senarai_Semak/'.$lass)); //redirect last id to another step
+		}
 
 	}
 
 	public function MRK_PSMK($value="")
 	{
+		$lass = $this->input->post('hiddenids');
 		$this->load->database();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforPSMK($value);
 		$this->form_validation->set_rules('norujuk', 'No Rujukan', 'required');
@@ -194,7 +216,7 @@ class MRK extends CI_Controller{
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
-				$this->load->view('template/nav');
+			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/PSMK',$data);
 			$this->load->view('template/footer');
@@ -202,91 +224,60 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_siapbaiki();
-			$KodVod=$this->Mrk_model->getLastKodVodPSMK();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$this->session->set_userdata('psmk','Data Perakuan Siap Membaiki Kecatatan berjaya disimpan');
+			redirect(base_url('mrk/MRK_PSMK/'.$lass)); //redirect last i
 		}
 
 
 	}
 
 
-		public function Jaminan_Bank($value="")
+	public function Jaminan_Bank($value="")
+	{
+	  $lass = $this->input->post('hiddenids');
+		$this->load->database();
+		$data['get_detail']=$this->Mrk_model->get_projectdetailforJB($value);
+		$this->form_validation->set_rules('rujukbank', 'Rujukan Bank', 'required');
+
+		if($this->form_validation->run() == FALSE)
 		{
+			$this->load->view('template/header');
+			$this->load->view('template/nav');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/JBank',$data);
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Mrk_model->create_jaminanbank();
+			$this->session->set_userdata('pjb','Data Pelepasan Jaminan Bank berjaya disimpan');
+			redirect(base_url('mrk/Jaminan_Bank/'.$lass)); //redirect last i
+		}
+	}
 
-			$this->load->database();
-		  $data['get_detail']=$this->Mrk_model->get_projectdetailforJB($value);
-			$this->form_validation->set_rules('rujukbank', 'Rujukan Bank', 'required');
+	public function PP_WJP($value="")
+	{
+		$lass = $this->input->post('hiddenids');
+		$this->load->database();
+		$data['get_detail']=$this->Mrk_model->get_projectdetailforPPWJP($value);
+		$this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
 
-			if($this->form_validation->run() == FALSE)
-			{
-				$this->load->view('template/header');
-				$this->load->view('template/nav');
-				$this->load->view('template/sidebar');
-				$this->load->view('pages/JBank',$data);
-				$this->load->view('template/footer');
-			}
-			else
-			{
-				$this->Mrk_model->create_jaminanbank();
-				$KodVod=$this->Mrk_model->getLastKodVodJB();
-				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
-			}
+		if($this->form_validation->run()== FALSE)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/nav');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/PP_WJP',$data);
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Mrk_model->create_ppwjp();
+			$this->session->set_userdata('ppwjp','Data Perakuan Pemulangan Wang Jaminan Perlaksanaan berjaya disimpan');
+			redirect(base_url('mrk/PP_WJP/'.$lass)); //redirect last i
 		}
 
-		public function PP_WJP($value="")
-		{
-			$this->load->database();
-		  $data['get_detail']=$this->Mrk_model->get_projectdetailforPPWJP($value);
-			$this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
-
-			if($this->form_validation->run()== FALSE)
-			{
-				$this->load->view('template/header');
-				$this->load->view('template/nav');
-				$this->load->view('template/sidebar');
-				$this->load->view('pages/PP_WJP',$data);
-				$this->load->view('template/footer');
-			}
-			else
-			{
-				$this->Mrk_model->create_ppwjp();
-				$KodVod=$this->Mrk_model->getLastKodVodPPWJP();
-				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
-			}
-
-		}
-
-		public function Senarai_Semak($value="")
-		{
-			$this->load->database();
-			$data['get_detail']=$this->Mrk_model->get_projectdetailforSS($value);
-
-			$id = $this->input->post('hiddenid');
-			echo $id;
-			if($id == null)
-			{
-				$this->load->view('template/header');
-				$this->load->view('template/nav');
-				$this->load->view('template/sidebar');
-				$this->load->view('pages/SS',$data);
-				$this->load->view('template/footer');
-			}
-			else {
-				$this->Mrk_model->create_ss();
-				$KodVod=$this->Mrk_model->getLastKodVodSS();
-				redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
-			}
-
-
-
-
-		}
-
-
-
-
-
-
+	}
 
 
 	/////MRK AND OTHER UPDATE GOOSE HERE//////////////////////////////////////////////////////////////
@@ -372,8 +363,9 @@ class MRK extends CI_Controller{
 
 	public function MRK_03_Update()
 	{
+		$lass = $this->input->post('hiddenids');
 		$this->load->database();
-		$this->form_validation->set_rules('nokontr', 'No Pendaftaran PKK', 'required');
+		//$this->form_validation->set_rules('nokontr', 'No Pendaftaran PKK', 'required');
 		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
 
 		if($this->form_validation->run() == FALSE)
@@ -387,8 +379,8 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->MRK3Update($data ,$this->input->post('hiddenid'));
-			$KodVod=$this->Mrk_model->getLastKodVodMRK3();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$this->session->set_userdata('mrk03','Data MRK_03 berjaya dikemaskini');
+			redirect(base_url('mrk/MRK_03/'.$lass)); //redirect last i
 
 		}
 

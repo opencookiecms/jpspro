@@ -6,8 +6,8 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">Senarai Semakan</h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-            <?php if(isset($_SESSION['success'])) { ?>
-              <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+            <?php if(isset($_SESSION['ss'])) { ?>
+              <div class="alert alert-success"><?php echo $_SESSION['ss'] ?></div>
             <?php
               } ?>
             <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
@@ -280,6 +280,7 @@
                     <input type="date" class="form-control" id="tarikhsedia" name="tarikhsedia" value="<?php echo $get_detail[0]->ss_date?>">
 
                                 <input type="hidden" readonly name="hiddenid"  value="<?php echo $get_detail[0]->mrksatuid?>">
+                                <input type="hidden" readonly name="hiddenids"  value="<?php echo $get_detail[0]->projek_id?>">
                                 <input type="hidden" readonly  name="kodvot"  value="<?php echo $get_detail[0]->df_kodvot?>">
                                 <input type="hidden" readonly  name="noinden"  value="<?php echo $get_detail[0]->mrk_noinden?>">
                   </div>

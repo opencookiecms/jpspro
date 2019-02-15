@@ -6,8 +6,8 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">Perakuan Siap Membaiki Kecacatan</h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-            <?php if(isset($_SESSION['success'])) { ?>
-              <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+            <?php if(isset($_SESSION['psmk'])) { ?>
+              <div class="alert alert-success"><?php echo $_SESSION['psmk'] ?></div>
             <?php
               } ?>
             <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
@@ -276,6 +276,7 @@
                                 <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                                 <input type="hidden" name="indenno" value="<?php echo $get_detail[0]->mrk_noinden?>">
                                 <input type="hidden" name="mrkid" value="<?php echo $get_detail[0]->mrksatu_id?>">
+                                <input type="hidden" name="hiddenids" value="<?php echo $get_detail[0]->projek_id?>">
                               </div>
                             </div>
                           </div>

@@ -23,11 +23,11 @@ class Projek extends CI_Controller
              'ss',
              'psmk',
              'pjb',
-             'wjp',
+             'ppwjp',
              'smrk',
              'skk',
-             'swjp',
-             'sk'
+             'swjp'
+
            );
     $this->session->unset_userdata($data);
   }

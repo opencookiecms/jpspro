@@ -52,6 +52,7 @@
                     <input type="text" class="form-control" id="nosebutharga" name="nosebutharga" placeholder="No Sebutharga" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                     <input type="hidden"  name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>">
                     <input type="hidden"  name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
+                    <input type="hidden"  name="hiddenids" value="<?php echo $get_detail[0]->projek_id?>">
                     <input type="hidden"  name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>">
                   </div>
                 </div>

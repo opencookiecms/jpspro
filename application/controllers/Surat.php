@@ -26,6 +26,7 @@ class Surat extends CI_Controller
 
   public function Surat_MRK($value="")
   {
+    $lass = $this->input->post('hiddenids');
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
@@ -42,8 +43,8 @@ class Surat extends CI_Controller
     else
     {
       $this->Surat_model->create_suratmrk();
-    	$KodVod=$this->Surat_model->getLastKodVodSMRK();
-  		redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+      $this->session->set_userdata('smrk','Data Surat Maklumat Rekod Kerja berjaya disimpan');
+      redirect(base_url('mrk/Surat_MRK/'.$lass)); //redirect last i
     }
 
 
@@ -51,6 +52,7 @@ class Surat extends CI_Controller
 
   public function Surat_Khas($value="")
   {
+    $lass = $this->input->post('hiddenids');
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
@@ -68,8 +70,8 @@ class Surat extends CI_Controller
     else
     {
       $this->Surat_model->create_suratkebenaran();
-      $KodVod=$this->Surat_model->getLastKodVodSKHAS();
-      redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+      $this->session->set_userdata('skk','Data Surat Kebenaran Khas berjaya disimpan');
+      redirect(base_url('mrk/Surat_Khas/'.$lass)); //redirect last i
     }
 
 
@@ -77,6 +79,8 @@ class Surat extends CI_Controller
 
   public function Surat_WJP($value="")
   {
+
+    $lass = $this->input->post('hiddenids');
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetailSuratWJP($value);
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
@@ -93,8 +97,8 @@ class Surat extends CI_Controller
     else
     {
       $this->Surat_model->create_suratwjp();
-      $KodVod=$this->Surat_model->getLastKodVodSWJP();
-      redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+      $this->session->set_userdata('swjp','Data Surat Pelepasan Wang Jaminan Perlaksanaan berjaya disimpan');
+      redirect(base_url('mrk/Surat_WJP/'.$lass)); //redirect last i
     }
 
 

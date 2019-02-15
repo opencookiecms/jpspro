@@ -6,8 +6,8 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">MRK_03</h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-            <?php if(isset($_SESSION['success'])) { ?>
-              <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+            <?php if(isset($_SESSION['mrk03'])) { ?>
+              <div class="alert alert-success"><?php echo $_SESSION['mrk03'] ?></div>
             <?php
               } ?>
             <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
@@ -35,8 +35,9 @@
                   <div class="form-group row">
                     <div class="col-sm-5">
                       <label>No Pendaftaran PKK</label>
-                      <input type="hidden" value="<?php echo $get_detail[0]->df_kodvot ?>" name="kodvods">
-                      <input type="hidden" name="mrksatuid" value="<?php echo $get_detail[0]->mrksatuid?>">
+                      <input type="text" value="<?php echo $get_detail[0]->df_kodvot ?>" name="kodvods">
+                      <input type="text" name="mrksatuid" value="<?php echo $get_detail[0]->mrksatuid?>">
+                      <input type="text" name="hiddenids" value="<?php echo $get_detail[0]->projek_id ?>">
                       <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK" readonly>
                     </div>
                   </div>

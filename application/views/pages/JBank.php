@@ -6,8 +6,8 @@
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f">Surat Pelepasan Jaminan Bank</h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
-            <?php if(isset($_SESSION['success'])) { ?>
-              <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
+            <?php if(isset($_SESSION['pjb'])) { ?>
+              <div class="alert alert-success"><?php echo $_SESSION['pjb'] ?></div>
             <?php
               } ?>
             <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
@@ -90,9 +90,10 @@
                   <label class="col-sm-1 col-form-label">Nama Pemborong</label>
                   <div class="col-sm-3">
                     <input type="text" class="form-control" id="namaborong" name="namaborong" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
-                    <input type="hidden" name="noinden" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->mrk_noinden?>">
-                    <input type="hidden"  name="kodvot" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->df_kodvot?>">
-                    <input type="hidden"  name="hiddenid" placeholder="Nama Pemborong" readonly value="<?php echo $get_detail[0]->mrksatuid?>">
+                    <input type="hidden" name="noinden" readonly value="<?php echo $get_detail[0]->mrk_noinden?>">
+                    <input type="hidden"  name="kodvot"  readonly value="<?php echo $get_detail[0]->df_kodvot?>">
+                    <input type="hidden"  name="hiddenid" readonly value="<?php echo $get_detail[0]->mrksatuid?>">
+                    <input type="hidden"  name="hiddenids"  readonly value="<?php echo $get_detail[0]->projek_id?>">
                   </div>
                 </div>
               </div>
