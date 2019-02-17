@@ -93,7 +93,7 @@
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label>Tarikh Siap Sebenar:</label>
-                      <input type="date" class="form-control" id="tarikhsiapsebenar" name="tarikhsiapsebenar" value="<?php echo $get_detail[0]->mrk_tarikhsiapsebenar?>">
+                      <input type="date" class="form-control" id="tarikhsiapsebenar" name="tarikhsiapsebenar" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
                     </div>
                     <div class="col-sm-3">
                       <label>Tarikh Ambil Milik:</label>

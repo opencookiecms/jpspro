@@ -126,9 +126,9 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">
-                          <div class="col-sm-7">
+                          <div class="col-sm-6">
                             <label>Tajuk Projek :</label>
-                            <textarea type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"></textarea>
+                            <textarea rows="6" type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"></textarea>
                           </div>
                         </div>
                       </div>

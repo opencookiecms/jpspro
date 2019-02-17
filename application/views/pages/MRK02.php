@@ -299,7 +299,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                       <div class="col-sm-3">
-                        <label>Projek Mansuh/Datamatkan</label><p>
+                        <label>Projek Mansuh/Ditamatkan</label><p>
                         <input type="date" class="form-control" id="projekmansuh" value="<?php echo $get_detail[0]->mrk_projekmansuh?>" name="projekmansuh">
                       </div>
                   </div>

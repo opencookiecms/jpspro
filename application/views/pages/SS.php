@@ -251,28 +251,7 @@
                   <div class="col-sm-3">
                     <p></p>
                     <label>Desediakan Oleh</label>
-                    <select type="text" class="form-control" id="sedia" name="sedia">
-                      <option value="<?php echo $get_detail[0]->ss_disediakan?>"><?php echo $get_detail[0]->ss_disediakan?></option>
-                      <option value="km">Mohamad Ridzam B. Jusoh</option>
-                      <option value="s">Nazar Shah B. Awang</option>
-                      <option value="b">Shuhel B. Mohd Saad</option>
-                      <option value="b">Azhar B. Ahmadd</option>
-                      <option value="km">Shahriful Azhar B. Mohd. Hassan</option>
-                      <option value="s">Mohd. Tarmizi B. Taib</option>
-                      <option value="b">Ku Izham B. Ku Din</option>
-                      <option value="b">Noorzita Bt. Mustaffa</option>
-                      <option value="km">Haji Shukri B. Man</option>
-                      <option value="s">Othman B. Shariff</option>
-                      <option value="b">Intan Zahida Bt. Abu Bakar</option>
-                      <option value="b">Jamil B. Ahmad</option>
-                      <option value="b">Rosli B. Shaari</option>
-                      <option value="km">Roshidi B. Ismail</option>
-                      <option value="s">Shaari Bin Abdullah</option>
-                      <option value="b">Hafizah Binti Yahaya</option>
-                      <option value="b">Mohamed Radzi Bin Ishak</option>
-                      <option value="b">Juhari Bin Md. Ali</option>
-                      <option value="b">Johari Bin Ali</option>
-                    </select>
+                    <input type="text" class="form-control" value="<?php echo $this->session->userdata("name")?>" id="sedia" name="sedia">
                   </div>
                   <div class="col-sm-3">
                     <p></p>

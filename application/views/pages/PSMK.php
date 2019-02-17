@@ -155,6 +155,7 @@
       <!--end here col-md-12-->
 
       <!--start col-md-12 for form-->
+
       <div class="col-12 grid-margin">
         <div class="card" style="border-radius:10px;">
           <div class="card-body">
@@ -173,7 +174,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="harga" name="harga" value="<?php echo $get_detail[0]->mrk_hargasatu?>" placeholder="RM">
+                      <input type="text" class="form-control" id="harga" name="harga" value="<?php echo number_format($get_detail[0]->mrk_hargasatu,2)?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -190,7 +191,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="bakiwangjaminan" name="bakiwangjaminan" value="<?php echo $get_detail[0]->mrk_bakiwangjamin?>" placeholder="RM">
+                      <input type="text" class="form-control" id="bakiwangjaminan" name="bakiwangjaminan" value="<?php echo number_format($get_detail[0]->mrk_bakiwangjamin,2) ?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -211,7 +212,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="harga1" name="harga1" placeholder="RM" value="<?php echo $get_detail[0]->mrk_hargadua?>">
+                      <input type="text" class="form-control" id="harga1" name="harga1" placeholder="RM" value="<?php echo number_format($get_detail[0]->mrk_hargadua,2)?>">
                     </div>
                   </div>
                 </div>
@@ -228,7 +229,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="wangjaminan" name="wangjaminan" value="<?php echo $get_detail[0]->mrk_wangjaminlaksana?>" placeholder="RM">
+                      <input type="text" class="form-control" id="wangjaminan" name="wangjaminan" value="<?php echo number_format($get_detail[0]->mrk_wangjaminlaksana,2)?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -245,7 +246,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="kosbon" name="kosbon" value="<?php echo $get_detail[0]->mrk_tambahbonlaksana?>" placeholder="RM">
+                      <input type="text" class="form-control" id="kosbon" name="kosbon" value="<?php echo number_format($get_detail[0]->mrk_tambahbonlaksana,2)?>" placeholder="RM">
                     </div>
                   </div>
                   <label class="col-sm-2 col-form-label">Pegawai Penguasa</label>
@@ -272,7 +273,7 @@
                                   <div class="input-group-prepend bg-success border-primary">
                                     <span class="input-group-text bg-transparent text-white">RM</span>
                                   </div>
-                                  <input type="text" class="form-control" id="bakibon" name="bakibon" placeholder="RM" value="<?php echo $get_detail[0]->mrk_bakibonlaksana?>">
+                                  <input type="text" class="form-control" id="bakibon" name="bakibon" placeholder="RM" value="<?php echo number_format($get_detail[0]->mrk_bakibonlaksana,2)?>">
                                 </div>
                               </div>
                               <label class="col-sm-2 col-form-label">Jawatan</label>

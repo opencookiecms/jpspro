@@ -12,14 +12,14 @@
 
 
           </div>
-        
+
           <div class="row">
             <div class="col-lg-12 grid-margin">
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Orders</h4>
                   <div class="table-responsive">
-                    <table class="table table-sm">
+                    <table class="table">
                       <thead>
                         <tr>
                           <th scope="col">Bil</th>
