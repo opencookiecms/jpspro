@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
+          <div class="card-body" >
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
             <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
             <?php echo $idval; ?>
@@ -22,13 +22,13 @@
         <?php echo form_open('daftar/steptiga'); ?>
           <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Lokasi & Sistem</h4>
+          <div class="card-body" style="background-color:#16a085;">
+            <h4 class="card-title" style="color:white;">Lokasi & Sistem</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
 
-                    <label class="col-sm-1 col-form-label">Latitud (N)</label>
+                    <label class="col-sm-1 col-form-label tl">Latitud (N)</label>
                     <div class="col-sm-2">
                       <div class="input-group">
                         <input type="text" class="form-control" name="lata" id="lata">
@@ -61,7 +61,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
 
-                    <label class="col-sm-1 col-form-label">Longitud (E)</label>
+                    <label class="col-sm-1 col-form-label tl">Longitud (E)</label>
                     <div class="col-sm-2">
                       <div class="input-group">
                         <input type="text" class="form-control" name="longa" id="longa">
@@ -91,12 +91,12 @@
               </div>
               <p>
               <p>
-              <h4 class="card-title">Sungai</h4>
+              <h4 class="card-title" style="color:white;">Sungai</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                          <label>Lembangan Sungai</label>
+                          <label class="tl">Lembangan Sungai</label>
                       <input type="text" class="form-control" id="sungai" name="sungai" placeholder="Sungai">
 
                     </div>
@@ -107,12 +107,12 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                          <label>Sistem</label>
+                          <label class="tl">Sistem</label>
                         <input type="text" class="form-control" id="sistem" name="sistem" placeholder="Sistem">
 
                     </div>
                     <div class="col-sm-2">
-                          <label>Sub Sistem</label>
+                          <label class="tl">Sub Sistem</label>
                       <input type="text" class="form-control" id="subsistem" name="subsistem" placeholder="Sub Sistem">
 
                     </div>
@@ -123,12 +123,12 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                          <label>Komponen</label>
+                          <label class="tl">Komponen</label>
                         <input type="text" class="form-control" id="komponen" name="komponen" placeholder="Komponen">
 
                     </div>
                     <div class="col-sm-2">
-                          <label>Dimensi</label>
+                          <label class="tl">Dimensi</label>
                       <input type="text" class="form-control" id="dimensi" name="dimensi" placeholder="Dimensi">
 
                     </div>
@@ -141,7 +141,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <button type="submit" name="submit" class="btn btn-success mr-2 btn-rounded ">Simpan</button>
+                      <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
                     </div>
                   </div>
                 </div>

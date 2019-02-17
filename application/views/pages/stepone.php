@@ -15,13 +15,13 @@
 
               <?php echo form_open('daftar/stepsatu'); ?>
               <div class="card" style="border-radius:10px;">
-                <div class="card-body">
-                  <h4 class="card-title">Borang Daftar Sebut Harga</h4>
+                <div class="card-body" style="background-color:#4a69bd;">
+                  <h4 class="card-title" style="color:white;">Borang Daftar Sebut Harga</h4>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-6">
-                            <label>No Sebutharga :</label>
+                            <label class="tl">No Sebutharga :</label>
                             <div class="input-group">
                               <input type="text" class="form-control" id="nosebuts" onkeyup="autofill()" value=""name="nosebut" readonly>
                               <div class="input-group-append bg-success border-primary">
@@ -106,7 +106,7 @@
                             </div>
                             <!--end of modal-->
                           <div class="col-sm-3">
-                            <label>Tarikh :</label>
+                            <label class="tl">Tarikh :</label>
                             <input type="date" class="form-control" name="tarikhmohon"placeholder="Tarikh Permohonan">
                           </div>
                         </div>
@@ -116,7 +116,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-4">
-                            <label>Jenis Sebutharga :</label>
+                            <label class="tl">Jenis Sebutharga :</label>
                             <input type="text" class="form-control" id="jenissebut" name="jenissebut" readonly>
                             <small id="nsebutharga" class="form-text text-muted">Pilih jenis sebutharga.</small>
                           </div>
@@ -127,7 +127,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-6">
-                            <label>Tajuk Projek :</label>
+                            <label class="tl">Tajuk Projek :</label>
                             <textarea rows="6" type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"></textarea>
                           </div>
                         </div>
@@ -137,7 +137,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-3">
-                            <label>Daerah:</label>
+                            <label class="tl">Daerah:</label>
                             <select type="text" class="form-control" name="daerah">
                               <option value=""></option>
                               <option value="Sik">Sik</option>

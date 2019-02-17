@@ -18,13 +18,13 @@
         <?php echo form_open('daftar/stepdua'); ?>
           <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Kategori Pendaftaran</h4>
+          <div class="card-body" style="background-color:#778ca3;">
+            <h4 class="card-title" style="color:white;">Kategori Pendaftaran</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                      <label>Gred :</label>
+                      <label class="tl">Gred :</label>
                       <select type="text" class="form-control" name="gred" placeholder="Gred">
                         <option value="G1">G1</option>
                         <option value="G2">G2</option>
@@ -36,7 +36,7 @@
                       </select>
                     </div>
                     <div class="col-sm-2">
-                      <label>Kategori :</label>
+                      <label class="tl">Kategori :</label>
                       <select type="text" class="form-control" name="kategori" placeholder="Kategori">
                         <option value="CE">CE</option>
                         <option value="B">B</option>
@@ -46,20 +46,20 @@
                   </div>
                 </div>
               </div>
-              <h4 class="card-title">Pengkhususan</h4>
+              <h4 class="card-title" style="color:white;">Pengkhususan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                      <label>K1</label>
+                      <label class="tl">K1</label>
                       <input type="text" class="form-control" name="khusus1">
                     </div>
                     <div class="col-sm-2">
-                      <label>K2</label>
+                      <label class="tl">K2</label>
                         <input type="text" class="form-control" name="khusus2">
                     </div>
                     <div class="col-sm-2">
-                      <label>K3</label>
+                      <label class="tl">K3</label>
                       <input type="text" class="form-control" name="khusus3">
                     </div>
                   </div>
@@ -69,7 +69,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                      <label>Taraf:</label>
+                      <label class="tl">Taraf:</label>
                       <select type="text" class="form-control"  name="taraf" placeholder="Taraf">
                         <option value="Bumiputera">Bumiputera</option>
                         <option value="Bukan Bumiputera">Bukan Bumiputera</option>
@@ -82,11 +82,11 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                      <label>Tempoh Siap Kerja:</label>
+                      <label class="tl">Tempoh Siap Kerja:</label>
                       <input type="text" class="form-control"  name="tempoh" placeholder="Hari">
                     </div>
                     <div class="col-sm-2">
-                      <label>Minggu/Bulan</label>
+                      <label class="tl">Minggu/Bulan</label>
                       <select type="text" class="form-control" name="bulanming" placeholder="Minggu/Bulan">
                         <option value=""></option>
                         <option value="Minggu">Minggu</option>
@@ -104,13 +104,13 @@
       <!--start col-md-12 for form-->
       <div class="col-12 grid-margin">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Harga Dokumen & Tarikh</h4>
+          <div class="card-body" style="background-color:#FD7272;">
+            <h4 class="card-title" style="color:white;">Harga Dokumen & Tarikh</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Harga Dokumen Sebutharga (RM)</label>
+                      <label class="tl">Harga Dokumen Sebutharga (RM)</label>
                       <div class="input-group">
                         <div class="input-group-prepend bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
@@ -137,7 +137,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Tarikh Notis Dikeluarkan</label>
+                      <label class="tl">Tarikh Notis Dikeluarkan</label>
                       <input type="date" class="form-control" name="notiskeluar" >
                     </div>
                   </div>
@@ -147,7 +147,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Tarikh Lawat Tapak/Taklimat</label>
+                      <label class="tl">Tarikh Lawat Tapak/Taklimat</label>
                       <div class="input-group">
                         <input type="text" class="form-control"name="lawattapak">
                         <div class="input-group-append bg-primary border-primary">
@@ -162,7 +162,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Tarikh Dokumen Mula Dijual</label>
+                      <label class="tl">Tarikh Dokumen Mula Dijual</label>
                       <div class="input-group">
                             <input type="text" class="form-control" name="docmula">
                         <div class="input-group-append bg-primary border-primary">
@@ -177,7 +177,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Tarikh Akhir Dokumen Dijual</label>
+                      <label class="tl">Tarikh Akhir Dokumen Dijual</label>
                       <div class="input-group">
                         <input type="text" class="form-control" name="docakhir">
                         <div class="input-group-append bg-primary border-primary">
@@ -192,7 +192,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Tarikh Sebutharga Ditutup</label>
+                      <label class="tl">Tarikh Sebutharga Ditutup</label>
                       <div class="input-group">
                         <input type="text" class="form-control"  name="sebuttutup">
                         <div class="input-group-append bg-primary border-primary">
@@ -213,13 +213,13 @@
       <!--start col-md-12 for form-->
       <div class="col-12 grid-margin">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Pegesahan</h4>
+          <div class="card-body" style="background-color:#B33771;">
+            <h4 class="card-title" style="color:white;">Pegesahan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Jurutera Dearah</label>
+                      <label class="tl">Jurutera Dearah</label>
 
                       <select type="text" class="form-control" id="juruterakanan" name="juruterakanan">
                         <option value=""></option>
@@ -235,7 +235,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Jurutera</label>
+                      <label class="tl">Jurutera</label>
                         <select type="text" class="form-control" id="jurutera" name="jurutera">
                           <option value=""></option>
                           <?php foreach($get_keypeople as $users){ ?>
@@ -251,7 +251,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Penolong Jurutera JA29 / JA36</label>
+                      <label class="tl">Penolong Jurutera JA29 / JA36</label>
 
                       <select type="text" class="form-control" id="penolong" name="penolong">
                         <option value=""></option>
@@ -267,7 +267,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Kod Vot</label>
+                      <label class="tl">Kod Vot</label>
                       <input type="text" class="form-control"  name="vot" placeholder="Vot">
                     </div>
                   </div>
@@ -277,7 +277,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Peruntukan</label>
+                      <label class="tl">Peruntukan</label>
                       <select type="text" class="form-control"  name="peruntukan" placeholder="Negeri">
                         <option value="negeri">Negeri</option>
                         <option value="persekutuan">Persekutuan</option>
@@ -290,7 +290,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Peruntukan Semasa (RM)</label>
+                      <label class="tl">Peruntukan Semasa (RM)</label>
                       <div class="input-group">
                         <div class="input-group-prepend bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
