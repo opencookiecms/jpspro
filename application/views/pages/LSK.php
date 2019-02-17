@@ -63,7 +63,7 @@
                   <div class="form-group row">
                     <div class="col-sm-6">
                       <label>Butiran Kerja</label>
-                      <textarea type="text" class="form-control"  name="butiran" placeholder="Butiran Kerja" readonly><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
+                      <textarea rows="5" type="text" class="form-control"  name="butiran" placeholder="Butiran Kerja" readonly><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
                     </div>
                   </div>
                 </div>
@@ -98,7 +98,7 @@
                       </div>
                     </div>
                     <div class="col-sm-4">
-                      <label>Harga Pesanan RM:</label>
+                      <label>Harga Sebenar RM:</label>
                       <div class="input-group">
                         <div class="input-group-prepend bg-success border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
@@ -129,11 +129,11 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Tarikh Permulaan Kerja:</label>
+                      <label>Tarikh Dilanjutkan Masa:</label>
                       <input type="date" class="form-control" name="tariklanjut" value="<?php echo $get_detail[0]->lsk_lanjutmasa?>">
                     </div>
                     <div class="col-sm-3">
-                      <label>Tarikh Kerja Tamat:</label>
+                      <label>Tarikh Kerja Siap Sempurna:</label>
                       <input type="date" class="form-control"  name="tarikhkerjasempurna" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
                     </div>
                   </div>
@@ -171,40 +171,17 @@
               <div class="col-md-12">
                 <div class="form-group row">
                   <div class="col-sm-3">
-                    <label>Pegawai</label>
+                    <label>Pegawai Penyelia</label>
                     <select type="text" class="form-control"  name="pegawaiselia">
                       <option value="<?php echo $get_detail[0]->lsk_pegawaipenyelia?>"><?php echo $get_detail[0]->lsk_pegawaipenyelia?></option>
-                      <option value="Mohamad Ridzam B. Jusoh">Mohamad Ridzam B. Jusoh</option>
-                      <option value="Nazar Shah B. Awang">Nazar Shah B. Awang</option>
-                      <option value="Shuhel B. Mohd Saad">Shuhel B. Mohd Saad</option>
-                      <option value="Azhar B. Ahmad">Azhar B. Ahmad</option>
-                      <option value="Shahriful Azhar B. Mohd. Hassan">Shahriful Azhar B. Mohd. Hassan</option>
-                      <option value="Mohd. Tarmizi B. Taib">Mohd. Tarmizi B. Taib</option>
-                      <option value="Ku Izham B. Ku Din">Ku Izham B. Ku Din</option>
-                      <option value="Noorzita Bt. Mustaffa">Noorzita Bt. Mustaffa</option>
-                      <option value="Haji Shukri B. Man">Haji Shukri B. Man</option>
-                      <option value="Othman B. Shariff">Othman B. Shariff</option>
-                      <option value="Intan Zahida Bt. Abu Bakar">Intan Zahida Bt. Abu Bakar</option>
-                      <option value="Jamil B. Ahmad">Jamil B. Ahmad</option>
-                      <option value="Rosli B. Shaari">Rosli B. Shaari</option>
-                      <option value="Roshidi B. Ismail">Roshidi B. Ismail</option>
-                      <option value="Shaari Bin Abdullah">Shaari Bin Abdullah</option>
-                      <option value="Hafizah Binti Yahaya">Hafizah Binti Yahaya</option>
-                      <option value="Mohamed Radzi Bin Ishak">Mohamed Radzi Bin Ishak</option>
-                      <option value="Juhari Bin Md. Ali">Juhari Bin Md. Ali</option>
-                      <option value="Johari Bin Ali">Johari Bin Ali</option>
+                      <option value="<?php echo $this->session->userdata("name")?>"><?php echo $this->session->userdata("name")?></option>
                     </select>
                   </div>
                   <div class="col-sm-3">
                     <label>Jawatan</label>
                     <select type="text" class="form-control" id="jawatan" name="jawatan">
                       <option value="<?php echo $get_detail[0]->lsk_jawatanpen?>"><?php echo $get_detail[0]->lsk_jawatanpen?></option>
-                      <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
-                      <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
-                      <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
-                      <option value="Jurutera ( Baling )">Jurutera ( Baling )</option>
-                      <option value="Jurutera Daerah">Jurutera Daerah</option>
-                      <option value="Penolong Jurutera JA38">Penolong Jurutera JA38</option>
+                      <option value="<?php echo $this->session->userdata("jawatan")?>"><?php echo $this->session->userdata("jawatan")?></option>
                     </select>
                   </div>
                   <div class="col-sm-3">
@@ -221,9 +198,10 @@
                   <div class="col-sm-3">
                     <label>Ketua Bahagian</label>
                     <select type="text" class="form-control" id="ketua" name="ketua">
-                        <option value="<?php echo $get_detail[0]->lsk_ketuabahagian?>"><?php echo $get_detail[0]->lsk_ketuabahagian?></option>
-                      <option value="Mohd. Amin B. Ahmad">Mohd. Amin B. Ahmad</option>
-                      <option value="Yahaya B. Shariff">Yahaya B. Shariff</option>
+                      <option value="<?php echo $get_detail[0]->lsk_ketuabahagian?>"><?php echo $get_detail[0]->lsk_ketuabahagian?></option>
+                      <?php foreach($get_keypeople as $users){ ?>
+                        <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                      <?php } ?>
                     </select>
                   </div>
                   <div class="col-sm-3">
@@ -249,11 +227,9 @@
                     <label>Jurutera J41/J44</label>
                     <select type="text" class="form-control" id="juruj" name="juruj">
                       <option value="<?php echo $get_detail[0]->lsk_juruteraj?>"><?php echo $get_detail[0]->lsk_juruteraj?></option>
-                      <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
-                      <option value="Mohd. Daud Hamid">Mohd. Daud Hamid</option>
-                      <option value="Hasan bin Abdul Majid">Hasan bin Abdul Majid</option>
-                      <option value="Ir Siti Norazela binti Hasan">Ir Siti Norazela binti Hasan</option>
-                      <option value="Nur Syuhada Binti Ahmad">Nur Syuhada Binti Ahmad</option>
+                      <?php foreach($get_keypeople as $users){ ?>
+                        <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                      <?php } ?>
                     </select>
                   </div>
                   <div class="col-sm-3">
@@ -278,10 +254,9 @@
                     <label>Jurutera Daerah</label>
                     <select type="text" class="form-control" id="jurudaerah" name="jurudaerah">
                       <option value="<?php echo $get_detail[0]->lsk_juruterad?>"><?php echo $get_detail[0]->lsk_juruterad?></option>
-                      <option value="Idris B. Yussof">Idris B. Yussof</option>
-                      <option value="Zainuddin bin Yusoff, AMP., BCK">Zainuddin bin Yusoff, AMP., BCK</option>
-                      <option value="Kamarudin Bin Saleh">Kamarudin Bin Saleh</option>
-                      <option value="Nor Rozaini BT. Abdullah">Nor Rozaini BT. Abdullah</option>
+                      <?php foreach($get_keypeople as $users){ ?>
+                        <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                      <?php } ?>
                     </select>
                   </div>
                   <div class="col-sm-3">

@@ -23,7 +23,7 @@
                           <div class="col-sm-6">
                             <label>No Sebutharga :</label>
                             <div class="input-group">
-                              <input type="text" class="form-control" id="nosebuts" onkeyup="autofill()" value=""name="nosebut" placeholder="Nama Kontraktor">
+                              <input type="text" class="form-control" id="nosebuts" onkeyup="autofill()" value=""name="nosebut" readonly>
                               <div class="input-group-append bg-success border-primary">
                                 <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-inverse-* btn-success">select</button>
                               </div>
@@ -62,6 +62,9 @@
                                                   Tarikh
                                                 </th>
                                                 <th>
+                                                  Jenis
+                                                </th>
+                                                <th>
                                                   Tindakan
                                                 </th>
                                               </tr>
@@ -73,7 +76,8 @@
                                                   <td class="py-1"><?php echo $bil ?></td>
                                                   <td class="py-1"><span><?php echo $row->no_sebutharga?><span></td> <!--Show data in list view-->
                                                   <td class="py-1"><span><?php echo $row->no_pemilik?><span></td> <!--Show data in list view-->
-                                                  <td class="py-1"><span><?php echo $row->no_tarikh?><span></td> <!--Show data in list view-->
+                                                  <td class="py-1"><span><?php echo $row->no_pemilik?><span></td> <!--Show data in list view-->
+                                                  <td class="py-1"><span><?php echo $row->no_jenis?><span></td> <!--Show data in list view-->
                                                   <td class="py-1"><button id="buttonselect"  value="<?php echo $row->no_sebutharga?>" class="btn btn-info" data-dismiss="modal">Select</button></td>
                                                   </tr>
 
@@ -113,12 +117,7 @@
                         <div class="form-group row">
                           <div class="col-sm-4">
                             <label>Jenis Sebutharga :</label>
-                            <select type="text" class="form-control" id="jenissebut" name="jenissebut">
-                              <option value=""></option>
-                              <option value="Lantikan Terus">Lantikan Terus</option>
-                              <option value="Sebutharga">Sebutharga</option>
-                              <option value="Undi">Undi</option>
-                            </select>
+                            <input type="text" class="form-control" id="jenissebut" name="jenissebut" readonly>
                             <small id="nsebutharga" class="form-text text-muted">Pilih jenis sebutharga.</small>
                           </div>
                         </div>
@@ -170,14 +169,15 @@
 
                       var currow = $(this).closest('tr');
                       var col1 = currow.find('td:eq(1)').text();
-                      //var col2 = currow.find('td:eq(2)').text();
+                      var jenis = currow.find('td:eq(4)').text();
 
                       var result = col1;
                       //var result2 = col2;
                       $("#nosebuts").val(result);
-                      //$('#alamat').val(result2);
+                      $('#jenissebut').val(jenis);
                     })
                   </script>
+
                 </div>
               </div>
             </div>

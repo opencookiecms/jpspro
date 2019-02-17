@@ -69,7 +69,7 @@
                   <div class="form-group row">
                     <div class="col-sm-6">
                       <label>Tajuk Kerja</label>
-                      <textarea type="text" class="form-control" id="tajukkerja" name="tajukkerja" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
+                      <textarea rows="5" type="text" class="form-control" id="tajukkerja" name="tajukkerja" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                     </div>
                   </div>
                 </div>
@@ -248,9 +248,14 @@
                       <input type="text" class="form-control" id="kosbon" name="kosbon" value="<?php echo $get_detail[0]->mrk_tambahbonlaksana?>" placeholder="RM">
                     </div>
                   </div>
-                  <label class="col-sm-2 col-form-label">Jawatan Penguasa</label>
+                  <label class="col-sm-2 col-form-label">Pegawai Penguasa</label>
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" id="pegawai" name="pegawai" value="<?php echo $get_detail[0]->mrk_pegawaipenguasa?>" placeholder="Pegawai Penguasa">
+                    <select type="text" class="form-control" id="pegawai" name="pegawai"  placeholder="Pegawai Penguasa">
+                      <option value="<?php echo $get_detail[0]->mrk_pegawaipenguasa?>"><?php echo $get_detail[0]->mrk_pegawaipenguasa?></option>
+                    <?php foreach($get_keypeople as $users){ ?>
+                      <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                    <?php } ?>
+                  </select>
                   </div>
                 </div>
               </div>
@@ -272,7 +277,15 @@
                               </div>
                               <label class="col-sm-2 col-form-label">Jawatan</label>
                               <div class="col-sm-3">
-                                <input type="text" class="form-control" id="jawatan" name="jawatan" value="<?php echo $get_detail[0]->mrk_jawatanpp?>" placeholder="Jawatan">
+                              <select type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan">
+                                <option value="<?php echo $get_detail[0]->mrk_jawatanpp?>"><?php echo $get_detail[0]->mrk_jawatanpp?></option>
+                                <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
+                                <option value="Penolong Jurutera Kanan JA36">Penolong Jurutera Kanan JA36</option>
+                                <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
+                                <option value="Jurutera ( Baling )">Jurutera ( Baling )</option>
+                                <option value="Jurutera Daerah">Jurutera Daerah</option>
+                                <option value="Penolong Jurutera JA38">Penolong Jurutera JA38</option>
+                              </select>
                                 <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                                 <input type="hidden" name="indenno" value="<?php echo $get_detail[0]->mrk_noinden?>">
                                 <input type="hidden" name="mrkid" value="<?php echo $get_detail[0]->mrksatu_id?>">

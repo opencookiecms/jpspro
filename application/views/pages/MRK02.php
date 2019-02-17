@@ -106,9 +106,9 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-5">
-                      <label>Tajuk Kerja:</label>x
-                        <textarea type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
+                    <div class="col-sm-6">
+                      <label>Tajuk Kerja:</label>
+                        <textarea rows="5" type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
                     </div>
                   </div>
                 </div>

@@ -42,18 +42,6 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                   <div class="col-md-12">
                     <div class="form-group row">
                       <div class="col-sm-5">
-                        <label class="tl">No Pendaftaran PKK</label>
-                        <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
-                        <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
-                        <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group row">
-                      <div class="col-sm-5">
                         <label class="tl">Nama Kontraktor</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
@@ -147,6 +135,18 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                       </div>
                     </div>
                   </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                      <div class="col-sm-5">
+                        <label class="tl">No Pendaftaran PKK</label>
+                        <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
+                        <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
+                        <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
+                      </div>
+                    </div>
+                  </div>
+                </div>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
@@ -176,9 +176,9 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                           <label>Tajuk Kerja:</label>
-                          <textarea type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
+                          <textarea rows="5" type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
                         </div>
                       </div>
                     </div>

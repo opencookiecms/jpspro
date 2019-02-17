@@ -109,9 +109,10 @@ class MRK extends CI_Controller{
 	public function LSK($value="")
 	{
 		$this->load->database();
+	  $data['get_keypeople']=$this->Setting_model->get_Datasetting();
 		$lass = $this->input->post('hiddensub');
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforLSK($value);
-		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
+		$this->form_validation->set_rules('pegawaiselia', 'No Pendaftaran PKK', 'required');
 
 
 		if($this->form_validation->run() == FALSE)
@@ -207,6 +208,7 @@ class MRK extends CI_Controller{
 
 	public function MRK_PSMK($value="")
 	{
+		$data['get_keypeople']=$this->Setting_model->get_Datasetting();
 		$lass = $this->input->post('hiddenids');
 		$this->load->database();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforPSMK($value);
@@ -316,9 +318,6 @@ class MRK extends CI_Controller{
 	{
 		$this->load->database();
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
-
-
-
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
@@ -332,8 +331,9 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->mrk02update($data ,$this->input->post('mrksatuid'));
-			$KodVod=$this->Mrk_model->getLastKodVodMRK2();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$id = $this->input->post('hiddenid');
+			$this->session->set_userdata('mrk02','Data MRK_02 berjaya dikemaskini');
+			redirect(base_url('mrk/MRK_02/'.$id)); //redirect last id to another step
 		}
 
 	}
@@ -341,7 +341,7 @@ class MRK extends CI_Controller{
 	public function LSK_Update()
 	{
 		$this->load->database();
-		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
+		$this->form_validation->set_rules('pegawaiselia', 'No Pendaftaran PKK', 'required');
 
 		if($this->form_validation->run() == FALSE)
 		{
@@ -354,8 +354,9 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->LSKUpdate($data ,$this->input->post('hiddenid'));
-			$KodVod=$this->Mrk_model->getLastKodVodLSK();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$id = $this->input->post('hiddensub');
+			$this->session->set_userdata('lsk','Data Laporan Siap Kerja berjaya dikemaskini');
+			redirect(base_url('mrk/LSK/'.$id)); //redirect last id to another step
 
 		}
 

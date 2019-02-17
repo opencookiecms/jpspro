@@ -131,8 +131,8 @@
               <div class="col-md-12">
                 <div class="form-group row">
                   <label class="col-sm-1 col-form-label">Tajuk Kerja</label>
-                  <div class="col-sm-3">
-                  <textarea type="text" class="form-control"  placeholder="Alamat Pemborong" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
+                  <div class="col-sm-6">
+                  <textarea rows="5" type="text" class="form-control"  placeholder="Alamat Pemborong" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                   </div>
                 </div>
               </div>

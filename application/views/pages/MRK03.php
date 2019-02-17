@@ -77,9 +77,9 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                       <label>Tajuk Kerja:</label>
-                        <textarea type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
+                        <textarea rows="5" type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
                     </div>
                   </div>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Harga Pesanan RM:</label>
+                      <label>Kos Projek RM:</label>
                       <div class="input-group">
                         <div class="input-group-prepend bg-success border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
@@ -128,12 +128,12 @@
                       </div>
                     </div>
                     <div class="col-sm-3">
-                      <label>Harga Pesanan RM:</label>
+                      <label>Kos Sebenar RM:</label>
                       <div class="input-group">
                         <div class="input-group-prepend bg-success border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
                         </div>
-                        <input type="text" class="form-control" id="kossebenar" name="kossebenar" value="" placeholder="RM" readonly>
+                        <input type="text" class="form-control" id="kossebenar" name="kossebenar" value="<?php echo number_format($get_detail[0]->lks_hargasebenar,2) ?>" placeholder="RM" readonly>
                       </div>
                     </div>
                   </div>
@@ -297,7 +297,16 @@
                       <p></p>
                       <p></p>
                       <label>Pegawai</label>
-                      <input type="text" class="form-control" id="pegawai" name="pegawai" placeholder="Pegawai" value="<?php echo $get_detail[0]->tiga_pegawai?>">
+                      <input type="text" class="form-control" id="pegawai" name="pegawai" placeholder="Pegawai" value="<?php
+                      $pegawai=$get_detail[0]->tiga_pegawai;
+                      if($pegawai)
+                      {
+                        echo $pegawai;
+                      }
+                      else {
+                        echo $this->session->userdata("name");
+                      }
+                      ?>">
                       <input type="hidden"  name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>" >
                       <input type="hidden"  name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>">
                       <input type="hidden" name="hiddenid"  value="<?php echo $get_detail[0]->mrksatuid?>">
@@ -308,7 +317,16 @@
                       <p></p>
                       <p></p>
                       <label>Jawatan</label>
-                      <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan" value="<?php echo $get_detail[0]->tiga_jawatan?>">
+                      <input type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan" value="<?php
+                      $jawatan=$get_detail[0]->tiga_jawatan;
+                      if($jawatan)
+                      {
+                        echo $jawatan;
+                      }
+                      else {
+                        echo $this->session->userdata("jawatan");
+                      }
+                      ?>">
                     </div>
                   </div>
                 </div>

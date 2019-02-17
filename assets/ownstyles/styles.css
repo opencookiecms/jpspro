@@ -23,8 +23,14 @@ background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, F
 
 .loginbg
 {
-background: #5f2c82;  
+background: #5f2c82;
 background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
 background: linear-gradient(to right, #49a09d, #5f2c82);
 
+}
+
+td.tofar
+{
+  width:50px;
+  word-wrap: break-word;
 }

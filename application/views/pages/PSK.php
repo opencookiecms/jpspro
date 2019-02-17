@@ -47,7 +47,7 @@
                   <div class="form-group row">
                     <div class="col-sm-4">
                       <label>Alamat</label>
-                      <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
+                      <textarea rows="3" type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                     </div>
                   </div>
                 </div>
@@ -69,9 +69,9 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                       <label>Butiran Kerja:</label>
-                    <textarea type="text" readonly class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
+                    <textarea rows="5" type="text" readonly class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
                     </div>
                   </div>
                 </div>
