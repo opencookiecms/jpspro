@@ -21,12 +21,7 @@
                 <div class="form-group row">
                   <div class="col-sm-6">
                     <label>Nama</label>
-                    <select type="text" class="form-control" id="nama" name="nama">
-                      <option value=""></option>
-                      <?php foreach($get_user as $users){ ?>
-                        <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
-                      <?php } ?>
-                    </select>
+                    <input type="text" class="form-control" id="nama" name="nama">
                   </div>
                 </div>
               </div>
