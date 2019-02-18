@@ -251,12 +251,12 @@
                   <div class="col-sm-3 tl">
                     <p></p>
                     <label>Desediakan Oleh</label>
-                    <input type="text" class="form-control" value="<?php echo $this->session->userdata("name")?>" id="sedia" name="sedia">
+                    <input type="text" class="form-control ts" style="font-weight:bold;" value="<?php echo $this->session->userdata("name")?>" id="sedia" name="sedia">
                   </div>
                   <div class="col-sm-3 tl">
                     <p></p>
                     <label>Tarikh</label>
-                    <input type="date" class="form-control" id="tarikhsedia" name="tarikhsedia" value="<?php echo $get_detail[0]->ss_date?>">
+                    <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhsedia" name="tarikhsedia" value="<?php echo $get_detail[0]->ss_date?>">
 
                                 <input type="hidden" readonly name="hiddenid"  value="<?php echo $get_detail[0]->mrksatuid?>">
                                 <input type="hidden" readonly name="hiddenids"  value="<?php echo $get_detail[0]->projek_id?>">
@@ -274,19 +274,19 @@
                   <div class="col-sm-2">
                     <p>
                     <p>
-                    <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
+                    <button type="submit" name="submit" data-toggle="tooltip" data-placement="bottom" title="Simpan Maklumat Senarai Semakan"  class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
                   </div>
                   <div class="col-sm-6">
                     <p>
                     <p>
-                      <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button">Print</a>
-                      <a href="<?php echo site_url('mrk/PSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button">Perakuan Siap Kerja</a>
-                      <a href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button">PSMK</a>
+                      <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Muat Turun Fail / Cetak"  role="button">Print</a>
+                      <a href="<?php echo site_url('mrk/PSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Kerja"  role="button">Perakuan Siap Kerja</a>
+                      <a href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->projek_id) ?>" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Membaiki Kecatatan"  class="btn btn-info mr-2 btn-rounded" role="button">PSMK</a>
                   </div>
                   <div class="col-sm-4">
                   <p>
                   <p>
-                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
+                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Kembali ke Senarai Maklumat" role="button">Tutup</a>
                   </div>
                 </div>
               </div>

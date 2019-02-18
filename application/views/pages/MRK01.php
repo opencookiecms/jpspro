@@ -98,7 +98,7 @@
                                               <td class="py-1"><span><?php echo $row->sijilSPKKNo?><span></td> <!--Show data in list view-->
                                               <td class="py-1"><span><?php echo $row->konDaerah?><span></td> <!--Show data in list view-->
                                               <td class="py-1"><span><?php echo $row->konNegeri?><span></td> <!--Show data in list view-->
-                                              <td class="py-1"><button id="buttonselect"  value="<?php echo $row->konName?>" class="btn btn-info" data-dismiss="modal">Select</button></td>
+                                              <td class="py-1"><button id="buttonselect"  value="<?php echo $row->konName?>"  class="btn btn-info" data-dismiss="modal">Select</button></td>
                                               </tr>
 
                                             <?php endforeach; ?>
@@ -326,18 +326,18 @@
                         <div class="col-sm-3">
                           <p>
                             <p>
-                              <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
+                              <button type="submit" name="submit" data-toggle="tooltip" data-placement="bottom" title="Simpan Maklumat MRK01" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
                             </div>
                             <div class="col-sm-4">
                               <p>
                                 <p>
-                                  <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded " role="button">Print</a>
-                                  <a href="<?php echo site_url('mrk/MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded " role="button">MRK02</a>
+                                  <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak" class="btn btn-success mr-2 btn-rounded " role="button">Print</a>
+                                  <a href="<?php echo site_url('mrk/MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded " data-toggle="tooltip" data-placement="bottom" title="Maklumat Rekod Kerja 02"role="button">MRK02</a>
                                 </div>
                                 <div class="col-sm-4">
                                   <p>
                                     <p>
-                                      <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
+                                      <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Kembali Ke Senarai Maklumat" role="button">Close</a>
                                     </div>
                                   </div>
                                 </div>

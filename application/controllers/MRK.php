@@ -309,6 +309,7 @@ class MRK extends CI_Controller{
 			$this->Mrk_model->mrk01update($data ,$this->input->post('nokon'));//load from model and call last id
 			//$KodVod=$this->Mrk_model->getLastKodVod();
 			$id = $this->input->post('hiddenid');
+			$this->session->set_userdata('mrk01','Data MRK_01 berjaya dikemaskini');
 			redirect(base_url('mrk/MRK_01/'.$id)); //redirect last id to another step
 		}
 
@@ -403,8 +404,10 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->PSKUpdate($data ,$this->input->post('hiddenid'));
-			$KodVod=$this->Mrk_model->getLastKodVodPSK();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+
+			$id = $this->input->post('hiddenids');
+			$this->session->set_userdata('psk','Data Perakuan Siap Kerja berjaya dikemaskini');
+			redirect(base_url('mrk/PSK/'.$id)); //redirect last id to another step
 
 		}
 	}
@@ -426,8 +429,9 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->PSMKUpdate($data, $this->input->post('mrkid'));
-			$KodVod=$this->Mrk_model->getLastKodVodPSMK();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$id = $this->input->post('hiddenids');
+			$this->session->set_userdata('psmk','Data Perakuan Siap Membaiki Kecatatan berjaya dikemaskini');
+			redirect(base_url('mrk/MRK_PSMK/'.$id)); //redirect last id to another step
 		}
 
 	}
@@ -448,8 +452,9 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->JBupdate($data, $this->input->post('hiddenid'));
-			$KodVod=$this->Mrk_model->getLastKodVodJB();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$id = $this->input->post('hiddenids');
+			$this->session->set_userdata('pjb','Data Surat Pelepas Jaminan Bank dikemaskini');
+			redirect(base_url('mrk/Jaminan_Bank/'.$id)); //redirect last id to another step
 		}
 	}
 
@@ -469,8 +474,9 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->PPWJPupdate($data, $this->input->post('hiddenid'));
-			$KodVod=$this->Mrk_model->getLastKodVodPPWJP();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$id = $this->input->post('hiddenids');
+			$this->session->set_userdata('ppwjp','Data Perakuan Pemulangan WJP dikemaskini');
+			redirect(base_url('mrk/PP_WJP/'.$id)); //redirect last id to another step
 		}
 
 
@@ -491,8 +497,9 @@ class MRK extends CI_Controller{
 		}
 		else {
 			$this->Mrk_model->SSupdate($data, $this->input->post('hiddenid'));
-			$KodVod=$this->Mrk_model->getLastKodVodSS();
-			redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+			$id = $this->input->post('hiddenids');
+			$this->session->set_userdata('ss','Data Senarai Semak berjaya dikemaskini');
+			redirect(base_url('mrk/Senarai_Semak/'.$id)); //redirect last id to another step
 		}
 
 

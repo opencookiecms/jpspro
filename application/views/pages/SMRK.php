@@ -128,7 +128,7 @@
                   <div class="col-sm-2">
                     <p>
                     <p>
-                    <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
+                    <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded " data-toggle="tooltip" data-placement="bottom" title="Siap">Simpan</button>
                   </div>
                   <div class="col-md-2">
                     <p>
@@ -146,13 +146,13 @@
                   <div class="col-sm-6">
                     <p>
                     <p>
-                      <a href="<?php echo site_url('mrk/PP_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button">P.Pemulangan WJP</a>
-                      <a href="<?php echo site_url('surat/Surat_Khas/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button">Surat Kebenaran Khas</a>
+                      <a href="<?php echo site_url('mrk/PP_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Perakuan Pemulangan WJP">P.Pemulangan WJP</a>
+                      <a href="<?php echo site_url('surat/Surat_Khas/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Surat Kebenaran Khas">Surat Kebenaran Khas</a>
                   </div>
                   <div class="col-sm-1">
                   <p>
                   <p>
-                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
+                  <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Kembali ke Senarai Maklumat">Close</a>
                   </div>
                 </div>
               </div>

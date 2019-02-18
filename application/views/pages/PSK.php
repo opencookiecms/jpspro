@@ -124,14 +124,13 @@
                     <div class="col-sm-2">
                       <p>
                       <p>
-                      <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
+                      <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded " data-toggle="tooltip" data-placement="bottom" title="Simpan Perakuan Siap Kerja">Simpan</button>
                     </div>
                     <div class="col-md-2">
                       <p>
                       <p>
                     <div class="dropdown">
-                      <button class="btn btn-success mr-2 btn-rounded dropdown-toggle" type="button" data-toggle="dropdown">Print
-                        <span class="caret"></span></button>
+                      <button class="btn btn-success mr-2 btn-rounded dropdown-toggle" type="button" data-toggle="dropdown" >Print<span class="caret"></span></button>
                         <ul class="dropdown-menu">
                           <li><a href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>">PSK 01</a></li>
                           <li><a href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>">PSK 02</a></li>
@@ -143,14 +142,14 @@
                       <p>
                       <p>
 
-                        <a href="<?php echo site_url('mrk/MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button">MRK03</a>
+                        <a href="<?php echo site_url('mrk/MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Maklumat Rekod Kerja 03">MRK03</a>
 
-                        <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button">Senarai Semakan</a>
+                        <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Senarai Semakan">Senarai Semakan</a>
                     </div>
                     <div class="col-sm-4">
                     <p>
                     <p>
-                      <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button">Close</a>
+                      <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Kembali ke Senarai Maklumat">Close</a>
 
 
                     </div>

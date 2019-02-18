@@ -122,8 +122,9 @@ class Surat extends CI_Controller
     else
     {
       $this->Surat_model->SuratMRKUpdate($data ,$this->input->post('hiddenid'));
-      $KodVod=$this->Surat_model->getLastKodVodSMRK();
-      redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+      $id = $this->input->post('hiddenids');
+			$this->session->set_userdata('smrk','Data Surat Maklumat Rekod Kerja berjaya dikemaskini');
+			redirect(base_url('mrk/Surat_MRK/'.$id)); //redirect last id to another step
     }
 
   }
@@ -147,8 +148,9 @@ class Surat extends CI_Controller
     else
     {
       $this->Surat_model->SuratKhasUpdate($data ,$this->input->post('hiddenid'));
-      $KodVod=$this->Surat_model->getLastKodVodSKHAS();
-      redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+      $id = $this->input->post('hiddenids');
+			$this->session->set_userdata('skk','Data Surat Khas dikemaskini');
+			redirect(base_url('mrk/Surat_Khas/'.$id)); //redirect last id to another step
     }
 
   }
@@ -171,8 +173,9 @@ class Surat extends CI_Controller
     else
     {
       $this->Surat_model->SuratWJPUpdate($data ,$this->input->post('hiddenid'));
-      $KodVod=$this->Surat_model->getLastKodVodSWJP();
-      redirect(base_url('projek/view_data/'.$KodVod)); //redirect last id to another step
+      $id = $this->input->post('hiddenids');
+			$this->session->set_userdata('swjp','Data Surat Wang Jaminan Perlaksanaan dikemaskini');
+			redirect(base_url('mrk/Surat_WJP/'.$id)); //redirect last id to another step
     }
 
   }
