@@ -1,11 +1,11 @@
 <div class="main-panel">
-<div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+  <div class="content-wrapper cnt" style="background: #757F9A;background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);background: linear-gradient(to right, #D7DDE8, #757F9A);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">  <h2 class="f">Perakuan Siap Membaiki Kecacatan</h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
+          <div class="card-body" style="background-color:#4b6584; border-radius:10px;">
+            <h4 class="card-title">  <h2 class="f ts">Perakuan Siap Membaiki Kecacatan</h2>
+            <p class="card-description"><h5><span class="error" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['psmk'])) { ?>
               <div class="alert alert-success"><?php echo $_SESSION['psmk'] ?></div>
             <?php
@@ -28,72 +28,72 @@
                 }
           ?>
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Kategori Pendaftaran</h4>
+          <div class="card-body" style="background-color:#4b6584; border-radius:10px;">
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Kategori Pendaftaran</h4>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 tl">
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label>Nama Pemborong</label>
-                      <input type="text" class="form-control" id="namapem" name="namapem" value="<?php echo $get_detail[0]->mrk_namakon?>" readonly>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="namapem" name="namapem" value="<?php echo $get_detail[0]->mrk_namakon?>" readonly>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 tl">
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label>Alamat Pemborong</label>
-                      <textarea type="text" class="form-control" id="alamat" name="alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
+                      <textarea type="text" class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 tl">
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label>No Rujukan</label>
-                        <input type="text" class="form-control" id="norujuk" name="norujuk"value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
+                        <input type="text" class="form-control ts" style="font-weight:bold;" id="norujuk" name="norujuk"value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 tl">
                       <label>No Kontrak / No Sebutharga</label>
-                     <input type="text" class="form-control" id="nokontrak" name="nokontrak" value="<?php echo $get_detail[0]->df_kodvot?>"readonly>
+                     <input type="text" class="form-control ts" style="font-weight:bold;"id="nokontrak" name="nokontrak" value="<?php echo $get_detail[0]->df_kodvot?>"readonly>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 tl">
                   <div class="form-group row">
                     <div class="col-sm-6">
                       <label>Tajuk Kerja</label>
-                      <textarea rows="5" type="text" class="form-control" id="tajukkerja" name="tajukkerja" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
+                      <textarea rows="5" type="text" class="form-control ts" style="font-weight:bold;" id="tajukkerja" name="tajukkerja" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 tl">
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label>Tarikh Mula Tanggungan Kecacatan</label>
-                      <input type="date" class="form-control" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>" readonly>
+                      <input type="date" class="form-control ts" style="font-weight:bold;" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>" readonly>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 tl">
                       <label>Tarikh Tamat Tanggungan Kecacatan</label>
-                        <input type="date" class="form-control" id="cacattamat" name="cacattamat" value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>" readonly>
+                        <input type="date" class="form-control ts" style="font-weight:bold;" id="cacattamat" name="cacattamat" value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>" readonly>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 tl">
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label>Gred</label>
-                      <select type="text" class="form-control" id="gred" name="gred" placeholder="gred" readonly>
+                      <select type="text" class="form-control ts" style="font-weight:bold;" id="gred" name="gred" placeholder="gred" readonly>
                         <option value="<?php echo $get_detail[0]->mrk_gred?>"><?php echo $get_detail[0]->mrk_gred?></option>
                         <!-- <option value="G1 | Sehingga RM200,000.00">G1 | Sehingga RM200,000.00</option>
                         <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2 | RM200,001.00 Hingga RM500,000.00</option>
@@ -104,18 +104,18 @@
                         <option value="G7 | RM 10 000,001.00 Ke Atas">G7 | RM 10 000,001.00 Ke Atas</option> -->
                       </select>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 tl">
                       <label>Kategori</label>
-                      <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat" readonly>
+                      <select type="text" class="form-control ts" style="font-weight:bold;" id="kategori" name="kategori" placeholder="kat" readonly>
                         <option value="<?php echo $get_detail[0]->mrk_kategori?>"><?php echo $get_detail[0]->mrk_kategori?></option>
                         <!-- <option value="CE | Pembinaan Kejuruteraan Awam">CE | Pembinaan Kejuruteraan Awam</option>
                         <option value="B | Pembinaan Bangunan">B | Pembinaan Bangunan</option>
                         <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option> -->
                       </select>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 tl">
                       <label>Pengkhususan</label>
-                      <select type="text" class="form-control" id="khusus" name="khusus" placeholder="kat" readonly>
+                      <select type="text" class="form-control ts" style="font-weight:bold;" id="khusus" name="khusus" placeholder="kat" readonly>
                         <option value="<?php echo $get_detail[0]->mrk_khusus?>"><?php echo $get_detail[0]->mrk_khusus?></option>
                         <!-- <option value="CE 02 | Pembinaan Jambatan & Jeti">CE 02 | Pembinaan Jambatan & Jeti</option>
                         <option value="CE 04 | Empangan">CE 04 | Empangan</option>
@@ -158,23 +158,23 @@
 
       <div class="col-12 grid-margin">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Kewangan & Jaminan Insurans</h4>
+          <div class="card-body" style="background-color:#4b6584; border-radius:10px;">
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Kewangan & Jaminan Insurans</h4>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-1 col-form-label">(a) # :</label>
                   <label class="col-sm-3 col-form-label">** No Kewangan Jaminan Bank/Insuran</label>
                   <div class="col-sm-3">
-                   <input type="text" class="form-control" id="nokewangan" name="nokewangan" value="<?php echo $get_detail[0]->mrk_nowangjaminansatu?>" placeholder="No Kewangan Jaminan Bank/Insuran">
+                   <input type="text" class="form-control ts" style="font-weight:bold;" id="nokewangan" name="nokewangan" value="<?php echo $get_detail[0]->mrk_nowangjaminansatu?>" placeholder="No Kewangan Jaminan Bank/Insuran">
                   </div>
                   <label class="col-sm-1 col-form-label">Harga</label>
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 tl">
                     <div class="input-group">
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="harga" name="harga" value="<?php echo number_format($get_detail[0]->mrk_hargasatu,2)?>" placeholder="RM">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="harga" name="harga" value="<?php echo number_format($get_detail[0]->mrk_hargasatu,2)?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -182,7 +182,7 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-1 col-form-label"></label>
                   <label class="col-sm-3 col-form-label">(ii) ** Baki Wang Jaminan Perlaksanaan</label>
@@ -191,7 +191,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="bakiwangjaminan" name="bakiwangjaminan" value="<?php echo number_format($get_detail[0]->mrk_bakiwangjamin,2) ?>" placeholder="RM">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="bakiwangjaminan" name="bakiwangjaminan" value="<?php echo number_format($get_detail[0]->mrk_bakiwangjamin,2) ?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -199,12 +199,12 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-1 col-form-label">(b) # :</label>
                   <label class="col-sm-3 col-form-label">(i) ** No Kewangan Jaminan Bank/Insuran</label>
                   <div class="col-sm-3">
-                  <input type="text" class="form-control" id="nokewangan" name="nokewangan" value="<?php echo $get_detail[0]->mrk_nowangjaminandua?>" placeholder="No Kewangan Jaminan Bank/Insuran">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="nokewangan" name="nokewangan" value="<?php echo $get_detail[0]->mrk_nowangjaminandua?>" placeholder="No Kewangan Jaminan Bank/Insuran">
                   </div>
                   <label class="col-sm-1 col-form-label">Harga</label>
                   <div class="col-sm-3">
@@ -212,7 +212,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="harga1" name="harga1" placeholder="RM" value="<?php echo number_format($get_detail[0]->mrk_hargadua,2)?>">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="harga1" name="harga1" placeholder="RM" value="<?php echo number_format($get_detail[0]->mrk_hargadua,2)?>">
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-1 col-form-label"></label>
                   <label class="col-sm-3 col-form-label">** Wang Jaminan Perlaksanaan</label>
@@ -229,7 +229,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="wangjaminan" name="wangjaminan" value="<?php echo number_format($get_detail[0]->mrk_wangjaminlaksana,2)?>" placeholder="RM">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="wangjaminan" name="wangjaminan" value="<?php echo number_format($get_detail[0]->mrk_wangjaminlaksana,2)?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -237,7 +237,7 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-1 col-form-label"></label>
                   <label class="col-sm-3 col-form-label">(ii) ** Tambahan Kos Bon Perlaksanaan</label>
@@ -246,12 +246,12 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="kosbon" name="kosbon" value="<?php echo number_format($get_detail[0]->mrk_tambahbonlaksana,2)?>" placeholder="RM">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="kosbon" name="kosbon" value="<?php echo number_format($get_detail[0]->mrk_tambahbonlaksana,2)?>" placeholder="RM">
                     </div>
                   </div>
                   <label class="col-sm-2 col-form-label">Pegawai Penguasa</label>
                   <div class="col-sm-3">
-                    <select type="text" class="form-control" id="pegawai" name="pegawai"  placeholder="Pegawai Penguasa">
+                    <select type="text" class="form-control ts" style="font-weight:bold;" id="pegawai" name="pegawai"  placeholder="Pegawai Penguasa">
                       <option value="<?php echo $get_detail[0]->mrk_pegawaipenguasa?>"><?php echo $get_detail[0]->mrk_pegawaipenguasa?></option>
                     <?php foreach($get_keypeople as $users){ ?>
                       <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
@@ -264,7 +264,7 @@
 
 
                         <div class="row">
-                          <div class="col-md-12">
+                          <div class="col-md-12 tl">
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label"></label>
                               <label class="col-sm-3 col-form-label">** Baki Kos Bon Perlaksanaan</label>
@@ -273,12 +273,12 @@
                                   <div class="input-group-prepend bg-success border-primary">
                                     <span class="input-group-text bg-transparent text-white">RM</span>
                                   </div>
-                                  <input type="text" class="form-control" id="bakibon" name="bakibon" placeholder="RM" value="<?php echo number_format($get_detail[0]->mrk_bakibonlaksana,2)?>">
+                                  <input type="text" class="form-control ts" style="font-weight:bold;" id="bakibon" name="bakibon" placeholder="RM" value="<?php echo number_format($get_detail[0]->mrk_bakibonlaksana,2)?>">
                                 </div>
                               </div>
                               <label class="col-sm-2 col-form-label">Jawatan</label>
                               <div class="col-sm-3">
-                              <select type="text" class="form-control" id="jawatan" name="jawatan" placeholder="Jawatan">
+                              <select type="text" class="form-control ts" style="font-weight:bold;" id="jawatan" name="jawatan" placeholder="Jawatan">
                                 <option value="<?php echo $get_detail[0]->mrk_jawatanpp?>"><?php echo $get_detail[0]->mrk_jawatanpp?></option>
                                 <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                                 <option value="Penolong Jurutera Kanan JA36">Penolong Jurutera Kanan JA36</option>

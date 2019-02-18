@@ -1,11 +1,11 @@
 <div class="main-panel">
-<div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+  <div class="content-wrapper cnt" style="background: #757F9A;background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);background: linear-gradient(to right, #D7DDE8, #757F9A);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">  <h2 class="f">Senarai Semakan</h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
+          <div class="card-body" style="background-color:#2c2c54;border-radius:10px;">
+            <h4 class="card-title">  <h2 class="f ts">Senarai Semakan</h2>
+            <p class="card-description"><h5><span class="error ts" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['ss'])) { ?>
               <div class="alert alert-success"><?php echo $_SESSION['ss'] ?></div>
             <?php
@@ -28,21 +28,21 @@
               }
         ?>
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Senarai Semakan</h4>
+          <div class="card-body" style="background-color:#2c2c54;border-radius:10px;">
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Senarai Semakan</h4>
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb1; if($check==1){$ch1='checked';}else{$ch1='null';}?>
-                      <input type="checkbox" class="form-check-input" name="chk1" value="1" <?php echo $ch1?> >Surat Tuntutan
+                      <input type="checkbox" class="form-check-input" style="color:white;" name="chk1" value="1" <?php echo $ch1?>>Surat Tuntutan
                     </label>
                   </div>
 
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -52,7 +52,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
@@ -65,7 +65,7 @@
             </div>
 
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -76,7 +76,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -86,7 +86,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
@@ -99,7 +99,7 @@
             </div>
 
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -110,7 +110,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -120,7 +120,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
@@ -134,7 +134,7 @@
 
 
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -145,7 +145,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -155,7 +155,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
@@ -169,7 +169,7 @@
 
 
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -180,7 +180,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -193,9 +193,9 @@
             </div>
             <p></p>
             <p></p>
-            <h4 class="card-title">Bon Perlaksaanan</h4>
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Bon Perlaksaanan</h4>
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -206,7 +206,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -220,9 +220,9 @@
 
             <p></p>
             <p></p>
-            <h4 class="card-title">Polisi Insurans</h4>
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Polisi Insurans</h4>
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-3 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -233,7 +233,7 @@
 
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 tl">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -246,14 +246,14 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 tl">
                     <p></p>
                     <label>Desediakan Oleh</label>
                     <input type="text" class="form-control" value="<?php echo $this->session->userdata("name")?>" id="sedia" name="sedia">
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 tl">
                     <p></p>
                     <label>Tarikh</label>
                     <input type="date" class="form-control" id="tarikhsedia" name="tarikhsedia" value="<?php echo $get_detail[0]->ss_date?>">

@@ -1,11 +1,11 @@
 <div class="main-panel">
-  <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+  <div class="content-wrapper cnt" style="background: #757F9A;background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);background: linear-gradient(to right, #D7DDE8, #757F9A);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">  <h2 class="f">Perakuan Pemulangan Wang Jaminan Perlaksanaan</h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
+          <div class="card-body" style="background-color:#82589F; border-radius:10px;">
+            <h4 class="card-title">  <h2 class="f ts">Perakuan Pemulangan Wang Jaminan Perlaksanaan</h2>
+            <p class="card-description"><h5><span class="error" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['ppwjp'])) { ?>
               <div class="alert alert-success"><?php echo $_SESSION['ppwjp'] ?></div>
             <?php
@@ -28,42 +28,42 @@
                      }
                ?>
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Surat Pelepasan Jaminan Bank</h4>
+        <div class="card-body" style="background-color:#82589F; border-radius:10px;">
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Surat Pelepasan Jaminan Bank</h4>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
-                  <label class="col-sm-1 col-form-label">Rujukan Tuan</label>
+                  <label class="col-sm-2 col-form-label">Rujukan Tuan</label>
                   <div class="col-sm-3">
-                  <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->ppwjp_rt?>">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->ppwjp_rt?>">
                   </div>
                   <label class="col-sm-2 col-form-label">Nama Pemborong</label>
                   <div class="col-sm-3">
-                  <input type="text" class="form-control" id="namaborong" name="namaborong" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="namaborong" name="namaborong" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
-                  <label class="col-sm-1 col-form-label">Rujukan Kami</label>
+                  <label class="col-sm-2 col-form-label">Rujukan Kami</label>
                   <div class="col-sm-3">
-                  <input type="text" class="form-control" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami" value="<?php echo $get_detail[0]->ppwjp_rk?>">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami" value="<?php echo $get_detail[0]->ppwjp_rk?>">
                   </div>
                   <label class="col-sm-2 col-form-label">No Kontrak \ No Sebutharga</label>
                   <div class="col-sm-3">
-                  <input type="text" class="form-control" id="nokon" name="nokon" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="nokon" name="nokon" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
-                  <label class="col-sm-1 col-form-label">Kepada</label>
+                  <label class="col-sm-2 col-form-label">Kepada</label>
                   <div class="col-sm-3">
-                  <input type="text" class="form-control" id="kepada" name="kepada" placeholder="Kepada" value="<?php echo $get_detail[0]->ppwjp_kepada?>">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="kepada" name="kepada" placeholder="Kepada" value="<?php echo $get_detail[0]->ppwjp_kepada?>">
                   </div>
                   <label class="col-sm-2 col-form-label">Kos WJP</label>
                   <div class="col-sm-3">
@@ -71,7 +71,7 @@
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control" id="koswjp" name="koswjp" placeholder="Kos WJP" value="<?php echo number_format($get_detail[0]->ppwjp_kos,2) ?>">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="koswjp" name="koswjp" placeholder="Kos WJP" value="<?php echo number_format($get_detail[0]->ppwjp_kos,2) ?>">
                       <input type="hidden" name="indenno" value="<?php echo $get_detail[0]->mrk_noinden?>">
                       <input type="hidden" name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>">
                       <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
@@ -83,21 +83,21 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
-                  <label class="col-sm-1 col-form-label">Alamat</label>
+                  <label class="col-sm-2 col-form-label">Alamat</label>
                   <div class="col-sm-3">
-                  <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->ppwjp_alamat?></textarea>
+                  <textarea type="text" class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->ppwjp_alamat?></textarea>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                   <div class="form-group row">
-                    <label class="col-sm-1 col-form-label">Pegawai Penguasa</label>
+                    <label class="col-sm-2 col-form-label">Pegawai Penguasa</label>
                       <div class="col-sm-3">
-                        <select type="text" class="form-control" id="pegawaikuasa" name="pegawaikuasa">
+                        <select type="text" class="form-control ts" style="font-weight:bold;" id="pegawaikuasa" name="pegawaikuasa">
                           <option value="Idris Bin Yussof">Idris Bin Yussof</option>
                           <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
                           <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
@@ -112,9 +112,9 @@
                           <option value="Nor Rozaini Bt. Abdullah">Nor Rozaini Bt. Abdullah</option>
                         </select>
                       </div>
-                      <label class="col-sm-1 col-form-label">Jawatan</label>
+                      <label class="col-sm-2 col-form-label">Jawatan</label>
                         <div class="col-sm-3">
-                          <select type="text" class="form-control" id="jawatan" name="jawatan">
+                          <select type="text" class="form-control ts" style="font-weight:bold;" id="jawatan" name="jawatan">
                             <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                             <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
                             <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
@@ -128,18 +128,18 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
-                  <label class="col-sm-1 col-form-label">Tajuk Kerja</label>
+                  <label class="col-sm-2 col-form-label">Tajuk Kerja</label>
                   <div class="col-sm-6">
-                  <textarea rows="5" type="text" class="form-control"  placeholder="Alamat Pemborong" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
+                  <textarea rows="5" type="text" class="form-control ts" style="font-weight:bold;" placeholder="Alamat Pemborong" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <div class="col-sm-2">
                     <p>

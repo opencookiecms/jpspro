@@ -10,8 +10,16 @@
   border-radius: 10px;
 }
 
+.f{
+  color:white;
+}
+
+.k{
+  color:#ffda79;
+}
+
 .bgs{
-  background: #DAE2F8;  /* fallback for old browsers */
+background: #DAE2F8;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -19,8 +27,17 @@ background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, F
 
 .tl{
   color: white;
-  font-weight: bold;
+  font-weight:bold;
   font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
+.ts{
+
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
 }
 
 .loginbg

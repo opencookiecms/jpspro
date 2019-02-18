@@ -1,11 +1,11 @@
 <div class="main-panel">
-  <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+  <div class="content-wrapper cnt" style="background: #757F9A;background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);background: linear-gradient(to right, #D7DDE8, #757F9A);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">  <h2 class="f">Perakuan Siap Kerja</h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
+          <div class="card-body ts" style="background-color:#786fa6;border-radius:10px;">
+            <h4 class="card-title">  <h2 class="f ts">Perakuan Siap Kerja</h2>
+            <p class="card-description"><h5><span class="error ts" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['psk'])) { ?>
               <div class="alert alert-success"><?php echo $_SESSION['psk'] ?></div>
             <?php
@@ -28,16 +28,16 @@
               }
         ?>
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Maklumat Dokument -PSK</h4>
+          <div class="card-body ts" style="background-color:#786fa6;border-radius:10px;">
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Maklumat Dokument -PSK</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-5">
-                      <label>Nama Pemborong</label>
+                      <label class="tl">Nama Pemborong</label>
                       <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
                       <input type="hidden" name="hiddenids" value="<?php echo $get_detail[0]->projek_id?>">
-                      <input type="text" class="form-control" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong" readonly>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong" readonly>
                     </div>
                   </div>
                 </div>
@@ -46,8 +46,8 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-4">
-                      <label>Alamat</label>
-                      <textarea rows="3" type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
+                      <label class="tl">Alamat</label>
+                      <textarea rows="3" type="text" class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" placeholder="Alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                     </div>
                   </div>
                 </div>
@@ -56,12 +56,12 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-4">
-                      <label>Fail Rujukan</label>
-                      <input type="text" class="form-control" id="failrujuk" name="failrujuk" placeholder="Fail Rujukan" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                      <label class="tl">Fail Rujukan</label>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="failrujuk" name="failrujuk" placeholder="Fail Rujukan" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                     </div>
                     <div class="col-sm-4">
-                      <label>No Sebutharga</label>
-                      <input type="text" class="form-control" id="nosebut" name="nosebut" placeholder="No Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
+                      <label class="tl">No Sebutharga</label>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="nosebut" name="nosebut" placeholder="No Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                     </div>
                   </div>
                 </div>
@@ -70,8 +70,8 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-6">
-                      <label>Butiran Kerja:</label>
-                    <textarea rows="5" type="text" readonly class="form-control" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
+                      <label class="tl">Butiran Kerja:</label>
+                    <textarea rows="5" type="text" readonly class="form-control ts" style="font-weight:bold;" id="butirkerja" name="butirkerja" placeholder="Butiran Kerja"><?php echo $get_detail[0]->mrk_tajukkerja?></textarea>
                     </div>
                   </div>
                 </div>
@@ -80,8 +80,8 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Inden No</label>
-                      <input type="text" class="form-control" name="indenno" placeholder="Inden No" value="<?php echo $get_detail[0]->mrk_noinden?>" readonly>
+                      <label class="tl">Inden No</label>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" name="indenno" placeholder="Inden No" value="<?php echo $get_detail[0]->mrk_noinden?>" readonly>
                       <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                     </div>
                   </div>
@@ -92,12 +92,12 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Tarikh Siap Sebenar:</label>
-                      <input type="date" class="form-control" id="tarikhsiapsebenar" name="tarikhsiapsebenar" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
+                      <label class="tl">Tarikh Siap Sebenar:</label>
+                      <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhsiapsebenar" name="tarikhsiapsebenar" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
                     </div>
                     <div class="col-sm-3">
-                      <label>Tarikh Ambil Milik:</label>
-                      <input type="date" class="form-control" id="tarikhambikmilik" name="tarikhambikmilik" value="<?php echo $get_detail[0]->mrk_tarikhambikmilik?>">
+                      <label class="tl">Tarikh Ambil Milik:</label>
+                      <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhambikmilik" name="tarikhambikmilik" value="<?php echo $get_detail[0]->mrk_tarikhambikmilik?>">
                     </div>
                   </div>
                 </div>
@@ -107,12 +107,12 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Tarikh Mula Tanggungan &nbsp;&nbsp;&nbsp;&nbsp;  Kecacatan </label>
-                      <input type="date" class="form-control" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>">
+                      <label class="tl">Tarikh Mula Tanggungan &nbsp;&nbsp;&nbsp;&nbsp;  Kecacatan </label>
+                      <input type="date" class="form-control ts" style="font-weight:bold;" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>">
                     </div>
                     <div class="col-sm-3">
-                      <label>Tarikh Tamat Tanggungan Kecacatan</label>
-                      <input type="date" class="form-control" id="cacattamat" name="cacattamat"  value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>">
+                      <label class="tl">Tarikh Tamat Tanggungan Kecacatan</label>
+                      <input type="date" class="form-control ts" style="font-weight:bold;" id="cacattamat" name="cacattamat"  value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>">
                     </div>
                   </div>
                 </div>

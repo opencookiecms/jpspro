@@ -1,11 +1,11 @@
 <div class="main-panel">
-  <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+  <div class="content-wrapper cnt" style="background: #757F9A;background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);background: linear-gradient(to right, #D7DDE8, #757F9A);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">  <h2 class="f">MRK_01</h2>
-              <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
+              <div class="card-body" style="background-color:#778ca3;border-radius:10px;">
+            <h4 class="card-title">  <h2 class="f ts">MRK_01</h2>
+              <p class="card-description"><h5><span class="error ts" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
               <?php if(isset($_SESSION['mrk01'])) { ?>
                 <div class="alert alert-success"><?php echo $_SESSION['mrk01'] ?></div>
               <?php
@@ -32,19 +32,16 @@
             }
 
             ?>
-            <div class="card bgs" style="border-radius:10px;background: #614385;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #516395, #614385);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-">
-              <div class="card-body">
-                <h4 class="card-title">Kategori Pendaftaran</h4>
+            <div class="card" style="border-radius:10px;">
+              <div class="card-body" style="background-color:#778ca3;border-radius:10px;">
+                <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Kategori Pendaftaran</h4>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group row">
                       <div class="col-sm-5">
                         <label class="tl">Nama Kontraktor</label>
                         <div class="input-group">
-                          <input type="text" class="form-control" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
+                          <input type="text" class="form-control ts" style="font-weight:bold;" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
                           <div class="input-group-append bg-success border-primary">
                             <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-inverse-* btn-success">select</button>
                           </div>
@@ -129,8 +126,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                         </div>
                         <!--end of modal-->
                         <div class="col-sm-5">
-                          <label>No Sebutharga</label>
-                          <input type="text" class="form-control" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
+                          <label class="tl">No Sebutharga</label>
+                          <input type="text" class="form-control ts" style="font-weight:bold;" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
                         </div>
                       </div>
                     </div>
@@ -142,7 +139,7 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                         <label class="tl">No Pendaftaran PKK</label>
                         <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                         <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
-                        <input type="text" class="form-control" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
+                        <input type="text" class="form-control ts" style="font-weight:bold;" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
                       </div>
                     </div>
                   </div>
@@ -151,8 +148,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-5">
-                          <label>Alamat:</label>
-                          <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon ?></textarea>
+                          <label class="tl">Alamat:</label>
+                          <textarea type="text" class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon ?></textarea>
                         </div>
                       </div>
                     </div>
@@ -161,14 +158,14 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-3">
-                          <label>Daerah</label>
-                          <input type="text" value="<?php echo $get_detail[0]->mrk_daerah ?>" class="form-control" id="daerah" name="daerah">
+                          <label class="tl">Daerah</label>
+                          <input type="text" value="<?php echo $get_detail[0]->mrk_daerah ?>" class="form-control ts" style="font-weight:bold;" id="daerah" name="daerah">
 
 
                         </div>
                         <div class="col-sm-3">
-                          <label>Negeri</label>
-                          <input value="<?php echo $get_detail[0]->mrk_negeri ?>" type="text" class="form-control" id="negeri" name="negeri">
+                          <label class="tl">Negeri</label>
+                          <input value="<?php echo $get_detail[0]->mrk_negeri ?>" type="text" class="form-control ts" style="font-weight:bold;" id="negeri" name="negeri">
                         </div>
                       </div>
                     </div>
@@ -177,8 +174,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-6">
-                          <label>Tajuk Kerja:</label>
-                          <textarea rows="5" type="text" readonly  class="form-control" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
+                          <label class="tl">Tajuk Kerja:</label>
+                          <textarea rows="5" type="text" readonly  class="form-control ts" style="font-weight:bold;" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
                         </div>
                       </div>
                     </div>
@@ -190,15 +187,15 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
 
             <!--start col-md-12 for form-->
             <div class="col-12 grid-margin">
-              <div class="card bgs" style="border-radius:10px;">
-                <div class="card-body">
-                  <h4 class="card-title">Inden & Maklumat Kontrak</h4>
+              <div class="card" style="border-radius:10px;">
+                <div class="card-body" style="background-color:#778ca3; border-radius:10px;">
+                  <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Inden & Maklumat Kontrak</h4>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-6">
-                          <label>No Inden</label>
-                          <input type="text" class="form-control" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden"  placeholder="No Inden">
+                          <label class="tl">No Inden</label>
+                          <input type="text" class="form-control ts" style="font-weight:bold;" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden"  placeholder="No Inden">
                         </div>
                       </div>
                     </div>
@@ -207,8 +204,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-3">
-                          <label>Kategori</label>
-                          <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
+                          <label class="tl">Kategori</label>
+                          <select type="text" class="form-control ts" style="font-weight:bold;" id="kategori" name="kategori" placeholder="kat">
                             <option value="<?php echo $get_detail[0]->mrk_kategori ?>"><?php echo $get_detail[0]->mrk_kategori ?></option>
                             <option value="CE">CE | Pembinaan Kejuruteraan Awam</option>
                             <option value="B">B | Pembinaan Bangunan</option>
@@ -216,8 +213,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                           </select>
                         </div>
                         <div class="col-sm-3">
-                          <label>Gred</label>
-                          <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
+                          <label class="tl">Gred</label>
+                          <select type="text" class="form-control ts" style="font-weight:bold;" id="gred" name="gred" placeholder="gred">
                             <option value="<?php echo $get_detail[0]->mrk_gred ?>"><?php echo $get_detail[0]->mrk_gred ?></option>
                             <option value="G1">G1 | Sehingga RM200,000.00</option>
                             <option value="G2">G2 | RM200,001.00 Hingga RM500,000.00</option>
@@ -229,8 +226,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                           </select>
                         </div>
                         <div class="col-sm-3">
-                          <label>Pengkhususan</label>
-                          <select type="text" class="form-control" id="khusus" placeholder="khusus" name="khusus">
+                          <label class="tl">Pengkhususan</label>
+                          <select type="text" class="form-control ts" style="font-weight:bold;" id="khusus" placeholder="khusus" name="khusus">
                             <option value="<?php echo $get_detail[0]->mrk_khusus ?>"><?php echo $get_detail[0]->mrk_khusus ?></option>
                             <option value="CE 02">CE 02 | Pembinaan Jambatan & Jeti</option>
                             <option value="CE 04">CE 04 | Empangan</option>
@@ -264,8 +261,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-3">
-                          <label>Tarikh Mula Kontrak</label>
-                          <input type="date" class="form-control" id="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>"name="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
+                          <label class="tl">Tarikh Mula Kontrak</label>
+                          <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>"name="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
                         </div>
                       </div>
                     </div>
@@ -274,8 +271,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-3">
-                          <label>Tarikh Jangka Siap Kontrak</label>
-                          <input type="date" class="form-control" id="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" name="tarikhjangka">
+                          <label class="tl">Tarikh Jangka Siap Kontrak</label>
+                          <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" name="tarikhjangka">
                         </div>
                       </div>
                     </div>
@@ -284,13 +281,13 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-3">
-                          <label>Pegawai</label>
-                          <input type="text" class="form-control" id="pegawai" value="<?php echo $this->session->userdata("name") ?>" name="pegawai" readonly>
+                          <label class="tl">Pegawai</label>
+                          <input type="text" class="form-control ts" style="font-weight:bold;" id="pegawai" value="<?php echo $this->session->userdata("name") ?>" name="pegawai" readonly>
 
                         </div>
                         <div class="col-sm-3">
-                          <label>Jawatan</label>
-                          <input type="text" class="form-control" value="<?php echo $this->session->userdata("jawatan") ?>" id="jawatan" name="jawatan" readonly>
+                          <label class="tl">Jawatan</label>
+                          <input type="text" class="form-control ts" style="font-weight:bold;" value="<?php echo $this->session->userdata("jawatan") ?>" id="jawatan" name="jawatan" readonly>
                         </div>
                       </div>
                     </div>
@@ -299,12 +296,12 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-4">
-                          <label>Kos Projek</label>
+                          <label class="tl">Kos Projek</label>
                           <div class="input-group">
                             <div class="input-group-prepend bg-primary border-primary">
                               <span class="input-group-text bg-transparent text-white">RM</span>
                             </div>
-                            <input type="text" class="form-control" id="kosprojek" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2) ?>" name="kosprojek" placeholder="RM">
+                            <input type="text" class="form-control ts" style="font-weight:bold;" id="kosprojek" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2) ?>" name="kosprojek" placeholder="RM">
                             <div class="input-group-append bg-primary border-primary">
                               <span class="input-group-text bg-transparent text-white">.00</span>
                             </div>
@@ -317,8 +314,8 @@ background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-3">
-                          <label>Tarikh</label>
-                          <input type="date" class="form-control" value="<?php echo $get_detail[0]->mrk_tarikh ?>" id="tarikh" name="tarikh">
+                          <label class="tl">Tarikh</label>
+                          <input type="date" class="form-control ts" style="font-weight:bold;" value="<?php echo $get_detail[0]->mrk_tarikh ?>" id="tarikh" name="tarikh">
                         </div>
                       </div>
                     </div>

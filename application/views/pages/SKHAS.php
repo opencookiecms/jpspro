@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">  <h2 class="f">Surat Kebenaran Khas</h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
+          <div class="card-body" style="background-color:#4b4b4b;border-radius:10px;">
+            <h4 class="card-title">  <h2 class="f ts">Surat Kebenaran Khas</h2>
+            <p class="card-description"><h5><span class="error ts" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['success'])) { ?>
               <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
             <?php
@@ -28,28 +28,28 @@
                 }
           ?>
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
-            <h4 class="card-title">Surat Khas</h4>
+          <div class="card-body" style="background-color:#4b4b4b;border-radius:10px;">
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Surat Khas</h4>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Rujukan Tuan</label>
-                  <div class="col-sm-3">
-                    <input type="text" class="form-control" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->skhas_rujuktuan?>">
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control ts" style="font-weight:bold;" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->skhas_rujuktuan?>">
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Rujukan Kami</label>
-                  <div class="col-sm-3">
-                  <input type="text" class="form-control" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                  <div class="col-sm-4">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                   </div>
                   <label class="col-sm-2 col-form-label">No Sebutharga</label>
-                  <div class="col-sm-3">
-                    <input type="text" class="form-control" id="nosebutharga" name="nosebutharga" placeholder="No Sebutharga" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control ts" style="font-weight:bold;" id="nosebutharga" name="nosebutharga" placeholder="No Sebutharga" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                     <input type="hidden"  name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>">
                     <input type="hidden"  name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
                     <input type="hidden"  name="hiddenids" value="<?php echo $get_detail[0]->projek_id?>">
@@ -59,32 +59,32 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Nama Kontraktor</label>
-                  <div class="col-sm-3">
-                  <input type="text" class="form-control" id="namakon" name="namakon" placeholder="Nama Kontraktor" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
+                  <div class="col-sm-4">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="namakon" name="namakon" placeholder="Nama Kontraktor" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Tajuk Projek</label>
-                  <div class="col-sm-3">
-                  <textarea type="text" class="form-control" id="tajukprojek" name="tajukprojek" placeholder="Tajuk Projek" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
+                  <div class="col-sm-6">
+                  <textarea rows="5" type="text" class="form-control ts" style="font-weight:bold;" id="tajukprojek" name="tajukprojek" placeholder="Tajuk Projek" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
-                  <label class="col-sm-2 col-form-label"></label>
-                  <label class="col-sm-1 col-form-label">Gred</label>
+
+                  <label class="col-sm-2 col-form-label">Gred</label>
                   <div class="col-sm-2">
-                    <select type="text" class="form-control" id="gred" name="gred" placeholder="gred">
+                    <select type="text" class="form-control ts" style="font-weight:bold;" id="gred" name="gred" placeholder="gred">
                     <option value="<?php echo $get_detail[0]->mrk_gred?>"><?php echo $get_detail[0]->mrk_gred?></option>
                       <option value="G1 | Sehingga RM200,000.00">G1</option>
                       <option value="G2 | RM200,001.00 Hingga RM500,000.00">G2</option>
@@ -95,9 +95,9 @@
                       <option value="G7 | RM 10 000,001.00 Ke Atas">G7</option>
                     </select>
                   </div>
-                  <label class="col-sm-1 col-form-label">Kategori</label>
+                  <label class="col-sm-2 col-form-label">Kategori</label>
                   <div class="col-sm-2">
-                    <select type="text" class="form-control" id="kategori" name="kategori" placeholder="kat">
+                    <select type="text" class="form-control ts" style="font-weight:bold;" id="kategori" name="kategori" placeholder="kat">
                       <option value="<?php echo $get_detail[0]->mrk_kategori?>"><?php echo $get_detail[0]->mrk_kategori?></option>
                       <option value="CE | Pembinaan Kejuruteraan Awam">CE</option>
                       <option value="B | Pembinaan Bangunan">B</option>
@@ -106,7 +106,7 @@
                   </div>
                   <label class="col-sm-2 col-form-label">Pengkhususan</label>
                   <div class="col-sm-2">
-                    <select type="text" class="form-control" id="khusus" name="khusus" placeholder="kat">
+                    <select type="text" class="form-control ts" style="font-weight:bold;" id="khusus" name="khusus" placeholder="kat">
                       <option value="<?php echo $get_detail[0]->mrk_khusus?>"><?php echo $get_detail[0]->mrk_khusus?></option>
                       <option value="CE 02 | Pembinaan Jambatan & Jeti">CE 02 | Pembinaan Jambatan & Jeti</option>
                       <option value="CE 04 | Empangan">CE 04 | Empangan</option>
@@ -142,12 +142,12 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 tl">
                 <div class="form-group row">
-                  <label class="col-sm-2 col-form-label"></label>
+
                   <label class="col-sm-2 col-form-label">Pegawai Penguasa</label>
                   <div class="col-sm-3">
-                    <select type="text" class="form-control" id="pegawaikuasa" name="pegawaikuasa">
+                    <select type="text" class="form-control ts" style="font-weight:bold;" id="pegawaikuasa" name="pegawaikuasa">
                           <option value="<?php echo $get_detail[0]->skhas_pegawaikuasa?>"><?php echo $get_detail[0]->skhas_pegawaikuasa?></option>
                       <option value="Idris Bin Yussof">Idris Bin Yussof</option>
                       <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
@@ -165,7 +165,7 @@
                   </div>
                   <label class="col-sm-2 col-form-label">Jawatan</label>
                   <div class="col-sm-3">
-                    <select type="text" class="form-control" id="jawatan" name="jawatan">
+                    <select type="text" class="form-control ts" style="font-weight:bold;" id="jawatan" name="jawatan">
                         <option value="<?php echo $get_detail[0]->skhas_jawatanpp?>"><?php echo $get_detail[0]->skhas_jawatanpp?></option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
