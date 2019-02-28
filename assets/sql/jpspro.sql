@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 15, 2019 at 04:43 PM
+-- Generation Time: Feb 28, 2019 at 02:48 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.0.32
 
@@ -49,7 +49,7 @@ CREATE TABLE `dp_gps` (
 --
 
 INSERT INTO `dp_gps` (`gps_id`, `dp_lata`, `dp_latb`, `dp_latc`, `dp_longa`, `dp_longb`, `dp_longc`, `dp_sungai`, `dp_sistem`, `dp_subsistem`, `dp_komponen`, `dp_dimensi`, `dp_id`) VALUES
-(16, 3, 3, 3, 3, 3, 3, 'SUNGAI', 'SISTEM', 'SUB SISTEM', 'KOMPONEN', 'DIMENSI', 31);
+(17, 5, 37, 4, 100, 32, 4, 'SUNGAI', 'SISTEM', 'SUB SISTEM', 'KOMPONEN', 'DIMENSI', 32);
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,7 @@ CREATE TABLE `dp_projek` (
 --
 
 INSERT INTO `dp_projek` (`projek_id`, `df_nosebutharga`, `df_tarikmohon`, `df_jsebutharga`, `df_tajuk`, `df_daerah`) VALUES
-(31, '19/2019', '2019-02-15', 'Lantikan Terus', 'Tajuk Projek', 'Sik');
+(32, 'JPS.KMSB(SH-KM)N/B/P/16/2012', '2019-02-17', 'Sebutharga', 'KERJA-KERJA MENEBAS, MENCUCI, MEMBUANG SAMPAH SARAP, REBA KAYU SERTA LAI-LAIN KERJA BERKAITAN DI KEDUA-DUA CERUN SISI SEPANJANG PARIT/ALOR/SUNGAI, SKIM SALIRAN TERKAWAL BAN MERBOK, KUALA MUDA', 'Kuala Muda');
 
 -- --------------------------------------------------------
 
@@ -110,7 +110,7 @@ CREATE TABLE `dp_projekinfo` (
 --
 
 INSERT INTO `dp_projekinfo` (`info_id`, `df_gred`, `df_kategori`, `df_khusus1`, `df_khusus2`, `df_khusus3`, `df_taraf`, `df_tempohsiap`, `dp_bulanmig`, `df_hargadoc`, `df_tarikhnotis`, `df_tarikhlawat`, `df_tarikhdocmula`, `df_tarikhdocakhir`, `df_tarikhtutup`, `df_juruterad`, `df_jurutera`, `df_penolongkanan`, `df_penolong`, `df_kodvot`, `df_peruntukan`, `df_bakiperuntukan`, `dp_id`) VALUES
-(17, 'G1', 'CE', 'C1', 'C2', 'C3', 'Bumiputera', '8', 'Bulan', '70', '2019-02-15', 2, 3, 4, 5, 'TESTING NAMA', 'DAH JADI', NULL, 'syed mohd afiq', 'KOV70707070', 'persekutuan', '670495', 31);
+(18, 'G1', 'CE', 'C1', 'C2', 'C3', 'Bumiputera', '8', 'Bulan', '50', '2019-02-17', 4, 5, 4, 5, 'Nor Rozaini bt Abdullah', 'Yahaya b. Shariff', NULL, 'Azhar bin Ahmad', 'k-2342394', 'negeri', '12000', 32);
 
 -- --------------------------------------------------------
 
@@ -135,7 +135,8 @@ INSERT INTO `jps_users` (`user_id`, `jps_name`, `jps_email`, `jps_password`, `jp
 (1, 'syed mohd afiq', 'syed.m.afiq@outlook.com', '911f6332e7f90b94b87f15377263995c', 'Jurutera', 'admin'),
 (2, 'Lokman hakim', 'gungravewestern@gmail.com', '20c1a26a55039b30866c9d0aa51953ca', 'Jurutera G34', 'user'),
 (3, 'Haraz', 'g@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Penolong Jurutera', 'user'),
-(4, 'Lokman hakim', 's@outlook.com', 'f6122c971aeb03476bf01623b09ddfd4', 'Penolong Jurutera', 'admin');
+(4, 'Lokman hakim', 's@outlook.com', 'f6122c971aeb03476bf01623b09ddfd4', 'Penolong Jurutera', 'admin'),
+(6, 'Azhar bin Ahmad', 'azhar@gmail.com', '838e24a98647b16ed33f20774b2e3502', 'Penolong Jurutera', 'user');
 
 -- --------------------------------------------------------
 
@@ -826,7 +827,7 @@ CREATE TABLE `mrk_dua` (
 --
 
 INSERT INTO `mrk_dua` (`mrkduaid`, `mrk_majukerja`, `mrk_majukerjasebenar`, `mrk_bayarmajusemasa`, `mrk_jumlahbayarmaju`, `mrk_masalah`, `mrk_sebaboleh`, `mrk_lainlain`, `mrk_lanjutmasa`, `mrk_dari`, `mrk_sehingga`, `mrk_disebab`, `mrk_ladsehari`, `mrk_laddari`, `mrk_ladsehingga`, `mrk_perakukerjataksiap`, `mrk_projekmansuh`, `mrk_tarikhlaporan`, `mrk_modal`, `mrk_bahan`, `mrk_pekerja`, `mrk_tapak`, `mrk_cuaca`, `mrksatu_id`, `mrk2_noinden`, `mrk2_kodvots`) VALUES
-(1, 0, '2019-02-14', 0, '20', NULL, 'Tanah runtuh', 'Lain lain', 's', '2019-02-14', '2019-02-19', 's', '2', '2019-02-16', '2019-02-20', '2019-02-22', '2019-02-21', '2019-02-28', 1, NULL, 1, 1, NULL, 25, '0002991882', 'KOV70707070');
+(2, 80, '2019-02-17', 30, '2', NULL, 'TIADA', 'TIADA', '5', '2019-02-04', '2019-02-11', 'TIADA', '20', '2019-02-04', '2019-02-11', '2019-02-04', '2019-02-13', '2019-02-17', NULL, NULL, NULL, 1, 1, 26, 'I002938228382', 'k-2342394');
 
 -- --------------------------------------------------------
 
@@ -849,7 +850,7 @@ CREATE TABLE `mrk_jaminanbank` (
 --
 
 INSERT INTO `mrk_jaminanbank` (`id`, `mrk_rujukanbank`, `mrk_namabank`, `mrk_alamatbank`, `js_mrkid`, `js_kodvot`, `js_inden`) VALUES
-(1, 'BANK_221202', 'CIMB BANK', 'KEDAH', 25, 'KOV70707070', '0002991882');
+(1, 'BANKCIMB_221202', '', '', 26, 'k-2342394', 'I002938228382');
 
 -- --------------------------------------------------------
 
@@ -868,13 +869,10 @@ CREATE TABLE `mrk_keypeople` (
 --
 
 INSERT INTO `mrk_keypeople` (`p_id`, `p_names`, `p_jawatan`) VALUES
-(1, 'SYED MOHD AFIQ', NULL),
-(2, 'TESTING NAMA', NULL),
-(3, 'NAMA ANDA', NULL),
-(4, 'okay', NULL),
-(5, 'DAH JADI', NULL),
-(6, 'Zul', NULL),
-(7, 'nama lagi', NULL);
+(8, 'Mohd Amin b Ahmad', NULL),
+(9, 'Yahaya b. Shariff', NULL),
+(10, 'Nurul Syariza bt Ramli', NULL),
+(11, 'Nor Rozaini bt Abdullah', NULL);
 
 -- --------------------------------------------------------
 
@@ -910,7 +908,7 @@ CREATE TABLE `mrk_laporansiap` (
 --
 
 INSERT INTO `mrk_laporansiap` (`lskid`, `lsk_noinden`, `lsk_lanjutmasa`, `lks_hargasebenar`, `lsk_tarikhkerjasiap`, `lsk_peruntukan`, `lsk_laporanpegawai`, `lsk_pegawaipenyelia`, `lsk_jawatanpen`, `lsk_tarikhperakui`, `lsk_ketuabahagian`, `lsk_jawatanketuab`, `lsk_juruteraj`, `lsk_jawatanjuruteraj`, `lsk_juruterad`, `lsk_jawatanjuruterad`, `lsk_perkeso`, `lsk_liability`, `lskmrksatuid`, `lks_kodvots`) VALUES
-(1, '0002991882', '2019-02-16', '9', '2019-02-15', 'Negeri', 'Tiada', 'Mohamad Ridzam B. Jusoh', 'Penolong Jurutera JA29', '2019-02-15', 'Mohd. Amin B. Ahmad', 'Penolong Jurutera Kanan JA36', 'Khairul Anuar B. Abd. Rashid', 'Penolong Jurutera JA29', 'Idris B. Yussof', 'Merinyu Taliair Kanan', 'pwwwww', '33wwssss', 25, 'KOV70707070');
+(2, 'I002938228382', '2019-03-11', '12', '2019-03-09', 'G005000000V', 'KERJA-KERJA TELAH DILAKSANAKAN DENGAN SEMPURNA DAN MEMUASKAN', 'Azhar bin Ahmad', 'Penolong Jurutera', '2019-03-09', 'Mohd Amin b Ahmad', 'Jurutera ( Baling )', 'Nurul Syariza bt Ramli', 'Penolong Jurutera JA29', 'Nor Rozaini bt Abdullah', 'Jurutera Daerah', 'W/C/2019/0025', 'K/C/2019/0025', 26, 'k-2342394');
 
 -- --------------------------------------------------------
 
@@ -934,7 +932,7 @@ CREATE TABLE `mrk_perakuansiap` (
 --
 
 INSERT INTO `mrk_perakuansiap` (`id`, `mrk_pskinden`, `mrk_tarikhsiapsebenar`, `mrk_tarikhambikmilik`, `mrk_tarikhmulatanggungcacat`, `mrk_tarikhtamattanggungcacat`, `pskmrksatuid`, `psk_kodvots`) VALUES
-(1, '0002991882', '2019-02-15', '2019-02-15', '2019-02-16', '2019-02-15', 25, 'KOV70707070');
+(2, 'I002938228382', '2019-03-09', '2019-02-15', '2019-03-11', '2019-07-31', 26, 'k-2342394');
 
 -- --------------------------------------------------------
 
@@ -964,7 +962,7 @@ CREATE TABLE `mrk_perakuansiapbaikicacat` (
 --
 
 INSERT INTO `mrk_perakuansiapbaikicacat` (`id`, `mrk_nowangjaminansatu`, `mrk_hargasatu`, `mrk_bakiwangjamin`, `mrk_nowangjaminandua`, `mrk_hargadua`, `mrk_wangjaminlaksana`, `mrk_tambahbonlaksana`, `mrk_bakibonlaksana`, `mrk_pegawaipenguasa`, `mrk_jawatanpp`, `mrkid_id`, `psmk_kodvots`, `psmk_inden`) VALUES
-(1, '2', '32', '2', '2', '2', '170', '89', '2', 's', 's', 25, 'KOV70707070', '0002991882');
+(2, '', '0', '0', '', '0', '0', '0', '0', 'Nor Rozaini bt Abdullah', 'Jurutera Daerah', 26, 'k-2342394', 'I002938228382');
 
 -- --------------------------------------------------------
 
@@ -991,7 +989,7 @@ CREATE TABLE `mrk_ppwjp` (
 --
 
 INSERT INTO `mrk_ppwjp` (`ppwjp_id`, `ppwjp_rt`, `ppwjp_rk`, `ppwjp_kepada`, `ppwjp_alamat`, `ppwjp_kos`, `ppwjp_pegawai`, `ppwjp_jawatan`, `ppwjp_mrkid`, `ppwjp_inden`, `ppwjp_kodvot`) VALUES
-(1, 'K23332', 'ERS', 'ERSSS', 'ERSSSSSSS', '444', 'Idris Bin Yussof', 'Penolong Jurutera JA29', 25, '0002991882', 'KOV70707070');
+(1, 'K23332KK', '', '', '', '0', 'Idris Bin Yussof', 'Penolong Jurutera JA29', 26, 'I002938228382', 'k-2342394');
 
 -- --------------------------------------------------------
 
@@ -1027,7 +1025,7 @@ CREATE TABLE `mrk_satu` (
 --
 
 INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mrk_alamatkon`, `mrk_nokontrak`, `mrk_noinden`, `mrk_tajukkerja`, `mrk_kategori`, `mrk_daerah`, `mrk_negeri`, `mrk_khusus`, `mrk_tarikhmulakon`, `mrk_tarikhjangkasiap`, `mrk_pegawai`, `mrk_jawatan`, `mrk_kosprojek`, `mrk_tarikh`, `mrksatu_id`, `mrks_kodvot`) VALUES
-(25, '0120031227-KD091413', 'G1', 'MUZIL TRADING', 'NO. 4579, LORONG INANG 11', '19/2019', '0002991882', 'Tajuk Projek', 'CE', 'Kuala Muda', 'Kedah', 'CE 02', '2019-02-10', '2019-02-09', 'syed mohd afiq', 'Jurutera', '0', '2019-02-23', 0, 'KOV70707070');
+(26, '0120020606-KD071649', 'G2', 'RB MAWAR ENTERPRISE', 'NO.2554, LORONG 59', 'JPS.KMSB(SH-KM)N/B/P/16/2012', 'I002938228382', 'KERJA-KERJA MENEBAS, MENCUCI, MEMBUANG SAMPAH SARAP, REBA KAYU SERTA LAI-LAIN KERJA BERKAITAN DI KEDUA-DUA CERUN SISI SEPANJANG PARIT/ALOR/SUNGAI, SKIM SALIRAN TERKAWAL BAN MERBOK, KUALA MUDA', 'ME', 'Kuala Muda', 'Kedah', 'CE 14', '2019-01-01', '2019-02-03', 'syed mohd afiq', 'Jurutera', '23', '2019-02-04', 0, 'k-2342394');
 
 -- --------------------------------------------------------
 
@@ -1087,7 +1085,8 @@ CREATE TABLE `mrk_ss` (
 --
 
 INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, `cb8`, `cb9`, `cb10`, `cb11`, `cb12`, `cb13`, `cb14`, `cb15`, `cb16`, `cb17`, `cb18`, `ss_inden`, `ss_mrkid`, `ss_kodvot`, `ss_disediakan`, `ss_date`) VALUES
-(1, 1, NULL, NULL, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, 1, NULL, '0002991882', 25, 'KOV70707070', 'km', '2019-02-14');
+(1, 1, NULL, NULL, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, 1, NULL, '0002991882', 25, 'KOV70707070', 'km', '2019-02-14'),
+(2, 1, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'I002938228382', 26, 'k-2342394', 'syed mohd afiq', '2019-03-12');
 
 -- --------------------------------------------------------
 
@@ -1181,7 +1180,7 @@ CREATE TABLE `mrk_tiga` (
 --
 
 INSERT INTO `mrk_tiga` (`mrktigaid`, `mrksatutiga_id`, `mrk_tigainden`, `mrktiga_kodvots`, `tiga_bina`, `tiga_tadbir`, `tiga_kemajuan`, `tiga_kerangka`, `tiga_kerja`, `tiga_kemasan`, `tiga_luar`, `tiga_kontraktor`, `tiga_pegawai`, `tiga_jawatan`, `tiga_tarikah`, `tiga_catat1`, `tiga_catat2`, `tiga_catat3`, `tiga_catat4`, `tiga_catat5`, `tiga_catat6`, `tiga_catat7`, `tiga_catat8`) VALUES
-(1, 25, '0002991882', 'KOV70707070', '90% - Keatas', '75% - 89%', '50% - 74%', '90% - Keatas', '75% - 89%', '90% - Keatas', '50% - 74%', '50% - 74%', 's', 's', '2019-02-15', '', '', '', '', '', '', '', '');
+(2, 26, 'I002938228382', 'k-2342394', '50% - 74%', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', '50% kebawah', '90% - Keatas', '90% - Keatas', 'Azhar bin Ahmad', 'Penolong Jurutera', '2019-03-17', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1202,7 +1201,8 @@ CREATE TABLE `order_nsh` (
 --
 
 INSERT INTO `order_nsh` (`no_id`, `no_sebutharga`, `no_tarikh`, `no_pemilik`, `no_jenis`) VALUES
-(4, '19/2019', '2019-02-14', 'syed mohd afiq', 'Lantikan Terus');
+(4, '19/2019', '2019-02-14', 'syed mohd afiq', 'Lantikan Terus'),
+(5, 'JPS.KMSB(SH-KM)N/B/P/16/2012', '2019-02-17', 'Azhar bin Ahmad', 'Sebutharga');
 
 --
 -- Indexes for dumped tables
@@ -1336,25 +1336,25 @@ ALTER TABLE `order_nsh`
 -- AUTO_INCREMENT for table `dp_gps`
 --
 ALTER TABLE `dp_gps`
-  MODIFY `gps_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `gps_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `dp_projek`
 --
 ALTER TABLE `dp_projek`
-  MODIFY `projek_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `projek_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `dp_projekinfo`
 --
 ALTER TABLE `dp_projekinfo`
-  MODIFY `info_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `info_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `jps_users`
 --
 ALTER TABLE `jps_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `kontraktor`
@@ -1366,7 +1366,7 @@ ALTER TABLE `kontraktor`
 -- AUTO_INCREMENT for table `mrk_dua`
 --
 ALTER TABLE `mrk_dua`
-  MODIFY `mrkduaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `mrkduaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `mrk_jaminanbank`
@@ -1378,25 +1378,25 @@ ALTER TABLE `mrk_jaminanbank`
 -- AUTO_INCREMENT for table `mrk_keypeople`
 --
 ALTER TABLE `mrk_keypeople`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `mrk_laporansiap`
 --
 ALTER TABLE `mrk_laporansiap`
-  MODIFY `lskid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `lskid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `mrk_perakuansiap`
 --
 ALTER TABLE `mrk_perakuansiap`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `mrk_perakuansiapbaikicacat`
 --
 ALTER TABLE `mrk_perakuansiapbaikicacat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `mrk_ppwjp`
@@ -1408,7 +1408,7 @@ ALTER TABLE `mrk_ppwjp`
 -- AUTO_INCREMENT for table `mrk_satu`
 --
 ALTER TABLE `mrk_satu`
-  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `mrk_setting`
@@ -1420,7 +1420,7 @@ ALTER TABLE `mrk_setting`
 -- AUTO_INCREMENT for table `mrk_ss`
 --
 ALTER TABLE `mrk_ss`
-  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratkhas`
@@ -1444,13 +1444,13 @@ ALTER TABLE `mrk_suratwjp`
 -- AUTO_INCREMENT for table `mrk_tiga`
 --
 ALTER TABLE `mrk_tiga`
-  MODIFY `mrktigaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `mrktigaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `order_nsh`
 --
 ALTER TABLE `order_nsh`
-  MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
