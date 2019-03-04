@@ -70,7 +70,6 @@ class Daftar extends CI_Controller{
     if($this->form_validation->run() === FALSE)
     {
 
-
       $this->load->view('template/header');
       $this->load->view('template/nav');
       $this->load->view('template/sidebar');
