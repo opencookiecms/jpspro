@@ -1,7 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-require_once dirname(__file__).'/PhpWords/docxtemplate.class.php';
+//require_once dirname(__file__).'/vendor/autoload.php';
+require_once dirname(__file__).'/bootstrap.php';
+
 
 class Phpwordlibs
 {

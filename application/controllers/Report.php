@@ -11,6 +11,11 @@ class Report extends CI_Controller{
 
   }
 
+  public function Testing()
+  {
+    $this->load->view('print/test');
+  }
+
   public function Report_MRK_01($value="")
   {
   	$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
