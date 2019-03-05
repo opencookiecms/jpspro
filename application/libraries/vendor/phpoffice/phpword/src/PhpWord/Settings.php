@@ -312,7 +312,6 @@ class Settings
         }
 
         return $tempDir;
-        
     }
 
     /**
