@@ -198,7 +198,7 @@ abstract class AbstractWriter implements WriterInterface
     public function setTempDir($value)
     {
         if (!is_dir($value)) {
-            mkdir($value,0755,true);
+            mkdir($value);
         }
         $this->tempDir = $value;
 
