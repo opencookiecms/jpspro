@@ -1,6 +1,6 @@
 {
     "require": {
-        "phpoffice/phpword": "^0.16.0",
-        "gears/pdf": "*"  
+        "phpoffice/phpword": "^0.16.0"
+      
     }
 }
