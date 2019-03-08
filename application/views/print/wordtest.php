@@ -1,7 +1,5 @@
 <?php
 
-
-use Dompdf\Dompdf;
 use PhpOffice\PhpWord\IOFactory;
 use PhpOffice\PhpWord\Settings;
 
@@ -9,7 +7,7 @@ $phpWord = new \PhpOffice\PhpWord\PhpWord();
 
 $dompdf = new Dompdf();
 
-$templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(__DIR__ ."\dk.docx");
+$templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(__DIR__ ."\stest.docx");
 $templateProcessor->setValue('Name', 'Poning');
 $templateProcessor->setValue('nopkk','pening Kepala');
 
@@ -19,7 +17,7 @@ $templateProcessor->saveAs('assets/document/dk.docx');
 //$readfirst = \PhpOffice\PhpWord\IOFactory::load('assets/document/MRK01.docx');
 
 //Settings::setPdfRendererPath(APPPATH.'libraries\vendor\dompdf\dompdf');
-Settings::setPdfRendererName(Settings::PDF_RENDERER_DOMPDF);
+Settings::setPdfRendererName(Settings::PDF_RENDERER_MPDF);
 Settings::setPdfRendererPath('.');
 
 //$loadword = \PhpOffice\PhpWord\IOFactory::load('MRK01.docx');

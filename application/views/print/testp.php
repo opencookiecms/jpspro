@@ -2,28 +2,29 @@
 
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
 
-$domPdfPath = realpath(VENDOR_PATH.'/dompdf/dompdf');
+$domPdfPath = realpath(APPPATH.'libraries\vendor\mpdf\mpdf');
 \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
-\PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
+\PhpOffice\PhpWord\Settings::setPdfRendererName('Mpdf');
 
-$template = new \PhpOffice\PhpWord\TemplateProcessor(FILES_PATH.'/imie.docx');
-$template->setValue('variableName', 'Jacek');
-$template->saveAs(FILES_PATH.'/result.docx');
+$template = new \PhpOffice\PhpWord\TemplateProcessor(__DIR__ ."\stest.docx");
+$template->setValue('Name', 'Jacek');
+$template->saveAs('assets/document/mrks.docx');
 
 //Load temp file
-$phpWord = \PhpOffice\PhpWord\IOFactory::load(FILES_PATH.'/result.docx');
+$phpWord = \PhpOffice\PhpWord\IOFactory::load('assets/document/mrks.docx');
 
 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'HTML');
-$objWriter->save(FILES_PATH.'/hello.html');
-chmod(FILES_PATH.'/hello.html', 0777);
+$objWriter->save('assets/document/mrkshtml.html');
+
 
 $dompdf = new \Dompdf\Dompdf();
-$dompdf->load_html(file_get_contents(FILES_PATH.'/hello.html'));
+$dompdf->load_html(file_get_contents('assets/document/mrkshtml.html'));
 
 // (Optional) Setup the paper size and orientation
-$dompdf->setPaper('A4', 'landscape');
+$dompdf->setPaper('A4', 'portrait');
 
 // Render the HTML as PDF
 $dompdf->render();
 $pdf_string = $dompdf->output();
-file_put_contents(FILES_PATH.'/result2.pdf', $pdf_string);
+file_put_contents('assets/document/mrkpdf.pdf', $pdf_string);
+$dompdf->stream();

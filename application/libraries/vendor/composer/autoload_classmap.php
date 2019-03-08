@@ -13,6 +13,11 @@ return array(
     'Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',
     'DivisionByZeroError' => $vendorDir . '/symfony/polyfill/src/Php70/Resources/stubs/DivisionByZeroError.php',
     'Error' => $vendorDir . '/symfony/polyfill/src/Php70/Resources/stubs/Error.php',
+    'FPDF_TPL' => $vendorDir . '/setasign/fpdi/fpdf_tpl.php',
+    'FPDI' => $vendorDir . '/setasign/fpdi/fpdi.php',
+    'FilterASCII85' => $vendorDir . '/setasign/fpdi/filters/FilterASCII85.php',
+    'FilterASCIIHexDecode' => $vendorDir . '/setasign/fpdi/filters/FilterASCIIHexDecode.php',
+    'FilterLZW' => $vendorDir . '/setasign/fpdi/filters/FilterLZW.php',
     'HTML5_Data' => $vendorDir . '/dompdf/dompdf/lib/html5lib/Data.php',
     'HTML5_InputStream' => $vendorDir . '/dompdf/dompdf/lib/html5lib/InputStream.php',
     'HTML5_Parser' => $vendorDir . '/dompdf/dompdf/lib/html5lib/Parser.php',
@@ -28,4 +33,6 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/polyfill/src/Php54/Resources/stubs/SessionHandlerInterface.php',
     'SessionUpdateTimestampHandlerInterface' => $vendorDir . '/symfony/polyfill/src/Php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
     'TypeError' => $vendorDir . '/symfony/polyfill/src/Php70/Resources/stubs/TypeError.php',
+    'fpdi_pdf_parser' => $vendorDir . '/setasign/fpdi/fpdi_pdf_parser.php',
+    'pdf_context' => $vendorDir . '/setasign/fpdi/pdf_context.php',
 );

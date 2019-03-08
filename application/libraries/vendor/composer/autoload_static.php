@@ -8,8 +8,8 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
         '848a06382c1c883893a9c9833ae2b551' => __DIR__ . '/..' . '/symfony/polyfill/src/Apcu/bootstrap.php',
         'd075ca29fdd460a76e9d730a9724dc20' => __DIR__ . '/..' . '/symfony/polyfill/src/Php54/bootstrap.php',
         '7d1c739f734e1193d0c090179eeb95aa' => __DIR__ . '/..' . '/symfony/polyfill/src/Php55/bootstrap.php',
@@ -22,6 +22,7 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
         '946db64f9a5c0688514fdcdafcabe7d2' => __DIR__ . '/..' . '/symfony/polyfill/src/Intl/Icu/bootstrap.php',
         '299b3c040b39cb03c6eceb9bb272ad1d' => __DIR__ . '/..' . '/symfony/polyfill/src/Intl/Normalizer/bootstrap.php',
         'e59f725579f9974327c76777296d6dcc' => __DIR__ . '/..' . '/symfony/polyfill/src/Mbstring/bootstrap.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b46ad4fe52f4d1899a2951c7e6ea56b0' => __DIR__ . '/..' . '/voku/portable-utf8/bootstrap.php',
         'cf150f72bd303a2ff07711c9a70f2d53' => __DIR__ . '/..' . '/google/apiclient/src/Google/autoload.php',
     );
@@ -45,8 +46,13 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'PhpOffice\\PhpWord\\' => 18,
             'PhpOffice\\Common\\' => 17,
+        ),
+        'M' => 
+        array (
+            'Mpdf\\' => 5,
         ),
         'I' => 
         array (
@@ -65,6 +71,7 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
         'D' => 
         array (
             'Dompdf\\' => 7,
+            'DeepCopy\\' => 9,
         ),
     );
 
@@ -97,6 +104,10 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
         array (
             0 => __DIR__ . '/..' . '/symfony/filesystem',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'PhpOffice\\PhpWord\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoffice/phpword/src/PhpWord',
@@ -104,6 +115,10 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
         'PhpOffice\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoffice/common/src/Common',
+        ),
+        'Mpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
         ),
         'Icecave\\Repr\\' => 
         array (
@@ -128,6 +143,10 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
         'Dompdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
+        ),
+        'DeepCopy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
     );
 
@@ -167,6 +186,11 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill/src/Php70/Resources/stubs/DivisionByZeroError.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill/src/Php70/Resources/stubs/Error.php',
+        'FPDF_TPL' => __DIR__ . '/..' . '/setasign/fpdi/fpdf_tpl.php',
+        'FPDI' => __DIR__ . '/..' . '/setasign/fpdi/fpdi.php',
+        'FilterASCII85' => __DIR__ . '/..' . '/setasign/fpdi/filters/FilterASCII85.php',
+        'FilterASCIIHexDecode' => __DIR__ . '/..' . '/setasign/fpdi/filters/FilterASCIIHexDecode.php',
+        'FilterLZW' => __DIR__ . '/..' . '/setasign/fpdi/filters/FilterLZW.php',
         'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
         'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
         'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
@@ -182,6 +206,8 @@ class ComposerStaticInit5a2f6d919cd64b2505f6f1850cb8785d
         'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill/src/Php54/Resources/stubs/SessionHandlerInterface.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill/src/Php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill/src/Php70/Resources/stubs/TypeError.php',
+        'fpdi_pdf_parser' => __DIR__ . '/..' . '/setasign/fpdi/fpdi_pdf_parser.php',
+        'pdf_context' => __DIR__ . '/..' . '/setasign/fpdi/pdf_context.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
