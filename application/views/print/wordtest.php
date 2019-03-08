@@ -1,41 +1,27 @@
 <?php
 
+
+echo APPPATH.'vendor\dompdf\dompdf';
 use Dompdf\Dompdf;
 
+$phpWord = new \PhpOffice\PhpWord\PhpWord();
+
 $dompdf = new Dompdf();
-$dompdf->loadHtml('hellowdom');
 
-$dompdf->setPaper('A4', 'landscape');
+$templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(__DIR__ ."\stest.docx");
+$templateProcessor->setValue('Name', 'dammmmmm');
 
-$dompdf->render();
+$templateProcessor->saveAs('assets/document/MRK01.docx');
 
-$dompdf->stream();
-// $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(__DIR__ ."\stest.docx");
+$readfirst = \PhpOffice\PhpWord\IOFactory::createReader('Word2007');
+$readfirst = \PhpOffice\PhpWord\IOFactory::load('assets/document/MRK01.docx');
 
-// $templateProcessor->setValue('Name', 'John Doe');
+\PhpOffice\PhpWord\Settings::setPdfRendererPath(APPPATH.'libraries\vendor\dompdf\dompdf');
+\PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
 
+// $phpWord = \PhpOffice\PhpWord\IOFactory::load('MRK01.docx');
 
+$xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($readfirst , 'PDF');
 
+$xmlWriter->save('assets/document/MRK01.pdf');
 
-// $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(__DIR__ ."\stest.docx");
-// $templateProcessor->setValue('Name', 'Syed Mohd afiq');
-
-// $templateProcessor->saveAs('MRK01.docx');
-
-// $domPdfPath = realpath(PHPWORD_BASE_DIR . '/../vendor/dompdf/dompdf');
-// \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
-// \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-
-// //Load temp file
-// $phpWord = \PhpOffice\PhpWord\IOFactory::load($filepath); 
-
-// //Save it
-// $xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord , 'PDF');
-// $xmlWriter->save('result.pdf');  
-
-// $document = new Gears\Pdf(__DIR__ ."\stest.docx");
-// $document->converter = function()
-// {
-// 	return new Gears\Pdf\Docx\Converter\Unoconv();
-// };
-// $document->save(__DIR__ ."\stest.pdf");
