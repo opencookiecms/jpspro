@@ -1,27 +1,30 @@
 <?php
 
 
-echo APPPATH.'vendor\dompdf\dompdf';
 use Dompdf\Dompdf;
+use PhpOffice\PhpWord\IOFactory;
+use PhpOffice\PhpWord\Settings;
 
 $phpWord = new \PhpOffice\PhpWord\PhpWord();
 
 $dompdf = new Dompdf();
 
-$templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(__DIR__ ."\stest.docx");
-$templateProcessor->setValue('Name', 'dammmmmm');
+$templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(__DIR__ ."\dk.docx");
+$templateProcessor->setValue('Name', 'Poning');
+$templateProcessor->setValue('nopkk','pening Kepala');
 
-$templateProcessor->saveAs('assets/document/MRK01.docx');
+$templateProcessor->saveAs('assets/document/dk.docx');
 
-$readfirst = \PhpOffice\PhpWord\IOFactory::createReader('Word2007');
-$readfirst = \PhpOffice\PhpWord\IOFactory::load('assets/document/MRK01.docx');
+//$readfirst = \PhpOffice\PhpWord\IOFactory::createReader('Word2007');
+//$readfirst = \PhpOffice\PhpWord\IOFactory::load('assets/document/MRK01.docx');
 
-\PhpOffice\PhpWord\Settings::setPdfRendererPath(APPPATH.'libraries\vendor\dompdf\dompdf');
-\PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
+//Settings::setPdfRendererPath(APPPATH.'libraries\vendor\dompdf\dompdf');
+Settings::setPdfRendererName(Settings::PDF_RENDERER_DOMPDF);
+Settings::setPdfRendererPath('.');
 
-// $phpWord = \PhpOffice\PhpWord\IOFactory::load('MRK01.docx');
+//$loadword = \PhpOffice\PhpWord\IOFactory::load('MRK01.docx');
 
-$xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($readfirst , 'PDF');
+$phpWord = IOFactory::load('assets/document/dk.docx' ,'Word2007');
 
-$xmlWriter->save('assets/document/MRK01.pdf');
+$phpWord->save('assets/document/newdk.pdf','PDF');
 
