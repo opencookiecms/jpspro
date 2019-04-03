@@ -27,7 +27,7 @@
               </a>
             </div>
           </li>
-          <?php switch($ssroles): case "admin" ?>
+          <?php switch($ssroles): case "admin": ?>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('mydashboard')?>">
               <i class="menu-icon mdi  mdi-home-modern"></i>

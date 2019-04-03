@@ -17,6 +17,8 @@ class Report extends CI_Controller{
     $this->load->view('print/test');
   }
 
+ 
+
   public function Worpdf()
   {
     $this->load->view('print/testp');

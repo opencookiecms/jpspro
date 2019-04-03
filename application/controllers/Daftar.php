@@ -25,6 +25,19 @@ class Daftar extends CI_Controller{
     $this->load->view('template/footer');
   }
 
+  public function viewincon()
+  {
+     $data =$this->Projek_model->listOrder();
+     foreach ($data as $da) {
+        $datas= $da->no_sebutharga;
+        $data2 = $da->no_pemilik;
+     }
+
+     echo $datas, $data2;
+  }
+
+     
+
   public function stepsatu()
   {
     $data['get_nosebutharga'] = $this->Projek_model->listOrder();

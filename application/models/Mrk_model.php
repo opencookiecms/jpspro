@@ -57,8 +57,6 @@ class Mrk_model extends CI_Model{
     );
 
     return $this->db->insert('mrk_satu', $data);
-
-
   }
 
   public function create_mrkdua()
