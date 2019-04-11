@@ -37,13 +37,19 @@
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('projek')?>">
               <i class="menu-icon mdi  mdi-source-fork"></i>
-              <span class="menu-title">Senarai Projek</span>
+              <span class="menu-title">Senarai Tempahan</span>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('Daftar/orderSebutharga')?>">
+              <i class="menu-icon mdi  mdi-elevation-rise"></i>
+              <span class="menu-title">Tempahan No Sebutharga</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('mrk')?>">
               <i class="menu-icon mdi mdi-content-copy"></i>
-              <span class="menu-title">MRK</span>
+              <span class="menu-title">Dokumen Bayaran</span>
             </a>
           </li>
           <li class="nav-item">
@@ -55,7 +61,7 @@
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('Setting_con')?>">
               <i class="menu-icon mdi mdi-math-compass"></i>
-              <span class="menu-title">Setting</span>
+              <span class="menu-title">Konfigurasi</span>
             </a>
           </li>
 
@@ -70,13 +76,13 @@
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('projek')?>">
               <i class="menu-icon mdi  mdi-source-fork"></i>
-              <span class="menu-title">Senarai Projek</span>
+              <span class="menu-title">Senarai Tempahan</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('mrk')?>">
               <i class="menu-icon mdi mdi-content-copy"></i>
-              <span class="menu-title">MRK</span>
+              <span class="menu-title">Dokumen Bayaran</span>
             </a>
           </li>
           <?php break;?>

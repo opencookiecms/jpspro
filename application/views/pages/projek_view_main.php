@@ -52,7 +52,7 @@
                      <td><?php echo $row->projek_id?></td>
                      <td style="white-space:inherit;"><?php echo $row->df_tajuk?></td>
                      <td><?php echo $row->df_nosebutharga?></td>
-                     <td><a href="<?php echo site_url('projek/view_data/'.$row->projek_id); ?>" class="btn btn-primary">let's go</a></td>
+                     <td><a href="<?php echo site_url('projek/view_data/'.$row->projek_id); ?>" class="btn btn-primary">Seterusnya</a></td>
                    </tr>
                  <?php endforeach; ?>
 
