@@ -60,7 +60,7 @@
                       <thead>
                         <tr>
                           <th>
-                            #
+                            Bil
                           </th>
                           <th>
                             No Sebutharga
@@ -77,10 +77,11 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php foreach ($get_list as $row): ?>
+                              <?php $bil=0;?>
+                        <?php foreach ($get_list as $row): $bil++ ?>
                         <tr>
                           <td class="font-weight-medium">
-                            1
+                            <?php echo $bil?>
                           </td>
                           <td>
                             <?php echo $row->no_sebutharga?>

@@ -8,14 +8,16 @@
       <?php echo form_open('setting_con/usersreg'); ?>
       <div class="card" style="border-radius:10px;">
         <div class="card-body">
-          <p></p>
-          <p></p>
-          <a href="<?php echo site_url('Setting_con/usersreg') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Daftar</a>
-          <a href="<?php echo site_url('Setting_con') ?>" class="btn btn-info mr-2 btn-rounded" role="button">Users</a>
-          <a href="<?php echo site_url('Setting_con/SaveSettingPassandSlogan') ?>" class="btn btn-success mr-2 btn-rounded" role="button">Slogan & Login</a>
+    
+          <a href="<?php echo site_url('Setting_con/usersreg') ?>" class="btn btn-dark mr-2 btn-rounded" role="button">Daftar</a>
+          <a href="<?php echo site_url('Setting_con') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Pegawai & Jurutera</a>
+          <a href="<?php echo site_url('Setting_con/SaveSettingPassandSlogan') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Slogan</a>
           <p></p>
           <p></p>
           <h4 class="card-title">Daftar Pengguna</h4>
+          <a href="<?php echo site_url('Setting_con/usersreg') ?>" class="btn btn-info mr-2 btn-rounded" role="button">Senarai Pengguna</a>
+          <P>
+            <p>
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group row">

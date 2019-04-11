@@ -19,9 +19,9 @@
         ?>
         <div class="card" style="border-radius:10px;">
           <div class="card-body">
-            <a href="<?php echo site_url("projek/Update_Projek01/" . $get_detail[0]->projek_id); ?>" class="btn btn-warning mr-2 btn-rounded" role="button">PAGE1</a>
-            <a href="<?php echo site_url("projek/Update_Projek02/" . $get_detail[0]->projek_id); ?>" class="btn btn-info mr-2 btn-rounded" role="button">PAGE2</a>
-            <a href="<?php echo site_url("projek/Update_Projek03/" . $get_detail[0]->projek_id); ?>" class="btn btn-danger mr-2 btn-rounded" role="button" >PAGE3</a>
+            <a href="<?php echo site_url("projek/Update_Projek01/" . $get_detail[0]->projek_id); ?>" class="btn btn-dark mr-2 btn-rounded" role="button">PAGE1</a>
+            <a href="<?php echo site_url("projek/Update_Projek02/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button">PAGE2</a>
+            <a href="<?php echo site_url("projek/Update_Projek03/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button" >PAGE3</a>
             <p></p>
             <p></p>
             <h4 class="card-title">Borang Daftar Sebut Harga</h4>
@@ -62,7 +62,7 @@
                   <div class="form-group row">
                     <div class="col-sm-7">
                       <label>Tajuk Projek :</label>
-                      <textarea type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"><?php echo $get_detail[0]->df_tajuk?></textarea>
+                      <textarea rows="5"  type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"><?php echo $get_detail[0]->df_tajuk?></textarea>
                     </div>
                   </div>
                 </div>

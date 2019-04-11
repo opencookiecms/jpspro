@@ -105,17 +105,20 @@ class Setting_con extends CI_Controller{
   public function usersreg()
   {
     $this->load->database();
-
+    $this->form_validation->set_rules('email', 'Email','required|is_unique[jps_users.jps_email]');
     $this->form_validation->set_rules('nama', 'Nama diperlukan', 'required');
 
     if($this->form_validation->run() === FALSE)
     {
-      $data['get_user']=$this->Setting_model->get_userdatasetting();
-      $this->load->view('template/header');
-      $this->load->view('template/nav');
-      $this->load->view('template/sidebar');
-      $this->load->view('pages/register',$data);
-      $this->load->view('template/footer');
+
+        $data['get_user']=$this->Setting_model->get_userdatasetting();
+        $this->load->view('template/header');
+        $this->load->view('template/nav');
+        $this->load->view('template/sidebar');
+        $this->load->view('pages/register',$data);
+        $this->load->view('template/footer');
+     
+   
     }
     else
     {
@@ -123,5 +126,34 @@ class Setting_con extends CI_Controller{
       redirect('mydashboard');
     }
 
+  }
+
+  public function newSistem()
+  {
+    $data = array(
+      'Land Transportation',
+      'Hydrological Station',
+      'Inland Water',
+      'Relief Portrayal',
+      'River Structure',
+      'Storage Pound',
+      'Stormwater Diversion',
+      'Topographic',
+      'Water Supply'
+    );
+    
+    $this->output
+        ->set_content_type('application/json')
+        ->set_output(json_encode(array('sistem'=>$data)));
+    //print_r($data);
+  }
+
+  public function subSistem($sistem = "")
+  {
+    
+
+    $this->output
+        ->set_content_type('application/json')
+        ->set_output(json_encode(array('sistem'=>$data)));
   }
 }

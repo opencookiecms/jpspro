@@ -10,6 +10,7 @@ class Rekod extends CI_Controller
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('Record_model');
+    $this->load->model('Mrk_model');
       //$this->load->model('ProjekMdl');
     //  $this->load->helper('form');
     //  $this->load->library('form_validation');
