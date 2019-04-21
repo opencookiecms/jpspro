@@ -33,5 +33,164 @@ class Record_model extends CI_Model{
     return $query->result();
 
   }
+  
+  public function getmrksatu()
+  {
+    $this->load->helper('url');
+
+    $this->db->select('*');
+    $this->db->from('mrk_satu');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.df_kodvot = mrk_satu.mrks_kodvot','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function getmrkdua()
+  {
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_dua');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_dua.mrk2_kodvots','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getlsk()
+  {
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_laporansiap');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_laporansiap.lks_kodvots','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getmrktiga()
+  {
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_tiga');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_tiga.mrktiga_kodvots','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getpsk()
+  {
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_perakuansiap');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_perakuansiap.psk_kodvots','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getss()
+  {
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_ss');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_ss.ss_kodvot','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getpsmk()
+  {
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_perakuansiapbaikicacat');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_perakuansiapbaikicacat.psmk_kodvots','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getjb()
+  {
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_jaminanbank');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_jaminanbank.js_kodvot','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getppwjp()
+  {
+     $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_ppwjp');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_ppwjp.ppwjp_kodvot','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getsuratmrk()
+  {
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_suratmrk');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_suratmrk.s_kodvot','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getsuratkhas()
+  { 
+    $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_suratkhas');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_suratkhas.skhas_kodvot','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function getsuratwjp()
+  {
+     $this->load->helper('url');
+    
+    $this->db->select('*');
+    $this->db->from('mrk_suratwjp');
+    $this->db->join('dp_projekinfo','dp_projekinfo.df_kodvot = mrk_suratwjp.swjp_kodvot','left');
+    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+
 
 }

@@ -10,7 +10,7 @@
 
         <?php
 
-          echo form_open('Setting_con/SaveSetting');
+          echo form_open('Setting_con/simpanpegawai');
 
 
         ?>
@@ -27,7 +27,7 @@
               <div class="row">
                 <div class="col-md-4">
                 <label>Nama</label>
-                  <input class="form-control" name="peoplename" id="people" value="Sila Masukkan nama">
+                  <input class="form-control" name="peoplename" id="people" placeholder="Sila masukkan nama pegawai">
                 </div>
               </div>
 
@@ -36,13 +36,13 @@
                   <table class="table table-striped" style="margin-top: 20px;margin-bottom: 20px;undefined;table-layout: fixed; width: 669px">
                   <colgroup>
                   <col style="width: 48px">
-                  <col style="width: 621px">
-                  <col style="width: 80px">
+                  <col style="width: 500px">
+                  <col style="width: 120px">
                   </colgroup>
                     <thead>
                       <th class="tg-amwm">Bil</th>
                       <th class="tg-hgcj">Nama</th>
-                      <th class="tg-hgcj">Action</th>
+                      <th class="tg-hgcj">Tindakan</th>
                     </thead>
                     <?php $bil=0;?>
                 <?php foreach ($get_usersetting as $row): $bil++ ?>
@@ -51,7 +51,7 @@
 
                       <td class="tg-baqh"><?php echo $bil ?></td>
                       <td class="tg-baqh"><?php echo $row->p_names?></td>
-                      <td class="tg-baqh">X<td>
+                      <td class="tg-baqh"> <a href="<?php echo site_url("Setting_con/deletepegawai/".$row->p_id); ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" role="button" onclick="return confirm('Anda pasti?')"><i class="menu-icon mdi mdi-delete-circle"></i></a></td>
                     </tr>
 
               <?php endforeach; ?>

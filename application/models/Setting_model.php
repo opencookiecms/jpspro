@@ -12,17 +12,34 @@ class Setting_model extends CI_Model{
 
 
 
-  public function addUserSetting()
+  public function setslogan()
   {
     $this->load->helper('url');
 
-    $keypeople = $this->input->post("peoplename");
+    $slogan = $this->input->post("slogan");
 
     $data = array(
-      'p_names' => $keypeople
+      'set_slogan' => $slogan
     );
 
-    return $this->db->insert('mrk_keypeople',$data);
+    return $this->db->insert('mrk_setting',$data);
+  }
+
+  public function delslogan($id)
+  {
+    $this->load->helper('url');
+    //$this->db->
+    $this->db->where('set_id', $id);
+    $this->db->delete('mrk_setting');
+  }
+
+  public function deletePegawai($id)
+  {
+    $this->load->helper('url');
+    //$this->db->
+    $this->db->where('p_id', $id);
+   $this->db->delete('mrk_keypeople');
+
   }
 
   public function sloganSetting($data, $update)
@@ -40,6 +57,15 @@ class Setting_model extends CI_Model{
       $this->db->where('set_id', $update);
 
       $this->db->update('mrk_slogan', $data);
+  }
+
+  public function get_dataslogan()
+  {
+    $this->db->select('*');
+    $this->db->from('mrk_setting');
+    $this->db->order_by('set_id');
+    $query = $this->db->get();
+    return $query->result();
   }
 
   public function get_Datasetting()

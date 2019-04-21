@@ -27,7 +27,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>Maklumat Rekod Kerja 01</i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_mrk_01') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>Maklumat Rekod Kerja 02</i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_mrk_02') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>Laporan Siap Kerja</i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_laporan_siap_kerja') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>Maklumat Rekod Kerja 03</i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_mrk_03') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -123,7 +123,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>Perakuan Siap Kerja</i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_perakuan_siap_kerja') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>Senarai Semakan</i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_senarai_semakan') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -174,7 +174,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>Perakuan Siap Membaiki Kecatatan</i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_perakuan_siap_membaiki_kecatatan') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -199,7 +199,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>Pelepasan Jaminan Bank</i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_pelepasan_jaminan_bank') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -224,7 +224,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true">Perakuan Pemulangan WJP</i></i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/maklumat_perakuan_pemulangan_wang_jaminan_perlaksanaan') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -250,7 +250,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true">Surat MRK</i></i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/surat_maklumat_rekod_kerja') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -276,7 +276,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true">Surat Khas</i></i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/surat_khas') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>
@@ -302,7 +302,7 @@
               <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true">Surat Pelepasan WJP</i></i></a>
             </p>
             <p class="text-muted mt-3 mb-0">
-              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="#" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+              <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('rekod/surat_pelepasan_wjp')?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
             </p>
           </div>
         </div>

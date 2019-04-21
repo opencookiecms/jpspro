@@ -10,7 +10,7 @@
 
         <?php
 
-          echo form_open('Setting_con/SaveSetting');
+          echo form_open('Setting_con/SaveSettingPassandSlogan');
 
 
         ?>
@@ -20,36 +20,45 @@
             <p></p>
             <p></p>
             <a href="<?php echo site_url('Setting_con/usersreg') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Daftar</a>
-            <a href="<?php echo site_url('Setting_con') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Users</a>
+            <a href="<?php echo site_url('Setting_con') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Pegawai & Jurutera</a>
             <a href="<?php echo site_url('Setting_con/SaveSettingPassandSlogan') ?>" class="btn btn-dark mr-2 btn-rounded" role="button">Slogan</a>
             <p></p>
             <p></p>
-            <h4 class="card-title">Setting Slogan Surat / Username & Password</h4>
+            <h4 class="card-title">Slogan</h4>
               <div class="row">
                 <div class="col-md-4">
                 <label>Slogan</label>
                   <input type="text" class="form-control" name="slogan" placeholder="Cintailah Sungai Kita">
                 </div>
               </div>
+               <div class="row">
+                <div class="col-sm-12">
+                  <table class="table table-striped" style="margin-top: 20px;margin-bottom: 20px;undefined;table-layout: fixed; width: 669px">
+                  <colgroup>
+                  <col style="width: 20px">
+                  <col style="width: 400px">
+                  <col style="width: 120px">
+                  </colgroup>
+                    <thead>
+                      <th class="tg-amwm">Bil</th>
+                      <th class="tg-hgcj">Slogan Terkini</th>
+                      <th class="tg-hgcj">Tindakan</th>
+                    </thead>
+                    <?php $bil=0;?>
+                <?php foreach ($get_slogan as $row): $bil++ ?>
 
-              <div class="row">
-                <div class="col-sm-4">
-                  <p></p>
-                  <p></p>
-                  <label>Username</label>
-                   <input type="text" class="form-control" name="username" placeholder="username">
-                </div>
-                <p></p>
-                <p></p>
-                <div class="col-sm-4">
-                  <p></p>
-                  <p></p>
-                  <label>Password</label>
-                  <input type="password" class="form-control" name="password" placeholder="password">
+                    <tr>
+
+                      <td class="tg-baqh"><?php echo $bil ?></td>
+                      <td class="tg-baqh"><?php echo $row->set_slogan?></td>
+                      <td class="tg-baqh"> <a href="<?php echo site_url("Setting_con/deleteslogan/".$row->set_id); ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" role="button" onclick="return confirm('Anda pasti?')"><i class="menu-icon mdi mdi-delete-circle"></i></a></td>
+                    </tr>
+
+              <?php endforeach; ?>
+                  </table>
                 </div>
               </div>
               <div class="row">
-
                 <div class="col-sm-3">
                   <p></p>
                   <p></p>

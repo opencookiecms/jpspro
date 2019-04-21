@@ -51,15 +51,15 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                      <label class="tl">K1</label>
+                      <label class="tl"></label>
                       <input type="text" class="form-control" name="khusus1">
                     </div>
                     <div class="col-sm-2">
-                      <label class="tl">K2</label>
+                      <label class="tl"></label>
                         <input type="text" class="form-control" name="khusus2">
                     </div>
                     <div class="col-sm-2">
-                      <label class="tl">K3</label>
+                      <label class="tl"></label>
                       <input type="text" class="form-control" name="khusus3">
                     </div>
                   </div>
@@ -138,7 +138,7 @@
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Notis Dikeluarkan</label>
-                      <input type="date" class="form-control" name="notiskeluar" >
+                      <input type="date" class="form-control" name="notiskeluar" id="tarikhnotis" >
                     </div>
                   </div>
                 </div>
@@ -155,8 +155,13 @@
                         </div>
                       </div>
                     </div>
+                    <div class="col-sm-3">
+                        <label class="tl">:</label>
+                        <input type="text" class="form-control" id="tsumone" disabled >
+                    </div>
                   </div>
                 </div>
+                
               </div>
               <div class="row">
                 <div class="col-md-12">
@@ -169,6 +174,10 @@
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
                       </div>
+                    </div>
+                         <div class="col-sm-3">
+                        <label class="tl">:</label>
+                        <input type="text" class="form-control" id='tsumtwo' disabled >
                     </div>
                   </div>
                 </div>
@@ -185,6 +194,10 @@
                         </div>
                       </div>
                     </div>
+                    <div class="col-sm-3">
+                        <label class="tl">:</label>
+                        <input type="text" class="form-control" id='tsumthree' disabled >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -199,6 +212,10 @@
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
                       </div>
+                    </div>
+                     <div class="col-sm-3">
+                        <label class="tl">:</label>
+                        <input type="text" class="form-control" id='tsumfour' disabled >
                     </div>
                   </div>
                 </div>
@@ -320,4 +337,20 @@
       <!--end here col-md-12-->
     </div>
   </form>
+   <script>
+      $('#tarikhnotis').change(function(){
+          var date = new Date($('#tarikhnotis').val());
+          //var d = date.getDate().add(1).day();
+          //var d = date.add(1).day();
+           day = date.getDate() + 1;
+           month = date.getMonth() + 1;
+           year = date.getFullYear();
+           alert([day, month, year].join('/'));
+          //alert(d);
+
+        // add a day
+      // var newdate = date.setDate(date.getDate() + 0)
+       //$('#tsumone').val(newdate);
+      });
+   </script>
   </div>

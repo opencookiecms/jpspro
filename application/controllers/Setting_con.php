@@ -24,7 +24,9 @@ class Setting_con extends CI_Controller{
 
   }
 
-  public function SaveSetting()
+
+
+  public function simpanpegawai()
   {
     //form validation function
 		$this->load->database();
@@ -47,25 +49,45 @@ class Setting_con extends CI_Controller{
 
   }
 
+  public function deletepegawai($value="")
+  {
+    $this->load->database();
+
+    $this->Setting_model->deletePegawai($value);
+    redirect(base_url('Setting_con'));
+  }
+
+
+  public function deleteslogan($value="")
+  {
+    $this->load->database();
+
+    $this->Setting_model->delslogan($value);
+    redirect(base_url('Setting_con/SaveSettingPassandSlogan'));
+  }
+  
+  
+
   public function SaveSettingPassandSlogan()
   {
     //form validation function
     $this->load->database();
-    $this->form_validation->set_rules('peoplename', 'No Inden/Pesanan Tempatan', 'required');
+    $this->form_validation->set_rules('slogan', 'Sila masukkan sekurang-kurangnya satu slogan', 'required');
     //$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
+    $data['get_slogan']=$this->Setting_model->get_dataslogan();
     if($this->form_validation->run() == FALSE)
 
     {
       $this->load->view('template/header');
       $this->load->view('template/nav');
       $this->load->view('template/sidebar');
-      $this->load->view('pages/Setting2');
+      $this->load->view('pages/Setting2',$data);
       $this->load->view('template/footer');
     }
     else
     {
-      $this->Setting_model->addUserSetting();//load from model and call last id
-      redirect(base_url('Setting_con')); //redirect last id to another step
+      $this->Setting_model->setslogan();//load from model and call last id
+      redirect(base_url('Setting_con/SaveSettingPassandSlogan')); //redirect last id to another step
 
     }
 
@@ -128,7 +150,7 @@ class Setting_con extends CI_Controller{
 
   }
 
-  public function newSistem()
+  public function isSistem()
   {
     $data = array(
       'Land Transportation',
@@ -141,19 +163,15 @@ class Setting_con extends CI_Controller{
       'Topographic',
       'Water Supply'
     );
-    
-    $this->output
-        ->set_content_type('application/json')
-        ->set_output(json_encode(array('sistem'=>$data)));
-    //print_r($data);
   }
 
-  public function subSistem($sistem = "")
+  public function isSubsistem($sistem = "")
   {
     
+  }
 
-    $this->output
-        ->set_content_type('application/json')
-        ->set_output(json_encode(array('sistem'=>$data)));
+  public function isComponent($component = "")
+  {
+
   }
 }

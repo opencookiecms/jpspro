@@ -22,9 +22,9 @@
                   </div>
                 </div>
               </div>
-              <a href="<?php echo site_url('daftar/stepsatu')?>" data-toggle="tooltip" data-placement="top" title="Pastikan No Sebutharga didaftar sebelum prosess penambahan dilakukan" class="btn btn-success btn-block">+ Projek
+              <!-- <a href="//echo site_url('daftar/stepsatu')" data-toggle="tooltip" data-placement="top" title="Pastikan No Sebutharga didaftar sebelum prosess penambahan dilakukan" class="btn btn-success btn-block">+ Projek
                 <i class="mdi mdi-plus"></i>
-              </a>
+              </a> -->
             </div>
           </li>
           <?php switch($ssroles): case "admin": ?>
@@ -38,6 +38,12 @@
             <a class="nav-link" href="<?php echo site_url('projek')?>">
               <i class="menu-icon mdi  mdi-source-fork"></i>
               <span class="menu-title">Senarai Tempahan</span>
+            </a>
+          </li>
+              <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('daftar/stepsatu')?>">
+              <i class="menu-icon mdi  mdi-source-fork"></i>
+              <span class="menu-title">Projek</span>
             </a>
           </li>
             <li class="nav-item">
