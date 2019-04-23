@@ -149,7 +149,7 @@
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Lawat Tapak/Taklimat</label>
                       <div class="input-group">
-                        <input type="text" class="form-control"name="lawattapak">
+                        <input type="text" class="form-control"name="lawattapak" id="harilawat">
                         <div class="input-group-append bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
@@ -169,7 +169,7 @@
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Dokumen Mula Dijual</label>
                       <div class="input-group">
-                            <input type="text" class="form-control" name="docmula">
+                        <input type="text" class="form-control" name="docmula" id="harimulajual">
                         <div class="input-group-append bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
@@ -188,7 +188,7 @@
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Akhir Dokumen Dijual</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" name="docakhir">
+                        <input type="text" class="form-control" name="docakhir" id="hariakhirjual">
                         <div class="input-group-append bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
@@ -207,7 +207,7 @@
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Sebutharga Ditutup</label>
                       <div class="input-group">
-                        <input type="text" class="form-control"  name="sebuttutup">
+                        <input type="text" class="form-control"  name="sebuttutup" id="haritutup">
                         <div class="input-group-append bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
@@ -338,19 +338,71 @@
     </div>
   </form>
    <script>
-      $('#tarikhnotis').change(function(){
-          var date = new Date($('#tarikhnotis').val());
-          //var d = date.getDate().add(1).day();
-          //var d = date.add(1).day();
-           day = date.getDate() + 1;
-           month = date.getMonth() + 1;
-           year = date.getFullYear();
-           alert([day, month, year].join('/'));
-          //alert(d);
+      $(document).ready(function(){ 
+       
+       // alert([day, month, year].join('/'));
+        $("#harilawat").keyup(function(){
+        var date = new Date($('#tarikhnotis').val());
+        date.setDate(date.getDate() 
+        + parseInt($("#harilawat").val())
+        ); 
 
-        // add a day
-      // var newdate = date.setDate(date.getDate() + 0)
-       //$('#tsumone').val(newdate);
+        day = date.getDate();  
+        month = date.getMonth() + 1;
+        year = date.getFullYear();
+          $("#tsumone").val([day, month, year].join('/'));
+        });
+
+        $("#harimulajual").keyup(function(){
+
+          var datemula = new Date($('#tarikhnotis').val());
+          datemula.setDate(datemula.getDate() 
+            + parseInt($("#harimulajual").val()) 
+            + parseInt($("#harilawat").val())
+            ); 
+
+          days = datemula.getDate();
+          months = datemula.getMonth() + 1;
+          years = datemula.getFullYear();
+           $("#tsumtwo").val([days, months, years].join('/'));
+        
+        });
+
+          $("#hariakhirjual").keyup(function(){
+
+          var dateakhir = new Date($('#tarikhnotis').val());
+          dateakhir.setDate(dateakhir.getDate() 
+            + parseInt($("#harimulajual").val()) 
+            + parseInt($("#harilawat").val())
+            + parseInt($("#hariakhirjual").val())
+            
+          ); 
+
+          dayss = dateakhir.getDate();
+          monthss = dateakhir.getMonth() + 1;
+          yearss = dateakhir.getFullYear();
+           $("#tsumthree").val([dayss, monthss, yearss].join('/'));
+        
+        });
+
+          $("#haritutup").keyup(function(){
+
+          var dateakhir = new Date($('#tarikhnotis').val());
+          dateakhir.setDate(dateakhir.getDate() 
+            + parseInt($("#harimulajual").val()) 
+            + parseInt($("#harilawat").val())
+            + parseInt($("#hariakhirjual").val())
+            + parseInt($("#haritutup").val())
+            
+          ); 
+
+          dayss = dateakhir.getDate();
+          monthss = dateakhir.getMonth() + 1;
+          yearss = dateakhir.getFullYear();
+           $("#tsumfour").val([dayss, monthss, yearss].join('/'));
+        
+        });
+      
       });
    </script>
   </div>

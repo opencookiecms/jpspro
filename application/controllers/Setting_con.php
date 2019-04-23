@@ -95,9 +95,29 @@ class Setting_con extends CI_Controller{
 
   public function logins()
   {
-    $this->load->view('template/header');
-    $this->load->view('pages/login');
-    $this->load->view('template/footer');
+
+    if($this->session->userdata('email')==null)
+    {
+      $this->load->view('template/header');
+      $this->load->view('pages/login');
+      $this->load->view('template/footer');
+    } 
+    else{
+       redirect('mydashboard');
+    }
+  
+
+
+  }
+
+  public function logout()
+  {
+      $this->session->unset_userdata('email');
+      $this->session->unset_userdata('name');
+      $this->session->unset_userdata('roles');
+      $this->session->unset_userdata('jawatan');
+      $this->session->sess_destroy();
+      redirect('login');
   }
 
   public function verify()

@@ -10,6 +10,7 @@
             <div class="auto-form-wrapper">
               <?php echo form_open('Setting_con/verify'); ?>
                 <div class="form-group">
+              
                   <label class="label">Email</label>
                   <div class="input-group">
                     <input type="text" name="email" class="form-control" placeholder="Your email">

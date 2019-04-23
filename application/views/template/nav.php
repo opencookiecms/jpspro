@@ -171,7 +171,7 @@ $ssroles = $this->session->userdata("roles");
           <a class="dropdown-item">
             Check Inbox
           </a>
-          <a class="dropdown-item">
+          <a class="dropdown-item" href="<?php echo site_url('Setting_con/logout')?>">
             Sign Out
           </a>
         </div>
