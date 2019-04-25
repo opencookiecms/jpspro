@@ -236,6 +236,9 @@ class Projek_model extends CI_Model{
     $this->db->from('dp_projek');
     $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
     $this->db->join('dp_gps','dp_gps.dp_id = dp_projek.projek_id','left');
+    $this->db->join('jps_sistem','jps_sistem.sis_id = dp_gps.dp_sistem','left' );
+    $this->db->join('jps_subsistem','jps_subsistem.sub_id = dp_gps.dp_subsistem','left' );
+    $this->db->join('jps_component','jps_component.com_id = dp_gps.dp_komponen','left');
 
 
     $this->db->where('dp_projek.projek_id', $id);
@@ -404,6 +407,50 @@ class Projek_model extends CI_Model{
 
     return $query->result();
   }
+
+  public function getsungai()
+  {
+    $this->db->select('*');
+    $this->db->from('jps_sungai');
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function issistem()
+  {
+    $this->db->select('*');
+    $this->db->from('jps_sistem');
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function isubsistem($sis)
+  {
+    $this->db->where('sis_id',$sis);
+    $query = $this->db->get('jps_subsistem');
+    $output = '<option value="">Pilih Sub Sistem</option>';
+    foreach($query->result() as $row)
+    {
+      $output .= '<option value="'.$row->sub_id.'">'.$row->subsistem.'</option>';
+    }
+    return $output;
+  }
+
+  public function iscomponent($sub)
+  {
+    $this->db->where('sub_id',$sub);
+    $query = $this->db->get('jps_component');
+    $output = '<option value="">Pilih Component</option>';
+    foreach($query->result() as $row)
+    {
+      $output .= '<option value="'.$row->com_id.'">'.$row->component.'</option>';
+    }
+    return $output;
+  }
+
+
 
 
 

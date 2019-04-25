@@ -103,7 +103,9 @@ class Daftar extends CI_Controller{
   public function steptiga($idvalue='')
   {
 
-      $data['title'] = 'Daftar Sebutharga';
+    $data['get_sungai'] = $this->Projek_model->getsungai();
+    $data['get_sistem'] = $this->Projek_model->issistem();
+    $data['title'] = 'Daftar Sebutharga';
     $data['idval'] = $idvalue;
 
     $this->form_validation->set_rules('lata','Latitud Diperlukan','required');
@@ -154,6 +156,28 @@ class Daftar extends CI_Controller{
   public function orderDelete()
   {
 
+  }
+
+
+
+  public function isSubsistem()
+  {
+    $sistem = $this->input->post('sis_id');
+    if($sistem)
+    {
+      $isistem = $this->Projek_model->isubsistem($sistem);
+      echo $isistem;
+    } 
+  }
+
+  public function isComponent()
+  {
+    $subsistem = $this->input->post('sub_id');
+    if($subsistem)
+    {
+      $issubsistem = $this->Projek_model->iscomponent($subsistem);
+      echo $issubsistem;
+    } 
   }
 
 }

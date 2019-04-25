@@ -125,6 +125,8 @@ class Projek extends CI_Controller
   public function Update_Projek03($value="")
   {
     $this->load->database();
+    $data['get_sungai'] = $this->Projek_model->getsungai();
+    $data['get_sistem'] = $this->Projek_model->issistem();
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
     $id = $this->input->post('dp_idpost');
     echo $id;

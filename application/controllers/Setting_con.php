@@ -170,28 +170,4 @@ class Setting_con extends CI_Controller{
 
   }
 
-  public function isSistem()
-  {
-    $data = array(
-      'Land Transportation',
-      'Hydrological Station',
-      'Inland Water',
-      'Relief Portrayal',
-      'River Structure',
-      'Storage Pound',
-      'Stormwater Diversion',
-      'Topographic',
-      'Water Supply'
-    );
-  }
-
-  public function isSubsistem($sistem = "")
-  {
-    
-  }
-
-  public function isComponent($component = "")
-  {
-
-  }
 }

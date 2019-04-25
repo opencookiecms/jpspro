@@ -56,15 +56,15 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                      <label>K1</label>
+                   
                         <input type="text" class="form-control" name="khusus1" value="<?php echo $get_detail[0]->df_khusus1?>">
                     </div>
                     <div class="col-sm-2">
-                      <label>K2</label>
+                 
                           <input type="text" class="form-control" name="khusus2" value="<?php echo $get_detail[0]->df_khusus2?>">
                     </div>
                     <div class="col-sm-2">
-                      <label>K3</label>
+                   
                         <input type="text" class="form-control" name="khusus3" value="<?php echo $get_detail[0]->df_khusus3?>">
                     </div>
                   </div>
@@ -73,7 +73,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label>Taraf:</label>
                       <select type="text" class="form-control"  name="taraf" placeholder="Taraf">
                         <option value="<?php echo $get_detail[0]->df_taraf?>"><?php echo $get_detail[0]->df_taraf?></option>
@@ -187,7 +187,7 @@
                       <label></label>
                       <div class="input-group">
                         <div class="input-group-append bg-success border-success">
-                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhdocmula} days")); ?></span>
+                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhdocmula} days + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
                         </div>
                       </div>
                     </div>
@@ -210,7 +210,7 @@
                       <label></label>
                       <div class="input-group">
                         <div class="input-group-append bg-warning border-warning">
-                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhdocakhir} days")); ?></span>
+                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhdocakhir} days + {$get_detail[0]->df_tarikhdocmula}days + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
                         </div>
                       </div>
                     </div>
@@ -234,7 +234,7 @@
                       <label></label>
                       <div class="input-group">
                         <div class="input-group-append bg-danger border-danger">
-                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhtutup} days")); ?></span>
+                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhtutup} days + {$get_detail[0]->df_tarikhdocakhir} days + {$get_detail[0]->df_tarikhdocmula}days + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
                         </div>
                       </div>
                     </div>

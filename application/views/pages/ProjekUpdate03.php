@@ -99,9 +99,90 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-4">
                       <label>Lembangan Sungai</label>
-                      <input type="text" class="form-control" id="sungai" name="sungai" placeholder="Sungai" value="<?php echo $get_detail[0]->dp_sungai?>">
+                       <div class="input-group">
+                              <input type="text" class="form-control" id="sungai" onkeyup="autofill()" value="<?php echo $get_detail[0]->dp_sungai?>" name="sungai" readonly>
+                              <div class="input-group-append bg-success border-primary">
+                                <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-inverse-* btn-success">Pilih</button>
+                              </div>
+                            </div>
+
+
+
+                               <!-- Modal -->
+                          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document" style="margin-left:270px;">
+                              <div class="modal-content" style="background-color:white; width:800px;">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Senarai Sungai-sungai</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="container-fluid">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <div class="table-responsive dataTables_wrapper">
+                                          <table id="example" class="table table-striped">
+                                            <thead>
+                                              <tr>
+                                                <th>
+                                                  Bil
+                                                </th>
+                                                <th width:20>
+                                                  Tindakan
+                                                </th>
+                                                <th>
+                                                  Nama Sungai
+                                                </th>
+                                                <th>
+                                                  Cabang Sungai
+                                                </th>
+                                                <th>
+                                                  Daerah
+                                                </th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <?php $bil=0;?>
+                                              <?php foreach ($get_sungai as $row):$bil++ ?>
+                                                <tr>
+                                                  <td class="py-1"><?php echo $bil ?></td>
+                                                  <td class="py-1"><span><button id="buttonselect"  value="<?php echo $row->sg_name?>" class="btn btn-info" data-dismiss="modal">Pilih</button></td> <!--Show data in list view-->
+                                                  <td class="py-1"><span><?php echo $row->sg_name?><span></td> <!--Show data in list view-->
+                                                  <td class="py-1"><span><?php echo $row->sg_cabang?><span></td> <!--Show data in list view-->
+                                                  <td class="py-1"><span><?php echo $row->sg_daerah?><span></td> <!--Show data in list view-->
+       
+                                                  </tr>
+
+                                                <?php endforeach; ?>
+                                              </tbody>
+                                            </table>
+
+                                            <script type="text/javascript">
+                                            $(document).ready(function() {
+                                              $('#example').DataTable( {
+                                                "responsive":true,
+                                              } );
+                                            } );
+                                            </script>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <!--end of modal-->
+
+
                     </div>
                   </div>
                 </div>
@@ -109,13 +190,23 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label>Sistem</label>
-                      <input type="text" class="form-control" id="sistem" name="sistem" placeholder="Sistem" value="<?php echo $get_detail[0]->dp_sistem?>">
+                         <select  class="form-control" id="sistem" name="sistem">
+                          <option value="<?php echo $get_detail[0]->dp_sistem?>"><?php echo $get_detail[0]->sistem?></option>
+                           <?php
+                            foreach($get_sistem as $row)
+                            {
+                              echo '<option value="'.$row->sis_id.'">'.$row->sistem.'</option>';
+                            } 
+                            ?>   
+                        </select>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label>Sub Sistem</label>
-                      <input type="text" class="form-control" id="subsistem" name="subsistem" placeholder="Sub Sistem" value="<?php echo $get_detail[0]->dp_subsistem?>">
+                      <select class="form-control" id="subsistem" name="subsistem">
+                        <option value="<?php echo $get_detail[0]->dp_subsistem?>"><?php echo $get_detail[0]->subsistem?></option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -123,11 +214,13 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label>Komponen</label>
-                      <input type="text" class="form-control" id="komponen" name="komponen" placeholder="Komponen" value="<?php echo $get_detail[0]->dp_komponen?>">
+                        <select class="form-control" id="komponen" name="komponen">
+                        <option value="<?php echo $get_detail[0]->dp_komponen?>"><?php echo $get_detail[0]->component?></option>
+                      </select>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label>Dimensi</label>
                       <input type="text" class="form-control" id="dimensi" name="dimensi" placeholder="Dimensi" value="<?php echo $get_detail[0]->dp_dimensi?>">
                       <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $get_detail[0]->dp_id?>">
@@ -152,4 +245,66 @@
       <!--end here col-md-12-->
     </div>
   </form>
+    <script type="text/javascript">
+                  $('#myModal').on('shown.bs.modal', function () {
+                    $('#myInput').trigger('focus')
+                  })
+                  </script>
+
+                  <script>
+                    $('.table tbody').on('click','#buttonselect',function(){
+
+                      var currow = $(this).closest('tr');
+                      var sungai = currow.find('td:eq(2)').text();  
+                      var result = sungai;
+                      $("#sungai").val(result);
+                     
+                    })
+         </script>
+
+          <script>
+      $(document).ready(function(){
+        $('#sistem').change(function(){
+          var sis_id = $('#sistem').val()
+          if(sis_id != '')
+          {
+            $.ajax({
+              url:"<?php echo base_url();?>daftar/isSubsistem",
+              method:"POST",
+              data:{sis_id:sis_id},
+              success:function(data)
+              {
+                $('#subsistem').html(data);
+                $('#komponen').html('<option value="">Pilih Komponen</option>');
+              }
+            });
+          }
+          else
+          {
+            $('#subsistem').html('<option value="">Pilih Subsistem</option>');
+            $('#komponen').html('<option value="">Pilih Komponent</option>');
+          }
+        });
+
+        $('#subsistem').change(function(){
+          var sub_id = $('#subsistem').val();
+          if(sub_id != '')
+          {
+            $.ajax({
+              url:"<?php echo base_url();?>daftar/isComponent",
+              method:"POST",
+              data:{sub_id:sub_id},
+              success:function(data)
+              {
+                $('#komponen').html(data);
+              }
+            });
+          }
+          else
+          {
+            $('#komponen').html('<option value="">Pilih Komponent</option>');
+          }
+        });
+      });
+    </script>
   </div>
