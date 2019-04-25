@@ -15,7 +15,15 @@ class Rekod extends CI_Controller
   public function maklumat_mrk_01()
   {
       $data['url'] = "mrk/MRK_01/";
-      $data['get_projek'] = $this->Record_model->getmrksatu();
+      if($this->session->userdata('roles')=='user')
+      {
+          $username = $this->session->userdata('name');
+          $data['get_projek'] = $this->Record_model->getmrksatu($username);
+      }
+      else
+      {
+        $data['get_projek'] = $this->Record_model->getmrksatu();
+      }
       $this->load->view('template/header');
       $this->load->view('template/nav');
       $this->load->view('template/sidebar');

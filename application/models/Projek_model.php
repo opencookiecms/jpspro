@@ -198,6 +198,20 @@ class Projek_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_projekviewbyu($user)
+  {
+
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+
+    //Tambah join 2 table.,.,
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
+    $this->db->where('dp_projekinfo.df_penolong',$user);
+    $query = $this->db->get();
+    return $query->result();
+  }
+
 
 
   public function get_projekdetail($kodvodnumber) //view data

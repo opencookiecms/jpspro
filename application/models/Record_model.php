@@ -34,18 +34,27 @@ class Record_model extends CI_Model{
 
   }
   
-  public function getmrksatu()
+  public function getmrksatu($ifuser="")
   {
     $this->load->helper('url');
 
-    $this->db->select('*');
-    $this->db->from('mrk_satu');
-    $this->db->join('dp_projekinfo', 'dp_projekinfo.df_kodvot = mrk_satu.mrks_kodvot','left');
-    $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
-
-    $query = $this->db->get();
-
-    return $query->result();
+    if($ifuser)
+    {
+      $this->db->select('*');
+      $this->db->from('mrk_satu');
+      $this->db->join('dp_projekinfo', 'dp_projekinfo.df_kodvot = mrk_satu.mrks_kodvot','left');
+      $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left'); 
+      $this->db->where('dp_projekinfo.df_penolong',$ifuser);
+    }
+    else
+    {
+      $this->db->select('*');
+      $this->db->from('mrk_satu');
+      $this->db->join('dp_projekinfo', 'dp_projekinfo.df_kodvot = mrk_satu.mrks_kodvot','left');
+      $this->db->join('dp_projek','dp_projek.projek_id = dp_projekinfo.dp_id','left');
+    }
+      $query = $this->db->get();
+      return $query->result();
   }
 
   public function getmrkdua()

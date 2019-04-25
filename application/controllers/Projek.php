@@ -38,7 +38,16 @@ class Projek extends CI_Controller
     $this->load->view('template/header');
     $this->load->view('template/nav');
     $this->load->view('template/sidebar');
-    $data['get_projek']=$this->Projek_model->get_projekview();
+    if($this->session->userdata('roles')=='user')
+    {
+      $username = $this->session->userdata('name');
+      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username);
+    }
+    else
+    {
+      $data['get_projek']=$this->Projek_model->get_projekview();
+    }
+
     $this->load->view('pages/projek', $data);
     $this->load->view('template/footer');
   }
