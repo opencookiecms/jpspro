@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 28, 2019 at 02:48 AM
+-- Generation Time: Apr 27, 2019 at 06:31 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.0.32
 
@@ -37,9 +37,9 @@ CREATE TABLE `dp_gps` (
   `dp_longb` int(11) DEFAULT NULL,
   `dp_longc` int(11) DEFAULT NULL,
   `dp_sungai` varchar(50) COLLATE utf8_bin DEFAULT NULL,
-  `dp_sistem` varchar(150) COLLATE utf8_bin DEFAULT NULL,
-  `dp_subsistem` varchar(150) COLLATE utf8_bin DEFAULT NULL,
-  `dp_komponen` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `dp_sistem` int(11) DEFAULT NULL,
+  `dp_subsistem` int(11) DEFAULT NULL,
+  `dp_komponen` int(11) DEFAULT NULL,
   `dp_dimensi` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `dp_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -49,7 +49,7 @@ CREATE TABLE `dp_gps` (
 --
 
 INSERT INTO `dp_gps` (`gps_id`, `dp_lata`, `dp_latb`, `dp_latc`, `dp_longa`, `dp_longb`, `dp_longc`, `dp_sungai`, `dp_sistem`, `dp_subsistem`, `dp_komponen`, `dp_dimensi`, `dp_id`) VALUES
-(17, 5, 37, 4, 100, 32, 4, 'SUNGAI', 'SISTEM', 'SUB SISTEM', 'KOMPONEN', 'DIMENSI', 32);
+(19, 4, 4, 4, 4, 4, 4, '  Alor Ekor Padang', 2, 3, 4, '232.222D', 35);
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,7 @@ CREATE TABLE `dp_projek` (
 --
 
 INSERT INTO `dp_projek` (`projek_id`, `df_nosebutharga`, `df_tarikmohon`, `df_jsebutharga`, `df_tajuk`, `df_daerah`) VALUES
-(32, 'JPS.KMSB(SH-KM)N/B/P/16/2012', '2019-02-17', 'Sebutharga', 'KERJA-KERJA MENEBAS, MENCUCI, MEMBUANG SAMPAH SARAP, REBA KAYU SERTA LAI-LAIN KERJA BERKAITAN DI KEDUA-DUA CERUN SISI SEPANJANG PARIT/ALOR/SUNGAI, SKIM SALIRAN TERKAWAL BAN MERBOK, KUALA MUDA', 'Kuala Muda');
+(35, '19/2019', '2019-04-11', 'Lantikan Terus', 'The new projek', 'Sik');
 
 -- --------------------------------------------------------
 
@@ -110,7 +110,828 @@ CREATE TABLE `dp_projekinfo` (
 --
 
 INSERT INTO `dp_projekinfo` (`info_id`, `df_gred`, `df_kategori`, `df_khusus1`, `df_khusus2`, `df_khusus3`, `df_taraf`, `df_tempohsiap`, `dp_bulanmig`, `df_hargadoc`, `df_tarikhnotis`, `df_tarikhlawat`, `df_tarikhdocmula`, `df_tarikhdocakhir`, `df_tarikhtutup`, `df_juruterad`, `df_jurutera`, `df_penolongkanan`, `df_penolong`, `df_kodvot`, `df_peruntukan`, `df_bakiperuntukan`, `dp_id`) VALUES
-(18, 'G1', 'CE', 'C1', 'C2', 'C3', 'Bumiputera', '8', 'Bulan', '50', '2019-02-17', 4, 5, 4, 5, 'Nor Rozaini bt Abdullah', 'Yahaya b. Shariff', NULL, 'Azhar bin Ahmad', 'k-2342394', 'negeri', '12000', 32);
+(21, 'G1', 'CE', 'C1', 'C2', 'C3', 'Bumiputera', '8', 'Minggu', '50', '2019-04-12', 4, 5, 6, 4, 'Mohd Amin b Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Haraz', 'K_BP12345', 'negeri', '1200', 35);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jps_component`
+--
+
+CREATE TABLE `jps_component` (
+  `com_id` int(11) NOT NULL,
+  `sub_id` int(11) DEFAULT NULL,
+  `component` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jps_component`
+--
+
+INSERT INTO `jps_component` (`com_id`, `sub_id`, `component`) VALUES
+(1, 1, 'Bridge Structure'),
+(2, 1, 'Guardrail'),
+(3, 1, 'Handrail'),
+(4, 3, 'Evaporation'),
+(5, 3, 'Rainfall'),
+(6, 3, 'Siren'),
+(7, 3, 'Stream Flow'),
+(8, 3, 'Water Level'),
+(9, 4, 'Compound'),
+(10, 4, 'Fencing'),
+(11, 4, 'Housing'),
+(12, 4, 'Outdoor Casing'),
+(13, 5, 'Building'),
+(14, 5, 'Instrumentation'),
+(15, 5, 'Intake & Outlet Structure'),
+(16, 5, 'Main Dam'),
+(17, 5, 'Reservoir'),
+(18, 5, 'Saddle Dam'),
+(19, 5, 'Spilway'),
+(20, 5, 'Tunnel'),
+(21, 6, 'River Bund'),
+(22, 7, 'Control Platform'),
+(23, 7, 'Gate Assemble'),
+(24, 7, 'Inlet & Outlet Sump'),
+(25, 7, 'Main Structure'),
+(26, 9, 'River Bank'),
+(27, 10, 'Gate Assemble'),
+(28, 10, 'Main Structure'),
+(29, 11, 'Control Platform'),
+(30, 11, 'Gate Assemble'),
+(31, 11, 'Inlet & Outlet Sump'),
+(32, 11, 'Main Structure'),
+(33, 12, 'Control Boom'),
+(34, 12, 'Rake Assemble'),
+(35, 12, 'Screen Assemble'),
+(36, 13, 'Control Platform'),
+(37, 13, 'Gate Assemble'),
+(38, 13, 'Inlet & Outlet Sump'),
+(39, 13, 'Main Structure'),
+(40, 14, 'Gate Assemble'),
+(41, 14, 'Main Structure'),
+(42, 15, 'Acces Road'),
+(43, 15, 'Fencing'),
+(44, 15, 'Landscape'),
+(45, 15, 'Pond Corridor'),
+(46, 15, 'Pond Reservior'),
+(47, 15, 'Signages'),
+(48, 16, 'Gate Assemble'),
+(49, 16, 'Gross Polutant Trap'),
+(50, 16, 'Inlet Structure'),
+(51, 16, 'Outlet Structure'),
+(52, 16, 'Pump Assemble'),
+(53, 16, 'Trash Screen'),
+(54, 17, 'Bypass Channel'),
+(55, 18, 'Building'),
+(56, 18, 'Bypass Tunnel'),
+(57, 18, 'Diversion Structure'),
+(58, 18, 'Flood Detection Instrumentation'),
+(59, 20, 'Landscape'),
+(60, 21, 'Control Building'),
+(61, 21, 'Inlet & Outlet Sump'),
+(62, 21, 'Main Structure'),
+(63, 21, 'Pump Assamble');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jps_sistem`
+--
+
+CREATE TABLE `jps_sistem` (
+  `sis_id` int(11) NOT NULL,
+  `sistem` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jps_sistem`
+--
+
+INSERT INTO `jps_sistem` (`sis_id`, `sistem`) VALUES
+(1, 'Land Transportation'),
+(2, 'Hydrological Station'),
+(3, 'Inland Water'),
+(4, 'Relief Portrayal'),
+(5, 'River Structure'),
+(6, 'Storage Pond'),
+(7, 'Stormwater Diversion'),
+(8, 'Topographic'),
+(9, 'Water Supply');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jps_subsistem`
+--
+
+CREATE TABLE `jps_subsistem` (
+  `sub_id` int(11) NOT NULL,
+  `sis_id` int(11) DEFAULT NULL,
+  `subsistem` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jps_subsistem`
+--
+
+INSERT INTO `jps_subsistem` (`sub_id`, `sis_id`, `subsistem`) VALUES
+(1, 1, 'Bridge'),
+(2, 1, 'Farm Road'),
+(3, 2, 'Instrumentation'),
+(4, 2, 'Station Housing'),
+(5, 3, 'Dam'),
+(6, 4, 'Embankment'),
+(7, 5, 'Barrage'),
+(8, 5, 'Fish Ladder'),
+(9, 5, 'Riverbank Protection'),
+(10, 5, 'Riverlock'),
+(11, 5, 'Tidal Control Gate'),
+(12, 5, 'Trap Boom'),
+(13, 5, 'Water Control Structure'),
+(14, 5, 'Wier'),
+(15, 6, 'Pond Compound'),
+(16, 6, 'Pond Structure'),
+(17, 7, 'River Diversion'),
+(18, 7, 'SMART'),
+(19, 8, 'Drained Reserver Boundry'),
+(20, 8, 'River Reserve Area'),
+(21, 9, 'Pump House');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jps_sungai`
+--
+
+CREATE TABLE `jps_sungai` (
+  `sg_id` int(11) NOT NULL,
+  `sg_name` varchar(150) DEFAULT NULL,
+  `sg_cabang` varchar(150) DEFAULT NULL,
+  `sg_panjang` varchar(150) DEFAULT NULL,
+  `sg_daerah` varchar(150) DEFAULT NULL,
+  `sg_noshet` varchar(150) DEFAULT NULL,
+  `sg_norujukan` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jps_sungai`
+--
+
+INSERT INTO `jps_sungai` (`sg_id`, `sg_name`, `sg_cabang`, `sg_panjang`, `sg_daerah`, `sg_noshet`, `sg_norujukan`) VALUES
+(1, '  Alor Ekor Padang', 'Sg. Ketil', '4.90', '  Baling', '', ''),
+(2, '  Alor Ketil', 'Sg. Ketil', '1.95', '  Baling', '', ''),
+(3, '  Alor Kim Seng', 'Sg. Merah', '2.75', '  Baling', '', ''),
+(4, '  Alor Pekaka', 'Sg. Muda', '2.60', '  Baling', '', ''),
+(5, '  Bechah Sawa', 'Sg. Ketil', '5.20', '  Baling', '', ''),
+(6, '  Charok Akar', 'Sg. Tawar', '5.20', '  Baling', '3466', '092  173'),
+(7, '  Charok Ambing', 'Sg. Kijang', '2.25', '  Baling', '', ''),
+(8, '  Charok Bakap', 'Sg. Tembak', '2.60', '  Baling', '3466', '063  296'),
+(9, '  Charok Balok', 'Sg. Ketil', '1.35', '  Baling', '', ''),
+(10, '  Charok Bandar', 'Sg. Ketil', '3.55', '  Baling', '3467', '213  511'),
+(11, '  Charok Bangkong', 'Sg. Limau', '4.45', '  Baling', '3467', '228  329'),
+(12, '  Charok Batu Bunga', 'Sg. Ketil', '4.20', '  Baling', '3467', '244  505'),
+(13, '  Charok Batu Hampar', 'Sg. Ketil', '8.10', '  Baling', '3467', '227  564'),
+(14, '  Charok Batu Sebelah', 'Sg. Baling', '11.05', '  Baling', '3466', '272  283'),
+(15, '  Charok Bdg Padang', 'Sg. Kupang', '3.00', '  Baling', '', ''),
+(16, '  Charok Bemban', 'Sg. Ketil', '5.25', '  Baling', '', ''),
+(17, '  Charok Beras', 'Sg. Bemban', '3.90', '  Baling', '', ''),
+(18, '  Charok Beriaga', 'Sg. Ketil', '5.00', '  Baling', '3467', '242  493'),
+(19, '  Charok Bongor', 'Sg. Ketil', '4.00', '  Baling', '', ''),
+(20, '  Charok Bunting', 'Sg. Ketil', '9.05', '  Baling', '', ''),
+(21, '  Charok Chenerai', 'Sg. Ketil', '2.00', '  Baling', '', ''),
+(22, '  Charok Checar', 'Sg. Kupang', '8.50', '  Baling', '', ''),
+(23, '  Charok Golok', 'Sg. Pegang', '3.50', '  Baling', '', ''),
+(24, '  Charok Guar Tinggi', 'Sg. Tembak', '2.55', '  Baling', '', ''),
+(25, '  Charok Jengka', 'Sg. Ketil', '1.95', '  Baling', '3467', '240  447'),
+(26, '  Charok Juan', 'Charok Batu Sebelah', '2.80', '  Baling', '', ''),
+(27, '  Charok Kangar', 'Sg. Tiak', '2.30', '  Baling', '3467', '212  193'),
+(28, '  Charok Kapas', 'Sg. Kupang', '11.95', '  Baling', '3467', '247  457'),
+(29, '  Charok Kapas', 'Sg. Pegang', '0.95', '  Baling', '3466', '212  195'),
+(30, '  Charok Kasai', 'Sg. Lau', '4.50', '  Baling', '', ''),
+(31, '  Charok Kechil', 'Sg. Pegang', '7.80', '  Baling', '3467', '152  332'),
+(32, '  Charok Kelian ', 'Sg. Ketil', '8.10', '  Baling', '3467', '218  352'),
+(33, '  Charok Kelubi', 'Sg. Ketil', '6.00', '  Baling', '3467', '254  515'),
+(34, '  Charok Kemimeh', 'Sg. Ketumbar', '2.05', '  Baling', '', ''),
+(35, '  Charok Kercut', 'Sg. Tembak', '3.65', '  Baling', '3466', '022  292'),
+(36, '  Charok Ketengga 1', 'Sg. Ketil', '5.15', '  Baling', '3467', '220  543'),
+(37, '  Charok Ketengga 2', 'Sg. Samak', '1.85', '  Baling', '', ''),
+(38, '  Charok Kudong', 'Sg. Ketil', '1.35', '  Baling', '3466', '086  207'),
+(39, '  Charok Lahar', 'Sg. Ketil', '5.40', '  Baling', '', ''),
+(40, '  Charok Landak', 'Sg. Ketil', '5.35', '  Baling', '', ''),
+(41, '  Charok Lata Tanah', 'Sg. Ketil', '3.35', '  Baling', '3467', '235  575'),
+(42, '  Charok Mak Liah', 'Sg. Ketil', '2.15', '  Baling', '', ''),
+(43, '  Charok Nau', 'Sg. Sedim', '3.85', '  Baling', '', ''),
+(44, '  Charok Pasir', 'Sg. Badang', '4.45', '  Baling', '2466', '065  014'),
+(45, '  Charok Pdg Buloh', 'Sg. Ketil', '6.65', '  Baling', '3466', '066  235'),
+(46, '  Charok Pecah Batu', 'Sg. Ketil', '1.15', '  Baling', '3467', '223  504'),
+(47, '  Charok Pendiat 1', 'Sg. Ketil', '3.45', '  Baling', '3467', '224  447'),
+(48, '  Charok Pendiat 2', 'Sg. Kupang', '2.90', '  Baling', '', ''),
+(49, '  Charok Petata', 'Sg. Tiak', '2.50', '  Baling', '3466', '223  182'),
+(50, '  Charok Peti', 'Sg. Tiak', '3.20', '  Baling', '3466', '233  182'),
+(51, '  Charok Purun', 'Sg. Tawar', '4.65', '  Baling', '3466', '227  185'),
+(52, '  Charok Puteh 1', 'Sg. Ketil', '6.90', '  Baling', '', ''),
+(53, '  Charok Puteh 2', 'Sg. Ketil', '6.30', '  Baling', '3467', '218  523'),
+(54, '  Charok Rambai', 'Sg. Kupang', '5.60', '  Baling', '', ''),
+(55, '  Charok Rotan Emas', 'Sg. Tawar', '2.95', '  Baling', '3466', '155  155'),
+(56, '  Charok Rumia', 'Sg. Ketil', '5.20', '  Baling', '3466', ''),
+(57, '  Charok Salang', 'Sg. Tas', '2.70', '  Baling', '', ''),
+(58, '  Charok Sedim', 'Sg. Muda', '2.45', '  Baling', '', ''),
+(59, '  Charok Semerliang', 'Sg. Ketil', '7.45', '  Baling', '3467', '192  466'),
+(60, '  Charok Seraya Ular', 'Sg. Ketil', '1.60', '  Baling', '3467', '210  462'),
+(61, '  Charok Serdang', 'Sg. Tembak', '3.70', '  Baling', '3466', '030  268'),
+(62, '  Charok Sg Durian', 'Sg. Ketil', '7.40', '  Baling', '3467', '268  315'),
+(63, '  Charok Sg. Durian', 'Sg. Ketil', '3.60', '  Baling', '3467', '215  467'),
+(64, '  Charok Sik', 'Sg. Pegang', '8.95', '  Baling', '3467', '164  334'),
+(65, '  Charok Sira', 'Sg. Pulai', '5.55', '  Baling', '3466', '238  205'),
+(66, '  Charok Tanah Licin', 'Sg. Muda', '3.65', '  Baling', '3466', '238  205'),
+(67, '  Charok Telok Perah', 'Sg. Ketumbar', '2.60', '  Baling', '', ''),
+(68, '  Charok Temelah', 'Sg. Ketil', '4.10', '  Baling', '3467', '273  363'),
+(69, '  Charok Tilan', 'Sg. Ketumbar', '5.70', '  Baling', '', ''),
+(70, '  Charok Tok Jengor', 'Sg. Bobak', '3.85', '  Baling', '3466', '213  317'),
+(71, '  Charok Tok Pong', 'Sg. Ketil', '2.55', '  Baling', '3467', '230  475'),
+(72, '  Charok Tok Uban', 'Sg. Ketil', '1.10', '  Baling', '3467', '247  452'),
+(73, '  Charok Tualang', 'Sg. Ketil', '10.20', '  Baling', '3466', '060  215'),
+(74, '  Sg. Air Hitam', 'Sg. Ketil', '4.40', '  Baling', '3467', '245  563'),
+(75, '  Sg. Air Kepal', 'Sg. Mempelam', '5.35', '  Baling', '3466', '044  065'),
+(76, '  Sg. Air Legong', 'Sg. Siong', '7.15', '  Baling', '3467', '263  439'),
+(77, '  Sg. Air Merah', 'Sg. Mempelam', '6.25', '  Baling', '3466', '072  068'),
+(78, '  Sg. Air Panas', 'Sg. Legong', '2.50', '  Baling', '3467', '283  444'),
+(79, '  Sg. Badang', 'Sg. Sedim', '7.50', '  Baling', '3466', '058  017'),
+(80, '  Sg. Bakai', 'Sg. Siputih', '11.60', '  Baling', '3466', '207  158'),
+(81, '  Sg. Bakong', 'Sg. Sedim', '17.40', '  Baling', '3366', '970  156'),
+(82, '  Sg. Baling', 'Sg. Ketil', '13.80', '  Baling', '3466', '280  270'),
+(83, '  Sg. Batu', 'Sg. Ketil', '2.50', '  Baling', '', ''),
+(84, '  Sg. Batu Lintang', 'Sg. Baubak', '7.35', '  Baling', '3466', '226  110'),
+(85, '  Sg. Baubak', 'Sg. Kupang', '13.75', '  Baling', '3466', '207  158'),
+(86, '  Sg. Bemban', 'Sg. Ketil', '11.30', '  Baling', '', ''),
+(87, '  Sg. Binjoi', 'Sg. Ketil', '4.50', '  Baling', '3466', '057  203'),
+(88, '  Sg. Buloh', 'Sg. Bakai', '7.15', '  Baling', '3466', '118  103'),
+(89, '  Sg. Buloh Lemang', 'Sg. Badang', '6.70', '  Baling', '', ''),
+(90, '  Sg. Cahaya', 'Sg. Muda', '2.00', '  Baling', '3367', '984  364'),
+(91, '  Sg. Charok Batu Kab', 'Sg. Lau', '3.50', '  Baling', '3467', '183  357'),
+(92, '  Sg. Charok Durian Burong', 'Sg. Lau', '4.40', '  Baling', '', ''),
+(93, '  Sg. Charok lesong', 'Sg. Muda', '6.00', '  Baling', '', ''),
+(94, '  Sg. Darak', 'Sg. Muda', '11.00', '  Baling', '3366', '988  280'),
+(95, '  Sg. Gudai', 'Sg.Muda', '5.60', '  Baling', '', ''),
+(96, '  Sg. Haji Muda', 'Sg. Ketil', '1.90', '  Baling', '3466', '098  227'),
+(97, '  Sg. Jenalik', 'Sg. Ketil', '7.30', '  Baling', '3467', '206  395'),
+(98, '  Sg. Kejai', 'Sg. Siputih', '15.90', '  Baling', '3466', '013  138'),
+(99, '  Sg. Kelian Mas', 'Sg. Baho', '13.00', '  Baling', '3568', '352  651'),
+(100, '  Sg. Kelian Panjang', 'Sg. Siong', '4.35', '  Baling', '3467', '282  417'),
+(101, '  Sg. Kembar', 'Sg. Tembak', '10.40', '  Baling', '3466', '063  285'),
+(102, '  Sg. Kepayang', 'Sg. Legong', '3.30', '  Baling', '3467', '252  397'),
+(103, '  Sg. Kerbau Jalang', 'Sg. Ketil', '3.35', '  Baling', '3467', '216  483'),
+(104, '  Sg. Ketil', 'Sg. Muda', '83.00', '  Baling', '3366', '977  213'),
+(105, '  Sg. Ketumbar', 'Sg. Ketil', '14.90', '  Baling', '3466', '120  226'),
+(106, '  Sg. Kijang', 'Sg. Ketil', '6.80', '  Baling', '3466', '010  244'),
+(107, '  Sg. Kuang', 'Sg. Tiak', '9.10', '  Baling', '3466', '232  158'),
+(108, '  Sg. Kupang', 'Sg. Ketil', '28.00', '  Baling', '3466', '177  228'),
+(109, '  Sg. K. Kuli', 'Sg. Sedim', '9.60', '  Baling', '3366', '962  168'),
+(110, '  Sg. Lanai', 'Sg. Tembak', '6.60', '  Baling', '', ''),
+(111, '  Sg. Langkar', 'Sg. Baho', '12.50', '  Baling', '3568', '390  639'),
+(112, '  Sg. Langkar', 'Sg. Tebus', '12.00', '  Baling', '3568', '390  640'),
+(113, '  Sg. Lau', 'Sg. Ketil', '10.35', '  Baling', '3467', '218  377'),
+(114, '  Sg. Legong', 'Sg. Ketil', '11.00', '  Baling', '3467', '233  396'),
+(115, '  Sg. Limau', 'Sg. Ketil', '10.00', '  Baling', '3466', '205  287'),
+(116, '  Sg. Macang Bubok', 'Sg. Siputih', '2.55', '  Baling', '', ''),
+(117, '  Sg. Malau', 'Sg. Sedim', '16.05', '  Baling', '3466', '011  113'),
+(118, '  Sg. Mas', 'Sg. Langkar', '6.00', '  Baling', '3568', '432  604'),
+(119, '  Sg. Mempelam', 'Sg. Sedim', '21.70', '  Baling', '3466', '036  077'),
+(120, '  Sg. Mengkuang', 'Sg. Ketil', '6.10', '  Baling', '3466', '106  265'),
+(121, '  Sg. Menora', 'Sg. Tembak', '5.05', '  Baling', '', ''),
+(122, '  Sg. Merah', 'Sg. Ketil', '6.40', '  Baling', '3466', '030  202'),
+(123, '  Sg. Naksah', 'Sg. Kejai', '7.35', '  Baling', '3466', '123  130'),
+(124, '  Sg. Pangkor', 'Sg. Sedim', '4.30', '  Baling', '', ''),
+(125, '  Sg. Pegang', 'Sg. Ketil', '22.00', '  Baling', '3466', '137  257'),
+(126, '  Sg. Pendiat ', 'Sg. Ketil', '5.70', '  Baling', '3466', '262  256'),
+(127, '  Sg. Pendiat ', 'Sg. Tiak', '5.20', '  Baling', '3466', '265  140'),
+(128, '  Sg. Pior', 'Sg. Lasor', '7.50', '  Baling', '3467', '283  573'),
+(129, '  Sg. Pulai', 'Sg. Ketil', '10.70', '  Baling', '3466', '233  247'),
+(130, '  Sg. Rambong', 'Charok Batu Sebelah', '5.30', '  Baling', '3467', '287  334'),
+(131, '  Sg. Samak', 'Sg. Ketil', '6.60', '  Baling', '', ''),
+(132, '  Sg. Selarong', 'Sg. Siputih', '8.55', '  Baling', '', ''),
+(133, '  Sg. Sempang', 'Sg. Sedim', '1.90', '  Baling', '', ''),
+(134, '  Sg. Seputeh', 'Sg. Sedim', '2.60', '  Baling', '3466', '012  136'),
+(135, '  Sg. Siong', 'Sg. Ketil', '14.80', '  Baling', '', ''),
+(136, '  Sg. Siput', 'Sg. Ketil', '17.90', '  Baling', '3466', '067  027'),
+(137, '  Sg. Tas', 'Sg. Lanai', '9.65', '  Baling', '', ''),
+(138, '  Sg. Tas', 'Sg. Tembak', '10.40', '  Baling', '3467', '074  313'),
+(139, '  Sg. Tawar', 'Sg. Ketil', '22.80', '  Baling', '3466', '093  206'),
+(140, '  Sg. Tawar Besar', 'Sg. Tawar', '11.00', '  Baling', '3467', '047  033'),
+(141, '  Sg. Tawar Kechil', 'Sg. Tawar', '11.50', '  Baling', '3466', '135  137'),
+(142, '  Sg. Tawar Kerising', 'Sg. Tawar', '10.05', '  Baling', '3466', '062  040'),
+(143, '  Sg. Tebing Tinggi', 'Sg. Pegang', '6.65', '  Baling', '3466', '142  268'),
+(144, '  Sg. Tebus', 'Sg. Baho', '8.50', '  Baling', '3568', '380  613'),
+(145, '  Sg. Teduri', 'Sg. Ketil', '10.00', '  Baling', '3466', '250  248'),
+(146, '  Sg. Telok Nyior', 'Sg. Muda', '6.50', '  Baling', '3367', '972  305'),
+(147, '  Sg. Tembak', 'Sg. Muda', '27.40', '  Baling', '3366', '981  229'),
+(148, '  Sg. Temekah', 'Sg. Sedim', '6.00', '  Baling', '3366', '957  180'),
+(149, '  Sg. Tepus', 'Sg. Baho', '5.00', '  Baling', '3568', '350  652'),
+(150, '  Sg. Tiak', 'Sg. Kupang', '18.20', '  Baling', '3466', '193  198'),
+(151, '  Sg. Turus Gading', 'Sg. Sedim', '5.10', '  Baling', '3466', '046  038'),
+(152, '  Sg. Ulu Tawar', 'Sg. Sedim', '18.10', '  Baling', '', ''),
+(153, '  Sg. Weng', 'Sg. Limau', '6.00', '  Baling', '', ''),
+(154, '  Sg. Weng', 'Sg. Ketil', '13.70', '  Baling', '3467', '243  475'),
+(155, '  Sg.Charok Kelian ', 'Sg. Pegang', '11.60', '  Baling', '3467', '194  333'),
+(156, '  Sg. Sedim', 'Sg. Muda', '68.10', '  Baling / Kulim', '3366', '913  143'),
+(157, '  Sg  Ayer Hitam                                     ', 'Sg.Terap', '8.80', '  Bandar Baharu', '3465', ''),
+(158, '  Sg. Air Merah', 'Sg. Jawi', '2.40', '  Bandar Baharu', '3365', '850  786'),
+(159, '  Sg. Air Merah', 'Sg. Batu', '3.60', '  Bandar Baharu', '3465', '890  808'),
+(160, '  Sg. Air Puteh', 'Sg. Air Merah', '1.60', '  Bandar Baharu', '3365', ''),
+(161, '  Sg. Air Puteh', 'Sg. Serdang', '6.40', '  Bandar Baharu', '3365', '914  742'),
+(162, '  Sg. Ayer Hitam', 'Sg. Dingin', '8.80', '  Bandar Baharu', '3465', '985  782'),
+(163, '  Sg. Batu', 'Sg. Dingin', '3.00', '  Bandar Baharu', '3465', '010  888'),
+(164, '  Sg. Batu', 'Sg. Serdang', '3.60', '  Bandar Baharu', '3465', '897  802'),
+(165, '  Sg. Buaya', 'Sg. Kechil', '1.60', '  Bandar Baharu', '3365', '847  708'),
+(166, '  Sg. Buloh', 'Sg. Dingin', '4.80', '  Bandar Baharu', '3465', '996  867'),
+(167, '  Sg. Buyong', 'Sg. Serdang', '3.20', '  Bandar Baharu', '3365', '910  753'),
+(168, '  Sg. Charok Merah', 'Sg. Kerian', '4.40', '  Bandar Baharu', '3465', '024  827'),
+(169, '  Sg. Chelong', 'Sg. Kerian', '6.40', '  Bandar Baharu', '', ''),
+(170, '  Sg. Dingin', 'Sg. Kerian', '18.00', '  Bandar Baharu', '3465', '010  820'),
+(171, '  Sg. Dingin', 'Sg. Kerian ( Bhg. Hulu )', '8.00', '  Bandar Baharu', '3465', '030  890'),
+(172, '  Sg. Duri', 'Sg. Jawi', '2.40', '  Bandar Baharu', '3365', '837  764'),
+(173, '  Sg. Hitam  ', 'Sg. Serdang', '8.80', '  Bandar Baharu', '3465', '933  793'),
+(174, '  Sg. Inchong', 'Sg. Serdang', '6.00', '  Bandar Baharu', '3365', '914  732'),
+(175, '  Sg. Jawi', '_', '5.60', '  Bandar Baharu', '3365', '735  814'),
+(176, '  Sg. Jelutong', 'Sg. Dingin', '3.20', '  Bandar Baharu', '3465', '997  853'),
+(177, '  Sg. Kasai', 'Sg. Dingin', '2.80', '  Bandar Baharu', '3465', '070  877'),
+(178, '  Sg. Kasai                              ', 'Sg.Tengas', '2.80', '  Bandar Baharu', '3465', '\'982  843'),
+(179, '  Sg. Kechil', 'Sg. Kerian', '4.00', '  Bandar Baharu', '3365', '804  708'),
+(180, '  Sg. Kechil Hulu', 'Sg. Kerian', '3.50', '  Bandar Baharu', '3364', '483  674'),
+(181, '  Sg. Kerian', '_', '79.00', '  Bandar Baharu', '3365', '724  728'),
+(182, '  Sg. Leret', 'Sg. Setol', '3.20', '  Bandar Baharu', '', ''),
+(183, '  Sg. Merah                                   ', 'Sg.Terap', '3.20', '  Bandar Baharu', '3465', '968  815'),
+(184, '  Sg. Pasir', 'Sg. Air Hitam', '1.60', '  Bandar Baharu', '3365', '024  913'),
+(185, '  Sg. Paya Takong', 'Sg. Kerian', '5.60', '  Bandar Baharu', '', ''),
+(186, '  Sg. Petai', 'Sg. Jawi', '2.00', '  Bandar Baharu', '3365', '860  801'),
+(187, '  Sg. Punti', 'Sg. Serdang', '4.00', '  Bandar Baharu', '3365', '908  807'),
+(188, '  Sg. Rambai', 'Sg. Duri', '4.80', '  Bandar Baharu', '3365', '845  768'),
+(189, '  Sg. Rusa', 'Sg. Kecil Hulu', '1.10', '  Bandar Baharu', '', ''),
+(190, '  Sg. Salleh', 'Sg. Kerian', '8.20', '  Bandar Baharu', '3465', '963  752'),
+(191, '  Sg. Selinsing                    ', 'Sg.Terap', '4.40', '  Bandar Baharu', '3465', '955  836'),
+(192, '  Sg. Semambu', 'Sg. Jawi', '1.60', '  Bandar Baharu', '3365', '845  793'),
+(193, '  Sg. Serdang', 'Sg. Kerian', '10.80', '  Bandar Baharu', '3465', '936  726'),
+(194, '  Sg. Setul', 'Sg. Serdang', '2.00', '  Bandar Baharu', '3365', '926  740'),
+(195, '  Sg. Taka', 'Sg. Kerian', '4.80', '  Bandar Baharu', '3465', '044  843'),
+(196, '  Sg. Telok Kelian', 'Sg. Chelong', '2.80', '  Bandar Baharu', '', ''),
+(197, '  Sg. Telok Sera', 'Sg. Chelong', '3.20', '  Bandar Baharu', '', ''),
+(198, '  Sg. Tepus', 'Sg. Kerian', '3.20', '  Bandar Baharu', '3364', '832  675'),
+(199, '  Sg. Terunsing', 'Sg. Dingin', '1.60', '  Bandar Baharu', '3465', '016  840'),
+(200, '  Sg. Ulu Jejawi', 'Sg. Jawi', '3.20', '  Bandar Baharu', '3365', '862  812'),
+(201, '  Sg. Terap', 'Sg. Kerian', '21.60', '  Bandar Baharu / Kulim', '3465', '977  797'),
+(202, '  Alor Aman', 'Sg. Nawa', '2.10', '  Kota Setar', '', ''),
+(203, '  Alor Ayam', 'Sg. Anak Bukit', '0.86', '  Kota Setar', '', ''),
+(204, '  Alor Bahador', 'Sg. Anak Bukit', '0.26', '  Kota Setar', '', ''),
+(205, '  Alor Bangsar', 'Sg. Pengkalan Kundur', '1.16', '  Kota Setar', '3268', '647  742'),
+(206, '  Alor Bukit Lada', 'Sg. Nawa', '3.00', '  Kota Setar', '', ''),
+(207, '  Alor Gedok', 'Sg. Kedah', '0.57', '  Kota Setar', '', ''),
+(208, '  Alor Intan Shafinaz', 'Sg. Anak Bukit', '0.14', '  Kota Setar', '', ''),
+(209, '  Alor Kanchut', 'Sg. Anak Bukit', '0.40', '  Kota Setar', '', ''),
+(210, '  Alor Kew', 'Sg. Nawa', '2.15', '  Kota Setar', '', ''),
+(211, '  Alor Kg. Padang / Tuba', 'Sg. Jabi', '7.50', '  Kota Setar', '', ''),
+(212, '  Alor Kolon', 'Sg. Nawa', '5.00', '  Kota Setar', '', ''),
+(213, '  Alor Lebai Long', 'Sg. Nawa', '2.60', '  Kota Setar', '', ''),
+(214, '  Alor Melaka', 'Sg. Kedah', '1.75', '  Kota Setar', '', ''),
+(215, '  Alor Mentaloon', 'Sg. Anak Bukit', '0.25', '  Kota Setar', '', ''),
+(216, '  Alor Pak Ngah', 'Sg. Pendang', '4.50', '  Kota Setar', '3368', '760  733'),
+(217, '  Alor Raja', 'Sg. Mati', '4.50', '  Kota Setar', '3368', '735  810'),
+(218, '  Alor Selambai', 'Sg. Tajar', '2.50', '  Kota Setar', '3368', '723  769'),
+(219, '  Alor Selarong Lalang', 'Sg. Pengkalan Kundor', '5.50', '  Kota Setar', '', ''),
+(220, '  Alor Semadom', 'Sg. Alor Kandis & Alor Bakar Bata', '4.50', '  Kota Setar', '', ''),
+(221, '  Alor Senibong', 'Sg. Tajar', '7.00', '  Kota Setar', '3368', '752  761'),
+(222, '  Alor Senjaya', 'Sg. Anak Bukit', '1.90', '  Kota Setar', '', ''),
+(223, '  Alor Tambang Badak', 'Sg. Anak Bukit', '0.15', '  Kota Setar', '', ''),
+(224, '  Alor Tok Pasai', 'Sg. Kedah', '1.10', '  Kota Setar', '', ''),
+(225, '  Alor Tok Poi', 'Sg. Anak Bukit', '0.20', '  Kota Setar', '', ''),
+(226, '  Alor Wisma (Konkrit)', 'Sg. Anak Bukit', '0.30', '  Kota Setar', '', ''),
+(227, '  Parit Konk. Sekunder Jln. Langgar', 'Sg. Kedah', '0.95', '  Kota Setar', '', ''),
+(228, '  Sg. Alor Bakong', 'Sg. Gunung Sali & Sg. Mempelam', '1.83', '  Kota Setar', '', ''),
+(229, '  Sg. Alor Kandis', 'Alor Semadom', '0.43', '  Kota Setar', '', ''),
+(230, '  Sg. Alor Malai', 'Sg. Raja', '1.75', '  Kota Setar', '3268', '665  788'),
+(231, '  Sg. Alor Merah', 'Sg. Anak Bukit', '3.50', '  Kota Setar', '3268', '660  818'),
+(232, '  Sg. Alor Siam', 'Sg. Derga & Sg. Raja', '0.78', '  Kota Setar', '', ''),
+(233, '  Sg. Anak Bukit', 'Sg. Kedah', '15.00', '  Kota Setar', '3268', '653  810'),
+(234, '  Sg. Baharu', 'Sg. Kubang Rotan', '7.50', '  Kota Setar', '', ''),
+(235, '  Sg. Bakar Bata', 'Sg. Anak Bukit', '1.01', '  Kota Setar', '', ''),
+(236, '  Sg. Budi', 'Sg. Nawa', '3.00', '  Kota Setar', '3368', '823  777'),
+(237, '  Sg. Cegar', 'Sg. Anak Bukit', '0.81', '  Kota Setar', '', ''),
+(238, '  Sg. Derga', 'Sg. Raja', '1.63', '  Kota Setar', '3268', '656  777'),
+(239, '  Sg. Durian', 'Sg. Padang Serai', '2.00', '  Kota Setar', '', ''),
+(240, '  Sg. Gunung', 'Sg. Anak Bukit', '3.30', '  Kota Setar', '', ''),
+(241, '  Sg. Gunung Sali', 'Sg. Alor Bakong & Sg. Mempelam', '1.42', '  Kota Setar', '', ''),
+(242, '  Sg. Jabi', 'Sg. Langgar', '6.50', '  Kota Setar', '3368', '775  806'),
+(243, '  Sg. Kandai', 'Sg. Pendang', '4.00', '  Kota Setar', '3368', '715  718'),
+(244, '  Sg. Kangkong', '-', '6.00', '  Kota Setar', '', ''),
+(245, '  Sg. Kedah', '-', '22.00', '  Kota Setar', '3268', '666  752'),
+(246, '  Sg. Kuar Jawa', '-', '10.00', '  Kota Setar', '', ''),
+(247, '  Sg. Kubang Rotan', 'Sg. Kedah', '6.50', '  Kota Setar', '', ''),
+(248, '  Sg. Langgar', 'Sg. Tajar', '7.00', '  Kota Setar', '3368', '704  773'),
+(249, '  Sg. Mati', 'Sg. Langgar', '4.00', '  Kota Setar', '3368', '716  813'),
+(250, '  Sg. Mempelam', 'Alor Bakong/Sungai Gunung Sali', '1.77', '  Kota Setar', '', ''),
+(251, '  Sg. Nawa', 'Sg. Pendang', '20.00', '  Kota Setar', '3368', '800  747'),
+(252, '  Sg. Padang Serai', 'Sg. Nawa', '3.30', '  Kota Setar', '', ''),
+(253, '  Sg. Pengkalan Kundur', 'Sg. Kedah', '3.00', '  Kota Setar', '3268', '650  734'),
+(254, '  Sg. Raja', 'Sg. Kedah', '1.34', '  Kota Setar', '', ''),
+(255, '  Sg. Sematang', 'Sg. Kubang Rotan', '5.10', '  Kota Setar', '', ''),
+(256, '  Sg. Tajar', 'Sg. Kedah', '8.50', '  Kota Setar', '3368', '736  749'),
+(257, '  Sg. Tanjung Bendahara', 'Sg. Kedah', '1.64', '  Kota Setar', '', ''),
+(258, '  Sg. Terus', 'Sg. Kedah', '0.92', '  Kota Setar', '', ''),
+(259, '  Sg. Tunjong', 'Sg. Lampam', '7.00', '  Kota Setar', '3368', '938  788'),
+(260, '  Sg. Air Mendidih', 'Sg Petani', '3.20', '  Kuala Muda', '3366', '786  245'),
+(261, '  Sg. Air Nasi', 'Sg. Merbok', '6.00', '  Kuala Muda', '3367', '781  320'),
+(262, '  Sg. Anak Ikan', 'Sg. Gajah ', '5.00', '  Kuala Muda', '3366', '946  272'),
+(263, '  Sg. Badak', 'Sg. Gurun', '4.00', '  Kuala Muda', '3367', '742  441'),
+(264, '  Sg. Badong', 'Sg. Merbok', '5.00', '  Kuala Muda', '3267', '672  343'),
+(265, '  Sg. Bakar Arang', 'Sg Petani', '2.40', '  Kuala Muda', '3366', '771  241'),
+(266, '  Sg. Baru', 'Sg. Merbok', '8.86', '  Kuala Muda', '3266', '672  292'),
+(267, '  Sg. Batu', 'Sg. Merbok', '3.50', '  Kuala Muda', '3367', '747  303'),
+(268, '  Sg. Batu Larangan', 'Sg. Merbok', '2.50', '  Kuala Muda', '3366', '727  255'),
+(269, '  Sg. Batu Pahat', 'Sg. Merbok', '3.00', '  Kuala Muda', '3367', '705  350'),
+(270, '  Sg. Bongkok', 'Sg. Merbok', '20.00', '  Kuala Muda', '3367', '812  369'),
+(271, '  Sg. Bujang', 'Sg. Merbok', '16.50', '  Kuala Muda', '3266', '674  274'),
+(272, '  Sg. Bukit Merah', 'Sg. Tok Pawang', '7.60', '  Kuala Muda', '3367', '794  392'),
+(273, '  Sg. Chabang', 'Sg. Perahu', '3.00', '  Kuala Muda', '3367', '903  408'),
+(274, '  Sg. Che Bima', 'Sg. Merbok', '2.00', '  Kuala Muda', '3366', '756  270'),
+(275, '  Sg. Dedap Kechil', 'Sg. Merbok', '1.00', '  Kuala Muda', '3366', '661  268'),
+(276, '  Sg. Derhaka', 'Sg. Merbok', '2.00', '  Kuala Muda', '3267', '652  310'),
+(277, '  Sg. Gajah', 'Sg. Muda', '12.00', '  Kuala Muda', '3366', '965  276'),
+(278, '  Sg. Gelam', 'Sg. Merbok', '4.00', '  Kuala Muda', '3366', '707  261'),
+(279, '  Sg. Gelugur', 'Sg Petani', '3.20', '  Kuala Muda', '3466', '778  238'),
+(280, '  Sg. Getah', 'Sg. Merbok', '5.00', '  Kuala Muda', '3367', '811  304'),
+(281, '  Sg. Gurun', 'Sg. Udang', '8.00', '  Kuala Muda', '3367', '741  500'),
+(282, '  Sg. Ibor', 'Sg. Gurun', '6.40', '  Kuala Muda', '3367', '775  437'),
+(283, '  Sg. Jagong', 'Sg. Merbok', '2.00', '  Kuala Muda', '3366', '743  263'),
+(284, '  Sg. Jenara', 'Sg. Jeniang', '1.50', '  Kuala Muda', '3367', '934  435'),
+(285, '  Sg. Jerneh', 'Sg. Merbok Kechil', '5.00', '  Kuala Muda', '3267', '677  344'),
+(286, '  Sg. Jerong', 'Sg. Muda', '22.00', '  Kuala Muda', '3466', '864  165'),
+(287, '  Sg. Keduak', 'Sg. Muda', '6.00', '  Kuala Muda', '3367', '921  391'),
+(288, '  Sg. Keluang', 'Sg. Merbok', '3.00', '  Kuala Muda', '3366', '730  265'),
+(289, '  Sg. Kerapu', 'Sg. Merbok', '1.50', '  Kuala Muda', '3366', '740  281'),
+(290, '  Sg. Kerisek', 'Sg. Terus', '11.50', '  Kuala Muda', '3266', '643  244'),
+(291, '  Sg. Kerkau', 'Sg. Muda', '5.00', '  Kuala Muda', '3367', '953  365'),
+(292, '  Sg. Keroh', 'Sg. Bongkok', '5.00', '  Kuala Muda', '3367', '794  395'),
+(293, '  Sg. Ketapan', 'Sg. Bongkok', '8.00', '  Kuala Muda', '', ''),
+(294, '  Sg. Kong Kedah', 'Sg. Muda', '8.00', '  Kuala Muda', '3366', '820  156'),
+(295, '  Sg. Korok', 'Sg. Matang Pasir', '5.00', '  Kuala Muda', '3366', '730  130'),
+(296, '  Sg. Kunyit', 'Sg. Gurun', '5.00', '  Kuala Muda', '3367', '742  433'),
+(297, '  Sg. Lalang', 'Sg. Merbok', '8.00', '  Kuala Muda', '3367', '811  304'),
+(298, '  Sg. Layar', 'Sg. Merbok', '3.50', '  Kuala Muda', '3366', '762  285'),
+(299, '  Sg. Matang Pasir', 'Sg. Simpor', '2.00', '  Kuala Muda', '3366', '711  173'),
+(300, '  Sg. Merbok', '-', '29.00', '  Kuala Muda', '3266', '680  264'),
+(301, '  Sg. Merbok Kecil', 'Sg. Merbok', '9.00', '  Kuala Muda', '3266', '657  288'),
+(302, '  Sg. Pasir', 'Sg. Petani', '9.00', '  Kuala Muda', '3366', '734  244'),
+(303, '  Sg. Perahu', 'Sg. Muda', '6.00', '  Kuala Muda', '3367', '921  419'),
+(304, '  Sg. Petani', 'Sg. Merbok', '15.00', '  Kuala Muda', '3466', '757  247'),
+(305, '  Sg. Peteri', 'Sg. Muda', '3.00', '  Kuala Muda', '3366', '916  203'),
+(306, '  Sg. Pial', 'Sg. Merbok', '5.00', '  Kuala Muda', '3266', '652  295'),
+(307, '  Sg. Puntar', 'Sg. Muda', '8.00', '  Kuala Muda', '', ''),
+(308, '  Sg. Selambau', 'Sg. Merbok', '20.00', '  Kuala Muda', '3366', '932  231'),
+(309, '  Sg. Seluang', 'Sg. Muda', '2.50', '  Kuala Muda', '3366', '905  158'),
+(310, '  Sg. Semeling', 'Sg. Merbok', '5.00', '  Kuala Muda', '', ''),
+(311, '  Sg. Siakap', 'Sg. Merbok', '1.00', '  Kuala Muda', '3366', '667  275'),
+(312, '  Sg. Simpor', 'Sg. Merbok', '8.00', '  Kuala Muda', '3266', '681  195'),
+(313, '  Sg. Sin', 'Sg. Muda', '4.00', '  Kuala Muda', '', ''),
+(314, '  Sg. Sungkap', 'Sg. Muda', '15.00', '  Kuala Muda', '3367', '950  335'),
+(315, '  Sg. Telok Wang Besar', 'Sg. Merbok', '3.00', '  Kuala Muda', '3366', '723  225'),
+(316, '  Sg. Terus', 'Sg. Merbok', '12.00', '  Kuala Muda', '', ''),
+(317, '  Sg. Tok Malau', 'Sg. Merbok', '3.00', '  Kuala Muda', '', ''),
+(318, '  Sg. Tok Pawang', 'Sg. Bongkok', '8.00', '  Kuala Muda', '', ''),
+(319, '  Sg. Tukang', 'Sg. Bongkok', '4.00', '  Kuala Muda', '3366', '792  280'),
+(320, '  Sg. Muda', '-', '178.00', '  Kuala Muda / Kulim / Baling / Sik', '3366 / 3466', ''),
+(321, '  Alor Asun, Binjal', 'Sg. W/ Perah', '1.35', '  Kubang Pasu', '', ''),
+(322, '  Sg. Air Terjun', 'Sg. Tanjung Pauh', '2.42', '  Kubang Pasu', '', ''),
+(323, '  Sg. Badak', 'Sg. Bata / Temin', '17.32', '  Kubang Pasu', '3369', '773  146'),
+(324, '  Sg. Bata', 'Sg. Bata /Temin', '13.68', '  Kubang Pasu', '', ''),
+(325, '  Sg. Bata / Temin', 'Sg. Tanjung Pauh', '25.00', '  Kubang Pasu', '', ''),
+(326, '  Sg. Belat Tip', 'Sg. Bata / Temin', '6.64', '  Kubang Pasu', '', ''),
+(327, '  Sg. Biak', 'Sg. Tanjung Pauh', '8.65', '  Kubang Pasu', '3369', '728  960'),
+(328, '  Sg. Changkat Sentul', 'Sg. Kecil', '8.60', '  Kubang Pasu', '', ''),
+(329, '  Sg. Changlon', 'Sg. Laka', '2.00', '  Kubang Pasu', '', ''),
+(330, '  Sg. Che Kedo', 'Sg. Mada', '3.43', '  Kubang Pasu', '', ''),
+(331, '  Sg. Gelong', 'Sg. Perlis', '1.80', '  Kubang Pasu', '', ''),
+(332, '  Sg. Jitra', 'Sg. Tanjung Pauh', '6.50', '  Kubang Pasu', '', ''),
+(333, '  Sg. Jitra Lama', 'Sg. Jitra', '1.75', '  Kubang Pasu', '', ''),
+(334, '  Sg. Kecil', 'Sg. Bata / Temin', '10.88', '  Kubang Pasu', '3369', '767  108'),
+(335, '  Sg. Kelian', 'Sg. Bata / Temin', '4.05', '  Kubang Pasu', '', ''),
+(336, '  Sg. Keronco', 'Sg. Jitra', '1.70', '  Kubang Pasu', '', ''),
+(337, '  Sg. Kubang Pasu', 'Sg. Wang Perah', '4.00', '  Kubang Pasu', '3369', '775  053'),
+(338, '  Sg. Kurung Hitam', 'Sg. Bata / Sg. Temin', '2.21', '  Kubang Pasu', '', ''),
+(339, '  Sg. Laka', 'Sg. Bata / Temin', '14.00', '  Kubang Pasu', '3369', '704  130'),
+(340, '  Sg. Lesong', 'Sg. Pdg. Inai', '7.00', '  Kubang Pasu', '3369', '784  193'),
+(341, '  Sg. Lesung', 'Sg. Bata / Temin', '6.04', '  Kubang Pasu', '', ''),
+(342, '  Sg. Macang', 'Sg. Pasir Puteh', '6.00', '  Kubang Pasu', '3369', '861  133'),
+(343, '  Sg. Mati', 'Sg. Bata / Temin', '8.65', '  Kubang Pasu', '3369', '738  183'),
+(344, '  Sg. Nak Chit', 'Sg. Bata / Temin', '5.92', '  Kubang Pasu', '3369', '728  207'),
+(345, '  Sg. Palong', 'Sg. Tanjong Pauh', '12.78', '  Kubang Pasu', '', ''),
+(346, '  Sg. Pasir Puteh', 'Sg. Sintok', '11.00', '  Kubang Pasu', '3369', '837  145'),
+(347, '  Sg. Pasir Putih', 'Sg. Bata / Temin', '11.67', '  Kubang Pasu', '3369', '873  145'),
+(348, '  Sg. Pauh', 'Sg. Tanjung Pauh', '10.60', '  Kubang Pasu', '', ''),
+(349, '  Sg. Paya Palas', 'Sg. P/ Pahlawan', '1.50', '  Kubang Pasu', '', ''),
+(350, '  Sg. Pdg. Inai', 'Sg. Badak', '4.00', '  Kubang Pasu', '3369', '790  173'),
+(351, '  Sg. Pdg. Pelandok', 'Sg. Sintok', '9.00', '  Kubang Pasu', '3369', '847  113'),
+(352, '  Sg. Pering', 'Sg. Perlis', '21.60', '  Kubang Pasu', '', ''),
+(353, '  Sg. Perlis', 'Sg. Mada', '19.80', '  Kubang Pasu', '', ''),
+(354, '  Sg. Petani', 'Sg. Bata / Temin', '2.31', '  Kubang Pasu', '3369', '743  105'),
+(355, '  Sg. Pinang', 'Sg. Bata / Temin', '2.62', '  Kubang Pasu', '3369', '838  110'),
+(356, '  Sg. Pinang', 'Sg. Pdg. Pelandok', '3.00', '  Kubang Pasu', '3369', '838  120'),
+(357, '  Sg. Punti', 'Sg. Bata / Temin', '8.85', '  Kubang Pasu', '3369', '778  132'),
+(358, '  Sg. Puteh', 'Sg. Wang Perah', '3.00', '  Kubang Pasu', '3369', '770  061'),
+(359, '  Sg. Sampang', 'Sg. Tanjung Pauh', '4.83', '  Kubang Pasu', '', ''),
+(360, '  Sg. Sintok', 'Sg. Bata / Temin', '5.23', '  Kubang Pasu', '3369', '811  138'),
+(361, '  Sg. Tangga', 'Sg. Bata / Temin', '2.01', '  Kubang Pasu', '3369', '752  210'),
+(362, '  Sg. Tanjung Pauh', 'Sg. Anak Bukit', '13.50', '  Kubang Pasu', '', ''),
+(363, '  Sg. Temin', 'Sg. Bata / Temin', '16.90', '  Kubang Pasu', '3369', '736  102'),
+(364, '  Sg. Titi Kerbau', 'Sg. Laka', '3.50', '  Kubang Pasu', '', ''),
+(365, '  Sg. Tok Kassim', 'Sg. Bata / Temin', '12.48', '  Kubang Pasu', '3369', '749  137'),
+(366, '  Sg. Tok Mas', 'Sg. Bata / Temin', '1.60', '  Kubang Pasu', '3369', '733  103'),
+(367, '  Sg. Wang Perah', 'Sg. Bata / Temin', '13.18', '  Kubang Pasu', '3369', '728  080'),
+(368, '  Sg. Air  Puteh', 'Sg. Junjong', '4.80', '  Kulim', '3365', '840  847'),
+(369, '  Sg. Air Hitam', 'Sg. Dingin', '5.60', '  Kulim', '3465', '973  834'),
+(370, '  Sg. Air Jerneh', 'Sg. Punti', '3.20', '  Kulim', '3365', '903  834'),
+(371, '  Sg. Air Merah Selatan', 'Sg. Machang Bubok', '4.00', '  Kulim', '3365', '824  922'),
+(372, '  Sg. Air Merah (Keladi)', 'Sg. Keladi', '4.00', '  Kulim', '3365', '822  963'),
+(373, '  Sg. Air Merah (Utara)', 'Sg. Jarak', '13.60', '  Kulim', '3366', '862  059'),
+(374, '  Sg. Anak Kulim', 'Sg. Kulim', '3.20', '  Kulim', '3365', '886  884'),
+(375, '  Sg. Badak', 'Sg. Kulim', '4.00', '  Kulim', '3365', '835  935'),
+(376, '  Sg. Badak', 'Sg. Merbok', '4.00', '  Kulim', '3465', '013  976'),
+(377, '  Sg. Batu', 'Sg. Dingin', '4.00', '  Kulim', '3465', '897  803'),
+(378, '  Sg. Batu  Belah', 'Sg. Junjong', '1.60', '  Kulim', '3365', '858  847'),
+(379, '  Sg. Bekuai', 'Sg. Sedim', '4.00', '  Kulim', '3366', '920  141'),
+(380, '  Sg. Bikan', 'Sg. Sedim', '7.20', '  Kulim', '3466', '013  045'),
+(381, '  Sg. Binjal', 'Sg. Junjong', '4.80', '  Kulim', '3365', '843  875'),
+(382, '  Sg. Bukit Payong', 'Sg. Karangan', '7.20', '  Kulim', '3365', '948  973'),
+(383, '  Sg. Buloh', 'Sg. Sedim', '1.60', '  Kulim', '3465', '067  982'),
+(384, '  Sg. Burong', 'Sg. Kulim', '2.00', '  Kulim', '3365', '888  943'),
+(385, '  Sg. Charok Bandu', 'Sg. Tengas', '1.60', '  Kulim', '3365', '972  863'),
+(386, '  Sg. Dingin', 'Sg. Kulim', '8.00', '  Kulim', '3365', '902  906'),
+(387, '  Sg. Dohah', 'Sg. Sedim', '4.80', '  Kulim', '', ''),
+(388, '  Sg. Dublin', 'Sg. Tebuan', '2.50', '  Kulim', '3465', '059  977'),
+(389, '  Sg. Duku', 'Sg. Dingin', '4.00', '  Kulim', '3465', '053  927'),
+(390, '  Sg. Durian Burong', 'Sg. Punti', '4.80', '  Kulim', '3365', '936  824'),
+(391, '  Sg. Jarak', 'Sg. Perai', '20.00', '  Kulim', '3366', '745  039'),
+(392, '  Sg. Jemerli', 'Sg. Sedim', '16.00', '  Kulim', '3365', '969  124'),
+(393, '  Sg. Junjong', 'Sg. Jawi', '1.60', '  Kulim', '3365', '812  865'),
+(394, '  Sg. Kangar', 'Sg. Mahang', '4.00', '  Kulim', '3465', '096  907'),
+(395, '  Sg. Karangan', 'Sg. Sedim', '29.60', '  Kulim', '3366', '918  132'),
+(396, '  Sg. Karoh', 'Sg. Muda', '8.00', '  Kulim', '', ''),
+(397, '  Sg. Keladi', 'Sg. Kulim', '5.60', '  Kulim', '3365', '840  974'),
+(398, '  Sg. Kereh', 'Sg. Perai', '8.00', '  Kulim', '3366', '772  077'),
+(399, '  Sg. Khow Quan', 'Sg. Kulim', '3.00', '  Kulim', '3365', '878  897'),
+(400, '  Sg. Kilang  Lama', 'Sg. Kulim', '5.60', '  Kulim', '3365', '880  965'),
+(401, '  Sg. Kob', 'Sg. Karangan', '5.60', '  Kulim', '3365', '933  982'),
+(402, '  Sg. Kulim', 'Sg. Prai', '19.20', '  Kulim', '3365', '830  000'),
+(403, '  Sg. Lembu', 'Sg. Kulim', '1.60', '  Kulim', '3365', '823  979'),
+(404, '  Sg. Mahang', 'Sg. Mahang', '4.80', '  Kulim', '3465', '086  905'),
+(405, '  Sg. Malau', 'Sg. Terap', '2.00', '  Kulim', '3365', '935  818'),
+(406, '  Sg. Merbok', 'Sg. Sedim', '7.20', '  Kulim', '3465', '010  987'),
+(407, '  Sg. Nagalilit', 'Sg. Jarak', '1.60', '  Kulim', '3366', '850  067'),
+(408, '  Sg. Otak Kerbau', 'Sg. Nagalilit', '4.80', '  Kulim', '3366', '870  072'),
+(409, '  Sg. Pasir', 'Sg. Dingin', '7.20', '  Kulim', '3465', '024  912'),
+(410, '  Sg. Perangin', 'Sg. Junjong', '1.60', '  Kulim', '3365', '824  867'),
+(411, '  Sg. Pokok Jambu', 'Sg. Karangan', '8.00', '  Kulim', '3366', '929  053'),
+(412, '  Sg. Pokok Terap', 'Sg. Jemerli', '4.00', '  Kulim', '3366', '963  067'),
+(413, '  Sg. Punti', 'Sg. Serdang', '10.40', '  Kulim', '3365', '907  806'),
+(414, '  Sg. Reyau', 'Sg. Sedim', '2.40', '  Kulim', '3465', '110  983'),
+(415, '  Sg. Selarong', 'Sg. Jarak', '8.80', '  Kulim', '3366', '887  059'),
+(416, '  Sg. Seluang', 'Sg. Kulim', '1.60', '  Kulim', '3366', '841  059'),
+(417, '  Sg. Seluang Atas', 'Sg. Jarak', '11.20', '  Kulim', '3366', '848  046'),
+(418, '  Sg. Seluang Bawah', 'Sg. Jarak', '8.00', '  Kulim', '3366', '852  011'),
+(419, '  Sg. Sidam', 'Sg. Muda', '4.80', '  Kulim', '3366', '880  120'),
+(420, '  Sg. Sira', 'Sg. Kerian', '4.00', '  Kulim', '3365', '840  850'),
+(421, '  Sg. Tebuan', 'Sg. Keladi', '4.80', '  Kulim', '3365', '855  930'),
+(422, '  Sg. Tebuan', 'Sg. Sedim', '4.80', '  Kulim', '3465', '053  970'),
+(423, '  Sg. Terona', 'Sg. Sedim', '1.60', '  Kulim', '3465', '083  970'),
+(424, '  Sg. Tok Dahab', 'Sg. Selarong', '5.00', '  Kulim', '3365', '912  029'),
+(425, '  Sg. Tok Sulong', 'Sg. Kulim', '3.20', '  Kulim', '3365', '883  873'),
+(426, '  Sg. Ular', 'Sg. Kulim', '5.60', '  Kulim', '3365', '924  898'),
+(427, '  Sg. Wang Pinang', 'Sg. Keladi', '4.80', '  Kulim', '3365', '873  937'),
+(428, '  Sg. Tengas', 'Sg. Dingin', '12.00', '  Kulim Bandar Baharu', '3365', '980  848'),
+(429, '  Sg. Air Buloh', '-', '0.70', '  Langkawi', '3069', '000  973'),
+(430, '  Sg. Air Hangat', '-', '6.00', '  Langkawi', '3069', '037  084'),
+(431, '  Sg. Air Tawar/Kisap', 'Sg. Kisap', '8.50', '  Langkawi', '3069', '070  060'),
+(432, '  Sg. Bading', 'Sg. Melaka', '1.50', '  Langkawi', '3069', '942  058'),
+(433, '  Sg. Baru', '-', '1.80', '  Langkawi', '3069', '007  100'),
+(434, '  Sg. Batu', '-', '1.30', '  Langkawi', '3069', '020  993'),
+(435, '  Sg. Batu ara', '-', '2.70', '  Langkawi', '3069', '913  055'),
+(436, '  Sg. Batu Asah', '-', '3.00', '  Langkawi', '3069', '030  020'),
+(437, '  Sg. Batu Papan', 'Sg. Melaka', '3.50', '  Langkawi', '3069', '005  001'),
+(438, '  Sg. Bayas', 'Sg. Melaka', '8.00', '  Langkawi', '3069', '982  023'),
+(439, '  Sg. Belikit', '-', '2.40', '  Langkawi', '3069', '908  047'),
+(440, '  Sg. Cenang', '-', '5.50', '  Langkawi', '3069', '945  986'),
+(441, '  Sg. Chenom', 'Sg. Melaka', '6.00', '  Langkawi', '3069', '997  025'),
+(442, '  Sg. Datai', '-', '3.20', '  Langkawi', '3069', '880  110'),
+(443, '  Sg. Daun', '-', '0.50', '  Langkawi', '3069', '943  116'),
+(444, '  Sg. Itau', 'Sg. Air Hangat', '2.25', '  Langkawi', '', ''),
+(445, '  Sg. Kecil Kuah', 'Kuah', '3.00', '  Langkawi', '', ''),
+(446, '  Sg. Kedak', '-', '0.75', '  Langkawi', '', ''),
+(447, '  Sg. Kelibang', '-', '2.25', '  Langkawi', '3069', '063  011'),
+(448, '  Sg. Kelubi', '-', '1.00', '  Langkawi', '3069', '948  080'),
+(449, '  Sg. Kenyum', 'Sg. Melaka', '1.50', '  Langkawi', '3069', '982  033'),
+(450, '  Sg. Kerman', 'Sg. Tarrom', '0.90', '  Langkawi', '', ''),
+(451, '  Sg. Kok ( Sg. Korok )', 'Sg. Melaka', '2.00', '  Langkawi', '3069', '026  057'),
+(452, '  Sg. Kuah', '-', '2.55', '  Langkawi', '3069', '090  010'),
+(453, '  Sg. Kubang Badak', '-', '5.50', '  Langkawi', '3069', '920  077'),
+(454, '  Sg. Langkanah', '-', '5.00', '  Langkawi', '3069', '000  775'),
+(455, '  Sg. Limbong', 'Sg. Melaka', '2.50', '  Langkawi', '3069', '963  060'),
+(456, '  Sg. Melaka/Ulu Melaka', '-', '13.75', '  Langkawi', '3069', '963  035'),
+(457, '  Sg. Nyior', '-', '1.30', '  Langkawi', '3069', '007  973'),
+(458, '  Sg. Padang Gaung', 'Sg. Melaka', '2.50', '  Langkawi', '', ''),
+(459, '  Sg. Penghulu', '-', '2.20', '  Langkawi', '3069', '058  028'),
+(460, '  Sg. Perangin/Burau', '-', '1.75', '  Langkawi', '3069', '887  070'),
+(461, '  Sg. Petang', '-', '4.75', '  Langkawi', '3069', '010  067'),
+(462, '  Sg. Ranggut Besar', 'Sg. Teriang', '2.50', '  Langkawi', '3069', '928  050'),
+(463, '  Sg. Saga', 'Sg. Melaka', '5.00', '  Langkawi', '3069', '992  057'),
+(464, '  Sg. Tama Besar', '-', '5.00', '  Langkawi', '3069', '865  082'),
+(465, '  Sg. Tama Kechil', '-', '3.30', '  Langkawi', '3069', '852  105'),
+(466, '  Sg. Tanah Liat Hitam', 'Sg. Melaka', '2.25', '  Langkawi', '', ''),
+(467, '  Sg. Tarrom', '-', '2.75', '  Langkawi', '', ''),
+(468, '  Sg. Teriang & Sg. Tok Datu', 'Sg. Ranggut Besar', '1.50', '  Langkawi', '', ''),
+(469, '  Sg. Tok Peteri', '-', '6.25', '  Langkawi', '', ''),
+(470, '  Sg. Tok Tukang', '-', '1.97', '  Langkawi', '', ''),
+(471, '  Sg. Ulu Kelibang', '-', '0.85', '  Langkawi', '', ''),
+(472, '  Alor Lebai Saman', 'Sg. Pdg. Terap', '5.00', '  Pdg. Terap', '', ''),
+(473, '  Alor Naka', 'Sg. Pdg. Terap', '2.00', '  Pdg. Terap', '', ''),
+(474, '  Charok Chik', 'Sg. Pedu', '4.00', '  Pdg. Terap', '3469', '050  876'),
+(475, '  Charok Jelutong', 'Sg. Pedu', '8.00', '  Pdg. Terap', '3368', '934  887'),
+(476, '  Charok Kejai', 'Sg. Pdg. Terap', '2.00', '  Pdg. Terap', '', ''),
+(477, '  Charok Kg. Kejal', 'Sg. Pdg. Terap', '10.00', '  Pdg. Terap', '3369', '869  935'),
+(478, '  Charok Kubang Bemban', 'Sg. Tekai', '6.00', '  Pdg. Terap', '3368', '964  845'),
+(479, '  Charok Kubu', 'Sg. Pdg. Terap', '3.00', '  Pdg. Terap', '3369', '832  957'),
+(480, '  Charok Lubok Labi', 'Sg. Pdg. Terap', '6.00', '  Pdg. Terap', '3369', '966  944'),
+(481, '  Charok Ruan Palas', 'Sg. Pdg. Terap', '4.00', '  Pdg. Terap', '3369', '827  939'),
+(482, '  Charok Semeliang', 'Sg. Pdg. Terap', '5.00', '  Pdg. Terap', '3369', '918  952'),
+(483, '  Charok Semua', 'Sg. Cha', '6.00', '  Pdg. Terap', '3468', '045  666'),
+(484, '  Charok Tandop Besar', 'Sg. Tekai', '15.00', '  Pdg. Terap', '3368', '962  855'),
+(485, '  Charok. Kerbau Jalang', 'Sg. Tekai', '7.00', '  Pdg. Terap', '3368', '986  883'),
+(486, '  Sg. Ah Ning', 'Sg. Pdg. Terap', '16.00', '  Pdg. Terap', '3469', '072  064'),
+(487, '  Sg. Alor Naka', 'Sg. Pdg. Terap', '2.00', '  Pdg. Terap', '', ''),
+(488, '  Sg. Ayun', 'Sg. Pedu', '9.00', '  Pdg. Terap', '3468', '067  916'),
+(489, '  Sg. Bakong', 'Charok Kubang Bemban', '6.00', '  Pdg. Terap', '3368', '950  810'),
+(490, '  Sg. Bejineh', 'Sg. Pintu Wang', '3.40', '  Pdg. Terap', '3369', '903  107'),
+(491, '  Sg. Berau', 'Sg. Pdg. Terap', '4.00', '  Pdg. Terap', '3369', '867  967'),
+(492, '  Sg. Bong', 'Sg. Pedu ( Ampangan )', '8.00', '  Pdg. Terap', '3469', '143  978'),
+(493, '  Sg. Cha', 'Sg. Muda', '8.00', '  Pdg. Terap', '3468', '040  650'),
+(494, '  Sg. Charok Kura', 'Sg. Janing', '2.00', '  Pdg. Terap', '', ''),
+(495, '  Sg. Chebar', 'Sg. Muda', '11.00', '  Pdg. Terap', '3468', '120  751'),
+(496, '  Sg. Durian Burong', 'Sg. Pdg. Sanai', '15.00', '  Pdg. Terap', '3469', '022  071'),
+(497, '  Sg. Gap', 'Sg. Muda', '9.00', '  Pdg. Terap', '3468', '066  703'),
+(498, '  Sg. Haat Nyei', 'Sg. Aning', '7.00', '  Pdg. Terap', '3469', '080  061'),
+(499, '  Sg. Janing', 'Sg. Pdg. Terap', '17.00', '  Pdg. Terap', '3369', '090  960'),
+(500, '  Sg. Jek', 'Sg. Pedu ( Ampangan )', '6.00', '  Pdg. Terap', '3469', '107  942'),
+(501, '  Sg. Kah Ing', 'Sg. Aning', '10.00', '  Pdg. Terap', '3469', '042  022'),
+(502, '  Sg. Kasai', 'Sg. Lamdin', '8.00', '  Pdg. Terap', '3468', '003  788'),
+(503, '  Sg. Kelian', 'Sg. Sari', '2.30', '  Pdg. Terap', '3369', '930  063'),
+(504, '  Sg. Kemala', 'Sg. Tolak', '2.00', '  Pdg. Terap', '3369', '900  013'),
+(505, '  Sg. Kesai', 'Sg. Pedu', '6.50', '  Pdg. Terap', '3469', '020  903'),
+(506, '  Sg. Kuak', 'Sg. Aning', '10.00', '  Pdg. Terap', '3469', '072  032'),
+(507, '  Sg. Kubu Durian', 'Sg. Pedu', '5.00', '  Pdg. Terap', '3468', '170  992'),
+(508, '  Sg. Labi', 'Sg. Janing', '2.50', '  Pdg. Terap', '3369', '852  121'),
+(509, '  Sg. Lajak', 'Sg. Pedu', '6.00', '  Pdg. Terap', '3469', '053  854'),
+(510, '  Sg. Lam Para', 'Sg. Durian Burong', '6.00', '  Pdg. Terap', '3469', '023  138'),
+(511, '  Sg. Lamdin', 'Sg. Tekai', '9.00', '  Pdg. Terap', '3368', '995  748'),
+(512, '  Sg. Lesong Batu', 'Sg. Tekai', '4.00', '  Pdg. Terap', '3468', '043  792'),
+(513, '  Sg. Lion', 'Sg. Lajak', '5.00', '  Pdg. Terap', '3468', '046  843'),
+(514, '  Sg. Malai', 'Sg. Gap', '5.00', '  Pdg. Terap', '3468', '061  744'),
+(515, '  Sg. Mong Gajah', 'Ampangan Pedu', '7.00', '  Pdg. Terap', '3468', '167  847'),
+(516, '  Sg. Mong Gajah', 'Sg. Pedu', '8.00', '  Pdg. Terap', '3468', '165  847'),
+(517, '  Sg. Padang Sanai', 'Sg. Pdg. Terap', '8.90', '  Pdg. Terap', '3469', '012  025'),
+(518, '  Sg. Pasir Puteh', 'Sg. Tekai', '8.00', '  Pdg. Terap', '3468', '022  777'),
+(519, '  Sg. Pedu', 'Sg. Pdg. Terap', '31.00', '  Pdg. Terap', '3469', '952  917'),
+(520, '  Sg. Perik', 'Sg. Pdg. Terap', '10.00', '  Pdg. Terap', '3369', '815  032'),
+(521, '  Sg. Pintu Wang', 'Sg. Sari', '6.00', '  Pdg. Terap', '3369', '922  063'),
+(522, '  Sg. Poh', 'Sg. Tolak', '3.00', '  Pdg. Terap', '3369', '904  014'),
+(523, '  Sg. Rasau', 'Sg. Pedu', '10.00', '  Pdg. Terap', '3469', '017  925'),
+(524, '  Sg. Sabok', 'Sg. Tolak', '5.00', '  Pdg. Terap', '3369', '901  035'),
+(525, '  Sg. Sari', 'Sg. Pdg. Terap', '23.00', '  Pdg. Terap', '3369', '982  984'),
+(526, '  Sg. Semeliang', 'Sg. Pdg. Terap', '2.50', '  Pdg. Terap', '3369', '917  953'),
+(527, '  Sg. Seraya', 'Sg. Pdg. Sanai', '7.50', '  Pdg. Terap', '3469', '013  088'),
+(528, '  Sg. Serkap', 'Sg. Gap', '4.00', '  Pdg. Terap', '3468', '068  721'),
+(529, '  Sg. Sintok', 'Sg. Kah Ing', '5.00', '  Pdg. Terap', '3469', '068  999'),
+(530, '  Sg. Tanglak', 'Sg. Pdg. Terap', '6.50', '  Pdg. Terap', '3369', '814  948'),
+(531, '  Sg. Tawar', 'Sg. Muda', '8.00', '  Pdg. Terap', '3468', '092  734'),
+(532, '  Sg. Tekai', 'Sg. Pedu', '31.00', '  Pdg. Terap', '3368', '962  888'),
+(533, '  Sg. Tolak', 'Sg. Janing', '8.00', '  Pdg. Terap', '3369', '900  010'),
+(534, '  Sg. Pdg. Terap', '(Bersambung dgn. Sg. Anak Bukit)', '50.00', '  Pdg. Terap / K. Pasu / K. Setar', '3369', '893  948'),
+(535, '  Alor Ali', 'Sg. Pendang', '2.00', '  Pendang', '3368', '763  684'),
+(536, '  Alor Banggol Besi', 'Sg. Pendang', '6.50', '  Pendang', '3368', '790  666'),
+(537, '  Alor Mengkuang', 'Sg. Pendang', '2.50', '  Pendang', '3368', '753  688'),
+(538, '  Alor Pari', 'Sg. Padang Kerbau', '1.30', '  Pendang', '', ''),
+(539, '  Alor Punti', 'Sg. Pendang', '3.00', '  Pendang', '3368', '773  688'),
+(540, '  Sg. Bemban', 'Sg. Titi Teras', '3.00', '  Pendang', '3367', '873  591'),
+(541, '  Sg. Bendang Pulai', 'Sg. Reman', '9.00', '  Pendang', '3367', '895  561'),
+(542, '  Sg. Cheras', 'Sg. Sala', '9.00', '  Pendang', '3367', '739  566'),
+(543, '  Sg. Gelong Gajah', 'Sg. Paya Rawa', '7.00', '  Pendang', '3368', '854  673'),
+(544, '  Sg. Hujung Ketun', 'Sg. Padang Kerbau', '8.00', '  Pendang', '3368', '944  737'),
+(545, '  Sg. Jagong', 'Sg. Pendang', '4.50', '  Pendang', '3367', '838  566'),
+(546, '  Sg. Lampam', 'Sg. Padang Kerbau', '17.00', '  Pendang', '3368', '886  740'),
+(547, '  Sg. Lang', 'Sg. Lampam', '5.00', '  Pendang', '3368', '871  734'),
+(548, '  Sg. Naok', 'Sg. Pendang', '8.00', '  Pendang', '3367', '864  499'),
+(549, '  Sg. Padang Kerbau', 'Sg. Pendang', '29.00', '  Pendang', '3368', '842  719'),
+(550, '  Sg. Padang Pusing', 'Sg. Pendang', '7.50', '  Pendang', '3368', '820  610'),
+(551, '  Sg. Paya Lepai', 'Sg. Tiang', '2.50', '  Pendang', '3368', '910  645'),
+(552, '  Sg. Paya Mengkuang', 'Sg. Pendang', '10.00', '  Pendang', '3367', '856  449'),
+(553, '  Sg. Paya Rawa', 'Sg. Padang Kerbau', '2.00', '  Pendang', '3368', '837  690'),
+(554, '  Sg. Payong', 'Sg. Bendang Pulai', '4.00', '  Pendang', '3367', '880  565'),
+(555, '  Sg. Pokok Asam', 'Sg. Padang Kerbau', '7.00', '  Pendang', '3368', '893  672'),
+(556, '  Sg. Pokok Tai', 'Sg. Cheras', '10.50', '  Pendang', '3367', '824  506'),
+(557, '  Sg. Putat', 'Sg. Tandok Mas', '3.50', '  Pendang', '3368', '908  612'),
+(558, '  Sg. Rambai', 'Sg. Padang Kerbau', '5.00', '  Pendang', '3368', '935  636'),
+(559, '  Sg. Tandak Mas', 'Sg. Titi Teras', '6.50', '  Pendang', '3368', '898  621'),
+(560, '  Sg. Tiang', 'Sg. Padang Kerbau', '9.50', '  Pendang', '3368', '870  650'),
+(561, '  Sg. Tiang Gerap / Gelung Gajah', 'Sg. Padang Kerbau', '8.50', '  Pendang', '3368', '830  704'),
+(562, '  Sg. Titi Kera', 'Sg. Pendang', '8.00', '  Pendang', '3368', '785  735'),
+(563, '  Sg. Titi Teras', 'Sg. Padang Pusing', '9.50', '  Pendang', '3367', '842  591'),
+(564, '  Sg. Tok Sheikh Munah', 'Sg. Pendang', '5.00', '  Pendang', '3368', '790  628'),
+(565, '  Sg. Tong Perah', 'Sg. Padang Kerbau', '5.50', '  Pendang', '3368', '950  674'),
+(566, '  Sg. Cherok', 'Sg. Pokok Tai', '5.00', '  Pendang / K. Muda', '3367', '798  485'),
+(567, '  Sg. Pendang', 'Sg. Kedah', '55.00', '  Pendang / K. Setar', '3268', '765  694'),
+(568, '  Charok Batu', 'Sg. Pan', '3.00', '  Sik', '3468', '064  637'),
+(569, '  Charok Bendang Jenereh', 'Sg. Sik', '5.00', '  Sik', '3467', '092  495'),
+(570, '  Charok Damar', 'Sg. Chepir', '4.00', '  Sik', '3467', '085  421'),
+(571, '  Charok Jelutong', 'Sg. Chepir', '5.00', '  Sik', '3467', '108  492'),
+(572, '  Charok Juang', 'Sg. Muda', '3.00', '  Sik', '3468', '090  687'),
+(573, '  Charok Lang', 'Sg. Muda', '5.00', '  Sik', '3468', '165 782'),
+(574, '  Charok Lole', 'Sg. Chapar', '4.50', '  Sik', '3468', '189  710'),
+(575, '  Charok Pasir Puteh', 'Sg. Kerik', '3.50', '  Sik', '3467', '025  559'),
+(576, '  Charok Puyuh', 'Sg. Tebai', '3.00', '  Sik', '3467', '126  456'),
+(577, '  Charok Rambutan', 'Sg. Pan', '3.00', '  Sik', '3468', '091  658'),
+(578, '  Charok Tekia', 'Sg. Muda', '5.00', '  Sik', '3468', '182  735'),
+(579, '  Sg. Baho', 'Sg. Muda', '20.00', '  Sik', '3568', '352  687'),
+(580, '  Sg. Bahoi', 'Sg. Muda', '13.00', '  Sik', '3568', '322  775'),
+(581, '  Sg. Batu Besar', 'Sg. Tupai', '2.00', '  Sik', '3467', '053  352'),
+(582, '  Sg. Batu Hampar', 'Sg. Chepir', '5.00', '  Sik', '3467', '172  486'),
+(583, '  Sg. Begia', 'Sg. Muda', '8.00', '  Sik', '3367', '991  455'),
+(584, '  Sg. Beris', 'Sg. Muda', '15.00', '  Sik', '3468', '060  608'),
+(585, '  Sg. Berok', 'Sg. Muda', '4.80', '  Sik', '3367', '945  545'),
+(586, '  Sg. Betong', 'Sg. Chapar', '5.00', '  Sik', '3468', '175  700'),
+(587, '  Sg. Buluh Betong', 'Sg. Radek', '4.00', '  Sik', '3467', '129  504'),
+(588, '  Sg. Cham', 'Sg. Muda', '1.60', '  Sik', '3367', '935  529'),
+(589, '  Sg. Chapar', 'Sg. Sok', '4.00', '  Sik', '3468', '138  690'),
+(590, '  Sg. Che Song', 'Sg. Muda', '5.00', '  Sik', '3468', '215  812'),
+(591, '  Sg. Chepir', 'Sg. Muda', '27.00', '  Sik', '3468', '018  410'),
+(592, '  Sg. Debu', 'Sg. Muda', '8.00', '  Sik', '3468', '268  764'),
+(593, '  Sg. Dohanan', 'Sg. Muda', '2.00', '  Sik', '3367', '912  453'),
+(594, '  Sg. Durian Terung', 'Sg. Tupai', '5.00', '  Sik', '3467', '048  343'),
+(595, '  Sg. Gading', 'Sg. Muda', '4.00', '  Sik', '3367', '941  459'),
+(596, '  Sg. Jeneri', 'Sg. Muda', '9.60', '  Sik', '3467', '960  523'),
+(597, '  Sg. Joget', 'Sg. Tupai', '1.00', '  Sik', '3467', '019  374'),
+(598, '  Sg. Kalai', 'Sg. Muda', '4.80', '  Sik', '3367', '917  474'),
+(599, '  Sg. Kalir', 'Sg. Teliang', '2.00', '  Sik', '3468', '242  833'),
+(600, '  Sg. Kawi', 'Sg. Muda', '20.00', '  Sik', '3568', '353  718'),
+(601, '  Sg. Kerawai', 'Sg. Tanah Liat', '3.00', '  Sik', '3467', '045  377'),
+(602, '  Sg. Kerik', 'Sg. Muda', '8.00', '  Sik', '3467', '022  568'),
+(603, '  Sg. Kura', 'Sg. Pakeh', '4.40', '  Sik', '3367', '988  594'),
+(604, '  Sg. Landai', 'Sg. Chapar', '3.00', '  Sik', '3468', '203  614'),
+(605, '  Sg. Lanik', 'Sg. Teliang', '6.00', '  Sik', '3568', '323  898'),
+(606, '  Sg. Lasor', 'Sg. Muda', '24.00', '  Sik', '3568', '334  685'),
+(607, '  Sg. Lata Gurah', 'Sg. Teliang', '12.00', '  Sik', '3568', '418  898'),
+(608, '  Sg. Lata Kubu', 'Sg. Teliang', '5.00', '  Sik', '3568', '452  883'),
+(609, '  Sg. Lintang', 'Sg. Betong', '3.00', '  Sik', '3468', '173  697'),
+(610, '  Sg. Ma', 'Sg. Muda', '4.00', '  Sik', '3468', '032  603'),
+(611, '  Sg. Man', 'Sg. Chepir', '1.50', '  Sik', '3467', '143  468'),
+(612, '  Sg. Namek', 'Sg. Chepir', '4.50', '  Sik', '3467', '050  382'),
+(613, '  Sg. Orang', 'Sg. Pakeh', '2.50', '  Sik', '3367', '962  565'),
+(614, '  Sg. Pakeh', 'Sg. Muda', '4.80', '  Sik', '3367', '984  566'),
+(615, '  Sg. Pan', 'Sg. Muda', '6.00', '  Sik', '3468', '058  627'),
+(616, '  Sg. Pau', 'Sg. Chepir', '3.40', '  Sik', '3367', '992  441'),
+(617, '  Sg. Radik', 'Sg. Chepir', '2.50', '  Sik', '3467', '117  475'),
+(618, '  Sg. Rama', 'Sg. Reman', '6.50', '  Sik', '3367', '926  513'),
+(619, '  Sg. Rambai', 'Sg. Chepir', '1.00', '  Sik', '3467', '131  468'),
+(620, '  Sg. Reban', 'Sg. Muda', '2.50', '  Sik', '3467', '028  592'),
+(621, '  Sg. Reman', 'Sg. Muda', '8.80', '  Sik', '3367', '930  489'),
+(622, '  Sg. Semerliang', 'Sg. Chepir', '7.00', '  Sik', '3467', '156  503'),
+(623, '  Sg. Semir', 'Sg. Muda', '6.40', '  Sik', '3367', '973  487'),
+(624, '  Sg. Sendok', 'Sg. Sok', '2.40', '  Sik', '3468', ''),
+(625, '  Sg. Seputeh', 'Sg. Teloi', '3.00', '  Sik', '3467', '093  405'),
+(626, '  Sg. Seraya', 'Sg. Kawi', '8.00', '  Sik', '3568', '380  720'),
+(627, '  Sg. Setar', 'Sg. Jeneri', '4.80', '  Sik', '3367', '993  527'),
+(628, '  Sg. Sik', 'Sg. Chepir', '14.00', '  Sik', '3467', '067  457'),
+(629, '  Sg. Sok', 'Sg. Muda', '18.00', '  Sik', '3468', '117  694'),
+(630, '  Sg. Tala', 'Sg. Muda', '4.80', '  Sik', '3367', '954  495'),
+(631, '  Sg. Tanah Liat', 'Sg. Teloi', '4.50', '  Sik', '3467', '046  374'),
+(632, '  Sg. Tebai', 'Sg. Chepir', '8.00', '  Sik', '3467', '143  425'),
+(633, '  Sg. Teliang', 'Sg. Muda', '19.00', '  Sik', '3468', '261  803'),
+(634, '  Sg. Teloi', 'Sg. Chepir', '12.80', '  Sik', '3467', '017  398'),
+(635, '  Sg. Terenas', 'Sg. Beris', '4.00', '  Sik', '3467', '093  576'),
+(636, '  Sg. Tupai', 'Sg. Teloi', '8.50', '  Sik', '3467', '018  380'),
+(637, '  Sg. Bakong', '-', '5.00', '  Yan', '3267', '652  429'),
+(638, '  Sg. Belida', '-', '2.50', '  Yan', '3267', '660  397'),
+(639, '  Sg. Dara Mani', 'Sg. Udang', '4.50', '  Yan', '3267', '678  420'),
+(640, '  Sg. Perigi', 'Sg. Yan Kecil', '1.50', '  Yan', '3267', '695  426'),
+(641, '  Sg. Raga', '-', '7.00', '  Yan', '3267', '666  406'),
+(642, '  Sg. Ruat', '-', '2.10', '  Yan', '3267', '726  455'),
+(643, '  Sg. Setar', 'Sg. Yan Kecil', '3.50', '  Yan', '3267', '687  452'),
+(644, '  Sg. Singkir', '-', '6.00', '  Yan', '3267', '667  378'),
+(645, '  Sg. Teroi', 'Sg. Yan Kecil', '4.65', '  Yan', '3267', '695  426'),
+(646, '  Sg. Titi Besi', 'Gurun Deviation Canal', '3.20', '  Yan', '', ''),
+(647, '  Sg. Titi teras', 'Sg. Udang', '2.00', '  Yan', '3367', '736  451'),
+(648, '  Sg. Udang', '-', '12.00', '  Yan', '3267', '657 437'),
+(649, '  Sg. Yan', '-', '4.00', '  Yan', '3267', '670  413'),
+(650, '  Sg. Yan Kecil', '-', '11.00', '  Yan', '3267', '690  461'),
+(651, '  Terusan Wan Mat Saman', 'Sg. Kedah', '6.00', '  Yan', '', ''),
+(652, '  Sg. Sala', '-', '10.00', '  Yan / K. Setar ( Bersempadan)', '3268', '650  613'),
+(653, '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -136,7 +957,8 @@ INSERT INTO `jps_users` (`user_id`, `jps_name`, `jps_email`, `jps_password`, `jp
 (2, 'Lokman hakim', 'gungravewestern@gmail.com', '20c1a26a55039b30866c9d0aa51953ca', 'Jurutera G34', 'user'),
 (3, 'Haraz', 'g@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Penolong Jurutera', 'user'),
 (4, 'Lokman hakim', 's@outlook.com', 'f6122c971aeb03476bf01623b09ddfd4', 'Penolong Jurutera', 'admin'),
-(6, 'Azhar bin Ahmad', 'azhar@gmail.com', '838e24a98647b16ed33f20774b2e3502', 'Penolong Jurutera', 'user');
+(6, 'Azhar bin Ahmad', 'azhar@gmail.com', '838e24a98647b16ed33f20774b2e3502', 'Penolong Jurutera', 'user'),
+(10, 'SYED MOHD AFIQ SYED ABDUL RAHMAN', 'sssyed.m.afiq@outlook.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Jurutera', 'admin');
 
 -- --------------------------------------------------------
 
@@ -822,13 +1644,6 @@ CREATE TABLE `mrk_dua` (
   `mrk2_kodvots` varchar(150) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Dumping data for table `mrk_dua`
---
-
-INSERT INTO `mrk_dua` (`mrkduaid`, `mrk_majukerja`, `mrk_majukerjasebenar`, `mrk_bayarmajusemasa`, `mrk_jumlahbayarmaju`, `mrk_masalah`, `mrk_sebaboleh`, `mrk_lainlain`, `mrk_lanjutmasa`, `mrk_dari`, `mrk_sehingga`, `mrk_disebab`, `mrk_ladsehari`, `mrk_laddari`, `mrk_ladsehingga`, `mrk_perakukerjataksiap`, `mrk_projekmansuh`, `mrk_tarikhlaporan`, `mrk_modal`, `mrk_bahan`, `mrk_pekerja`, `mrk_tapak`, `mrk_cuaca`, `mrksatu_id`, `mrk2_noinden`, `mrk2_kodvots`) VALUES
-(2, 80, '2019-02-17', 30, '2', NULL, 'TIADA', 'TIADA', '5', '2019-02-04', '2019-02-11', 'TIADA', '20', '2019-02-04', '2019-02-11', '2019-02-04', '2019-02-13', '2019-02-17', NULL, NULL, NULL, 1, 1, 26, 'I002938228382', 'k-2342394');
-
 -- --------------------------------------------------------
 
 --
@@ -872,7 +1687,8 @@ INSERT INTO `mrk_keypeople` (`p_id`, `p_names`, `p_jawatan`) VALUES
 (8, 'Mohd Amin b Ahmad', NULL),
 (9, 'Yahaya b. Shariff', NULL),
 (10, 'Nurul Syariza bt Ramli', NULL),
-(11, 'Nor Rozaini bt Abdullah', NULL);
+(11, 'Nor Rozaini bt Abdullah', NULL),
+(13, 'Sila Masukkan nama', NULL);
 
 -- --------------------------------------------------------
 
@@ -1025,7 +1841,7 @@ CREATE TABLE `mrk_satu` (
 --
 
 INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mrk_alamatkon`, `mrk_nokontrak`, `mrk_noinden`, `mrk_tajukkerja`, `mrk_kategori`, `mrk_daerah`, `mrk_negeri`, `mrk_khusus`, `mrk_tarikhmulakon`, `mrk_tarikhjangkasiap`, `mrk_pegawai`, `mrk_jawatan`, `mrk_kosprojek`, `mrk_tarikh`, `mrksatu_id`, `mrks_kodvot`) VALUES
-(26, '0120020606-KD071649', 'G2', 'RB MAWAR ENTERPRISE', 'NO.2554, LORONG 59', 'JPS.KMSB(SH-KM)N/B/P/16/2012', 'I002938228382', 'KERJA-KERJA MENEBAS, MENCUCI, MEMBUANG SAMPAH SARAP, REBA KAYU SERTA LAI-LAIN KERJA BERKAITAN DI KEDUA-DUA CERUN SISI SEPANJANG PARIT/ALOR/SUNGAI, SKIM SALIRAN TERKAWAL BAN MERBOK, KUALA MUDA', 'ME', 'Kuala Muda', 'Kedah', 'CE 14', '2019-01-01', '2019-02-03', 'syed mohd afiq', 'Jurutera', '23', '2019-02-04', 0, 'k-2342394');
+(27, '0120020211-KD068614', 'G2', 'ADK SEJATI ENTERPRISE', 'NO. 1400, LORONG ANGSANA 41', '19/2019', 'I_121292823', 'The new projek', 'B', 'Kedah', 'Kedah', 'CE 04', '2019-04-26', '2019-04-26', 'Haraz', 'Penolong Jurutera', '120', '2019-04-26', 0, 'K_BP12345');
 
 -- --------------------------------------------------------
 
@@ -1035,17 +1851,15 @@ INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mr
 
 CREATE TABLE `mrk_setting` (
   `set_id` int(11) NOT NULL,
-  `set_slogan` varchar(150) DEFAULT NULL,
-  `mrk_users` varchar(50) DEFAULT NULL,
-  `mrk_pass` varchar(50) DEFAULT NULL
+  `set_slogan` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mrk_setting`
 --
 
-INSERT INTO `mrk_setting` (`set_id`, `set_slogan`, `mrk_users`, `mrk_pass`) VALUES
-(1, 'Cintailah Sungai Kita', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+INSERT INTO `mrk_setting` (`set_id`, `set_slogan`) VALUES
+(1, 'Cintailah Sungai Kita');
 
 -- --------------------------------------------------------
 
@@ -1085,7 +1899,6 @@ CREATE TABLE `mrk_ss` (
 --
 
 INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, `cb8`, `cb9`, `cb10`, `cb11`, `cb12`, `cb13`, `cb14`, `cb15`, `cb16`, `cb17`, `cb18`, `ss_inden`, `ss_mrkid`, `ss_kodvot`, `ss_disediakan`, `ss_date`) VALUES
-(1, 1, NULL, NULL, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, 1, NULL, 1, NULL, 1, NULL, '0002991882', 25, 'KOV70707070', 'km', '2019-02-14'),
 (2, 1, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'I002938228382', 26, 'k-2342394', 'syed mohd afiq', '2019-03-12');
 
 -- --------------------------------------------------------
@@ -1202,7 +2015,9 @@ CREATE TABLE `order_nsh` (
 
 INSERT INTO `order_nsh` (`no_id`, `no_sebutharga`, `no_tarikh`, `no_pemilik`, `no_jenis`) VALUES
 (4, '19/2019', '2019-02-14', 'syed mohd afiq', 'Lantikan Terus'),
-(5, 'JPS.KMSB(SH-KM)N/B/P/16/2012', '2019-02-17', 'Azhar bin Ahmad', 'Sebutharga');
+(5, 'JPS.KMSB(SH-KM)N/B/P/16/2012', '2019-02-17', 'Azhar bin Ahmad', 'Sebutharga'),
+(6, '20/2019', '2019-04-08', 'syed mohd afiq', 'Lantikan Terus'),
+(7, '19/2019', '2019-04-08', 'Lokman hakim', 'Sebutharga');
 
 --
 -- Indexes for dumped tables
@@ -1225,6 +2040,30 @@ ALTER TABLE `dp_projek`
 --
 ALTER TABLE `dp_projekinfo`
   ADD PRIMARY KEY (`info_id`);
+
+--
+-- Indexes for table `jps_component`
+--
+ALTER TABLE `jps_component`
+  ADD PRIMARY KEY (`com_id`);
+
+--
+-- Indexes for table `jps_sistem`
+--
+ALTER TABLE `jps_sistem`
+  ADD PRIMARY KEY (`sis_id`);
+
+--
+-- Indexes for table `jps_subsistem`
+--
+ALTER TABLE `jps_subsistem`
+  ADD PRIMARY KEY (`sub_id`);
+
+--
+-- Indexes for table `jps_sungai`
+--
+ALTER TABLE `jps_sungai`
+  ADD PRIMARY KEY (`sg_id`);
 
 --
 -- Indexes for table `jps_users`
@@ -1336,25 +2175,49 @@ ALTER TABLE `order_nsh`
 -- AUTO_INCREMENT for table `dp_gps`
 --
 ALTER TABLE `dp_gps`
-  MODIFY `gps_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `gps_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `dp_projek`
 --
 ALTER TABLE `dp_projek`
-  MODIFY `projek_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `projek_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `dp_projekinfo`
 --
 ALTER TABLE `dp_projekinfo`
-  MODIFY `info_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `info_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `jps_component`
+--
+ALTER TABLE `jps_component`
+  MODIFY `com_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+
+--
+-- AUTO_INCREMENT for table `jps_sistem`
+--
+ALTER TABLE `jps_sistem`
+  MODIFY `sis_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `jps_subsistem`
+--
+ALTER TABLE `jps_subsistem`
+  MODIFY `sub_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `jps_sungai`
+--
+ALTER TABLE `jps_sungai`
+  MODIFY `sg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=654;
 
 --
 -- AUTO_INCREMENT for table `jps_users`
 --
 ALTER TABLE `jps_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `kontraktor`
@@ -1366,7 +2229,7 @@ ALTER TABLE `kontraktor`
 -- AUTO_INCREMENT for table `mrk_dua`
 --
 ALTER TABLE `mrk_dua`
-  MODIFY `mrkduaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `mrkduaid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `mrk_jaminanbank`
@@ -1378,7 +2241,7 @@ ALTER TABLE `mrk_jaminanbank`
 -- AUTO_INCREMENT for table `mrk_keypeople`
 --
 ALTER TABLE `mrk_keypeople`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `mrk_laporansiap`
@@ -1408,7 +2271,7 @@ ALTER TABLE `mrk_ppwjp`
 -- AUTO_INCREMENT for table `mrk_satu`
 --
 ALTER TABLE `mrk_satu`
-  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `mrk_setting`
@@ -1450,7 +2313,7 @@ ALTER TABLE `mrk_tiga`
 -- AUTO_INCREMENT for table `order_nsh`
 --
 ALTER TABLE `order_nsh`
-  MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
