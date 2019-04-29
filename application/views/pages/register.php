@@ -85,6 +85,7 @@
                       <option value=""></option>
                       <option value="admin">Admin</option>
                       <option value="user">User</option>
+                      <option value="clerk">Clerk</option>
                     </select>
                   </div>
                 </div>

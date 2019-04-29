@@ -38,19 +38,86 @@ class Projek extends CI_Controller
     $this->load->view('template/header');
     $this->load->view('template/nav');
     $this->load->view('template/sidebar');
+    $data['get_projek']=$this->Projek_model->get_projekviewafter();
+    $this->load->view('pages/projek', $data);
+    $this->load->view('template/footer');
+  }
+
+
+  public function sebutharga()
+  {
+   $this->load->database();
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+    $jenisprojek = "Sebutharga";
     if($this->session->userdata('roles')=='user')
     {
+    
       $username = $this->session->userdata('name');
-      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username);
+      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek);
     }
     else
     {
-      $data['get_projek']=$this->Projek_model->get_projekview();
+      $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek);
     }
 
     $this->load->view('pages/projek', $data);
     $this->load->view('template/footer');
   }
+
+  public function undi()
+  {
+   $this->load->database();
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+    $jenisprojek = "Undi";
+    if($this->session->userdata('roles')=='user')
+    {
+    
+      $username = $this->session->userdata('name');
+      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek);
+    }
+    else
+    {
+      $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek);
+    }
+
+    $this->load->view('pages/projek', $data);
+    $this->load->view('template/footer');
+  }
+
+  public function lantikan_terus()
+  {
+   $this->load->database();
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+    $jenisprojek = "Lantikan Terus";
+    if($this->session->userdata('roles')=='user')
+    {
+    
+      $username = $this->session->userdata('name');
+      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek);
+    }
+    else
+    {
+      $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek);
+    }
+
+    $this->load->view('pages/projek', $data);
+    $this->load->view('template/footer');
+  }
+
+
+
+
+
+
+
+
+
 
   public function main_projek_view($value="")
   {
@@ -98,7 +165,7 @@ class Projek extends CI_Controller
       }
       else {
         $this->Projek_model->ProjectUpdate01($data ,$this->input->post('hiddenid'));
-       redirect(base_url('projek/Update_Projek01/'.$id)); //redirect last id to another step
+        redirect(base_url('projek/Update_Projek01/'.$id)); //redirect last id to another step
       }
 
     }

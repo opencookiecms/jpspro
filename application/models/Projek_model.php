@@ -36,9 +36,14 @@ class Projek_model extends CI_Model{
     return $query->result();
   }
 
-  public function updateOrder()
+  public function updateOrder($value)
   {
+    $this->db->select('*');
+    $this->db->from('order_nsh');
+    $this->db->where('no_id',$value);
+    $query = $this->db->get();
 
+    return $query->result();
   }
 
   public function deleteOrder()
@@ -185,7 +190,21 @@ class Projek_model extends CI_Model{
 
   ///////end of update function//////////////////////////////////////////////////////////////////
 
-  public function get_projekview()
+  public function get_projekview($jp)
+  {
+
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+
+    //Tambah join 2 table.,.,
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
+    $this->db->where('dp_projek.df_jsebutharga',$jp);
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function get_projekviewafter()
   {
 
     $this->db->select('*');
@@ -198,7 +217,7 @@ class Projek_model extends CI_Model{
     return $query->result();
   }
 
-  public function get_projekviewbyu($user)
+  public function get_projekviewbyu($user,$jp)
   {
 
     $this->db->select('*');
@@ -208,6 +227,8 @@ class Projek_model extends CI_Model{
     $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
     $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
     $this->db->where('dp_projekinfo.df_penolong',$user);
+    $this->db->where('dp_projek.df_jsebutharga',$jp);
+   
     $query = $this->db->get();
     return $query->result();
   }
@@ -394,6 +415,30 @@ class Projek_model extends CI_Model{
 
       $this->db->update('dp_gps', $data);
         //this return for inserting data from this table
+  }
+
+  public function getupdate($data, $id)
+  {
+    $this->load->helper('url');
+    $data = array(
+      'no_sebutharga' => $this->input->post("nosebutharga"),
+      'no_tarikh' => $this->input->post("tarikhmohon"),
+      'no_pemilik'=> $this->input->post("pemilik"),
+      'no_jenis' => $this->input->post("jenissebut"),
+      'no_id' => $this->input->post('hiddenid')
+    );
+
+     $this->db->where('no_id', $id);
+
+     $this->db->update('order_nsh', $data);
+  }
+
+  public function getdelete($id)
+  {
+      $this->load->helper('url');
+    //$this->db->
+     $this->db->where('no_id', $id);
+     $this->db->delete('order_nsh');
   }
 
   public function get_projectprogress($id)

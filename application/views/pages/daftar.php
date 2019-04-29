@@ -52,56 +52,7 @@
           </div>
           <div class="row">
             <div class="col-lg-12 grid-margin">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Senarai Tempahan No. Sebutharga</h4>
-                  <div class="table-responsive">
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>
-                            Bil
-                          </th>
-                          <th>
-                            No Sebutharga
-                          </th>
-                          <th>
-                            Tarikh
-                          </th>
-                          <th>
-                            Pemilik
-                          </th>
-                          <th>
-                            Tindakan
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                              <?php $bil=0;?>
-                        <?php foreach ($get_list as $row): $bil++ ?>
-                        <tr>
-                          <td class="font-weight-medium">
-                            <?php echo $bil?>
-                          </td>
-                          <td>
-                            <?php echo $row->no_sebutharga?>
-                          </td>
-                          <td>
-                            <?php echo $row->no_tarikh?>
-                          </td>
-                          <td>
-                            <?php echo $row->no_pemilik?>
-                          </td>
-                          <td>
-                              <a href="" class="btn btn-danger mr-2 btn-rounded" role="button">Update</a>
-                          </td>
-                        </tr>
-                        <?php endforeach; ?>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
           <div class="row">

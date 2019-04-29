@@ -33,7 +33,7 @@
                 <thead>
                   <tr>
                     <th>
-                      #
+                      Bil
                     </th>
                     <th>
                       Nama Projek

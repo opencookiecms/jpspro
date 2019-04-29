@@ -25,6 +25,20 @@ class Daftar extends CI_Controller{
     $this->load->view('template/footer');
   }
 
+  public function senarai_tempahan()
+  {
+
+    $ss = $this->session->userdata("nama");
+    $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
+
+    $data['get_list']=$this->Projek_model->listOrder();
+    $this->load->view('template/header');
+    $this->load->view('template/nav',$profile);
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/senaraitempahan',$data);
+    $this->load->view('template/footer');
+  }
+
   public function viewincon()
   {
      $data =$this->Projek_model->listOrder();
@@ -41,7 +55,7 @@ class Daftar extends CI_Controller{
   public function stepsatu()
   {
     $data['get_nosebutharga'] = $this->Projek_model->listOrder();
-    $data['title'] = 'Daftar Sebutharga';
+    $data['title'] = 'Projek';
     //form validation function
     $this->form_validation->set_rules('nosebut','Sila Masukkan No Sebut Harga','required');
     $this->form_validation->set_rules('tarikhmohon','Tarikh Mohon','required');
@@ -70,7 +84,7 @@ class Daftar extends CI_Controller{
 
   public function stepdua($idvalue='')
   {
-    $data['title'] = 'Daftar Sebutharga';
+    $data['title'] = 'Projek';
     $data['idval'] = $idvalue;
     $data['get_user']=$this->Setting_model->get_userdatasetting();
     $data['get_keypeople']=$this->Setting_model->get_Datasetting();
@@ -148,14 +162,35 @@ class Daftar extends CI_Controller{
 
   }
 
-  public function orderlistSebutharga()
-  {
 
+  public function orderupdate($value="")
+  {
+    $data['title'] = "Kemaskini No. Sebutharga";
+    $data['get_user']=$this->Setting_model->get_userdatasetting();
+    $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');
+    $data['get_list']=$this->Projek_model->updateOrder($value);
+
+    $id = $this->input->post('hiddenid');
+    echo $id;
+    if($id==null)
+    {
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/orderupdate',$data);
+      $this->load->view('template/footer');
+    }
+    else{
+      $this->projek_model->getupdate($data ,$this->input->post('hiddenid'));
+      $this->session->set_userdata('orderupdate','No Sebutharga berjaya dikemaskini');
+      redirect(base_url('daftar/orderupdate/'.$id));
+    }
   }
 
-  public function orderDelete()
+  public function orderdelete($value ="")
   {
-
+     $this->projek_model->getdelete($value);
+     redirect(base_url('daftar/senarai_tempahan/'.$id));
   }
 
 

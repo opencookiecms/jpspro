@@ -1,11 +1,11 @@
 <div class="main-panel">
-<div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+<div class="content-wrapper cnt" style="">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body">
+          <div class="card-body" style="background-color:#636e72;border-radius:10px;">
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
+            <p class="card-description"><h5><span class="error" style="color:#f5f6fa;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
             <?php echo $idval; ?>
 
           </div>
@@ -18,7 +18,7 @@
         <?php echo form_open('daftar/stepdua'); ?>
           <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#778ca3;">
+          <div class="card-body" style="background-color:#4a69bd;border-radius:10px;">
             <h4 class="card-title" style="color:white;">Kategori Pendaftaran</h4>
               <div class="row">
                 <div class="col-md-12">
@@ -104,7 +104,7 @@
       <!--start col-md-12 for form-->
       <div class="col-12 grid-margin">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#FD7272;">
+          <div class="card-body" style="background-color:#34495e;border-radius:10px;">
             <h4 class="card-title" style="color:white;">Harga Dokumen & Tarikh</h4>
               <div class="row">
                 <div class="col-md-12">
@@ -124,7 +124,7 @@
                     <div class="col-sm-4">
                       <label></label>
                       <div class="input-group">
-                        <div class="input-group-append bg-success border-success">
+                        <div class="input-group-append bg-dark border-dark">
                           <span class="input-group-text bg-transparent text-white">(Minimum RM10 | Maximum RM50)</span>
                         </div>
                       </div>
@@ -155,7 +155,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <label class="tl">:</label>
                         <input type="text" class="form-control" id="tsumone" disabled >
                     </div>
@@ -175,7 +175,7 @@
                         </div>
                       </div>
                     </div>
-                         <div class="col-sm-3">
+                         <div class="col-sm-2">
                         <label class="tl">:</label>
                         <input type="text" class="form-control" id='tsumtwo' disabled >
                     </div>
@@ -194,7 +194,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <label class="tl">:</label>
                         <input type="text" class="form-control" id='tsumthree' disabled >
                     </div>
@@ -213,7 +213,7 @@
                         </div>
                       </div>
                     </div>
-                     <div class="col-sm-3">
+                     <div class="col-sm-2">
                         <label class="tl">:</label>
                         <input type="text" class="form-control" id='tsumfour' disabled >
                     </div>
@@ -230,7 +230,7 @@
       <!--start col-md-12 for form-->
       <div class="col-12 grid-margin">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#B33771;">
+          <div class="card-body" style="background-color:#40739e;border-radius:10px;">
             <h4 class="card-title" style="color:white;">Pegesahan</h4>
               <div class="row">
                 <div class="col-md-12">

@@ -2,10 +2,10 @@
 <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
-        <div class="card" style="border-radius:10px;">
+        <div class="card" style="border-radius:10px;background-color:#6a89cc;">
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
+
           </div>
         </div>
       </div>
@@ -14,20 +14,20 @@
         <?php echo validation_errors(); ?>
         <?php echo form_open('projek/Update_Projek02'); ?>
 
-        <div class="card" style="border-radius:10px;">
+        <div class="card" style="border-radius:10px;background-color:#778ca3;">
           <div class="card-body">
             <a href="<?php echo site_url("projek/Update_Projek01/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button">PAGE1</a>
-            <a href="<?php echo site_url("projek/Update_Projek02/" . $get_detail[0]->projek_id); ?>" class="btn btn-dark mr-2 btn-rounded" role="button">PAGE2</a>
+            <a href="<?php echo site_url("projek/Update_Projek02/" . $get_detail[0]->projek_id); ?>" class="btn btn-success mr-2 btn-rounded" role="button">PAGE2</a>
             <a href="<?php echo site_url("projek/Update_Projek03/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button" >PAGE3</a>
             <p></p>
             <p></p>
-            <h4 class="card-title">Kategori Pendaftaran</h4>
+            <h4 class="card-title" style="color:#FFFF">Kategori Pendaftaran</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
                       <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->dp_id?>">
-                      <label>Gred :</label>
+                      <label class="tl">Gred :</label>
                       <select type="text" class="form-control" name="gred" placeholder="Gred">
                         <option value="<?php echo $get_detail[0]->df_gred?>"><?php echo $get_detail[0]->df_gred?></option>
                         <option value="G1">G1</option>
@@ -40,7 +40,7 @@
                       </select>
                     </div>
                     <div class="col-sm-2">
-                      <label>Kategori :</label>
+                      <label class="tl">Kategori :</label>
                       <select type="text" class="form-control" name="kategori" placeholder="Kategori">
                         <option value="<?php echo $get_detail[0]->df_kategori?>"><?php echo $get_detail[0]->df_kategori?></option>
                         <option value="CE | Pembinaan Kejuruteraan Awam">CE</option>
@@ -51,7 +51,7 @@
                   </div>
                 </div>
               </div>
-              <h4 class="card-title">Pengkhususan</h4>
+              <h4 class="card-title" style="color:#ffff">Pengkhususan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
@@ -74,7 +74,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Taraf:</label>
+                      <label class="tl">Taraf:</label>
                       <select type="text" class="form-control"  name="taraf" placeholder="Taraf">
                         <option value="<?php echo $get_detail[0]->df_taraf?>"><?php echo $get_detail[0]->df_taraf?></option>
                         <option value="Bumiputera">Bumiputera</option>
@@ -88,11 +88,11 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-2">
-                      <label>Tempoh Siap Kerja:</label>
+                      <label class="tl">Tempoh Siap Kerja:</label>
                       <input type="text" class="form-control"  name="tempoh" value="<?php echo $get_detail[0]->df_tempohsiap?>">
                     </div>
                     <div class="col-sm-2">
-                      <label>Minggu/Bulan</label>
+                      <label class="tl">Minggu/Bulan</label>
                       <select type="text" class="form-control" name="bulanming" placeholder="Minggu/Bulan">
                         <option value="<?php echo $get_detail[0]->dp_bulanmig?>"><?php echo $get_detail[0]->dp_bulanmig?></option>
                         <option value="Minggu">Minggu</option>
@@ -110,14 +110,14 @@
 
       <!--start col-md-12 for form-->
       <div class="col-12 grid-margin">
-        <div class="card" style="border-radius:10px;">
+        <div class="card" style="border-radius:10px;background-color:#596275;">
           <div class="card-body">
-            <h4 class="card-title">Harga Dokumen & Tarikh</h4>
+            <h4 class="card-title" style="color:#ffff">Harga Dokumen & Tarikh</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Harga Dokumen Sebutharga (RM)</label>
+                      <label class="tl">Harga Dokumen Sebutharga (RM)</label>
                       <div class="input-group">
                         <div class="input-group-prepend bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
@@ -140,8 +140,8 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-3">
-                      <label>Tarikh Notis Dikeluarkan</label>
+                    <div class="col-sm-2">
+                      <label class="tl">Tarikh Notis Dikeluarkan</label>
                       <input type="date" class="form-control" name="notiskeluar" value="<?php echo $get_detail[0]->df_tarikhnotis?>" >
                       <?php $dates = $get_detail[0]->df_tarikhnotis ?>
                     </div>
@@ -151,8 +151,8 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-3">
-                      <label>Tarikh Lawat Tapak/Taklimat</label>
+                    <div class="col-sm-2">
+                      <label class="tl">Tarikh Lawat Tapak/Taklimat</label>
                       <div class="input-group">
                         <input type="text" class="form-control"name="lawattapak" value="<?php echo $get_detail[0]->df_tarikhlawat?>">
                         <div class="input-group-append bg-primary border-primary">
@@ -174,8 +174,8 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-3">
-                      <label>Tarikh Dokumen Mula Dijual</label>
+                    <div class="col-sm-2">
+                      <label class="tl">Tarikh Dokumen Mula Dijual</label>
                       <div class="input-group">
                         <input type="text" class="form-control" name="docmula" value="<?php echo $get_detail[0]->df_tarikhdocmula?>">
                         <div class="input-group-append bg-primary border-primary">
@@ -197,8 +197,8 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-3">
-                      <label>Tarikh Akhir Dokumen Dijual</label>
+                    <div class="col-sm-2">
+                      <label class="tl">Tarikh Akhir Dokumen Dijual</label>
                       <div class="input-group">
                         <input type="text" class="form-control" name="docakhir" value="<?php echo $get_detail[0]->df_tarikhdocakhir?>">
                         <div class="input-group-append bg-primary border-primary">
@@ -220,8 +220,8 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-3">
-                      <label>Tarikh Sebutharga Ditutup</label>
+                    <div class="col-sm-2">
+                      <label class="tl">Tarikh Sebutharga Ditutup</label>
                       <div class="input-group">
                         <input type="text" class="form-control"  name="sebuttutup" value="<?php echo $get_detail[0]->df_tarikhtutup?>">
                         <?php $tarikhtutup = $get_detail[0]->df_tarikhtutup?>
@@ -250,14 +250,14 @@
 
       <!--start col-md-12 for form-->
       <div class="col-12 grid-margin">
-        <div class="card" style="border-radius:10px;">
+        <div class="card" style="border-radius:10px;background-color:#786fa6;">
           <div class="card-body">
-            <h4 class="card-title">Pegesahan</h4>
+            <h4 class="card-title" style="color:#ffff">Pegesahan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Jurutera Dearah</label>
+                      <label class="tl">Jurutera Dearah</label>
                       <select type="text" class="form-control"  name="juruterakanan" placeholder="Jurutera Daerah">
                         <option value="<?php echo $get_detail[0]->df_juruterad?>"><?php echo $get_detail[0]->df_juruterad?></option>
                         <option value="Idris B. Yussof">Idris B. Yussof</option>
@@ -273,7 +273,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Jurutera</label>
+                      <label class="tl">Jurutera</label>
                         <input type="text" class="form-control"  name="jurutera" placeholder="Jurutera" value="<?php echo $get_detail[0]->df_jurutera?>">
                     </div>
                   </div>
@@ -283,7 +283,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Penolong Jurutera Kanan JA36</label>
+                      <label class="tl">Penolong Jurutera Kanan JA36</label>
                       <input type="text" class="form-control"  name="penolongkanan" placeholder="Penolong Kanan JA36" value="<?php echo $get_detail[0]->df_penolongkanan?>">
                     </div>
                   </div>
@@ -293,7 +293,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Penolong Jurutera JA29</label>
+                      <label class="tl">Penolong Jurutera JA29</label>
                         <input type="text" class="form-control" name="penolong" placeholder="Penolong Jurutera JA29" value="<?php echo $get_detail[0]->df_penolong?>">
                     </div>
                   </div>
@@ -303,7 +303,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Kod Vot</label>
+                      <label class="tl">Kod Vot</label>
                         <input type="text" class="form-control"  name="vot" placeholder="Vot" value="<?php echo $get_detail[0]->df_kodvot?>">
                     </div>
                   </div>
@@ -313,7 +313,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Peruntukan</label>
+                      <label class="tl">Peruntukan</label>
                       <select type="text" class="form-control"  name="peruntukan" placeholder="Negeri">
                         <option value="<?php echo $get_detail[0]->df_peruntukan?>"><?php echo $get_detail[0]->df_peruntukan?></option>
                         <option value="Negeri">Negeri</option>
@@ -327,7 +327,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Peruntukan Semasa (RM)</label>
+                      <label class="tl">Peruntukan Semasa (RM)</label>
                       <div class="input-group">
                         <div class="input-group-prepend bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>

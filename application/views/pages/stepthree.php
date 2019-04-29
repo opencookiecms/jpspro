@@ -2,10 +2,10 @@
 <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
-        <div class="card" style="border-radius:10px;">
+        <div class="card" style="border-radius:10px;background-color:#40739e">
           <div class="card-body" >
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
+            <p class="card-description"><h5><span class="error" style="color:#f5f6fa;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
             <?php echo $idval; ?>
 
             <?php if (isset($_SESSION['success'])) { ?>
@@ -22,7 +22,7 @@
         <?php echo form_open('daftar/steptiga'); ?>
           <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#16a085;">
+           <div class="card-body" style="background-color:#7f8fa6;border-radius:10px;">
             <h4 class="card-title" style="color:white;">Lokasi & Sistem</h4>
               <div class="row">
                 <div class="col-md-12">

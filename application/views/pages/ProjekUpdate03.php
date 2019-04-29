@@ -2,10 +2,10 @@
 <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
-        <div class="card" style="border-radius:10px;">
+        <div class="card" style="border-radius:10px;background-color:#4a69bd;">
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
-            <p class="card-description"><h5><span class="error" style="color:#FF0000;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
+            <p class="card-description"><h5><span class="error" style="color:#FFFF;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
 
 
             <?php if (isset($_SESSION['success'])) { ?>
@@ -20,19 +20,19 @@
 
         <?php echo validation_errors(); ?>
         <?php echo form_open('projek/Update_Projek03'); ?>
-        <div class="card" style="border-radius:10px;">
+        <div class="card" style="border-radius:10px;background-color:#4b6584;">
           <div class="card-body">
             <a href="<?php echo site_url("projek/Update_Projek01/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button">PAGE1</a>
             <a href="<?php echo site_url("projek/Update_Projek02/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button">PAGE2</a>
-            <a href="<?php echo site_url("projek/Update_Projek03/" . $get_detail[0]->projek_id); ?>" class="btn btn-dark mr-2 btn-rounded" role="button" >PAGE3</a>
+            <a href="<?php echo site_url("projek/Update_Projek03/" . $get_detail[0]->projek_id); ?>" class="btn btn-success mr-2 btn-rounded" role="button" >PAGE3</a>
             <p></p>
             <p></p>
-            <h4 class="card-title">Lokasi & Sistem</h4>
+            <h4 class="card-title" style="color:#ffff">Lokasi & Sistem</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
 
-                    <label class="col-sm-1 col-form-label">Latitud (N)</label>
+                    <label class="col-sm-1 col-form-label tl">Latitud (N)</label>
                     <div class="col-sm-2">
                       <div class="input-group">
                         <input type="text" class="form-control" id="lata" name="lata" value="<?php echo $get_detail[0]->dp_lata?>">
@@ -65,7 +65,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
 
-                    <label class="col-sm-1 col-form-label">Longitud (E)</label>
+                    <label class="col-sm-1 col-form-label tl">Longitud (E)</label>
                     <div class="col-sm-2">
                       <div class="input-group">
                         <input type="text" class="form-control" id="longa" name="longa" value="<?php echo $get_detail[0]->dp_longa?>">
@@ -95,12 +95,12 @@
               </div>
               <p>
               <p>
-              <h4 class="card-title">Sungai</h4>
+              <h4 class="card-title" style="color:#ffff">Sungai</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-4">
-                      <label>Lembangan Sungai</label>
+                      <label class="tl">Lembangan Sungai</label>
                        <div class="input-group">
                               <input type="text" class="form-control" id="sungai" onkeyup="autofill()" value="<?php echo $get_detail[0]->dp_sungai?>" name="sungai" readonly>
                               <div class="input-group-append bg-success border-primary">
@@ -115,7 +115,7 @@
                             <div class="modal-dialog" role="document" style="margin-left:270px;">
                               <div class="modal-content" style="background-color:white; width:800px;">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Senarai Sungai-sungai</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel" >Senarai Sungai-sungai</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
@@ -191,7 +191,7 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Sistem</label>
+                      <label class="tl">Sistem</label>
                          <select  class="form-control" id="sistem" name="sistem">
                           <option value="<?php echo $get_detail[0]->dp_sistem?>"><?php echo $get_detail[0]->sistem?></option>
                            <?php
@@ -203,7 +203,7 @@
                         </select>
                     </div>
                     <div class="col-sm-3">
-                      <label>Sub Sistem</label>
+                      <label class="tl">Sub Sistem</label>
                       <select class="form-control" id="subsistem" name="subsistem">
                         <option value="<?php echo $get_detail[0]->dp_subsistem?>"><?php echo $get_detail[0]->subsistem?></option>
                       </select>
@@ -215,13 +215,13 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label>Komponen</label>
+                      <label class="tl">Komponen</label>
                         <select class="form-control" id="komponen" name="komponen">
                         <option value="<?php echo $get_detail[0]->dp_komponen?>"><?php echo $get_detail[0]->component?></option>
                       </select>
                     </div>
                     <div class="col-sm-3">
-                      <label>Dimensi</label>
+                      <label class="tl">Dimensi</label>
                       <input type="text" class="form-control" id="dimensi" name="dimensi" placeholder="Dimensi" value="<?php echo $get_detail[0]->dp_dimensi?>">
                       <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $get_detail[0]->dp_id?>">
                     </div>
