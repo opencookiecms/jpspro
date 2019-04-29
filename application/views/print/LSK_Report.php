@@ -1,37 +1,31 @@
 <?php
 
-//remove slash kalau nak guna versi windows dan tutup untuk trader_mac
+$phpWord = new \PhpOffice\PhpWord\PhpWord();
 
-//$docx = new DOCXTemplate(APPPATH.'libraries\PhpWords\document\lsk.docx'); //for windowss
-$docx = new DOCXTemplate(APPPATH.'libraries/PhpWords/document/lsk.docx'); //for mac
-$docx->set('gred',$get_detail[0]->mrk_gred);
-$docx->set('namakon',$get_detail[0]->mrk_namakon);
-$docx->set('alamatkon',$get_detail[0]->mrk_alamatkon);
-$docx->set('tajukkerja',$get_detail[0]->df_tajuk);
-$docx->set('noinden',$get_detail[0]->mrk_noinden);
-$docx->set('nosebutharga',$get_detail[0]->df_nosebutharga);
-$docx->set('nopolisi',$get_detail[0]->lsk_perkeso);
-$docx->set('nopi',$get_detail[0]->lsk_liability);
-$docx->set('kodperuntukkan',$get_detail[0]->lsk_peruntukan);
-$docx->set('hargapesanan',number_format($get_detail[0]->mrk_kosprojek,2));
-$docx->set('hargasebenar',number_format($get_detail[0]->lks_hargasebenar,2));
-$docx->set('tarikhmulakerja',$get_detail[0]->mrk_tarikhmulakon);
-$docx->set('tarikhtamatkerja',$get_detail[0]->mrk_tarikhjangkasiap);
-$docx->set('tarikhlanjutmasa',$get_detail[0]->lsk_lanjutmasa);
-$docx->set('tarikhsiap',$get_detail[0]->lsk_tarikhkerjasiap);
-$docx->set('tarikhp',$get_detail[0]->mrk_tarikh);
-$docx->set('namapegawai',$get_detail[0]->lsk_juruteraj);
-$docx->set('jawatan',$get_detail[0]->lsk_jawatanjuruteraj);
-$docx->set('namajurutera',$get_detail[0]->lsk_juruterad);
-$docx->set('jawatj',$get_detail[0]->lsk_jawatanjuruterad);
+\PhpOffice\PhpWord\Settings::setTempDir('assets/tmp/');
+$userdata = $this->session->userdata('name');
+$template = new \PhpOffice\PhpWord\TemplateProcessor("assets/docx/lsk.docx");
 
+$template->setValue('gred',$get_detail[0]->mrk_gred);
+$template->setValue('namakon',$get_detail[0]->mrk_namakon);
+$template->setValue('alamatkon',$get_detail[0]->mrk_alamatkon);
+$template->setValue('tajukkerja',$get_detail[0]->df_tajuk);
+$template->setValue('noinden',$get_detail[0]->mrk_noinden);
+$template->setValue('nosebutharga',$get_detail[0]->df_nosebutharga);
+$template->setValue('nopolisi',$get_detail[0]->lsk_perkeso);
+$template->setValue('nopi',$get_detail[0]->lsk_liability);
+$template->setValue('kodperuntukkan',$get_detail[0]->lsk_peruntukan);
+$template->setValue('hargapesanan',number_format($get_detail[0]->mrk_kosprojek,2));
+$template->setValue('hargasebenar',number_format($get_detail[0]->lks_hargasebenar,2));
+$template->setValue('tarikhmulakerja',$get_detail[0]->mrk_tarikhmulakon);
+$template->setValue('tarikhtamatkerja',$get_detail[0]->mrk_tarikhjangkasiap);
+$template->setValue('tarikhlanjutmasa',$get_detail[0]->lsk_lanjutmasa);
+$template->setValue('tarikhsiap',$get_detail[0]->lsk_tarikhkerjasiap);
+$template->setValue('tarikhp',$get_detail[0]->mrk_tarikh);
+$template->setValue('namapegawai',$get_detail[0]->lsk_juruteraj);
+$template->setValue('jawatan',$get_detail[0]->lsk_jawatanjuruteraj);
+$template->setValue('namajurutera',$get_detail[0]->lsk_juruterad);
+$template->setValue('jawatj',$get_detail[0]->lsk_jawatanjuruterad);
 
-
-
-$docx->saveAs('MRK01.docx');
-
-header("Content-Type:application/msword");
-header("Content-Disposition: attachment;filename=MRK01.docx");
-readfile('MRK01.docx');
-
+$template->saveAs("assets/document/LSK-".$userdata.".docx",0777);
 ?>

@@ -12,22 +12,6 @@ class Report extends CI_Controller{
 
   }
 
-  public function Testing()
-  {
-    $this->load->view('print/test');
-  }
-
- 
-
-  public function Worpdf()
-  {
-    $this->load->view('print/testp');
-  }
-
-  public function WordP()
-  {
-      $this->load->view('print/wordtest');
-  }
 
   public function Report_MRK_01($value="")
   {
