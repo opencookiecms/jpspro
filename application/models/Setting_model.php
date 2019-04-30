@@ -10,6 +10,19 @@ class Setting_model extends CI_Model{
 
   }
 
+  public function addUserSetting()
+  {
+    $this->load->helper('url');
+
+    $user = $this->input->post("peoplename");
+
+    $data = array(
+      'p_names' => $user
+    );
+
+    return $this->db->insert('mrk_keypeople',$data);
+  }
+
 
 
   public function setslogan()
