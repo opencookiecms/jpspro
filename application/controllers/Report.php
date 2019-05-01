@@ -81,28 +81,28 @@ class Report extends CI_Controller{
   {
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
-    $this->load->view('webprint/SPKK01',$data);
+    $this->load->view('print/PKK01_Report',$data);
   }
 
   public function Report_PKK02($value="")
   {
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
-    $this->load->view('webprint/SPKK02',$data);
+    $this->load->view('print/PKK02_Report',$data);
   }
 
   public function Report_Khas01($value="")
   {
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
-    $this->load->view('webprint/SKHAS01',$data);
+    $this->load->view('print/SKHAS01',$data);
   }
 
   public function Report_Khas02($value="")
   {
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
-    $this->load->view('webprint/SKHAS02',$data);
+    $this->load->view('print/SKHAS02',$data);
   }
 
   public function Report_Cover_PWJP($value="")

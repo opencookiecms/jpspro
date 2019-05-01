@@ -137,8 +137,8 @@
                     <button class="btn btn-success mr-2 btn-rounded dropdown-toggle" type="button" data-toggle="dropdown">Print
                       <span class="caret"></span></button>
                       <ul class="dropdown-menu">
-                        <li><a href="">Surat MRK 01</a></li>
-                        <li><a href="">Surat MRK 02</a></li>
+                        <li><a href="<?php echo site_url('Report/Report_PKK01/'.$get_detail[0]->projek_id)?>">Surat MRK 01</a></li>
+                        <li><a href="<?php echo site_url('Report/Report_PKK02/'.$get_detail[0]->projek_id)?>">Surat MRK 02</a></li>
 
                       </ul>
                     </div>

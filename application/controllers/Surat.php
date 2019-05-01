@@ -70,7 +70,7 @@ class Surat extends CI_Controller
     {
       $this->Surat_model->create_suratkebenaran();
       $this->session->set_userdata('skk','Data Surat Kebenaran Khas berjaya disimpan');
-      redirect(base_url('mrk/Surat_Khas/'.$lass)); //redirect last i
+      redirect(base_url('surat/Surat_Khas/'.$lass)); //redirect last i
     }
 
 
