@@ -16,12 +16,12 @@
               <?php echo form_open('daftar/orderSebutharga'); ?>
               <div class="card" style="border-radius:10px;background-color:#60a3bc;">
                 <div class="card-body">
-                  <h4 class="card-title tl">Borang Tempahan No Sebutharga</h4>
+                  <h4 class="card-title tl">Pendaftaran No Sebutharga</h4>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-6">
-                            <label class="tl">No Sebutharga :</label>
+                            <label class="tl">No Sebutharga* :</label>
                             <input type="text" class="form-control" name="nosebutharga"  placeholder="No Fail Sebutharga">
                             <small id="nsebutharga" class="form-text text-muted">Sila isi no sebutharga mengikut spefikasi yang telah diberikan.</small>
                           </div>
@@ -36,7 +36,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-4">
-                            <label class="tl">Jenis Sebutharga :</label>
+                            <label class="tl">Kaedah Perolehan :</label>
                             <select type="text" class="form-control" id="jenissebutharga" name="jenissebut">
                               <option value=""></option>
                               <option value="Lantikan Terus">Lantikan Terus</option>

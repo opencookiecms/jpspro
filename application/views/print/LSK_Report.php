@@ -27,5 +27,7 @@ $template->setValue('jawatan',$get_detail[0]->lsk_jawatanjuruteraj);
 $template->setValue('namajurutera',$get_detail[0]->lsk_juruterad);
 $template->setValue('jawatj',$get_detail[0]->lsk_jawatanjuruterad);
 
-$template->saveAs("assets/document/LSK-".$userdata.".docx",0777);
+$filename = "Laporan Siap Kerja-".$userdata."(".$get_detail[0]->mrks_kodvot.").docx";
+$template->saveAs("assets/document/".$filename,0777);
+redirect(base_url("assets/document/".$filename));
 ?>

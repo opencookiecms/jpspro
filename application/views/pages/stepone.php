@@ -21,7 +21,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-6">
-                            <label class="tl">No Sebutharga :</label>
+                            <label class="tl">No Sebutharga* :</label>
                             <div class="input-group">
                               <input type="text" class="form-control" id="nosebuts" onkeyup="autofill()" value=""name="nosebut" readonly>
                               <div class="input-group-append bg-success border-primary">

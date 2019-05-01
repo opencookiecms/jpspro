@@ -279,7 +279,7 @@
                   <div class="col-sm-6">
                     <p>
                     <p>
-                      <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Muat Turun Fail / Cetak"  role="button">Print</a>
+                      <a href="" class="btn btn-success mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Muat Turun Fail / Cetak"  role="button">Print</a>
                       <a href="<?php echo site_url('mrk/PSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Kerja"  role="button">Perakuan Siap Kerja</a>
                       <a href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->projek_id) ?>" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Membaiki Kecatatan"  class="btn btn-info mr-2 btn-rounded" role="button">PSMK</a>
                   </div>

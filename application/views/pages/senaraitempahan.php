@@ -14,7 +14,48 @@
             <div class="col-lg-12 grid-margin">
               <div class="card" style="border-radius:10px;">
                 <div class="card-body">
-                  <h4 class="card-title">Senarai Projek</h4>
+               
+                  <h4 class="card-title">Senarai Pendaftaran</h4>
+                  
+                <?php
+                if($thistempahan=="Semua")
+                {
+                  $semua = "btn btn-success mr-2 btn-rounded";
+                  $sebutharga = "btn btn-primary mr-2 btn-rounded";
+                  $lantikan = "btn btn-primary mr-2 btn-rounded";
+                  $undi = "btn btn-primary mr-2 btn-rounded";
+                } 
+                else if($thistempahan=="Sebutharga")
+                {
+                  $semua = "btn btn-primary mr-2 btn-rounded";
+                  $sebutharga = "btn btn-success mr-2 btn-rounded";
+                  $lantikan = "btn btn-primary mr-2 btn-rounded";
+                  $undi = "btn btn-primary mr-2 btn-rounded";
+                }
+                else if($thistempahan=="Lantikan")
+                {
+                  $semua = "btn btn-primary mr-2 btn-rounded";
+                  $sebutharga = "btn btn-primary mr-2 btn-rounded";
+                  $lantikan = "btn btn-success mr-2 btn-rounded";
+                  $undi = "btn btn-primary mr-2 btn-rounded";
+                }
+                else if($thistempahan =="Undi")
+                {
+                  $semua = "btn btn-primary mr-2 btn-rounded";
+                  $sebutharga = "btn btn-primary mr-2 btn-rounded";
+                  $lantikan = "btn btn-primary mr-2 btn-rounded";
+                  $undi = "btn btn-success mr-2 btn-rounded";
+                }
+                 
+                ?>
+              
+
+                <a href="<?php echo site_url('daftar/senarai_tempahan')?>" class="<?php echo $semua?>" role="button">Semua</a>
+                <a href="<?php echo site_url('daftar/senarai_tempahan_sebutharga')?>" class="<?php echo $sebutharga?>" role="button">Sebutharga</a>
+                <a href="<?php echo site_url('daftar/senarai_tempahan_lantikan_terus')?>" class="<?php echo $lantikan?>" role="button" >Lantikan Terus</a>
+                <a href="<?php echo site_url('daftar/senarai_tempahan_undi')?>" class="<?php echo $undi?>" role="button" >Undi</a>
+                 <br>
+                 <br>
                   <div class="table-responsive dataTables_wrapper">
                     <table id="example" class="display table table-striped">
                        <thead>
@@ -27,6 +68,9 @@
                           </th>
                           <th>
                             Tarikh
+                          </th>
+                            <th>
+                            Kaedah Perolehan
                           </th>
                           <th>
                             Pemilik
@@ -44,6 +88,7 @@
                           <td class="py-1"><?php echo $bil?></td>
                           <td class="py-1"><?php echo $row->no_sebutharga?></td>
                           <td class="py-1"><?php echo $row->no_tarikh?></td>
+                           <td class="py-1"><?php echo $row->no_jenis?></td>
                           <td class="py-1"><?php echo $row->no_pemilik?></td>
 
                           <td class="py-1">

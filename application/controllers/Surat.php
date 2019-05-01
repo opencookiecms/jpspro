@@ -10,7 +10,6 @@ class Surat extends CI_Controller
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('Surat_model');
-
   }
 
   public function Letter_Board($value="")
@@ -44,7 +43,7 @@ class Surat extends CI_Controller
     {
       $this->Surat_model->create_suratmrk();
       $this->session->set_userdata('smrk','Data Surat Maklumat Rekod Kerja berjaya disimpan');
-      redirect(base_url('mrk/Surat_MRK/'.$lass)); //redirect last i
+      redirect(base_url('surat/Surat_MRK/'.$lass)); //redirect last i
     }
 
 
@@ -124,7 +123,7 @@ class Surat extends CI_Controller
       $this->Surat_model->SuratMRKUpdate($data ,$this->input->post('hiddenid'));
       $id = $this->input->post('hiddenids');
 			$this->session->set_userdata('smrk','Data Surat Maklumat Rekod Kerja berjaya dikemaskini');
-			redirect(base_url('mrk/Surat_MRK/'.$id)); //redirect last id to another step
+			redirect(base_url('surat/Surat_MRK/'.$id)); //redirect last id to another step
     }
 
   }
@@ -150,7 +149,7 @@ class Surat extends CI_Controller
       $this->Surat_model->SuratKhasUpdate($data ,$this->input->post('hiddenid'));
       $id = $this->input->post('hiddenids');
 			$this->session->set_userdata('skk','Data Surat Khas dikemaskini');
-			redirect(base_url('mrk/Surat_Khas/'.$id)); //redirect last id to another step
+			redirect(base_url('surat/Surat_Khas/'.$id)); //redirect last id to another step
     }
 
   }
@@ -175,7 +174,7 @@ class Surat extends CI_Controller
       $this->Surat_model->SuratWJPUpdate($data ,$this->input->post('hiddenid'));
       $id = $this->input->post('hiddenids');
 			$this->session->set_userdata('swjp','Data Surat Wang Jaminan Perlaksanaan dikemaskini');
-			redirect(base_url('mrk/Surat_WJP/'.$id)); //redirect last id to another step
+			redirect(base_url('surat/Surat_WJP/'.$id)); //redirect last id to another step
     }
 
   }
@@ -226,7 +225,6 @@ class Surat extends CI_Controller
     $this->load->view('pages/suratwjp_dts', $data);
     $this->load->view('template/footer');
   }
-
 }
 
 ?>

@@ -37,16 +37,16 @@
            <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi  mdi-elevation-rise"></i>
-              <span class="menu-title">No Sebutharga</span>
+              <span class="menu-title">Daftar Projek</span>
                 <i class="menu-arrow"></i>
             </a>
                <div class="collapse" id="ui">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo site_url('Daftar/orderSebutharga')?>">Tempahan</a>
+                  <a class="nav-link" href="<?php echo site_url('Daftar/orderSebutharga')?>">Pendaftaran</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tempahan')?>">Senarai Tempahan</a>
+                  <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tempahan')?>">Senarai Pendaftaran</a>
                 </li>
               
               </ul>
@@ -146,16 +146,16 @@
             <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#uis" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi  mdi-elevation-rise"></i>
-              <span class="menu-title">No Sebutharga</span>
+              <span class="menu-title">Daftar Projek</span>
                 <i class="menu-arrow"></i>
             </a>
                <div class="collapse" id="uis">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo site_url('Daftar/orderSebutharga')?>">Tempahan</a>
+                  <a class="nav-link" href="<?php echo site_url('Daftar/orderSebutharga')?>">Pendaftaran</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tempahan')?>">Senarai Tempahan</a>
+                  <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tempahan')?>">Senarai Pendaftaran</a>
                 </li>
               
               </ul>

@@ -53,8 +53,10 @@ $template->setValue('jawatanpegawai',$get_detail[0]->mrk_jawatan);
 $template->setValue('tarikhperakuan',$get_detail[0]->mrk_perakukerjataksiap);
 
 
+$filename = "MRK02-".$userdata."(".$get_detail[0]->mrks_kodvot.").docx";
+$template->saveAs("assets/document/".$filename,0777);
+redirect(base_url("assets/document/".$filename));
 
-$template->saveAs("assets/document/MKR02-".$userdata.".docx",0777);
 
 
 

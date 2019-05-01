@@ -27,11 +27,55 @@ class Daftar extends CI_Controller{
 
   public function senarai_tempahan()
   {
-
+ 
+    $data['thistempahan'] = "Semua";
     $ss = $this->session->userdata("nama");
     $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
 
     $data['get_list']=$this->Projek_model->listOrder();
+    $this->load->view('template/header');
+    $this->load->view('template/nav',$profile);
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/senaraitempahan',$data);
+    $this->load->view('template/footer');
+  }
+
+  public function senarai_tempahan_sebutharga()
+  {
+
+    $data['thistempahan'] = "Sebutharga";
+    $ss = $this->session->userdata("nama");
+    $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
+    $senaraitempahan = "Sebutharga";
+    $data['get_list']=$this->Projek_model->listOrderbytempahan($senaraitempahan);
+    $this->load->view('template/header');
+    $this->load->view('template/nav',$profile);
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/senaraitempahan',$data);
+    $this->load->view('template/footer');
+  }
+
+  public function senarai_tempahan_lantikan_terus()
+  {
+    $data['thistempahan'] = "Lantikan";
+    $ss = $this->session->userdata("nama");
+    $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
+    $senaraitempahan = "Lantikan Terus";
+    $data['get_list']=$this->Projek_model->listOrderbytempahan($senaraitempahan);
+    $this->load->view('template/header');
+    $this->load->view('template/nav',$profile);
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/senaraitempahan',$data);
+    $this->load->view('template/footer');
+  }
+
+  public function senarai_tempahan_undi()
+  {
+    $data['thistempahan'] = "Undi";
+    $ss = $this->session->userdata("nama");
+    $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
+    $senaraitempahan = "Undi";
+    $data['get_list']=$this->Projek_model->listOrderbytempahan($senaraitempahan);
     $this->load->view('template/header');
     $this->load->view('template/nav',$profile);
     $this->load->view('template/sidebar');
@@ -142,7 +186,7 @@ class Daftar extends CI_Controller{
 
   public function orderSebutharga()
   {
-    $data['title'] = "Tempahan No. Sebutharga";
+    $data['title'] = " No. Sebutharga";
     $data['get_user']=$this->Setting_model->get_userdatasetting();
 
     $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');
@@ -165,7 +209,7 @@ class Daftar extends CI_Controller{
 
   public function orderupdate($value="")
   {
-    $data['title'] = "Kemaskini No. Sebutharga";
+    $data['title'] = "Kemaskini Pendaftaran No. Sebutharga";
     $data['get_user']=$this->Setting_model->get_userdatasetting();
     $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');
     $data['get_list']=$this->Projek_model->updateOrder($value);

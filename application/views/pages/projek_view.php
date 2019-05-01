@@ -46,24 +46,24 @@
                 <tbody>
                   <tr>
                     <td class="font-weight-medium">
-                      MRK_01
+                      MRK 01
                     </td>
                     <td class="py-1" style="padding-left: 30px; text-align:center;">
                       <?php if($get_progress[0]->mrks_kodvot==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-success  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_01/'. $get_detail[0]->dp_id); ?>">MRK - 01</a>
+                      <a class="btn btn-success  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_01/'. $get_detail[0]->dp_id); ?>">MRK 01</a>
                     </td>
                   </tr>
                   <tr>
                     <td class="font-weight-medium">
-                      MRK_02
+                      MRK 02
                     </td>
                     <td class="py-1" style="padding-left: 30px; text-align:center;">
                       <?php if($get_progress[0]->mrk2_kodvots==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-primary  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_02/'. $get_detail[0]->dp_id); ?>">MRK - 02</a>
+                      <a class="btn btn-primary  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_02/'. $get_detail[0]->dp_id); ?>">MRK 02</a>
                     </td>
                   </tr>
                   <tr>
@@ -79,13 +79,13 @@
                   </tr>
                   <tr>
                     <td class="font-weight-medium">
-                      MRK_03
+                      MRK 03
                     </td>
                     <td class="py-1" style="padding-left: 30px; text-align:center;">
                       <?php if($get_progress[0]->mrktiga_kodvots==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>
                     </td>
                     <td>
-                      <a class="btn btn-danger  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_03/'. $get_detail[0]->dp_id); ?>">MRK - 03</a>
+                      <a class="btn btn-danger  mr-2 btn-rounded" href="<?php echo site_url('mrk/MRK_03/'. $get_detail[0]->dp_id); ?>">MRK 03</a>
                     </td>
                   </tr>
                   <tr>

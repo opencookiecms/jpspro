@@ -36,6 +36,17 @@ class Projek_model extends CI_Model{
     return $query->result();
   }
 
+  public function listOrderbytempahan($tempahan)
+  {
+    $this->db->select('*');
+    $this->db->from('order_nsh');
+    $this->db->where('no_jenis',$tempahan);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+
   public function updateOrder($value)
   {
     $this->db->select('*');

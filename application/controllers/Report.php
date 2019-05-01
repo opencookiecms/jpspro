@@ -17,6 +17,7 @@ class Report extends CI_Controller{
   {
   	$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
     $this->load->view('print/MRK01_Report',$data);
+    
   }
 
   public function Report_MRK_02($value="")
@@ -52,21 +53,21 @@ class Report extends CI_Controller{
 
   public function Report_SS()
   {
-    $this->load->view('webprint/CLP');
+    //$this->load->view('webprint/CLP');
   }
 
   public function Report_PSMK($value="")
   {
     $this->load->database();
     $data['get_detail']=$this->Mrk_model->get_projectdetailforPSMK($value);
-    $this->load->view('print/PSMK_Report',$data);
+    $this->load->view('print/PSMC_Report',$data);
   }
 
   public function Report_PJB($value="")
   {
       $this->load->database();
       $data['get_detail']=$this->Mrk_model->get_projectdetailforJB($value);
-      $this->load->view('print/JB_Report',$data);
+      $this->load->view('print/PJB_Report',$data);
   }
 
   public function Report_Pemulangan_WJP($value="")

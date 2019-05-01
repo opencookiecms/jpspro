@@ -18,9 +18,12 @@ $template->setValue('namapegawai',$get_detail[0]->mrk_pegawai);
 $template->setValue('jawatan',$get_detail[0]->mrk_jawatan);
 $template->setValue('tarikhlaporan',$get_detail[0]->mrk_tarikh);
 
+$filename = "MRK01-".$userdata."(".$get_detail[0]->mrks_kodvot.").docx";
 
 
-$template->saveAs("assets/document/MKR01-".$userdata.".docx",0777);
+
+$template->saveAs("assets/document/".$filename,0777);
+redirect(base_url("assets/document/".$filename));
 
 
 
