@@ -46,6 +46,15 @@ class Setting_model extends CI_Model{
     $this->db->delete('mrk_setting');
   }
 
+
+  public function deluser($id)
+  {
+    $this->load->helper('url');
+    //$this->db->
+    $this->db->where('user_id', $id);
+    $this->db->delete('jps_users');
+  }
+
   public function deletePegawai($id)
   {
     $this->load->helper('url');

@@ -15,7 +15,7 @@
           <p></p>
           <p></p>
           <h4 class="card-title">Daftar Pengguna</h4>
-          <a href="<?php echo site_url('Setting_con/usersreg') ?>" class="btn btn-info mr-2 btn-rounded" role="button">Senarai Pengguna</a>
+          <a href="<?php echo site_url('Setting_con/senarai_nama_pengguna') ?>" class="btn btn-info mr-2 btn-rounded" role="button">Senarai Nama Pengguna</a>
           <P>
             <p>
             <div class="row">
@@ -35,10 +35,17 @@
                     <label>Jawatan</label>
                     <select type="text" class="form-control" id="jawatan" name="jawatan">
                       <option value=""></option>
+                      <option value="Jurutera Awan">Jurutera Awam</option>
                       <option value="Jurutera">Jurutera</option>
-                      <option value="Jurutera G34">Jurutera G34</option>
                       <option value="Penolong Jurutera">Penolong Jurutera</option>
                       <option value="Pegawai">Pegawai</option>
+                      <option value="Penolong Pegawai">Penolong Pegawai</option>
+                      <option value="Pembantu Tadbir">Pembantu Tadbir</option>
+                      <option value="Pembantu Tadbir Kewangan">Pembantu Tadbir Kewangan</option>
+                      <option value="Pembantu Awam">Pembantu Awam</option>
+                      <option value="Pekerja AM">Pekerja AM</option>
+                   
+                   
                     </select>
                     <small id="nsebutharga" class="form-text text-muted">Pilih jenis sebutharga.</small>
                   </div>

@@ -186,7 +186,7 @@ class Daftar extends CI_Controller{
 
   public function orderSebutharga()
   {
-    $data['title'] = " No. Sebutharga";
+    $data['title'] = " Pendaftaran No. Sebutharga";
     $data['get_user']=$this->Setting_model->get_userdatasetting();
 
     $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');

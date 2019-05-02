@@ -170,4 +170,22 @@ class Setting_con extends CI_Controller{
 
   }
 
+  public function senarai_nama_pengguna()
+  {
+      $data['get_user']=$this->Setting_model->get_userdatasetting();
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/userslist',$data);
+      $this->load->view('template/footer');
+  }
+
+  public function deluser($value="")
+  {
+    $this->load->database();
+
+    $this->Setting_model->deluser($value);
+    redirect(base_url('setting_con/senarai_nama_pengguna'));
+  }
+
 }
