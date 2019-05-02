@@ -46,6 +46,15 @@ class Setting_model extends CI_Model{
     $this->db->delete('mrk_setting');
   }
 
+  public function getcount()
+  {
+    $this->db->select("projek_id, COUNT(*) AS TOTAL, COUNT(IF(df_jsebutharga='Lantikan Terus',1,null)) AS lt, COUNT(IF(df_jsebutharga='Undi',1,null)) AS undi, COUNT(IF(df_jsebutharga='Sebutharga',1,null)) AS sb");
+    $this->db->from('dp_projek');
+    $query = $this->db->get();
+    return $query->result();
+
+  }
+
 
   public function deluser($id)
   {

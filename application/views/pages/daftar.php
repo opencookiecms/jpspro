@@ -9,7 +9,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 grid-margin stretch-card">
               <div class="card card-statistics" style="border-radius:10px;">
                 <div class="card-body">
                   <div class="clearfix">
@@ -17,19 +17,19 @@
                       <i class="mdi mdi-cube text-danger icon-lg"></i>
                     </div>
                     <div class="float-right">
-                      <p class="mb-0 text-right">Lantikan Terus</p>
+                      <p class="mb-0 text-right">Sebutharga</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">#LT</h3>
+                        <h3 class="font-weight-medium text-right mb-0"><?php echo $get_count[0]->sb ?></h3>
                       </div>
                     </div>
                   </div>
                   <p class="text-muted mt-3 mb-0">
-                    <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 65% lower growth
+                    <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i>
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 grid-margin stretch-card">
               <div class="card card-statistics" style="border-radius:10px;">
                 <div class="card-body">
                   <div class="clearfix">
@@ -37,14 +37,34 @@
                       <i class="mdi mdi-cube text-warning icon-lg"></i>
                     </div>
                     <div class="float-right">
-                      <p class="mb-0 text-right">Sebut Harga</p>
+                      <p class="mb-0 text-right">Lantikan Terus</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">#SB</h3>
+                        <h3 class="font-weight-medium text-right mb-0"><?php echo $get_count[0]->lt ?></h3>
                       </div>
                     </div>
                   </div>
                   <p class="text-muted mt-3 mb-0">
-                    <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> Sebutharga
+                    <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 grid-margin stretch-card">
+              <div class="card card-statistics" style="border-radius:10px;">
+                <div class="card-body">
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <i class="mdi mdi-cube text-primary icon-lg"></i>
+                    </div>
+                    <div class="float-right">
+                      <p class="mb-0 text-right">Kerja Undi</p>
+                      <div class="fluid-container">
+                        <h3 class="font-weight-medium text-right mb-0"><?php echo $get_count[0]->undi ?></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted mt-3 mb-0">
+                    <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> 
                   </p>
                 </div>
               </div>

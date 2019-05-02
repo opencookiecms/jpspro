@@ -16,7 +16,7 @@ class Daftar extends CI_Controller{
 
     $ss = $this->session->userdata("nama");
     $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
-
+    $data['get_count'] = $this->Setting_model->getcount();
     $data['get_list']=$this->Projek_model->listOrder();
     $this->load->view('template/header');
     $this->load->view('template/nav',$profile);
@@ -24,6 +24,11 @@ class Daftar extends CI_Controller{
     $this->load->view('pages/daftar',$data);
     $this->load->view('template/footer');
   }
+
+
+
+
+
 
   public function senarai_tempahan()
   {
