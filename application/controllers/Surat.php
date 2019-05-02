@@ -10,6 +10,7 @@ class Surat extends CI_Controller
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('Surat_model');
+    $this->load->model('Setting_model');
   }
 
   public function Letter_Board($value="")
@@ -28,6 +29,7 @@ class Surat extends CI_Controller
     $lass = $this->input->post('hiddenids');
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
+    $data['get_keypeople']=$this->Setting_model->get_Datasetting();
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
     $this->form_validation->set_rules('rujukkami', 'Rujukan Kami', 'required');
 
@@ -54,6 +56,7 @@ class Surat extends CI_Controller
     $lass = $this->input->post('hiddenids');
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
+     $data['get_user']=$this->Setting_model->get_userdatasetting();
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
     $this->form_validation->set_rules('rujukkami' , 'Rujukan Kami', 'required');
     $this->form_validation->set_rules('nosebutharga', 'No Sebutharga', 'required');
@@ -82,6 +85,7 @@ class Surat extends CI_Controller
     $lass = $this->input->post('hiddenids');
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetailSuratWJP($value);
+   $data['get_user']=$this->Setting_model->get_userdatasetting();
     $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
     $this->form_validation->set_rules('rujukkami', 'Rujukan Kami', 'required');
 

@@ -10,6 +10,7 @@ class Projek extends CI_Controller
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('Projek_model');
+    $this->load->model('Setting_model');
   }
 
   public function unsetmsgsession()
@@ -175,9 +176,12 @@ class Projek extends CI_Controller
 
   public function Update_Projek02($value="")
   {
+   
     $data['title'] = 'Kemaskini Maklumat Sebutharga';
     $this->load->database();
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
+     $data['get_keypeople']=$this->Setting_model->get_Datasetting();
+       $data['get_user']=$this->Setting_model->get_userdatasetting();
     $id = $this->input->post('hiddenid');
     echo $id;
 

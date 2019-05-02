@@ -112,7 +112,7 @@
                   </tr>
                   <tr>
                     <td class="font-weight-medium">
-                      Perakuan Siap Membaiki <br>Kecatatan
+                      Perakuan Siap Membaiki <br>Kecacatan
                     </td>
                     <td class="py-1" style="padding-left: 30px; text-align:center;">
                       <?php if($get_progress[0]->psmk_kodvots==null){echo "<img src='".base_url(). "/assets/images/error.png' alt='error'>";}else{  echo "<img src='".base_url(). "/assets/images/success.png' alt='error'>";}?>

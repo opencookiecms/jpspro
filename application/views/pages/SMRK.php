@@ -99,11 +99,27 @@
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Pegawai Penguasa</label>
                   <div class="col-sm-3">
-                    <input type="text" class="form-control ts" style="font-weight:bold;" id="pegawaikuasa" name="pegawaikuasa" placeholder="Pegawai Penguasa" value="<?php echo $get_detail[0]->s_pegawaikuasa?>">
+                    <select class="form-control ts" style="font-weight:bold;" id="pegawaikuasa" name="pegawaikuasa">
+                          <option value="<?php echo $get_detail[0]->s_pegawaikuasa?>"><?php echo $get_detail[0]->s_pegawaikuasa?></option>
+                         <?php foreach($get_keypeople as $users){ ?>
+                            <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                          <?php } ?>
+                    </select>
                   </div>
                   <label class="col-sm-2 col-form-label">Jawatan</label>
                   <div class="col-sm-3">
-                  <input type="text" class="form-control ts" style="font-weight:bold;"id="jawatan" name="jawatan" placeholder="Jawatan" value="<?php echo $get_detail[0]->s_jawatanpp?>">
+                  <select class="form-control ts" style="font-weight:bold;"id="jawatan" name="jawatan" placeholder="Jawatan">
+                       <option value="<?php echo $get_detail[0]->s_jawatanpp?>"><?php echo $get_detail[0]->s_jawatanpp?></option>
+                      <option value="Jurutera Awan">Jurutera Awam</option>
+                      <option value="Jurutera">Jurutera</option>
+                      <option value="Penolong Jurutera">Penolong Jurutera</option>
+                      <option value="Pegawai">Pegawai</option>
+                      <option value="Penolong Pegawai">Penolong Pegawai</option>
+                      <option value="Pembantu Tadbir">Pembantu Tadbir</option>
+                      <option value="Pembantu Tadbir Kewangan">Pembantu Tadbir Kewangan</option>
+                      <option value="Pembantu Awam">Pembantu Awam</option>
+                      <option value="Pekerja AM">Pekerja AM</option>
+                  </select>
                   </div>
                 </div>
               </div>

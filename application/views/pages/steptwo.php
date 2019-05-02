@@ -296,8 +296,8 @@
                     <div class="col-sm-3">
                       <label class="tl">Peruntukan</label>
                       <select type="text" class="form-control"  name="peruntukan" placeholder="Negeri">
-                        <option value="negeri">Negeri</option>
-                        <option value="persekutuan">Persekutuan</option>
+                        <option value="Negeri">Negeri</option>
+                        <option value="Persekutuan">Persekutuan</option>
                       </select>
                     </div>
                   </div>

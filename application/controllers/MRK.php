@@ -262,6 +262,7 @@ class MRK extends CI_Controller{
 		$lass = $this->input->post('hiddenids');
 		$this->load->database();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforPPWJP($value);
+		$data['get_keypeople']=$this->Setting_model->get_Datasetting();
 		$this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
 
 		if($this->form_validation->run()== FALSE)

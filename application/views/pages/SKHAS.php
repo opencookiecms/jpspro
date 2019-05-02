@@ -107,19 +107,10 @@
                   <label class="col-sm-2 col-form-label">Pegawai Penguasa</label>
                   <div class="col-sm-3">
                     <select type="text" class="form-control ts" style="font-weight:bold;" id="pegawaikuasa" name="pegawaikuasa">
-                          <option value="<?php echo $get_detail[0]->skhas_pegawaikuasa?>"><?php echo $get_detail[0]->skhas_pegawaikuasa?></option>
-                      <option value="Idris Bin Yussof">Idris Bin Yussof</option>
-                      <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
-                      <option value="Khairul Anuar B. Abd. Rashid">Khairul Anuar B. Abd. Rashid</option>
-                      <option value="Mohd. Amin B. Ahmad">Mohd. Amin B. Ahmad</option>
-                      <option value="Yahaya B. Shariff">Yahaya B. Shariff</option>
-                      <option value="Mohd. Daud Bin Hamid">Mohd. Daud Bin Hamid</option>
-                      <option value="Zainuddin Bin Yusoff,AMP.,BCK.">Zainuddin Bin Yusoff,AMP.,BCK.</option>
-                      <option value="Hasan Bin Abdul Majid">Hasan Bin Abdul Majid</option>
-                      <option value="Kamarudin Bin Saleh">Kamarudin Bin Saleh</option>
-                      <option value="Ir Siti Norazela Binti Hasan">Ir Siti Norazela Binti Hasan</option>
-                      <option value="Nur Syuhada Binti Ahmad">Nur Syuhada Binti Ahmad</option>
-                      <option value="Nor Rozaini Bt. Abdullah">Nor Rozaini Bt. Abdullah</option>
+                    <option value="<?php echo $get_detail[0]->skhas_pegawaikuasa?>"><?php echo $get_detail[0]->skhas_pegawaikuasa?></option>
+                          <?php foreach($get_user as $users){ ?>
+                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
+                        <?php } ?>
                     </select>
                   </div>
                   <label class="col-sm-2 col-form-label">Jawatan</label>

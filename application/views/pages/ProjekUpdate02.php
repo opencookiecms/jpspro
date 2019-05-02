@@ -258,12 +258,11 @@
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Jurutera Dearah</label>
-                      <select type="text" class="form-control"  name="juruterakanan" placeholder="Jurutera Daerah">
+                      <select  class="form-control"  name="juruterakanan" placeholder="Jurutera Daerah">
                         <option value="<?php echo $get_detail[0]->df_juruterad?>"><?php echo $get_detail[0]->df_juruterad?></option>
-                        <option value="Idris B. Yussof">Idris B. Yussof</option>
-                        <option value="Zainuddin bin Yusoff, AMP., BCK">Zainuddin bin Yusoff, AMP., BCK</option>
-                        <option value="Kamarudin Bin Saleh">Kamarudin Bin Saleh</option>
-                        <option value="Nor Rozaini BT. Abdullah">Nor Rozaini BT. Abdullah</option>
+                          <?php foreach($get_keypeople as $users){ ?>
+                            <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                          <?php } ?>
                       </select>
                     </div>
                   </div>
@@ -274,7 +273,11 @@
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Jurutera</label>
-                        <input type="text" class="form-control"  name="jurutera" placeholder="Jurutera" value="<?php echo $get_detail[0]->df_jurutera?>">
+                        <select class="form-control"  name="jurutera" placeholder="Jurutera" value="<?php echo $get_detail[0]->df_jurutera?>">
+                              <?php foreach($get_keypeople as $users){ ?>
+                            <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                          <?php } ?>
+                        </select>
                     </div>
                   </div>
                 </div>
@@ -284,7 +287,12 @@
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Penolong Jurutera Kanan JA36</label>
-                      <input type="text" class="form-control"  name="penolongkanan" placeholder="Penolong Kanan JA36" value="<?php echo $get_detail[0]->df_penolongkanan?>">
+                      <select  class="form-control"  name="penolongkanan">
+                          <option value="<?php echo $get_detail[0]->df_penolongkanan?>"><?php echo $get_detail[0]->df_penolongkanan?></option>
+                          <?php foreach($get_user as $users){ ?>
+                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
+                        <?php } ?>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -294,7 +302,14 @@
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Penolong Jurutera JA29</label>
-                        <input type="text" class="form-control" name="penolong" placeholder="Penolong Jurutera JA29" value="<?php echo $get_detail[0]->df_penolong?>">
+                        <select class="form-control" name="penolong" value="<?php echo $get_detail[0]->df_penolong?>">
+                         <option value="<?php echo $get_detail[0]->df_penolong?>"><?php echo $get_detail[0]->df_penolong?></option>
+                          <?php foreach($get_user as $users){ ?>
+                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
+                        <?php } ?>
+                        </select>
+
+
                     </div>
                   </div>
                 </div>

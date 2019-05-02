@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#575fcf;border-radius:10px;">
+          <div class="card-body" style="background-color:#778ca3;border-radius:10px;">
             <h4 class="card-title">  <h2 class="f ts">Surat Pelepasan Wang Jaminan Perlaksanaan</h2>
             <p class="card-description"><h5><span class="error" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['swjp'])) { ?>
@@ -29,7 +29,7 @@
                 }
           ?>
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#575fcf;border-radius:10px;">
+          <div class="card-body" style="background-color:#4b6584;border-radius:10px;">
             <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Surat Pelepasan WJP</h4>
             <div class="row">
               <div class="col-md-12 tl">
@@ -136,11 +136,28 @@
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Pengawai Penguasa</label>
                   <div class="col-sm-3">
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="pegawaikuasa" name="pegawaikuasa" placeholder="Pegawai Penguasa" value="<?php echo $this->session->userdata("name")?>">
+                      <select class="form-control ts" style="font-weight:bold;" id="pegawaikuasa" name="pegawaikuasa" value="">
+                          <option value="<?php echo $this->session->userdata("name")?>"><?php echo $this->session->userdata("name")?></option>
+                       <?php foreach($get_user as $users){ ?>
+                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
+                        <?php } ?>
+                      </select>
                   </div>
                   <label class="col-sm-2 col-form-label">Jawatan</label>
                   <div class="col-sm-3">
-                  <input type="text" class="form-control ts" style="font-weight:bold;" id="jawatan" name="jawatan" placeholder="Jawatan" value="<?php echo $this->session->userdata("jawatan")?>">
+                  <select class="form-control ts" style="font-weight:bold;" id="jawatan" name="jawatan" placeholder="Jawatan">
+                        <option value="<?php echo $this->session->userdata("jawatan")?>"><?php echo $this->session->userdata("jawatan")?></option>
+                           <option value="Jurutera Awan">Jurutera Awam</option>
+                      <option value="Jurutera">Jurutera</option>
+                      <option value="Penolong Jurutera">Penolong Jurutera</option>
+                      <option value="Pegawai">Pegawai</option>
+                      <option value="Penolong Pegawai">Penolong Pegawai</option>
+                      <option value="Pembantu Tadbir">Pembantu Tadbir</option>
+                      <option value="Pembantu Tadbir Kewangan">Pembantu Tadbir Kewangan</option>
+                      <option value="Pembantu Awam">Pembantu Awam</option>
+                      <option value="Pekerja AM">Pekerja AM</option>
+                  </select>
+
                   </div>
                 </div>
               </div>
