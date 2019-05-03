@@ -12,7 +12,7 @@
             <div class="nav-link">
               <div class="user-wrapper">
                 <div class="profile-image">
-                  <img src="<?php echo base_url() ?>assets/staradmin/images/faces-clipart/pic-4.png" alt="profile image">
+                  <img src="<?php echo base_url() ?>assets/images/profile/<?php echo $this->session->userdata('userpic') ?>" alt="profile image">
                 </div>
                 <div class="text-wrapper">
                   <p class="profile-name"><?php echo $ssname?></p>

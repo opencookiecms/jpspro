@@ -18,6 +18,7 @@ class Daftar extends CI_Controller{
     $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
     $data['get_count'] = $this->Setting_model->getcount();
     $data['get_list']=$this->Projek_model->listOrder();
+    $data['get_projek']=$this->Projek_model->get_projekviewafter();
     $this->load->view('template/header');
     $this->load->view('template/nav',$profile);
     $this->load->view('template/sidebar');
@@ -191,7 +192,7 @@ class Daftar extends CI_Controller{
 
   public function orderSebutharga()
   {
-    $data['title'] = " Pendaftaran No. Sebutharga";
+    $data['title'] = " Pendaftaran No. Perolehan";
     $data['get_user']=$this->Setting_model->get_userdatasetting();
 
     $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');
@@ -214,7 +215,7 @@ class Daftar extends CI_Controller{
 
   public function orderupdate($value="")
   {
-    $data['title'] = "Kemaskini Pendaftaran No. Sebutharga";
+    $data['title'] = "Kemaskini No. Perolehan";
     $data['get_user']=$this->Setting_model->get_userdatasetting();
     $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');
     $data['get_list']=$this->Projek_model->updateOrder($value);

@@ -52,7 +52,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-4">
-                            <label class="tl">Pemilik</label>        
+                            <label class="tl">Pegawai Penyelia</label>        
                             <select type="text" class="form-control" id="pemilik" name="pemilik">
                               <option value=""></option>
                               <?php foreach($get_user as $users){ ?>

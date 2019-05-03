@@ -4,7 +4,7 @@
           <div class="row purchace-popup">
             <div class="col-12">
               <span class="d-block d-md-flex align-items-center">
-                <p>Senarai Maklumat Projek Mengikut No Sebutharga</p>
+                <p>Senarai Maklumat No Perolehan</p>
               </span>
             </div>
           </div>
@@ -24,6 +24,8 @@
                   $sebutharga = "btn btn-primary mr-2 btn-rounded";
                   $lantikan = "btn btn-primary mr-2 btn-rounded";
                   $undi = "btn btn-primary mr-2 btn-rounded";
+
+                  $jp = "No Perolehan";
                 } 
                 else if($thistempahan=="Sebutharga")
                 {
@@ -31,6 +33,8 @@
                   $sebutharga = "btn btn-success mr-2 btn-rounded";
                   $lantikan = "btn btn-primary mr-2 btn-rounded";
                   $undi = "btn btn-primary mr-2 btn-rounded";
+
+                  $jp = "No Sebutharga";
                 }
                 else if($thistempahan=="Lantikan")
                 {
@@ -38,6 +42,8 @@
                   $sebutharga = "btn btn-primary mr-2 btn-rounded";
                   $lantikan = "btn btn-success mr-2 btn-rounded";
                   $undi = "btn btn-primary mr-2 btn-rounded";
+
+                    $jp = "Intikan Terus";
                 }
                 else if($thistempahan =="Undi")
                 {
@@ -45,6 +51,8 @@
                   $sebutharga = "btn btn-primary mr-2 btn-rounded";
                   $lantikan = "btn btn-primary mr-2 btn-rounded";
                   $undi = "btn btn-success mr-2 btn-rounded";
+
+                    $jp = "No Undi";
                 }
                  
                 ?>
@@ -64,7 +72,7 @@
                             Bil
                           </th>
                           <th>
-                            No Sebutharga
+                            <?php echo $jp ?>
                           </th>
                           <th>
                             Tarikh

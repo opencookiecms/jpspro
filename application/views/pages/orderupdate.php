@@ -41,7 +41,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-4">
-                            <label class="tl">Jenis Sebutharga :</label>
+                            <label class="tl">Kaedah Perolehan :</label>
                             <select type="text" class="form-control" id="jenissebutharga" name="jenissebut">
                               <option value="<?php echo $get_list[0]->no_jenis?>"><?php echo $get_list[0]->no_jenis?></option>
                               <option value="Lantikan Terus">Lantikan Terus</option>
@@ -57,7 +57,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-4">
-                            <label class="tl">Pemilik</label>        
+                            <label class="tl">Pegawai Penyelia</label>        
                             <select type="text" class="form-control" id="pemilik" name="pemilik">
                               <option value="<?php echo $get_list[0]->no_pemilik?>"><?php echo $get_list[0]->no_pemilik?></option>
                               <?php foreach($get_user as $users){ ?>

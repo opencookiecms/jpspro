@@ -77,9 +77,16 @@
           </div>
           <div class="row">
             <div class="col-12 grid-margin">
-              <div class="card">
+              <div class="card" style="border-radius:10px;">
+
+
+             
                 <div class="card-body">
                   <h5 class="card-title mb-4">Tempoh Tarikh Sebutharga Ditutup </h5>
+                  <?php $dates = $get_projek[0]->df_tarikhnotis ?>
+                  <?php $today = $today = date("d/m/Y"); ?>
+                  <?php foreach ($get_projek as $row):?>
+
                   <div class="fluid-container">
                     <div class="row ticket-card mt-3 pb-2 border-bottom pb-3 mb-3">
                       <div class="col-md-1">
@@ -87,33 +94,42 @@
                       </div>
                       <div class="ticket-details col-md-9">
                         <div class="d-flex">
-                          <p class="text-dark font-weight-semibold mr-2 mb-0 no-wrap">Kontraktor :</p>
-                          <p class="text-primary mr-1 mb-0">[no sebut harga]</p>
-                          <p class="mb-0 ellipsis">ADK SEJATI</p>
+                          <p class="text-dark font-weight-semibold mr-2 mb-0 no-wrap">No Sebutharga :</p>
+                          <p class="text-primary mr-1 mb-0"><?php echo $row->df_nosebutharga?> </p>
+                         
                         </div>
-                        <p class="text-gray ellipsis mb-2">Tajuk Projek
+                        <p class="text-gray ellipsis mb-2">Tajuk Projek 
+                          <?php echo $row->df_tajuk?> 
                         </p>
                         <div class="row text-gray d-md-flex d-none">
                           <div class="col-4 d-flex">
-                            <small class="mb-0 mr-2 text-muted text-muted">Tarik Sebutharga :</small>
-                            <small class="Last-responded mr-2 mb-0 text-muted text-muted">3 hours ago</small>
+                                  
+                            <small class="mb-0 mr-2 text-muted text-muted">Tarik Mula :</small>
+                            <small class="Last-responded mr-2 mb-0 text-muted text-muted"><?php echo date('d/m/Y', strtotime ($row->df_tarikhnotis))?> </small>
                           </div>
                           <div class="col-4 d-flex">
                             <small class="mb-0 mr-2 text-muted text-muted">Tarikh Akhir :</small>
-                            <small class="Last-responded mr-2 mb-0 text-muted text-muted">2 Days</small>
+                            <small class="Last-responded mr-2 mb-0 text-muted text-muted"><?php   echo date('d/m/Y', strtotime($dates. " + {$row->df_tarikhtutup} days + {$row->df_tarikhdocakhir} days + {$row->df_tarikhdocmula}days + {$row->df_tarikhlawat} days")); ?></small>
                           </div>
                         </div>
                       </div>
-                      <div class="ticket-actions col-md-2">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Manage
-                          </button>
-                        </div>
-                      </div>
+  
                     </div>
                   </div>
+                   <?php endforeach; ?>
                 </div>
+
+
+             
+
+                
+
+
+                
+
+
+
+
               </div>
             </div>
           </div>

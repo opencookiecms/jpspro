@@ -16,24 +16,9 @@ $ssroles = $this->session->userdata("roles");
     </a>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center">
-    <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-
-      <li class="nav-item">
-        <a href="#" class="nav-link">
-          <i class="mdi mdi-elevation-rise"></i>Reports</a>
-      </li>
-      <li class="nav-item dropdown">
-
-      </li>
-      <li class="nav-item dropdown">
-        <a href="<?php echo site_url('Daftar/orderSebutharga')?>" class="nav-link" data-toggle="tooltip" data-placement="top" title="daftar no sebutharga">
-          <i class="mdi mdi-elevation-rise" ></i>Order No. Sebutharga</a>
-        </a>
-      </li>
-
-    </ul>
+ 
     <ul class="navbar-nav navbar-nav-right">
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
           <i class="mdi mdi-file-document-box"></i>
           <span class="count">7</span>
@@ -87,8 +72,8 @@ $ssroles = $this->session->userdata("roles");
             </div>
           </a>
         </div>
-      </li>
-      <li class="nav-item dropdown">
+      </li> -->
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
           <i class="mdi mdi-bell"></i>
           <span class="count">4</span>
@@ -142,14 +127,14 @@ $ssroles = $this->session->userdata("roles");
             </div>
           </a>
         </div>
-      </li>
+      </li> -->
       <li class="nav-item dropdown d-none d-xl-inline-block">
         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
           <span class="profile-text">Hello, <?php echo $ssname ?>!</span>
-          <img class="img-xs rounded-circle" src="<?php echo base_url() ?>assets/staradmin/images/faces-clipart/pic-4.png" alt="Profile image">
+          <img class="img-xs rounded-circle" src="<?php echo base_url() ?>assets/images/profile/<?php echo $this->session->userdata('userpic') ?>" alt="Profile image">
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-          <a class="dropdown-item p-0">
+          <!-- <a class="dropdown-item p-0">
             <div class="d-flex border-bottom">
               <div class="py-3 px-4 d-flex align-items-center justify-content-center">
                 <i class="mdi mdi-bookmark-plus-outline mr-0 text-gray"></i>
@@ -161,15 +146,12 @@ $ssroles = $this->session->userdata("roles");
                 <i class="mdi mdi-alarm-check mr-0 text-gray"></i>
               </div>
             </div>
+          </a> -->
+          <a class="dropdown-item mt-2" href="<?php echo site_url('setting_con/myprofile/'.$this->session->userdata('userid')) ?>">
+          Profil Saya
           </a>
-          <a class="dropdown-item mt-2">
-          My Profile
-          </a>
-          <a class="dropdown-item">
-            Change Password
-          </a>
-          <a class="dropdown-item">
-            Check Inbox
+           <a class="dropdown-item mt-2" href="<?php echo site_url('setting_con/tukar_kata_laluan/'.$this->session->userdata('userid')) ?>">
+          Tukar Kata Laluan
           </a>
           <a class="dropdown-item" href="<?php echo site_url('Setting_con/logout')?>">
             Sign Out

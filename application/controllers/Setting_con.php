@@ -116,6 +116,7 @@ class Setting_con extends CI_Controller{
       $this->session->unset_userdata('name');
       $this->session->unset_userdata('roles');
       $this->session->unset_userdata('jawatan');
+      $this->session->unset_userdata('userid');
       $this->session->sess_destroy();
       redirect('login');
   }
@@ -130,8 +131,10 @@ class Setting_con extends CI_Controller{
     {
       foreach ($veri as $row)
       {
+        $this->session->set_userdata('userid',$row->user_id);
         $this->session->set_userdata('email',$row->jps_email);
         $this->session->set_userdata('name', $row->jps_name);
+        $this->session->set_userdata('userpic',$row->user_pic);
         $this->session->set_userdata('roles',$row->jps_userroles);
         $this->session->set_userdata('jawatan',$row->jps_position);
 
@@ -186,6 +189,79 @@ class Setting_con extends CI_Controller{
 
     $this->Setting_model->deluser($value);
     redirect(base_url('setting_con/senarai_nama_pengguna'));
+  }
+
+  public function myprofile($value)
+  {
+   
+        $data['get_user']=$this->Setting_model->get_userdatasettingbyid($value);
+        $this->load->view('template/header');
+        $this->load->view('template/nav');
+        $this->load->view('template/sidebar');
+        $this->load->view('pages/myprofile',$data);
+        $this->load->view('template/footer');
+  }
+
+
+  public function updateprofile()
+  {
+      $config['upload_path'] ='./assets/images/profile/';
+      $config['allowed_types'] = 'gif|jpg|jpeg|png';
+      $config['max_size'] = '10000';
+      $config['max_width'] = '30000';
+      $config['max_height'] = '30000';
+      $this->load->library('upload', $config);
+
+      if(!$this->upload->do_upload('file'))
+      {
+         $data = array(
+          'jps_name'=>$this->input->post('nama'),
+          'jps_position'=>$this->input->post('jawatan'),
+          'jps_email'=>$this->input->post('email'),
+       
+          'user_id'=>$this->session->userdata('userid')
+         );
+
+           $this->Setting_model->profileupdate($data,$this->session->userdata('userid'));
+           redirect(base_url('setting_con/myprofile/'.$this->session->userdata('userid')));
+      }
+      else{
+
+          $data = array(
+          'jps_name'=>$this->input->post('nama'),
+          'jps_position'=>$this->input->post('jawatan'),
+          'jps_email'=>$this->input->post('email'),
+       
+          'user_id'=>$this->session->userdata('userid')
+        );
+
+        $upload_data = $this->upload->data(); //Returns array of containing all of the data related to the file you uploaded.
+        $data['user_pic'] = $upload_data['file_name'];
+
+
+      
+
+        $this->Setting_model->profileupdate($data,$this->session->userdata('userid'));
+        redirect(base_url('setting_con/myprofile/'.$this->session->userdata('userid')));
+      }
+
+  }
+
+  public function tukar_kata_laluan($value="")
+  {
+   
+        $data['get_user']=$this->Setting_model->get_userdatasettingbyid($value);
+        $this->load->view('template/header');
+        $this->load->view('template/nav');
+        $this->load->view('template/sidebar');
+        $this->load->view('pages/password',$data);
+        $this->load->view('template/footer');
+  }
+
+  public function tukar()
+  {
+      $this->Setting_model->update_password($this->session->userdata('userid'));
+      $this->logout();
   }
 
 }

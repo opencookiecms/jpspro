@@ -116,7 +116,7 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-4">
-                            <label class="tl">Kaedah Pengesahan :</label>
+                            <label class="tl">Kaedah Perolehan :</label>
                             <input type="text" class="form-control" id="jenissebut" name="jenissebut">
                             <small id="nsebutharga" class="form-text text-muted">Pilih jenis sebutharga.</small>
                           </div>

@@ -117,6 +117,44 @@ class Setting_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_userdatasettingbyid($value)
+  {
+
+    $this->db->select('*');
+    $this->db->from('jps_users');
+    $this->db->where('user_id',$value);
+    $this->db->order_by('user_id');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+
+  public function profileupdate($data, $value)
+  {
+
+     $this->db->where('user_id', $value);
+     $this->db->update('jps_users', $data);
+  }
+
+  public function update_password($value)
+  {
+    $this->load->helper('url');
+
+    $password = $this->input->post('pass');
+    $id = $value;
+ 
+    $data = array(
+  
+      'jps_password'=> md5($password),
+      'user_id'=>$id
+ 
+    );
+
+
+     $this->db->where('user_id', $value);
+     $this->db->update('jps_users', $data);
+  }
+
   public function get_register()
   {
     $this->load->helper('url');
