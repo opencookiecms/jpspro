@@ -43,7 +43,7 @@
                   $lantikan = "btn btn-success mr-2 btn-rounded";
                   $undi = "btn btn-primary mr-2 btn-rounded";
 
-                    $jp = "Intikan Terus";
+                    $jp = "Lantikan Terus";
                 }
                 else if($thistempahan =="Undi")
                 {
