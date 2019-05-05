@@ -105,7 +105,7 @@ class Daftar extends CI_Controller{
   public function stepsatu()
   {
     $data['get_nosebutharga'] = $this->Projek_model->listOrder();
-    $data['title'] = 'Projek';
+    $data['title'] = 'Maklumat Perolehan';
     //form validation function
     $this->form_validation->set_rules('nosebut','Sila Masukkan No Sebut Harga','required');
     $this->form_validation->set_rules('tarikhmohon','Tarikh Mohon','required');
@@ -134,7 +134,7 @@ class Daftar extends CI_Controller{
 
   public function stepdua($idvalue='')
   {
-    $data['title'] = 'Projek';
+    $data['title'] = 'Maklumat Perolehan';
     $data['idval'] = $idvalue;
     $data['get_user']=$this->Setting_model->get_userdatasetting();
     $data['get_keypeople']=$this->Setting_model->get_Datasetting();
@@ -169,7 +169,7 @@ class Daftar extends CI_Controller{
 
     $data['get_sungai'] = $this->Projek_model->getsungai();
     $data['get_sistem'] = $this->Projek_model->issistem();
-    $data['title'] = 'Daftar Sebutharga';
+    $data['title'] = 'Maklumat Perolehan';
     $data['idval'] = $idvalue;
 
     $this->form_validation->set_rules('lata','Latitud Diperlukan','required');

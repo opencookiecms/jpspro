@@ -16,12 +16,12 @@
               <?php echo form_open('daftar/stepsatu'); ?>
               <div class="card" style="border-radius:10px;">
                 <div class="card-body" style="background-color:#778ca3;border-radius:10px;">
-                  <h4 class="card-title" style="color:white;">Borang Daftar Sebut Harga</h4>
+                  <h4 class="card-title" style="color:white;">Borang Daftar Perolehan</h4>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-6">
-                            <label class="tl">No Sebutharga* :</label>
+                            <label class="tl">No Perolehan* :</label>
                             <div class="input-group">
                               <input type="text" class="form-control" id="nosebuts" onkeyup="autofill()" value=""name="nosebut" readonly>
                               <div class="input-group-append bg-success border-primary">
@@ -127,8 +127,8 @@
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-6">
-                            <label class="tl">Tajuk Projek :</label>
-                            <textarea rows="6" type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"></textarea>
+                            <label class="tl">Tajuk Kerja :</label>
+                            <textarea rows="6" type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Kerja"></textarea>
                           </div>
                         </div>
                       </div>

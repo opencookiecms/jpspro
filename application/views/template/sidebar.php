@@ -37,7 +37,7 @@
            <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi  mdi-elevation-rise"></i>
-              <span class="menu-title">Daftar Projek</span>
+              <span class="menu-title">Daftar No.Perolehan</span>
                 <i class="menu-arrow"></i>
             </a>
                <div class="collapse" id="ui">
@@ -55,7 +55,7 @@
            <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('daftar/stepsatu')?>">
               <i class="menu-icon mdi  mdi-source-fork"></i>
-              <span class="menu-title">Projek</span>
+              <span class="menu-title">Maklumat Perolehan</span>
             </a>
           </li>
           <li class="nav-item">

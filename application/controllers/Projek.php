@@ -152,7 +152,7 @@ class Projek extends CI_Controller
   {
       $this->load->database();
       $data['get_detail']=$this->Projek_model->get_updateprojek($value);
-      $data['title'] = 'Kemaskini Maklumat Sebutharga';
+      $data['title'] = 'Kemaskini Maklumat Perolehan';
 
      $id = $this->input->post('hiddenid');
      echo $id;
@@ -177,7 +177,7 @@ class Projek extends CI_Controller
   public function Update_Projek02($value="")
   {
    
-    $data['title'] = 'Kemaskini Maklumat Sebutharga';
+    $data['title'] = 'Kemaskini Maklumat Perolehan';
     $this->load->database();
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
      $data['get_keypeople']=$this->Setting_model->get_Datasetting();
@@ -210,7 +210,7 @@ class Projek extends CI_Controller
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
     $id = $this->input->post('dp_idpost');
     echo $id;
-      $data['title'] = 'Kemaskini Maklumat Sebutharga';
+      $data['title'] = 'Kemaskini Maklumat Perolehan';
 
     if($id == null)
     {

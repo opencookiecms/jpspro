@@ -24,12 +24,12 @@
             <a href="<?php echo site_url("projek/Update_Projek03/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button" >PAGE3</a>
             <p></p>
             <p></p>
-            <h4 class="card-title" style="color:#ffff">Borang Daftar Sebut Harga</h4>
+            <h4 class="card-title" style="color:#ffff">Borang Daftar Perolehan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-6">
-                      <label class="tl">No Sebutharga :</label>
+                      <label class="tl">No Perolehan :</label>
                       <input type="text" class="form-control" name="nosebut"  placeholder="No Fail Sebutharga" value="<?php echo $get_detail[0]->df_nosebutharga?>">
                       <input type="hidden" readonly class="form-control" name="hiddenid"  value="<?php echo $get_detail[0]->projek_id?>">
                       <small id="nsebutharga" class="form-text text-muted">Sila isi no sebutharga mengikut spefikasi yang telah diberikan.</small>
@@ -45,14 +45,14 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-4">
-                      <label class="tl">Jenis Sebutharga :</label>
+                      <label class="tl">Jenis Perolehan:</label>
                       <select type="text" class="form-control" id="jenissebut" name="jenissebut" value="">
                         <option value="<?php echo $get_detail[0]->df_jsebutharga?>"><?php echo $get_detail[0]->df_jsebutharga?></option>
                         <option value="Lantikan Terus">Lantikan Terus</option>
                         <option value="Sebutharga">Sebutharga</option>
                         <option value="Undi">Undi</option>
                       </select>
-                      <small id="nsebutharga" class="form-text text-muted">Pilih jenis sebutharga.</small>
+                      <small id="nsebutharga" class="form-text text-muted">Pilih jenis no perolehan.</small>
                     </div>
                   </div>
                 </div>
@@ -61,8 +61,8 @@
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-7">
-                      <label class="tl">Tajuk Projek :</label>
-                      <textarea rows="5"  type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Projek"><?php echo $get_detail[0]->df_tajuk?></textarea>
+                      <label class="tl">Tajuk Kerja :</label>
+                      <textarea rows="5"  type="text" class="form-control"name="tajukprojek" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk?></textarea>
                     </div>
                   </div>
                 </div>
