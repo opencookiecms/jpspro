@@ -109,7 +109,7 @@
       <!--end here col-md-12-->
 
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
+      <div class="col-9 grid-margin">
         <div class="card" style="border-radius:10px;background-color:#596275;">
           <div class="card-body">
             <h4 class="card-title" style="color:#ffff">Harga Dokumen & Tarikh</h4>
@@ -165,9 +165,11 @@
                       <div class="input-group">
                         <div class="input-group-append bg-info border-info">
                           <span class="input-group-text bg-transparent text-white"><?php echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
+          
                         </div>
                       </div>
                     </div>
+  
                   </div>
                 </div>
               </div>
@@ -231,13 +233,15 @@
                       </div>
                     </div>
                     <div class="col-sm-4">
-                      <label></label>
+                    
+                      <label class="tl"></label>
                       <div class="input-group">
                         <div class="input-group-append bg-danger border-danger">
                           <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhtutup} days + {$get_detail[0]->df_tarikhdocakhir} days + {$get_detail[0]->df_tarikhdocmula}days + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
                         </div>
                       </div>
                     </div>
+                    
                   </div>
                 </div>
               </div>

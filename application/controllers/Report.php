@@ -128,4 +128,9 @@ class Report extends CI_Controller{
     $this->load->view('pages/laporan');
     $this->load->view('template/footer');
   }
+
+  public function addtext()
+  {
+    $this->load->view('print/apdf');
+  }
 }
