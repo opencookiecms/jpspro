@@ -1,10 +1,13 @@
 <div class="main-panel">
-  <div class="content-wrapper cnt" style="background: #757F9A;background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);background: linear-gradient(to right, #D7DDE8, #757F9A);">
+  <div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
     <div class="row">
-      <div class="col-md-12 grid-margin stretch-card">
+      <div class="col-md-8 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-              <div class="card-body" style="background-color:#778ca3;border-radius:10px;">
-            <h4 class="card-title">  <h2 class="f ts">MRK_01</h2>
+              <div class="card-body" style="background-color:#0fb9b1;border-radius:10px;">
+            <h4 class="card-title">  <h2 class="f ts">MRK 01</h2>
               <p class="card-description"><h5><span class="error ts" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
               <?php if(isset($_SESSION['mrk01'])) { ?>
                 <div class="alert alert-success"><?php echo $_SESSION['mrk01'] ?></div>
@@ -16,7 +19,8 @@
             </div>
           </div>
           <!--start col-md-12 for form-->
-          <div class="col-12 grid-margin">
+   
+          <div class="col-8 grid-margin">
 
             <?php echo validation_errors(); ?>
 
@@ -33,12 +37,22 @@
 
             ?>
             <div class="card" style="border-radius:10px;">
-              <div class="card-body" style="background-color:#778ca3;border-radius:10px;">
-                <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Kategori Pendaftaran</h4>
+              <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+                <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Kategori Pendaftaran</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                              <div class="col-sm-8">
+                          <label class="tl">No Sebutharga</label>
+                          <input type="text" class="form-control ts" style="font-weight:bold;" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
+                        </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group row">
-                      <div class="col-sm-5">
+                      <div class="col-sm-8">
                         <label class="tl">Nama Kontraktor</label>
                         <div class="input-group">
                           <input type="text" class="form-control ts" style="font-weight:bold;" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
@@ -125,17 +139,14 @@
                           </div>
                         </div>
                         <!--end of modal-->
-                        <div class="col-sm-5">
-                          <label class="tl">No Sebutharga</label>
-                          <input type="text" class="form-control ts" style="font-weight:bold;" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
-                        </div>
+                    
                       </div>
                     </div>
                   </div>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group row">
-                      <div class="col-sm-5">
+                      <div class="col-sm-8">
                         <label class="tl">No Pendaftaran PKK</label>
                         <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
                         <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
@@ -147,7 +158,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-5">
+                        <div class="col-sm-8">
                           <label class="tl">Alamat:</label>
                           <textarea type="text" class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon ?></textarea>
                         </div>
@@ -157,13 +168,13 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                           <label class="tl">Daerah</label>
                           <input type="text" value="<?php echo $get_detail[0]->mrk_daerah ?>" class="form-control ts" style="font-weight:bold;" id="daerah" name="daerah">
 
 
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                           <label class="tl">Negeri</label>
                           <input value="<?php echo $get_detail[0]->mrk_negeri ?>" type="text" class="form-control ts" style="font-weight:bold;" id="negeri" name="negeri">
                         </div>
@@ -173,7 +184,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-8">
                           <label class="tl">Tajuk Kerja:</label>
                           <textarea rows="5" type="text" readonly  class="form-control ts" style="font-weight:bold;" id="tajukkerjamrk" name="tajukkerjamrk" placeholder="Tajuk Kerja"><?php echo $get_detail[0]->df_tajuk ?></textarea>
                         </div>
@@ -183,17 +194,20 @@
                 </div>
               </div>
             </div>
+                    <div class="col-4 grid-margin">
+           </div>
             <!--end here col-md-12-->
 
             <!--start col-md-12 for form-->
-            <div class="col-12 grid-margin">
+           
+            <div class="col-8 grid-margin">
               <div class="card" style="border-radius:10px;">
-                <div class="card-body" style="background-color:#778ca3; border-radius:10px;">
-                  <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Inden & Maklumat Kontrak</h4>
+                <div class="card-body" style="background-color:#dfe4ea; border-radius:10px;">
+                  <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Inden & Maklumat Kontrak</h4>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-8">
                           <label class="tl">No Inden</label>
                           <input type="text" class="form-control ts" style="font-weight:bold;" id="noinden" value="<?php echo $get_detail[0]->mrk_noinden ?>" name="noinden"  placeholder="No Inden">
                         </div>
@@ -203,16 +217,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-3">
-                          <label class="tl">Kategori</label>
-                          <select type="text" class="form-control ts" style="font-weight:bold;" id="kategori" name="kategori" placeholder="kat">
-                            <option value="<?php echo $get_detail[0]->mrk_kategori ?>"><?php echo $get_detail[0]->mrk_kategori ?></option>
-                            <option value="CE">CE | Pembinaan Kejuruteraan Awam</option>
-                            <option value="B">B | Pembinaan Bangunan</option>
-                            <option value="ME">ME | Mekanikal & Elektrikal</option>
-                          </select>
-                        </div>
-                        <div class="col-sm-3">
+                         <div class="col-sm-4">
                           <label class="tl">Gred</label>
                           <select type="text" class="form-control ts" style="font-weight:bold;" id="gred" name="gred" placeholder="gred">
                             <option value="<?php echo $get_detail[0]->mrk_gred ?>"><?php echo $get_detail[0]->mrk_gred ?></option>
@@ -225,7 +230,17 @@
                             <option value="G7">G7 | RM 10 000,001.00 Ke Atas</option>
                           </select>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
+                          <label class="tl">Kategori</label>
+                          <select type="text" class="form-control ts" style="font-weight:bold;" id="kategori" name="kategori" placeholder="kat">
+                            <option value="<?php echo $get_detail[0]->mrk_kategori ?>"><?php echo $get_detail[0]->mrk_kategori ?></option>
+                            <option value="CE">CE | Pembinaan Kejuruteraan Awam</option>
+                            <option value="B">B | Pembinaan Bangunan</option>
+                            <option value="ME">ME | Mekanikal & Elektrikal</option>
+                          </select>
+                        </div>
+                     
+                        <div class="col-sm-4">
                           <label class="tl">Pengkhususan</label>
                           <select type="text" class="form-control ts" style="font-weight:bold;" id="khusus" placeholder="khusus" name="khusus">
                             <option value="<?php echo $get_detail[0]->mrk_khusus ?>"><?php echo $get_detail[0]->mrk_khusus ?></option>
@@ -260,7 +275,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                           <label class="tl">Tarikh Mula Kontrak</label>
                           <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>"name="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
                         </div>
@@ -270,7 +285,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                           <label class="tl">Tarikh Jangka Siap Kontrak</label>
                           <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" name="tarikhjangka">
                         </div>
@@ -280,12 +295,12 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                           <label class="tl">Pegawai</label>
                           <input type="text" class="form-control ts" style="font-weight:bold;" id="pegawai" value="<?php echo $this->session->userdata("name") ?>" name="pegawai" readonly>
 
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                           <label class="tl">Jawatan</label>
                           <input type="text" class="form-control ts" style="font-weight:bold;" value="<?php echo $this->session->userdata("jawatan") ?>" id="jawatan" name="jawatan" readonly>
                         </div>
@@ -302,9 +317,7 @@
                               <span class="input-group-text bg-transparent text-white">RM</span>
                             </div>
                             <input type="text" class="form-control ts" style="font-weight:bold;" id="kosprojek" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2) ?>" name="kosprojek" placeholder="RM">
-                            <div class="input-group-append bg-primary border-primary">
-                              <span class="input-group-text bg-transparent text-white">.00</span>
-                            </div>
+                            
                           </div>
                         </div>
                       </div>
@@ -313,7 +326,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                           <label class="tl">Tarikh</label>
                           <input type="date" class="form-control ts" style="font-weight:bold;" value="<?php echo $get_detail[0]->mrk_tarikh ?>" id="tarikh" name="tarikh">
                         </div>
@@ -322,29 +335,39 @@
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <div class="form-group row">
-                        <div class="col-sm-3">
-                          <p>
-                            <p>
-                              <button type="submit" name="submit" data-toggle="tooltip" data-placement="bottom" title="Simpan Maklumat MRK01" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
-                            </div>
-                            <div class="col-sm-4">
-                              <p>
-                                <p>
-                                  <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak" class="btn btn-success mr-2 btn-rounded " role="button">Print</a>
-                                  <a href="<?php echo site_url('mrk/MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded " data-toggle="tooltip" data-placement="bottom" title="Maklumat Rekod Kerja 02"role="button">MRK02</a>
-                                </div>
-                                <div class="col-sm-4">
-                                  <p>
-                                    <p>
-                                      <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Kembali Ke Senarai Maklumat" role="button">Close</a>
-                                    </div>
-                                  </div>
+                        <p>
+                <p>
+                   <p>
+                <p>
+                <br>
+      
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-radius:10px;">
+                           <button type="submit" name="submit" data-toggle="tooltip" data-placement="bottom" title="Simpan Maklumat MRK01" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active"style="margin-left:5px;">
+        <a href="<?php echo site_url('Report/Report_MRK_01/'.$get_detail[0]->projek_id) ?>" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak" class="btn btn-success mr-2 btn-rounded " role="button">Lihat / Cetak</a>
+      </li>
+      <li class="nav-item" style="margin-left:5px;">
+        <a href="<?php echo site_url('mrk/MRK_02/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded " data-toggle="tooltip" data-placement="bottom" title="Maklumat Rekod Kerja 02"role="button">MRK02</a>
+      </li>
+      <li class="nav-item" style="margin-left:5px;">
+                                           <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Kembali Ke Senarai Maklumat" role="button">Close</a>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                         <div class="col-md-4 grid-margin">
+            </div>
                         <!--end here col-md-12-->
                         <!--end here col-md-12-->
 

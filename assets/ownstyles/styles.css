@@ -26,7 +26,7 @@ background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, F
 }
 
 .tl{
-  color: white;
+  color: #4a69bd;
   font-weight:bold;
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
