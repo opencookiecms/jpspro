@@ -1,7 +1,10 @@
       <div class="main-panel">
-      <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+      <div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
           <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
+            <div class="col-md-9 grid-margin stretch-card">
               <div class="card" style="border-radius:10px;background-color:#57606f;">
                 <div class="card-body">
                   <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
@@ -10,11 +13,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 grid-margin">
+            <div class="col-9 grid-margin">
 
 
               <?php echo form_open('daftar/orderSebutharga'); ?>
-              <div class="card" style="border-radius:10px;background-color:#60a3bc;">
+              <div class="card" style="border-radius:10px;background-color:#dfe4ea;">
                 <div class="card-body">
                   <h4 class="card-title tl">Pendaftaran No Perolehan</h4>
                     <div class="row">
@@ -25,7 +28,7 @@
                             <input type="text" class="form-control" name="nosebutharga"  placeholder="No Fail Sebutharga">
                             <small id="nsebutharga" class="form-text text-muted">Sila isi no sebutharga mengikut spefikasi yang telah diberikan.</small>
                           </div>
-                          <div class="col-sm-3">
+                          <div class="col-sm-4">
                             <label class="tl">Tarikh :</label>
                             <input type="date" class="form-control" name="tarikhmohon"placeholder="Tarikh Permohonan">
                           </div>

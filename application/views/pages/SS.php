@@ -1,9 +1,12 @@
 <div class="main-panel">
-  <div class="content-wrapper cnt" style="background: #757F9A;background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);background: linear-gradient(to right, #D7DDE8, #757F9A);">
+  <div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#2c2c54;border-radius:10px;">
+          <div class="card-body" style="background-color:#c44569;border-radius:10px;">
             <h4 class="card-title">  <h2 class="f ts">Senarai Semakan</h2>
             <p class="card-description"><h5><span class="error ts" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['ss'])) { ?>
@@ -28,21 +31,21 @@
               }
         ?>
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#2c2c54;border-radius:10px;">
+          <div class="card-body" style="background-color:#747d8c;border-radius:10px;">
             <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Senarai Semakan</h4>
             <div class="row">
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb1; if($check==1){$ch1='checked';}else{$ch1='null';}?>
-                      <input type="checkbox" class="form-check-input" style="color:white;" name="chk1" value="1" <?php echo $ch1?>>Surat Tuntutan
+                      <input type="checkbox" class="form-check-input" style="border:blue;" name="chk1" value="1" <?php echo $ch1?>>Surat Tuntutan
                     </label>
                   </div>
 
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -52,7 +55,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
@@ -65,7 +68,7 @@
             </div>
 
             <div class="row">
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -76,7 +79,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -86,7 +89,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
@@ -99,7 +102,7 @@
             </div>
 
             <div class="row">
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -110,7 +113,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -120,7 +123,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
@@ -134,7 +137,7 @@
 
 
             <div class="row">
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -145,7 +148,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -155,7 +158,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
@@ -169,7 +172,7 @@
 
 
             <div class="row">
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -180,7 +183,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -195,7 +198,7 @@
             <p></p>
             <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Bon Perlaksaanan</h4>
             <div class="row">
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -206,7 +209,7 @@
 
                 </div>
               </div>
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -222,7 +225,7 @@
             <p></p>
             <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Polisi Insurans</h4>
             <div class="row">
-              <div class="col-md-3 tl">
+              <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -233,7 +236,7 @@
 
                 </div>
               </div>
-              <div class="col-md-4 tl">
+              <div class="col-md-4 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
@@ -246,14 +249,14 @@
             </div>
 
             <div class="row">
-              <div class="col-md-12 tl">
+              <div class="col-md-12 tls">
                 <div class="form-group row">
-                  <div class="col-sm-3 tl">
+                  <div class="col-sm-3 tls">
                     <p></p>
                     <label>Desediakan Oleh</label>
                     <input type="text" class="form-control ts" style="font-weight:bold;" value="<?php echo $this->session->userdata("name")?>" id="sedia" name="sedia">
                   </div>
-                  <div class="col-sm-3 tl">
+                  <div class="col-sm-3 tls">
                     <p></p>
                     <label>Tarikh</label>
                     <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhsedia" name="tarikhsedia" value="<?php echo $get_detail[0]->ss_date?>">
@@ -270,25 +273,40 @@
 
             <div class="row">
               <div class="col-md-12">
-                <div class="form-group row">
-                  <div class="col-sm-2">
-                    <p>
-                    <p>
-                    <button type="submit" name="submit" data-toggle="tooltip" data-placement="bottom" title="Simpan Maklumat Senarai Semakan"  class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
-                  </div>
-                  <div class="col-sm-6">
-                    <p>
-                    <p>
-                      <a href="" class="btn btn-success mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Muat Turun Fail / Cetak"  role="button">Print</a>
-                      <a href="<?php echo site_url('mrk/PSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Kerja"  role="button">Perakuan Siap Kerja</a>
-                      <a href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->projek_id) ?>" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Membaiki Kecatatan"  class="btn btn-info mr-2 btn-rounded" role="button">PSMK</a>
-                  </div>
-                  <div class="col-sm-4">
-                  <p>
-                  <p>
+
+
+
+                        <p>
+                <p>
+                   <p>
+                <p>
+                <br>
+
+                               <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-radius:10px;">
+                                <a class="navbar-brand" href="#">Menu</a>
+                                       <button type="submit" name="submit" data-toggle="tooltip" data-placement="bottom" title="Simpan Maklumat Senarai Semakan"  class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active"style="margin-left:5px;">
+                             <a href="" class="btn btn-success mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Muat Turun Fail / Cetak"  role="button">Print</a>
+      </li>
+      <li class="nav-item" style="margin-left:5px;">
+                          <a href="<?php echo site_url('mrk/PSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Kerja"  role="button">Perakuan Siap Kerja</a>
+      </li>
+         <li class="nav-item" style="margin-left:5px;">
+             <a href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->projek_id) ?>" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Membaiki Kecatatan"  class="btn btn-info mr-2 btn-rounded" role="button">PSMK</a>
+      </li>
+      <li class="nav-item" style="margin-left:5px;">
                   <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" data-toggle="tooltip" data-placement="bottom" title="Kembali ke Senarai Maklumat" role="button">Tutup</a>
-                  </div>
-                </div>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
+
               </div>
             </div>
 

@@ -1,7 +1,10 @@
       <div class="main-panel">
-      <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+      <div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
           <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
+            <div class="col-md-9 grid-margin stretch-card">
               <div class="card" style="border-radius:10px;">
                 <div class="card-body" style="background-color:#4b6584;border-radius:10px;">
                   <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
@@ -10,13 +13,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 grid-margin">
+            <div class="col-9 grid-margin">
 
 
               <?php echo form_open('daftar/stepsatu'); ?>
               <div class="card" style="border-radius:10px;">
-                <div class="card-body" style="background-color:#778ca3;border-radius:10px;">
-                  <h4 class="card-title" style="color:white;">Borang Daftar Perolehan</h4>
+                <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+                  <h4 class="card-title" style="color:#38ada9;">Borang Daftar Perolehan</h4>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">

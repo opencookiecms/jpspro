@@ -1,7 +1,10 @@
 <div class="main-panel">
-<div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+<div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
     <div class="row">
-      <div class="col-md-12 grid-margin stretch-card">
+      <div class="col-md-9 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;background-color:#6a89cc;">
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
@@ -10,22 +13,22 @@
         </div>
       </div>
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
+      <div class="col-9 grid-margin">
         <?php echo validation_errors(); ?>
         <?php echo form_open('projek/Update_Projek02'); ?>
 
-        <div class="card" style="border-radius:10px;background-color:#778ca3;">
+        <div class="card" style="border-radius:10px;background-color:#dfe4ea;">
           <div class="card-body">
             <a href="<?php echo site_url("projek/Update_Projek01/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button">PAGE1</a>
             <a href="<?php echo site_url("projek/Update_Projek02/" . $get_detail[0]->projek_id); ?>" class="btn btn-success mr-2 btn-rounded" role="button">PAGE2</a>
             <a href="<?php echo site_url("projek/Update_Projek03/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button" >PAGE3</a>
             <p></p>
             <p></p>
-            <h4 class="card-title" style="color:#FFFF">Kategori Pendaftaran</h4>
+            <h4 class="card-title" style="color:#38ada9">Kategori Pendaftaran</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->dp_id?>">
                       <label class="tl">Gred :</label>
                       <select type="text" class="form-control" name="gred" placeholder="Gred">
@@ -39,7 +42,7 @@
                         <option value="G7">G7</option>
                       </select>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Kategori :</label>
                       <select type="text" class="form-control" name="kategori" placeholder="Kategori">
                         <option value="<?php echo $get_detail[0]->df_kategori?>"><?php echo $get_detail[0]->df_kategori?></option>
@@ -51,7 +54,7 @@
                   </div>
                 </div>
               </div>
-              <h4 class="card-title" style="color:#ffff">Pengkhususan</h4>
+              <h4 class="card-title" style="color:#38ada9">Pengkhususan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
@@ -87,11 +90,11 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Tempoh Siap Kerja:</label>
                       <input type="text" class="form-control"  name="tempoh" value="<?php echo $get_detail[0]->df_tempohsiap?>">
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Minggu/Bulan</label>
                       <select type="text" class="form-control" name="bulanming" placeholder="Minggu/Bulan">
                         <option value="<?php echo $get_detail[0]->dp_bulanmig?>"><?php echo $get_detail[0]->dp_bulanmig?></option>
@@ -110,9 +113,9 @@
 
       <!--start col-md-12 for form-->
       <div class="col-9 grid-margin">
-        <div class="card" style="border-radius:10px;background-color:#596275;">
+        <div class="card" style="border-radius:10px;background-color:#dfe4ea;">
           <div class="card-body">
-            <h4 class="card-title" style="color:#ffff">Harga Dokumen & Tarikh</h4>
+            <h4 class="card-title" style="color:#38ada9">Harga Dokumen & Tarikh</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
@@ -140,7 +143,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Tarikh Notis Dikeluarkan</label>
                       <input type="date" class="form-control" name="notiskeluar" value="<?php echo $get_detail[0]->df_tarikhnotis?>" >
                       <?php $dates = $get_detail[0]->df_tarikhnotis ?>
@@ -151,7 +154,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Tarikh Lawat Tapak/Taklimat</label>
                       <div class="input-group">
                         <input type="text" class="form-control"name="lawattapak" value="<?php echo $get_detail[0]->df_tarikhlawat?>">
@@ -176,7 +179,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Tarikh Dokumen Mula Dijual</label>
                       <div class="input-group">
                         <input type="text" class="form-control" name="docmula" value="<?php echo $get_detail[0]->df_tarikhdocmula?>">
@@ -199,7 +202,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Tarikh Akhir Dokumen Dijual</label>
                       <div class="input-group">
                         <input type="text" class="form-control" name="docakhir" value="<?php echo $get_detail[0]->df_tarikhdocakhir?>">
@@ -222,7 +225,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Tarikh Sebutharga Ditutup</label>
                       <div class="input-group">
                         <input type="text" class="form-control"  name="sebuttutup" value="<?php echo $get_detail[0]->df_tarikhtutup?>">
@@ -252,11 +255,25 @@
       </div>
       <!--end here col-md-12-->
 
+           <div class="col-3 grid-margin">
+         <div class="card" style="border-radius:10px;">
+          <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+            <h1 class="card-title" style="color:#38ada9;">Kategori Pendaftaran</h1>
+            <h5>*Tempoh Kenyataan Sebutharga(notis)-minima 7 hari (Pamer) dari tarikh dokumen mula jual atau tarikh lawatan tapak atau mana yang terkemudian.</h5>
+            <br>
+                <h5>*Sebutharga yang perlu lawatan tapak, Kenyataan sebutharga hendaklah dipamerkan~minima 3 hari-hari ke 4 lawatan tapak-minima 7 hari(Pamer) dari tarikh dokumen mula dijual atau tarikh lawatan tapak atau mana yang terkemudian.</h5>
+          </div>
+        
+        
+        </div>
+      
+      </div>
+
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
-        <div class="card" style="border-radius:10px;background-color:#786fa6;">
+      <div class="col-9 grid-margin">
+        <div class="card" style="border-radius:10px;background-color:#dfe4ea;">
           <div class="card-body">
-            <h4 class="card-title" style="color:#ffff">Pegesahan</h4>
+            <h4 class="card-title" style="color:#38ada9">Pegesahan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">

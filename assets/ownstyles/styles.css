@@ -25,6 +25,14 @@ background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, F
 
 }
 
+.tls{
+  color:#f1f2f6;
+  font-weight:bold;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
 .tl{
   color: #4a69bd;
   font-weight:bold;
@@ -38,6 +46,11 @@ background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, F
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
+
+}
+
+.form-control{
+  background-color: beige;
 }
 
 .loginbg

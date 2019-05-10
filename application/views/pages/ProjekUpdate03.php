@@ -1,7 +1,10 @@
 <div class="main-panel">
-<div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+<div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
     <div class="row">
-      <div class="col-md-12 grid-margin stretch-card">
+      <div class="col-md-9 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;background-color:#4a69bd;">
           <div class="card-body">
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
@@ -16,24 +19,24 @@
         </div>
       </div>
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
+      <div class="col-9 grid-margin">
 
         <?php echo validation_errors(); ?>
         <?php echo form_open('projek/Update_Projek03'); ?>
-        <div class="card" style="border-radius:10px;background-color:#4b6584;">
+        <div class="card" style="border-radius:10px;background-color:#dfe4ea;">
           <div class="card-body">
             <a href="<?php echo site_url("projek/Update_Projek01/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button">PAGE1</a>
             <a href="<?php echo site_url("projek/Update_Projek02/" . $get_detail[0]->projek_id); ?>" class="btn btn-primary mr-2 btn-rounded" role="button">PAGE2</a>
             <a href="<?php echo site_url("projek/Update_Projek03/" . $get_detail[0]->projek_id); ?>" class="btn btn-success mr-2 btn-rounded" role="button" >PAGE3</a>
             <p></p>
             <p></p>
-            <h4 class="card-title" style="color:#ffff">Lokasi & Sistem</h4>
+            <h4 class="card-title" style="color:#38ada9">Lokasi & Sistem</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
 
-                    <label class="col-sm-1 col-form-label tl">Latitud (N)</label>
-                    <div class="col-sm-2">
+                    <label class="col-sm-2 col-form-label tl">Latitud (N)</label>
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" id="lata" name="lata" value="<?php echo $get_detail[0]->dp_lata?>">
                         <div class="input-group-append bg-dark border-primary">
@@ -41,7 +44,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" id="latb" name="latb" value="<?php echo $get_detail[0]->dp_latb?>">
                         <div class="input-group-append bg-dark border-primary">
@@ -49,7 +52,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" id="latc" name="latc" value="<?php echo $get_detail[0]->dp_latc?>">
                         <div class="input-group-append bg-dark border-primary">
@@ -65,8 +68,8 @@
                 <div class="col-md-12">
                   <div class="form-group row">
 
-                    <label class="col-sm-1 col-form-label tl">Longitud (E)</label>
-                    <div class="col-sm-2">
+                    <label class="col-sm-2 col-form-label tl">Longitud (E)</label>
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" id="longa" name="longa" value="<?php echo $get_detail[0]->dp_longa?>">
                         <div class="input-group-append bg-primary border-primary">
@@ -74,7 +77,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <div class="input-group">
                        <input type="text" class="form-control" id="longb" name="longb" value="<?php echo $get_detail[0]->dp_longb?>">
                         <div class="input-group-append bg-primary border-primary">
@@ -82,7 +85,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" id="longc" name="longc" value="<?php echo $get_detail[0]->dp_longc?>">
                         <div class="input-group-append bg-primary border-primary">
@@ -95,7 +98,7 @@
               </div>
               <p>
               <p>
-              <h4 class="card-title" style="color:#ffff">Sungai</h4>
+              <h4 class="card-title" style="color:#38ada9">Sungai</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">

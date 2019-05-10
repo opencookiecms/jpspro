@@ -1,9 +1,12 @@
 <div class="main-panel">
-  <div class="content-wrapper cnt" style="background: #757F9A;background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);background: linear-gradient(to right, #D7DDE8, #757F9A);">
+  <div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
     <div class="row">
-      <div class="col-md-12 grid-margin stretch-card">
+      <div class="col-md-8 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#4b6584; border-radius:10px;">
+          <div class="card-body" style="background-color:#ea8685; border-radius:10px;">
             <h4 class="card-title">  <h2 class="f ts">Perakuan Siap Membaiki Kecacatan</h2>
             <p class="card-description"><h5><span class="error" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['psmk'])) { ?>
@@ -16,7 +19,7 @@
         </div>
       </div>
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
+      <div class="col-8 grid-margin">
         <?php echo validation_errors(); ?>
           <?php
               $pkkNo = $get_detail[0]->psmk_kodvots;
@@ -28,12 +31,12 @@
                 }
           ?>
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#4b6584; border-radius:10px;">
-            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Kategori Pendaftaran</h4>
+          <div class="card-body" style="background-color:#dfe4ea; border-radius:10px;">
+            <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Perakuan</h4>
               <div class="row">
                 <div class="col-md-12 tl">
                   <div class="form-group row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-8">
                       <label>Nama Pemborong</label>
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="namapem" name="namapem" value="<?php echo $get_detail[0]->mrk_namakon?>" readonly>
                     </div>
@@ -43,9 +46,9 @@
               <div class="row">
                 <div class="col-md-12 tl">
                   <div class="form-group row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-8">
                       <label>Alamat Pemborong</label>
-                      <textarea type="text" class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
+                      <textarea rows="4" type="text" class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" readonly><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                     </div>
                   </div>
                 </div>
@@ -53,11 +56,11 @@
               <div class="row">
                 <div class="col-md-12 tl">
                   <div class="form-group row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                       <label>No Rujukan</label>
                         <input type="text" class="form-control ts" style="font-weight:bold;" id="norujuk" name="norujuk"value="<?php echo $get_detail[0]->df_nosebutharga?>" readonly>
                     </div>
-                    <div class="col-sm-3 tl">
+                    <div class="col-sm-4 tl">
                       <label>No Kontrak / No Sebutharga</label>
                      <input type="text" class="form-control ts" style="font-weight:bold;"id="nokontrak" name="nokontrak" value="<?php echo $get_detail[0]->df_kodvot?>"readonly>
                     </div>
@@ -67,7 +70,7 @@
               <div class="row">
                 <div class="col-md-12 tl">
                   <div class="form-group row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-8">
                       <label>Tajuk Kerja</label>
                       <textarea rows="5" type="text" class="form-control ts" style="font-weight:bold;" id="tajukkerja" name="tajukkerja" readonly><?php echo $get_detail[0]->df_tajuk?></textarea>
                     </div>
@@ -77,11 +80,11 @@
               <div class="row">
                 <div class="col-md-12 tl">
                   <div class="form-group row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                       <label>Tarikh Mula Tanggungan Kecacatan</label>
                       <input type="date" class="form-control ts" style="font-weight:bold;" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>" readonly>
                     </div>
-                    <div class="col-sm-3 tl">
+                    <div class="col-sm-4 tl">
                       <label>Tarikh Tamat Tanggungan Kecacatan</label>
                         <input type="date" class="form-control ts" style="font-weight:bold;" id="cacattamat" name="cacattamat" value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>" readonly>
                     </div>
@@ -91,7 +94,7 @@
               <div class="row">
                 <div class="col-md-12 tl">
                   <div class="form-group row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                       <label>Gred</label>
                       <select type="text" class="form-control ts" style="font-weight:bold;" id="gred" name="gred" placeholder="gred" readonly>
                         <option value="<?php echo $get_detail[0]->mrk_gred?>"><?php echo $get_detail[0]->mrk_gred?></option>
@@ -104,7 +107,7 @@
                         <option value="G7 | RM 10 000,001.00 Ke Atas">G7 | RM 10 000,001.00 Ke Atas</option> -->
                       </select>
                     </div>
-                    <div class="col-sm-3 tl">
+                    <div class="col-sm-4 tl">
                       <label>Kategori</label>
                       <select type="text" class="form-control ts" style="font-weight:bold;" id="kategori" name="kategori" placeholder="kat" readonly>
                         <option value="<?php echo $get_detail[0]->mrk_kategori?>"><?php echo $get_detail[0]->mrk_kategori?></option>
@@ -113,7 +116,7 @@
                         <option value="ME | Mekanikal & Elektrikal">ME | Mekanikal & Elektrikal</option> -->
                       </select>
                     </div>
-                    <div class="col-sm-3 tl">
+                    <div class="col-sm-4 tl">
                       <label>Pengkhususan</label>
                       <select type="text" class="form-control ts" style="font-weight:bold;" id="khusus" name="khusus" placeholder="kat" readonly>
                         <option value="<?php echo $get_detail[0]->mrk_khusus?>"><?php echo $get_detail[0]->mrk_khusus?></option>
@@ -158,8 +161,8 @@
 
       <div class="col-12 grid-margin">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#4b6584; border-radius:10px;">
-            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Kewangan & Jaminan Insurans</h4>
+          <div class="card-body" style="background-color:#dfe4ea; border-radius:10px;">
+            <h4 class="card-title ts" style="color:#38ada9;;font-weight:bold;">Kewangan & Jaminan Insurans</h4>
             <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">
@@ -301,25 +304,40 @@
 
               <div class="row">
                 <div class="col-md-12">
-                  <div class="form-group row">
-                    <div class="col-sm-2">
-                      <p>
-                      <p>
-                      <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded " data-toggle="tooltip" data-placement="bottom" title="Simpan Perakuan Siap Membaiki Kecatatan">Simpan</button>
-                    </div>
-                    <div class="col-sm-8">
-                      <p>
-                      <p>
-                        <a href="<?php echo site_url('report/Report_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak">Print</a>
-                        <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Senarai Semakan ">Senarai Semakan</a>
-                        <a href="<?php echo site_url('mrk/Jaminan_Bank/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Pelepasan Jaminan Bank">Pelepasan Jaminan Bank</a>
-                    </div>
-                    <div class="col-sm-2">
-                    <p>
-                    <p>
+
+                                 <p>
+                <p>
+                   <p>
+                <p>
+                <br>
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-radius:10px;">
+  <a class="navbar-brand" href="#">Menu</a>
+                   <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded " data-toggle="tooltip" data-placement="bottom" title="Simpan Perakuan Siap Membaiki Kecatatan">Simpan</button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" role="button" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+    <ul class="navbar-nav" >
+    
+      <li class="nav-item">
+                            <a href="<?php echo site_url('report/Report_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak">Print</a>
+      </li>
+      <li class="nav-item" style="margin-left:5px;" >
+          <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Senarai Semakan ">Senarai Semakan</a>
+      </li>
+
+          <li class="nav-item" style="margin-left:5px;">
+           <a href="<?php echo site_url('mrk/Jaminan_Bank/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Pelepasan Jaminan Bank">Pelepasan Jaminan Bank</a>
+      </li>
+           <li class="nav-item" style="margin-left:5px;">
                     <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Kembali ke Senarai Maklumat">Close</a>
-                    </div>
-                  </div>
+      </li>
+    
+    </ul>
+  </div>
+</nav>
+
                 </div>
               </div>
           </div>

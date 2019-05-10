@@ -1,13 +1,14 @@
-<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background: #E8CBC0;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background: #1F1C2C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+rome 26+, Opera 12+, Safari 7+ */
 
 ">
 <?php
 $ssname = $this->session->userdata("name");
 $ssroles = $this->session->userdata("roles");
 ?>
-<div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background:#8083aa;border-right:1px solid;">
+<div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background:#928dab;border-right:0px solid;">
     <a class="navbar-brand brand-logo" href="<?php echo site_url('mydashboard')?>">
       <span style="color:white;">JPSKMB</span>
     </a>

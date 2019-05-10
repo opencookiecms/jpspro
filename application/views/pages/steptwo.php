@@ -1,9 +1,12 @@
 <div class="main-panel">
-<div class="content-wrapper cnt" style="">
+<div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
     <div class="row">
-      <div class="col-md-12 grid-margin stretch-card">
+      <div class="col-md-9 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#636e72;border-radius:10px;">
+          <div class="card-body" style="background-color:#ff7675;border-radius:10px;">
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
             <p class="card-description"><h5><span class="error" style="color:#f5f6fa;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
             <?php echo $idval; ?>
@@ -11,19 +14,20 @@
           </div>
         </div>
       </div>
+      
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
+      <div class="col-9 grid-margin">
         <?php echo validation_errors(); ?>
 
         <?php echo form_open('daftar/stepdua'); ?>
           <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#4a69bd;border-radius:10px;">
-            <h4 class="card-title" style="color:white;">Kategori Pendaftaran</h4>
+          <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+            <h4 class="card-title" style="color:#38ada9;">Kategori Pendaftaran</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Gred :</label>
                       <select type="text" class="form-control" name="gred" placeholder="Gred">
                         <option value="G1">G1</option>
@@ -35,7 +39,7 @@
                         <option value="G7">G7</option>
                       </select>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <label class="tl">Kategori :</label>
                       <select type="text" class="form-control" name="kategori" placeholder="Kategori">
                         <option value="CE">CE</option>
@@ -46,7 +50,7 @@
                   </div>
                 </div>
               </div>
-              <h4 class="card-title" style="color:white;">Pengkhususan</h4>
+              <h4 class="card-title" style="color:#38ada9;">Pengkhususan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
@@ -101,11 +105,13 @@
       </div>
       <!--end here col-md-12-->
 
+     
+
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
+      <div class="col-9 grid-margin">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#34495e;border-radius:10px;">
-            <h4 class="card-title" style="color:white;">Harga Dokumen & Tarikh</h4>
+          <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+            <h4 class="card-title" style="color:#38ada9;">Harga Dokumen & Tarikh</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
@@ -116,9 +122,6 @@
                           <span class="input-group-text bg-transparent text-white">RM</span>
                         </div>
                         <input type="text" class="form-control" name="doc" aria-label="Amount (to the nearest dollar)">
-                        <div class="input-group-append bg-primary border-primary">
-                          <span class="input-group-text bg-transparent text-white">.00</span>
-                        </div>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -226,12 +229,25 @@
         </div>
       </div>
       <!--end here col-md-12-->
+            <div class="col-3 grid-margin">
+         <div class="card" style="border-radius:10px;">
+          <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+            <h1 class="card-title" style="color:#38ada9;">Kategori Pendaftaran</h1>
+            <h5>*Tempoh Kenyataan Sebutharga(notis)-minima 7 hari (Pamer) dari tarikh dokumen mula jual atau tarikh lawatan tapak atau mana yang terkemudian.</h5>
+            <br>
+                <h5>*Sebutharga yang perlu lawatan tapak, Kenyataan sebutharga hendaklah dipamerkan~minima 3 hari-hari ke 4 lawatan tapak-minima 7 hari(Pamer) dari tarikh dokumen mula dijual atau tarikh lawatan tapak atau mana yang terkemudian.</h5>
+          </div>
+        
+        
+        </div>
+      
+      </div>
 
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
+      <div class="col-9 grid-margin">
         <div class="card" style="border-radius:10px;">
-          <div class="card-body" style="background-color:#40739e;border-radius:10px;">
-            <h4 class="card-title" style="color:white;">Pegesahan</h4>
+          <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+            <h4 class="card-title" style="color:#38ada9;">Pegesahan</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">

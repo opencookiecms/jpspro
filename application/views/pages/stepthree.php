@@ -1,7 +1,10 @@
 <div class="main-panel">
-<div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+<div class="content-wrapper cnt" style="background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
     <div class="row">
-      <div class="col-md-12 grid-margin stretch-card">
+      <div class="col-md-9 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;background-color:#40739e">
           <div class="card-body" >
             <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
@@ -16,20 +19,20 @@
         </div>
       </div>
       <!--start col-md-12 for form-->
-      <div class="col-12 grid-margin">
+      <div class="col-9 grid-margin">
         <?php echo validation_errors(); ?>
 
         <?php echo form_open('daftar/steptiga'); ?>
           <input type="hidden" class="form-control" name="dp_idpost" value="<?php echo $idval;?>">
         <div class="card" style="border-radius:10px;">
-           <div class="card-body" style="background-color:#7f8fa6;border-radius:10px;">
-            <h4 class="card-title" style="color:white;">Lokasi & Sistem</h4>
+           <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+            <h4 class="card-title" style="color:#38ada9;">Lokasi & Sistem</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
 
-                    <label class="col-sm-1 col-form-label tl">Latitud (N)</label>
-                    <div class="col-sm-2">
+                    <label class="col-sm-2 col-form-label tl">Latitud (N)</label>
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" name="lata" id="lata">
                         <div class="input-group-append bg-dark border-primary">
@@ -37,7 +40,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" name="latb" id="latb">
                         <div class="input-group-append bg-dark border-primary">
@@ -45,7 +48,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" name="latc" id="latc">
                         <div class="input-group-append bg-dark border-primary">
@@ -61,8 +64,8 @@
                 <div class="col-md-12">
                   <div class="form-group row">
 
-                    <label class="col-sm-1 col-form-label tl">Longitud (E)</label>
-                    <div class="col-sm-2">
+                    <label class="col-sm-2 col-form-label tl">Longitud (E)</label>
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" name="longa" id="longa">
                         <div class="input-group-append bg-primary border-primary">
@@ -70,7 +73,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" name="longb" id="longb">
                         <div class="input-group-append bg-primary border-primary">
@@ -78,7 +81,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                       <div class="input-group">
                         <input type="text" class="form-control" name="longc" id="longc">
                         <div class="input-group-append bg-primary border-primary">
@@ -91,7 +94,7 @@
               </div>
               <p>
               <p>
-              <h4 class="card-title" style="color:white;">Sungai</h4>
+              <h4 class="card-title" style="color:#38ada9;">Sungai</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
