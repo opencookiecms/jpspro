@@ -102,18 +102,18 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <p class="text-primary mr-1 mb-0"><?php echo $row->df_nosebutharga?> </p>
                          
                         </div>
-                        <p class="text-gray ellipsis mb-2">Tajuk Projek 
+                        <p class="text-dark ellipsis mb-2 mt-2" style="font-size:15px">Tajuk Projek 
                           <?php echo $row->df_tajuk?> 
                         </p>
                         <div class="row text-gray d-md-flex d-none">
                           <div class="col-4 d-flex">
                                   
-                            <small class="mb-0 mr-2 text-muted text-muted">Tarik Mula :</small>
-                            <small class="Last-responded mr-2 mb-0 text-muted text-muted"><?php echo date('d/m/Y', strtotime ($row->df_tarikhnotis))?> </small>
+                            <small class="mb-0 mr-2 text-dark" style="font-weight:bold;font-size:14px;">Tarik Mula :</small>
+                            <small class="Last-responded mr-2 mb-0 text-primary" style="font-weight:bold;font-size:14px;"><?php echo date('d/m/Y', strtotime ($row->df_tarikhnotis))?> </small>
                           </div>
                           <div class="col-4 d-flex">
-                            <small class="mb-0 mr-2 text-muted text-muted">Tarikh Akhir :</small>
-                            <small class="Last-responded mr-2 mb-0 text-muted text-muted"><?php   echo date('d/m/Y', strtotime($dates. " + {$row->df_tarikhtutup} days + {$row->df_tarikhdocakhir} days + {$row->df_tarikhdocmula}days + {$row->df_tarikhlawat} days")); ?></small>
+                            <small class="mb-1 mr-2 text-dark" style="font-weight:bold;font-size:14px;">Tarikh Akhir :</small>
+                            <small class="Last-responded mr-2 mb-0 text-danger" style="font-weight:bold;font-size:14px;"><?php   echo date('d/m/Y', strtotime($dates. " + {$row->df_tarikhtutup} days + {$row->df_tarikhdocakhir} days + {$row->df_tarikhdocmula}days + {$row->df_tarikhlawat} days")); ?></small>
                           </div>
                         </div>
                       </div>

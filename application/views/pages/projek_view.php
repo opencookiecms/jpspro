@@ -1,10 +1,13 @@
 <!-- partial -->
 <div class="main-panel">
-  <div class="content-wrapper cnt" style="background: #C9D6FF;background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);background: linear-gradient(to right, #E2E2E2, #C9D6FF);">
+  <div class="content-wrapper cnt" style="background: #614385;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #516395, #614385);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
     <div class="row purchace-popup">
       <div class="col-12">
         <span class="d-block d-md-flex align-items-center">
-          <p>Senarai Dokument Berkaitan Sebutharga.</p>
+          <p class="tls text-white">Senarai Dokument Berkaitan Sebutharga.</p>
         </span>
       </div>
     </div>
