@@ -99,22 +99,26 @@
             </a>
           </li>
 
+
+
+
+
           <?php break; ?>
           <?php case "user":?>
-          <li class="nav-item">
+            <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('mydashboard')?>">
               <i class="menu-icon mdi  mdi-home-modern"></i>
               <span class="menu-title">Halaman Utama</span>
             </a>
           </li>
-
+   
           <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basics" aria-expanded="false" aria-controls="ui-basic">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi  mdi-source-fork"></i>
               <span class="menu-title">Senarai Projek</span>
                 <i class="menu-arrow"></i>
             </a>
-             <div class="collapse" id="ui-basics">
+             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('projek/sebutharga')?>">Sebutharga</a>
@@ -128,28 +132,33 @@
               </ul>
             </div>
           </li>
-
+       
+   
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('mrk')?>">
               <i class="menu-icon mdi mdi-content-copy"></i>
               <span class="menu-title">Dokumen Bayaran</span>
             </a>
           </li>
+      
+  
           <?php break;?>
+
+
           <?php case "clerk": ?>
-          <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('mydashboard')?>">
               <i class="menu-icon mdi  mdi-home-modern"></i>
               <span class="menu-title">Halaman Utama</span>
             </a>
           </li>
-            <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#uis" aria-expanded="false" aria-controls="ui-basic">
+           <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi  mdi-elevation-rise"></i>
-              <span class="menu-title">Daftar Projek</span>
+              <span class="menu-title">Daftar No.Perolehan</span>
                 <i class="menu-arrow"></i>
             </a>
-               <div class="collapse" id="uis">
+               <div class="collapse" id="ui">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('Daftar/orderSebutharga')?>">Pendaftaran</a>
@@ -164,17 +173,30 @@
            <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('daftar/stepsatu')?>">
               <i class="menu-icon mdi  mdi-source-fork"></i>
-              <span class="menu-title">Projek</span>
+              <span class="menu-title">Maklumat Perolehan</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('projek')?>">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi  mdi-source-fork"></i>
               <span class="menu-title">Senarai Projek</span>
+                <i class="menu-arrow"></i>
             </a>
-          </li> 
-
-
+             <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('projek/sebutharga')?>">Sebutharga</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('projek/lantikan_terus')?>">Lantikan Terus</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('projek/undi')?>">Undi</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+      
           <?php break; ?>
 
     
