@@ -208,6 +208,7 @@ class Mrk_model extends CI_Model{
     $tiga_catat6 = $this->input->post('catat6');
     $tiga_catat7 =  $this->input->post('catat7');
     $tiga_catat8 =  $this->input->post('catat8');
+    $ulasan = $this->input->post('ulasanpegawai');
 
 
 
@@ -233,7 +234,8 @@ class Mrk_model extends CI_Model{
       'tiga_catat5'=>  $tiga_catat5,
       'tiga_catat6'=>  $tiga_catat6,
       'tiga_catat7'=>  $tiga_catat7,
-      'tiga_catat8'=>  $tiga_catat8
+      'tiga_catat8'=>  $tiga_catat8,
+      'mrk_ulasa'=> $ulasan
 
 
     );
@@ -1003,6 +1005,7 @@ class Mrk_model extends CI_Model{
     $tiga_catat6 = $this->input->post('catat6');
     $tiga_catat7 =  $this->input->post('catat7');
     $tiga_catat8 =  $this->input->post('catat8');
+    $ulasan = $this->input->post('ulasanpegawai');
 
 
 
@@ -1028,7 +1031,8 @@ class Mrk_model extends CI_Model{
       'tiga_catat5'=>  $tiga_catat5,
       'tiga_catat6'=>  $tiga_catat6,
       'tiga_catat7'=>  $tiga_catat7,
-      'tiga_catat8'=>  $tiga_catat8
+      'tiga_catat8'=>  $tiga_catat8,
+      'mrk_ulasan'=> $ulasan
 
 
     );
@@ -1056,7 +1060,14 @@ class Mrk_model extends CI_Model{
 
   public function getAllDataKon()
   {
-    $this->db->select('*');
+    $this->db->select("*,CONCAT(  
+        IF (ISNULL(KonAlamat), '', KonAlamat), ' ',   
+        IF (ISNULL(konAlamatExtS), '', konAlamatExtS), ' ',   
+        IF (ISNULL(konAlamatExtD), '', konAlamatExtD), ' ',   
+        IF (ISNULL(konPoskod), '', konPoskod), ' ',
+        IF (ISNULL(konBandar), '', konBandar), ' ',   
+        IF (ISNULL(konNegeri), '', konNegeri)  
+    ) AS AddressCombine");
     $this->db->from('kontraktor');
     $query = $this->db->get();
     return $query->result();

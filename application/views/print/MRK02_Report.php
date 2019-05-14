@@ -172,6 +172,8 @@ else{
 }
 ///Checkbox area////////////////////////////
 
-$pdf->Output();
+$userdata = $this->session->userdata('name');
+$filename = "MRK02-".$userdata."(".$get_detail[0]->mrks_kodvot.").pdf";
+$pdf->Output('',$filename);
 
 

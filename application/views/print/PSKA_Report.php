@@ -1,24 +1,31 @@
 <?php
+use setasign\Fpdi\Fpdi;
 
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$norujukan = $get_detail[0]->df_nosebutharga;
 
-\PhpOffice\PhpWord\Settings::setTempDir('assets/tmp/');
+// initiate FPDI
+$pdf = new Fpdi();
+// add a page
+$pdf->AddPage();
+// set the source file
+$pdf->setSourceFile("assets/pdf/PSK01.pdf");
+// import page 1
+$tplIdx = $pdf->importPage(1);
+// use the imported page and place it at position 10,10 with a width of 100 mm
+$pdf->useTemplate($tplIdx, 0, 0, 210);
+
+// now write some text above the imported page
+$pdf->SetFont('Times','',11);
+$pdf->SetTextColor('black');
+
+$pdf->SetXY(32, 50);
+$pdf->Write(0,$norujukan,0,1,'C');
+
 $userdata = $this->session->userdata('name');
-$template = new \PhpOffice\PhpWord\TemplateProcessor("assets/docx/PSK01.docx");
+$filename = "PSK01-".$userdata."(".$get_detail[0]->mrks_kodvot.").pdf";
+$pdf->Output('',$filename);
 
-$template->setValue('nosebutharga',$get_detail[0]->df_nosebutharga);
-$template->setValue('namakon',$get_detail[0]->mrk_namakon);
-$template->setValue('alamatkon',$get_detail[0]->mrk_alamatkon);
-$template->setValue('gred',$get_detail[0]->mrk_gred);
 
-$template->setValue('TAJUKKERJA',$get_detail[0]->mrk_negeri);
-$template->setValue('kosprojek',number_format($get_detail[0]->mrk_kosprojek,2));
-$template->setValue('tarikh',$get_detail[0]->lsk_tarikhkerjasiap);
-$template->setValue('tarikh2',$get_detail[0]->mrk_tarikhjangkasiap);
-
-$filename = "PSK-A".$userdata."(".$get_detail[0]->mrks_kodvot.").docx";
-$template->saveAs("assets/document/".$filename,0777);
-redirect(base_url("assets/document/".$filename));
 
 
 

@@ -55,6 +55,8 @@ $pdf->Write(0,$jawatan,0,1,'C');
 $pdf->SetXY(158, 159);
 $pdf->Write(0,$tarikhlaporan,0,1,'C');
 
-$pdf->Output();
+$userdata = $this->session->userdata('name');
+$filename = "MRK02-".$userdata."(".$get_detail[0]->mrks_kodvot.").pdf";
+$pdf->Output('',$filename);
 
 

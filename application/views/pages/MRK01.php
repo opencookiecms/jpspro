@@ -64,7 +64,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <!-- Modal -->
                       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document" style="margin-left:270px;">
-                          <div class="modal-content" style="background-color:white; width:800px;">
+                          <div class="modal-content" style="background-color:white; width:980px;">
                             <div class="modal-header">
                               <h5 class="modal-title" id="exampleModalLabel">Kontraktor</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -80,7 +80,10 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                                         <thead>
                                           <tr>
                                             <th>
-                                              #
+                                              Bil
+                                            </th>
+                                              <th>
+                                              Tindakan
                                             </th>
                                             <th width:20>
                                               Kontraktor
@@ -97,9 +100,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                                             <th>
                                               Negeri
                                             </th>
-                                            <th>
-                                              Tindakan
-                                            </th>
+                                          
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -107,12 +108,13 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                                           <?php foreach ($get_allkontraktor as $row):$bil++ ?>
                                             <tr>
                                               <td class="py-1"><?php echo $bil ?></td>
+                                                  <td class="py-1"><button id="buttonselect"  value="<?php echo $row->konName?>"  class="btn btn-info" data-dismiss="modal">Pilih</button></td>
                                               <td class="py-1"><span><?php echo $row->konName?><span></td> <!--Show data in list view-->
-                                              <td class="py-1"><span><?php echo $row->KonAlamat?><span></td> <!--Show data in list view-->
+                                              <td class="py-1"><span><?php echo $row->AddressCombine?><span></td> <!--Show data in list view-->
                                               <td class="py-1"><span><?php echo $row->sijilSPKKNo?><span></td> <!--Show data in list view-->
                                               <td class="py-1"><span><?php echo $row->konDaerah?><span></td> <!--Show data in list view-->
                                               <td class="py-1"><span><?php echo $row->konNegeri?><span></td> <!--Show data in list view-->
-                                              <td class="py-1"><button id="buttonselect"  value="<?php echo $row->konName?>"  class="btn btn-info" data-dismiss="modal">Select</button></td>
+                                          
                                               </tr>
 
                                             <?php endforeach; ?>
@@ -296,13 +298,27 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-4">
+
+                          <?php
+                            
+                             $ssroles = $this->session->userdata("roles");
+                             if($ssroles == "admin")
+                             {
+                               $pegawais = "";
+                               $jawatans = "";
+                             }
+                             else{
+                               $pegawais = $this->session->userdata("name");
+                               $jawatans = $this->session->userdata("jawatan");
+                             }
+                          ?>
                           <label class="tl">Pegawai</label>
-                          <input type="text" class="form-control ts" style="font-weight:bold;" id="pegawai" value="<?php echo $this->session->userdata("name") ?>" name="pegawai" readonly>
+                          <input type="text" class="form-control ts" style="font-weight:bold;" id="pegawai" value="<?php echo $pegawais  ?>" name="pegawai" readonly>
 
                         </div>
                         <div class="col-sm-4">
                           <label class="tl">Jawatan</label>
-                          <input type="text" class="form-control ts" style="font-weight:bold;" value="<?php echo $this->session->userdata("jawatan") ?>" id="jawatan" name="jawatan" readonly>
+                          <input type="text" class="form-control ts" style="font-weight:bold;" value="<?php echo $jawatans  ?>" id="jawatan" name="jawatan" readonly>
                         </div>
                       </div>
                     </div>
@@ -395,18 +411,23 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 $('.table tbody').on('click','#buttonselect',function(){
 
                   var currow = $(this).closest('tr');
-                  var col1 = currow.find('td:eq(1)').text();
+                  //var col1 = currow.find('td:eq(1)').text();
                   var col2 = currow.find('td:eq(2)').text();
+                  var col4 = currow.find('td:eq(4)').text();
                   var col3 = currow.find('td:eq(3)').text();
-                  var daerah = currow.find('td:eq(4)').text();
-                  var negeri = currow.find('td:eq(5)').text();
-
-                  var result = col1;
-                  var result2 = col2;
-                  var result3 = col3;
-                  $("#namakon").val(result);
-                  $('#alamat').val(result2);
-                  $("#nopkk").val(result3);
+                  var col5 = currow.find('td:eq(5)').text();
+                  var col6 = currow.find('td:eq(6)').text();
+                 
+                  var kontraktor = col2;
+                  var nopkk = col4;
+                  var alamat = col3;
+                  var daerah = col5;
+                  var negeri = col6;
+             
+                  $("#namakon").val(kontraktor);
+                  $("#nopkk").val(nopkk);
+                  $('#alamat').val(alamat);
+                  
                   $("#daerah").val(daerah);
                   $("#negeri").val(negeri);
                 })

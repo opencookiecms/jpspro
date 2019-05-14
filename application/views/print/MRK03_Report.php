@@ -1,13 +1,106 @@
 <?php
-
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
-
-\PhpOffice\PhpWord\Settings::setTempDir('assets/tmp/');
-$userdata = $this->session->userdata('name');
-$template = new \PhpOffice\PhpWord\TemplateProcessor("assets/docx/MRK03.docx");
+use setasign\Fpdi\Fpdi;
 
 
-//$docx = new DOCXTemplate(site_url("assets/document/MRK03.docx"));// for mac
+$nopkk = $get_detail[0]->mrk_nopkk;
+$kontraktors = $get_detail[0]->mrk_namakon;
+
+//$alamat = "NO. F-617 KAMPUNG HUTAN GELAM, JALAN BATU LINTANG TIKAM BATU 08600 Sungai Petani Kedah Darul Aman";
+$inden = $get_detail[0]->mrk_noinden;
+$gred = $get_detail[0]->mrk_gred;
+$nosebutharga = $get_detail[0]->df_nosebutharga;
+
+
+$kosprojek = number_format($get_detail[0]->mrk_kosprojek,2);
+$kossebenar = number_format($get_detail[0]->lks_hargasebenar,2);
+$tajuk = $get_detail[0]->df_tajuk;
+
+$ladsehari = $get_detail[0]->mrk_ladsehari;
+$laddari = $get_detail[0]->mrk_laddari;
+$ladhingga = $get_detail[0]->mrk_ladsehingga;
+
+$tarikhmula = $get_detail[0]->mrk_tarikhmulakon;
+$tarikhtamat = $get_detail[0]->mrk_tarikhjangkasiap;
+$tarikhlanjutmasa = $get_detail[0]->lsk_lanjutmasa;
+$tarikhsempurna = $get_detail[0]->lsk_tarikhkerjasiap;
+
+$pegawai = $get_detail[0]->mrk_pegawai;
+$jawatan = $get_detail[0]->mrk_jawatan;
+$tarikah = $get_detail[0]->tiga_tarikah;
+$ulasan = $get_detail[0]->mrk_ulasan;
+
+// initiate FPDI
+$pdf = new Fpdi();
+// add a page
+$pdf->AddPage();
+// set the source file
+$pdf->setSourceFile("assets/pdf/MRK03.pdf");
+// import page 1
+$tplIdx = $pdf->importPage(1);
+// use the imported page and place it at position 10,10 with a width of 100 mm
+$pdf->useTemplate($tplIdx, 0, 0, 210);
+
+
+$pdf->SetFont('Times','',10);
+$pdf->SetTextColor('black');
+
+$pdf->SetXY(58,31);
+$pdf->Write(0,$nopkk,0,1,'C'); 
+
+$pdf->SetXY(58,41);
+$pdf->Write(0,$kontraktors,0,1,'C');
+
+$pdf->SetXY(62, 49);
+$pdf->Write(0,$nosebutharga,0,1,'C');
+
+$pdf->SetXY(63, 55);
+$pdf->Write(0,$inden,0,1,'C');
+
+$pdf->SetXY(50, 59);
+$pdf->MultiCell(120,5,$tajuk,0,'J');
+
+$pdf->SetXY(58, 83);
+$pdf->Write(0,$kosprojek,0,1,'C');
+
+$pdf->SetXY(110, 83);
+$pdf->Write(0,$kossebenar,0,1,'C');
+
+
+$pdf->SetXY(60, 90);
+$pdf->Write(0,$tarikhmula,0,1,'C');
+
+$pdf->SetXY(60, 96);
+$pdf->Write(0,$tarikhtamat,0,1,'C');
+
+$pdf->SetXY(62, 101);
+$pdf->Write(0,$tarikhlanjutmasa,0,1,'C');
+
+$pdf->SetXY(122, 101);
+$pdf->Write(0,$tarikhsempurna,0,1,'C');
+
+
+$pdf->SetXY(67, 106);
+$pdf->Write(0,$ladsehari,0,1,'C');
+
+$pdf->SetXY(98, 106);
+$pdf->Write(0,$laddari,0,1,'C');
+
+$pdf->SetXY(129, 106);
+$pdf->Write(0,$ladhingga,0,1,'C');
+
+
+$pdf->SetXY(84, 210);
+$pdf->MultiCell(110,5,$ulasan,0,'J');
+
+$pdf->SetXY(44, 246);
+$pdf->Write(0,$pegawai,0,1,'C');
+$pdf->SetXY(44, 255);
+$pdf->Write(0,$jawatan,0,1,'C');
+
+$pdf->SetXY(134, 246);
+$pdf->Write(0,$tarikah,0,1,'C');
+
+
 $bina = $get_detail[0]->tiga_bina;
 $tadbir = $get_detail[0]->tiga_tadbir;
 $kemajuan = $get_detail[0]->tiga_kemajuan;
@@ -17,123 +110,231 @@ $kemasan = $get_detail[0]->tiga_kemasan;
 $luar = $get_detail[0]->tiga_luar;
 $kontraktor = $get_detail[0]->tiga_kontraktor;
 
-$checkmark = "\u{2713}";
-$uncheckmark= "";
-
-$pointbina =array("bt"=>"90% - Keatas","bb"=>"75% - 89%","bs"=>"50% - 74%","bm"=>"50% kebawah");
-foreach($pointbina as $x => $x_value) {
-    if ($bina == $x_value)
-    {
-      $template->setValue($x,$checkmark);
-    }
-    else {
-    $template->setValue($x,$uncheckmark);
-    }
+switch ($bina) {
+  case '90% - Keatas':
+    $pdf->SetXY(90,134);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '75% - 89%':
+    $pdf->SetXY(112,134);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% - 74%':
+    $pdf->SetXY(133,134);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% kebawah':
+    $pdf->SetXY(155,134);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  
+  default:
+    # code...
+    break;
 }
 
-$pointtadbir = array("pt"=>"90% - Keatas","pb"=>"75% - 89%","ps"=>"50% - 74%","pm"=>"50% kebawah");
-foreach ($pointtadbir as $keytadbir => $p_value) {
-  if($tadbir == $p_value)
-  {
-    $template->setValue($keytadbir, $checkmark);
-  }
-  else {
-    $template->setValue($keytadbir,$uncheckmark);
-  }
+switch ($tadbir) {
+  case '90% - Keatas':
+    $pdf->SetXY(90,142);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '75% - 89%':
+    $pdf->SetXY(112,142);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% - 74%':
+    $pdf->SetXY(133,142);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% kebawah':
+    $pdf->SetXY(155,142);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  
+  default:
+    # code...
+    break;
 }
 
-$pointkemajuan = array("kt"=>"90% - Keatas","kb"=>"75% - 89%","ks"=>"50% - 74%","km"=>"50% kebawah");
-foreach ($pointkemajuan as $keymaju => $k_value) {
-  if($kemajuan == $k_value)
-  {
-    $template->setValue($keymaju, $checkmark);
-  }
-  else
-  {
-    $template->setValue($keymaju, $uncheckmark);
-  }
+switch ($kemajuan) {
+  case '90% - Keatas':
+    $pdf->SetXY(90,150);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '75% - 89%':
+    $pdf->SetXY(112,150);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% - 74%':
+    $pdf->SetXY(133,150);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% kebawah':
+    $pdf->SetXY(155,150);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  
+  default:
+    # code...
+    break;
 }
 
-$pointrangka = array("mt"=>"90% - Keatas","mb"=>"75% - 89%","ms"=>"50% - 74%","mm"=>"50% kebawah");
-foreach ($pointrangka as $keyrangka => $r_value) {
-  if($kerangka == $r_value)
-  {
-    $template->setValue($keyrangka, $checkmark);
-  }
-  else {
-    $template->setValue($keyrangka,$uncheckmark);
-  }
+switch ($kerangka) {
+  case '90% - Keatas':
+    $pdf->SetXY(90,158);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '75% - 89%':
+    $pdf->SetXY(112,158);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% - 74%':
+    $pdf->SetXY(133,158);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% kebawah':
+    $pdf->SetXY(155,158);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  
+  default:
+    # code...
+    break;
 }
 
-$pointkerja = array("qt"=>"90% - Keatas","qb"=>"75% - 89%","qs"=>"50% - 74%","qm"=>"50% kebawah");
-foreach ($pointkerja as $keykerja => $pk_value) {
-  if($kerja == $pk_value)
-  {
-    $template->setValue($keykerja, $checkmark);
-  }
-  else {
-    $template->setValue($keykerja,$uncheckmark);
-  }
+switch ($kerja) {
+  case '90% - Keatas':
+    $pdf->SetXY(90,166);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '75% - 89%':
+    $pdf->SetXY(112,166);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% - 74%':
+    $pdf->SetXY(133,166);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% kebawah':
+    $pdf->SetXY(155,166);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  
+  default:
+    # code...
+    break;
+}
+
+switch ($kemasan) {
+  case '90% - Keatas':
+    $pdf->SetXY(91,174);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '75% - 89%':
+    $pdf->SetXY(112,174);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% - 74%':
+    $pdf->SetXY(133,174);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% kebawah':
+    $pdf->SetXY(155,174);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  
+  default:
+    # code...
+    break;
+}
+
+switch ($luar) {
+  case '90% - Keatas':
+    $pdf->SetXY(91,181);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '75% - 89%':
+    $pdf->SetXY(112,181);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% - 74%':
+    $pdf->SetXY(133,181);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% kebawah':
+    $pdf->SetXY(155,181);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  
+  default:
+    # code...
+    break;
+}
+
+switch ($kontraktor) {
+  case '90% - Keatas':
+    $pdf->SetXY(91,194);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '75% - 89%':
+    $pdf->SetXY(112,194);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% - 74%':
+    $pdf->SetXY(133,194);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  case '50% kebawah':
+    $pdf->SetXY(155,194);
+    $pdf->SetFont('ZapfDingbats','', 15);
+    $pdf->Cell(4, 3, 7);
+    break;
+  
+  default:
+    # code...
+    break;
 }
 
 
 
 
-$pointkemasan = array("ft"=>"90% - Keatas","fb"=>"75% - 89%","fs"=>"50% - 74%","fm"=>"50% kebawah");
-foreach ($pointkemasan as $keykemasan => $mas_value) {
-  if($kemasan == $mas_value)
-  {
-    $template->setValue($keykemasan, $checkmark);
-  }
-  else {
-   $template->setValue($keykemasan,$uncheckmark);
-  }
-}
-
-$pointwork = array("wt"=>"90% - Keatas","wb"=>"75% - 89%","ws"=>"50% - 74%","wm"=>"50% kebawah");
-foreach ($pointwork as $keywork => $work_value) {
-  if($luar == $work_value)
-  {
-    $template->setValue($keywork, $checkmark);
-  }
-  else {
-    $template->setValue($keywork,$uncheckmark);
-  }
-}
-
-$pointkon = array("st"=>"90% - Keatas","sb"=>"75% - 89%","ss"=>"50% - 74%","sm"=>"50% kebawah");
-foreach ($pointkon as $keykon => $kon_value) {
-  if($kontraktor == $kon_value)
-  {
-    $template->setValue($keykon, $checkmark);
-  }
-  else {
-    $template->setValue($keykon,$uncheckmark);
-  }
-}
-
-$template->setValue('pkkno',$get_detail[0]->mrk_nopkk);
-$template->setValue('namakot',$get_detail[0]->mrk_namakon);
-$template->setValue('nosebutharga',$get_detail[0]->df_nosebutharga);
-$template->setValue('noinden',$get_detail[0]->mrk_noinden);
-$template->setValue('tajukkerja',$get_detail[0]->df_tajuk);
-$template->setValue('kosprojek',number_format($get_detail[0]->mrk_kosprojek,2));
-$template->setValue('kossebenar',number_format($get_detail[0]->lks_hargasebenar,2));
-$template->setValue('tarikhmula',$get_detail[0]->mrk_tarikhmulakon);
-$template->setValue('tarikhsiap',$get_detail[0]->lsk_tarikhkerjasiap);
-$template->setValue('tarikhlanjutmasa',$get_detail[0]->mrk_dari);
-$template->setValue('tarikhsebenar',$get_detail[0]->lsk_tarikhkerjasiap);
-$template->setValue('ladsehari',$get_detail[0]->mrk_ladsehari);
-$template->setValue('tarikhmulas',$get_detail[0]->mrk_laddari);
-$template->setValue('tarikahsehigga',$get_detail[0]->mrk_ladsehingga);
-$template->setValue('namapegawai',$get_detail[0]->tiga_pegawai);
-$template->setValue('jawatanpegawai',$get_detail[0]->tiga_jawatan);
 
 
 
-$filename = "MRK03-".$userdata."(".$get_detail[0]->mrks_kodvot.").docx";
-$template->saveAs("assets/document/".$filename,0777);
-redirect(base_url("assets/document/".$filename));
 
+$userdata = $this->session->userdata('name');
+$filename = "MRK03-".$userdata."(".$get_detail[0]->mrks_kodvot.").pdf";
+$pdf->Output('',$filename);
 
 

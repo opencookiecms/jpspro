@@ -142,8 +142,8 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           Lihat / Cetak
         </a>
         <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>">PSK 01</a>
-          <a class="dropdown-item" href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>">PSK 02</a>
+          <a class="dropdown-item" target="_blank" href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>">PSK 01</a>
+          <a class="dropdown-item" target="_blank" href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>">PSK 02</a>
         </div>
       </li>
       <li class="nav-item">

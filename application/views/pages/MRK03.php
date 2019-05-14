@@ -294,6 +294,16 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
+                    <div class="col-sm-6">
+                      <label class="tl">Sokongan / Ulasan:</label>
+                        <textarea rows="5" class="form-control ts" style="font-weight:bold;" id="tajukkerjamrk" name="ulasanpegawai"><?php echo $get_detail[0]->mrk_ulasan ?></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row">
                     <div class="col-sm-4">
                       <p></p>
                       <p></p>
@@ -364,7 +374,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active"style="margin-left:5px;">
-                              <a href="<?php echo site_url('Report/Report_MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak" >Lihat / Cetak</a>
+                              <a href="<?php echo site_url('Report/Report_MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Muat Turun / Cetak" >Lihat / Cetak</a>
       </li>
       <li class="nav-item" style="margin-left:5px;">
                         <a href="<?php echo site_url('mrk/LSK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Laporan Siap Kerja">Laporan Siap Kerja</a>
