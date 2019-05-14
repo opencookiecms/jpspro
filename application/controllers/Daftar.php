@@ -141,7 +141,7 @@ class Daftar extends CI_Controller{
 
     echo $idvalue;
 
-    $this->form_validation->set_rules('vot','Kod Vot Diperlukan','required');
+    $this->form_validation->set_rules('dp_idpost','must have one unique id','required');
 
 
     if($this->form_validation->run() === FALSE)
@@ -172,7 +172,7 @@ class Daftar extends CI_Controller{
     $data['title'] = 'Maklumat Perolehan';
     $data['idval'] = $idvalue;
 
-    $this->form_validation->set_rules('lata','Latitud Diperlukan','required');
+    $this->form_validation->set_rules('dp_idpost','must have one unique id','required');
 
 
     if($this->form_validation->run() === FALSE)
@@ -185,7 +185,8 @@ class Daftar extends CI_Controller{
     }
     else {
       $this->projek_model->create_stepthree();//load from model
-      redirect(base_url('projek/'));
+      $lastId=$this->projek_model->getLastid();
+      redirect(base_url('projek/Update_Projek01/'.$lastId));
     }
 
   }

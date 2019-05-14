@@ -1,33 +1,59 @@
 <?php
+use setasign\Fpdi\Fpdi;
 
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$kontraktor = $get_detail[0]->mrk_namakon;
+$alamatone = $get_detail[0]->mrk_alamatkon;
 
-\PhpOffice\PhpWord\Settings::setTempDir('assets/tmp/');
-$userdata = $this->session->userdata('name');
-$template = new \PhpOffice\PhpWord\TemplateProcessor("assets/docx/lsk.docx");
+$inden = $get_detail[0]->mrk_noinden;
+$tajuk = $get_detail[0]->df_tajuk;
+$daerah = $get_detail[0]->mrk_daerah;
+$negeri = $get_detail[0]->mrk_negeri;
+$kosprojek = number_format($get_detail[0]->mrk_kosprojek,2);
+$tarikhmula = $get_detail[0]->mrk_tarikhmulakon;
+$tarikhjangka = $get_detail[0]->mrk_tarikhjangkasiap;
+$pegawai = $get_detail[0]->mrk_pegawai;
+$jawatan = $get_detail[0]->mrk_jawatan;
+$tarikhlaporan = $get_detail[0]->mrk_tarikh;
+// initiate FPDI
+$pdf = new Fpdi();
+// add a page
+$pdf->AddPage();
+// set the source file
+$pdf->setSourceFile("assets/pdf/laporansiapkerja.pdf");
+// import page 1
+$tplIdx = $pdf->importPage(1);
+// use the imported page and place it at position 10,10 with a width of 100 mm
+$pdf->useTemplate($tplIdx, 5, 5, 200);
 
-$template->setValue('gred',$get_detail[0]->mrk_gred);
-$template->setValue('namakon',$get_detail[0]->mrk_namakon);
-$template->setValue('alamatkon',$get_detail[0]->mrk_alamatkon);
-$template->setValue('tajukkerja',$get_detail[0]->df_tajuk);
-$template->setValue('noinden',$get_detail[0]->mrk_noinden);
-$template->setValue('nosebutharga',$get_detail[0]->df_nosebutharga);
-$template->setValue('nopolisi',$get_detail[0]->lsk_perkeso);
-$template->setValue('nopi',$get_detail[0]->lsk_liability);
-$template->setValue('kodperuntukkan',$get_detail[0]->lsk_peruntukan);
-$template->setValue('hargapesanan',number_format($get_detail[0]->mrk_kosprojek,2));
-$template->setValue('hargasebenar',number_format($get_detail[0]->lks_hargasebenar,2));
-$template->setValue('tarikhmulakerja',$get_detail[0]->mrk_tarikhmulakon);
-$template->setValue('tarikhtamatkerja',$get_detail[0]->mrk_tarikhjangkasiap);
-$template->setValue('tarikhlanjutmasa',$get_detail[0]->lsk_lanjutmasa);
-$template->setValue('tarikhsiap',$get_detail[0]->lsk_tarikhkerjasiap);
-$template->setValue('tarikhp',$get_detail[0]->mrk_tarikh);
-$template->setValue('namapegawai',$get_detail[0]->lsk_juruteraj);
-$template->setValue('jawatan',$get_detail[0]->lsk_jawatanjuruteraj);
-$template->setValue('namajurutera',$get_detail[0]->lsk_juruterad);
-$template->setValue('jawatj',$get_detail[0]->lsk_jawatanjuruterad);
+// now write some text above the imported page
+$pdf->SetFont('Arial','',12);
+$pdf->SetTextColor('black');
+$pdf->SetXY(70, 45);
+$pdf->Write(0,$kontraktor,0,1,'C');
+$pdf->SetXY(75, 59);
+$pdf->Write(0,$kontraktor,0,1,'C');
 
-$filename = "Laporan Siap Kerja-".$userdata."(".$get_detail[0]->mrks_kodvot.").docx";
-$template->saveAs("assets/document/".$filename,0777);
-redirect(base_url("assets/document/".$filename));
-?>
+$pdf->SetXY(96, 75);
+$pdf->Write(0,$inden,0,1,'C');
+$pdf->SetXY(54, 80);
+$pdf->MultiCell(130,7,$tajuk,0,'J');
+$pdf->SetXY(82, 110);
+$pdf->Write(0,$daerah,0,1,'C');
+$pdf->SetXY(145, 110);
+$pdf->Write(0,$negeri,0,1,'C');
+$pdf->SetXY(63, 120);
+$pdf->Write(0,$kosprojek,0,1,'C');
+$pdf->SetXY(80, 128);
+$pdf->Write(0,$tarikhmula,0,1,'C');
+$pdf->SetXY(90, 136);
+$pdf->Write(0,$tarikhjangka,0,1,'C');
+$pdf->SetXY(60, 152);
+$pdf->Write(0,$pegawai,0,1,'C');
+$pdf->SetXY(148, 152);
+$pdf->Write(0,$jawatan,0,1,'C');
+$pdf->SetXY(158, 159);
+$pdf->Write(0,$tarikhlaporan,0,1,'C');
+
+$pdf->Output();
+
+
