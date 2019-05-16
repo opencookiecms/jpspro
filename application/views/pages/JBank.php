@@ -124,6 +124,16 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     </div>
                  </div>
               </div>
+              <div class="row">
+                <div class="col-md-12 tl">
+                  <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Alamat Pemborong untuk Surat</label>
+                        <div class="col-sm-7">
+                          <textarea rows="4" type="text" class="form-control ts" style="font-weight:bold;" id="alamatborong" name="alamatborongsurat" placeholder="Alamat Pemborong"><?php echo $get_detail[0]->jb_alamatsurat?></textarea>
+                        </div>
+                    </div>
+                 </div>
+              </div>
 
             <div class="row">
               <div class="col-md-12">
@@ -145,7 +155,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
     <ul class="navbar-nav" >
     
       <li class="nav-item">
-                          <a href="<?php echo site_url('Report/Report_PJB/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak">Print</a>
+                          <a href="<?php echo site_url('Report/Report_PJB/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Muat Turun / Cetak">Print</a>
       </li>
       <li class="nav-item" style="margin-left:5px;" >
   <a href="<?php echo site_url('mrk/MRK_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Perakuan Siap Membaiki Kecacatan">PSMK</a>

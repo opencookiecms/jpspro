@@ -1,23 +1,60 @@
 <?php
+use setasign\Fpdi\Fpdi;
 
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$namabank = $get_detail[0]->mrk_namabank;
+$alamatbank = strtoupper($get_detail[0]->mrk_alamatbank);
+$rujukanbank = $get_detail[0]->mrk_rujukanbank;
+$namakon = $get_detail[0]->mrk_namakon;
+$alamat = $get_detail[0]->jb_alamatsurat;
+$tarikhcacat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhmulatanggungcacat));
+$tarikhtamatcacat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhtamattanggungcacat));
+$namajurutera = strtoupper($get_detail[0]->mrk_pegawaipenguasa);
+$jawatanjurutera = strtoupper($get_detail[0]->mrk_jawatanpp);
 
-\PhpOffice\PhpWord\Settings::setTempDir('assets/tmp/');
+// initiate FPDI
+$pdf = new Fpdi();
+// add a page
+$pdf->AddPage();
+// set the source file
+$pdf->setSourceFile("assets/pdf/jb.pdf");
+// import page 1
+$tplIdx = $pdf->importPage(1);
+// use the imported page and place it at position 10,10 with a width of 100 mm
+$pdf->useTemplate($tplIdx, 0, 0, 210);
+
+// now write some text above the imported page
+$pdf->SetFont('Times','B',12);
+$pdf->SetXY(23, 110);
+$pdf->Write(0,"$namabank",0,1,'C');
+$pdf->SetFont('Times','',12);
+$pdf->SetXY(23, 112);
+$pdf->MultiCell(60,5,$alamatbank,0,'J');
+$pdf->SetFont('Times','B',10);
+$pdf->SetXY(46, 155);
+$pdf->Write(0,"$rujukanbank",0,1,'C');
+$pdf->SetFont('Times','',11);
+$pdf->SetXY(150, 165);
+$pdf->Write(0,"$rujukanbank",0,1,'C');
+$pdf->SetXY(115, 171);
+$pdf->Write(0,"$namakon",0,1,'C');
+$pdf->SetXY(40, 178);
+$pdf->Write(0,"$alamat",0,1,'C');
+$pdf->SetXY(142, 178);
+$pdf->Write(0,"$tarikhcacat",0,1,'C');
+$pdf->SetXY(109, 184);
+$pdf->Write(0,"$tarikhtamatcacat",0,1,'C');
+
+$pdf->SetXY(23, 248);
+$pdf->Write(0,"$namajurutera",0,1,'C');
+$pdf->SetXY(23, 252);
+$pdf->Write(0,"$jawatanjurutera",0,1,'C');
+
+
+
+
+
 $userdata = $this->session->userdata('name');
-$template = new \PhpOffice\PhpWord\TemplateProcessor("assets/docx/jb.docx");
+$filename = "MRK02-".$userdata."(".$get_detail[0]->mrks_kodvot.").pdf";
+$pdf->Output('',$filename);
 
-$template->setValue('NAMABANK',$get_detail[0]->mrk_namabank);
-$template->setValue('ALAMATBANKPB',$get_detail[0]->mrk_alamatbank);
-$template->setValue('rujukantuan',$get_detail[0]->mrk_rujukanbank);
-$template->setValue('noinsurans',$get_detail[0]->mrk_nopkk);
-$template->setValue('namakon',$get_detail[0]->mrk_namakon);
-$template->setValue('alamatkon',$get_detail[0]->mrk_alamatkon);
-$template->setValue('tarikhmula',$get_detail[0]->mrk_tarikhmulakon);
-$template->setValue('tarikhakhir',$get_detail[0]->mrk_nopkk);
-$template->setValue('slogan',$get_detail[0]->mrk_nopkk);
-$template->setValue('jurutera',$get_detail[0]->mrk_pegawai);
-$template->setValue('jawatanjuru',$get_detail[0]->mrk_jawatan);
 
-$filename = "PJB".$userdata."(".$get_detail[0]->mrks_kodvot.").docx";
-$template->saveAs("assets/document/".$filename,0777);
-redirect(base_url("assets/document/".$filename));

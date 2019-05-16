@@ -51,9 +51,11 @@ class Report extends CI_Controller{
     $this->load->view('print/PSKB_Report',$data);
   }
 
-  public function Report_SS()
+  public function Report_SS($value)
   {
-    //$this->load->view('webprint/CLP');
+    $this->load->database();
+    $data['get_detail']=$this->Mrk_model->get_projectdetailforSS($value);
+    $this->load->view('print/SS_Report',$data);
   }
 
   public function Report_PSMK($value="")

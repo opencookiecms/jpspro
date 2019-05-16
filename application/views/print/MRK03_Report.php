@@ -13,7 +13,7 @@ $nosebutharga = $get_detail[0]->df_nosebutharga;
 
 $kosprojek = number_format($get_detail[0]->mrk_kosprojek,2);
 $kossebenar = number_format($get_detail[0]->lks_hargasebenar,2);
-$tajuk = $get_detail[0]->df_tajuk;
+$tajuk = strtoupper($get_detail[0]->df_tajuk);
 
 $ladsehari = $get_detail[0]->mrk_ladsehari;
 $laddari = $get_detail[0]->mrk_laddari;
@@ -92,6 +92,8 @@ $pdf->Write(0,$ladhingga,0,1,'C');
 $pdf->SetXY(84, 210);
 $pdf->MultiCell(110,5,$ulasan,0,'J');
 
+$pdf->SetFont('Times','',12);
+$pdf->SetTextColor('black');
 $pdf->SetXY(44, 246);
 $pdf->Write(0,$pegawai,0,1,'C');
 $pdf->SetXY(44, 255);

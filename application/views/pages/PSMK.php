@@ -62,7 +62,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     </div>
                     <div class="col-sm-4 tl">
                       <label>No Kontrak / No Sebutharga</label>
-                     <input type="text" class="form-control ts" style="font-weight:bold;"id="nokontrak" name="nokontrak" value="<?php echo $get_detail[0]->df_kodvot?>"readonly>
+                     <input type="text" class="form-control ts" style="font-weight:bold;"id="nokontrak" name="nokontrak" value="<?php echo $get_detail[0]->df_nosebutharga?>"readonly>
                     </div>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
     <ul class="navbar-nav" >
     
       <li class="nav-item">
-                            <a href="<?php echo site_url('report/Report_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak">Print</a>
+                            <a href="<?php echo site_url('report/Report_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Muat Turun / Cetak">Print</a>
       </li>
       <li class="nav-item" style="margin-left:5px;" >
           <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Senarai Semakan ">Senarai Semakan</a>

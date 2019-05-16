@@ -371,6 +371,7 @@ class Mrk_model extends CI_Model{
     $mrk_rujukanbank = $this->input->post('rujukbank');
     $mrk_namabank = $this->input->post('namabank');
     $mrk_alamatbank = $this->input->post('alamatbank');
+    $alamatsurat = $this->input->post('alamatborongsurat');
     $js_mrkid = $this->input->post('hiddenid');
     $js_kodvot = $this->input->post('kodvot');
     $js_inden = $this->input->post('noinden');
@@ -380,6 +381,7 @@ class Mrk_model extends CI_Model{
       'mrk_rujukanbank' => $mrk_rujukanbank,
       'mrk_namabank' => $mrk_namabank,
       'mrk_alamatbank' => $mrk_alamatbank,
+      'jb_alamatsurat' =>$alamatsurat,
       'js_mrkid' => $js_mrkid,
       'js_kodvot' => $js_kodvot,
       'js_inden' => $js_inden
@@ -864,6 +866,7 @@ class Mrk_model extends CI_Model{
     $mrk_rujukanbank = $this->input->post('rujukbank');
     $mrk_namabank = $this->input->post('namabank');
     $mrk_alamatbank = $this->input->post('alamatbank');
+    $alamatborong = $this->input->post('alamatborongsurat');
     $js_mrkid = $this->input->post('hiddenid');
     $js_kodvot = $this->input->post('kodvot');
     $js_inden = $this->input->post('noinden');
@@ -873,6 +876,7 @@ class Mrk_model extends CI_Model{
       'mrk_rujukanbank' => $mrk_rujukanbank,
       'mrk_namabank' => $mrk_namabank,
       'mrk_alamatbank' => $mrk_alamatbank,
+      'jb_alamatsurat' => $alamatborong,
       'js_mrkid' => $js_mrkid,
       'js_kodvot' => $js_kodvot,
       'js_inden' => $js_inden
