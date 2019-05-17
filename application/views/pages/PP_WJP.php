@@ -78,7 +78,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Kepada</label>
                   <div class="col-sm-7">
-                  <input type="text" class="form-control ts" style="font-weight:bold;" id="kepada" name="kepada" placeholder="Kepada" value="<?php echo $get_detail[0]->ppwjp_kepada?>">
+                  <input type="text" class="form-control ts" readonly style="font-weight:bold;" id="kepada" name="kepada" placeholder="Kepada" value="<?php echo $get_detail[0]->mrk_namakon?>">
                   </div>
                 </div>
               </div>
@@ -89,7 +89,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Alamat</label>
                   <div class="col-sm-7">
-                  <textarea rows="5" type="text" class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->ppwjp_alamat?></textarea>
+                  <textarea rows="5" type="text" readonly class="form-control ts" style="font-weight:bold;" id="alamat" name="alamat" placeholder="Alamat"><?php echo $get_detail[0]->mrk_alamatkon?></textarea>
                   </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
     <ul class="navbar-nav" >
     
       <li class="nav-item">
-                          <a href="<?php echo site_url('Report/Report_PJB/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Muat Turun / Cetak">Print</a>
+                          <a href="<?php echo site_url('Report/Report_Pemulangan_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Muat Turun / Cetak">Cetak</a>
       </li>
       <li class="nav-item" style="margin-left:5px;" >
                     <a href="<?php echo site_url('mrk/Jaminan_Bank/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Jaminan Bank">Jaminan Bank</a>

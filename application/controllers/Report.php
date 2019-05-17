@@ -9,6 +9,7 @@ class Report extends CI_Controller{
     $this->load->library('Pdfconvert');
     $this->load->model('Mrk_model');
     $this->load->model('Surat_model');
+    $this->load->model('Setting_model');
 
   }
 
@@ -68,6 +69,7 @@ class Report extends CI_Controller{
   public function Report_PJB($value="")
   {
       $this->load->database();
+      $data['get_slogan']=$this->Setting_model->get_dataslogan();
       $data['get_detail']=$this->Mrk_model->get_projectdetailforJB($value);
       $this->load->view('print/PJB_Report',$data);
   }
@@ -76,12 +78,13 @@ class Report extends CI_Controller{
   {
       $this->load->database();
       $data['get_detail']=$this->Mrk_model->get_projectdetailforPPWJP($value);
-      $this->load->view('print/WJP_Report',$data);
+      $this->load->view('print/PPWJP_Report',$data);
   }
 
   public function Report_PKK01($value="")
   {
     $this->load->database();
+     $data['get_slogan']=$this->Setting_model->get_dataslogan();
     $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
     $this->load->view('print/PKK01_Report',$data);
   }
@@ -89,6 +92,7 @@ class Report extends CI_Controller{
   public function Report_PKK02($value="")
   {
     $this->load->database();
+     $data['get_slogan']=$this->Setting_model->get_dataslogan();
     $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
     $this->load->view('print/PKK02_Report',$data);
   }
@@ -96,6 +100,7 @@ class Report extends CI_Controller{
   public function Report_Khas01($value="")
   {
     $this->load->database();
+     $data['get_slogan']=$this->Setting_model->get_dataslogan();
     $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
     $this->load->view('print/SKHAS01',$data);
   }
@@ -103,6 +108,7 @@ class Report extends CI_Controller{
   public function Report_Khas02($value="")
   {
     $this->load->database();
+     $data['get_slogan']=$this->Setting_model->get_dataslogan();
     $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
     $this->load->view('print/SKHAS02',$data);
   }

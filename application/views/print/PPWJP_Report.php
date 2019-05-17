@@ -1,23 +1,52 @@
 <?php
+use setasign\Fpdi\Fpdi;
 
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$namakon = $get_detail[0]->mrk_namakon;
+$tajuk = strtoupper($get_detail[0]->df_tajuk);
+$sebutharga = strtoupper($get_detail[0]->df_nosebutharga);
+$namajurutera = strtoupper($get_detail[0]->ppwjp_pegawai);
+$jawatanjurutera = strtoupper($get_detail[0]->ppwjp_jawatan);
+$kospwjp = number_format($get_detail[0]->ppwjp_kos,2);
 
-\PhpOffice\PhpWord\Settings::setTempDir('assets/tmp/');
+// initiate FPDI
+$pdf = new Fpdi();
+// add a page
+$pdf->AddPage();
+// set the source file
+$pdf->setSourceFile("assets/pdf/ppwjp.pdf");
+// import page 1
+$tplIdx = $pdf->importPage(1);
+// use the imported page and place it at position 10,10 with a width of 100 mm
+$pdf->useTemplate($tplIdx, 0, 0, 210);
+
+// now write some text above the imported page
+
+$pdf->SetFont('Times','',11);
+$pdf->SetXY(46, 155);
+
+$pdf->SetXY(57, 135);
+$pdf->Write(0,"$namakon",0,1,'C');
+$pdf->SetXY(57, 137);
+$pdf->MultiCell(100,5,$tajuk,0,'J');
+
+
+$pdf->SetXY(57, 162);
+$pdf->Write(0,"$sebutharga",0,1,'C');
+
+
+$pdf->SetXY(172, 201);
+$pdf->Write(0,"$kospwjp",0,1,'C');
+
+
+
+$pdf->SetXY(134, 223);
+$pdf->Write(0,"$namajurutera",0,1,'C');
+$pdf->SetXY(132, 225);
+$pdf->MultiCell(60,5,$jawatanjurutera,0,'C');
+
+
 $userdata = $this->session->userdata('name');
-$template = new \PhpOffice\PhpWord\TemplateProcessor("assets/docx/jb.docx");
+$filename = "PPWJP-".$userdata."(".$get_detail[0]->mrks_kodvot.").pdf";
+$pdf->Output('',$filename);
 
-$template->setValue('NAMABANK',$get_detail[0]->mrk_namabank);
-$template->setValue('ALAMATBANKPB',$get_detail[0]->mrk_alamatbank);
-$template->setValue('rujukantuan',$get_detail[0]->mrk_rujukanbank);
-$template->setValue('noinsurans',$get_detail[0]->mrk_nopkk);
-$template->setValue('namakon',$get_detail[0]->mrk_namakon);
-$template->setValue('alamatkon',$get_detail[0]->mrk_alamatkon);
-$template->setValue('tarikhmula',$get_detail[0]->mrk_tarikhmulakon);
-$template->setValue('tarikhakhir',$get_detail[0]->mrk_nopkk);
-$template->setValue('slogan',$get_detail[0]->mrk_nopkk);
-$template->setValue('jurutera',$get_detail[0]->mrk_pegawai);
-$template->setValue('jawatanjuru',$get_detail[0]->mrk_jawatan);
 
-$filename = "PJB".$userdata."(".$get_detail[0]->mrks_kodvot.").docx";
-$template->saveAs("assets/document/".$filename,0777);
-redirect(base_url("assets/document/".$filename));

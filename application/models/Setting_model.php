@@ -25,17 +25,23 @@ class Setting_model extends CI_Model{
 
 
 
-  public function setslogan()
+  public function setslogan($id)
   {
     $this->load->helper('url');
 
     $slogan = $this->input->post("slogan");
+    $cogan = $this->input->post("cogan");
 
     $data = array(
-      'set_slogan' => $slogan
+      'set_slogan' => $slogan,
+      'cogankata' => $cogan,
+      'set_id'=> $id
     );
 
-    return $this->db->insert('mrk_setting',$data);
+    
+    $this->db->where('set_id', $id);
+
+    $this->db->update('mrk_setting', $data);
   }
 
   public function delslogan($id)
@@ -73,22 +79,6 @@ class Setting_model extends CI_Model{
 
   }
 
-  public function sloganSetting($data, $update)
-  {
-    $this->load->helper('url');
-
-    $df_projekid = $this->input->post('slogan');
-
-
-    $data = array(
-      'set_slogan' => $df_daerah
-      );
-
-
-      $this->db->where('set_id', $update);
-
-      $this->db->update('mrk_slogan', $data);
-  }
 
   public function get_dataslogan()
   {
@@ -176,6 +166,33 @@ class Setting_model extends CI_Model{
     return $this->db->insert('jps_users',$data);
   }
 
+
+  public function get_registerupdate($id)
+  {
+    $this->load->helper('url');
+
+    $nama = $this->input->post('nama');
+    $email = $this->input->post('email');
+    $jawatan = $this->input->post('jawatan');
+    $password = $this->input->post('pass');
+    $roles = $this->input->post('roles');
+    $id = $id;
+
+    $data = array(
+      'jps_name' => $nama,
+      'jps_email'=> $email,
+      'jps_password'=> md5($password),
+      'jps_position'=> $jawatan,
+      'jps_userroles'=>$roles,
+      'user_id' => $id
+    );
+
+        $this->db->where('user_id', $id);
+
+       $this->db->update('jps_users', $data);
+  }
+
+
   public function get_verify($emaiv,$passv)
   {
     $this->db->select('*');
@@ -204,6 +221,68 @@ class Setting_model extends CI_Model{
     $query = $this->db->get();
 
     return $query->result();
+  }
+
+  public function getsungai()
+  {
+    $this->db->select('*');
+    $this->db->from('jps_sungai');
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function getsungaibyid($value)
+  {
+    $this->db->select('*');
+    $this->db->from('jps_sungai');
+    $this->db->where('sg_id', $value);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function delsungai()
+  {
+    $this->db->select('*');
+    $this->db->from('jps_sungai');
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  public function updatesungai($id)
+  {
+   
+     $data = array(
+      'sg_name'=> $this->input->post("sungainama"),
+      'sg_cabang'=> $this->input->post("sungaicabang"),
+      'sg_panjang'=> $this->input->post("sungaipanjang"),
+      'sg_daerah'=>  $this->input->post("sungaidaerah"),
+      'sg_noshet'=>  $this->input->post("sungainoshet"),
+      'sg_norujukan'=>  $this->input->post("sungairujukan"),
+      'sg_id' => $this->input->post("hiddenid")
+    );
+
+
+        $this->db->where('sg_id', $id);
+
+       $this->db->update('jps_sungai', $data);
+
+  }
+
+  public function get_registersungai()
+  {
+    $data = array(
+      'sg_name'=> $this->input->post("sungainama"),
+      'sg_cabang'=> $this->input->post("sungaicabang"),
+      'sg_panjang'=> $this->input->post("sungaipanjang"),
+      'sg_daerah'=>  $this->input->post("sungaidaerah"),
+      'sg_noshet'=>  $this->input->post("sungainoshet"),
+      'sg_norujukan'=>  $this->input->post("sungairujukan")
+    );
+
+     return $this->db->insert('jps_sungai',$data);
   }
 
 }

@@ -11,6 +11,9 @@ $tarikhtamatcacat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhtamattanggu
 $namajurutera = strtoupper($get_detail[0]->mrk_pegawaipenguasa);
 $jawatanjurutera = strtoupper($get_detail[0]->mrk_jawatanpp);
 
+$slogan = strtoupper($get_slogan[0]->set_slogan);
+$cogan = strtoupper($get_slogan[0]->cogankata);
+
 // initiate FPDI
 $pdf = new Fpdi();
 // add a page
@@ -50,11 +53,41 @@ $pdf->SetXY(23, 252);
 $pdf->Write(0,"$jawatanjurutera",0,1,'C');
 
 
+$pdf->SetFont('Times','B',12);
+$pdf->SetXY(24, 216);
+$pdf->Write(0,$slogan,0,1,'C');
+
+$pdf->SetXY(102, 214);
+$pdf->SetFont('ZapfDingbats','', 11);
+$pdf->Cell(4, 3 ,'~');
+
+$pdf->SetXY(20, 214);
+$pdf->SetFont('ZapfDingbats','', 11);
+$pdf->Cell(4, 3 ,'}');
+
+
+$pdf->SetFont('Times','B',12);
+$pdf->SetXY(24, 222);
+$pdf->Write(0,$cogan,0,1,'C');
+
+$pdf->SetXY(109, 221);
+$pdf->SetFont('ZapfDingbats','', 11);
+$pdf->Cell(4, 3 ,'~');
+
+$pdf->SetXY(20, 221);
+$pdf->SetFont('ZapfDingbats','', 11);
+$pdf->Cell(4, 3 ,'}');
+
+
+
+
+
+
 
 
 
 $userdata = $this->session->userdata('name');
-$filename = "MRK02-".$userdata."(".$get_detail[0]->mrks_kodvot.").pdf";
+$filename = "Jaminan_Bank-".$userdata."(".$get_detail[0]->mrks_kodvot.").pdf";
 $pdf->Output('',$filename);
 
 

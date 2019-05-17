@@ -18,12 +18,13 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
 
         ?>
 
-        <div class="card" style="border-radius:10px;">
+    <div class="card" style="border-radius:10px;">
           <div class="card-body">
    
             <a href="<?php echo site_url('Setting_con/usersreg') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Daftar</a>
             <a href="<?php echo site_url('Setting_con') ?>" class="btn btn-dark mr-2 btn-rounded" role="button">Pegawai & Jurutera</a>
             <a href="<?php echo site_url('Setting_con/SaveSettingPassandSlogan') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Slogan</a>
+            <a href="<?php echo site_url('Setting_con/sungaireg') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Sungai</a>
             <p></p>
             <p></p>
             <h4 class="card-title">Konfigurasi maklumat sistem (USER)</h4>
@@ -33,10 +34,10 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                   <input class="form-control" name="peoplename" id="people" placeholder="Sila masukkan nama pegawai">
                 </div>
               </div>
-
+              <p>
               <div class="row">
                 <div class="col-sm-12">
-                  <table class="table table-striped" style="margin-top: 20px;margin-bottom: 20px;undefined;table-layout: fixed; width: 669px">
+                  <table class="table table-striped" style="margin-top: 20px;margin-bottom: 20px;undefined;table-layout: fixed; width: 669px;">
                   <colgroup>
                   <col style="width: 48px">
                   <col style="width: 500px">
@@ -61,6 +62,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                   </table>
                 </div>
               </div>
+              <p>
               <div class="row">
                 <div class="col-sm-3">
                       <button type="submit" name="submit" class="btn btn-primary mr-2 btn-rounded">Save</button>

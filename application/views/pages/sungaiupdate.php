@@ -8,26 +8,27 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
     <div class="col-12 grid-margin">
 
 
-      <?php echo form_open('setting_con/usersreg'); ?>
+      <?php echo form_open('setting_con/sungaiupdate'); ?>
       <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
     
-          <a href="<?php echo site_url('Setting_con/usersreg') ?>" class="btn btn-dark mr-2 btn-rounded" role="button">Daftar</a>
+          <a href="<?php echo site_url('Setting_con/usersreg') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Daftar</a>
           <a href="<?php echo site_url('Setting_con') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Pegawai & Jurutera</a>
           <a href="<?php echo site_url('Setting_con/SaveSettingPassandSlogan') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Slogan</a>
-          <a href="<?php echo site_url('Setting_con/sungaireg') ?>" class="btn btn-primary mr-2 btn-rounded" role="button">Sungai</a>
+          <a href="<?php echo site_url('Setting_con/sungaireg') ?>" class="btn btn-dark mr-2 btn-rounded" role="button">Sungai</a>
           <p></p>
           <p></p>
-          <h4 class="card-title">Daftar Pengguna</h4>
-          <a href="<?php echo site_url('Setting_con/senarai_nama_pengguna') ?>" class="btn btn-info mr-2 btn-rounded" role="button">Senarai Nama Pengguna</a>
+          <h4 class="card-title">Daftar Sungai</h4>
+          <a href="<?php echo site_url('Setting_con/senarai_sungai') ?>" class="btn btn-info mr-2 btn-rounded" role="button">Senarai Sungai</a>
           <P>
             <p>
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group row">
-                  <div class="col-sm-6">
-                    <label>Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama">
+                  <div class="col-sm-4">
+                    <label>Sungai (Pastikan ia unique)</label>
+                    <input type="hidden" name="hiddenid" value="<?php echo $get_sungai[0]->sg_id ?>">
+                    <input type="text" class="form-control" value="<?php echo $get_sungai[0]->sg_name ?>" id="nama" name="sungainama">
                   </div>
                 </div>
               </div>
@@ -36,22 +37,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
               <div class="col-md-12">
                 <div class="form-group row">
                   <div class="col-sm-4">
-                    <label>Jawatan</label>
-                    <select type="text" class="form-control" id="jawatan" name="jawatan">
-                      <option value=""></option>
-                      <option value="Jurutera Awan">Jurutera Awam</option>
-                      <option value="Jurutera">Jurutera</option>
-                      <option value="Penolong Jurutera">Penolong Jurutera</option>
-                      <option value="Pegawai">Pegawai</option>
-                      <option value="Penolong Pegawai">Penolong Pegawai</option>
-                      <option value="Pembantu Tadbir">Pembantu Tadbir</option>
-                      <option value="Pembantu Tadbir Kewangan">Pembantu Tadbir Kewangan</option>
-                      <option value="Pembantu Awam">Pembantu Awam</option>
-                      <option value="Pekerja AM">Pekerja AM</option>
-                   
-                   
-                    </select>
-                  
+                    <label>Sungai Cabang</label>
+                    <input type="text" class="form-control" value="<?php echo $get_sungai[0]->sg_cabang ?>" id="nama" name="sungaicabang">  
                   </div>
                 </div>
               </div>
@@ -60,8 +47,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
               <div class="col-md-12">
                 <div class="form-group row">
                   <div class="col-sm-4">
-                    <label>Email</label>
-                    <input type="email" class="form-control" name="email">
+                    <label>Sungai Panjang</label>
+                    <input type="text" class="form-control" value="<?php echo $get_sungai[0]->sg_panjang ?>" name="sungaipanjang">
                   </div>
                 </div>
               </div>
@@ -70,8 +57,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
               <div class="col-md-12">
                 <div class="form-group row">
                   <div class="col-sm-4">
-                    <label>Kata Laluan</label>
-                    <input type="password" class="form-control" name="pass">
+                    <label>Sungai Daerah</label>
+                    <input type="text" class="form-control" value="<?php echo $get_sungai[0]->sg_daerah ?>" name="sungaidaerah">
                   </div>
                 </div>
               </div>
@@ -80,8 +67,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
               <div class="col-md-12">
                 <div class="form-group row">
                   <div class="col-sm-4">
-                    <label>Pengesahan Kata Laluan</label>
-                    <input type="password" class="form-control" name="pass">
+                    <label>Sungai NoShet</label>
+                    <input type="text" class="form-control" value="<?php echo $get_sungai[0]->sg_noshet ?>" name="sungainoshet">
                   </div>
                 </div>
               </div>
@@ -91,13 +78,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
               <div class="col-md-12">
                 <div class="form-group row">
                   <div class="col-sm-4">
-                    <label>User Role</label>
-                    <select type="text" class="form-control" id="roles" name="roles">
-                      <option value=""></option>
-                      <option value="admin">Admin</option>
-                      <option value="user">User</option>
-                      <option value="clerk">Clerk</option>
-                    </select>
+                    <label>Sungai No Rujukan</label>
+                    <input type="text" class="form-control" value="<?php echo $get_sungai[0]->sg_norujukan ?>" name="sungairujukan">
                   </div>
                 </div>
               </div>

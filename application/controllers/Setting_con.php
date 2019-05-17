@@ -70,26 +70,22 @@ class Setting_con extends CI_Controller{
 
   public function SaveSettingPassandSlogan()
   {
-    //form validation function
-    $this->load->database();
-    $this->form_validation->set_rules('slogan', 'Sila masukkan sekurang-kurangnya satu slogan', 'required');
-    //$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
-    $data['get_slogan']=$this->Setting_model->get_dataslogan();
-    if($this->form_validation->run() == FALSE)
-
-    {
+    
+     $data['get_slogan']=$this->Setting_model->get_dataslogan();
+  
       $this->load->view('template/header');
       $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $this->load->view('pages/Setting2',$data);
       $this->load->view('template/footer');
-    }
-    else
-    {
-      $this->Setting_model->setslogan();//load from model and call last id
-      redirect(base_url('Setting_con/SaveSettingPassandSlogan')); //redirect last id to another step
+  
+  }
 
-    }
+  public function updatecogan()
+  {
+    $id = $this->input->post("hiddenid");
+    $this->Setting_model->setslogan($id);//load from model and call last id
+    redirect(base_url('Setting_con/SaveSettingPassandSlogan')); //redirect last id to another step
 
   }
 
@@ -168,9 +164,44 @@ class Setting_con extends CI_Controller{
     else
     {
       $this->Setting_model->get_register();
-      redirect('mydashboard');
+      redirect('Setting_con/senarai_nama_pengguna');
     }
 
+  }
+
+
+  public function userupdate($value)
+  {
+    $this->load->database();
+    $check = $this->input->post("check");
+
+    if($check==1)
+    {
+      
+    }
+    else{
+       $this->form_validation->set_rules('email', 'Email','required|is_unique[jps_users.jps_email]');
+    }
+
+    $this->form_validation->set_rules('nama', 'Nama diperlukan', 'required');
+
+    if($this->form_validation->run() === FALSE)
+    {
+
+        $data['get_user']=$this->Setting_model->get_userdatasettingbyid($value);
+        $this->load->view('template/header');
+        $this->load->view('template/nav');
+        $this->load->view('template/sidebar');
+        $this->load->view('pages/registerupdate',$data);
+        $this->load->view('template/footer');
+     
+   
+    }
+    else
+    {
+      $this->Setting_model->get_registerupdate($value);
+      redirect('Setting_con/senarai_nama_pengguna');
+    }
   }
 
   public function senarai_nama_pengguna()
@@ -262,6 +293,72 @@ class Setting_con extends CI_Controller{
   {
       $this->Setting_model->update_password($this->session->userdata('userid'));
       $this->logout();
+  }
+
+
+  public function sungaireg()
+  {
+    $this->load->database();
+    $this->form_validation->set_rules('sungainama', 'Sungai','required|is_unique[jps_users.jps_email]');
+    if($this->form_validation->run() === FALSE)
+    {
+
+        $data['get_sungai']=$this->Setting_model->get_userdatasetting();
+        $this->load->view('template/header');
+        $this->load->view('template/nav');
+        $this->load->view('template/sidebar');
+        $this->load->view('pages/registersungai',$data);
+        $this->load->view('template/footer');
+     
+   
+    }
+    else
+    {
+      $this->Setting_model->get_registersungai();
+      redirect('Setting_con/sungaireg');
+    }
+  }
+
+
+  public function senarai_sungai()
+  {
+      $data['get_sungai']=$this->Setting_model->getsungai();
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/sungailist',$data);
+      $this->load->view('template/footer');
+  }
+
+  public function delsungai($id)
+  {
+    $this->load->helper('url');
+    //$this->db->
+    $this->db->where('sg_id', $id);
+    $this->db->delete('jps_sungai');
+
+    redirect('Setting_con/senarai_sungai');
+  }
+
+  public function sungaiupdate($value)
+  {
+    $this->load->database();
+    $check = $this->input->post("hiddenid");
+
+    if($check)
+    {
+     $this->Setting_model->updatesungai($check);
+     redirect('Setting_con/senarai_sungai');
+    }
+    else
+    {
+        $data['get_sungai']=$this->Setting_model->getsungaibyid($value);
+        $this->load->view('template/header');
+        $this->load->view('template/nav');
+        $this->load->view('template/sidebar');
+        $this->load->view('pages/sungaiupdate',$data);
+        $this->load->view('template/footer');
+    }
   }
 
 }

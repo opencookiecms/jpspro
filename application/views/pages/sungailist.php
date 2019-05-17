@@ -19,7 +19,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                 <div class="card-body">
                   <h4 class="card-title">Senarai Nama Pengguna</h4>
 
-                  <a href="<?php echo site_url('setting_con/usersreg')?>" class="btn btn-primary mr-2 btn-rounded" role="button">Kembali</a>
+                  <a href="<?php echo site_url('setting_con/sungaireg')?>" class="btn btn-primary mr-2 btn-rounded" role="button">Kembali</a>
                   <p>
                   <div class="table-responsive dataTables_wrapper">
                     <table id="example" class="display table table-striped">
@@ -29,16 +29,16 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                             Bil
                           </th>
                           <th>
-                            Nama
+                            Sungai
                           </th>
                           <th>
-                           Email
+                            Cabang
                           </th>
                           <th>
-                            Jawatan
+                            Panjang
                           </th>
                           <th>
-                            Roles
+                            Daerah
                           </th>
                           <th>
                             Tindakan
@@ -47,18 +47,18 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                       </thead>
                       <tbody>
                         <?php $bil=0;?>
-                        <?php foreach ($get_user as $row): $bil++?>
+                        <?php foreach ($get_sungai as $row): $bil++?>
 
                          <tr>
                           <td class="py-1"><?php echo $bil?></td>
-                          <td style="white-space: normal !important;word-wrap: break-word;min-width: 250px;max-width: 250px;"><?php echo $row->jps_name?></td>
-                          <td class="py-1"><?php echo $row->jps_email?></td>
-                          <td class="py-1"><?php echo $row->jps_position?></td>
-                          <td class="py-1"><?php echo $row->jps_userroles?></td>
+                          <td style="white-space: normal !important;word-wrap: break-word;min-width: 250px;max-width: 250px;"><?php echo $row->sg_name?></td>
+                          <td class="py-1"><?php echo $row->sg_cabang?></td>
+                          <td class="py-1"><?php echo $row->sg_panjang?></td>
+                          <td class="py-1"><?php echo $row->sg_daerah?></td>
                         
                           <td class="py-1">
-                          <a href="<?php echo site_url("setting_con/deluser/".$row->user_id)?>" class="btn btn-danger" role="button" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Delete Data?')"><i class="menu-icon mdi mdi-close-circle-outline"></i>Delete</a>
-                          <a href="<?php echo site_url("setting_con/userupdate/".$row->user_id)?>" class="btn btn-dark" role="button" data-toggle="tooltip" data-placement="top" title="Update" onclick="return confirm('Update user data?')"><i class="menu-icon mdi mdi-cube-unfolded"></i>Kemaskini</a>
+                          <a href="<?php echo site_url("setting_con/delsungai/".$row->sg_id)?>" class="btn btn-danger" role="button" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Delete Data?')"><i class="menu-icon mdi mdi-close-circle-outline"></i>Delete</a>
+                          <a href="<?php echo site_url("setting_con/sungaiupdate/".$row->sg_id)?>" class="btn btn-dark" role="button" data-toggle="tooltip" data-placement="top" title="Update" onclick="return confirm('Update user data?')"><i class="menu-icon mdi mdi-cube-unfolded"></i>Kemaskini</a>
     
                           
                         </td>

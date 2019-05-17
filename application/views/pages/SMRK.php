@@ -38,7 +38,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Rujukan Tuan</label>
                   <div class="col-sm-7">
-                  <input type="text" class="form-control ts" style="font-weight:bold;" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Bank" value="<?php echo $get_detail[0]->s_rujuktuan?>">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="rujuktuan" name="rujuktuan" placeholder="Rujukan Tuan" value="<?php echo $get_detail[0]->s_rujuktuan?>">
                   </div>
                 </div>
               </div>
@@ -178,8 +178,8 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           Lihat / Cetak
         </a>
         <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="<?php echo site_url('Report/Report_PKK01/'.$get_detail[0]->projek_id)?>">Surat MRK 01</a>
-        <a class="dropdown-item"  href="<?php echo site_url('Report/Report_PKK02/'.$get_detail[0]->projek_id)?>">Surat MRK 02</a>
+        <a class="dropdown-item" target="_blank" href="<?php echo site_url('Report/Report_PKK01/'.$get_detail[0]->projek_id)?>">Surat MRK 01</a>
+        <a class="dropdown-item" target="_blank"  href="<?php echo site_url('Report/Report_PKK02/'.$get_detail[0]->projek_id)?>">Surat MRK 02</a>
         </div>
       </li>
     
