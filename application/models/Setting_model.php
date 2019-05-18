@@ -154,10 +154,12 @@ class Setting_model extends CI_Model{
     $email = $this->input->post('email');
     $password = $this->input->post('pass');
     $roles = $this->input->post('roles');
+	$userpic = "default.png";
 
     $data = array(
       'jps_name' => $nama,
       'jps_email'=> $email,
+	  'user_pic' =>$userpic,
       'jps_password'=> md5($password),
       'jps_position'=> $jawatan,
       'jps_userroles'=>$roles
