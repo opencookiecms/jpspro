@@ -64,7 +64,7 @@
                     </div>
                   </div>
                   <p class="text-muted mt-4 mb-0">
-                    <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('surat/Surat_WJP/'.$get_detail[0]->dp_id) ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+                    <i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i><a href="<?php echo site_url('surat/setspjwp/'.$get_detail[0]->dp_id) ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
                   </p>
                 </div>
               </div>

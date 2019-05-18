@@ -21,7 +21,7 @@ $pdf = new Fpdi();
 // add a page❝ ❞
 $pdf->AddPage();
 // set the source file❞
-$pdf->setSourceFile("assets/pdf/skhas01.pdf");
+$pdf->setSourceFile("assets/pdf/skhas02.pdf");
 // import page 1
 $tplIdx = $pdf->importPage(1);
 // use the imported page and place it at position 10,10 with a width of 100 mm
@@ -37,73 +37,63 @@ $pdf->Write(0,$nosebutharga,0,1,'C');
 // now write some text above the imported page
 $pdf->SetFont('Times','B',12);
 
-$pdf->SetXY(54, 136);
+$pdf->SetXY(54, 145);
 $pdf->Write(0,"$gred",0,1,'C');
 
-$pdf->SetXY(90, 136);
+$pdf->SetXY(100, 145);
 $pdf->Write(0,"$kategori",0,1,'C');
 
-$pdf->SetXY(135, 136);
+$pdf->SetXY(156, 145);
 $pdf->Write(0,"$khusus",0,1,'C');
 
 
 $pdf->SetFont('Times','',11);
-$pdf->SetXY(63, 158);
+$pdf->SetXY(63, 167);
 $pdf->Write(0,"$namakontraktor",0,1,'C');
 
-$pdf->SetXY(63, 165);
+$pdf->SetXY(63, 174);
 $pdf->Write(0,$nosebutharga,0,1,'C');
 
-$pdf->SetXY(63, 169);
+$pdf->SetXY(63, 179);
 $pdf->MultiCell(110,5,$tajuk,0,'J');
 
 
 
 $pdf->SetFont('Times','B',11);
 
-$pdf->SetXY(22, 246);
+$pdf->SetXY(22, 261);
 $pdf->Write(0,"$pegawai",0,1,'C');
-$pdf->SetXY(22, 250);
+$pdf->SetXY(22, 265);
 $pdf->Write(0,"$jawatan",0,1,'C');
 
-$strcogan = strlen($cogan);
-$strslogan = strlen($slogan);
 
 
-$pdf->SetXY(20, 215);
+$pdf->SetXY(20, 230);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,"}");
 
 
 $pdf->SetFont('Times','B',12);
-$pdf->SetXY(23, 216);
+$pdf->SetXY(23, 232);
 $pdf->Write(0,$slogan,0,1,'C');
 
-$pdf->SetXY(91, 214);
+$pdf->SetXY(91, 230);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'~');
 
 
-//slogan 25 + 20 = 45 = 57
-//cogan 49 + 20 = 69 = 100
 
-//logic defaul position is 20
-//actual exxample cogan = 169 - 20 = 149
-//actual example slogan 91 - 20 = 80
-
-
-
-$pdf->SetXY(20, 221);
+$pdf->SetXY(20, 238);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'}');
 
 
 
 $pdf->SetFont('Times','B',12);
-$pdf->SetXY(24, 222);
+$pdf->SetXY(24, 240);
 $pdf->Write(0,$cogan,0,1,'C');
 
-$pdf->SetXY(169, 220);
+$pdf->SetXY(169, 238);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'~');
 

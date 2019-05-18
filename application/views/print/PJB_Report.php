@@ -57,7 +57,7 @@ $pdf->SetFont('Times','B',12);
 $pdf->SetXY(24, 216);
 $pdf->Write(0,$slogan,0,1,'C');
 
-$pdf->SetXY(102, 214);
+$pdf->SetXY(92, 214);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'~');
 
@@ -70,7 +70,7 @@ $pdf->SetFont('Times','B',12);
 $pdf->SetXY(24, 222);
 $pdf->Write(0,$cogan,0,1,'C');
 
-$pdf->SetXY(109, 221);
+$pdf->SetXY(169, 220);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'~');
 

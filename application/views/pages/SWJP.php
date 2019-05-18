@@ -25,10 +25,10 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           <?php
               $pkkNo = $get_detail[0]->swjp_kodvot;
                 if($pkkNo == null){
-                    echo form_open('Surat/Surat_WJP');
+                    echo form_open('surat/setspjwp/'.$get_detail[0]->projek_id);
                 }
                 else {
-                  echo form_open('Surat/Surat_WJP_Update');
+                  echo form_open('Surat/Surat_WJP_Update/'.$get_detail[0]->projek_id);
                 }
           ?>
         <div class="card" style="border-radius:10px;">
@@ -60,11 +60,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Rujukan Tuan</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control ts" style="font-weight:bold;" id="rujukkami" name="rujukkami" placeholder="Rujukan Kami" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                    <input type="text" class="form-control ts" style="font-weight:bold;" id="rujukkami" name="rujuktuan" placeholder="Rujukan Kami" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                     <input type="hidden" name="noinden" value="<?php echo $get_detail[0]->mrk_noinden?>" readonly>
                     <input type="hidden" name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>" readonly>
-                    <input type="hidden" name="hiddenid"value="<?php echo $get_detail[0]->mrksatuid?>" readonly>
-                    <input type="hidden" name="hiddenids"value="<?php echo $get_detail[0]->projek_id?>" readonly>
+                    <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>" readonly>
+                    <input type="hidden" name="hiddenids" value="<?php echo $get_detail[0]->projek_id?>" readonly>
                   </div>
                 </div>
               </div>
@@ -74,7 +74,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Rujukan Kami</label>
                   <div class="col-sm-6">
-                  <input type="text" class="form-control ts" style="font-weight:bold;" id="nokon" name="nokon" placeholder="No Kontraktor" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
+                  <input type="text" class="form-control ts" style="font-weight:bold;"  name="rujukankami" placeholder="No Kontraktor" readonly value="<?php echo $get_detail[0]->df_nosebutharga?>">
                   </div>
                 </div>
               </div>
@@ -85,7 +85,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Nama Kontraktor</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control ts" style="font-weight:bold;" id="namakon" name="namakon" placeholder="Nama Kontraktor" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
+                    <input type="text" class="form-control ts" style="font-weight:bold;" name="namakon" placeholder="Nama Kontraktor" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
                   </div>
                 </div>
               </div>
@@ -96,7 +96,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">No. Kontraktor</label>
                   <div class="col-sm-6">
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="nokon" name="nokon" placeholder="No Kontraktor" readonly value="<?php echo $get_detail[0]->mrk_nopkk?>">
+                      <input type="text" class="form-control ts" style="font-weight:bold;"  name="nokon" placeholder="No Kontraktor" readonly value="<?php echo $get_detail[0]->mrk_nopkk?>">
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Melalui</label>
                   <div class="col-sm-6">
-                  <input type="text" class="form-control ts" style="font-weight:bold;" id="melalui" name="melalui" placeholder="Melalui" value="<?php echo $get_detail[0]->swjp_melalui?>">
+                  <input type="text" class="form-control ts" style="font-weight:bold;"  name="melalui" placeholder="Melalui" value="<?php echo $get_detail[0]->swjp_melalui?>">
                   </div>
                 </div>
               </div>
@@ -118,7 +118,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Alamat</label>
                   <div class="col-sm-6">
-                  <textarea rows="5" type="text" class="form-control ts" style="font-weight:bold;" id="alamat1" name="alamat1" placeholder="Alamat"><?php echo $get_detail[0]->swjp_alamatlalu?></textarea>
+                  <textarea rows="5" type="text" class="form-control ts" style="font-weight:bold;"  name="alamat1" placeholder="Alamat"><?php echo $get_detail[0]->swjp_alamatlalu?></textarea>
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control ts" style="font-weight:bold;"id="wangjamin" name="wangjaminan" placeholder="RM" value="<?php echo $get_detail[0]->swjp_wangjamin?>">
+                      <input type="text" class="form-control ts" style="font-weight:bold;"  name="wangjaminan" placeholder="RM" value="<?php echo number_format($get_detail[0]->swjp_wangjamin,2)?>">
                     </div>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label">Pengawai Penguasa</label>
                   <div class="col-sm-3">
-                      <select class="form-control ts" style="font-weight:bold;" id="pegawaikuasa" name="pegawaikuasa" value="">
+                      <select class="form-control ts" style="font-weight:bold;"  name="pegawaikuasa" value="">
                           <option value="<?php echo $this->session->userdata("name")?>"><?php echo $this->session->userdata("name")?></option>
                        <?php foreach($get_user as $users){ ?>
                           <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
@@ -154,7 +154,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   </div>
                   <label class="col-sm-1 col-form-label">Jawatan</label>
                   <div class="col-sm-3">
-                  <select class="form-control ts" style="font-weight:bold;" id="jawatan" name="jawatan" placeholder="Jawatan">
+                  <select class="form-control ts" style="font-weight:bold;"  name="jawatan" placeholder="Jawatan">
                         <option value="<?php echo $this->session->userdata("jawatan")?>"><?php echo $this->session->userdata("jawatan")?></option>
                            <option value="Jurutera Awan">Jurutera Awam</option>
                       <option value="Jurutera">Jurutera</option>
@@ -191,16 +191,10 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown" >
     <ul class="navbar-nav" >
-        <li class="nav-item dropdown">
-        <a class="dropdown-toggle btn btn-dark mr-2 btn-rounded" style="margin-right:10px;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Lihat / Cetak
-        </a>
-        <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Surat  01</a>
-        <a class="dropdown-item"  href="#">Surat  02</a>
-        </div>
+     
+     <li class="nav-item">
+                    <a href="<?php echo site_url('Report/Report_Cover_PWJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-dark mr-2 btn-rounded" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Surat Khas">Lihat / Cetak</a>
       </li>
-    
       <li class="nav-item">
                     <a href="<?php echo site_url('surat/Surat_Khas/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Surat Khas">Surat Khas</a>
       </li>

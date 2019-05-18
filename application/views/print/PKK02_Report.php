@@ -58,10 +58,10 @@ $pdf->Write(0,"$jawatan",0,1,'C');
 
 
 $pdf->SetFont('Times','B',12);
-$pdf->SetXY(30, 204);
+$pdf->SetXY(29, 204);
 $pdf->Write(0,$slogan,0,1,'C');
 
-$pdf->SetXY(108, 202);
+$pdf->SetXY(98, 202);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'~');
 
@@ -74,7 +74,7 @@ $pdf->SetFont('Times','B',12);
 $pdf->SetXY(30, 212);
 $pdf->Write(0,$cogan,0,1,'C');
 
-$pdf->SetXY(115, 210);
+$pdf->SetXY(175, 210);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'~');
 

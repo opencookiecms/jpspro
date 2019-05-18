@@ -144,7 +144,7 @@ class Rekod extends CI_Controller
 
   public function surat_pelepasan_wjp()
   {
-      $data['url'] = "surat/Surat_WJP/";
+      $data['url'] = "surat/setspjwp/";
       $data['get_projek'] = $this->Record_model->getsuratwjp();
       $this->load->view('template/header');
       $this->load->view('template/nav');

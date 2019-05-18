@@ -68,7 +68,7 @@ class Surat_model extends CI_Model{
   	$swjp_rujuktuan = $this->input->post('rujuktuan');
   	$swjp_alamat = $this->input->post('alamat');
   	$swjp_melalui = $this->input->post('melalui');
-  	$swjp_wangjamin = $this->input->post('wangjamin');
+  	$swjp_wangjamin = $this->input->post('wangjaminan');
   	$swjp_alamatlalu = $this->input->post('alamat1');
   	$swjp_pegawaikuasa = $this->input->post('pegawaikuasa');
   	$swjp_jawatanpp = $this->input->post('jawatan');
@@ -228,7 +228,7 @@ class Surat_model extends CI_Model{
     $swjp_rujuktuan = $this->input->post('rujuktuan');
     $swjp_alamat = $this->input->post('alamat');
     $swjp_melalui = $this->input->post('melalui');
-    $swjp_wangjamin = $this->input->post('wangjamin');
+    $swjp_wangjamin = $this->input->post('wangjaminan');
     $swjp_alamatlalu = $this->input->post('alamat1');
     $swjp_pegawaikuasa = $this->input->post('pegawaikuasa');
     $swjp_jawatanpp = $this->input->post('jawatan');

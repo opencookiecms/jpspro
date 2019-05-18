@@ -339,7 +339,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <label class="tl">Kod Vot</label>
+                      <label class="tl">Kod Vot (Tanpa Space)</label>
                         <input type="text" class="form-control"  name="vot" placeholder="Vot" value="<?php echo $get_detail[0]->df_kodvot?>">
                     </div>
                   </div>

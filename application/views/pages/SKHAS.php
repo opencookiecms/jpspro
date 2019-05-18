@@ -162,8 +162,8 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           Lihat / Cetak
         </a>
         <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="<?php echo site_url('report/Report_Khas01')?>">Surat Khas 01</a>
-        <a class="dropdown-item"  href="<?php echo site_url('report/report_khas02')?>">Surat Khas 02</a>
+        <a class="dropdown-item" target="_blank" href="<?php echo site_url('report/Report_Khas01/'.$get_detail[0]->projek_id)?>">Surat Khas 01</a>
+        <a class="dropdown-item" target="_blank" href="<?php echo site_url('report/report_khas02/'.$get_detail[0]->projek_id)?>">Surat Khas 02</a>
         </div>
       </li>
     
@@ -171,7 +171,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <a href="<?php echo site_url('surat/Surat_MRK/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom"  title="Surat Maklumat Rekod Kerja">Surat MRK</a>
       </li>
       <li class="nav-item" style="margin-left:5px;" >
-          <a href="<?php echo site_url('surat/Surat_WJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Surat Pelepas WJP">Surat Pelepasan WJP</a>
+          <a href="<?php echo site_url('surat/setspjwp/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Surat Pelepas WJP">Surat Pelepasan WJP</a>
       </li>
 
           <li class="nav-item" style="margin-left:5px;">

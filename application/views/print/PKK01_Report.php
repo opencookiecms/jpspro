@@ -48,26 +48,30 @@ $pdf->SetXY(28, 232);
 $pdf->Write(0,"$jawatan",0,1,'C');
 
 
-$pdf->SetFont('Times','B',12);
-$pdf->SetXY(30, 198);
-$pdf->Write(0,$slogan,0,1,'C');
 
-$pdf->SetXY(108, 196);
+
+$pdf->SetXY(98, 196);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'~');
+
+$pdf->SetFont('Times','B',12);
+$pdf->SetXY(29, 198);
+$pdf->Write(0,$slogan,0,1,'C');
 
 $pdf->SetXY(26, 196);
 $pdf->SetFont('ZapfDingbats','', 11);
 $pdf->Cell(4, 3 ,'}');
 
 
+
+
+$pdf->SetXY(175, 204);
+$pdf->SetFont('ZapfDingbats','', 11);
+$pdf->Cell(4, 3 ,'~');
+
 $pdf->SetFont('Times','B',12);
 $pdf->SetXY(30, 205);
 $pdf->Write(0,$cogan,0,1,'C');
-
-$pdf->SetXY(115, 203);
-$pdf->SetFont('ZapfDingbats','', 11);
-$pdf->Cell(4, 3 ,'~');
 
 $pdf->SetXY(26, 204);
 $pdf->SetFont('ZapfDingbats','', 11);
