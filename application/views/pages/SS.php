@@ -39,7 +39,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb1; if($check==1){$ch1='checked';}else{$ch1='null';}?>
-                      <input type="checkbox" class="form-check-input" style="border:blue;" name="chk1" value="1" <?php echo $ch1?>>Surat Tuntutan
+                      <input type="checkbox" class="form-check-input" style="border:blue;" name="chk1" value="1" <?php echo $ch1?>>I. Inden/Nota Minta
                     </label>
                   </div>
 
@@ -50,7 +50,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb2; if($check==1){$ch2='checked';}else{$ch2='null';}?>
-                      <input type="checkbox" class="form-check-input" name="chk2" value="1" <?php echo $ch2 ?>>Keputusan Panel
+                      <input type="checkbox" class="form-check-input" name="chk2" value="1" <?php echo $ch2 ?>>II. Laporan Siap Kerja
                     </label>
                   </div>
                 </div>
@@ -60,7 +60,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
                         <?php $check=$get_detail[0]->cb3; if($check==1){$ch3='checked';}else{$ch3='null';}?>
-                        <input type="checkbox" class="form-check-input"  name="chk3" value="1" <?php echo $ch3?>>Surat Tawaran Kerja
+                        <input type="checkbox" class="form-check-input"  name="chk3" value="1" <?php echo $ch3?>>III. Tuntutan Invois
                         </label>
                    </div>
                 </div>
@@ -73,7 +73,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb4; if($check==1){$ch4='checked';}else{$ch4='null';}?>
-                      <input type="checkbox" class="form-check-input" name="chk4" value="1" <?php echo $ch4?>>Inden / Nota Minta
+                      <input type="checkbox" class="form-check-input" name="chk4" value="1" <?php echo $ch4?>>IV .Sebutharga/Lantikan Terus
                     </label>
                   </div>
 
@@ -84,7 +84,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb5; if($check==1){$ch5='checked';}else{$ch5='null';}?>
-                      <input type="checkbox" class="form-check-input" name="chk5" value="1" <?php echo $ch5?>>Perakuan Siap Kerja
+                      <input type="checkbox" class="form-check-input" name="chk5" value="1" <?php echo $ch5?>>V.Penerimaan Tawaran
                     </label>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
                           <?php $check=$get_detail[0]->cb6; if($check==1){$ch6='checked';}else{$ch6='null';}?>
-                          <input type="checkbox" class="form-check-input" name="chk6" value="1" <?php echo $ch6?>>Detail Butiran Tawaran Terus
+                          <input type="checkbox" class="form-check-input" name="chk6" value="1" <?php echo $ch6?>>VI. Jadual Sebutarga
                         </label>
                    </div>
                 </div>
@@ -107,7 +107,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb7; if($check==1){$ch7='checked';}else{$ch7='null';}?>
-                      <input type="checkbox" class="form-check-input" name="chk7" value="1" <?php echo $ch7?>>Laporan Siap Kerja
+                      <input type="checkbox" class="form-check-input" name="chk7" value="1" <?php echo $ch7?>>VII. Kertas Taklimat Sebutharga
                     </label>
                   </div>
 
@@ -118,7 +118,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb8; if($check==1){$ch8='checked';}else{$ch8='null';}?>
-                      <input type="checkbox" class="form-check-input" name="chk8" value="1" <?php echo $ch8?>>Salinan Penyata Bank
+                      <input type="checkbox" class="form-check-input" name="chk8" value="1" <?php echo $ch8?>>VIII. Dokumen Sebutharga
                     </label>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
                           <?php $check=$get_detail[0]->cb9; if($check==1){$ch9='checked';}else{$ch9='null';}?>
-                          <input type="checkbox" class="form-check-input" name="chk9" value="1" <?php echo $ch9?>>Perakuan Perubahan Kerja
+                          <input type="checkbox" class="form-check-input" name="chk9" value="1" <?php echo $ch9?>>IX. Permohonan Lanjut Masa
                         </label>
                    </div>
                 </div>
@@ -142,7 +142,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb10; if($check==1){$ch10='checked';}else{$ch10='null';}?>
-                      <input type="checkbox" class="form-check-input" name="chk10" value="1" <?php echo $ch10;?>>Salinan Sijil PKK
+                      <input type="checkbox" class="form-check-input" name="chk10" value="1" <?php echo $ch10;?>>X. Salinan Akaun Bank
                     </label>
                   </div>
 
@@ -153,7 +153,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb11; if($check==1){$ch11='checked';}else{$ch11='null';}?>
-                      <input type="checkbox" class="form-check-input" name="chk11" value="1" <?php echo $ch11?>>Surat Akaun Sumpah
+                      <input type="checkbox" class="form-check-input" name="chk11" value="1" <?php echo $ch11?>>XI. CIDB Malaysia
                     </label>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="form-radio form-radio-flat">
                         <label class="form-check-label">
                           <?php $check=$get_detail[0]->cb12; if($check==1){$ch12='checked';}else{$ch12='null';}?>
-                          <input type="checkbox" class="form-check-input" name="chk12" value="1" <?php echo $ch12?>>Borang MRK03
+                          <input type="checkbox" class="form-check-input" name="chk12" value="1" <?php echo $ch12?>>XII. PKK
                         </label>
                    </div>
                 </div>
@@ -177,7 +177,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb13; if($check==1){$ch13='checked';}else{$ch13='null';}?>
-                      <input type="checkbox" class="form-check-input"  name="chk13" value="1" <?php echo $ch13?>>Salinan Sijil CIDB
+                      <input type="checkbox" class="form-check-input"  name="chk13" value="1" <?php echo $ch13?>>XIII. SSM
                     </label>
                   </div>
 
@@ -188,7 +188,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb14; if($check==1){$ch14='checked';}else{$ch14='null';}?>
-                      <input type="checkbox" class="form-check-input"  name="chk14" value="1" <?php echo $ch14?>>Gambar
+                      <input type="checkbox" class="form-check-input"  name="chk14" value="1" <?php echo $ch14?>>XIV Kementerian Kewangan
                     </label>
                   </div>
                 </div>
@@ -196,56 +196,37 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
             </div>
             <p></p>
             <p></p>
-            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Bon Perlaksaanan</h4>
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Insurans</h4>
             <div class="row">
               <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
                       <?php $check=$get_detail[0]->cb15; if($check==1){$ch15='checked';}else{$ch15='null';}?>
-                      <input type="checkbox" class="form-check-input"  name="chk15" value="1" <?php echo $ch15?>>Jaminan Bank/Insurans
+                      <input type="checkbox" class="form-check-input"  name="chk15" value="1" <?php echo $ch15?>> Insuran: Perkeso/Workmen/Public Liability/Kerja
                     </label>
                   </div>
 
                 </div>
               </div>
-              <div class="col-md-3 tls">
-                <div class="form-group">
-                  <div class="form-radio form-radio-flat">
-                    <label class="form-check-label">
-                      <?php $check=$get_detail[0]->cb16; if($check==1){$ch16='checked';}else{$ch16='null';}?>
-                    <input type="checkbox" class="form-check-input"  name="chk16" value="1" <?php echo $ch16?>>Wang Jaminan Perlaksanaan
-                    </label>
-                  </div>
-                </div>
-              </div>
+             
             </div>
 
             <p></p>
             <p></p>
-            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Polisi Insurans</h4>
+            <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Gambar</h4>
             <div class="row">
-              <div class="col-md-3 tls">
+        <div class="col-md-3 tls">
                 <div class="form-group">
                   <div class="form-radio form-radio-flat">
                     <label class="form-check-label">
-                      <?php $check=$get_detail[0]->cb17; if($check==1){$ch17='checked';}else{$ch17='null';}?>
-                      <input type="checkbox" class="form-check-input"  name="chk17" value="1" <?php echo $ch17?>>Public Liabiliti
-                    </label>
-                  </div>
-
-                </div>
-              </div>
-              <div class="col-md-4 tls">
-                <div class="form-group">
-                  <div class="form-radio form-radio-flat">
-                    <label class="form-check-label">
-                      <?php $check=$get_detail[0]->cb18; if($check==1){$ch18='checked';}else{$ch18='null';}?>
-                      <input type="checkbox" class="form-check-input"  name="chk18" value="1" <?php echo $ch18?>>Workman /Compasation/PERKESO
+                      <?php $check=$get_detail[0]->cb16; if($check==1){$ch16='checked';}else{$ch16='null';}?>
+                    <input type="checkbox" class="form-check-input"  name="chk16" value="1" <?php echo $ch16?>>Gambar
                     </label>
                   </div>
                 </div>
               </div>
+             
             </div>
 
             <div class="row">
