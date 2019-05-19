@@ -16,17 +16,17 @@ $kossebenar = number_format($get_detail[0]->lks_hargasebenar,2);
 $tajuk = strtoupper($get_detail[0]->df_tajuk);
 
 $ladsehari = $get_detail[0]->mrk_ladsehari;
-$laddari = $get_detail[0]->mrk_laddari;
-$ladhingga = $get_detail[0]->mrk_ladsehingga;
+$laddari = date("d-m-Y",strtotime($get_detail[0]->mrk_laddari));
+$ladhingga = date("d-m-Y",strtotime($get_detail[0]->mrk_ladsehingga));
 
-$tarikhmula = $get_detail[0]->mrk_tarikhmulakon;
-$tarikhtamat = $get_detail[0]->mrk_tarikhjangkasiap;
-$tarikhlanjutmasa = $get_detail[0]->lsk_lanjutmasa;
-$tarikhsempurna = $get_detail[0]->lsk_tarikhkerjasiap;
+$tarikhmula = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhmulakon));
+$tarikhtamat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhjangkasiap));
+$tarikhlanjutmasa = date("d-m-Y",strtotime($get_detail[0]->lsk_lanjutmasa));
+$tarikhsempurna = date("d-m-Y",strtotime($get_detail[0]->lsk_tarikhkerjasiap));
 
-$pegawai = $get_detail[0]->mrk_pegawai;
-$jawatan = $get_detail[0]->mrk_jawatan;
-$tarikah = $get_detail[0]->tiga_tarikah;
+$pegawai = strtoupper($get_detail[0]->mrk_pegawai);
+$jawatan = strtoupper($get_detail[0]->mrk_jawatan);
+$tarikah = date("d-m-Y",strtotime($get_detail[0]->tiga_tarikah));
 $ulasan = $get_detail[0]->mrk_ulasan;
 
 // initiate FPDI
@@ -41,7 +41,7 @@ $tplIdx = $pdf->importPage(1);
 $pdf->useTemplate($tplIdx, 0, 0, 210);
 
 
-$pdf->SetFont('Times','',10);
+$pdf->SetFont('Times','',11);
 $pdf->SetTextColor('black');
 
 $pdf->SetXY(58,31);
@@ -82,7 +82,7 @@ $pdf->Write(0,$tarikhsempurna,0,1,'C');
 $pdf->SetXY(67, 106);
 $pdf->Write(0,$ladsehari,0,1,'C');
 
-$pdf->SetXY(98, 106);
+$pdf->SetXY(97, 106);
 $pdf->Write(0,$laddari,0,1,'C');
 
 $pdf->SetXY(129, 106);

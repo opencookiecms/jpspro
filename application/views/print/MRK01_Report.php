@@ -5,15 +5,15 @@ $nopkk = $get_detail[0]->mrk_nopkk;
 $nosebutharga = $get_detail[0]->df_nosebutharga;
 $kontraktor = $get_detail[0]->mrk_namakon;
 $inden = $get_detail[0]->mrk_noinden;
-$tajuk = $get_detail[0]->df_tajuk;
+$tajuk = strtoupper($get_detail[0]->df_tajuk);
 $daerah = $get_detail[0]->mrk_daerah;
 $negeri = $get_detail[0]->mrk_negeri;
 $kosprojek = number_format($get_detail[0]->mrk_kosprojek,2);
-$tarikhmula = $get_detail[0]->mrk_tarikhmulakon;
-$tarikhjangka = $get_detail[0]->mrk_tarikhjangkasiap;
-$pegawai = $get_detail[0]->mrk_pegawai;
-$jawatan = $get_detail[0]->mrk_jawatan;
-$tarikhlaporan = $get_detail[0]->mrk_tarikh;
+$tarikhmula = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhmulakon));
+$tarikhjangka = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhjangkasiap));
+$pegawai = strtoupper($get_detail[0]->mrk_pegawai);
+$jawatan = strtoupper($get_detail[0]->mrk_jawatan);
+$tarikhlaporan = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikh));
 // initiate FPDI
 $pdf = new Fpdi();
 // add a page

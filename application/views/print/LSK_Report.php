@@ -1,8 +1,8 @@
 <?php
 use setasign\Fpdi\Fpdi;
 
-$kontraktor = $get_detail[0]->mrk_namakon;
-$alamat = $get_detail[0]->mrk_alamatkon;
+$kontraktor = strtoupper($get_detail[0]->mrk_namakon);
+$alamat = strtoupper($get_detail[0]->mrk_alamatkon);
 //$alamat = "NO. F-617 KAMPUNG HUTAN GELAM, JALAN BATU LINTANG TIKAM BATU 08600 Sungai Petani Kedah Darul Aman";
 $inden = $get_detail[0]->mrk_noinden;
 $gred = $get_detail[0]->mrk_gred;
@@ -12,15 +12,15 @@ $liabili = $get_detail[0]->lsk_liability;
 $kodperuntukan = $get_detail[0]->lsk_peruntukan;
 $kosprojek = number_format($get_detail[0]->mrk_kosprojek,2);
 $kossebenar = number_format($get_detail[0]->lks_hargasebenar,2);
-$tajuk = $get_detail[0]->df_tajuk;
+$tajuk = strtoupper($get_detail[0]->df_tajuk);
 
-$tarikhmula = $get_detail[0]->mrk_tarikhmulakon;
-$tarikhtamat = $get_detail[0]->mrk_tarikhjangkasiap;
-$tarikhlanjutmasa = $get_detail[0]->lsk_lanjutmasa;
-$tarikhsempurna = $get_detail[0]->lsk_tarikhkerjasiap;
+$tarikhmula = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhmulakon));
+$tarikhtamat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhjangkasiap));
+$tarikhlanjutmasa = date("d-m-Y",strtotime($get_detail[0]->lsk_lanjutmasa));
+$tarikhsempurna = date("d-m-Y",strtotime($get_detail[0]->lsk_tarikhkerjasiap));
 
-$laporanpegawai = $get_detail[0]->lsk_laporanpegawai;
-$tarikskui = $get_detail[0]->lsk_tarikhperakui;
+$laporanpegawai = strtoupper($get_detail[0]->lsk_laporanpegawai);
+$tarikskui = date("d-m-Y",strtotime($get_detail[0]->lsk_tarikhperakui));
 
 $juruterad = $get_detail[0]->lsk_juruterad;
 $jawatand = $get_detail[0]->lsk_jawatanjuruterad;
@@ -102,7 +102,7 @@ $pdf->Write(0,$tarikhsempurna,0,1,'C');
 $pdf->SetXY(69, 174);
 $pdf->MultiCell(120,5,$laporanpegawai,0,'J');
 
-
+$pdf->SetFont('Times','',11);
 $pdf->SetXY(155, 204);
 $pdf->Write(0,$pegawai,0,1,'C');
 $pdf->SetXY(155, 208);
