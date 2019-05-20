@@ -9,7 +9,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="card-body" style="background-color:#4b6584;border-radius:10px;">
                   <h4 class="card-title">  <h2 class="f"><?php echo $title; ?></h2>
                   <p class="card-description"><h5><span class="error" style="color:#f5f6fa;"> * Dikehendaki mengisi semua bahagian</span></h5></p>
-                  <?php echo validation_errors(); ?>
+                
                 </div>
               </div>
             </div>
@@ -20,6 +20,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               <div class="card" style="border-radius:10px;">
                 <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
                   <h4 class="card-title" style="color:#38ada9;">Borang Daftar Perolehan</h4>
+                    <?php echo validation_errors(); ?>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">
