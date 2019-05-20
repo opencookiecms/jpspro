@@ -235,7 +235,7 @@ class Mrk_model extends CI_Model{
       'tiga_catat6'=>  $tiga_catat6,
       'tiga_catat7'=>  $tiga_catat7,
       'tiga_catat8'=>  $tiga_catat8,
-      'mrk_ulasa'=> $ulasan
+      'mrk_ulasan'=> $ulasan
 
 
     );
