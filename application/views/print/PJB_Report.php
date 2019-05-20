@@ -6,8 +6,8 @@ $alamatbank = strtoupper($get_detail[0]->mrk_alamatbank);
 $rujukanbank = $get_detail[0]->mrk_rujukanbank;
 $namakon = $get_detail[0]->mrk_namakon;
 $alamat = $get_detail[0]->jb_alamatsurat;
-$tarikhcacat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhmulatanggungcacat));
-$tarikhtamatcacat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhtamattanggungcacat));
+$tarikhcacat = $get_detail[0]->mrk_tarikhmulatanggungcacat;
+$tarikhtamatcacat = $get_detail[0]->mrk_tarikhtamattanggungcacat;
 $namajurutera = strtoupper($get_detail[0]->mrk_pegawaipenguasa);
 $jawatanjurutera = strtoupper($get_detail[0]->mrk_jawatanpp);
 

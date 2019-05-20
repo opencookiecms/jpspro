@@ -35,7 +35,7 @@ $cb17 = $get_detail[0]->cb17;
 $cb18 = $get_detail[0]->cb18; 
 
 $disediakan = strtoupper($get_detail[0]->ss_disediakan);
-$tarikh = date("d-m-Y",strtotime($get_detail[0]->ss_date));
+$tarikh = $get_detail[0]->ss_date;
 
 if($cb1==1){
     $pdf->SetXY(133,58);

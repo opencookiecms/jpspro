@@ -82,11 +82,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-4">
                       <label>Tarikh Mula Tanggungan Kecacatan</label>
-                      <input type="date" class="form-control ts" style="font-weight:bold;" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>" readonly>
+                      <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="mulacacat" name="mulacacat" value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>" readonly>
                     </div>
                     <div class="col-sm-4 tl">
                       <label>Tarikh Tamat Tanggungan Kecacatan</label>
-                        <input type="date" class="form-control ts" style="font-weight:bold;" id="cacattamat" name="cacattamat" value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>" readonly>
+                        <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="cacattamat" name="cacattamat" value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>" readonly>
                     </div>
                   </div>
                 </div>
@@ -167,9 +167,9 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               <div class="col-md-12 tl">
                 <div class="form-group row">
                   <label class="col-sm-1 col-form-label">(a) # :</label>
-                  <label class="col-sm-3 col-form-label">** No Kewangan Jaminan Bank/Insuran</label>
+                  <label class="col-sm-3 col-form-label">(i)** No Kewangan Jaminan Bank/Insuran</label>
                   <div class="col-sm-3">
-                   <input type="text" class="form-control ts" style="font-weight:bold;" id="nokewangan" name="nokewangan" value="<?php echo $get_detail[0]->mrk_nowangjaminansatu?>" placeholder="No Kewangan Jaminan Bank/Insuran">
+                   <input type="text" class="form-control ts" style="font-weight:bold;" id="nokewangan" name="nokewangansatu" value="<?php echo $get_detail[0]->mrk_nowangjaminansatu?>" placeholder="No Kewangan Jaminan Bank/Insuran">
                   </div>
                   <label class="col-sm-1 col-form-label">Harga</label>
                   <div class="col-sm-3 tl">
@@ -177,7 +177,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="harga" name="harga" value="<?php echo number_format($get_detail[0]->mrk_hargasatu,2)?>" placeholder="RM">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="harga" name="harga" value="<?php echo $get_detail[0]->mrk_hargasatu?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="bakiwangjaminan" name="bakiwangjaminan" value="<?php echo number_format($get_detail[0]->mrk_bakiwangjamin,2) ?>" placeholder="RM">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="bakiwangjaminan" name="bakiwangjaminan" value="<?php echo $get_detail[0]->mrk_bakiwangjamin ?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -215,7 +215,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="harga1" name="harga1" placeholder="RM" value="<?php echo number_format($get_detail[0]->mrk_hargadua,2)?>">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="harga1" name="harga1" placeholder="RM" value="<?php echo $get_detail[0]->mrk_hargadua ?>">
                     </div>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="wangjaminan" name="wangjaminan" value="<?php echo number_format($get_detail[0]->mrk_wangjaminlaksana,2)?>" placeholder="RM">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="wangjaminan" name="wangjaminan" value="<?php echo $get_detail[0]->mrk_wangjaminlaksana ?>" placeholder="RM">
                     </div>
                   </div>
                 </div>
@@ -249,7 +249,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="kosbon" name="kosbon" value="<?php echo number_format($get_detail[0]->mrk_tambahbonlaksana,2)?>" placeholder="RM">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="kosbon" name="kosbon" value="<?php echo $get_detail[0]->mrk_tambahbonlaksana ?>" placeholder="RM">
                     </div>
                   </div>
                   <label class="col-sm-2 col-form-label">Pegawai Penguasa</label>
@@ -276,7 +276,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                                   <div class="input-group-prepend bg-success border-primary">
                                     <span class="input-group-text bg-transparent text-white">RM</span>
                                   </div>
-                                  <input type="text" class="form-control ts" style="font-weight:bold;" id="bakibon" name="bakibon" placeholder="RM" value="<?php echo number_format($get_detail[0]->mrk_bakibonlaksana,2)?>">
+                                  <input type="text" class="form-control ts" style="font-weight:bold;" id="bakibon" name="bakibon" placeholder="RM" value="<?php echo $get_detail[0]->mrk_bakibonlaksana ?>">
                                 </div>
                               </div>
                               <label class="col-sm-2 col-form-label">Jawatan</label>

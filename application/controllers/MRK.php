@@ -7,11 +7,12 @@ class MRK extends CI_Controller{
 	{
 		parent::__construct();
 		//Codeigniter : Write Less Do More
-		$this->load->model('Mrk_model');
-		$this->load->model('Setting_model');
-		$this->load->helper('url');
+	    $this->load->helper('url');
 		$this->load->library('session');
 		$this->load->library('form_validation');
+		$this->load->model('Mrk_model');
+		$this->load->model('Setting_model');
+
 		//$this->load->model('Projek_model');
 	}
 
@@ -48,25 +49,28 @@ class MRK extends CI_Controller{
 	public function MRK_01($value="")
 	{
 
-		$lass = $this->input->post('hiddenid');
 		$this->load->database();
-		$data['get_usersetting']=$this->Setting_model->get_Datasetting();
-		$data['get_allkontraktor']=$this->Mrk_model->getAllDataKon();
-		$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
-		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
-		$this->form_validation->set_rules('nokon', 'No kontrak', 'required');
-		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
-
-		if($this->form_validation->run() == FALSE)
+		$this->form_validation->set_rules('nopkk','No Pendaftaran PKK','required');
+		$this->form_validation->set_message('namakon', 'My Error Message');  
+		$this->form_validation->set_rules('nokon','No Sebutharga','required');
+		$this->form_validation->set_rules('namakon','Kontraktor','required');
+	
+		if($this->form_validation->run() === FALSE)
 		{
+
+			$data['get_usersetting']=$this->Setting_model->get_Datasetting();
+			$data['get_allkontraktor']=$this->Mrk_model->getAllDataKon();
+			$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
 			$this->load->view('template/header');
 			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
 			$this->load->view('pages/MRK01',$data);
 			$this->load->view('template/footer');
+			
 		}
 		else
 		{
+		    $lass = $this->input->post('hiddenid');
 			$this->Mrk_model->create_mrksatu();//load from model and call last id
 			$this->session->set_userdata('mrk01','Data MRK_01 berjaya disimpan');
 
@@ -112,7 +116,7 @@ class MRK extends CI_Controller{
 	  $data['get_keypeople']=$this->Setting_model->get_Datasetting();
 		$lass = $this->input->post('hiddensub');
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforLSK($value);
-		$this->form_validation->set_rules('pegawaiselia', 'No Pendaftaran PKK', 'required');
+		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 
 
 		if($this->form_validation->run() == FALSE)
@@ -137,7 +141,7 @@ class MRK extends CI_Controller{
 		$this->load->database();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforMRK03($value);
 	//	$this->form_validation->set_rules('nokontr', 'No Pendaftaran PKK', 'required');
-		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
+		$this->form_validation->set_rules('nopkk', 'Sila Isi No PKK', 'required');
 
 		if($this->form_validation->run() == FALSE)
 		{
@@ -263,7 +267,7 @@ class MRK extends CI_Controller{
 		$this->load->database();
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforPPWJP($value);
 		$data['get_keypeople']=$this->Setting_model->get_Datasetting();
-		$this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
+		$this->form_validation->set_rules('nokon', 'No Sebutharga', 'required');
 
 		if($this->form_validation->run()== FALSE)
 		{
@@ -343,7 +347,7 @@ class MRK extends CI_Controller{
 	public function LSK_Update()
 	{
 		$this->load->database();
-		$this->form_validation->set_rules('pegawaiselia', 'No Pendaftaran PKK', 'required');
+		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
 
 		if($this->form_validation->run() == FALSE)
 		{

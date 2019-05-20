@@ -24,7 +24,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           <?php
               $pkkNo = $get_detail[0]->s_kodvot;
                 if($pkkNo == null){
-                    echo form_open('Surat/Surat_MRK');
+                    echo form_open('Surat/Surat_MRK/'.$get_detail[0]->projek_id);
                 }
                 else {
                   echo form_open('Surat/Surat_MRK_Update');
@@ -33,6 +33,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#dfe4ea; border-radius:10px;">
             <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Surat MRK</h4>
+                     <h5 class="text-danger"><?php echo validation_errors(); ?></h5>
             <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">
@@ -58,7 +59,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Bertarikh</label>
                   <div class="col-sm-4">
-                  <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhtuan" name="tarikhtuan" value="<?php echo $get_detail[0]->s_tarikhtuan?>">
+                  <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="tarikhtuan" name="tarikhtuan" value="<?php echo $get_detail[0]->s_tarikhtuan?>">
                   </div>
                 </div>
               </div>
@@ -205,6 +206,12 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         </div>
       </div>
       <!--end here col-md-12-->
+        <script>
+            $('[data-toggle="datepicker"]').datepicker({
+              dateFormat: 'dd-mm-yy'
+            });
+           </script>
+
       <!--end here col-md-12-->
     </div>
   </form>

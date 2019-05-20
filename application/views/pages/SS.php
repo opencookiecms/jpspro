@@ -24,7 +24,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         <?php
             $pkkNo = $get_detail[0]->ss_kodvot;
               if($pkkNo == null){
-                  echo form_open('mrk/Senarai_Semak');
+                  echo form_open('mrk/Senarai_Semak/'.$get_detail[0]->projek_id);
               }
               else {
                 echo form_open('mrk/SS_Update');
@@ -240,7 +240,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="col-sm-3 tls">
                     <p></p>
                     <label>Tarikh</label>
-                    <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhsedia" name="tarikhsedia" value="<?php echo $get_detail[0]->ss_date?>">
+                    <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="tarikhsedia" name="tarikhsedia" value="<?php echo $get_detail[0]->ss_date?>">
 
                                 <input type="hidden" readonly name="hiddenid"  value="<?php echo $get_detail[0]->mrksatuid?>">
                                 <input type="hidden" readonly name="hiddenids"  value="<?php echo $get_detail[0]->projek_id?>">
@@ -295,6 +295,12 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         </div>
       </div>
       <!--end here col-md-12-->
+        <script>
+            $('[data-toggle="datepicker"]').datepicker({
+              dateFormat: 'dd-mm-yy'
+            });
+           </script>
+
       <!--end here col-md-12-->
     </div>
   </form>

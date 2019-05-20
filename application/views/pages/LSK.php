@@ -20,11 +20,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       </div>
       <!--start col-md-12 for form-->
       <div class="col-8 grid-margin">
-        <?php echo validation_errors(); ?>
+
         <?php
             $pkkNo = $get_detail[0]->lsk_noinden;
               if($pkkNo == null){
-                  echo form_open('mrk/LSK');
+                  echo form_open('mrk/LSK/'.$get_detail[0]->projek_id);
               }
               else {
                 echo form_open('mrk/LSK_Update');
@@ -34,6 +34,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         <div class="card" style="border-radius:10px;">
             <div class="card-body" style="background-color:#dfe4ea; border-radius:10px;">
             <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Maklumat Rekod Kerja - Laporan Siap Kerja</h4>
+             <h5 class="text-danger"><?php echo validation_errors(); ?></h5>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
@@ -96,7 +97,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                         <div class="input-group-prepend bg-success border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
                         </div>
-                          <input type="text" class="form-control ts" style="font-weight:bold;" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2)?>"  name="hargapesanan" placeholder="RM" readonly>
+                          <input type="text" class="form-control ts" style="font-weight:bold;" value="<?php echo $get_detail[0]->mrk_kosprojek ?>"  name="hargapesanan" placeholder="RM" readonly>
 
                       </div>
                     </div>
@@ -106,7 +107,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                         <div class="input-group-prepend bg-success border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
                         </div>
-                          <input type="text" class="form-control ts" style="font-weight:bold;"  name="hargasebenar" value="<?php echo number_format($get_detail[0]->lks_hargasebenar,2) ?>" placeholder="RM">
+                          <input type="text" class="form-control ts" style="font-weight:bold;"  name="hargasebenar" value="<?php echo $get_detail[0]->lks_hargasebenar ?>" placeholder="RM">
 
                       </div>
                     </div>
@@ -119,11 +120,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Permulaan Kerja:</label>
-                      <input type="date" class="form-control ts" style="font-weight:bold;" name="tarikhmula" value="<?php echo $get_detail[0]->mrk_tarikhmulakon?>" readonly>
+                      <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" name="tarikhmula" value="<?php echo $get_detail[0]->mrk_tarikhmulakon?>" readonly>
                     </div>
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Kerja Tamat:</label>
-                      <input type="date" class="form-control ts" style="font-weight:bold;"  name="tarikhtamat" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap?>" readonly>
+                      <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;"  name="tarikhtamat" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap?>" readonly>
                     </div>
                   </div>
                 </div>
@@ -133,11 +134,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Dilanjutkan Masa:</label>
-                      <input type="date" class="form-control ts" style="font-weight:bold;" name="tariklanjut" value="<?php echo $get_detail[0]->lsk_lanjutmasa?>">
+                      <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" name="tariklanjut" value="<?php echo $get_detail[0]->lsk_lanjutmasa?>">
                     </div>
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Kerja Siap Sempurna:</label>
-                      <input type="date" class="form-control ts" style="font-weight:bold;"  name="tarikhkerjasempurna" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
+                      <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;"  name="tarikhkerjasempurna" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
                     </div>
                   </div>
                 </div>
@@ -196,7 +197,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-4">
                     <label class="tl">Tarikh Perakui</label>
-                    <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhperakui" name="tarikhperakui" value="<?php echo $get_detail[0]->lsk_tarikhperakui?>">
+                    <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="tarikhperakui" name="tarikhperakui" value="<?php echo $get_detail[0]->lsk_tarikhperakui?>">
                   </div>
                   </div>
                </div>
@@ -342,6 +343,13 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       </div>
       <!--end here col-md-12-->
       <!--end here col-md-12-->
+
+      <script>
+            $('[data-toggle="datepicker"]').datepicker({
+              dateFormat: 'dd-mm-yy'
+            });
+           </script>
+
     </div>
   </form>
   </div>

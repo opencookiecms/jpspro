@@ -20,11 +20,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       </div>
       <!--start col-md-12 for form-->
       <div class="col-8 grid-margin">
-        <?php echo validation_errors(); ?>
+  
                <?php
                    $pkkNo = $get_detail[0]->ppwjp_kodvot;
                      if($pkkNo == null){
-                         echo form_open('mrk/PP_WJP');
+                         echo form_open('mrk/PP_WJP/'.$get_detail[0]->projek_id);
                      }
                      else {
                        echo form_open('mrk/PPWJP_Update');
@@ -32,7 +32,8 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                ?>
         <div class="card" style="border-radius:10px;">
         <div class="card-body" style="background-color:#dfe4ea; border-radius:10px;">
-            <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Surat Pelepasan Jaminan Bank</h4>
+            <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Surat Perakuan Wang Jaminan Perlaksanaan</h4>
+                     <h5 class="text-danger"><?php echo validation_errors(); ?></h5>
               <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">
@@ -103,7 +104,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="koswjp" name="koswjp" placeholder="Kos WJP" value="<?php echo number_format($get_detail[0]->ppwjp_kos,2) ?>">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="koswjp" name="koswjp" placeholder="Kos WJP" value="<?php echo $get_detail[0]->ppwjp_kos ?>">
                       <input type="hidden" name="indenno" value="<?php echo $get_detail[0]->mrk_noinden?>">
                       <input type="hidden" name="kodvot" value="<?php echo $get_detail[0]->df_kodvot?>">
                       <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
@@ -194,6 +195,13 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           </div>
         </div>
       </div>
+
+        <script>
+            $('[data-toggle="datepicker"]').datepicker({
+              dateFormat: 'dd-mm-yy'
+            });
+           </script>
+
       <!--end here col-md-12-->
       <!--end here col-md-12-->
     </div>

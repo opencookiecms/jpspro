@@ -28,7 +28,6 @@ class Surat extends CI_Controller
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetail($value);
     $data['get_keypeople']=$this->Setting_model->get_Datasetting();
-    $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
     $this->form_validation->set_rules('rujukkami', 'Rujukan Kami', 'required');
 
     if($this->form_validation->run() == FALSE)
@@ -55,8 +54,6 @@ class Surat extends CI_Controller
     $this->load->database();
     $data['get_detail']=$this->Surat_model->get_projectalldetailKhas($value);
      $data['get_user']=$this->Setting_model->get_userdatasetting();
-    $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
-    $this->form_validation->set_rules('rujukkami' , 'Rujukan Kami', 'required');
     $this->form_validation->set_rules('nosebutharga', 'No Sebutharga', 'required');
 
     if($this->form_validation->run() == FALSE)
@@ -83,7 +80,7 @@ class Surat extends CI_Controller
 
      $data['get_detail']=$this->Surat_model->get_projectalldetailSuratWJP($value);
      $data['get_user']=$this->Setting_model->get_userdatasetting();
-    $this->form_validation->set_rules('kepada', 'Fail Rujukan', 'required');
+    $this->form_validation->set_rules('rujukankami', 'Fail Rujukan', 'required');
 
     if($this->form_validation->run()==FALSE)
     {
@@ -92,6 +89,7 @@ class Surat extends CI_Controller
       $this->load->view('template/sidebar');
       $this->load->view('pages/SWJP',$data);
       $this->load->view('template/footer');
+            $this->session->set_userdata('swjp','Tidak Berjaya');
     }
     else
     {

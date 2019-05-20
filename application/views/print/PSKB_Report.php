@@ -7,10 +7,10 @@ $alamatkon = strtoupper($get_detail[0]->mrk_alamatkon);
 $gred = $get_detail[0]->mrk_gred;
 $tajuk = strtoupper($get_detail[0]->df_tajuk);
 $kossebenar = number_format($get_detail[0]->lks_hargasebenar,2);
-$tarikhsiap = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhsiapsebenar));
-$tarikhambil = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhambikmilik));
-$tarikhcacat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhmulatanggungcacat));
-$tarikhtamatcacat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhtamattanggungcacat));
+$tarikhsiap = $get_detail[0]->mrk_tarikhsiapsebenar;
+$tarikhambil = $get_detail[0]->mrk_tarikhambikmilik;
+$tarikhcacat = $get_detail[0]->mrk_tarikhmulatanggungcacat;
+$tarikhtamatcacat = $get_detail[0]->mrk_tarikhtamattanggungcacat;
 
 
 // initiate FPDI

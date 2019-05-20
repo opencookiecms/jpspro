@@ -235,7 +235,7 @@ class Mrk_model extends CI_Model{
       'tiga_catat6'=>  $tiga_catat6,
       'tiga_catat7'=>  $tiga_catat7,
       'tiga_catat8'=>  $tiga_catat8,
-      'mrk_ulasa'=> $ulasan
+      'mrk_ulasan'=> $ulasan
 
 
     );
@@ -332,7 +332,7 @@ class Mrk_model extends CI_Model{
   public function create_siapbaiki()
   {
 
-    $mrk_nowangjaminansatu = $this->input->post('nokewangan');
+    $mrk_nowangjaminansatu = $this->input->post('nokewangansatu');
     $mrk_hargasatu = $this->input->post('harga');
     $mrk_bakiwangjamin = $this->input->post('bakiwangjaminan');
     $mrk_nowangjaminandua = $this->input->post('nokewangan');
@@ -824,7 +824,7 @@ class Mrk_model extends CI_Model{
   public function PSMKUpdate($data, $update)
   {
     $this->load->helper('url');
-    $mrk_nowangjaminansatu = $this->input->post('nokewangan');
+    $mrk_nowangjaminansatu = $this->input->post('nokewangansatu');
     $mrk_hargasatu = $this->input->post('harga');
     $mrk_bakiwangjamin = $this->input->post('bakiwangjaminan');
     $mrk_nowangjaminandua = $this->input->post('nokewangan');

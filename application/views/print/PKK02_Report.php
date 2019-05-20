@@ -8,7 +8,7 @@ $jenismrk =  $get_detail[0]->s_jenisborang;
 $nopkk = $get_detail[0]->mrk_nopkk;
 $norujukan = $get_detail[0]->s_rujuktuan;
 
-$tarikh = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhtamattanggungcacat));
+$tarikh = $get_detail[0]->mrk_tarikhtamattanggungcacat;
 
 $pegawai = strtoupper($get_detail[0]->s_pegawaikuasa);
 $jawatan = strtoupper($get_detail[0]->s_jawatanpp);
