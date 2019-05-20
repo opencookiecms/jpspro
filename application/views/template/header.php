@@ -12,9 +12,13 @@
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/staradmin/vendors/css/vendor.bundle.addons.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
+	<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
 
+	<link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/datepicker/dist/datepicker.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/datepicker/dist/datepicker.js"/>
 
 
 

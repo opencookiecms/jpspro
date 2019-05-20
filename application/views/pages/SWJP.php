@@ -8,7 +8,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       <div class="col-md-8 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#778ca3;border-radius:10px;">
-            <h4 class="card-title">  <h2 class="f ts">Surat Pelepasan Wang Jaminan Perlaksanaan</h2>
+            <h4 class="card-title">  <h2 class="f ts">Surat Pelepasan Bon Jaminan Perlaksanaan</h2>
             <p class="card-description"><h5><span class="error" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['swjp'])) { ?>
               <div class="alert alert-success"><?php echo $_SESSION['swjp'] ?></div>
@@ -21,7 +21,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       </div>
       <!--start col-md-12 for form-->
       <div class="col-8 grid-margin">
-        <?php echo validation_errors(); ?>
+
           <?php
               $pkkNo = $get_detail[0]->swjp_kodvot;
                 if($pkkNo == null){
@@ -34,6 +34,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
             <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Surat Pelepasan WJP</h4>
+             <h5 class="text-danger"><?php echo validation_errors(); ?></h5>
             <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">
@@ -133,7 +134,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="input-group-prepend bg-success border-primary">
                         <span class="input-group-text bg-transparent text-white">RM</span>
                       </div>
-                      <input type="text" class="form-control ts" style="font-weight:bold;"  name="wangjaminan" placeholder="RM" value="<?php echo number_format($get_detail[0]->swjp_wangjamin,2)?>">
+                      <input type="text" class="form-control ts" style="font-weight:bold;"  name="wangjaminan" placeholder="RM" value="<?php echo $get_detail[0]->swjp_wangjamin?>">
                     </div>
                   </div>
                 </div>
@@ -211,6 +212,12 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         </div>
       </div>
       <!--end here col-md-12-->
+        <script>
+            $('[data-toggle="datepicker"]').datepicker({
+              dateFormat: 'dd-mm-yy'
+            });
+           </script>
+
       <!--end here col-md-12-->
     </div>
   </form>

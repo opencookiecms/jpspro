@@ -22,28 +22,31 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
    
           <div class="col-8 grid-margin">
 
-            <?php echo validation_errors(); ?>
+         
 
             <?php
 
 
             $pkkNo = $get_detail[0]->mrk_nopkk;
             if($pkkNo == null){
-              echo form_open('mrk/MRK_01');
+              echo form_open('mrk/MRK_01/'.$get_detail[0]->projek_id);
             }
             else {
               echo form_open('mrk/MRK_01_Update');
             }
 
             ?>
+            <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
+             <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
             <div class="card" style="border-radius:10px;">
               <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
                 <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Kategori Pendaftaran</h4>
+                   <h5 class="text-danger"><?php echo validation_errors(); ?></h5>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group row">
                               <div class="col-sm-8">
-                          <label class="tl">No Sebutharga</label>
+                          <label class="tl">**No Sebutharga</label>
                           <input type="text" class="form-control ts" style="font-weight:bold;" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
                         </div>
                         </div>
@@ -53,7 +56,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="col-md-12">
                     <div class="form-group row">
                       <div class="col-sm-8">
-                        <label class="tl">Nama Kontraktor</label>
+                        <label class="tl">**Nama Kontraktor</label>
                         <div class="input-group">
                           <input type="text" class="form-control ts" style="font-weight:bold;" id="namakon" onkeyup="autofill()" value="<?php echo $get_detail[0]->mrk_namakon ?>"name="namakon" placeholder="Nama Kontraktor">
                           <div class="input-group-append bg-success border-primary">
@@ -149,9 +152,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="col-md-12">
                     <div class="form-group row">
                       <div class="col-sm-8">
-                        <label class="tl">No Pendaftaran PKK</label>
-                        <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
-                        <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
+                        <label class="tl">**No Pendaftaran PKK</label>
                         <input type="text" class="form-control ts" style="font-weight:bold;" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK">
                       </div>
                     </div>
@@ -279,7 +280,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="form-group row">
                         <div class="col-sm-4">
                           <label class="tl">Tarikh Mula Kontrak</label>
-                          <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>"name="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
+                          <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="tarikhmulakon" value="<?php echo $get_detail[0]->mrk_tarikhmulakon ?>"name="tarikhmulakon" placeholder="Tarikh Mula Kontrak">
                         </div>
                       </div>
                     </div>
@@ -289,7 +290,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="form-group row">
                         <div class="col-sm-4">
                           <label class="tl">Tarikh Jangka Siap Kontrak</label>
-                          <input type="date" class="form-control ts" style="font-weight:bold;" id="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" name="tarikhjangka">
+                          <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="tarikhjangka" value="<?php echo $get_detail[0]->mrk_tarikhjangkasiap ?>" name="tarikhjangka">
                         </div>
                       </div>
                     </div>
@@ -332,7 +333,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                             <div class="input-group-prepend bg-primary border-primary">
                               <span class="input-group-text bg-transparent text-white">RM</span>
                             </div>
-                            <input type="text" class="form-control ts" style="font-weight:bold;" id="kosprojek" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2) ?>" name="kosprojek" placeholder="RM">
+                            <input type="text" class="form-control ts" style="font-weight:bold;" id="kosprojek" value="<?php echo $get_detail[0]->mrk_kosprojek ?>" name="kosprojek" placeholder="RM">
                             
                           </div>
                         </div>
@@ -344,7 +345,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="form-group row">
                         <div class="col-sm-4">
                           <label class="tl">Tarikh</label>
-                          <input type="date" class="form-control ts" style="font-weight:bold;" value="<?php echo $get_detail[0]->mrk_tarikh ?>" id="tarikh" name="tarikh">
+                          <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" value="<?php echo $get_detail[0]->mrk_tarikh ?>" id="tarikh" name="tarikh">
                         </div>
                       </div>
                     </div>
@@ -446,6 +447,13 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 $('#myInput').trigger('focus')
               })
               </script>
+
+           <script>
+            $('[data-toggle="datepicker"]').datepicker({
+              dateFormat: 'dd-mm-yy'
+            });
+           </script>
+
             </div>
           </form>
         </div>

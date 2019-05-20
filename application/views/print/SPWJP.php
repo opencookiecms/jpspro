@@ -8,7 +8,7 @@ $norujukan = $get_detail[0]->s_rujuktuan;
 $harga = number_format($get_detail[0]->swjp_wangjamin,2);
 $rujukantuan = strtoupper($get_detail[0]->skhas_rujuktuan);
 
-$tarikh = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhtamattanggungcacat));
+$tarikh = $get_detail[0]->mrk_tarikhtamattanggungcacat;
 
 $pegawai = strtoupper($get_detail[0]->skhas_pegawaikuasa);
 $jawatan = strtoupper($get_detail[0]->skhas_jawatanpp);

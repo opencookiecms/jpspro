@@ -16,17 +16,17 @@ $kossebenar = number_format($get_detail[0]->lks_hargasebenar,2);
 $tajuk = strtoupper($get_detail[0]->df_tajuk);
 
 $ladsehari = $get_detail[0]->mrk_ladsehari;
-$laddari = date("d-m-Y",strtotime($get_detail[0]->mrk_laddari));
-$ladhingga = date("d-m-Y",strtotime($get_detail[0]->mrk_ladsehingga));
+$laddari = $get_detail[0]->mrk_laddari;
+$ladhingga = $get_detail[0]->mrk_ladsehingga;
 
-$tarikhmula = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhmulakon));
-$tarikhtamat = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhjangkasiap));
-$tarikhlanjutmasa = date("d-m-Y",strtotime($get_detail[0]->lsk_lanjutmasa));
-$tarikhsempurna = date("d-m-Y",strtotime($get_detail[0]->lsk_tarikhkerjasiap));
+$tarikhmula = $get_detail[0]->mrk_tarikhmulakon;
+$tarikhtamat = $get_detail[0]->mrk_tarikhjangkasiap;
+$tarikhlanjutmasa = $get_detail[0]->lsk_lanjutmasa;
+$tarikhsempurna = $get_detail[0]->lsk_tarikhkerjasiap;
 
 $pegawai = strtoupper($get_detail[0]->mrk_pegawai);
 $jawatan = strtoupper($get_detail[0]->mrk_jawatan);
-$tarikah = date("d-m-Y",strtotime($get_detail[0]->tiga_tarikah));
+$tarikah = $get_detail[0]->tiga_tarikah;
 $ulasan = $get_detail[0]->mrk_ulasan;
 
 // initiate FPDI

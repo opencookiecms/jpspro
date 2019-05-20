@@ -20,11 +20,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       </div>
       <!--start col-md-12 for form-->
       <div class="col-8 grid-margin">
-        <?php echo validation_errors(); ?>
+    
         <?php
         $pkkNo = $get_detail[0]->js_inden;
         if($pkkNo == null){
-          echo form_open('mrk/Jaminan_Bank');
+          echo form_open('mrk/Jaminan_Bank/'.$get_detail[0]->projek_id);
         }
         else {
           echo form_open('mrk/JB_Update');
@@ -33,6 +33,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#dfe4ea; border-radius:10px;">
             <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Surat Pelepasan Jaminan Bank</h4>
+                         <h5 class="text-danger"><?php echo validation_errors(); ?></h5>
             <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">
@@ -58,7 +59,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Tarik Mula Tanggungan</label>
                   <div class="col-sm-7 tl">
-                  <input type="date" class="form-control ts" style="font-weight:bold;" id="mulatanggung" name="mulatanggung" readonly value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>">
+                  <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="mulatanggung" name="mulatanggung" readonly value="<?php echo $get_detail[0]->mrk_tarikhmulatanggungcacat?>">
                   </div>
                 </div>
               </div>
@@ -68,7 +69,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Tarik Luput Tanggungan</label>
                   <div class="col-sm-7">
-                  <input type="date" class="form-control ts" style="font-weight:bold;" id="luputtanggung" name="luputtanggung" readonly value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>">
+                  <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="luputtanggung" name="luputtanggung" readonly value="<?php echo $get_detail[0]->mrk_tarikhtamattanggungcacat?>">
                   </div>
                 </div>
               </div>
@@ -178,6 +179,12 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         </div>
       </div>
       <!--end here col-md-12-->
+        <script>
+            $('[data-toggle="datepicker"]').datepicker({
+              dateFormat: 'dd-mm-yy'
+            });
+           </script>
+
       <!--end here col-md-12-->
     </div>
   </form>

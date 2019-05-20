@@ -67,7 +67,7 @@ class Mrk_model extends CI_Model{
     $mrk_majukerjasebenar = $this->input->post('kerjasebenar');
     $mrk_bayarmajusemasa = $this->input->post('bayarmaju');
     $mrk_jumlahbayarmaju = $this->input->post('jumlahbayarmaju');
-    $mrk_masalah = $this->input->post('modal');
+    $mrk_masalah = $this->input->post('kerjasebenarsatu');
     $mrk_sebaboleh = $this->input->post('sebab');
     $mrk_lainlain = $this->input->post('lainlain');
     $mrk_lanjutmasa = $this->input->post('masa');
@@ -96,7 +96,7 @@ class Mrk_model extends CI_Model{
       'mrk_majukerjasebenar' => $mrk_majukerjasebenar,
       'mrk_bayarmajusemasa' => $mrk_bayarmajusemasa,
       'mrk_jumlahbayarmaju' => $mrk_jumlahbayarmaju,
-      'mrk_masalah' => $mrk_masalah,
+      'mrk_psebenar' => $mrk_masalah,
       'mrk_sebaboleh' => $mrk_sebaboleh ,
       'mrk_lainlain' => $mrk_lainlain,
       'mrk_lanjutmasa' => $mrk_lanjutmasa,
@@ -332,7 +332,7 @@ class Mrk_model extends CI_Model{
   public function create_siapbaiki()
   {
 
-    $mrk_nowangjaminansatu = $this->input->post('nokewangan');
+    $mrk_nowangjaminansatu = $this->input->post('nokewangansatu');
     $mrk_hargasatu = $this->input->post('harga');
     $mrk_bakiwangjamin = $this->input->post('bakiwangjaminan');
     $mrk_nowangjaminandua = $this->input->post('nokewangan');
@@ -687,7 +687,7 @@ class Mrk_model extends CI_Model{
     $mrk_majukerjasebenar = $this->input->post('kerjasebenar');
     $mrk_bayarmajusemasa = $this->input->post('bayarmaju');
     $mrk_jumlahbayarmaju = $this->input->post('jumlahbayarmaju');
-    $mrk_masalah = $this->input->post('modal');
+    $mrk_masalah = $this->input->post('kerjasebenarsatu');
     $mrk_sebaboleh = $this->input->post('sebab');
     $mrk_lainlain = $this->input->post('lainlain');
     $mrk_lanjutmasa = $this->input->post('masa');
@@ -715,7 +715,7 @@ class Mrk_model extends CI_Model{
       'mrk_majukerjasebenar' => $mrk_majukerjasebenar,
       'mrk_bayarmajusemasa' => $mrk_bayarmajusemasa,
       'mrk_jumlahbayarmaju' => $mrk_jumlahbayarmaju,
-      'mrk_masalah' => $mrk_masalah,
+      'mrk_psebenar' => $mrk_masalah,
       'mrk_sebaboleh' => $mrk_sebaboleh,
       'mrk_lainlain' => $mrk_lainlain,
       'mrk_lanjutmasa' => $mrk_lanjutmasa,
@@ -824,7 +824,7 @@ class Mrk_model extends CI_Model{
   public function PSMKUpdate($data, $update)
   {
     $this->load->helper('url');
-    $mrk_nowangjaminansatu = $this->input->post('nokewangan');
+    $mrk_nowangjaminansatu = $this->input->post('nokewangansatu');
     $mrk_hargasatu = $this->input->post('harga');
     $mrk_bakiwangjamin = $this->input->post('bakiwangjaminan');
     $mrk_nowangjaminandua = $this->input->post('nokewangan');

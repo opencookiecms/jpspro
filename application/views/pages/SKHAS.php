@@ -7,7 +7,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       <div class="col-md-9 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#4b4b4b;border-radius:10px;">
-            <h4 class="card-title">  <h2 class="f ts">Surat Kebenaran Khas</h2>
+            <h4 class="card-title">  <h2 class="f ts">Surat Kebenaran Khas (Permohonan Pengkhususan)</h2>
             <p class="card-description"><h5><span class="error ts" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['success'])) { ?>
               <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
@@ -24,7 +24,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           <?php
               $pkkNo = $get_detail[0]->skhas_kodvot;
                 if($pkkNo == null){
-                    echo form_open('Surat/Surat_Khas');
+                    echo form_open('Surat/Surat_Khas/'.$get_detail[0]->projek_id);
                 }
                 else {
                   echo form_open('Surat/Surat_Khas_Update');
@@ -33,6 +33,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
             <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Surat Khas</h4>
+             <h5 class="text-danger"><?php echo validation_errors(); ?></h5>
             <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">
@@ -190,6 +191,12 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       </div>
       <!--end here col-md-12-->
       <!--end here col-md-12-->
+        <script>
+            $('[data-toggle="datepicker"]').datepicker({
+              dateFormat: 'dd-mm-yy'
+            });
+           </script>
+
     </div>
   </form>
   </div>

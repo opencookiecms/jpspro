@@ -10,7 +10,7 @@ $norujukan = $get_detail[0]->s_rujuktuan;
 $tajuk = strtoupper($get_detail[0]->df_tajuk);
 $rujukantuan = strtoupper($get_detail[0]->skhas_rujuktuan);
 
-$tarikh = date("d-m-Y",strtotime($get_detail[0]->mrk_tarikhtamattanggungcacat));
+$tarikh = $get_detail[0]->mrk_tarikhtamattanggungcacat;
 
 $pegawai = strtoupper($get_detail[0]->skhas_pegawaikuasa);
 $jawatan = strtoupper($get_detail[0]->skhas_jawatanpp);
