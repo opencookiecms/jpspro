@@ -329,9 +329,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                           <span class="input-group-text bg-transparent text-white">RM</span>
                         </div>
                         <input type="text" class="form-control" name="baki" aria-label="Amount (to the nearest dollar)">
-                        <div class="input-group-append bg-primary border-primary">
-                          <span class="input-group-text bg-transparent text-white">.00</span>
-                        </div>
+                    
                       </div>
                     </div>
                   </div>
