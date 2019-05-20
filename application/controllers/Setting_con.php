@@ -148,6 +148,8 @@ class Setting_con extends CI_Controller{
     $this->load->database();
     $this->form_validation->set_rules('email', 'Email','required|is_unique[jps_users.jps_email]');
     $this->form_validation->set_rules('nama', 'Nama diperlukan', 'required');
+    $this->form_validation->set_rules('pass', 'Password', 'required');
+    $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required|matches[pass]');
 
     if($this->form_validation->run() === FALSE)
     {

@@ -7,7 +7,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
 
     <div class="col-12 grid-margin">
 
-
+    
       <?php echo form_open('setting_con/usersreg'); ?>
       <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
@@ -22,6 +22,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
           <a href="<?php echo site_url('Setting_con/senarai_nama_pengguna') ?>" class="btn btn-info mr-2 btn-rounded" role="button">Senarai Nama Pengguna</a>
           <P>
             <p>
+             <h6 class="text-danger"> <?php echo validation_errors(); ?></h6>
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group row">
@@ -81,7 +82,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                 <div class="form-group row">
                   <div class="col-sm-4">
                     <label>Pengesahan Kata Laluan</label>
-                    <input type="password" class="form-control" name="pass">
+                    <input type="password" class="form-control" name="passconf">
                   </div>
                 </div>
               </div>

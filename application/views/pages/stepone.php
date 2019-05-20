@@ -53,9 +53,12 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                                             <thead>
                                               <tr>
                                                 <th>
-                                                  #
+                                                  Bil
                                                 </th>
                                                 <th width:20>
+                                                  Tindakkan
+                                                </th>
+                                                <th>
                                                   No Sebutharga
                                                 </th>
                                                 <th>
@@ -67,9 +70,6 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                                                 <th>
                                                   Jenis
                                                 </th>
-                                                <th>
-                                                  Tindakan
-                                                </th>
                                               </tr>
                                             </thead>
                                             <tbody>
@@ -77,11 +77,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                                               <?php foreach ($get_nosebutharga as $row):$bil++ ?>
                                                 <tr>
                                                   <td class="py-1"><?php echo $bil ?></td>
+                                                  <td class="py-1"><button id="buttonselect"  value="<?php echo $row->no_sebutharga?>" class="btn btn-info" data-dismiss="modal">Select</button></td>
                                                   <td class="py-1"><span><?php echo $row->no_sebutharga?><span></td> <!--Show data in list view-->
                                                   <td class="py-1"><span><?php echo $row->no_pemilik?><span></td> <!--Show data in list view-->
-                                                  <td class="py-1"><span><?php echo $row->no_pemilik?><span></td> <!--Show data in list view-->
+                                                  <td class="py-1"><span><?php echo $row->no_tarikh?><span></td> <!--Show data in list view-->
                                                   <td class="py-1"><span><?php echo $row->no_jenis?><span></td> <!--Show data in list view-->
-                                                  <td class="py-1"><button id="buttonselect"  value="<?php echo $row->no_sebutharga?>" class="btn btn-info" data-dismiss="modal">Select</button></td>
                                                   </tr>
 
                                                 <?php endforeach; ?>
@@ -110,7 +110,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                             <!--end of modal-->
                           <div class="col-sm-3">
                             <label class="tl">Tarikh :</label>
-                            <input type="date" class="form-control" name="tarikhmohon"placeholder="Tarikh Permohonan">
+                            <input type="date" id="tmohon" class="form-control" name="tarikhmohon"placeholder="Tarikh Permohonan">
                           </div>
                         </div>
                       </div>
@@ -171,13 +171,15 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     $('.table tbody').on('click','#buttonselect',function(){
 
                       var currow = $(this).closest('tr');
-                      var col1 = currow.find('td:eq(1)').text();
-                      var jenis = currow.find('td:eq(4)').text();
+                      var col1 = currow.find('td:eq(2)').text();
+                      var jenis = currow.find('td:eq(5)').text();
+                      var tmohon = currow.find('td:eq(4)').text();
 
                       var result = col1;
                       //var result2 = col2;
                       $("#nosebuts").val(result);
                       $('#jenissebut').val(jenis);
+                      $('#tmohon').val(tmohon);
                     })
                   </script>
 

@@ -342,7 +342,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="col-md-12">
                   <div class="form-group row">
                     <div class="col-sm-3">
-                      <button type="submit" name="submit" class="btn btn-success mr-2 btn-rounded ">Simpan</button>
+                      <button type="submit" name="submit" class="btn btn-success mr-2 btn-rounded ">Seterusnya</button>
                     </div>
                   </div>
                 </div>
