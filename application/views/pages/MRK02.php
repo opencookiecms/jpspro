@@ -151,7 +151,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       </div>
                             <label class="col-sm-1 col-form-label tl">=</label>
                              <div class="col-sm-2">
-                   <input type="text" class="form-control ts" style="font-weight:bold;" id="kerjasebenarsatu" name="kerjasebenarsatu">
+                   <input type="text" class="form-control ts" style="font-weight:bold;" id="kerjasebenarsatu" value="<?php echo $get_detail[0]->mrk_psebenar?>" name="kerjasebenarsatu">
                       </div>
                         </div>
                       </div>
