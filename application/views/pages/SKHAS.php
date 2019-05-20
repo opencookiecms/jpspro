@@ -7,7 +7,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
       <div class="col-md-9 grid-margin stretch-card">
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#4b4b4b;border-radius:10px;">
-            <h4 class="card-title">  <h2 class="f ts">Surat Kebenaran Khas</h2>
+            <h4 class="card-title">  <h2 class="f ts">Surat Kebenaran Khas (Permohonan Pengkhususan)</h2>
             <p class="card-description"><h5><span class="error ts" style="color:#ffda79;">No Sebutharga :<?php echo $get_detail[0]->df_nosebutharga ?> </span></h5></p>
             <?php if(isset($_SESSION['success'])) { ?>
               <div class="alert alert-success"><?php echo $_SESSION['success'] ?></div>
