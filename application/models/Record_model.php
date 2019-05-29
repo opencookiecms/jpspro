@@ -44,6 +44,17 @@ class Record_model extends CI_Model{
     return $query->result();
   }
 
+  public function gettotalkosprojek()
+  {
+    $this->db->select('SUM(mrk_kosprojek) AS totalkos');
+    $this->db->from('mrk_satu');
+
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+
 
 
 

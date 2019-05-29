@@ -26,7 +26,13 @@
 </head>
 <style>
 th { font-size: 10px; }
+tfoot th{
+  font-size: 9px; 
+}
 td { font-size: 10px; }
+.br{
+  
+}
 </style>
 
   <body>
@@ -61,16 +67,16 @@ td { font-size: 10px; }
                 <th>Kod Peruntukan</th>
                 <th>Tajuk Projek</th>
                 <th>Harga Kontrak</th>
-                <th>
+                <th class="br">
                   Butiran Kontrak<br>
                   (1)Nama Kontraktor<br>
                   (2)No.Kontrak/Sebutharga<br>
                   (3)Mula/Siap<br>
                   (4)EOT
                 </th>
-                <th>Wang Diterima</th>
-                <th>Perbelanjaan</th>
-                <th>Tanggungan</th>
+                <th>Wang Diterima (A)</th>
+                <th>Perbelanjaan (B)</th>
+                <th>Tanggungan (C)</th>
                 <th>Baki</th>
                 <th>Perbelanjaan Sehingga 2019</th>
                 <th>Kemajuan Projek</th>
@@ -79,40 +85,36 @@ td { font-size: 10px; }
         <tbody>
           <?php $bil=0;?>
           <?php foreach ($laporan_sb as $row): $bil++?>
-          <?php 
-         
-    
-
-          ?>
+  
             <tr>
                 <td><?php echo $bil ?></td>
                 <td><?php echo $row->lsk_peruntukan?></td>
                 <td><?php echo $row->df_tajuk?></td>
-                <td>RM <?php echo number_format($row->mrk_kosprojek,2)?></td>
+                <td>0.00</td>
                 <td>
                 (1) <?php echo $row->mrk_namakon?><br>
                 (2) <?php echo $row->df_nosebutharga?><br>
                 (3) <?php echo $row->mrk_tarikhmulakon?>/<?php echo $row->mrk_tarikhjangkasiap?><br>
                 </td>
                 <td>RM</td>
-                <td>RM <?php echo number_format($row->lks_hargasebenar,2)?></td>
-                <td>$320,800</td>
-                <td>$320,800</td>
-                <td>$320,800</td>
-                <td>$320,800</td>
+                <td><?php echo number_format($row->lks_hargasebenar,2)?></td>
+                <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td><?php echo $row->mrk_psebenar.'%'?></td>
             </tr>
               <?php endforeach; ?>
         </tbody>
         <tfoot>
             <tr>
-                 <th></th>
+                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
                 <th>RM <?php echo $getbelanja[0]->totalbelanha?></th>
-                <th>Total</th>
+                <th>RM <?php echo $getkos[0]->totalkos?></th>
                 <th>Total</th>
                 <th></th>
                 <th></th>
