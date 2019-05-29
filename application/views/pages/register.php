@@ -96,6 +96,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                     <select type="text" class="form-control" id="roles" name="roles">
                       <option value=""></option>
                       <option value="admin">Admin</option>
+                      <option value="special">Special</option>
                       <option value="user">User</option>
                       <option value="clerk">Clerk</option>
                     </select>

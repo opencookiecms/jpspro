@@ -90,6 +90,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                     <select type="text" class="form-control" id="roles" name="roles">
                       <option value="<?php echo $get_user[0]->jps_userroles?>"><?php echo $get_user[0]->jps_userroles?></option>
                       <option value="admin">Admin</option>
+                      <option value="special">Special</option>
                       <option value="user">User</option>
                       <option value="clerk">Clerk</option>
                     </select>
