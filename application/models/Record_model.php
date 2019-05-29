@@ -33,6 +33,21 @@ class Record_model extends CI_Model{
     return $query->result();
 
   }
+
+  public function gettotalbelanja()
+  {
+    $this->db->select('SUM(lks_hargasebenar) AS totalbelanha');
+    $this->db->from('mrk_laporansiap');
+
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+
+
+
+
   
   public function getmrksatu($ifuser="")
   {

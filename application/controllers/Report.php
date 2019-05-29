@@ -135,6 +135,7 @@ class Report extends CI_Controller{
     //$this->load->view('template/header');
     //$this->load->view('template/nav');
     //$this->load->view('template/sidebar');
+    $data['getbelanja']=$this->Record_model->gettotalbelanja();
     $data['laporan_sb']=$this->Record_model->getdetail();
     $this->load->view('pages/laporan',$data);
    // $this->load->view('template/footer');

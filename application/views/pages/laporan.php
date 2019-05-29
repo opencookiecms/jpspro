@@ -108,7 +108,7 @@ td { font-size: 10px; }
                 <th></th>
                 <th></th>
                 <th></th>
-                <th>RM </th>
+                <th>RM <?php echo $getbelanja[0]->totalbelanha?></th>
                 <th>Total</th>
                 <th>Total</th>
                 <th></th>
