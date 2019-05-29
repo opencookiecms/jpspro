@@ -86,11 +86,12 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
 
              
                 <div class="card-body">
-                  <h5 class="card-title mb-4">Tempoh Tarikh Sebutharga Ditutup </h5>
-                  <?php $dates = $get_projek[0]->df_tarikhnotis ?>
-                  <?php $today = $today = date("d/m/Y"); ?>
+                  <h5 class="card-title mb-4">Tarikh Sebutharga Ditutup </h5>
+                
+                
                   <?php foreach ($get_projek as $row):?>
-
+                    <?php $dates = $get_projek[0]->df_tarikhnotis; ?>
+    <?php $today = $today = date("d-m-Y"); ?>
                   <div class="fluid-container">
                     <div class="row ticket-card mt-3 pb-2 border-bottom pb-3 mb-3">
                       <div class="col-md-1">
@@ -122,17 +123,6 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                   </div>
                    <?php endforeach; ?>
                 </div>
-
-
-             
-
-                
-
-
-                
-
-
-
 
               </div>
             </div>

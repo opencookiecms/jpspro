@@ -40,6 +40,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                         <option value="G5">G5</option>
                         <option value="G6">G6</option>
                         <option value="G7">G7</option>
+                         <option value=""></option>
                       </select>
                     </div>
                     <div class="col-sm-3">
@@ -49,6 +50,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                         <option value="CE | Pembinaan Kejuruteraan Awam">CE</option>
                         <option value="B | Pembinaan Bangunan">B</option>
                         <option value="ME | Mekanikal & Elektrikal">ME</option>
+                         <option value=""></option>
                       </select>
                     </div>
                   </div>
@@ -100,6 +102,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                         <option value="<?php echo $get_detail[0]->dp_bulanmig?>"><?php echo $get_detail[0]->dp_bulanmig?></option>
                         <option value="Minggu">Minggu</option>
                         <option value="Bulan">Bulan</option>
+                         <option value=""></option>
 
                       </select>
                     </div>
@@ -113,9 +116,9 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
 
       <!--start col-md-12 for form-->
       <div class="col-9 grid-margin">
-        <div class="card" style="border-radius:10px;background-color:#dfe4ea;">
-          <div class="card-body">
-            <h4 class="card-title" style="color:#38ada9">Harga Dokumen & Tarikh</h4>
+        <div class="card" style="border-radius:10px;">
+          <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
+            <h4 class="card-title" style="color:#38ada9;">Harga Dokumen & Tarikh</h4>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
@@ -125,13 +128,13 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                         <div class="input-group-prepend bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">RM</span>
                         </div>
-                        <input type="text" class="form-control"name="doc" placeholder="Harga Dokumen" value="<?php echo number_format($get_detail[0]->df_hargadoc,2)?>">
+                        <input type="text" class="form-control" name="doc"value="<?php echo $get_detail[0]->df_hargadoc?>" aria-label="Amount (to the nearest dollar)">
                       </div>
                     </div>
                     <div class="col-sm-4">
                       <label></label>
                       <div class="input-group">
-                        <div class="input-group-append bg-success border-success">
+                        <div class="input-group-append bg-dark border-dark">
                           <span class="input-group-text bg-transparent text-white">(Minimum RM10 | Maximum RM50)</span>
                         </div>
                       </div>
@@ -145,8 +148,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Notis Dikeluarkan</label>
-                      <input type="date" class="form-control" name="notiskeluar" value="<?php echo $get_detail[0]->df_tarikhnotis?>" >
-                      <?php $dates = $get_detail[0]->df_tarikhnotis ?>
+                      <input type="date" class="form-control" value="<?php echo $get_detail[0]->df_tarikhnotis?>" name="notiskeluar" id="tarikhnotis" >
                     </div>
                   </div>
                 </div>
@@ -157,24 +159,19 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Lawat Tapak/Taklimat</label>
                       <div class="input-group">
-                        <input type="text" class="form-control"name="lawattapak" value="<?php echo $get_detail[0]->df_tarikhlawat?>">
+                        <input type="text" value="<?php echo $get_detail[0]->df_tarikhlawat?>" class="form-control"name="lawattapak" id="harilawat">
                         <div class="input-group-append bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-4">
-                      <label></label>
-                      <div class="input-group">
-                        <div class="input-group-append bg-info border-info">
-                          <span class="input-group-text bg-transparent text-white"><?php echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
-          
-                        </div>
-                      </div>
+                    <div class="col-sm-2">
+                        <label class="tl">:</label>
+                        <input type="text" class="form-control" id="tsumone" disabled >
                     </div>
-  
                   </div>
                 </div>
+                
               </div>
               <div class="row">
                 <div class="col-md-12">
@@ -182,19 +179,15 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Dokumen Mula Dijual</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" name="docmula" value="<?php echo $get_detail[0]->df_tarikhdocmula?>">
+                        <input type="text" value="<?php echo $get_detail[0]->df_tarikhdocmula?>" class="form-control" name="docmula" id="harimulajual">
                         <div class="input-group-append bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-4">
-                      <label></label>
-                      <div class="input-group">
-                        <div class="input-group-append bg-success border-success">
-                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhdocmula} days + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
-                        </div>
-                      </div>
+                         <div class="col-sm-2">
+                        <label class="tl">:</label>
+                        <input type="text" class="form-control" id='tsumtwo' disabled >
                     </div>
                   </div>
                 </div>
@@ -205,19 +198,15 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Akhir Dokumen Dijual</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" name="docakhir" value="<?php echo $get_detail[0]->df_tarikhdocakhir?>">
+                        <input type="text" class="form-control" value="<?php echo $get_detail[0]->df_tarikhdocakhir?>" name="docakhir" id="hariakhirjual">
                         <div class="input-group-append bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-4">
-                      <label></label>
-                      <div class="input-group">
-                        <div class="input-group-append bg-warning border-warning">
-                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhdocakhir} days + {$get_detail[0]->df_tarikhdocmula}days + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
-                        </div>
-                      </div>
+                    <div class="col-sm-2">
+                        <label class="tl">:</label>
+                        <input type="text" class="form-control" id='tsumthree' disabled >
                     </div>
                   </div>
                 </div>
@@ -228,23 +217,16 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="col-sm-3">
                       <label class="tl">Tarikh Sebutharga Ditutup</label>
                       <div class="input-group">
-                        <input type="text" class="form-control"  name="sebuttutup" value="<?php echo $get_detail[0]->df_tarikhtutup?>">
-                        <?php $tarikhtutup = $get_detail[0]->df_tarikhtutup?>
+                        <input type="text" class="form-control" value="<?php echo $get_detail[0]->df_tarikhtutup?>"  name="sebuttutup" id="haritutup">
                         <div class="input-group-append bg-primary border-primary">
                           <span class="input-group-text bg-transparent text-white">Hari</span>
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-4">
-                    
-                      <label class="tl"></label>
-                      <div class="input-group">
-                        <div class="input-group-append bg-danger border-danger">
-                          <span class="input-group-text bg-transparent text-white"><?php   echo date('d/m/Y', strtotime($dates. " + {$get_detail[0]->df_tarikhtutup} days + {$get_detail[0]->df_tarikhdocakhir} days + {$get_detail[0]->df_tarikhdocmula}days + {$get_detail[0]->df_tarikhlawat} days")); ?></span>
-                        </div>
-                      </div>
+                     <div class="col-sm-4">
+                        <label class="tl">:</label>
+                        <input type="text" data-toggle="datepicker" name="thisisdateend" class="form-control" id='tsumfour' >
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -282,8 +264,10 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <select  class="form-control"  name="juruterakanan" placeholder="Jurutera Daerah">
                         <option value="<?php echo $get_detail[0]->df_juruterad?>"><?php echo $get_detail[0]->df_juruterad?></option>
                           <?php foreach($get_keypeople as $users){ ?>
-                            <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                            <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>
+                            
                           <?php } ?>
+                           <option value=""></option>
                       </select>
                     </div>
                   </div>
@@ -294,11 +278,14 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Jurutera</label>
-                        <select class="form-control"  name="jurutera" placeholder="Jurutera" value="<?php echo $get_detail[0]->df_jurutera?>">
-                              <?php foreach($get_keypeople as $users){ ?>
-                            <option value="<?php echo $users->p_names?>"><?php echo $users->p_names?></option>';
+                        <select class="form-control"  name="jurutera" placeholder="Jurutera" value="">
+                        <option value="<?php echo $get_detail[0]->df_jurutera?>"><?php echo $get_detail[0]->df_jurutera?></option>
+                         <?php foreach($get_keypeoples as $userss){ ?>
+                            <option value="<?php echo $userss->p_names?>"><?php echo $userss->p_names?></option>
                           <?php } ?>
+                           <option value=""></option>
                         </select>
+                       
                     </div>
                   </div>
                 </div>
@@ -311,8 +298,9 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <select  class="form-control"  name="penolongkanan">
                           <option value="<?php echo $get_detail[0]->df_penolongkanan?>"><?php echo $get_detail[0]->df_penolongkanan?></option>
                           <?php foreach($get_user as $users){ ?>
-                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
+                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>
                         <?php } ?>
+                         <option value=""></option>
                       </select>
                     </div>
                   </div>
@@ -326,8 +314,9 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                         <select class="form-control" name="penolong" value="<?php echo $get_detail[0]->df_penolong?>">
                          <option value="<?php echo $get_detail[0]->df_penolong?>"><?php echo $get_detail[0]->df_penolong?></option>
                           <?php foreach($get_user as $users){ ?>
-                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>';
+                          <option value="<?php echo $users->jps_name?>"><?php echo $users->jps_name?></option>
                         <?php } ?>
+                         <option value=""></option>
                         </select>
 
 
@@ -354,6 +343,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                         <option value="<?php echo $get_detail[0]->df_peruntukan?>"><?php echo $get_detail[0]->df_peruntukan?></option>
                         <option value="Negeri">Negeri</option>
                         <option value="Persekutuan">Persekutuan</option>
+                         <option value=""></option>
                       </select>
                     </div>
                   </div>
@@ -389,6 +379,74 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         </div>
       </div>
       <!--end here col-md-12-->
+ <script>
+      $(document).ready(function(){ 
+       
+       // alert([day, month, year].join('/'));
+        $("#harilawat").keyup(function(){
+        var date = new Date($('#tarikhnotis').val());
+        date.setDate(date.getDate() 
+        + parseInt($("#harilawat").val())
+        ); 
+
+        day = date.getDate();  
+        month = date.getMonth() + 1;
+        year = date.getFullYear();
+          $("#tsumone").val([day, month, year].join('-'));
+        });
+
+        $("#harimulajual").keyup(function(){
+
+          var datemula = new Date($('#tarikhnotis').val());
+          datemula.setDate(datemula.getDate() 
+            + parseInt($("#harimulajual").val()) 
+            + parseInt($("#harilawat").val())
+            ); 
+
+          days = datemula.getDate();
+          months = datemula.getMonth() + 1;
+          years = datemula.getFullYear();
+           $("#tsumtwo").val([days, months, years].join('-'));
+        
+        });
+
+          $("#hariakhirjual").keyup(function(){
+
+          var dateakhir = new Date($('#tarikhnotis').val());
+          dateakhir.setDate(dateakhir.getDate() 
+            + parseInt($("#harimulajual").val()) 
+            + parseInt($("#harilawat").val())
+            + parseInt($("#hariakhirjual").val())
+            
+          ); 
+
+          dayss = dateakhir.getDate();
+          monthss = dateakhir.getMonth() + 1;
+          yearss = dateakhir.getFullYear();
+           $("#tsumthree").val([dayss, monthss, yearss].join('-'));
+        
+        });
+
+          $("#haritutup").keyup(function(){
+
+          var dateakhir = new Date($('#tarikhnotis').val());
+          dateakhir.setDate(dateakhir.getDate() 
+            + parseInt($("#harimulajual").val()) 
+            + parseInt($("#harilawat").val())
+            + parseInt($("#hariakhirjual").val())
+            + parseInt($("#haritutup").val())
+            
+          ); 
+
+          dayss = dateakhir.getDate();
+          monthss = dateakhir.getMonth() + 1;
+          yearss = dateakhir.getFullYear();
+           $("#tsumfour").val([dayss, monthss, yearss].join('-'));
+        
+        });
+      
+      });
+   </script>
     </div>
   </form>
   </div>

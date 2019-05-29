@@ -87,7 +87,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('Report/Laporan')?>">
+            <a class="nav-link" href="<?php echo site_url('Report/Laporan')?>" target="_blank">
               <i class="menu-icon mdi mdi-sticker"></i>
               <span class="menu-title">Laporan</span>
             </a>

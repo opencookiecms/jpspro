@@ -10,6 +10,7 @@ class Report extends CI_Controller{
     $this->load->model('Mrk_model');
     $this->load->model('Surat_model');
     $this->load->model('Setting_model');
+    $this->load->model('Record_model');
 
   }
 
@@ -131,16 +132,22 @@ class Report extends CI_Controller{
 
   public function Laporan()
   {
-    $this->load->view('template/header');
-    $this->load->view('template/nav');
-    $this->load->view('template/sidebar');
-    $this->load->view('pages/laporan');
-    $this->load->view('template/footer');
+    //$this->load->view('template/header');
+    //$this->load->view('template/nav');
+    //$this->load->view('template/sidebar');
+    $data['laporan_sb']=$this->Record_model->getdetail();
+    $this->load->view('pages/laporan',$data);
+   // $this->load->view('template/footer');
   }
 
   public function addtext()
   {
     $this->load->view('print/apdf');
+  }
+
+  public function dokument_report()
+  {
+    $this->load->view('report/reportico/index');
   }
 
 

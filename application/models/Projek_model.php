@@ -108,7 +108,8 @@ class Projek_model extends CI_Model{
     $df_tempohsiap = $this->input->post("tempoh");
     $dp_bulanming = $this->input->post("bulanming");
     $df_hargadoc = $this->input->post("doc");
-    $df_tarikhnotis = $this->input->post("notiskeluar");
+    $df_tarikhnotis = $this->input->post("notiskeluar"); 
+    $df_dateend = $this->input->post("thisisdateend");
     $df_tarikhlawat = $this->input->post("lawattapak");
     $df_tarikhdocmula = $this->input->post("docmula");
     $df_tarikhdocakhir = $this->input->post("docakhir");
@@ -133,6 +134,7 @@ class Projek_model extends CI_Model{
         'dp_bulanmig'=> $dp_bulanming,
         'df_hargadoc' => $df_hargadoc,
         'df_tarikhnotis' => $df_tarikhnotis,
+        'df_dateend'=> $df_dateend,
         'df_tarikhlawat' => $df_tarikhlawat,
         'df_tarikhdocmula' => $df_tarikhdocmula,
         'df_tarikhdocakhir' => $df_tarikhdocakhir,
@@ -224,8 +226,18 @@ class Projek_model extends CI_Model{
     //Tambah join 2 table.,.,
     $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
     $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
+    $this->db->where('df_dateend <=','CURDATE()');
+    $this->db->limit(5);
     $query = $this->db->get();
     return $query->result();
+  }
+
+  public function get_projekviewafterbydate()
+  {
+    $query = $this->db->query('SELECT * 
+          FROM dp_projek
+          LEFT JOIN dp_projekinfo on dp_projekinfo.dp_id = dp_projek.projek_id
+          LEFT JOIN dp_gps on dp_gps.dp_id=dp_projek.projek_id');
   }
 
   public function get_projekviewbyu($user,$jp)
@@ -344,6 +356,7 @@ class Projek_model extends CI_Model{
     $dp_bulanming = $this->input->post("bulanming");
     $df_hargadoc = $this->input->post("doc");
     $df_tarikhnotis = $this->input->post("notiskeluar");
+    $df_dateend = $this->input->post("thisisdateend");
     $df_tarikhlawat = $this->input->post("lawattapak");
     $df_tarikhdocmula = $this->input->post("docmula");
     $df_tarikhdocakhir = $this->input->post("docakhir");
@@ -368,6 +381,7 @@ class Projek_model extends CI_Model{
         'dp_bulanmig' => $dp_bulanming,
         'df_hargadoc' => $df_hargadoc,
         'df_tarikhnotis' => $df_tarikhnotis,
+        'df_dateend' => $df_dateend,
         'df_tarikhlawat' => $df_tarikhlawat,
         'df_tarikhdocmula' => $df_tarikhdocmula,
         'df_tarikhdocakhir' => $df_tarikhdocakhir,
@@ -518,6 +532,25 @@ class Projek_model extends CI_Model{
       $output .= '<option value="'.$row->com_id.'">'.$row->component.'</option>';
     }
     return $output;
+  }
+
+
+  public function delete1($id)
+  {
+    $this->db->where('projek_id', $id);
+    $this->db->delete('dp_projek');
+  }
+
+  public function delete2($id)
+  {
+    $this->db->where('dp_id', $id);
+    $this->db->delete('dp_projekinfo');
+  }
+
+  public function delete3($id)
+  {
+    $this->db->where('dp_id', $id);
+    $this->db->delete('dp_gps');
   }
 
 

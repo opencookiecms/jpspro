@@ -18,17 +18,14 @@ class Daftar extends CI_Controller{
     $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
     $data['get_count'] = $this->Setting_model->getcount();
     $data['get_list']=$this->Projek_model->listOrder();
-    $data['get_projek']=$this->Projek_model->get_projekviewafter();
+      $data['get_projek']=$this->Projek_model->get_projekviewafter();
+    $data['get_projeks']=$this->Projek_model->get_projekviewafterbydate();
     $this->load->view('template/header');
     $this->load->view('template/nav',$profile);
     $this->load->view('template/sidebar');
     $this->load->view('pages/daftar',$data);
     $this->load->view('template/footer');
   }
-
-
-
-
 
 
   public function senarai_tempahan()

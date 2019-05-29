@@ -181,7 +181,9 @@ class Projek extends CI_Controller
     $this->load->database();
     $data['get_detail']=$this->Projek_model->get_updateprojek($value);
      $data['get_keypeople']=$this->Setting_model->get_Datasetting();
+      $data['get_keypeoples']=$this->Setting_model->get_Datasetting();
        $data['get_user']=$this->Setting_model->get_userdatasetting();
+       
     $id = $this->input->post('hiddenid');
     echo $id;
 
@@ -236,9 +238,10 @@ class Projek extends CI_Controller
 
  public function delete($id)
   {
-    $this->db->where('id', $id);
-    $this->db->delete('dp_projek');
-
+  
+    $this->Projek_model->delete1($id);
+    $this->Projek_model->delete2($id);
+    $this->Projek_model->delete3($id);
     redirect(base_url('projek'));
 
   }
