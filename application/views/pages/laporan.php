@@ -15,12 +15,15 @@
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/boots/bootstrap/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/boots/bootstrap/css/nav.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/r-2.2.2/datatables.min.css"/>
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css"/>
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
 
     <!-- Custom styles for this template -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-  </head>
+
+</head>
 <style>
 th { font-size: 10px; }
 td { font-size: 10px; }
@@ -118,15 +121,62 @@ td { font-size: 10px; }
     </table>
     </main>
     <script>
-    $(document).ready( function () {
+    $(document).ready(function(){
     $('#example').DataTable({
        responsive: true,
+       dom: 'Bfrtip',
         buttons: [
-        'copy', 'excel', 'pdf'
-    ]
-    }
-    );
+            {
+                 footer: true,
+            extend: "print",
+         
+            customize: function(win)
+            {
+ 
+                var last = null;
+                var current = null;
+                var bod = [];
+ 
+                var css = '@page { size: landscape; }',
+                    head = win.document.head || win.document.getElementsByTagName('head')[0],
+                    style = win.document.createElement('style');
+ 
+                style.type = 'text/css';
+                style.media = 'print';
+ 
+                if (style.styleSheet)
+                {
+                  style.styleSheet.cssText = css;
+                }
+                else
+                {
+                  style.appendChild(win.document.createTextNode(css));
+                }
+ 
+                head.appendChild(style);
+         }
+        },
+         
+              
+            {
+               extend: 'excelHtml5',
+               footer: true,
+               orientation: 'landscape',
+               pageSize: 'LEGAL'
+               
+            },
+          
+            {
+               extend: 'pdfHtml5',
+               footer: true,
+               orientation: 'landscape',
+               pageSize: 'LEGAL'
+               
+            } 
+        ]
+   
     });
+  });
     </script>
 
     <footer class="footer">
@@ -143,12 +193,22 @@ td { font-size: 10px; }
  
 
 
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/r-2.2.2/datatables.min.js"></script>
 
-    <script src="<?php echo base_url() ?>assets/boots/bootstrap/js/popper.min.js"></script>
-    <script src="<?php echo base_url() ?>assets/boots/bootstrap/js/bootstrap.min.js"></script>
-  
- 
-  
-  </body>
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
+
+
+<script src="<?php echo base_url() ?>assets/boots/bootstrap/js/popper.min.js"></script>
+<script src="<?php echo base_url() ?>assets/boots/bootstrap/js/bootstrap.min.js"></script>  
+
+
+</body>
 </html>
