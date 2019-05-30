@@ -120,6 +120,31 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   </div>
                 </div>
               </div>
+             <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group row">
+                      <div class="col-sm-3">
+                              <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>">Surat PSK 01</a>
+                      </div>
+                       <div class="col-sm-5">
+                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group row">
+                      <div class="col-sm-3">
+                             <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>">Surat PSK 02</a>
+                      </div>
+                       <div class="col-sm-5">
+                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                      </div>
+                  </div>
+              </div>
+            </div>
+              
 
               <div class="row">
                 <div class="col-md-12">
@@ -137,19 +162,12 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown" >
     <ul class="navbar-nav" >
-       <li class="nav-item dropdown">
-        <a class="dropdown-toggle btn btn-dark mr-2 btn-rounded" style="margin-right:10px;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Lihat / Cetak
-        </a>
-        <div class="dropdown-menu"  aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" target="_blank" href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>">PSK 01</a>
-          <a class="dropdown-item" target="_blank" href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>">PSK 02</a>
-        </div>
-      </li>
-      <li class="nav-item">
+        <li class="nav-item">
         
                         <a href="<?php echo site_url('mrk/MRK_03/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Maklumat Rekod Kerja 03">MRK03</a>
       </li>
+   
+  
       <li class="nav-item" style="margin-left:5px;" >
         
        <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Senarai Semakan">Senarai Semakan</a>

@@ -172,6 +172,30 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group row">
+                      <div class="col-sm-3">
+                              <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_Cover_PWJP/'.$get_detail[0]->projek_id) ?>">Surat 01</a>
+                      </div>
+                       <div class="col-sm-5">
+                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group row">
+                      <div class="col-sm-3">
+                             <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_Cover_PWJP/'.$get_detail[0]->projek_id) ?>">Surat 02</a>
+                      </div>
+                       <div class="col-sm-5">
+                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                      </div>
+                  </div>
+              </div>
+            </div>
 
             <div class="row">
               <div class="col-md-12 tl">
@@ -192,10 +216,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown" >
     <ul class="navbar-nav" >
-     
-     <li class="nav-item">
-                    <a href="<?php echo site_url('Report/Report_Cover_PWJP/'.$get_detail[0]->projek_id) ?>" class="btn btn-dark mr-2 btn-rounded" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Surat Khas">Lihat / Cetak</a>
-      </li>
+   
       <li class="nav-item">
                     <a href="<?php echo site_url('surat/Surat_Khas/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Surat Khas">Surat Khas</a>
       </li>
@@ -203,6 +224,8 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <a href="<?php echo site_url('projek/view_data/'.$get_detail[0]->projek_id) ?>" class="btn btn-danger mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Kembali ke Senarai Maklumat">Close</a>
       </li> 
     </ul>
+    
+    
   </div>
 </nav>
       

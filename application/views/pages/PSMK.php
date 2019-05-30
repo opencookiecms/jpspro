@@ -318,14 +318,15 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+     <li class="nav-item" style="margin-left:5px;" >
+          <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Senarai Semakan ">Senarai Semakan</a>
+      </li>
     <ul class="navbar-nav" >
     
       <li class="nav-item">
                             <a href="<?php echo site_url('report/Report_PSMK/'.$get_detail[0]->projek_id) ?>" class="btn btn-success mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" target="_blank" title="Muat Turun / Cetak">Lihat / Cetak</a>
       </li>
-      <li class="nav-item" style="margin-left:5px;" >
-          <a href="<?php echo site_url('mrk/Senarai_Semak/'.$get_detail[0]->projek_id) ?>" class="btn btn-warning mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Senarai Semakan ">Senarai Semakan</a>
-      </li>
+   
 
           <li class="nav-item" style="margin-left:5px;">
            <a href="<?php echo site_url('mrk/Jaminan_Bank/'.$get_detail[0]->projek_id) ?>" class="btn btn-info mr-2 btn-rounded" role="button" data-toggle="tooltip" data-placement="bottom" title="Pelepasan Jaminan Bank">Pelepasan Jaminan Bank</a>
