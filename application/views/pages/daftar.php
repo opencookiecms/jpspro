@@ -89,9 +89,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                   <h5 class="card-title mb-4">Tarikh Sebutharga Ditutup </h5>
                 
                 
-                  <?php foreach ($get_projek as $row):?>
-                    <?php $dates = $get_projek[0]->df_tarikhnotis; ?>
-    <?php $today = $today = date("d-m-Y"); ?>
+                 <?php foreach ($get_projek as $row):?>               
                   <div class="fluid-container">
                     <div class="row ticket-card mt-3 pb-2 border-bottom pb-3 mb-3">
                       <div class="col-md-1">
@@ -101,6 +99,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                         <div class="d-flex">
                           <p class="text-dark font-weight-semibold mr-2 mb-0 no-wrap">No Sebutharga :</p>
                           <p class="text-primary mr-1 mb-0"><?php echo $row->df_nosebutharga?> </p>
+                    
                          
                         </div>
                         <p class="text-dark ellipsis mb-2 mt-2" style="font-size:15px">Tajuk Projek 
@@ -114,7 +113,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           </div>
                           <div class="col-4 d-flex">
                             <small class="mb-1 mr-2 text-dark" style="font-weight:bold;font-size:14px;">Tarikh Akhir :</small>
-                            <small class="Last-responded mr-2 mb-0 text-danger" style="font-weight:bold;font-size:14px;"><?php   echo date('d/m/Y', strtotime($dates. " + {$row->df_tarikhtutup} days + {$row->df_tarikhdocakhir} days + {$row->df_tarikhdocmula}days + {$row->df_tarikhlawat} days")); ?></small>
+                            <small class="Last-responded mr-2 mb-0 text-danger" style="font-weight:bold;font-size:14px;"><?php echo date('d/m/Y', strtotime ($row->df_dateend))?> </small>
                           </div>
                         </div>
                       </div>

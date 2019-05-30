@@ -226,7 +226,8 @@ class Projek_model extends CI_Model{
     //Tambah join 2 table.,.,
     $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
     $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
-    $this->db->where('df_dateend <=','CURDATE()');
+    $this->db->where('df_dateend >','curdate()');
+    $this->db->order_by('df_dateend','asc');
     $this->db->limit(5);
     $query = $this->db->get();
     return $query->result();
@@ -237,7 +238,8 @@ class Projek_model extends CI_Model{
     $query = $this->db->query('SELECT * 
           FROM dp_projek
           LEFT JOIN dp_projekinfo on dp_projekinfo.dp_id = dp_projek.projek_id
-          LEFT JOIN dp_gps on dp_gps.dp_id=dp_projek.projek_id');
+          LEFT JOIN dp_gps on dp_gps.dp_id=dp_projek.projek_id
+          LIMIT=1');
   }
 
   public function get_projekviewbyu($user,$jp)
