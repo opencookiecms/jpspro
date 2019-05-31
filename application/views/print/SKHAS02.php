@@ -3,6 +3,10 @@ use setasign\Fpdi\Fpdi;
 
 $nosebutharga = $get_detail[0]->df_nosebutharga;
 $namakontraktor = strtoupper($get_detail[0]->mrk_namakon);
+
+$namarujukan = $get_detail[0]->skhas_namarujukan;
+$alamatrujukan = $get_detail[0]->skhas_alamatrujukan;
+
 $kategori = $get_detail[0]->mrk_kategori;
 $gred =  $get_detail[0]->mrk_gred;
 $khusus = $get_detail[0]->mrk_khusus;
@@ -27,7 +31,16 @@ $tplIdx = $pdf->importPage(1);
 // use the imported page and place it at position 10,10 with a width of 100 mm
 $pdf->useTemplate($tplIdx, 0, 0, 210);
 
+
+$pdf->SetFont('Times','B',12);
+$pdf->SetXY(22,95);
+$pdf->Write(0,$namarujukan,0,1,'C');
+
 $pdf->SetFont('Times','',12);
+
+$pdf->SetXY(22, 97);
+$pdf->MultiCell(110,5,$alamatrujukan,0,'J');
+
 
 $pdf->SetXY(50, 76);
 $pdf->Write(0,$rujukantuan,0,1,'C');

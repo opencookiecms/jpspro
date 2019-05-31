@@ -176,10 +176,10 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               <div class="col-md-12">
                   <div class="form-group row">
                       <div class="col-sm-3">
-                              <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_Cover_PWJP/'.$get_detail[0]->projek_id) ?>">Surat 01</a>
+                              <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_Cover_PWJP01/'.$get_detail[0]->projek_id) ?>">Surat 01</a>
                       </div>
                        <div class="col-sm-5">
-                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                            <h5>Melalui </h5>
                       </div>
                   </div>
               </div>
@@ -188,10 +188,10 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               <div class="col-md-12">
                   <div class="form-group row">
                       <div class="col-sm-3">
-                             <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_Cover_PWJP/'.$get_detail[0]->projek_id) ?>">Surat 02</a>
+                             <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_Cover_PWJP02/'.$get_detail[0]->projek_id) ?>">Surat 02</a>
                       </div>
                        <div class="col-sm-5">
-                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                            <h5>Tidak Melalui</h5>
                       </div>
                   </div>
               </div>

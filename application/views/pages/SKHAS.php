@@ -78,6 +78,27 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 </div>
               </div>
             </div>
+           <div class="row">
+              <div class="col-md-12 tl">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Nama Rujukan</label>
+                  <div class="col-sm-7">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="" name="namarujukan" value="<?php echo $get_detail[0]->skhas_namarujukan?>">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 tl">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Alamat Rujukan</label>
+                  <div class="col-sm-7">
+                  <textarea rows="8" class="form-control ts" style="font-weight:bold;" id="" name="alamatrujukan"><?php echo $get_detail[0]->skhas_alamatrujukan?></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">
@@ -145,7 +166,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                               <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('report/Report_Khas01/'.$get_detail[0]->projek_id)?>">Surat Khas 01</a>
                       </div>
                        <div class="col-sm-5">
-                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                            <h5>Jenis Surat Khas 01</h5>
                       </div>
                   </div>
               </div>
@@ -157,7 +178,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                              <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('report/report_khas02/'.$get_detail[0]->projek_id)?>">Surat Khas 02</a>
                       </div>
                        <div class="col-sm-5">
-                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                            <h5>Jenis Surat Khas 02</h5>
                       </div>
                   </div>
               </div>

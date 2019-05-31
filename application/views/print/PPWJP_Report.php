@@ -3,6 +3,10 @@ use setasign\Fpdi\Fpdi;
 
 $namakon = $get_detail[0]->mrk_namakon;
 $tajuk = strtoupper($get_detail[0]->df_tajuk);
+
+$namarujukan =$get_detail[0]->ppwjp_namarujukan;
+$alamatrujukan =$get_detail[0]->ppwjp_alamatrujukan;
+
 $sebutharga = strtoupper($get_detail[0]->df_nosebutharga);
 $namajurutera = strtoupper($get_detail[0]->ppwjp_pegawai);
 $jawatanjurutera = strtoupper($get_detail[0]->ppwjp_jawatan);
@@ -24,6 +28,12 @@ $pdf->useTemplate($tplIdx, 0, 0, 210);
 $pdf->SetFont('Times','',11);
 $pdf->SetXY(46, 155);
 
+
+$pdf->SetXY(18, 107);
+$pdf->Write(0,"$namarujukan",0,1,'C');
+$pdf->SetXY(18, 109);
+$pdf->MultiCell(100,5,$alamatrujukan,0,'J');
+
 $pdf->SetXY(57, 135);
 $pdf->Write(0,"$namakon",0,1,'C');
 $pdf->SetXY(57, 137);
@@ -39,7 +49,7 @@ $pdf->Write(0,"$kospwjp",0,1,'C');
 
 
 
-$pdf->SetXY(134, 223);
+$pdf->SetXY(140, 223);
 $pdf->Write(0,"$namajurutera",0,1,'C');
 $pdf->SetXY(132, 225);
 $pdf->MultiCell(60,5,$jawatanjurutera,0,'C');

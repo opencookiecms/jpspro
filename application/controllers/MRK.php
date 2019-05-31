@@ -466,7 +466,7 @@ class MRK extends CI_Controller{
 	public function PPWJP_Update()
 	{
 		$this->load->database();
-		$this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
+		$this->form_validation->set_rules('namaborong', 'Nama pemborong diperlukan', 'required');
 
 		if($this->form_validation->run()== FALSE)
 		{

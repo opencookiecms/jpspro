@@ -82,6 +82,28 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
             <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Nama Rujukan</label>
+                  <div class="col-sm-7">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="" name="namarujukan" value="<?php echo $get_detail[0]->s_namarujukan?>">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 tl">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Alamat Rujukan</label>
+                  <div class="col-sm-7">
+                  <textarea rows="8" class="form-control ts" style="font-weight:bold;" id="" name="alamatrujukan"><?php echo $get_detail[0]->s_alamatrujukan?></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 tl">
+                <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Nama Kontraktor</label>
                   <div class="col-sm-5">
                   <input type="text" class="form-control ts" style="font-weight:bold;" id="namakon" name="namakon" readonly value="<?php echo $get_detail[0]->mrk_namakon?>">
@@ -161,7 +183,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                               <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_PKK01/'.$get_detail[0]->projek_id)?>">Surat MRK 01</a>
                       </div>
                        <div class="col-sm-5">
-                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                            <h5>Jenis 1</h5>
                       </div>
                   </div>
               </div>
@@ -173,7 +195,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                              <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_PKK02/'.$get_detail[0]->projek_id)?>">Surat MRK 02</a>
                       </div>
                        <div class="col-sm-5">
-                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                            <h5>Jenis 2</h5>
                       </div>
                   </div>
               </div>

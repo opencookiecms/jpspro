@@ -105,8 +105,6 @@ class Surat extends CI_Controller
   public function Surat_MRK_Update()
   {
     $this->load->database();
-
-    $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
     $this->form_validation->set_rules('rujukkami', 'Rujukan Kami', 'required');
 
     if($this->form_validation->run() == FALSE)
@@ -130,8 +128,6 @@ class Surat extends CI_Controller
   public function Surat_Khas_Update()
   {
     $this->load->database();
-    $this->form_validation->set_rules('rujuktuan', 'Rujukan Tuan', 'required');
-    $this->form_validation->set_rules('rujukkami' , 'Rujukan Kami', 'required');
     $this->form_validation->set_rules('nosebutharga', 'No Sebutharga', 'required');
 
 

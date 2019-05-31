@@ -114,13 +114,22 @@ class Report extends CI_Controller{
     $this->load->view('print/SKHAS02',$data);
   }
 
-  public function Report_Cover_PWJP($value="")
+  public function Report_Cover_PWJP01($value="")
   {
     $this->load->database();
    $data['get_slogan']=$this->Setting_model->get_dataslogan();
     $data['get_detail']=$this->Surat_model->get_projectalldetailSuratWJP($value);
-    $this->load->view('print/SPWJP',$data);
+    $this->load->view('print/SPWJP01',$data);
   }
+
+  public function Report_Cover_PWJP02($value="")
+  {
+    $this->load->database();
+   $data['get_slogan']=$this->Setting_model->get_dataslogan();
+    $data['get_detail']=$this->Surat_model->get_projectalldetailSuratWJP($value);
+    $this->load->view('print/SPWJP02',$data);
+  }
+
 
   public function WordPHP($value="")
   {

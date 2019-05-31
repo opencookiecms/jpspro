@@ -127,7 +127,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                               <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_PSK_01/'.$get_detail[0]->projek_id) ?>">Surat PSK 01</a>
                       </div>
                        <div class="col-sm-5">
-                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                            <h5>Jenis 1</h5>
                       </div>
                   </div>
               </div>
@@ -139,7 +139,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                              <a class="btn btn-dark mr-2 btn-rounded" target="_blank" href="<?php echo site_url('Report/Report_PSK_02/'.$get_detail[0]->projek_id) ?>">Surat PSK 02</a>
                       </div>
                        <div class="col-sm-5">
-                            <h5>bagiagagakgagjajgjjajgjahgjkagjkhagkjg</h5>
+                            <h5>Jenis 2</h5>
                       </div>
                   </div>
               </div>

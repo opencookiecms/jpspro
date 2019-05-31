@@ -25,7 +25,9 @@ class Surat_model extends CI_Model{
 
   	$data = array(
   		's_rujuktuan' => $s_rujuktuan,
-  		's_tarikhtuan' => $s_tarikhtuan,
+      's_tarikhtuan' => $s_tarikhtuan,
+      's_namarujukan'=>$this->input->post('namarujukan'),
+      's_alamatrujukan'=>$this->input->post('alamatrujukan'),
   		's_jenisborang' => $s_jenisborang,
   		's_noinden' => $s_noinden,
   		's_pegawaikuasa' => $s_pegawaikuasa,
@@ -49,7 +51,9 @@ class Surat_model extends CI_Model{
     $skhas_mrkid = $this->input->post('hiddenid');
 
   	$data = array(
-  		'skhas_rujuktuan' => $skhas_rujuktuan,
+      'skhas_rujuktuan' => $skhas_rujuktuan,
+      'skhas_namarujukan'=>$this->input->post('namarujukan'),
+      'skhas_alamatrujukan'=>$this->input->post('alamatrujukan'),
   		'skhas_pegawaikuasa' => $skhas_pegawaikuasa,
   		'skhas_jawatanpp' => $skhas_jawatanpp,
       'skhas_inden' => $skhas_inden,
@@ -180,6 +184,8 @@ class Surat_model extends CI_Model{
     $data = array(
       's_rujuktuan' => $s_rujuktuan,
       's_tarikhtuan' => $s_tarikhtuan,
+      's_namarujukan'=>$this->input->post('namarujukan'),
+      's_alamatrujukan'=>$this->input->post('alamatrujukan'),
       's_jenisborang' => $s_jenisborang,
       's_noinden' => $s_noinden,
       's_pegawaikuasa' => $s_pegawaikuasa,
@@ -207,6 +213,8 @@ class Surat_model extends CI_Model{
 
     $data = array(
       'skhas_rujuktuan' => $skhas_rujuktuan,
+      'skhas_namarujukan'=>$this->input->post('namarujukan'),
+      'skhas_alamatrujukan'=>$this->input->post('alamatrujukan'),
       'skhas_pegawaikuasa' => $skhas_pegawaikuasa,
       'skhas_jawatanpp' => $skhas_jawatanpp,
       'skhas_inden' => $skhas_inden,

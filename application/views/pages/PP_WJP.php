@@ -74,6 +74,30 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 </div>
               </div>
             </div>
+
+            <div class="row">
+              <div class="col-md-12 tl">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Nama Rujukan</label>
+                  <div class="col-sm-7">
+                  <input type="text" class="form-control ts" style="font-weight:bold;" id="namarujukan" placeholder="Akauntan Negara" name="namarujukan" placeholder="Rujukan Kami" value="<?php echo $get_detail[0]->ppwjp_namarujukan?>">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-12 tl">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Alamat Rujukan</label>
+                  <div class="col-sm-7">
+                  <textarea rows="5" type="text" class="form-control ts" style="font-weight:bold;" id="alamatrujukan" name="alamatrujukan" placeholder="Alamat Rujukan"><?php echo $get_detail[0]->ppwjp_alamatrujukan?></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="row">
               <div class="col-md-12 tl">
                 <div class="form-group row">

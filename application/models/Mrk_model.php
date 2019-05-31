@@ -397,6 +397,8 @@ class Mrk_model extends CI_Model{
   {
     $ppwjp_rt = $this->input->post('rujuktuan');
     $ppwjp_rk = $this->input->post('rujukkami');
+    $ppwjp_namarujukan = $this->input->post('namarujukan');
+    $ppwjp_alamatrujukan = $this->input->post('alamatrujukan');
     $ppwjp_kepada = $this->input->post('kepada');
     $ppwjp_alamat = $this->input->post('alamat');
     $ppwjp_kos = $this->input->post('koswjp');
@@ -409,6 +411,8 @@ class Mrk_model extends CI_Model{
     $data = array(
       'ppwjp_rt' => $ppwjp_rt,
       'ppwjp_rk' => $ppwjp_rk,
+      'ppwjp_namarujukan'=> $ppwjp_namarujukan,
+      'ppwjp_alamatrujukan' => $ppwjp_alamatrujukan,
       'ppwjp_kepada' => $ppwjp_kepada,
       'ppwjp_alamat' => $ppwjp_alamat,
       'ppwjp_kos' => $ppwjp_kos,
@@ -894,6 +898,8 @@ class Mrk_model extends CI_Model{
   {
     $ppwjp_rt = $this->input->post('rujuktuan');
     $ppwjp_rk = $this->input->post('rujukkami');
+    $ppwjp_namarujukan = $this->input->post('namarujukan');
+    $ppwjp_alamatrujukan = $this->input->post('alamatrujukan');
     $ppwjp_kepada = $this->input->post('kepada');
     $ppwjp_alamat = $this->input->post('alamat');
     $ppwjp_kos = $this->input->post('koswjp');
@@ -906,6 +912,8 @@ class Mrk_model extends CI_Model{
     $data = array(
       'ppwjp_rt' => $ppwjp_rt,
       'ppwjp_rk' => $ppwjp_rk,
+      'ppwjp_namarujukan'=> $ppwjp_namarujukan,
+      'ppwjp_alamatrujukan' => $ppwjp_alamatrujukan,
       'ppwjp_kepada' => $ppwjp_kepada,
       'ppwjp_alamat' => $ppwjp_alamat,
       'ppwjp_kos' => $ppwjp_kos,
