@@ -100,10 +100,10 @@ td { font-size: 10px; }
                 (2) <?php echo $row->df_nosebutharga?><br>
                 (3) <?php echo $row->mrk_tarikhmulakon?>/<?php echo $row->mrk_tarikhjangkasiap?><br>
                 </td>
-                <td>RM <?php echo number_format($row->df_bakiperuntukan,2)?></td>
+                <td><?php echo number_format($row->df_bakiperuntukan,2)?></td>
                 <td><?php echo number_format($row->lks_hargasebenar,2)?></td>
                 <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
-                <td>RM <?php echo number_format($c,2)?></td>
+                <td><?php echo number_format($c,2)?></td>
                 <td>0.00</td>
                 <td><?php echo $row->mrk_psebenar.'%'?></td>
             </tr>
