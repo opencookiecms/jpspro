@@ -364,7 +364,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
         day = date.getDate();  
         month = date.getMonth() + 1;
         year = date.getFullYear();
-          $("#tsumone").val([day, month, year].join('-'));
+          $("#tsumone").val([year, month, day].join('-'));
         });
 
         $("#harimulajual").keyup(function(){
@@ -378,7 +378,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           days = datemula.getDate();
           months = datemula.getMonth() + 1;
           years = datemula.getFullYear();
-           $("#tsumtwo").val([days, months, years].join('-'));
+           $("#tsumtwo").val([years, months, days].join('-'));
         
         });
 
@@ -395,7 +395,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           dayss = dateakhir.getDate();
           monthss = dateakhir.getMonth() + 1;
           yearss = dateakhir.getFullYear();
-           $("#tsumthree").val([dayss, monthss, yearss].join('-'));
+           $("#tsumthree").val([yearss, monthss, dayss].join('-'));
         
         });
 
@@ -413,7 +413,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
           dayss = dateakhir.getDate();
           monthss = dateakhir.getMonth() + 1;
           yearss = dateakhir.getFullYear();
-           $("#tsumfour").val([dayss, monthss, yearss].join('-'));
+           $("#tsumfour").val([yearss, monthss, dayss].join('-'));
         
         });
       
@@ -422,7 +422,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
 
        <script>
             $('[data-toggle="datepicker"]').datepicker({
-              dateFormat: 'dd-mm-yy'
+              dateFormat: 'yy-m-d'
             });
            </script>
   </div>

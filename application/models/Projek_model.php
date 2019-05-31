@@ -224,9 +224,9 @@ class Projek_model extends CI_Model{
     $this->db->from('dp_projek');
 
     //Tambah join 2 table.,.,
-    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
-    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
-    $this->db->where('df_dateend >','curdate()');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id','left');
+    $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id','left');
+    $this->db->where('df_dateend >=','CURRENT_DATE');
     $this->db->order_by('df_dateend','asc');
     $this->db->limit(5);
     $query = $this->db->get();
@@ -235,11 +235,13 @@ class Projek_model extends CI_Model{
 
   public function get_projekviewafterbydate()
   {
-    $query = $this->db->query('SELECT * 
-          FROM dp_projek
-          LEFT JOIN dp_projekinfo on dp_projekinfo.dp_id = dp_projek.projek_id
-          LEFT JOIN dp_gps on dp_gps.dp_id=dp_projek.projek_id
-          LIMIT=1');
+    $query = $this->db->query('SELECT * FROM `dp_projek` 
+                      LEFT JOIN dp_projekinfo on dp_projekinfo.dp_id = dp_projek.projek_id
+                      LEFT JOIN dp_gps on dp_gps.dp_id=dp_projek.projek_id
+                      WHERE dp_projekinfo.df_dateend >= CURRENT_DATE
+                      ORDER BY dp_projekinfo.df_dateend ASC
+                      LIMIT 5');
+    return $query->result();
   }
 
   public function get_projekviewbyu($user,$jp)
