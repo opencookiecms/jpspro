@@ -44,6 +44,17 @@ class Record_model extends CI_Model{
     return $query->result();
   }
 
+  public function gettotalwaran()
+  {
+    $this->db->select('SUM(df_bakiperuntukan) AS totalwaran');
+    $this->db->from('dp_projekinfo');
+
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+
   public function gettotalkosprojek()
   {
     $this->db->select('SUM(mrk_kosprojek) AS totalkos');

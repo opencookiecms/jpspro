@@ -72,9 +72,9 @@ td { font-size: 10px; }
                   (1)Nama Kontraktor<br>
                   (2)No.Kontrak/Sebutharga<br>
                   (3)Mula/Siap<br>
-                  (4)EOT
+                  (4)EOT<br>
                 </th>
-                <th>Wang Diterima (A)</th>
+                <th>Waran Diterima (A)</th>
                 <th>Perbelanjaan (B)</th>
                 <th>Tanggungan (C)</th>
                 <th>Baki</th>
@@ -85,7 +85,11 @@ td { font-size: 10px; }
         <tbody>
           <?php $bil=0;?>
           <?php foreach ($laporan_sb as $row): $bil++?>
-  
+          <?php
+          $a = $row->df_bakiperuntukan;
+          $b = $row->lks_hargasebenar;
+          $c = $a - $b;
+          ?>
             <tr>
                 <td><?php echo $bil ?></td>
                 <td><?php echo $row->lsk_peruntukan?></td>
@@ -96,10 +100,10 @@ td { font-size: 10px; }
                 (2) <?php echo $row->df_nosebutharga?><br>
                 (3) <?php echo $row->mrk_tarikhmulakon?>/<?php echo $row->mrk_tarikhjangkasiap?><br>
                 </td>
-                <td>RM</td>
+                <td>RM <?php echo number_format($row->df_bakiperuntukan,2)?></td>
                 <td><?php echo number_format($row->lks_hargasebenar,2)?></td>
                 <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
-                <td>0.00</td>
+                <td>RM <?php echo number_format($c,2)?></td>
                 <td>0.00</td>
                 <td><?php echo $row->mrk_psebenar.'%'?></td>
             </tr>
@@ -107,15 +111,20 @@ td { font-size: 10px; }
         </tbody>
         <tfoot>
             <tr>
+            <?php 
+            $ta = $getwaran[0]->totalwaran;
+            $tb = $getbelanja[0]->totalbelanha;
+            $tc = $ta - $tb;
+            ?>
                 <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
-                <th></th>
-                <th>RM <?php echo $getbelanja[0]->totalbelanha?></th>
-                <th>RM <?php echo $getkos[0]->totalkos?></th>
-                <th>Total</th>
+                <th><?php echo $getwaran[0]->totalwaran?> </th>
+                <th><?php echo $getbelanja[0]->totalbelanha?></th>
+                <th><?php echo $getkos[0]->totalkos?></th>
+                <th><?php echo number_format($tc,2) ?></th>
                 <th></th>
                 <th></th>
             </tr>
