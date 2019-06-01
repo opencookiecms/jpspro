@@ -31,7 +31,7 @@ tfoot th{
 }
 td { font-size: 10px; }
 .br{
-  
+word-wrap: break-word;
 }
 </style>
 
@@ -78,7 +78,7 @@ td { font-size: 10px; }
                 <th>Perbelanjaan (B)</th>
                 <th>Tanggungan (C)</th>
                 <th>Baki</th>
-                <th>Perbelanjaan Sehingga 2019</th>
+                <th>Perbelanjaan<br> Sehingga<br> 2019</th>
                 <th>Kemajuan Projek</th>
             </tr>
         </thead>
@@ -133,13 +133,16 @@ td { font-size: 10px; }
     </main>
     <script>
     $(document).ready(function(){
+   
     $('#example').DataTable({
+      
        responsive: true,
        dom: 'Bfrtip',
         buttons: [
             {
-                 footer: true,
+            footer: true,
             extend: "print",
+            className: 'btn btn-primary' ,
          
             customize: function(win)
             {
@@ -172,8 +175,11 @@ td { font-size: 10px; }
             {
                extend: 'excelHtml5',
                footer: true,
-               orientation: 'landscape',
-               pageSize: 'LEGAL'
+               className: 'btn btn-primary',
+                 exportOptions:{
+                 stripNewlines: false
+               }
+               
                
             },
           
@@ -181,8 +187,15 @@ td { font-size: 10px; }
                extend: 'pdfHtml5',
                footer: true,
                orientation: 'landscape',
-               pageSize: 'LEGAL'
-               
+               pageSize: 'LEGAL',
+               className: 'btn btn-primary',
+               exportOptions:{
+                 stripNewlines:false
+               },
+               customize:function(doc){
+                  doc.content[1].table.body[0][4].alignment = 'left';
+               }
+              
             } 
         ]
    
