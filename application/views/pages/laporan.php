@@ -96,9 +96,9 @@ word-wrap: break-word;
                 <td><?php echo $row->df_tajuk?></td>
                 <td>0.00</td>
                 <td>
-                (1) <?php echo $row->mrk_namakon?><br>
-                (2) <?php echo $row->df_nosebutharga?><br>
-                (3) <?php echo $row->mrk_tarikhmulakon?>/<?php echo $row->mrk_tarikhjangkasiap?><br>
+                (1) <?php echo $row->mrk_namakon?></br>
+                (2) <?php echo $row->df_nosebutharga?></br>
+                (3) <?php echo $row->mrk_tarikhmulakon?>/<?php echo $row->mrk_tarikhjangkasiap?></br>
                 </td>
                 <td><?php echo number_format($row->df_bakiperuntukan,2)?></td>
                 <td><?php echo number_format($row->lks_hargasebenar,2)?></td>
@@ -132,8 +132,7 @@ word-wrap: break-word;
     </table>
     </main>
     <script>
-    $(document).ready(function(){
-   
+    $(document).ready(function(){   
     $('#example').DataTable({
       
        responsive: true,
@@ -142,7 +141,10 @@ word-wrap: break-word;
             {
             footer: true,
             extend: "print",
-            className: 'btn btn-primary' ,
+            className: 'btn btn-primary',
+             exportOptions: {
+             stripHtml: false
+              },
          
             customize: function(win)
             {
@@ -175,13 +177,27 @@ word-wrap: break-word;
             {
                extend: 'excelHtml5',
                footer: true,
-               className: 'btn btn-primary',
-                 exportOptions:{
-                 stripNewlines: false
-               }
+               text: '<i class="text-primary"></i> <strong>Export to Excel</strong>',
+          
                
-               
+               className: 'btn btn-primary', 
+                customize: function(xlsx) {
+                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                $('row c[r^="E"]', sheet).attr( 's', '55' );
+                
+              },
+                  exportOptions: {
+                  format: {
+                    body: function ( data, row, column, node ) {
+                        // Strip $ from salary column to make it numeric
+                         return column === 4 ?
+                         data.replace( /<br\s*\/?>/ig, "\n" ):
+                         data;
+                          }
+                     }
+                },
             },
+
           
             {
                extend: 'pdfHtml5',

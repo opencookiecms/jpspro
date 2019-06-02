@@ -295,10 +295,6 @@ class MRK extends CI_Controller{
 		$this->load->database();
 		//$data['get_detail']=$this->Mrk_model->get_projekdetail($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
-		$this->form_validation->set_rules('nokon', 'No kontrak', 'required');
-		$this->form_validation->set_rules('noinden', 'No Inden/Pesanan Tempatan', 'required');
-
-
 		if($this->form_validation->run() == FALSE)
 
 		{
