@@ -90,7 +90,7 @@ word-wrap: break-word;
             ?>
             <tr>
                 <td><?php echo $bil ?></td>
-                <td><?php echo $row->mrks_kodvot?></td>
+                <td><?php echo $row->df_kodvot?></td>
                 <td><?php echo $row->df_tajuk?></td>
                 <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
                 <td>
