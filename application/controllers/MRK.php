@@ -70,12 +70,15 @@ class MRK extends CI_Controller{
 		}
 		else
 		{
-		    $lass = $this->input->post('hiddenid');
+		  $lass = $this->input->post('hiddenid');
 			$this->Mrk_model->create_mrksatu();//load from model and call last id
+			$this->Mrk_model->create_kosprojek();
+		
 			$this->session->set_userdata('mrk01','Data MRK_01 berjaya disimpan');
 
 			//redirect(base_url()."mrk/successmsg"./$lass); //redirect last id to another step
 			redirect(base_url('mrk/MRK_01/'.$lass)); //redirect last id to another step
+			
 		}
 
 
@@ -130,6 +133,7 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_laporansiapkerja();
+		  $this->Mrk_model->update_kosprojek02($data ,$this->input->post('nosebut'));//load from model and call last id
 			$this->session->set_userdata('lsk','Data Laporan Siap Kerja berjaya disimpan');
 			redirect(base_url('mrk/LSK/'.$lass)); //redirect last id to another step
 		}
@@ -308,6 +312,7 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->mrk01update($data ,$this->input->post('nokon'));//load from model and call last id
+		  $this->Mrk_model->update_kosprojek01($data ,$this->input->post('nokon'));//load from model and call last id
 			//$KodVod=$this->Mrk_model->getLastKodVod();
 			$id = $this->input->post('hiddenid');
 			$this->session->set_userdata('mrk01','Data MRK_01 berjaya dikemaskini');
@@ -356,6 +361,7 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->LSKUpdate($data ,$this->input->post('hiddenid'));
+		  $this->Mrk_model->update_kosprojek02($data ,$this->input->post('nosebut'));//load from model and call last id
 			$id = $this->input->post('hiddensub');
 			$this->session->set_userdata('lsk','Data Laporan Siap Kerja berjaya dikemaskini');
 			redirect(base_url('mrk/LSK/'.$id)); //redirect last id to another step

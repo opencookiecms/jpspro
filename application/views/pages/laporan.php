@@ -68,11 +68,7 @@ word-wrap: break-word;
                 <th>Tajuk Projek</th>
                 <th>Harga Kontrak</th>
                 <th class="br">
-                  Butiran Kontrak<br>
-                  (1)Nama Kontraktor<br>
-                  (2)No.Kontrak/Sebutharga<br>
-                  (3)Mula/Siap<br>
-                  (4)EOT<br>
+                Butiran Kontrak</br>(1)Nama Kontraktor</br>(2)No.Kontrak/Sebutharga</br>(3)Mula/Siap</br>(4)EOT</br>
                 </th>
                 <th>Waran Diterima (A)</th>
                 <th>Perbelanjaan (B)</th>
@@ -85,11 +81,13 @@ word-wrap: break-word;
         <tbody>
           <?php $bil=0;?>
           <?php foreach ($laporan_sb as $row): $bil++?>
-          <?php
-          $a = $row->df_bakiperuntukan;
-          $b = $row->lks_hargasebenar;
-          $c = $a - $b;
-          ?>
+           <?php 
+             $a = $row->df_bakiperuntukan;
+             $b = $row->kos_belanja;
+             $c = $row->kos_tanggung;
+
+             $tt = $a-$b-$c;
+            ?>
             <tr>
                 <td><?php echo $bil ?></td>
                 <td><?php echo $row->lsk_peruntukan?></td>
@@ -98,12 +96,13 @@ word-wrap: break-word;
                 <td>
                 (1) <?php echo $row->mrk_namakon?></br>
                 (2) <?php echo $row->df_nosebutharga?></br>
-                (3) <?php echo $row->mrk_tarikhmulakon?>/<?php echo $row->mrk_tarikhjangkasiap?></br>
+                (3) <?php echo $row->mrk_tarikhmulakon?> / <?php echo $row->mrk_tarikhjangkasiap?></br>
+                (4) <?php echo $row->mrk_laddari?> / <?php echo $row->mrk_ladsehingga?></br>
                 </td>
                 <td><?php echo number_format($row->df_bakiperuntukan,2)?></td>
-                <td><?php echo number_format($row->lks_hargasebenar,2)?></td>
-                <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
-                <td><?php echo number_format($c,2)?></td>
+                <td><?php echo number_format($row->kos_belanja,2)?></td>
+                <td><?php echo number_format($row->kos_tanggung,2)?></td>
+                <td><?php echo number_format($tt,2)?></td>
                 <td>0.00</td>
                 <td><?php echo $row->mrk_psebenar.'%'?></td>
             </tr>
@@ -111,10 +110,12 @@ word-wrap: break-word;
         </tbody>
         <tfoot>
             <tr>
-            <?php 
-            $ta = $getwaran[0]->totalwaran;
-            $tb = $getbelanja[0]->totalbelanha;
-            $tc = $ta - $tb;
+             <?php 
+             $ta = $getwaran[0]->totalwaran;
+             $tb = $getbelanja[0]->totalbelanha;
+             $tc = $getkos[0]->totalkos;
+
+             $ttt = $ta-$tb-$tc;
             ?>
                 <th></th>
                 <th></th>
@@ -124,7 +125,7 @@ word-wrap: break-word;
                 <th><?php echo $getwaran[0]->totalwaran?> </th>
                 <th><?php echo $getbelanja[0]->totalbelanha?></th>
                 <th><?php echo $getkos[0]->totalkos?></th>
-                <th><?php echo number_format($tc,2) ?></th>
+                <th><?php echo number_format($ttt,2) ?></th>
                 <th></th>
                 <th></th>
             </tr>

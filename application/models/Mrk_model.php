@@ -59,6 +59,42 @@ class Mrk_model extends CI_Model{
     return $this->db->insert('mrk_satu', $data);
   }
 
+  public function create_kosprojek()
+  {
+    $data = array(
+      'kos_belanja'=>0, 
+      'kos_tanggung'=>$this->input->post("kosprojek"),
+      'kos_nosebut'=>$this->input->post("nokon")
+    );
+    return $this->db->insert('kos_projek', $data);
+  }
+
+  public function update_kosprojek01($data, $update)
+  {
+    $data = array(
+      'kos_belanja'=>0, 
+      'kos_tanggung'=>$this->input->post("kosprojek"),
+      'kos_nosebut'=>$this->input->post("nokon")
+    );
+    
+    $this->db->where('kos_nosebut', $update);
+
+    $this->db->update('kos_projek', $data);
+  }
+
+  public function update_kosprojek02($data, $update)
+  {
+    $data = array(
+      'kos_belanja'=>$this->input->post("hargasebenar"), 
+      'kos_tanggung'=>0,
+      'kos_nosebut'=>$this->input->post("nosebut")
+    );
+    
+    $this->db->where('kos_nosebut', $update);
+
+    $this->db->update('kos_projek', $data);
+  }
+
   public function create_mrkdua()
   {
     $this->load->helper('url');

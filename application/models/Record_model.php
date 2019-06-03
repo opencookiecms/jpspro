@@ -26,6 +26,7 @@ class Record_model extends CI_Model{
     $this->db->join('mrk_suratmrk', 'mrk_suratmrk.s_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('mrk_suratkhas', 'mrk_suratkhas.skhas_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('mrk_suratwjp', 'mrk_suratwjp.swjp_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('kos_projek', 'kos_projek.kos_nosebut=mrk_satu.mrk_nokontrak','left');
 
 
     $query = $this->db->get();
@@ -36,8 +37,8 @@ class Record_model extends CI_Model{
 
   public function gettotalbelanja()
   {
-    $this->db->select('SUM(lks_hargasebenar) AS totalbelanha');
-    $this->db->from('mrk_laporansiap');
+    $this->db->select('SUM(kos_belanja) AS totalbelanha');
+    $this->db->from('kos_projek');
 
     $query = $this->db->get();
 
@@ -57,8 +58,8 @@ class Record_model extends CI_Model{
 
   public function gettotalkosprojek()
   {
-    $this->db->select('SUM(mrk_kosprojek) AS totalkos');
-    $this->db->from('mrk_satu');
+    $this->db->select('SUM(kos_tanggung) AS totalkos');
+    $this->db->from('kos_projek');
 
     $query = $this->db->get();
 
