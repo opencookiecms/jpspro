@@ -363,4 +363,37 @@ class Setting_con extends CI_Controller{
     }
   }
 
+  public function getjawatan()
+  {
+        //form validation function
+		$this->load->database();
+    $this->form_validation->set_rules('jawatan', 'Jawatan diperkukan', 'required');
+    //$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
+    $data['get_jawatansetting']=$this->Setting_model->get_jsetting();
+		if($this->form_validation->run() == FALSE)
+
+		{
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/sjawatan',$data);
+      $this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Setting_model->addjawatasetting();//load from model and call last id
+      redirect(base_url('Setting_con/getjawatan')); //redirect last id to another step
+		}
+  }
+
+  public function deljawatan($id)
+  {
+    $this->load->helper('url');
+    //$this->db->
+    $this->db->where('jw_id', $id);
+    $this->db->delete('mrk_jawatan');
+
+    redirect('Setting_con/getjawatan');
+  }
+
 }

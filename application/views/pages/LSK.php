@@ -274,7 +274,6 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <label class="tl">Jawatan</label>
                     <select type="text" class="form-control ts" style="font-weight:bold;" id="jawatan3" name="jawatan3">
                       <option value="<?php echo $get_detail[0]->lsk_jawatanjuruterad?>"><?php echo $get_detail[0]->lsk_jawatanjuruterad?></option>
-                      <option value="Merinyu Taliair Kanan">Merinyu Taliair Kanan</option>
                       <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
                       <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
@@ -305,9 +304,9 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               <div class="row">
                 <div class="col-md-12">
 
-                           <p>
+                 <p>
                 <p>
-                   <p>
+                <p>
                 <p>
                 <br>
 

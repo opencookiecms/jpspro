@@ -134,6 +134,9 @@ class Projek_model extends CI_Model{
         'dp_bulanmig'=> $dp_bulanming,
         'df_hargadoc' => $df_hargadoc,
         'df_tarikhnotis' => $df_tarikhnotis,
+        'df_datelawat'=> $this->input->post("tsum1"),
+        'df_datemulajualdoc'=>$this->input->post("tsum2"),
+        'df_dateakhirjualdoc'=>$this->input->post("tsum3"),
         'df_dateend'=> $df_dateend,
         'df_tarikhlawat' => $df_tarikhlawat,
         'df_tarikhdocmula' => $df_tarikhdocmula,
@@ -385,6 +388,9 @@ class Projek_model extends CI_Model{
         'dp_bulanmig' => $dp_bulanming,
         'df_hargadoc' => $df_hargadoc,
         'df_tarikhnotis' => $df_tarikhnotis,
+        'df_datelawat'=> $this->input->post("tsum1"),
+        'df_datemulajualdoc'=>$this->input->post("tsum2"),
+        'df_dateakhirjualdoc'=>$this->input->post("tsum3"),
         'df_dateend' => $df_dateend,
         'df_tarikhlawat' => $df_tarikhlawat,
         'df_tarikhdocmula' => $df_tarikhdocmula,
@@ -402,7 +408,6 @@ class Projek_model extends CI_Model{
       );
 
       $this->db->where('dp_id', $update);
-
       $this->db->update('dp_projekinfo', $data);
       //this return for inserting data from this table
   }

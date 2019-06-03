@@ -29,7 +29,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                             Kod Vot
                           </th>
                           <th>
-                          Tajuk Projek
+                           Tajuk Projek
                           </th>
                           <th>
                             No Sebutharga
@@ -38,7 +38,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                             Tarikh
                           </th>
                           <th>
-                            Jenis Sebutharga
+                            Jenis Perolehan
                           </th>
                           <th>
                             Penyelia

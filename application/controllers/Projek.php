@@ -113,13 +113,6 @@ class Projek extends CI_Controller
 
 
 
-
-
-
-
-
-
-
   public function main_projek_view($value="")
   {
     $this->load->database();

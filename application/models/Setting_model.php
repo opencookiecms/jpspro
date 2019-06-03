@@ -23,6 +23,19 @@ class Setting_model extends CI_Model{
     return $this->db->insert('mrk_keypeople',$data);
   }
 
+  public function addjawatasetting()
+  {
+     $this->load->helper('url');
+
+    $data = array(
+      'jw_jawatan' => $this->input->post("jawatan")
+   
+
+    );
+
+    return $this->db->insert('mrk_jawatan',$data);
+  }
+
 
 
   public function setslogan($id)
@@ -94,6 +107,15 @@ class Setting_model extends CI_Model{
     $this->db->select('*');
     $this->db->from('mrk_keypeople');
     $this->db->order_by('p_id');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function get_jsetting()
+  {
+    $this->db->select('*');
+    $this->db->from('mrk_jawatan');
+    $this->db->order_by('jw_id');
     $query = $this->db->get();
     return $query->result();
   }

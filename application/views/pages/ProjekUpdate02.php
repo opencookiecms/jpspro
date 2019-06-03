@@ -167,7 +167,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     </div>
                     <div class="col-sm-2">
                         <label class="tl">:</label>
-                        <input type="text" class="form-control" id="tsumone" disabled >
+                        <input type="text" value="<?php echo $get_detail[0]->df_datelawat?>" name="tsum1" class="form-control" id="tsumone" >
                     </div>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     </div>
                          <div class="col-sm-2">
                         <label class="tl">:</label>
-                        <input type="text" class="form-control" id='tsumtwo' disabled >
+                        <input type="text" name="tsum2" value="<?php echo $get_detail[0]->df_datemulajualdoc?>"  class="form-control" id='tsumtwo'>
                     </div>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     </div>
                     <div class="col-sm-2">
                         <label class="tl">:</label>
-                        <input type="text" class="form-control" id='tsumthree' disabled >
+                        <input type="text" name="tsum3" value="<?php echo $get_detail[0]->df_dateakhirjualdoc?>"  class="form-control" id='tsumthree'>
                     </div>
                   </div>
                 </div>
@@ -225,7 +225,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     </div>
                      <div class="col-sm-4">
                         <label class="tl">:</label>
-                        <input type="text" data-toggle="datepicker" name="thisisdateend" class="form-control" id='tsumfour' >
+                        <input type="text" data-toggle="datepicker" value="<?php echo $get_detail[0]->df_dateend?>" name="thisisdateend" class="form-control" id='tsumfour' >
                     </div>
                   </div>
                 </div>

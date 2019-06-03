@@ -42,7 +42,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                       Nama Projek
                     </th>
                     <th>
-                      No Sebutharga
+                      Jenis Perolehan
                     </th>
                     <th>
                       Tindakan
