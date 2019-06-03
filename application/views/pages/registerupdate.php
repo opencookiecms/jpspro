@@ -50,6 +50,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                       <option value="Pembantu Tadbir Kewangan">Pembantu Tadbir Kewangan</option>
                       <option value="Pembantu Awam">Pembantu Awam</option>
                       <option value="Pekerja AM">Pekerja AM</option>
+                      <option value="Pelukis Pelan Kanan J22">Pelukis Pelan Kanan J22</option>
+                      <option value="Pelukis Pelan JA29">Pelukis Pelan JA29></option>
                    
                    
                     </select>
