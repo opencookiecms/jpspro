@@ -184,7 +184,18 @@ word-wrap: break-word;
                className: 'btn btn-primary', 
                 customize: function(xlsx) {
                 var sheet = xlsx.xl.worksheets['sheet1.xml'];
-                $('row c[r^="E"]', sheet).attr( 's', '55' );
+               $('row c[r^="E"]', sheet).attr( 's', '55' );
+               $('row c[r*="A"]', sheet).attr( 's', '25' );
+               $('row c[r*="B"]', sheet).attr( 's', '25' );
+               $('row c[r*="C"]', sheet).attr( 's', '25' );
+               $('row c[r*="D"]', sheet).attr( 's', '25' );
+               $('row c[r*="E"]', sheet).attr( 's', '25' );
+               $('row c[r*="F"]', sheet).attr( 's', '25' );
+               $('row c[r*="G"]', sheet).attr( 's', '25' );
+               $('row c[r*="H"]', sheet).attr( 's', '25' );
+               $('row c[r*="I"]', sheet).attr( 's', '25' );
+               $('row c[r*="J"]', sheet).attr( 's', '25' );
+               $('row c[r*="K"]', sheet).attr( 's', '25' );
                 
               },
                   exportOptions: {

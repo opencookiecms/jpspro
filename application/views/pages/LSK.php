@@ -148,7 +148,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-6">
                       <label class="tl">Peruntukan:</label>
-                        <input type="text" class="form-control ts" style="font-weight:bold;" name="peruntukan" value="<?php echo $get_detail[0]->lsk_peruntukan?>">
+                        <input type="text" class="form-control ts" style="font-weight:bold;" name="peruntukan" value="<?php echo $get_detail[0]->df_kodvot ?>">
                     </div>
                   </div>
                 </div>
