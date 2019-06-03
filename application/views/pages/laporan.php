@@ -122,9 +122,9 @@ word-wrap: break-word;
                 <th></th>
                 <th></th>
                 <th></th>
-                <th><?php echo $getwaran[0]->totalwaran?> </th>
-                <th><?php echo $getbelanja[0]->totalbelanha?></th>
-                <th><?php echo $getkos[0]->totalkos?></th>
+                <th><?php echo number_format($getwaran[0]->totalwaran,2)?> </th>
+                <th><?php echo number_format($getbelanja[0]->totalbelanha,2)?></th>
+                <th><?php echo number_format($getkos[0]->totalkos,2)?></th>
                 <th><?php echo number_format($ttt,2) ?></th>
                 <th></th>
                 <th></th>
