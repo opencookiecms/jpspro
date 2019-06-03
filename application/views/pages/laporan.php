@@ -92,7 +92,7 @@ word-wrap: break-word;
                 <td><?php echo $bil ?></td>
                 <td><?php echo $row->mrks_kodvot?></td>
                 <td><?php echo $row->df_tajuk?></td>
-                <td>0.00</td>
+                <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
                 <td>
                 (1) <?php echo $row->mrk_namakon?></br>
                 (2) <?php echo $row->df_nosebutharga?></br>
