@@ -64,7 +64,8 @@ class Mrk_model extends CI_Model{
     $data = array(
       'kos_belanja'=>0, 
       'kos_tanggung'=>$this->input->post("kosprojek"),
-      'kos_nosebut'=>$this->input->post("nokon")
+      'kos_nosebut'=>$this->input->post("nokon"),
+      'kos_kodvot'=>$this->input->post("kodvodss")
     );
     return $this->db->insert('kos_projek', $data);
   }
@@ -74,7 +75,8 @@ class Mrk_model extends CI_Model{
     $data = array(
       'kos_belanja'=>0, 
       'kos_tanggung'=>$this->input->post("kosprojek"),
-      'kos_nosebut'=>$this->input->post("nokon")
+      'kos_nosebut'=>$this->input->post("nokon"),
+      'kos_kodvot'=>$this->input->post("kodvodss")
     );
     
     $this->db->where('kos_nosebut', $update);

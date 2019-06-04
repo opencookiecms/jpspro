@@ -37,6 +37,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
 
             ?>
             <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
+            <input type="hidden" name="kodvodss" value="<?php echo $get_detail[0]->df_kodvot?>">
              <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
              <input type="text" name="mrkid" value="<?php echo $get_detail[0]->mrksatuid?>">
             <div class="card" style="border-radius:10px;">
@@ -334,8 +335,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                             <div class="input-group-prepend bg-primary border-primary">
                               <span class="input-group-text bg-transparent text-white">RM</span>
                             </div>
-                            <input type="text" class="form-control ts" style="font-weight:bold;" id="kosprojek" value="<?php echo $get_detail[0]->mrk_kosprojek ?>" name="kosprojek" placeholder="RM">
-                            
+                            <input type="text" class="form-control ts" style="font-weight:bold;" id="kosprojek" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2) ?>" name="kosprojek" placeholder="RM">                         
                           </div>
                         </div>
                       </div>

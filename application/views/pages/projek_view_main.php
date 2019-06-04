@@ -21,6 +21,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                 <p class="card-description">
                   Senarai Projek
                 </p>
+                <p>
+                <a target="_blank" class="btn btn-dark"href="<?php  echo site_url('Report/laporan_kodvot/'.$get_detail[0]->df_kodvot); ?>">Laporan</a>
 
               </div>
             </div>

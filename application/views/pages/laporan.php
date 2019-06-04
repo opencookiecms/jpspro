@@ -90,7 +90,18 @@ word-wrap: break-word;
             ?>
             <tr>
                 <td><?php echo $bil ?></td>
-                <td><?php echo $row->df_kodvot?></td>
+                <td><a target="_blank" href="
+                          <?php 
+                          if($this->session->userdata('roles')=="clerk")
+                          {
+
+                          }
+                          else{
+                            echo site_url('Report/laporan_kodvot/'.$row->df_kodvot); 
+                          }
+                          ?>" >
+                          
+                          <?php echo $row->df_kodvot?></a></td>
                 <td><?php echo $row->df_tajuk?></td>
                 <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
                 <td>

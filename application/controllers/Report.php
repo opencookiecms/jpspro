@@ -152,6 +152,15 @@ class Report extends CI_Controller{
    // $this->load->view('template/footer');
   }
 
+  public function laporan_kodvot($kodvot)
+  {
+    $data['getkos']=$this->Record_model->gettotalkosprojekkodvot($kodvot);
+    $data['getbelanja']=$this->Record_model->gettotalbelanjakodvot($kodvot);
+    $data['getwaran']=$this->Record_model->gettotalwarankodvot($kodvot);
+    $data['laporan_sb']=$this->Record_model->getdetailkodvot($kodvot);
+    $this->load->view('pages/laporan',$data);
+  }
+
   public function addtext()
   {
     $this->load->view('print/apdf');
