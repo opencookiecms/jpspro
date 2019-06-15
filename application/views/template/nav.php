@@ -10,7 +10,7 @@ $ssroles = $this->session->userdata("roles");
 ?>
 <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background:#928dab;border-right:0px solid;">
     <a class="navbar-brand brand-logo" href="<?php echo site_url('mydashboard')?>">
-      <span style="color:white;">JPSKMB</span>
+      <span style="color:white;">JPSKMSB</span>
     </a>
     <a class="navbar-brand brand-logo-mini" href="index.html">
       <img src="<?php echo base_url() ?>assets/staradmin/images/logo-mini.svg" alt="logo" />
