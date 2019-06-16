@@ -43,7 +43,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                 <i class="mdi mdi-cube text-warning icon-lg"></i>
               </div>
               <div class="float-right">
-                <p class="mb-0 text-right">Dokuemen</p>
+                <p class="mb-0 text-right">Dokumen</p>
                 <div class="fluid-container">
                   <h3 class="font-weight-medium text-right mb-0">MRK 02</h3>
                 </div>
