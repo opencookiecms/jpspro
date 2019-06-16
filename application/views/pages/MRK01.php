@@ -250,28 +250,6 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                           <select type="text" class="form-control ts" style="font-weight:bold;" id="khusus" placeholder="khusus" name="khusus">
                             <option value="<?php echo $get_detail[0]->mrk_khusus ?>"><?php echo $get_detail[0]->mrk_khusus ?></option>
                             <option value="CE 02">CE 02 | Pembinaan Jambatan & Jeti</option>
-                            <option value="CE 04">CE 04 | Empangan</option>
-                            <option value="CE 06">CE 06 | Struktur saliran, pengairan dan kawalan banjir</option>
-                            <option value="CE 12">CE 12 | Kerja penyiasatan tanah</option>
-                            <option value="CE 13">CE 13 | Pemasangan papan iklan</option>
-                            <option value="CE 14">CE 14 | Landskap di luar bangunan</option>
-                            <option value="CE 21">CE 21 | Pembinaan kejuruteraan awam</option>
-                            <option value="CE 26">CE 26 | Struktur berukir (Sculptured structures)</option>
-                            <option value="CE 32">CE 32 | Kerja-kerja penyenggaraan kejuruteraan awam</option>
-                            <option value="CE 33">CE 33 | Telaga tiub</option>
-                            <option value="CE 36">CE 36 | Kerja-kerja tanah</option>
-                            <option value="M 01">M 01 | Sistem hawa dingin dan pengedaran udara</option>
-                            <option value="M 15">M 15 | Kelengkapan mekanikal pelbagai</option>
-                            <option value="M 20">M 20 | Penyelengaraan am mekanikal</option>
-                            <option value="M 22">M 22 | Sistem pam</option>
-                            <option value="M 23">M 23 | Sistem SCADA dan telemetri</option>
-                            <option value="E 02">E 02 | Sistem pengawasan dan keselamatan</option>
-                            <option value="E 07">E 07 | Sistem telekomunikasi dalaman</option>
-                            <option value="E 14">E 14 | Kabel rangkaian komputer</option>
-                            <option value="B 04">B 04 | Kerja-kerja Pembinaan bangunan</option>
-                            <option value="B 05">B 05 | Kerja cerucuk</option>
-                            <option value="B 07">B 07 | Hiasan dalaman</option>
-                            <option value="B 10">B 10 | Sistem paip air dalaman</option>
                           </select>
                         </div>
                       </div>
@@ -301,9 +279,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                       <div class="form-group row">
                         <div class="col-sm-4">
-
                           <?php
-                            
                              $ssroles = $this->session->userdata("roles");
                              if($ssroles == "admin")
                              {

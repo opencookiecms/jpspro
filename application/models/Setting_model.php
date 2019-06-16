@@ -316,4 +316,25 @@ class Setting_model extends CI_Model{
      return $this->db->insert('jps_sungai',$data);
   }
 
+  public function get_kkode()
+  {
+    $this->db->select('*');
+    $this->db->from('mrk_khusus');
+    $this->db->order_by('ks_id');
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function addkhususset()
+  {
+    $this->load->helper('url');
+
+    $data = array(
+      'ks_kscode' => $this->input->post("kkode"),
+      'ks_ksname' => $this->input->post("kname")
+    );
+
+    return $this->db->insert('mrk_khusus',$data);
+  }
+
 }
