@@ -289,7 +289,7 @@ class Projek_model extends CI_Model{
        $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
        $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
        $this->db->where('dp_projekinfo.df_kodvot', $y);
-       $this->db-where('dp_projekinfo.df_penolong',$x);
+       $this->db->where('dp_projekinfo.df_penolong',$x);
        $query = $this->db->get();
 
        return $query->result();
