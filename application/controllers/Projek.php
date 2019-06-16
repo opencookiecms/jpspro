@@ -129,7 +129,7 @@ class Projek extends CI_Controller
     }
     else
     {
-      $data['get_detail']=$this->Projek_model->get_projekdetailss($value);
+      $data['get_detail']=$this->Projek_model->get_projekdetail($value);
     }
 
    
