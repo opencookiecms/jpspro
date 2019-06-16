@@ -119,10 +119,23 @@ class Projek extends CI_Controller
     $this->load->view('template/header');
     $this->load->view('template/nav');
     $this->load->view('template/sidebar');
+    ///////////////
 
-    $data['get_detail']=$this->Projek_model->get_projekdetail($value);
+    if($this->session->userdata('roles')=='user')
+    {
+    
+      $username = $this->session->userdata('name');
+      $data['get_detail']=$this->Projek_model->get_projekdetailss($username,$value);
+    }
+    else
+    {
+      $data['get_detail']=$this->Projek_model->get_projekdetailss($value);
+    }
+
+   
     $this->load->view('pages/projek_view_main',$data);
-    $this->load->view('template/footer');
+    $this->load->view('template/footer'); 
+
   }
 
   public function view_data($value="")
