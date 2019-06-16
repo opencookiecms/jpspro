@@ -135,7 +135,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="col-md-12">
                     <div class="form-group row">
                       <label class="col-sm-4 col-form-label tl">Kemajuan Kerja Mengikut Jadual : %</label>
-                      <div class="col-sm-1">
+                      <div class="col-sm-2">
                             <input type="text" class="form-control ts" style="font-weight:bold;" id="ikutjadual" value="<?php echo $get_detail[0]->mrk_majukerja ?>" name="ikutjadual">
                           </div>
                         </div>
