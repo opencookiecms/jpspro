@@ -155,6 +155,7 @@ class Setting_con extends CI_Controller{
     {
 
         $data['get_user']=$this->Setting_model->get_userdatasetting();
+        $data['get_jawatan'] = $this->Setting_model->getjawatan();
         $this->load->view('template/header');
         $this->load->view('template/nav');
         $this->load->view('template/sidebar');

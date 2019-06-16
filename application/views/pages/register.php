@@ -41,7 +41,11 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                     <label>Jawatan</label>
                     <select type="text" class="form-control" id="jawatan" name="jawatan">
                       <option value=""></option>
-                      <option value="Jurutera Awan">Jurutera Awam</option>
+                      <?php foreach ($get_jawatan as $row):?>
+                       <option value="<?php echo $row->jw_jawatan?>"><?php echo $row->jw_jawatan?></option>  
+
+                      <?php endforeach; ?>
+                      <!-- <option value="Jurutera Awan">Jurutera Awam</option>
                       <option value="Jurutera">Jurutera</option>
                       <option value="Penolong Jurutera">Penolong Jurutera</option>
                       <option value="Pegawai">Pegawai</option>
@@ -51,7 +55,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                       <option value="Pembantu Awam">Pembantu Awam</option>
                       <option value="Pekerja AM">Pekerja AM</option>
                       <option value="Pelukis Pelan Kanan J22">Pelukis Pelan Kanan J22</option>
-                      <option value="Pelukis Pelan JA29">Pelukis Pelan JA29</option>
+                      <option value="Pelukis Pelan JA29">Pelukis Pelan JA29</option> -->
                    
                    
                     </select>
