@@ -247,12 +247,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <label class="tl">Jawatan</label>
                     <select type="text" class="form-control ts" style="font-weight:bold;" id="jawatan2" name="jawatan2">
                       <option value="<?php echo $get_detail[0]->lsk_jawatanjuruteraj?>"><?php echo $get_detail[0]->lsk_jawatanjuruteraj?></option>
-                      <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
-                      <option value="Penolong Jurutera Kanan JA36">Penolong Jurutera Kanan JA36</option>
+                  
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
                       <option value="Jurutera ( Baling )">Jurutera ( Baling )</option>
                       <option value="Jurutera Daerah">Jurutera Daerah</option>
-                      <option value="Penolong Jurutera JA38">Penolong Jurutera JA38</option>
+                   
                     </select>
                   </div>
                 </div>
@@ -274,12 +273,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <label class="tl">Jawatan</label>
                     <select type="text" class="form-control ts" style="font-weight:bold;" id="jawatan3" name="jawatan3">
                       <option value="<?php echo $get_detail[0]->lsk_jawatanjuruterad?>"><?php echo $get_detail[0]->lsk_jawatanjuruterad?></option>
-                      <option value="Penolong Jurutera JA29">Penolong Jurutera JA29</option>
-                      <option value="Penolong Jurutera JA36">Penolong Jurutera JA36</option>
+                      <option value="Jurutera Daerah">Jurutera Daerah</option>
                       <option value="Jurutera ( Kuala Muda/Sik )">Jurutera ( Kuala Muda/Sik )</option>
                       <option value="Jurutera ( Baling )">Jurutera ( Baling )</option>
-                      <option value="Jurutera Daerah">Jurutera Daerah</option>
-                      <option value="Penolong Jurutera JA38">Penolong Jurutera JA38</option>
+                   
+                     
                     </select>
                   </div>
                 </div>
@@ -290,12 +288,23 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               <div class="col-md-12">
                 <div class="form-group row">
                   <div class="col-sm-6">
-                    <label class="tl">W/C Perkeso</label>
+                    <label class="tl">Perkeso / Workmen's</label>
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="perkeso" name="perkeso" value="<?php echo $get_detail[0]->lsk_perkeso?>">
                   </div>
                   <div class="col-sm-6">
                     <label class="tl">Public Liability</label>
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="publiability" name="publiability" value="<?php echo $get_detail[0]->lsk_liability?>">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <div class="col-sm-6">
+                    <label class="tl">Insuran Kerja</label>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="perkeso" name="insurankerja" value="<?php echo $get_detail[0]->lsk_perkeso?>">
                   </div>
                 </div>
               </div>
