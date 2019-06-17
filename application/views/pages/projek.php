@@ -99,16 +99,16 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                         $tt = 41 - $b;
                         
                         $per = $tt/41 * 100;
-                        if(number_format($per) <= 35)
+                        if(number_format($per) <= 45)
                         {
                           $color = "danger";
                         }
                      
-                        elseif(number_format($per)<50)
+                        elseif(number_format($per)>45 and number_format($per) <=75)
                         {
                           $color="primary";
                         }
-                        elseif(number_format($per)>=80)
+                        elseif(number_format($per)>75)
                         {
                           $color="success";
                         }
