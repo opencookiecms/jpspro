@@ -86,7 +86,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <th>
                             Pemilik
                           </th>
-                          <th>Maklumat Projek</th>
+                          <th>Maklumat Perolehan</th>
                           <th>
                             Tindakan
                           </th>
