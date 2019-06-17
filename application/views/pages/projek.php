@@ -11,8 +11,6 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
               </span>
             </div>
           </div>
-
-
           <div class="row">
             <div class="col-lg-12 grid-margin">
               <div class="card" style="border-radius:10px;">
@@ -31,6 +29,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <th>
                            Tajuk Projek
                           </th>
+                          <th>Kemajuan Borang</th>
                           <th>
                             No Sebutharga
                           </th>
@@ -52,7 +51,69 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                       <tbody>
                         <?php $bil=0;?>
                         <?php foreach ($get_projek as $row): $bil++?>
-
+                        <?php
+                        $tbox = 41;
+                        $box = [$row->df_nosebutharga,
+                                $row->df_tarikmohon,
+                                $row->df_jsebutharga,
+                                $row->df_tajuk,
+                                $row->df_daerah,
+                                $row->df_gred,
+                                $row->df_kategori,
+                                $row->df_khusus1,
+                                $row->df_khusus2,
+                                $row->df_khusus3,
+                                $row->df_taraf,
+                                $row->df_tempohsiap,
+                                $row->dp_bulanmig,
+                                $row->df_hargadoc,
+                                $row->df_tarikhnotis,
+                                $row->df_datelawat,
+                                $row->df_datemulajualdoc,
+                                $row->df_dateakhirjualdoc,
+                                $row->df_dateend,
+                                $row->df_tarikhlawat,
+                                $row->df_tarikhdocmula,
+                                $row->df_tarikhdocakhir,
+                                $row->df_tarikhtutup,
+                               $row->df_juruterad,
+                               $row->df_jurutera,
+                               $row->df_penolongkanan,
+                               $row->df_penolong,
+                               $row->df_kodvot,
+                               $row->df_peruntukan,
+                               $row->df_bakiperuntukan,
+                               $row->dp_lata,
+                               $row->dp_latb,
+                               $row->dp_latc,
+                               $row->dp_longa,
+                              $row->dp_longb,
+                              $row->dp_longc,
+                              $row->dp_sungai,
+                              $row->dp_sistem,
+                              $row->dp_subsistem,
+                              $row->dp_komponen,
+                              $row->dp_dimensi,
+                        ];
+                        $b= count($box) - count(array_filter($box)); 
+                        $tt = 41 - $b;
+                        
+                        $per = $tt/41 * 100;
+                        if(number_format($per) <= 35)
+                        {
+                          $color = "danger";
+                        }
+                     
+                        elseif(number_format($per)<50)
+                        {
+                          $color="primary";
+                        }
+                        elseif(number_format($per)>=80)
+                        {
+                          $color="success";
+                        }
+                   
+                        ?>
                          <tr>
                           <td class="py-1"><?php echo $bil?></td>
                           <td class="py-1"><a href="
@@ -68,6 +129,13 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           
                           <?php echo $row->df_kodvot?></a></td> <!--Show data in list view-->
                           <td style="white-space: normal !important;word-wrap: break-word;min-width: 250px;max-width: 250px;"><?php echo $row->df_tajuk?></td>
+                          <td>
+                          <div class="progress" style="height:12px;">
+                          <?php echo '<div class="progress-bar bg-'.$color.' progress-bar-striped" role="progressbar" style="width:'.number_format($per,1).'%" aria-valuenow="'.number_format($per).'" aria-valuemin="0" aria-valuemax="100"></div>' ?>
+                            <?php echo number_format($per,1)."%";?>
+                          </div>
+                        
+                          </td>
                           <td class="py-1"><?php echo $row->df_nosebutharga?></td>
                           <td class="py-1"><?php echo $row->df_tarikmohon?></td>
                           <td class="py-1"><?php echo $row->df_jsebutharga?></td>

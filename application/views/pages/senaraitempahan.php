@@ -59,7 +59,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                 }
                  
                 ?>
-              
+           
 
                 <a href="<?php echo site_url('daftar/senarai_tempahan')?>" class="<?php echo $semua?>" role="button">Semua</a>
                 <a href="<?php echo site_url('daftar/senarai_tempahan_sebutharga')?>" class="<?php echo $sebutharga?>" role="button">Sebutharga</a>
@@ -86,6 +86,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <th>
                             Pemilik
                           </th>
+                          <th>Maklumat Projek</th>
                           <th>
                             Tindakan
                           </th>
@@ -93,15 +94,26 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                       </thead>
                       <tbody>
                         <?php $bil=0;?>
-                        <?php foreach ($get_list as $row): $bil++?>
 
+                        <?php foreach ($get_list as $row): $bil++?>
+                       
                          <tr>
                           <td class="py-1"><?php echo $bil?></td>
                           <td class="py-1"><?php echo $row->no_sebutharga?></td>
                           <td class="py-1"><?php echo $row->no_tarikh?></td>
                            <td class="py-1"><?php echo $row->no_jenis?></td>
                           <td class="py-1"><?php echo $row->no_pemilik?></td>
-
+                    
+                          <td>
+                        
+                          <?php if($row->df_nosebutharga == $row->no_sebutharga):?>
+                          <img src='<?php echo base_url() ?>/assets/images/success.png' alt='error'>
+                          <?php else:?>
+                          <img src='<?php echo base_url() ?>/assets/images/error.png' alt='error'>
+                          <?php endif;?>
+                        
+                          </td>
+                   
                           <td class="py-1">
                            <?php $ur = $this->session->userdata('roles');?>
                           <?php if($ur == "admin"): ?>
@@ -118,8 +130,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                         
                         </td>
                         </tr>
-
-                      <?php endforeach; ?>
+                         <?php endforeach; ?>
+                  
                       </tbody>
                     </table>
 

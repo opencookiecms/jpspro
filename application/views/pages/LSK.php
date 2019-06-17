@@ -292,7 +292,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="perkeso" name="perkeso" value="<?php echo $get_detail[0]->lsk_perkeso?>">
                   </div>
                   <div class="col-sm-6">
-                    <label class="tl">Public Liability</label>
+                      <label class="tl">Public Liability</label>
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="publiability" name="publiability" value="<?php echo $get_detail[0]->lsk_liability?>">
                   </div>
                 </div>

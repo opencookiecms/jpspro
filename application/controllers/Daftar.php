@@ -36,6 +36,7 @@ class Daftar extends CI_Controller{
     $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
 
     $data['get_list']=$this->Projek_model->listOrder();
+    //$data['get_check']=$this->Projek_model->verifytempahan();
     $this->load->view('template/header');
     $this->load->view('template/nav',$profile);
     $this->load->view('template/sidebar');

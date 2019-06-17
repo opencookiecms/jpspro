@@ -31,6 +31,7 @@ class Projek_model extends CI_Model{
   {
     $this->db->select('*');
     $this->db->from('order_nsh');
+    $this->db->join('dp_projek','dp_projek.df_nosebutharga=order_nsh.no_sebutharga','left');
     $query = $this->db->get();
 
     return $query->result();
@@ -575,6 +576,15 @@ class Projek_model extends CI_Model{
   {
     $this->db->where('dp_id', $id);
     $this->db->delete('dp_gps');
+  }
+
+  public function verifytempahan()
+  {
+      $this->db->select('*');
+      $this->db->from('dp_projek');
+      $this->db->join('order_nsh', 'dp_projek.df_nosebutharga = order_nsh.no_sebutharga');
+      $query = $this->db->get();
+      return $query->result();
   }
 
 
