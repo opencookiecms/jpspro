@@ -41,6 +41,7 @@ class Projek_model extends CI_Model{
   {
     $this->db->select('*');
     $this->db->from('order_nsh');
+    $this->db->join('dp_projek','dp_projek.df_nosebutharga=order_nsh.no_sebutharga','left');
     $this->db->where('no_jenis',$tempahan);
     $query = $this->db->get();
 
