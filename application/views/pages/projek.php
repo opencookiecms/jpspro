@@ -131,7 +131,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <td style="white-space: normal !important;word-wrap: break-word;min-width: 250px;max-width: 250px;"><?php echo $row->df_tajuk?></td>
                           <td>
                           <div class="progress" style="height:12px;">
-                          <?php echo '<div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width:'.number_format($per,1).'%" aria-valuenow="'.number_format($per).'" aria-valuemin="0" aria-valuemax="100"></div>' ?>
+                          <?php echo '<div class="progress-bar bg-'.$color.' progress-bar-striped" role="progressbar" style="width:'.number_format($per,1).'%" aria-valuenow="'.number_format($per).'" aria-valuemin="0" aria-valuemax="100"></div>' ?>
                             <?php echo number_format($per,1)."%";?>
                           </div>
                         
