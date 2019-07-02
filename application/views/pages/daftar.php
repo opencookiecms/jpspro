@@ -86,7 +86,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
 
              
                 <div class="card-body">
-                  <h5 class="card-title mb-4"> <small class="mb-1 mr-2 text-primary" style="font-weight:bold;font-size:14px;">Papan Keyataan</small> : Senarai Kenyataan Tawaran Sebutharga </h5>
+                  <h5 class="card-title mb-4"> <small class="mb-1 mr-2 text-primary" style="font-weight:bold;font-size:14px;">Papan Kenyataan</small> : Senarai Kenyataan Tawaran Sebutharga </h5>
                 
                 
                  <?php foreach ($get_projek as $row):?>               
