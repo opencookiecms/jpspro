@@ -7,7 +7,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
           <div class="row purchace-popup">
             <div class="col-12">
               <span class="d-block d-md-flex align-items-center">
-                <p class="tls text-white">Senarai Maklumat No Perolehan</p>
+                <p class="tls text-white">Senarai Maklumat Perolehan</p>
               </span>
             </div>
           </div>
@@ -84,9 +84,9 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                             Kaedah Perolehan
                           </th>
                           <th>
-                            Pemilik
+                            Pengawai Penyelia
                           </th>
-                          <th>Maklumat Perolehan</th>
+                          <th>Maklumat <br><br>(Lengkap/Tidak Lengkap)</th>
                           <th>
                             Tindakan
                           </th>

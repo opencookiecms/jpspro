@@ -37,7 +37,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <input type="hidden" readonly class="form-control" name="hiddenid"  value="<?php echo $get_detail[0]->projek_id?>">
                       <small id="nsebutharga" class="form-text text-muted">Sila isi no sebutharga mengikut spefikasi yang telah diberikan.</small>
                     </div>
-                    <div class="col-sm-3">
+                     <div class="col-sm-3">
                       <label class="tl">Tarikh :</label>
                       <input type="date" class="form-control" name="tarikhmohon"placeholder="Tarikh Permohonan" value="<?php echo $get_detail[0]->df_tarikmohon?>">
                     </div>
@@ -85,6 +85,17 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   </div>
                 </div>
               </div>
+                   <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <div class="col-sm-3">
+                            <label class="tl">Pegawai Penyelia:</label>
+                            <input type="text" class="form-control" name="dpselia" id="selia">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">

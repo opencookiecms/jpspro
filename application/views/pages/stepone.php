@@ -156,6 +156,16 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <div class="col-md-12">
                         <div class="form-group row">
                           <div class="col-sm-3">
+                            <label class="tl">Pegawai Penyelia:</label>
+                            <input type="text" class="form-control" name="dpselia" id="selia">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <div class="col-sm-3">
                             <button type="submit" name="submit" class="btn btn-success mr-2 btn-rounded ">Simpan</button>
                           </div>
                         </div>
@@ -173,12 +183,14 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
 
                       var currow = $(this).closest('tr');
                       var col1 = currow.find('td:eq(2)').text();
+                      var selia = currow.find('td:eq(3)').text();
                       var jenis = currow.find('td:eq(5)').text();
                       var tmohon = currow.find('td:eq(4)').text();
 
                       var result = col1;
                       //var result2 = col2;
                       $("#nosebuts").val(result);
+                      $("#selia").val(selia);
                       $('#jenissebut').val(jenis);
                       $('#tmohon').val(tmohon);
                     })

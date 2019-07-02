@@ -86,7 +86,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
 
              
                 <div class="card-body">
-                  <h5 class="card-title mb-4">Tarikh Sebutharga Ditutup </h5>
+                  <h5 class="card-title mb-4"> <small class="mb-1 mr-2 text-primary" style="font-weight:bold;font-size:14px;">Papan Keyataan</small> : Senarai Kenyataan Tawaran Sebutharga </h5>
                 
                 
                  <?php foreach ($get_projek as $row):?>               
@@ -108,11 +108,11 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                         <div class="row text-gray d-md-flex d-none">
                           <div class="col-4 d-flex">
                                   
-                            <small class="mb-0 mr-2 text-dark" style="font-weight:bold;font-size:14px;">Tarik Mula :</small>
+                            <small class="mb-0 mr-2 text-dark" style="font-weight:bold;font-size:14px;">Tarik Pamer :</small>
                             <small class="Last-responded mr-2 mb-0 text-primary" style="font-weight:bold;font-size:14px;"><?php echo date('d/m/Y', strtotime ($row->df_tarikhnotis))?> </small>
                           </div>
                           <div class="col-4 d-flex">
-                            <small class="mb-1 mr-2 text-dark" style="font-weight:bold;font-size:14px;">Tarikh Akhir :</small>
+                            <small class="mb-1 mr-2 text-dark" style="font-weight:bold;font-size:14px;">Tarikh Tutup :</small>
                             <small class="Last-responded mr-2 mb-0 text-danger" style="font-weight:bold;font-size:14px;"><?php echo date('d/m/Y', strtotime ($row->df_dateend))?> </small>
                           </div>
                         </div>
