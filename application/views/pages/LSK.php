@@ -304,7 +304,11 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                   <div class="col-sm-6">
                     <label class="tl">Insuran Kerja</label>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="perkeso" name="insurankerja" value="<?php echo $get_detail[0]->lsk_perkeso?>">
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="insurans" name="insurankerja" value="<?php echo $get_detail[0]->lsk_insurans?>">
+                  </div>
+                 <div class="col-sm-6">
+                    <label class="tl">All Risk</label>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="allrisk" name="allrisk" value="<?php echo $get_detail[0]->lsk_allrisk?>">
                   </div>
                 </div>
               </div>

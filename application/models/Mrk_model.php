@@ -187,6 +187,7 @@ class Mrk_model extends CI_Model{
     $mrk_jawatanjuruterad = $this->input->post('jawatan3');
     $mrk_perkeso = $this->input->post('perkeso');
     $mrk_insurans = $this->input->post('insurankerja');
+    
     $mrk_liability = $this->input->post('publiability');
     $mrk_hiddenid = $this->input->post('hiddenid');
 
@@ -214,6 +215,7 @@ class Mrk_model extends CI_Model{
       'lsk_perkeso' => $mrk_perkeso,
       'lsk_insurans' => $mrk_insurans,
       'lsk_liability' => $mrk_liability,
+      'lsk_allrisk'=>$this->input->post('allrisk'),
       'lskmrksatuid' =>$mrk_hiddenid
     );
 
@@ -828,6 +830,7 @@ class Mrk_model extends CI_Model{
       'lsk_jawatanjuruterad' => $mrk_jawatanjuruterad,
       'lsk_perkeso' => $mrk_perkeso,
       'lsk_insurans'=> $mrk_insurans,
+      'lsk_allrisk'=>$this->input->post('allrisk'),
       'lsk_liability' =>$mrk_liability,
       'lskmrksatuid' =>$mrk_hiddenid
 

@@ -249,7 +249,10 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                           <label class="tl">Pengkhususan</label>
                           <select type="text" class="form-control ts" style="font-weight:bold;" id="khusus" placeholder="khusus" name="khusus">
                             <option value="<?php echo $get_detail[0]->mrk_khusus ?>"><?php echo $get_detail[0]->mrk_khusus ?></option>
-                            <option value="CE 02">CE 02 | Pembinaan Jambatan & Jeti</option>
+                               <?php foreach($getkhusus as $k){ ?>
+                        <option value="<?php echo $k->ks_kscode ?>"><?php echo $k->ks_kscode.'-'.$k->ks_ksname?></option>';
+                      <?php } ?>
+
                           </select>
                         </div>
                       </div>
@@ -311,7 +314,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                             <div class="input-group-prepend bg-primary border-primary">
                               <span class="input-group-text bg-transparent text-white">RM</span>
                             </div>
-                            <input type="text" class="form-control ts" style="font-weight:bold;" id="kosprojek" value="<?php echo number_format($get_detail[0]->mrk_kosprojek,2) ?>" name="kosprojek" placeholder="RM">                         
+                            <input type="text" class="form-control ts" style="font-weight:bold;" id="kosprojek" value="<?php echo $get_detail[0]->mrk_kosprojek ?>" name="kosprojek" placeholder="RM">                         
                           </div>
                         </div>
                       </div>

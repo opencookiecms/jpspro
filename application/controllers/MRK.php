@@ -61,6 +61,7 @@ class MRK extends CI_Controller{
 			$data['get_usersetting']=$this->Setting_model->get_Datasetting();
 			$data['get_allkontraktor']=$this->Mrk_model->getAllDataKon();
 			$data['get_detail']=$this->Mrk_model->get_projectdetailformrk01($value);
+			$data['getkhusus'] = $this->Setting_model-> get_kkode();
 			$this->load->view('template/header');
 			$this->load->view('template/nav');
 			$this->load->view('template/sidebar');
@@ -116,7 +117,7 @@ class MRK extends CI_Controller{
 	public function LSK($value="")
 	{
 		$this->load->database();
-	  $data['get_keypeople']=$this->Setting_model->get_Datasetting();
+	    $data['get_keypeople']=$this->Setting_model->get_Datasetting();
 		$lass = $this->input->post('hiddensub');
 		$data['get_detail']=$this->Mrk_model->get_projectdetailforLSK($value);
 		$this->form_validation->set_rules('nopkk', 'No Pendaftaran PKK', 'required');
@@ -133,7 +134,7 @@ class MRK extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->create_laporansiapkerja();
-		  $this->Mrk_model->update_kosprojek02($data ,$this->input->post('nosebut'));//load from model and call last id
+		    $this->Mrk_model->update_kosprojek02($data ,$this->input->post('nosebut'));//load from model and call last id
 			$this->session->set_userdata('lsk','Data Laporan Siap Kerja berjaya disimpan');
 			redirect(base_url('mrk/LSK/'.$lass)); //redirect last id to another step
 		}

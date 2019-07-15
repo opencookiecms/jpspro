@@ -420,4 +420,30 @@ class Setting_con extends CI_Controller{
 		}
   }
 
+
+  public function pengkhususan()
+  {
+
+    $this->load->database();
+    $this->form_validation->set_rules('kod', 'Kod Pengkususan','required');
+    if($this->form_validation->run() === FALSE)
+    {
+
+        $data['get_khusus']=$this->Setting_model->get_pengkhususan();
+        $this->load->view('template/header');
+        $this->load->view('template/nav');
+        $this->load->view('template/sidebar');
+        $this->load->view('pages/pengkhususan',$data);
+        $this->load->view('template/footer');
+     
+   
+    }
+    else
+    {
+      $this->Setting_model->get_insertkhusus();
+      redirect('Setting_con/pengkhususan');
+    }
+
+  }
+
 }
