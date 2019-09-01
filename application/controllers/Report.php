@@ -157,7 +157,7 @@ class Report extends CI_Controller{
   {
 
     $years = $this->input->post('year');
-    echo $years;
+    $data['y'] = $years;
     //$this->load->view('template/header');
     //$this->load->view('template/nav');
     //$this->load->view('template/sidebar');

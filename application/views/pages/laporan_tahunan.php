@@ -60,6 +60,7 @@ word-wrap: break-word;
     <!-- Begin page content -->
     <main role="main" class="container">
     <div class="mt-5"></div>
+    <h5>Laporan Tahun : <?php echo $y ?></h5>
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
@@ -74,7 +75,7 @@ word-wrap: break-word;
                 <th>Perbelanjaan (B)</th>
                 <th>Tanggungan (C)</th>
                 <th>Baki</th>
-                <th>Perbelanjaan<br> Sehingga<br> 2019</th>
+                <th>Perbelanjaan<br> Sehingga<br><?php echo $y ?></th>
                 <th>Kemajuan Projek</th>
             </tr>
         </thead>
