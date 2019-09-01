@@ -142,6 +142,7 @@ word-wrap: break-word;
             </tr>
         </tfoot>
     </table>
+    
     </main>
     <script>
     $(document).ready(function(){   

@@ -36,10 +36,52 @@ class Record_model extends CI_Model{
 
   }
 
+
+  public function getdetailbyyear($y)
+  {
+    $this->load->helper('url');
+
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+    $this->db->join('mrk_satu','mrk_satu.mrk_nokontrak = dp_projek.df_nosebutharga','left');
+    $this->db->join('mrk_laporansiap','mrk_laporansiap.lskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_dua','mrk_dua.mrksatu_id = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiap','mrk_perakuansiap.pskmrksatuid = mrk_satu.mrksatuid ','left' );
+    $this->db->join('mrk_perakuansiapbaikicacat','mrk_perakuansiapbaikicacat.mrkid_id =mrk_satu.mrksatuid ','left');
+    $this->db->join('mrk_jaminanbank','mrk_jaminanbank.js_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('mrk_ppwjp','mrk_ppwjp.ppwjp_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('mrk_suratmrk', 'mrk_suratmrk.s_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('mrk_suratkhas', 'mrk_suratkhas.skhas_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('mrk_suratwjp', 'mrk_suratwjp.swjp_mrkid=mrk_satu.mrksatuid','left');
+    $this->db->join('kos_projek', 'kos_projek.kos_nosebut=mrk_satu.mrk_nokontrak','left');
+    $this->db->where('year(dp_projek.df_tarikmohon)',$y);
+    $this->db->order_by('dp_projekinfo.df_kodvot');
+
+
+    $query = $this->db->get();
+
+    return $query->result();
+
+  }
+
   public function gettotalbelanja()
   {
     $this->db->select('SUM(kos_belanja) AS totalbelanha');
     $this->db->from('kos_projek');
+
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  //filter by years
+
+  public function gettotalbelanjabyyear($y)
+  {
+    $this->db->select('SUM(kos_belanja) AS totalbelanha');
+    $this->db->from('kos_projek');
+    $this->db->like('kos_nosebut',$y);
 
     $query = $this->db->get();
 
@@ -56,11 +98,37 @@ class Record_model extends CI_Model{
     return $query->result();
   }
 
+  //filter by years
+  public function gettotalwaranbyyear($y)
+  {
+    $this->db->select('SUM(df_bakiperuntukan) AS totalwaran');
+    $this->db->from('dp_projekinfo');
+    $this->db->join('dp_projek', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+    $this->db->where('year(dp_projek.df_tarikmohon)',$y);
+
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
 
   public function gettotalkosprojek()
   {
     $this->db->select('SUM(kos_tanggung) AS totalkos');
     $this->db->from('kos_projek');
+
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+  //filter by years
+
+  public function gettotalkosprojekbyyear($y)
+  {
+    $this->db->select('SUM(kos_tanggung) AS totalkos');
+    $this->db->from('kos_projek');
+    $this->db->like('kos_nosebut',$y);
 
     $query = $this->db->get();
 

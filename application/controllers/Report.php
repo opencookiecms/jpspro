@@ -152,6 +152,42 @@ class Report extends CI_Controller{
    // $this->load->view('template/footer');
   }
 
+
+  public function Laporan_Tahunan()
+  {
+
+    $years = $this->input->post('year');
+    echo $years;
+    //$this->load->view('template/header');
+    //$this->load->view('template/nav');
+    //$this->load->view('template/sidebar');
+    $data['getkos']=$this->Record_model->gettotalkosprojekbyyear($years);
+    $data['getbelanja']=$this->Record_model->gettotalbelanjabyyear($years);
+    $data['getwaran']=$this->Record_model->gettotalwaranbyyear($years);
+    $data['laporan_sb']=$this->Record_model->getdetailbyyear($years);
+    $this->load->view('pages/laporan_tahunan',$data);
+   // $this->load->view('template/footer');
+  }
+
+  public function Laporan_Tahunan_c()
+  {
+    $data['title'] = "Laporan Mengikut Tahun";
+    $this->form_validation->set_rules('nosebutharga','No Sebutharga / No Tempahan Diperlukan','required');
+
+    if($this->form_validation->run()===FALSE)
+    {
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/laporan_tahunan_c',$data);
+      $this->load->view('template/footer');
+    }
+    else{
+      $this->projek_model->createOrder();
+      redirect(base_url('projek/'));
+    }
+  }
+
   public function laporan_kodvot($kodvot)
   {
     $data['getkos']=$this->Record_model->gettotalkosprojekkodvot($kodvot);

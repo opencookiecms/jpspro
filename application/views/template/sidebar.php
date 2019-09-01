@@ -78,6 +78,24 @@
               </ul>
             </div>
           </li>
+
+           <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basics" aria-expanded="false" aria-controls="ui-basic">
+              <i class="menu-icon mdi  mdi-source-fork"></i>
+              <span class="menu-title">Laporan</span>
+                <i class="menu-arrow"></i>
+            </a>
+             <div class="collapse" id="ui-basics">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="<?php echo site_url('Report/Laporan')?>">Laporan Tahunan Semasa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('Report/Laporan_Tahunan_C')?>">Laporan Tahunan</a>
+                </li>
+              </ul>
+            </div>
+          </li>
        
    
           <li class="nav-item">
@@ -86,12 +104,9 @@
               <span class="menu-title">Dokumen Bayaran</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('Report/Laporan')?>" target="_blank">
-              <i class="menu-icon mdi mdi-sticker"></i>
-              <span class="menu-title">Laporan</span>
-            </a>
-          </li>
+
+  
+       
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('Setting_con')?>">
               <i class="menu-icon mdi mdi-math-compass"></i>
@@ -144,6 +159,24 @@
               </ul>
             </div>
           </li>
+
+           <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basics" aria-expanded="false" aria-controls="ui-basic">
+              <i class="menu-icon mdi  mdi-source-fork"></i>
+              <span class="menu-title">Laporan</span>
+                <i class="menu-arrow"></i>
+            </a>
+             <div class="collapse" id="ui-basics">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="<?php echo site_url('Report/Laporan')?>">Laporan Tahunan Semasa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('Report/Laporan_Tahunan_C')?>">Laporan Tahunan</a>
+                </li>
+              </ul>
+            </div>
+          </li>
        
    
           <li class="nav-item">
@@ -152,12 +185,8 @@
               <span class="menu-title">Dokumen Bayaran</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('Report/Laporan')?>" target="_blank">
-              <i class="menu-icon mdi mdi-sticker"></i>
-              <span class="menu-title">Laporan</span>
-            </a>
-          </li>
+ 
+    
       
           <?php break; ?>
 
