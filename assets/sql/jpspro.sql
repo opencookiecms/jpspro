@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 27, 2019 at 06:31 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.0.32
+-- Host: 127.0.0.1
+-- Generation Time: Sep 22, 2019 at 09:56 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 5.6.39
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -49,7 +49,48 @@ CREATE TABLE `dp_gps` (
 --
 
 INSERT INTO `dp_gps` (`gps_id`, `dp_lata`, `dp_latb`, `dp_latc`, `dp_longa`, `dp_longb`, `dp_longc`, `dp_sungai`, `dp_sistem`, `dp_subsistem`, `dp_komponen`, `dp_dimensi`, `dp_id`) VALUES
-(19, 4, 4, 4, 4, 4, 4, '  Alor Ekor Padang', 2, 3, 4, '232.222D', 35);
+(24, 15, 45, 30, 80, 15, 15, '  Sg. Gurun', 5, 9, 26, '3KM', 42),
+(25, 15, 45, 30, 80, 15, 15, '  Sg. Kong Kedah', 5, 9, 26, '3KM', 43),
+(26, 5, 0, 0, 100, 0, 0, '  Sg. Chepir', 0, 0, 0, '', 44),
+(28, 6, 0, 0, 100, 0, 0, '  Sg. Merbok', 0, 0, 0, '', 50),
+(29, 5, 44, 57, 100, 38, 14, '  Sg. Kerkau', 0, 0, 0, '', 51),
+(30, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, '', 54),
+(31, 15, 45, 30, 80, 15, 15, '', 5, 9, 26, '3KM', 55),
+(33, 15, 45, 30, 80, 15, 15, '  Sg. Muda', 5, 9, 26, '3KM', 57),
+(34, 5, 49, 27, 100, 47, 27, '  Sg. Tebal', 5, 9, 26, '200m', 58),
+(35, 6, 3, 2, 100, 49, 37, '  Sg. Chapar', 5, 9, 26, '300 meter', 59),
+(37, 5, 0, 0, 100, 0, 0, '', 0, 0, 0, '', 61),
+(39, 6, 0, 0, 100, 0, 0, '', 0, 0, 0, '', 63),
+(40, 6, 0, 0, 100, 0, 0, '', 0, 0, 0, '', 64),
+(41, 15, 30, 45, 85, 15, 15, '  Sg. Lalang', 5, 9, 26, '2KM', 65),
+(42, 17, 30, 45, 75, 15, 15, '  Sg. Semeling', 5, 9, 26, '2KM', 66),
+(43, 5, 24, 57, 100, 44, 0, '  Sg. Sedim', 5, 9, 26, '30 M * 6 M * 6 M', 67),
+(44, 5, 40, 38, 100, 55, 51, '  Charok Batu Sebelah', 5, 9, 26, '30 M * 10 M * 3 M', 68),
+(45, 6, 0, 0, 100, 0, 0, '  Sg. Merbok', 0, 0, 0, '', 69),
+(46, 5, 0, 0, 100, 0, 0, '  Sg. Chepir', 0, 0, 0, '', 70),
+(47, 15, 45, 30, 80, 15, 15, '  Sg. Merbok', 5, 9, 26, '1KM', 71),
+(48, 15, 30, 45, 95, 15, 30, '  Sg. Muda', 0, 0, 0, '1475M', 72),
+(49, 5, 37, 340, 100, 32, 4, '  Sg. Petani', 0, 0, 0, '', 73),
+(50, 5, 0, 0, 100, 0, 0, '  Sg. Muda', 0, 0, 0, '', 74),
+(51, 5, 0, 0, 100, 0, 0, '  Sg. Muda', 0, 0, 0, '', 75),
+(52, 5, 35, 34, 100, 22, 45, '  Sg. Muda', 0, 0, 0, '6KM', 76),
+(53, 5, 36, 34, 100, 23, 49, '  Sg. Muda', 0, 0, 0, '9 KM', 77),
+(54, 5, 35, 34, 100, 22, 45, '  Sg. Muda', 0, 0, 0, '', 78),
+(55, 5, 35, 34, 100, 22, 45, '  Sg. Muda', 0, 0, 0, '', 79),
+(56, 5, 35, 34, 100, 22, 45, '  Sg. Muda', 0, 0, 0, '6KM', 80),
+(57, 5, 35, 34, 100, 22, 45, '  Sg. Muda', 0, 0, 0, '', 81),
+(58, 5, 35, 34, 100, 22, 45, '  Sg. Muda', 0, 0, 0, '', 82),
+(59, 5, 35, 34, 100, 22, 45, '  Sg. Muda', 0, 0, 0, '', 83),
+(60, 5, 44, 45, 100, 25, 52, '  Sg. Merbok', 0, 0, 0, '', 84),
+(61, 15, 45, 30, 90, 30, 15, '  Sg. Petani', 9, 0, 0, '', 85),
+(62, 6, 0, 0, 100, 0, 0, '  Sg. Ketil', 0, 0, 0, '', 86),
+(63, 6, 0, 0, 100, 0, 0, '  Sg. Ketil', 0, 0, 0, '', 87),
+(64, 6, 0, 0, 100, 0, 0, '  Sg. Ketil', 0, 0, 0, '', 88),
+(65, 0, 0, 0, 0, 0, 0, '  Sg. Ketil', 0, 0, 0, '', 89),
+(66, 6, 0, 0, 100, 0, 0, '  Sg. Ketil', 0, 0, 0, '', 90),
+(67, 6, 0, 0, 100, 0, 0, '  Sg. Muda', 0, 0, 0, '', 91),
+(68, 20, 15, 30, 80, 30, 45, '  Sg. Merbok', 9, 0, 0, '', 92),
+(69, 0, 0, 0, 0, 0, 0, '  Sg. Petani', 6, 16, 0, '', 93);
 
 -- --------------------------------------------------------
 
@@ -71,7 +112,53 @@ CREATE TABLE `dp_projek` (
 --
 
 INSERT INTO `dp_projek` (`projek_id`, `df_nosebutharga`, `df_tarikmohon`, `df_jsebutharga`, `df_tajuk`, `df_daerah`) VALUES
-(35, '19/2019', '2019-04-11', 'Lantikan Terus', 'The new projek', 'Sik');
+(38, 'jpskmsb(sh)n/b/om/712/2019', '2019-04-24', 'Lantikan Terus', 'FGJFFJ', 'Baling'),
+(39, '7-2019', '2019-05-02', 'Sebutharga', 'ioououo', 'Kuala Muda'),
+(42, 'JPSKMSB(SH/KM) S/B/SG/38/2019', '2019-04-10', 'Sebutharga', 'KERJA-KERJA PENYELENGGARAAN SUNGAI GURUN DI TAMAN SRI UTAMA, GURUN, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(43, 'JPSKMSB(SH/KM) S/P/SG/27/2019', '2019-02-26', 'Sebutharga', 'KERJA-KERJA PENGOREKAN DAN PENGUKUHAN TEBING SUNGAI DI SUNGAI KONG KEDAH, PANTAI PRAI, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(44, 'JPSKMSB(SH/S) P/P/SG/25/2019', '2019-02-21', 'Sebutharga', 'PROGRAM PEMULIHARAAN SUNGAI UNTUK MENGURANGKAN RISIKO BANJIR DI KG. NAMEK, SG. CHEPIR, MUKIM SIK, DAERAH SIK, KEDAH DARUL AMAN.', 'Sik'),
+(46, 'JPSKMSB(LT/B) S/B/OM 54/2019', '2019-04-17', 'Lantikan Terus', 'gjhgg', 'Baling'),
+(47, 'JPSKMSB(LT/KM) N/B/SG/45/2019', '2019-03-10', 'Lantikan Terus', 'KERJA-KERJA MEMBERSIH SUNGAI', 'Kuala Muda'),
+(48, '1', '2019-05-22', 'Lantikan Terus', 'dda', 'Baling'),
+(50, 'JPSKMSB(KU/KM) S/B/OM 23/2019', '2019-01-29', 'Undi', 'KERJA-KERJA PENYELENGGARAAN SKIM BAN MERBOK ( JLD 8 - JLD 9) MK. BUJANG, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(51, 'JPSKMSB(LT/KM) N/B/SG/ 45/2019', '2019-03-10', 'Lantikan Terus', 'KERJA-KERJA MEMBERSIH SUNGAI KERKAU MK. TELOI KIRI, DAEARH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(54, 'JPSKMSB(KU/KM) S/B/OM/ 26/2019', '2019-02-11', 'Undi', 'KERJA-KERJA PENYELENGGARAAN ( MENGOREK SISTEMM SALIRAN ) DI SKIM BAN MERBOK, MK. MERBOK, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(55, 'JPSKMSB(SH/KM) P/P/SG/39/2019', '2019-05-12', 'Sebutharga', 'PROGRAM PEMULIHARAAN SUNGAI UNTUK MENGURANGKAN RISIKO BANJIR DI SEKOLAH MENENGAH KEBANGSAAN GURUN, SUNGAI GURUN, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(57, 'JPSKMSB (SH/KM) S/P/SG 27/2019', '2019-02-26', 'Sebutharga', 'KERJA-KERJA PENGOREKAN DAN PENGUKUHAN TEBING SUNGAI DI SUNGAI KONG KEDAH, PANTAI PRAI, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(58, 'JPSKMSB(SH/S)S/P/SG/40/2019', '2019-05-23', 'Sebutharga', 'Program Pemuliharaan Sungai Untuk Mengurangkan Risiko Banjir di Kg. Lubok Tualang, Sg. Tebal, Mukim Sik, Daerah Sik, Kedah Darul Aman', 'Sik'),
+(59, 'JPSKMSB(SH/S)S/P/SG/44/2019', '2019-05-23', 'Sebutharga', 'Program  Pemuliharaan Sungai Untuk Mengurangkan Risiko Banjir Di Kg. Belantek Dalam, Sg. Chapar, Mukim Sok, Daerah Sik, Kedah Darul Aman.', 'Sik'),
+(61, 'JPSKMSB ( SH/KM) N/B/OM 4/2019', '2019-01-15', 'Sebutharga', 'PENYELENGGARAAN SISTEM PENGAIRAN DAN SALIRAN DI TERUSAN UTAMA A-E, SKIM PENGAIRAN PEKULA, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(63, 'JPSKMSB(KU/KM) S/B/OM/ 16/2019', '2019-01-23', 'Undi', 'KERJA-KERJA PENYELENGGARAAN TALIAIR KONKRIT / PARIT BUANG SKIM PENGAIRAN PINANG TUNGGAL, PANTAI PRAI DAN KEMUBONG DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(64, 'JPSKMSB(KU/KM) S/B/OM/ 17/2019', '2019-01-23', 'Undi', 'KERJA-KERJA PENYELENGGARAAN TALIAIR KONKRIT / PARIT BUANG DI SKIM PENGAIRAN SIDAM KIRI, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(65, 'JPSKMSB(KU/KM) S/B/SG/ 24/2019', '2019-01-31', 'Undi', 'KERJA-KERJA MENGOREK SISTEM SALIRAN DI KG PINANG DALAM, SUNGAI LALANG, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(66, 'JPSKMSB(KU/KM) S/B/SG/ 25/2019', '2019-02-10', 'Undi', 'KERJA-KERJA MENGOREK SUNGAI SEMELING, MUKIM SEMELING, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(67, 'JPSKMSB(SH/B)F/B/SG/31/2019', '2019-03-18', 'Sebutharga', 'KERJA PENYELENGGARAAN TEBING SUNGAI SEDIM, KG ULU SEDIM, MUKIM BAKAI DAERAH BALING, KEDAH DARUL AMAN.', 'Baling'),
+(68, 'JPSKMSB(SH/B)F/B/SG/32/2019', '2019-03-18', 'Sebutharga', 'KERJA PENGUKUHAN TEBING SUNGAI BATU SEBELAH, KG SIMPANG EMPAT, MUKIM BALING, KEDAH DARUL AMAN.', 'Baling'),
+(69, 'JPSKMSB(KU/KM) S/B/OM/ 23/2019', '2019-01-29', 'Undi', 'KERJA-KERJA PENYELENGGARAAN SKIM BAN MERBOK (JLD 8 - JLD 9) MK. BUJANG, DAERAH KUALA MUDA, KEDAH DARUL AMAN', 'Kuala Muda'),
+(70, 'JPSKMSB(KM/S) S/P/SG/24/2019', '2019-02-21', 'Sebutharga', 'PROGRAM PEMULIHAN, PENGINDAHAN DAN PEMULIHARAAN SUNGAI TELOI DI KG. BANGGOL, MUKIM TELOI, DAERAH SIK, KEDAH DARUL AMAN.', 'Sik'),
+(71, 'JPSKMSB(SH/KM) S/P/SG/21/2019', '2019-02-17', 'Sebutharga', 'KERJA-KERJA PENGUKUHAN TEBING DAN PENGOREKAN SUNGAI DI SUNGAI PASIR, KG. DAKWAH, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(72, 'JPSKMSB(SH/KM) S/B/MARRIS/30/2019', '2019-03-13', 'Sebutharga', 'KERJA-KERJA PENYELENGGARAAN JALAN PERTANIAN \"MARRIS\" DI KG. SERUKAM/PULAU TOK DAUD, LUAR SKIM KUALA MUDA, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(73, 'JPSKMSB(SH/KM) N/B/PB/1/2019', '2019-01-01', 'Sebutharga', 'KERJA-KERJA MENCUCI DAN MEMBERSIH PEJABAT JPS KUALA MUDA, BANGUNAN RCC (RIVER CARE CENTER) DAN BANGUNAN SETOR JPS DI TAMAN BATIK, SUNGAI PETANI, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(74, 'JPSKMSB(SH/KM) N/B/OM/4/2019', '2019-01-15', 'Sebutharga', 'PENYELENGGARAAN SISTEM PENGAIRAN DAN SALIRAN DI TERUSAN UTAMA A-E, SKIM PEKULA, DAERAH KUALA MUDA, KEDAH DARUL AMAN', 'Kuala Muda'),
+(75, 'JPSKMSB(SH/KM) N/B/OM/5/2019', '2019-01-15', 'Sebutharga', 'PENYELENGGARAAN SISTEM PENGAIRAN DI KAWASAN TIKAM BATU, SKIM PENGAIRAN PEKULA, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(76, 'JPSKMSB(LT/KM) S/B/OM 90/2019', '2019-07-04', 'Lantikan Terus', 'KERJA-KERJA HEAVY CLEARING TERUSAN UTAMA SKIM KOTA II, (JENGKAUT HIDROLIK)', 'Kuala Muda'),
+(77, 'JPSKMSB(LT/KM) S/B/OM 91/2019', '2019-07-04', 'Lantikan Terus', 'KERJA-KERJA HEAVY CLEARING TERUSAN UTAMA SKIM KOTA II, ( HIDROLIK JENGKAUT) PT S KE PT U', 'Kuala Muda'),
+(78, 'JPSKMSB(KU/KM) S/B/OM 100/2019', '2019-07-30', 'Undi', 'PENYELENGGARAAN TALIAIR TANAH / KONKRIT DAN PARIT DIKAWASAN KUBANG JAMBU, SKIM PENGAIRAN KOTA II, DAERAH KUALA MUDA. KEDAH DARUL AMAN.', 'Kuala Muda'),
+(79, 'JPSKMSB(KU/KM) S/B/OM 102/2019', '2019-07-30', 'Undi', 'PENYELENGGARAAN TALIAIR TANAH / KONKRIT DAN PARIT DIKAWASAN SG MERIAM DAN BUKIT KECIL, SKIM PENGAIRAN KOTA II, DAERAH KUALA MUDA. KEDAH DARUL AMAN.', 'Kuala Muda'),
+(80, 'JPSKMSB(KU/KM) S/B/OM 101/2019', '2019-07-30', 'Undi', 'PENYELENGGARAAN TALIAIR TANAH / KONKRIT DAN PARIT DIKAWASAN RANTAU PANJANG, SKIM PENGAIRAN KOTA II, DAERAH KUALA MUDA. KEDAH DARUL AMAN.', 'Kuala Muda'),
+(81, 'JPSKMSB(KU/KM) S/B/OM 103/2019', '2019-07-30', 'Undi', 'PENYELENGGARAAN TALIAIR TANAH / KONKRIT DAN PARIT DIKAWASAN SIMPOR KECIL, SKIM PENGAIRAN KOTA II, DAERAH KUALA MUDA. KEDAH DARUL AMAN.', 'Kuala Muda'),
+(82, 'JPSKMSB(KU/KM) S/B/OM 104/2019', '2019-07-30', 'Undi', 'PENYELENGGARAAN TALIAIR TANAH / KONKRIT DAN PARIT DIKAWASAN BUKIT MERIAM DAN SG YU, SKIM PENGAIRAN KOTA II, DAERAH KUALA MUDA. KEDAH DARUL AMAN.', 'Kuala Muda'),
+(83, 'JPSKMSB(KU/KM) S/B/OM 105/2019', '2019-07-30', 'Undi', 'PENYELENGGARAAN TALIAIR TANAH / KONKRIT DAN PARIT DIKAWASAN KG HJ KUDONG, SKIM PENGAIRAN KOTA II, DAERAH KUALA MUDA. KEDAH DARUL AMAN.', 'Kuala Muda'),
+(84, 'JPSKMSB(KU/KM) S/B/OM 106/2019', '2019-08-01', 'Undi', 'KERJA-KERJA MEMBAIKI KEROSAKAN ALOR LIMPAH DAN LAIN-LAIN KERJA BERKAITAN DIKAWASAN IBU BEKALAN, SKIM PENGAIRAN TANDOP PEKAN MERBOK, DAERAH KUALA MUIDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(85, 'JPSKMSB(SH/KM) F/B/OM/54/2019', '2019-08-07', 'Sebutharga', 'KERJA-KERJA MEMBAIK PULIH DAN SENGGARA TALI AIR DAN STRUKTUR PINTU AIR DI SKIM PENGAIRAN PINANG TUNGGAL DAN PANTAI PRAI, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(86, 'JPSKMSB(KU/B) S/B/JM 59/2019', '2019-04-22', 'Undi', 'KERJA-KERJA PENYELENGGARAAN JALAN MARRIS JALAN LADANG C-C1, SKIM PENGAIRAN ULU SEDIM SEPUTIH, BALING, KEDANG DARUL AMAN.', 'Baling'),
+(87, 'JPSKMSB(KU/B) S/B/JM 60/2019', '2019-04-22', 'Undi', 'KERJA-KERJA PENYELENGGARAAN JALAN MARRIS JALAN LDG, H-H1, SKIM PENGAIRAN ULU SEDIM SEPUTIH, BALING, KEDAH DARUL AMAN.', 'Baling'),
+(88, 'JPSKMSB(KU/B) S/B/JM 61/2019', '2019-04-22', 'Undi', 'KERJA-KERJA PENYELENGGARAAN JALAN MARRIS JALAN LDG,  SELARONG 4 DAN 4/1. LUAR SKIM KG, SELARONG, DAERAH BALING, KEDAH DARUL AMAN.', 'Baling'),
+(89, 'JPSKMSB(KU/B) S/B/JM 62/2019', '2019-04-22', 'Undi', 'KERJA-KERJA PENYELENGGARAAN JALAN MARRIS JALAN LDG. SELARONG 5, LUAR SKIM KG. SELARONG, DAERAH BALING, KEDAH DARUL AMAN.', 'Baling'),
+(90, 'JPSKMSB(KU/B) S/B/JM 63/2019', '2019-04-22', 'Undi', 'KERJA-KERJA PENYELENGGARAAN JALAN MARRIS JALAN LDG. SKIM PENGAIRAN KG. LANDAK, DAERAH BALING, KEDAH DARUL AMAN.', 'Baling'),
+(91, 'JPSKMSB(KU/B) S/B/JM 64/2019', '2019-04-22', 'Undi', 'KERJA-KERJA PENYELENGGARAAN JALAN MARRIS JALAN LDG. SKIM PENGAIRAN KG. BADANG,  DAERAH BALING, KEDAH DARUL AMAN.', 'Baling'),
+(92, 'JPSKMSB(LT/KM) S/B/SG/67/2019', '2019-05-30', 'Lantikan Terus', 'KERJA PEMBERSIHAN SISTEM SALIRAN DAN LAIN-LAIN KERJA BERKAITAN DI TAMAN PERUDA, SUNGAI PETANI, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda'),
+(93, 'JPSKMSB(KU/KM) S/B/KT/ 122/2019', '2019-08-27', 'Undi', '\r\nKERJA-KERJA PENYELENGGARAAN KOLAM TAKUNGAN AIR TAMAN KELADI, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', 'Kuala Muda');
 
 -- --------------------------------------------------------
 
@@ -89,8 +176,12 @@ CREATE TABLE `dp_projekinfo` (
   `df_taraf` varchar(10) COLLATE utf8_bin DEFAULT NULL,
   `df_tempohsiap` varchar(11) COLLATE utf8_bin DEFAULT NULL,
   `dp_bulanmig` varchar(10) COLLATE utf8_bin DEFAULT NULL,
-  `df_hargadoc` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `df_tarikhnotis` date DEFAULT NULL,
+  `df_hargadoc` decimal(10,0) DEFAULT NULL,
+  `df_tarikhnotis` text COLLATE utf8_bin,
+  `df_datelawat` text COLLATE utf8_bin,
+  `df_datemulajualdoc` text COLLATE utf8_bin,
+  `df_dateakhirjualdoc` text COLLATE utf8_bin,
+  `df_dateend` text COLLATE utf8_bin,
   `df_tarikhlawat` int(2) DEFAULT NULL,
   `df_tarikhdocmula` int(2) DEFAULT NULL,
   `df_tarikhdocakhir` int(2) DEFAULT NULL,
@@ -101,7 +192,7 @@ CREATE TABLE `dp_projekinfo` (
   `df_penolong` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `df_kodvot` varchar(100) COLLATE utf8_bin DEFAULT NULL,
   `df_peruntukan` varchar(20) COLLATE utf8_bin DEFAULT NULL,
-  `df_bakiperuntukan` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `df_bakiperuntukan` decimal(10,2) DEFAULT NULL,
   `dp_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -109,8 +200,49 @@ CREATE TABLE `dp_projekinfo` (
 -- Dumping data for table `dp_projekinfo`
 --
 
-INSERT INTO `dp_projekinfo` (`info_id`, `df_gred`, `df_kategori`, `df_khusus1`, `df_khusus2`, `df_khusus3`, `df_taraf`, `df_tempohsiap`, `dp_bulanmig`, `df_hargadoc`, `df_tarikhnotis`, `df_tarikhlawat`, `df_tarikhdocmula`, `df_tarikhdocakhir`, `df_tarikhtutup`, `df_juruterad`, `df_jurutera`, `df_penolongkanan`, `df_penolong`, `df_kodvot`, `df_peruntukan`, `df_bakiperuntukan`, `dp_id`) VALUES
-(21, 'G1', 'CE', 'C1', 'C2', 'C3', 'Bumiputera', '8', 'Minggu', '50', '2019-04-12', 4, 5, 6, 4, 'Mohd Amin b Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Haraz', 'K_BP12345', 'negeri', '1200', 35);
+INSERT INTO `dp_projekinfo` (`info_id`, `df_gred`, `df_kategori`, `df_khusus1`, `df_khusus2`, `df_khusus3`, `df_taraf`, `df_tempohsiap`, `dp_bulanmig`, `df_hargadoc`, `df_tarikhnotis`, `df_datelawat`, `df_datemulajualdoc`, `df_dateakhirjualdoc`, `df_dateend`, `df_tarikhlawat`, `df_tarikhdocmula`, `df_tarikhdocakhir`, `df_tarikhtutup`, `df_juruterad`, `df_jurutera`, `df_penolongkanan`, `df_penolong`, `df_kodvot`, `df_peruntukan`, `df_bakiperuntukan`, `dp_id`) VALUES
+(26, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '6', 'Minggu', '10', '2019-04-10', '2019-4-17', '2019-4-18', '2019-4-25', '2019-4-28', 7, 1, 7, 3, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Mohd Amin b Ahmad', 'Mohd Amin Bin Ahmad', 'Shahriful Azhar bin Mohd Hassan', 'B2928209', 'Negeri', '150000.00', 42),
+(27, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '6', 'Minggu', '10', '2019-03-11', NULL, NULL, NULL, '2019-3-26', 7, 1, 7, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', '', 'Shahriful Azhar bin Mohd Hassan', 'P13-4000-4001', 'Negeri', '200000.00', 43),
+(28, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '12', 'Minggu', '10', '2019-03-06', '2019-3-12', '2019-3-13', '2019-3-20', '2019-3-20', 6, 1, 7, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', 'Mohd Amin Bin Ahmad', 'Noorzita Bt. Mustaffa', 'P23-15300', 'Persekutuan', '200000.00', 44),
+(30, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', 'Mohd Amin Bin Ahmad', 'Mohd Amin Bin Ahmad', 'B13-28209', 'Negeri', '0.00', 50),
+(31, 'G1', 'CE', '', '', '', 'Bumiputera', '4', 'Minggu', '0', '', NULL, NULL, NULL, '', 0, 0, 0, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', '', 'Abu Bakar Bin Husain', '', 'Negeri', '0.00', 51),
+(32, 'G1', 'CE', '', '', '', 'Bumiputera', '', '', '0', '0000-00-00', NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Mohd Amin Bin Ahmad', 'P13-20001', 'Negeri', '200000.00', 54),
+(33, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '8', 'Minggu', '10', '2019-05-13', NULL, NULL, NULL, NULL, 7, 1, 7, 0, 'BAHARUDIN BIN AHMAD', 'Nurul Syariza bt Ramli', NULL, 'Shahriful Azhar bin Mohd Hassan	', 'P23-15300-515-3001', 'Persekutuan', '100000.00', 55),
+(35, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '6', 'Minggu', '10', '2019-03-11', NULL, NULL, NULL, NULL, 7, 1, 7, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Shahriful Azhar bin Mohd Hassan	', 'P13-4000-4001', 'Negeri', '200000.00', 57),
+(36, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '10', 'Minggu', '10', '2019-06-13', '2019-6-19', '2019-6-20', '2019-6-27', '2019-6-27', 6, 1, 7, 0, 'BAHARUDIN BIN AHMAD', 'Nurul Syariza bt Ramli', 'Mohd Amin Bin Ahmad', 'Mohamad Ridzam Bin Jusoh', 'P13-6000', 'Negeri', '200000.00', 58),
+(37, 'G2', 'CE', 'CE21', 'CE21', 'CE21', 'Bumiputera', '12', 'Minggu', '20', '2019-07-16', '2019-7-23', '2019-7-24', '2019-7-31', '2019-7-31', 7, 1, 7, 0, 'BAHARUDIN BIN AHMAD', 'Nurul Syariza bt Ramli', 'Mohd Amin Bin Ahmad', 'Mohamad Ridzam Bin Jusoh', 'P23-15300-515-3001', 'Negeri', '500000.00', 59),
+(39, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '8', 'Minggu', '10', '2019-01-31', '', '', '', '', 10, 1, 7, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', 'Yahaya Bin Sharif', 'Azhar Bin Ahmad', 'B28209', 'Negeri', '200000.00', 61),
+(43, 'G1', 'CE', '', '', '', 'Bumiputera', '10', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Mohamad Shuhaimi Bin Khamis', 'B21 / 28209', 'Negeri', '50000.00', 63),
+(44, 'G1', 'CE', '', '', '', 'Bumiputera', '10', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Mohamad Shuhaimi Bin Khamis', 'B21 / 28209', 'Negeri', '50000.00', 64),
+(45, 'G1', 'CE', '', '', '', 'Bumiputera', '2', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Shahriful Azhar bin Mohd Hassan	', 'B13 / 28209', 'Negeri', '20000.00', 65),
+(46, 'G1', 'CE', '', '', '', 'Bumiputera', '3', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Shahriful Azhar bin Mohd Hassan	', 'B13 / 28209', 'Negeri', '0.00', 66),
+(47, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '8', 'Minggu', '10', '2019-06-18', '2019-6-24', '2019-6-25', '2019-7-2', '2019-7-3', 6, 1, 7, 1, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Norhafizah Binti Yahaya', 'B13/28209 2019', 'Persekutuan', '100000.00', 67),
+(48, 'G1', 'CE', 'CE21', 'Test', 'test', 'Bumiputera', '6', 'Minggu', '10', '2019-06-18', '2019-6-24', '2019-6-25', '2019-7-2', '2019-7-3', 6, 1, 7, 1, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', 'Azhar Bin Ahmad', 'Norhafizah Binti Yahaya', 'P13/6000', 'Negeri', '70000.00', 68),
+(49, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Mohd Amin Bin Ahmad', 'B13-28209', 'Negeri', '0.00', 69),
+(50, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '12', 'Minggu', '10', '2019-03-07', '2019-3-12', '2019-3-13', '2019-3-20', '2019-3-21', 5, 1, 7, 1, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Noorzita Bt. Mustaffa', 'P13-15000', 'Negeri', '100000.00', 70),
+(51, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '6', 'Minggu', '10', '2019-02-26', '2019-3-5', '2019-3-6', '2019-3-13', '2019-3-13', 7, 1, 7, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Shahriful Azhar bin Mohd Hassan	', 'P13-6000-6001', 'Negeri', '150000.00', 71),
+(52, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '6', 'Minggu', '10', '2019-04-02', '2019-4-8', '2019-4-9', '2019-4-16', '2019-4-17', 6, 1, 7, 1, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Shahriful Azhar bin Mohd Hassan	', 'MARRIS', 'Negeri', '55645.40', 72),
+(53, 'G1', 'B', 'B24', '', '', 'Bumiputera', '44', 'Minggu', '10', '2019-01-06', '2019-1-13', '2019-1-14', '2019-1-21', '2019-1-21', 7, 1, 7, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Abu Bakar Bin Husain', 'B 21 28209 ', 'Negeri', '0.00', 73),
+(54, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '8', 'Minggu', '10', '2019-01-31', '2019-2-10', '2019-2-11', '2019-2-18', '2019-2-18', 10, 1, 7, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Azhar Bin Ahmad', '', 'Negeri', '200000.00', 74),
+(55, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '8', 'Minggu', '10', '2019-01-31', '2019-2-10', '2019-2-11', '2019-2-18', '2019-2-18', 10, 1, 7, 0, 'Ir. Nor Rozaini Bt. Abdullah, AMP', 'Nurul Syariza bt Ramli', NULL, 'Azhar Bin Ahmad', '', 'Negeri', '200000.00', 75),
+(56, 'G1', 'CE', '', '', '', 'Bumiputera', '1', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '200000.00', 76),
+(57, 'G1', 'CE', '', '', '', 'Bumiputera', '1', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '16000.00', 77),
+(58, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', '', 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '0.00', 78),
+(59, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '0.00', 79),
+(60, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '0.00', 80),
+(61, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '0.00', 81),
+(62, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '0.00', 82),
+(63, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '0.00', 83),
+(64, 'G1', 'CE', '', '', '', 'Bumiputera', '8', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13-28209', 'Negeri', '0.00', 84),
+(65, 'G1', 'CE', 'CE21', '', '', 'Bumiputera', '10', 'Minggu', '10', '2019-08-20', '2019-8-25', '2019-8-26', '2019-9-2', '2019-9-3', 5, 1, 7, 1, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Yahaya Bin Shariff', 'B13 / 15000', 'Persekutuan', '70000.00', 85),
+(66, 'G1', 'CE', '', '', '', 'Bumiputera', '10', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Johari Bin Ali', '', 'Negeri', '0.00', 86),
+(67, 'G1', 'CE', '', '', '', 'Bumiputera', '10', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Johari Bin Ali', '', 'Negeri', '0.00', 87),
+(68, 'G1', 'CE', '', '', '', 'Bumiputera', '10', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Johari Bin Ali', '', 'Negeri', '0.00', 88),
+(69, 'G1', 'CE', '', '', '', 'Bumiputera', '10', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Johari Bin Ali', '', 'Negeri', '0.00', 89),
+(70, 'G1', 'CE', '', '', '', 'Bumiputera', '10', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Johari Bin Ali', '', 'Negeri', '0.00', 90),
+(71, 'G1', 'CE', '', '', '', 'Bumiputera', '10', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Johari Bin Ali', '', 'Negeri', '0.00', 91),
+(72, 'G1', 'CE', '', '', '', 'Bumiputera', '4', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Shahriful Azhar bin Mohd Hassan	', 'B13-28209', 'Negeri', '200000.00', 92),
+(73, 'G1', 'CE', '', '', '', 'Bumiputera', '4', 'Minggu', '0', '', '', '', '', '', 0, 0, 0, 0, 'Baharudin Bin Ahmad', 'Nurul Syariza bt Ramli', NULL, 'Mohd Tarmizi Bin Taib', '', 'Negeri', '52052.60', 93);
 
 -- --------------------------------------------------------
 
@@ -598,7 +730,7 @@ INSERT INTO `jps_sungai` (`sg_id`, `sg_name`, `sg_cabang`, `sg_panjang`, `sg_dae
 (317, '  Sg. Tok Malau', 'Sg. Merbok', '3.00', '  Kuala Muda', '', ''),
 (318, '  Sg. Tok Pawang', 'Sg. Bongkok', '8.00', '  Kuala Muda', '', ''),
 (319, '  Sg. Tukang', 'Sg. Bongkok', '4.00', '  Kuala Muda', '3366', '792  280'),
-(320, '  Sg. Muda', '-', '178.00', '  Kuala Muda / Kulim / Baling / Sik', '3366 / 3466', ''),
+(320, '  Sg. Muda', '-', '178.00', '  Kuala Muda / Baling / Sik', '3366 / 3466', ''),
 (321, '  Alor Asun, Binjal', 'Sg. W/ Perah', '1.35', '  Kubang Pasu', '', ''),
 (322, '  Sg. Air Terjun', 'Sg. Tanjung Pauh', '2.42', '  Kubang Pasu', '', ''),
 (323, '  Sg. Badak', 'Sg. Bata / Temin', '17.32', '  Kubang Pasu', '3369', '773  146'),
@@ -910,7 +1042,7 @@ INSERT INTO `jps_sungai` (`sg_id`, `sg_name`, `sg_cabang`, `sg_panjang`, `sg_dae
 (629, '  Sg. Sok', 'Sg. Muda', '18.00', '  Sik', '3468', '117  694'),
 (630, '  Sg. Tala', 'Sg. Muda', '4.80', '  Sik', '3367', '954  495'),
 (631, '  Sg. Tanah Liat', 'Sg. Teloi', '4.50', '  Sik', '3467', '046  374'),
-(632, '  Sg. Tebai', 'Sg. Chepir', '8.00', '  Sik', '3467', '143  425'),
+(632, '  Sg. Tebal', 'Sg. Chepir', '8.00', '  Sik', '3467', '143  425'),
 (633, '  Sg. Teliang', 'Sg. Muda', '19.00', '  Sik', '3468', '261  803'),
 (634, '  Sg. Teloi', 'Sg. Chepir', '12.80', '  Sik', '3467', '017  398'),
 (635, '  Sg. Terenas', 'Sg. Beris', '4.00', '  Sik', '3467', '093  576'),
@@ -931,7 +1063,8 @@ INSERT INTO `jps_sungai` (`sg_id`, `sg_name`, `sg_cabang`, `sg_panjang`, `sg_dae
 (650, '  Sg. Yan Kecil', '-', '11.00', '  Yan', '3267', '690  461'),
 (651, '  Terusan Wan Mat Saman', 'Sg. Kedah', '6.00', '  Yan', '', ''),
 (652, '  Sg. Sala', '-', '10.00', '  Yan / K. Setar ( Bersempadan)', '3268', '650  613'),
-(653, '', '', '', '', '', '');
+(653, '', '', '', '', '', ''),
+(654, 'Sungai Muda', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -943,6 +1076,7 @@ CREATE TABLE `jps_users` (
   `user_id` int(11) NOT NULL,
   `jps_name` varchar(150) DEFAULT NULL,
   `jps_email` varchar(150) DEFAULT NULL,
+  `user_pic` varchar(255) DEFAULT NULL,
   `jps_password` varchar(150) DEFAULT NULL,
   `jps_position` varchar(150) DEFAULT NULL,
   `jps_userroles` varchar(10) DEFAULT NULL
@@ -952,13 +1086,31 @@ CREATE TABLE `jps_users` (
 -- Dumping data for table `jps_users`
 --
 
-INSERT INTO `jps_users` (`user_id`, `jps_name`, `jps_email`, `jps_password`, `jps_position`, `jps_userroles`) VALUES
-(1, 'syed mohd afiq', 'syed.m.afiq@outlook.com', '911f6332e7f90b94b87f15377263995c', 'Jurutera', 'admin'),
-(2, 'Lokman hakim', 'gungravewestern@gmail.com', '20c1a26a55039b30866c9d0aa51953ca', 'Jurutera G34', 'user'),
-(3, 'Haraz', 'g@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Penolong Jurutera', 'user'),
-(4, 'Lokman hakim', 's@outlook.com', 'f6122c971aeb03476bf01623b09ddfd4', 'Penolong Jurutera', 'admin'),
-(6, 'Azhar bin Ahmad', 'azhar@gmail.com', '838e24a98647b16ed33f20774b2e3502', 'Penolong Jurutera', 'user'),
-(10, 'SYED MOHD AFIQ SYED ABDUL RAHMAN', 'sssyed.m.afiq@outlook.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Jurutera', 'admin');
+INSERT INTO `jps_users` (`user_id`, `jps_name`, `jps_email`, `user_pic`, `jps_password`, `jps_position`, `jps_userroles`) VALUES
+(1, 'syed mohd afiq', 'syed.m.afiq@outlook.com', 'default.png', '911f6332e7f90b94b87f15377263995c', 'Jurutera', 'admin'),
+(2, 'Lokman hakim', 'gungravewestern@gmail.com', 'default.png', '20c1a26a55039b30866c9d0aa51953ca', 'Jurutera G34', 'user'),
+(10, 'SYED MOHD AFIQ SYED ABDUL RAHMAN', 'sssyed.m.afiq@outlook.com', 'default.png', '81dc9bdb52d04dc20036dbd8313ed055', 'Jurutera', 'admin'),
+(12, 'Mohamad Ridzam Bin Jusoh', 'ridzam@didkedah.gov.my', 'ridzam01.jpg', '69be1f9ba77905186f0af9840e1ad929', 'Penolong Jurutera', 'user'),
+(14, 'Mohd Amin Bin Ahmad', 'amin@didkedah.gov.my', 'Amin.jpg', '30ae43ad1aa0a416699051b73a3dfcf6', 'Penolong Jurutera', 'user'),
+(15, 'Noorzita Bt. Mustaffa', 'noorzita@didkedah.gov.my', 'Noorzita_1.jpg', '65f07749b91b429b339e681ad4692a6f', 'Penolong Jurutera', 'user'),
+(16, 'Ku Izham Bin Ku Din', 'kuizham@didkedah.gov.my', 'Ku_Izham.jpg', '97d463b4dcd83244fb7912102b6a2a10', 'Penolong Jurutera', 'user'),
+(19, 'Shuhel Bin Mohd Saad', 'shuhel@didkedah.gov.my', 'Shuhel.jpg', 'e07aba7430a80c147b9006ad7b5807d6', 'Penolong Jurutera', 'user'),
+(20, 'Juhari Bin Mat Ali', 'juhari@didkedah.gov.my', 'Juhari.jpg', '16d54a26e5a4b745f42d7c5bc63ee3df', 'Penolong Jurutera', 'user'),
+(21, 'Johari Bin Ali', 'johari@didkedah.gov.my', 'Johari.jpg', '2e4c8970a17635461501d63b697f0f89', 'Penolong Jurutera', 'user'),
+(23, 'Intan Zahida Bt. Abu Bakar', 'intanzahida@didkedah.gov.my', 'Intan_1.jpg', 'd683883bd643e4225241e50f5203420c', 'Penolong Jurutera', 'user'),
+(25, 'Intan Zahida Bt. Abu Bakar', 'intanzahida@gmail.com', 'default.png', 'd683883bd643e4225241e50f5203420c', 'Penolong Jurutera', 'special'),
+(26, 'Mohamad Ridzam Bin Jusoh ', 'ridzam.8732@gmail.com', '29_Juruteknik_J17.jpg', '69be1f9ba77905186f0af9840e1ad929', 'Penolong Jurutera', 'admin'),
+(27, 'Yahaya Bin Shariff', 'yahaya@didkedah.gov.my', '5_Yahaya_b_Shariff.jpg', 'a168538509b9239e917c9ec06d151275', 'Penolong Jurutera', 'user'),
+(29, 'Mohammad  Ashraff Bin Azizan', 'ashraff@didkedah.gov.my', 'images.jpg', 'c1c4b4e5df2e14bf9240a1af05890d18', 'Pembantu Awam', 'clerk'),
+(30, 'Mohamad Shuhaimi Bin Khamis', 'shuhaimi@didkedah.gov.my', 'default.png', '6d2bd3a2dfd7eca338dad20151fdd18e', 'Penolong Jurutera', 'user'),
+(31, 'Norhafizah Binti Yahaya', 'hafizah@didkedah.gov.my', 'Nur_Hafizah1.jpg', '7d86ee4b6d32f9ead3efc156a390c568', 'Penolong Jurutera', 'user'),
+(32, 'Mohd Tarmizi Bin Taib', 'tarmizi@didkedah.gov.my', '8_Mohd_Tarmizi_b__Taib.jpg', '9255105f5fec5b0d38b66fe47c3e8f1b', 'Penolong Jurutera', 'user'),
+(35, 'Abu Bakar Bin Husain', 'abubakar@didkedah.gov.my', 'hj_bakar.jpg', 'ac84512da35559fb7c04f91d6bcb62dc', 'Pelukis Pelan Kanan J22', 'user'),
+(36, 'Shahriful Azhar bin Mohd Hassan	', 'shahriful@didkedah.gov.my', '16_Shahriful_Azhar_b__Mohd_Hassan.jpg', '134ed4a254c83625689966130f0c23ef', 'Penolong Jurutera', 'user'),
+(37, 'Baharudin B. Ahmad', 'baharudin@water.gov.my', 'default.png', '455154a06dadc83982abe3fe5e80af7c', 'Jurutera', 'special'),
+(39, 'Nurul Syariza Binti Ramli', 'syariza@water.gov.my', 'Nurul.jpg', 'c41977fd82d9ad3197f2216a45e2d685', 'Jurutera', 'special'),
+(40, 'Azhar Bin Ahmad', 'azharahmad@didkedah.gov.my', 'default.png', '81dc9bdb52d04dc20036dbd8313ed055', 'Penolong Jurutera', 'user'),
+(41, 'Mohamad Ridzam Bin Jusoh', 'ridzamjps01@yahoo.com', 'default.png', '69be1f9ba77905186f0af9840e1ad929', 'Penolong Jurutera', 'clerk');
 
 -- --------------------------------------------------------
 
@@ -1612,28 +1764,57 @@ INSERT INTO `kontraktor` (`kontraktorId`, `konName`, `konImage`, `KonAlamat`, `k
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kos_projek`
+--
+
+CREATE TABLE `kos_projek` (
+  `kos_id` int(11) NOT NULL,
+  `kos_belanja` decimal(10,2) DEFAULT NULL,
+  `kos_tanggung` decimal(10,2) DEFAULT NULL,
+  `kos_nosebut` varchar(255) DEFAULT NULL,
+  `kos_kodvot` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kos_projek`
+--
+
+INSERT INTO `kos_projek` (`kos_id`, `kos_belanja`, `kos_tanggung`, `kos_nosebut`, `kos_kodvot`) VALUES
+(2, '15000.00', '0.00', 'JPSKMSB(SH/KM) S/B/SG/38/2019', NULL),
+(3, '0.00', '0.00', 'JPSKMSB(SH/S)S/P/RB/41/2019', 'P23-15300-515-3001'),
+(4, '100000.00', '0.00', 'JPSKMSB(SH/S)S/P/RB/90/2019', 'b28209'),
+(5, '0.00', '0.00', 'JPSKMSB(SH/KM) P/P/SG/39/2019', 'P23-15300-515-3001'),
+(6, '174600.00', '0.00', 'JPSKMSB(SH/S) P/P/SG/25/2019', 'P23-15300'),
+(7, '85800.00', '0.00', 'JPSKMSB(KM/S) S/P/SG/24/2019', 'P13-15000'),
+(8, '173066.00', '0.00', 'JPSKMSB(SH/S)S/P/SG/40/2019', 'P13-6000'),
+(9, '19700.00', '0.00', 'JPSKMSB(LT/KM) S/B/OM 90/2019', 'B13-28209'),
+(10, '16400.00', '0.00', 'JPSKMSB(LT/KM) S/B/OM 91/2019', 'B13-28209');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mrk_dua`
 --
 
 CREATE TABLE `mrk_dua` (
   `mrkduaid` int(11) NOT NULL,
   `mrk_majukerja` int(11) DEFAULT NULL,
-  `mrk_majukerjasebenar` date DEFAULT NULL,
+  `mrk_majukerjasebenar` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `mrk_bayarmajusemasa` int(11) DEFAULT NULL,
-  `mrk_jumlahbayarmaju` decimal(10,0) DEFAULT NULL,
-  `mrk_masalah` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_jumlahbayarmaju` decimal(10,2) DEFAULT NULL,
+  `mrk_psebenar` int(11) DEFAULT NULL,
   `mrk_sebaboleh` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrk_lainlain` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrk_lanjutmasa` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_dari` date DEFAULT NULL,
-  `mrk_sehingga` date DEFAULT NULL,
+  `mrk_dari` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_sehingga` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `mrk_disebab` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_ladsehari` decimal(10,0) DEFAULT NULL,
-  `mrk_laddari` date DEFAULT NULL,
-  `mrk_ladsehingga` date DEFAULT NULL,
-  `mrk_perakukerjataksiap` date DEFAULT NULL,
-  `mrk_projekmansuh` date DEFAULT NULL,
-  `mrk_tarikhlaporan` date DEFAULT NULL,
+  `mrk_ladsehari` decimal(10,2) DEFAULT NULL,
+  `mrk_laddari` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_ladsehingga` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_perakukerjataksiap` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_projekmansuh` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_tarikhlaporan` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `mrk_modal` int(2) DEFAULT NULL,
   `mrk_bahan` int(2) DEFAULT NULL,
   `mrk_pekerja` int(2) DEFAULT NULL,
@@ -1643,6 +1824,19 @@ CREATE TABLE `mrk_dua` (
   `mrk2_noinden` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `mrk2_kodvots` varchar(150) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `mrk_dua`
+--
+
+INSERT INTO `mrk_dua` (`mrkduaid`, `mrk_majukerja`, `mrk_majukerjasebenar`, `mrk_bayarmajusemasa`, `mrk_jumlahbayarmaju`, `mrk_psebenar`, `mrk_sebaboleh`, `mrk_lainlain`, `mrk_lanjutmasa`, `mrk_dari`, `mrk_sehingga`, `mrk_disebab`, `mrk_ladsehari`, `mrk_laddari`, `mrk_ladsehingga`, `mrk_perakukerjataksiap`, `mrk_projekmansuh`, `mrk_tarikhlaporan`, `mrk_modal`, `mrk_bahan`, `mrk_pekerja`, `mrk_tapak`, `mrk_cuaca`, `mrksatu_id`, `mrk2_noinden`, `mrk2_kodvots`) VALUES
+(5, 50, '40', 0, '0.00', 30, '', '', '', '', '', '', '0.00', '', '', '', '', '30-06-2019', NULL, NULL, NULL, NULL, NULL, 34, 'jpskmsb(s)1-2019', 'P23-15300-515-3001'),
+(6, 100, '11-06-2019', 0, '0.00', 100, '', '', '', '', '', '', '0.00', '', '', '', '', '07-06-2019', NULL, NULL, NULL, NULL, NULL, 35, 'jpskmsb(s)100-2019', 'b28209'),
+(7, 0, '', 0, '0.00', 0, '', '', '', '', '', '', '0.00', '', '', '', '', '16-07-2019', NULL, NULL, NULL, NULL, NULL, 37, 'JPSKMSB(S)-6/2019', 'P23-15300'),
+(8, 0, '', 0, '0.00', 0, '', '', '', '', '', '', '0.00', '', '', '', '', '24-07-2019', NULL, NULL, NULL, NULL, NULL, 38, '19DPIK0300054', 'P13-15000'),
+(9, 90, '17-09-2019', 0, '0.00', 90, '', '', '', '', '', '', '0.00', '', '', '', '', '28-08-2019', NULL, NULL, NULL, NULL, NULL, 39, '19DPIK0300073', 'P13-6000'),
+(10, 100, '07-08-2019', 1, '19700.00', 100, '', '', '', '', '', '', '0.00', '', '', '', '', '07-08-2019', NULL, NULL, NULL, NULL, NULL, 40, '19DPIK0300080', 'B13-28209'),
+(11, 100, '07-08-2019', 1, '16400.00', 100, '', '', '', '', '', '', '0.00', '', '', '', '', '07-08-2019', NULL, NULL, NULL, NULL, NULL, 41, '19DPIK0300081', 'B13-28209');
 
 -- --------------------------------------------------------
 
@@ -1655,17 +1849,36 @@ CREATE TABLE `mrk_jaminanbank` (
   `mrk_rujukanbank` varchar(255) COLLATE utf8_bin NOT NULL,
   `mrk_namabank` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrk_alamatbank` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `jb_alamatsurat` text COLLATE utf8_bin,
   `js_mrkid` int(11) DEFAULT NULL,
   `js_kodvot` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `js_inden` varchar(150) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `mrk_jaminanbank`
+-- Table structure for table `mrk_jawatan`
 --
 
-INSERT INTO `mrk_jaminanbank` (`id`, `mrk_rujukanbank`, `mrk_namabank`, `mrk_alamatbank`, `js_mrkid`, `js_kodvot`, `js_inden`) VALUES
-(1, 'BANKCIMB_221202', '', '', 26, 'k-2342394', 'I002938228382');
+CREATE TABLE `mrk_jawatan` (
+  `jw_id` int(11) NOT NULL,
+  `jw_jawatan` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mrk_jawatan`
+--
+
+INSERT INTO `mrk_jawatan` (`jw_id`, `jw_jawatan`) VALUES
+(3, 'Penolong Jurutera JA29'),
+(4, 'Jurutera Daerah'),
+(5, 'Jurutera (Kuala Muda/Sik)'),
+(6, 'Jurutera (Baling)'),
+(7, 'Penolong Jurutera JA36'),
+(8, 'Penolong Jurutera JA36'),
+(9, 'Pelukis Pelan J22'),
+(10, 'Pelukis Pelan JA29');
 
 -- --------------------------------------------------------
 
@@ -1687,8 +1900,49 @@ INSERT INTO `mrk_keypeople` (`p_id`, `p_names`, `p_jawatan`) VALUES
 (8, 'Mohd Amin b Ahmad', NULL),
 (9, 'Yahaya b. Shariff', NULL),
 (10, 'Nurul Syariza bt Ramli', NULL),
-(11, 'Nor Rozaini bt Abdullah', NULL),
-(13, 'Sila Masukkan nama', NULL);
+(19, 'Baharudin Bin Ahmad', NULL),
+(20, 'Ir. Nor Rozaini Bt. Abdullah, AMP', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mrk_khusus`
+--
+
+CREATE TABLE `mrk_khusus` (
+  `ks_id` int(11) NOT NULL,
+  `ks_kscode` varchar(10) DEFAULT NULL,
+  `ks_ksname` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mrk_khusus`
+--
+
+INSERT INTO `mrk_khusus` (`ks_id`, `ks_kscode`, `ks_ksname`) VALUES
+(1, 'CE 02', 'Pembinaan Jambatan & Jeti'),
+(2, 'CE 04', ' Empangan'),
+(3, 'CE 06', 'Struktur saliran, pengairan dan kawalan banjir'),
+(4, 'CE 12', 'Kerja penyiasatan tanah'),
+(5, 'CE 13', 'Pemasangan papan iklan'),
+(6, 'CE 14', 'Landskap di luar bangunan'),
+(7, 'CE 21', 'Pembinaan kejuruteraan awam'),
+(8, 'CE 26', 'Struktur berukir (Sculptured structures)'),
+(9, 'CE 32', 'Kerja-kerja penyenggaraan kejuruteraan awam'),
+(10, 'CE 33', 'Telaga tiub'),
+(11, 'CE 36', 'Kerja-kerja tanah'),
+(12, 'M 01', 'Sistem hawa dingin dan pengedaran udara'),
+(13, 'M 15', 'Kelengkapan mekanikal pelbagai'),
+(14, 'M 20', 'Penyelengaraan am mekanikal'),
+(15, 'M 20', 'Sistem pam'),
+(16, 'M 23', 'Sistem SCADA dan telemetri'),
+(17, 'E 02', 'Sistem pengawasan dan keselamatan'),
+(18, 'E 07', 'Sistem telekomunikasi dalaman'),
+(19, 'E 14', 'Kabel rangkaian komputer'),
+(20, 'B 04', 'Kerja-kerja Pembinaan bangunan'),
+(21, 'B 05', 'Kerja cerucuk'),
+(22, 'B 07', 'Hiasan dalaman'),
+(23, 'B 10', 'Sistem paip air dalaman');
 
 -- --------------------------------------------------------
 
@@ -1699,14 +1953,14 @@ INSERT INTO `mrk_keypeople` (`p_id`, `p_names`, `p_jawatan`) VALUES
 CREATE TABLE `mrk_laporansiap` (
   `lskid` int(11) NOT NULL,
   `lsk_noinden` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `lsk_lanjutmasa` date DEFAULT NULL,
-  `lks_hargasebenar` decimal(10,0) DEFAULT NULL,
-  `lsk_tarikhkerjasiap` date DEFAULT NULL,
+  `lsk_lanjutmasa` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `lks_hargasebenar` decimal(10,2) DEFAULT NULL,
+  `lsk_tarikhkerjasiap` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `lsk_peruntukan` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lsk_laporanpegawai` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lsk_pegawaipenyelia` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lsk_jawatanpen` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `lsk_tarikhperakui` date NOT NULL,
+  `lsk_tarikhperakui` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `lsk_ketuabahagian` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lsk_jawatanketuab` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lsk_juruteraj` varchar(255) COLLATE utf8_bin DEFAULT NULL,
@@ -1715,6 +1969,8 @@ CREATE TABLE `mrk_laporansiap` (
   `lsk_jawatanjuruterad` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lsk_perkeso` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lsk_liability` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `lsk_insurans` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `lsk_allrisk` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `lskmrksatuid` int(11) DEFAULT NULL,
   `lks_kodvots` varchar(150) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -1723,8 +1979,14 @@ CREATE TABLE `mrk_laporansiap` (
 -- Dumping data for table `mrk_laporansiap`
 --
 
-INSERT INTO `mrk_laporansiap` (`lskid`, `lsk_noinden`, `lsk_lanjutmasa`, `lks_hargasebenar`, `lsk_tarikhkerjasiap`, `lsk_peruntukan`, `lsk_laporanpegawai`, `lsk_pegawaipenyelia`, `lsk_jawatanpen`, `lsk_tarikhperakui`, `lsk_ketuabahagian`, `lsk_jawatanketuab`, `lsk_juruteraj`, `lsk_jawatanjuruteraj`, `lsk_juruterad`, `lsk_jawatanjuruterad`, `lsk_perkeso`, `lsk_liability`, `lskmrksatuid`, `lks_kodvots`) VALUES
-(2, 'I002938228382', '2019-03-11', '12', '2019-03-09', 'G005000000V', 'KERJA-KERJA TELAH DILAKSANAKAN DENGAN SEMPURNA DAN MEMUASKAN', 'Azhar bin Ahmad', 'Penolong Jurutera', '2019-03-09', 'Mohd Amin b Ahmad', 'Jurutera ( Baling )', 'Nurul Syariza bt Ramli', 'Penolong Jurutera JA29', 'Nor Rozaini bt Abdullah', 'Jurutera Daerah', 'W/C/2019/0025', 'K/C/2019/0025', 26, 'k-2342394');
+INSERT INTO `mrk_laporansiap` (`lskid`, `lsk_noinden`, `lsk_lanjutmasa`, `lks_hargasebenar`, `lsk_tarikhkerjasiap`, `lsk_peruntukan`, `lsk_laporanpegawai`, `lsk_pegawaipenyelia`, `lsk_jawatanpen`, `lsk_tarikhperakui`, `lsk_ketuabahagian`, `lsk_jawatanketuab`, `lsk_juruteraj`, `lsk_jawatanjuruteraj`, `lsk_juruterad`, `lsk_jawatanjuruterad`, `lsk_perkeso`, `lsk_liability`, `lsk_insurans`, `lsk_allrisk`, `lskmrksatuid`, `lks_kodvots`) VALUES
+(6, 'jpskmsb(s)1-2019', '', '0.00', '', 'P23-15300-515-3001', '', 'Ridzam', 'Penolong Jurutera', '30-06-2019', 'Mohd Amin b Ahmad', 'Penolong Jurutera Kanan JA36', 'Nurul Syariza bt Ramli', 'Jurutera ( Kuala Muda/Sik )', 'Baharudin Bin Ahmad', 'Jurutera Daerah', '0125', '2546', NULL, NULL, 34, 'P23-15300-515-3001'),
+(7, 'jpskmsb(s)100-2019', '', '100000.00', '', 'b28209', 'uytuu', '', '', '11-06-2019', 'Mohd Amin b Ahmad', 'Penolong Jurutera Kanan JA36', 'Nurul Syariza bt Ramli', 'Penolong Jurutera Kanan JA36', 'Baharudin Bin Ahmad', 'Jurutera Daerah', 'j245', 'h885', NULL, NULL, 35, 'b28209'),
+(8, 'JPSKMSB(S)-6/2019', '', '174600.00', '', 'P23-15300', 'Kontraktor tidak cekap menguruskan kerja-kerja di tapak tanpa alasan yang munasabah serta mengingkari arahan daripada Pegawai Penjaga.Oleh yang demikian pihak kontraktor telah diberi surat peringatan dan amaran oleh pihak jabatan.', 'Noorzita Bt. Mustaffa', 'Penolong Jurutera', '20-08-2019', 'Mohd Amin b Ahmad', 'Penolong Jurutera Kanan JA36', '', '', 'Baharudin Bin Ahmad', 'Jurutera Daerah', 'D6202056991Y', '', 'ECR-E0059670-90', 'ECR-E0059670-90', 37, 'P23-15300'),
+(9, '19DPIK0300054', '', '85800.00', '03-07-2019', 'P13-15000', 'Kontraktor tidak cekap menguruskan kerja-kerja di tapak serta mengingkari arahan Pegawai Penjaga. Oleh yang demikian pihak kontraktor telah diberi surat peringatan dan amaran oleh pihak jabatan.', 'Noorzita Bt. Mustaffa', 'Penolong Jurutera', '24-07-2019', 'Mohd Amin b Ahmad', 'Penolong Jurutera Kanan JA36', '', '', 'Baharudin Bin Ahmad', 'Jurutera Daerah', 'D6210825F / WWW-W0175019-90', '', '', 'ECR-E0059903-90', 38, 'P13-15000'),
+(10, '19DPIK0300073', '', '173066.00', '22-09-2019', 'P13-6000', 'Kerja-kerja yang dilaksanakan siap dengan memuaskan serta memuaskan.', 'Mohamad Ridzam Bin Jusoh ', 'Penolong Jurutera', '24-09-2019', 'Mohd Amin b Ahmad', 'Penolong Jurutera Kanan JA36', 'Nurul Syariza bt Ramli', 'Jurutera ( Kuala Muda/Sik )', 'Baharudin Bin Ahmad', 'Jurutera Daerah', '', '', '', '', 39, 'P13-6000'),
+(11, '19DPIK0300080', '', '19700.00', '07-08-2019', 'B13-28209', 'Kerja-kerja telah dilaksanakan serta mengikut arahan dan spesifikasi lantikan terus', 'Yahaya Bin Shariff', 'Penolong Jurutera', '07-08-2019', 'Nurul Syariza bt Ramli', 'Jurutera ( Kuala Muda/Sik )', 'Nurul Syariza bt Ramli', 'Jurutera ( Kuala Muda/Sik )', 'Baharudin Bin Ahmad', 'Jurutera Daerah', 'D6200006052M', '', '', '', 40, 'B13-28209'),
+(12, '19DPIK0300081', '', '16400.00', '07-08-2019', 'B13-28209', 'Kerja-kerja telah disiapkan dengan baik dan memuaskan', 'Yahaya Bin Shariff', 'Penolong Jurutera', '07-08-2019', 'Nurul Syariza bt Ramli', 'Jurutera ( Kuala Muda/Sik )', 'Nurul Syariza bt Ramli', 'Jurutera ( Kuala Muda/Sik )', 'Baharudin Bin Ahmad', 'Jurutera Daerah', 'D6213551W', '', '', '', 41, 'B13-28209');
 
 -- --------------------------------------------------------
 
@@ -1735,10 +1997,10 @@ INSERT INTO `mrk_laporansiap` (`lskid`, `lsk_noinden`, `lsk_lanjutmasa`, `lks_ha
 CREATE TABLE `mrk_perakuansiap` (
   `id` int(11) NOT NULL,
   `mrk_pskinden` varchar(150) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_tarikhsiapsebenar` date DEFAULT NULL,
-  `mrk_tarikhambikmilik` date DEFAULT NULL,
-  `mrk_tarikhmulatanggungcacat` date DEFAULT NULL,
-  `mrk_tarikhtamattanggungcacat` date DEFAULT NULL,
+  `mrk_tarikhsiapsebenar` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_tarikhambikmilik` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_tarikhmulatanggungcacat` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_tarikhtamattanggungcacat` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `pskmrksatuid` int(11) DEFAULT NULL,
   `psk_kodvots` varchar(150) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -1748,7 +2010,12 @@ CREATE TABLE `mrk_perakuansiap` (
 --
 
 INSERT INTO `mrk_perakuansiap` (`id`, `mrk_pskinden`, `mrk_tarikhsiapsebenar`, `mrk_tarikhambikmilik`, `mrk_tarikhmulatanggungcacat`, `mrk_tarikhtamattanggungcacat`, `pskmrksatuid`, `psk_kodvots`) VALUES
-(2, 'I002938228382', '2019-03-09', '2019-02-15', '2019-03-11', '2019-07-31', 26, 'k-2342394');
+(5, 'jpskmsb(s)1-2019', '1-7-2019', '2-7-2019', '02-07-2019', '31-07-2019', 34, 'P23-15300-515-3001'),
+(6, 'jpskmsb(s)100-2019', '10-06-2019', '11-06-2019', '11-06-2019', '22-08-2019', 35, 'b28209'),
+(7, 'JPSKMSB(S)-6/2019', '30-06-2019', '01-07-2019', '01-07-2019', '01-01-2020', 37, 'P23-15300'),
+(8, '19DPIK0300054', '', '04-07-2019', '04-07-2019', '04-01-2020', 38, 'P13-15000'),
+(9, '19DPIK0300073', '30-09-2019', '01-09-2019', '01-09-2019', '14-03-2020', 39, 'P13-6000'),
+(10, '19DPIK0300080', '07-08-2019', '', '', '', 40, 'B13-28209');
 
 -- --------------------------------------------------------
 
@@ -1759,13 +2026,13 @@ INSERT INTO `mrk_perakuansiap` (`id`, `mrk_pskinden`, `mrk_tarikhsiapsebenar`, `
 CREATE TABLE `mrk_perakuansiapbaikicacat` (
   `id` int(11) NOT NULL,
   `mrk_nowangjaminansatu` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_hargasatu` decimal(10,0) DEFAULT NULL,
-  `mrk_bakiwangjamin` decimal(10,0) DEFAULT NULL,
+  `mrk_hargasatu` decimal(10,2) DEFAULT NULL,
+  `mrk_bakiwangjamin` decimal(10,2) DEFAULT NULL,
   `mrk_nowangjaminandua` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_hargadua` decimal(10,0) DEFAULT NULL,
-  `mrk_wangjaminlaksana` decimal(10,0) DEFAULT NULL,
-  `mrk_tambahbonlaksana` decimal(10,0) DEFAULT NULL,
-  `mrk_bakibonlaksana` decimal(10,0) DEFAULT NULL,
+  `mrk_hargadua` decimal(10,2) DEFAULT NULL,
+  `mrk_wangjaminlaksana` decimal(10,2) DEFAULT NULL,
+  `mrk_tambahbonlaksana` decimal(10,2) DEFAULT NULL,
+  `mrk_bakibonlaksana` decimal(10,2) DEFAULT NULL,
   `mrk_pegawaipenguasa` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrk_jawatanpp` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrkid_id` int(11) DEFAULT NULL,
@@ -1778,7 +2045,7 @@ CREATE TABLE `mrk_perakuansiapbaikicacat` (
 --
 
 INSERT INTO `mrk_perakuansiapbaikicacat` (`id`, `mrk_nowangjaminansatu`, `mrk_hargasatu`, `mrk_bakiwangjamin`, `mrk_nowangjaminandua`, `mrk_hargadua`, `mrk_wangjaminlaksana`, `mrk_tambahbonlaksana`, `mrk_bakibonlaksana`, `mrk_pegawaipenguasa`, `mrk_jawatanpp`, `mrkid_id`, `psmk_kodvots`, `psmk_inden`) VALUES
-(2, '', '0', '0', '', '0', '0', '0', '0', 'Nor Rozaini bt Abdullah', 'Jurutera Daerah', 26, 'k-2342394', 'I002938228382');
+(1, '', '0.00', '0.00', '', '0.00', '0.00', '0.00', '0.00', '', '', 38, 'P13-15000', '19DPIK0300054');
 
 -- --------------------------------------------------------
 
@@ -1792,20 +2059,15 @@ CREATE TABLE `mrk_ppwjp` (
   `ppwjp_rk` varchar(150) DEFAULT NULL,
   `ppwjp_kepada` varchar(150) DEFAULT NULL,
   `ppwjp_alamat` text,
-  `ppwjp_kos` decimal(10,0) DEFAULT NULL,
+  `ppwjp_kos` decimal(10,2) DEFAULT NULL,
   `ppwjp_pegawai` varchar(150) DEFAULT NULL,
   `ppwjp_jawatan` varchar(150) DEFAULT NULL,
   `ppwjp_mrkid` int(11) DEFAULT NULL,
   `ppwjp_inden` varchar(150) DEFAULT NULL,
-  `ppwjp_kodvot` varchar(150) DEFAULT NULL
+  `ppwjp_kodvot` varchar(150) DEFAULT NULL,
+  `ppwjp_namarujukan` varchar(255) NOT NULL,
+  `ppwjp_alamatrujukan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `mrk_ppwjp`
---
-
-INSERT INTO `mrk_ppwjp` (`ppwjp_id`, `ppwjp_rt`, `ppwjp_rk`, `ppwjp_kepada`, `ppwjp_alamat`, `ppwjp_kos`, `ppwjp_pegawai`, `ppwjp_jawatan`, `ppwjp_mrkid`, `ppwjp_inden`, `ppwjp_kodvot`) VALUES
-(1, 'K23332KK', '', '', '', '0', 'Idris Bin Yussof', 'Penolong Jurutera JA29', 26, 'I002938228382', 'k-2342394');
 
 -- --------------------------------------------------------
 
@@ -1826,12 +2088,12 @@ CREATE TABLE `mrk_satu` (
   `mrk_daerah` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrk_negeri` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrk_khusus` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_tarikhmulakon` date DEFAULT NULL,
-  `mrk_tarikhjangkasiap` date DEFAULT NULL,
+  `mrk_tarikhmulakon` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_tarikhjangkasiap` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `mrk_pegawai` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `mrk_jawatan` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `mrk_kosprojek` decimal(10,0) DEFAULT NULL,
-  `mrk_tarikh` date DEFAULT NULL,
+  `mrk_kosprojek` decimal(10,2) DEFAULT NULL,
+  `mrk_tarikh` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `mrksatu_id` int(11) NOT NULL,
   `mrks_kodvot` varchar(150) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -1841,7 +2103,14 @@ CREATE TABLE `mrk_satu` (
 --
 
 INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mrk_alamatkon`, `mrk_nokontrak`, `mrk_noinden`, `mrk_tajukkerja`, `mrk_kategori`, `mrk_daerah`, `mrk_negeri`, `mrk_khusus`, `mrk_tarikhmulakon`, `mrk_tarikhjangkasiap`, `mrk_pegawai`, `mrk_jawatan`, `mrk_kosprojek`, `mrk_tarikh`, `mrksatu_id`, `mrks_kodvot`) VALUES
-(27, '0120020211-KD068614', 'G2', 'ADK SEJATI ENTERPRISE', 'NO. 1400, LORONG ANGSANA 41', '19/2019', 'I_121292823', 'The new projek', 'B', 'Kedah', 'Kedah', 'CE 04', '2019-04-26', '2019-04-26', 'Haraz', 'Penolong Jurutera', '120', '2019-04-26', 0, 'K_BP12345');
+(34, '0120020819-KD073945', 'G1', 'ZNZ WARISAN ENTERPRISE', 'HADAPAN PEJABAT LPP BATU 5 SIK 08200 Sik Kedah', 'JPSKMSB(SH/S)S/P/RB/41/2019', 'jpskmsb(s)1-2019', 'Program  Pemuliharaan Sungai Untuk Mengurangkan Risiko Banjir Di Kg. Belantek Dalam, Sg. Chapar, Mukim Sok, Daerah Sik, Kedah Darul Aman.', 'CE', 'Sik', 'Kedah', 'CE 21', '18-06-2019', '26-07-2019', '', '', '150000.00', '11-06-2019', 0, 'P23-15300-515-3001'),
+(35, '1000720-KD057261', 'G1', 'MDH MAJU ENTERPRISE', 'NO. 118-D, LORONG 15 TAMAN SEJATI INDAH  08000 Sungai Petani Kedah', 'JPSKMSB(SH/S)S/P/RB/90/2019', 'jpskmsb(s)100-2019', 'xyz tq', 'CE', 'Kuala Muda', 'Kedah', 'CE 21', '20-05-2019', '12-06-2019', '', '', '100000.00', '20-05-2019', 0, 'b28209'),
+(36, '0120030114-KD079517', '', 'TANJUNG KUKUH ENTERPRISE', 'BT 8, KG TANJONG PARI MUKIM SIONG  09100 Baling Kedah', 'JPSKMSB(SH/KM) P/P/SG/39/2019', '', 'PROGRAM PEMULIHARAAN SUNGAI UNTUK MENGURANGKAN RISIKO BANJIR DI SEKOLAH MENENGAH KEBANGSAAN GURUN, SUNGAI GURUN, DAERAH KUALA MUDA, KEDAH DARUL AMAN.', '', 'Baling', 'Kedah', '', '', '', 'Shahriful Azhar bin Mohd Hassan	', 'Penolong Jurutera', '0.00', '', 0, 'P23-15300-515-3001'),
+(37, '1961004-KD007745', 'G1', 'RIA MAJU ENTERPRISE', 'NO.1 BANGUNAN KEDAI KAMPUNG BATU BESAR   08200 SIK Kedah', 'JPSKMSB(SH/S) P/P/SG/25/2019', 'JPSKMSB(S)-6/2019', 'PROGRAM PEMULIHARAAN SUNGAI UNTUK MENGURANGKAN RISIKO BANJIR DI KG. NAMEK, SG. CHEPIR, MUKIM SIK, DAERAH SIK, KEDAH DARUL AMAN.', 'CE', 'SIK', 'Kedah', 'CE 21', '07-04-2019', '30-06-2019', 'Noorzita Bt. Mustaffa', 'Penolong Jurutera', '174600.00', '20-08-2019', 0, 'P23-15300'),
+(38, '0120030416-KD082522', 'G1', 'MOHD SHUKRI CONSTRUCTION', 'NO. 27 KAMPUNG BARU JALAN CHEMARA  08700 Sungai Petani Kedah', 'JPSKMSB(KM/S) S/P/SG/24/2019', '19DPIK0300054', 'PROGRAM PEMULIHAN, PENGINDAHAN DAN PEMULIHARAAN SUNGAI TELOI DI KG. BANGGOL, MUKIM TELOI, DAERAH SIK, KEDAH DARUL AMAN.', 'CE', 'Kuala Muda', 'Kedah', 'CE 21', '10-04-2019', '03-07-2019', 'Noorzita Bt. Mustaffa', 'Penolong Jurutera', '85800.00', '24-07-2019', 0, 'P13-15000'),
+(39, '0120140107-KD154392', 'G1', 'Z ZAINI ENTERPRISE', 'NO.36A KAMPUNG TANJUNG SIK  08200 Sik Kedah', 'JPSKMSB(SH/S)S/P/SG/40/2019', '19DPIK0300073', 'Program Pemuliharaan Sungai Untuk Mengurangkan Risiko Banjir di Kg. Lubok Tualang, Sg. Tebal, Mukim Sik, Daerah Sik, Kedah Darul Aman', 'CE', 'Sik', 'Kedah', 'CE 21', '28-07-2019', '22-09-2019', 'Mohamad Ridzam Bin Jusoh', 'Penolong Jurutera', '173066.00', '28-07-2019', 0, 'P13-6000'),
+(40, '1961210-KD019192', 'G1', 'BELLFON SISTEM ENTERPRISE', '802, LEBUH DELIMA TAMAN DELIMA  08000 SUNGAI PETANI Kedah', 'JPSKMSB(LT/KM) S/B/OM 90/2019', '19DPIK0300080', 'KERJA-KERJA HEAVY CLEARING TERUSAN UTAMA SKIM KOTA II, (JENGKAUT HIDROLIK)', 'CE', 'KUALA MUDA', 'Kedah', 'CE 21', '01-08-2019', '22-08-2019', 'Yahaya Bin Shariff', 'Penolong Jurutera', '19700.00', '07-08-2019', 0, 'B13-28209'),
+(41, '0120120830-KD145049', 'G1', 'MASISHAK ENTERPRISE', 'F291, JALAN POKOK KABU TIKAM BATU  08600 Sungai Petani Kedah', 'JPSKMSB(LT/KM) S/B/OM 91/2019', '19DPIK0300081', 'KERJA-KERJA HEAVY CLEARING TERUSAN UTAMA SKIM KOTA II, ( HIDROLIK JENGKAUT) PT S KE PT U', 'CE', 'Kuala Muda', 'Kedah', 'CE 21', '01-08-2019', '22-08-2019', 'Yahaya Bin Shariff', 'Penolong Jurutera', '16400.00', '07-08-2019', 0, 'B13-28209');
 
 -- --------------------------------------------------------
 
@@ -1851,15 +2120,16 @@ INSERT INTO `mrk_satu` (`mrksatuid`, `mrk_nopkk`, `mrk_gred`, `mrk_namakon`, `mr
 
 CREATE TABLE `mrk_setting` (
   `set_id` int(11) NOT NULL,
-  `set_slogan` varchar(150) DEFAULT NULL
+  `set_slogan` varchar(150) DEFAULT NULL,
+  `cogankata` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mrk_setting`
 --
 
-INSERT INTO `mrk_setting` (`set_id`, `set_slogan`) VALUES
-(1, 'Cintailah Sungai Kita');
+INSERT INTO `mrk_setting` (`set_id`, `set_slogan`, `cogankata`) VALUES
+(1, ' NEGARAKU ALAM SEKITARKU ', ' KEDAH AMAN MAKMUR-HARAPAN BERSAMA MAKMURKAN KEDAH   ');
 
 -- --------------------------------------------------------
 
@@ -1891,7 +2161,7 @@ CREATE TABLE `mrk_ss` (
   `ss_mrkid` int(11) DEFAULT NULL,
   `ss_kodvot` varchar(150) DEFAULT NULL,
   `ss_disediakan` varchar(200) DEFAULT NULL,
-  `ss_date` date DEFAULT NULL
+  `ss_date` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1899,7 +2169,10 @@ CREATE TABLE `mrk_ss` (
 --
 
 INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, `cb8`, `cb9`, `cb10`, `cb11`, `cb12`, `cb13`, `cb14`, `cb15`, `cb16`, `cb17`, `cb18`, `ss_inden`, `ss_mrkid`, `ss_kodvot`, `ss_disediakan`, `ss_date`) VALUES
-(2, 1, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'I002938228382', 26, 'k-2342394', 'syed mohd afiq', '2019-03-12');
+(5, 1, 1, 1, 1, 1, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, 'jpskmsb(s)1-2019', 34, 'P23-15300-515-3001', 'Ridzam', ''),
+(6, 1, 1, 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, '19DPIK0300054', 38, 'P13-15000', 'Noorzita Bt. Mustaffa', '24-07-2019'),
+(7, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, 1, NULL, 1, 1, NULL, NULL, '19DPIK0300080', 40, 'B13-28209', 'Yahaya Bin Shariff', '07-08-2019'),
+(8, 1, 1, 1, 1, 1, 1, 1, 1, NULL, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, 'JPSKMSB(S)-6/2019', 37, 'P23-15300', 'Noorzita Bt. Mustaffa', '20-08-2019');
 
 -- --------------------------------------------------------
 
@@ -1910,6 +2183,8 @@ INSERT INTO `mrk_ss` (`ss_id`, `cb1`, `cb2`, `cb3`, `cb4`, `cb5`, `cb6`, `cb7`, 
 CREATE TABLE `mrk_suratkhas` (
   `skhas_id` int(11) NOT NULL,
   `skhas_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `skhas_namarujukan` varchar(255) DEFAULT NULL,
+  `skhas_alamatrujukan` text,
   `skhas_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `skhas_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `skhas_inden` varchar(150) DEFAULT NULL,
@@ -1926,7 +2201,9 @@ CREATE TABLE `mrk_suratkhas` (
 CREATE TABLE `mrk_suratmrk` (
   `id` int(11) NOT NULL,
   `s_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `s_tarikhtuan` date DEFAULT NULL,
+  `s_namarujukan` varchar(255) DEFAULT NULL,
+  `s_alamatrujukan` text,
+  `s_tarikhtuan` varchar(150) DEFAULT NULL,
   `s_jenisborang` varchar(11) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `s_noinden` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `s_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
@@ -1947,7 +2224,7 @@ CREATE TABLE `mrk_suratwjp` (
   `swjp_rujuktuan` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `swjp_alamat` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `swjp_melalui` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `swjp_wangjamin` decimal(10,0) DEFAULT NULL,
+  `swjp_wangjamin` decimal(10,2) DEFAULT NULL,
   `swjp_alamatlalu` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `swjp_pegawaikuasa` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `swjp_jawatanpp` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
@@ -1977,7 +2254,7 @@ CREATE TABLE `mrk_tiga` (
   `tiga_kontraktor` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `tiga_pegawai` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `tiga_jawatan` varchar(150) COLLATE utf8_bin DEFAULT NULL,
-  `tiga_tarikah` date DEFAULT NULL,
+  `tiga_tarikah` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `tiga_catat1` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `tiga_catat2` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `tiga_catat3` varchar(150) COLLATE utf8_bin DEFAULT NULL,
@@ -1985,15 +2262,22 @@ CREATE TABLE `mrk_tiga` (
   `tiga_catat5` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `tiga_catat6` varchar(150) COLLATE utf8_bin DEFAULT NULL,
   `tiga_catat7` varchar(150) COLLATE utf8_bin DEFAULT NULL,
-  `tiga_catat8` varchar(150) COLLATE utf8_bin DEFAULT NULL
+  `tiga_catat8` varchar(150) COLLATE utf8_bin DEFAULT NULL,
+  `mrk_ulasan` text COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `mrk_tiga`
 --
 
-INSERT INTO `mrk_tiga` (`mrktigaid`, `mrksatutiga_id`, `mrk_tigainden`, `mrktiga_kodvots`, `tiga_bina`, `tiga_tadbir`, `tiga_kemajuan`, `tiga_kerangka`, `tiga_kerja`, `tiga_kemasan`, `tiga_luar`, `tiga_kontraktor`, `tiga_pegawai`, `tiga_jawatan`, `tiga_tarikah`, `tiga_catat1`, `tiga_catat2`, `tiga_catat3`, `tiga_catat4`, `tiga_catat5`, `tiga_catat6`, `tiga_catat7`, `tiga_catat8`) VALUES
-(2, 26, 'I002938228382', 'k-2342394', '50% - 74%', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', '50% kebawah', '90% - Keatas', '90% - Keatas', 'Azhar bin Ahmad', 'Penolong Jurutera', '2019-03-17', '', '', '', '', '', '', '', '');
+INSERT INTO `mrk_tiga` (`mrktigaid`, `mrksatutiga_id`, `mrk_tigainden`, `mrktiga_kodvots`, `tiga_bina`, `tiga_tadbir`, `tiga_kemajuan`, `tiga_kerangka`, `tiga_kerja`, `tiga_kemasan`, `tiga_luar`, `tiga_kontraktor`, `tiga_pegawai`, `tiga_jawatan`, `tiga_tarikah`, `tiga_catat1`, `tiga_catat2`, `tiga_catat3`, `tiga_catat4`, `tiga_catat5`, `tiga_catat6`, `tiga_catat7`, `tiga_catat8`, `mrk_ulasan`) VALUES
+(5, 34, 'jpskmsb(s)1-2019', 'P23-15300-515-3001', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', 'Ridzam', 'Penolong Jurutera', '30-06-2019', '', '', '', '', '', '', '', '', 'baik'),
+(6, 35, 'jpskmsb(s)100-2019', 'b28209', '90% - Keatas', '90% - Keatas', '90% - Keatas', '90% - Keatas', '90% - Keatas', '90% - Keatas', '90% - Keatas', '90% - Keatas', 'Ridzam', 'Penolong Jurutera', '11-06-2019', '', '', '', '', '', '', '', '', 'ytytyty'),
+(7, 37, 'JPSKMSB(S)-6/2019', 'P23-15300', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', 'Noorzita Bt. Mustaffa', 'Penolong Jurutera', '20-08-2019', 'Lewat memulakan kerja ', '', 'tidak memuaskan', '', '', '', '', 'tidak cekap', 'Lemah dalam pengurusan tapak kerja serta  engkar arahan  pegawai penyelia.'),
+(8, 38, '19DPIK0300054', 'P13-15000', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', '50% kebawah', 'Noorzita Bt. Mustaffa', 'Penolong Jurutera', '', 'lambat memulakan kerja ', '', '', '', '', '', '', 'tidak cekap', 'Kontraktor  tidak cekap menguruskan tapak bina serta engkar arahan Pegawai Penjaga. Oleh yang demikian kontraktor telah diberi surat amaran dan peringatan.'),
+(9, 39, '19DPIK0300073', 'P13-6000', '75% - 89%', '75% - 89%', '50% - 74%', '75% - 89%', '75% - 89%', '50% - 74%', NULL, NULL, 'Mohamad Ridzam Bin Jusoh ', 'Penolong Jurutera', '02-09-2019', '', '', '', '', '', '', '', '', 'Kontraktor  mempunyai komitmen untuk menyiapkan kerja mengikut jadual dan mematuhi arahan pegawai penjaga.'),
+(10, 40, '19DPIK0300080', 'B13-28209', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', '75% - 89%', NULL, NULL, '75% - 89%', 'Yahaya Bin Shariff', 'Penolong Jurutera', '07-08-2019', '', '', '', '', '', '', '', '', 'Kontraktor mempunyai kemudahan jengkaut  dan dapat melaksanakan kerja dengan cepat'),
+(11, 41, '19DPIK0300081', 'B13-28209', '75% - 89%', '75% - 89%', '75% - 89%', NULL, '75% - 89%', NULL, NULL, '75% - 89%', 'Yahaya Bin Shariff', 'Penolong Jurutera', '07-08-2019', '', '', '', '', '', '', '', '', 'Pemborong mempunyai kemudahan jengkaut dan dapat melaksanakan kerja dengan segera.Boleh dipertimbangkan untuk kerja-kerja kecemasan yang memerlukan penggunaan jengkaut');
 
 -- --------------------------------------------------------
 
@@ -2014,10 +2298,47 @@ CREATE TABLE `order_nsh` (
 --
 
 INSERT INTO `order_nsh` (`no_id`, `no_sebutharga`, `no_tarikh`, `no_pemilik`, `no_jenis`) VALUES
-(4, '19/2019', '2019-02-14', 'syed mohd afiq', 'Lantikan Terus'),
-(5, 'JPS.KMSB(SH-KM)N/B/P/16/2012', '2019-02-17', 'Azhar bin Ahmad', 'Sebutharga'),
-(6, '20/2019', '2019-04-08', 'syed mohd afiq', 'Lantikan Terus'),
-(7, '19/2019', '2019-04-08', 'Lokman hakim', 'Sebutharga');
+(17, 'JPSKMSB(SH/KM) S/B/SG/38/2019', '2019-04-10', 'Shahriful Azhar bin Mohd Hassan', 'Sebutharga'),
+(18, 'JPSKMSB(SH/KM) S/P/SG/27/2019', '2019-02-26', 'Shahriful Azhar bin Mohd Hassan', 'Sebutharga'),
+(19, 'JPSKMSB(SH/S) P/P/SG/25/2019', '2019-02-21', 'Noorzita Bt. Mustaffa', 'Sebutharga'),
+(26, 'JPSKMSB(LT/KM) N/B/SG/ 45/2019', '2019-03-10', 'Abu Bakar Bin Husain', 'Lantikan Terus'),
+(27, 'JPSKMSB(KU/KM) S/B/OM/ 26/2019', '2019-02-11', 'Mohd Amin Bin Ahmad', 'Undi'),
+(28, 'JPSKMSB(KU/KM) S/B/OM 23/2019', '2019-01-29', 'Mohd Amin Bin Ahmad', 'Undi'),
+(29, 'JPSKMSB(SH/KM) P/P/SG/39/2019', '2019-05-12', 'Shahriful Azhar bin Mohd Hassan	', 'Sebutharga'),
+(32, 'JPSKMSB(SH/S)S/P/SG/40/2019', '2019-05-23', 'Mohamad Ridzam Bin Jusoh', 'Sebutharga'),
+(33, 'JPSKMSB(SH/S)S/P/SG/44/2019', '2019-05-23', 'Mohamad Ridzam Bin Jusoh', 'Sebutharga'),
+(35, 'JPSKMSB(KU/KM) S/B/OM/ 23/2019', '2019-01-29', 'Mohd Amin Bin Ahmad', 'Undi'),
+(36, 'JPSKMSB ( SH/KM) N/B/OM 4/2019', '2019-01-15', 'Mohamad Shuhaimi Bin Khamis', 'Sebutharga'),
+(39, 'JPSKMSB(KU/KM) S/B/OM/ 16/2019', '2019-01-23', 'Mohamad Shuhaimi Bin Khamis', 'Undi'),
+(40, 'JPSKMSB(KU/KM) S/B/OM/ 17/2019', '2019-01-23', 'Mohamad Shuhaimi Bin Khamis', 'Undi'),
+(41, 'JPSKMSB(KU/KM) S/B/SG/ 24/2019', '2019-01-31', 'Shahriful Azhar bin Mohd Hassan	', 'Undi'),
+(42, 'JPSKMSB(KU/KM) S/B/SG/ 25/2019', '2019-02-10', 'Shahriful Azhar bin Mohd Hassan	', 'Undi'),
+(43, 'JPSKMSB(SH/B)F/B/SG/31/2019', '2019-03-18', 'Norhafizah Binti Yahaya', 'Sebutharga'),
+(44, 'JPSKMSB(SH/B)F/B/SG/32/2019', '2019-03-18', 'Norhafizah Binti Yahaya', 'Sebutharga'),
+(45, 'JPSKMSB(KM/S) S/P/SG/24/2019', '2019-02-21', 'Noorzita Bt. Mustaffa', 'Sebutharga'),
+(46, 'JPSKMSB(SH/KM) S/P/SG/21/2019', '2019-02-17', 'Shahriful Azhar bin Mohd Hassan	', 'Sebutharga'),
+(47, 'JPSKMSB(SH/KM) S/B/MARRIS/30/2019', '2019-03-13', 'Shahriful Azhar bin Mohd Hassan	', 'Sebutharga'),
+(48, 'JPSKMSB(SH/KM) N/B/PB/1/2019', '2019-01-01', 'Abu Bakar Bin Husain', 'Sebutharga'),
+(49, 'JPSKMSB(SH/KM) N/B/OM/4/2019', '2019-01-15', 'Azhar Bin Ahmad', 'Sebutharga'),
+(50, 'JPSKMSB(SH/KM) N/B/OM/5/2019', '2019-01-15', 'Azhar Bin Ahmad', 'Sebutharga'),
+(51, 'JPSKMSB(LT/KM) S/B/OM 90/2019', '2019-07-30', 'Yahaya Bin Shariff', 'Lantikan Terus'),
+(52, 'JPSKMSB(LT/KM) S/B/OM 91/2019', '2019-07-30', 'Yahaya Bin Shariff', 'Lantikan Terus'),
+(53, 'JPSKMSB(KU/KM) S/B/OM 100/2019', '2019-07-30', 'Yahaya Bin Shariff', 'Undi'),
+(54, 'JPSKMSB(KU/KM) S/B/OM 101/2019', '2019-07-30', 'Yahaya Bin Shariff', 'Undi'),
+(55, 'JPSKMSB(KU/KM) S/B/OM 102/2019', '2019-07-30', 'Yahaya Bin Shariff', 'Undi'),
+(56, 'JPSKMSB(KU/KM) S/B/OM 103/2019', '2019-07-30', 'Yahaya Bin Shariff', 'Undi'),
+(57, 'JPSKMSB(KU/KM) S/B/OM 104/2019', '2019-07-30', 'Yahaya Bin Shariff', 'Undi'),
+(58, 'JPSKMSB(KU/KM) S/B/OM 105/2019', '2019-07-30', 'Yahaya Bin Shariff', 'Undi'),
+(59, 'JPSKMSB(KU/KM) S/B/OM 106/2019', '2019-08-01', 'Yahaya Bin Shariff', 'Undi'),
+(60, 'JPSKMSB(SH/KM) F/B/OM/54/2019', '2019-08-07', 'Mohamad Shuhaimi Bin Khamis', 'Sebutharga'),
+(61, 'JPSKMSB(KU/B) S/B/JM 59/2019', '2019-04-22', 'Johari Bin Ali', 'Undi'),
+(62, 'JPSKMSB(KU/B) S/B/JM 60/2019', '2019-04-22', 'Johari Bin Ali', 'Undi'),
+(63, 'JPSKMSB(KU/B) S/B/JM 61/2019', '2019-04-22', 'Johari Bin Ali', 'Undi'),
+(64, 'JPSKMSB(KU/B) S/B/JM 62/2019', '2019-04-22', 'Johari Bin Ali', 'Undi'),
+(65, 'JPSKMSB(KU/B) S/B/JM 63/2019', '2019-04-22', 'Johari Bin Ali', 'Undi'),
+(66, 'JPSKMSB(KU/B) S/B/JM 64/2019', '2019-04-22', 'Johari Bin Ali', 'Undi'),
+(67, 'JPSKMSB(LT/KM) S/B/SG/67/2019', '2019-05-30', 'Shahriful Azhar bin Mohd Hassan	', 'Lantikan Terus'),
+(68, 'JPSKMSB(KU/KM) S/B/KT/ 122/2019', '2019-08-27', 'Mohd Tarmizi Bin Taib', 'Undi');
 
 --
 -- Indexes for dumped tables
@@ -2078,6 +2399,12 @@ ALTER TABLE `kontraktor`
   ADD PRIMARY KEY (`kontraktorId`);
 
 --
+-- Indexes for table `kos_projek`
+--
+ALTER TABLE `kos_projek`
+  ADD PRIMARY KEY (`kos_id`);
+
+--
 -- Indexes for table `mrk_dua`
 --
 ALTER TABLE `mrk_dua`
@@ -2090,10 +2417,22 @@ ALTER TABLE `mrk_jaminanbank`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `mrk_jawatan`
+--
+ALTER TABLE `mrk_jawatan`
+  ADD PRIMARY KEY (`jw_id`);
+
+--
 -- Indexes for table `mrk_keypeople`
 --
 ALTER TABLE `mrk_keypeople`
   ADD PRIMARY KEY (`p_id`);
+
+--
+-- Indexes for table `mrk_khusus`
+--
+ALTER TABLE `mrk_khusus`
+  ADD PRIMARY KEY (`ks_id`);
 
 --
 -- Indexes for table `mrk_laporansiap`
@@ -2175,19 +2514,19 @@ ALTER TABLE `order_nsh`
 -- AUTO_INCREMENT for table `dp_gps`
 --
 ALTER TABLE `dp_gps`
-  MODIFY `gps_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `gps_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `dp_projek`
 --
 ALTER TABLE `dp_projek`
-  MODIFY `projek_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `projek_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `dp_projekinfo`
 --
 ALTER TABLE `dp_projekinfo`
-  MODIFY `info_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `info_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `jps_component`
@@ -2211,13 +2550,13 @@ ALTER TABLE `jps_subsistem`
 -- AUTO_INCREMENT for table `jps_sungai`
 --
 ALTER TABLE `jps_sungai`
-  MODIFY `sg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=654;
+  MODIFY `sg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=655;
 
 --
 -- AUTO_INCREMENT for table `jps_users`
 --
 ALTER TABLE `jps_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `kontraktor`
@@ -2226,52 +2565,70 @@ ALTER TABLE `kontraktor`
   MODIFY `kontraktorId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=577;
 
 --
+-- AUTO_INCREMENT for table `kos_projek`
+--
+ALTER TABLE `kos_projek`
+  MODIFY `kos_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `mrk_dua`
 --
 ALTER TABLE `mrk_dua`
-  MODIFY `mrkduaid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `mrkduaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `mrk_jaminanbank`
 --
 ALTER TABLE `mrk_jaminanbank`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `mrk_jawatan`
+--
+ALTER TABLE `mrk_jawatan`
+  MODIFY `jw_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `mrk_keypeople`
 --
 ALTER TABLE `mrk_keypeople`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `mrk_khusus`
+--
+ALTER TABLE `mrk_khusus`
+  MODIFY `ks_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `mrk_laporansiap`
 --
 ALTER TABLE `mrk_laporansiap`
-  MODIFY `lskid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `lskid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `mrk_perakuansiap`
 --
 ALTER TABLE `mrk_perakuansiap`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `mrk_perakuansiapbaikicacat`
 --
 ALTER TABLE `mrk_perakuansiapbaikicacat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `mrk_ppwjp`
 --
 ALTER TABLE `mrk_ppwjp`
-  MODIFY `ppwjp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ppwjp_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `mrk_satu`
 --
 ALTER TABLE `mrk_satu`
-  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `mrksatuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `mrk_setting`
@@ -2283,7 +2640,7 @@ ALTER TABLE `mrk_setting`
 -- AUTO_INCREMENT for table `mrk_ss`
 --
 ALTER TABLE `mrk_ss`
-  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ss_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `mrk_suratkhas`
@@ -2307,13 +2664,13 @@ ALTER TABLE `mrk_suratwjp`
 -- AUTO_INCREMENT for table `mrk_tiga`
 --
 ALTER TABLE `mrk_tiga`
-  MODIFY `mrktigaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `mrktigaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `order_nsh`
 --
 ALTER TABLE `order_nsh`
-  MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `no_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

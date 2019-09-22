@@ -89,7 +89,7 @@ $pdf->SetXY(129, 106);
 $pdf->Write(0,$ladhingga,0,1,'C');
 
 
-$pdf->SetXY(84, 210);
+$pdf->SetXY(84, 205);
 $pdf->MultiCell(110,5,$ulasan,0,'J');
 
 $pdf->SetFont('Times','',12);
