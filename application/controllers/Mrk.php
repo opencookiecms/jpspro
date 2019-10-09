@@ -553,6 +553,14 @@ class Mrk extends CI_Controller{
 		}
 	}
 
+	public function mrkp()
+	{
+		$pid = $this->input->post('hide');
+
+		$this->Mrk_model->mrkpupdate($pid);
+		redirect(base_url('projek/view_data/'.$pid)); //redirect last id to another step
+	}
+
 
 
 

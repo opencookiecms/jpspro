@@ -12,13 +12,14 @@
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/staradmin/vendors/css/vendor.bundle.addons.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
+   
 	<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
 
 	<link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/styles.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/datepicker/dist/datepicker.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/datepicker/dist/datepicker.js"/>
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/ownstyles/datepicker/dist/datepicker.js"/> -->
 
 
 
@@ -37,6 +38,7 @@
 <script type="text/javascript" src="<?php echo base_url() ?>assets/vendor/DataTables/jquery/jquery-3.3.1.min.js"></script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <script src="<?php echo base_url();?>assets/js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
 var jQuery_1_12_4 = $.noConflict(true);

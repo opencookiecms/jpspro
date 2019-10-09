@@ -126,6 +126,7 @@ class Mrk_model extends CI_Model{
     $mrk_satuid = $this->input->post('mrksatuid');
     $mrk_noinden = $this->input->post('noinden');
     $mrk_kodvots = $this->input->post('kodvods');
+    $mrk_mainid = $this->input->post('hiddenid');
 
 
     $data = array(
@@ -154,7 +155,8 @@ class Mrk_model extends CI_Model{
       'mrk_cuaca'=>$mrk_cuaca,
       'mrksatu_id' => $mrk_satuid,
       'mrk2_noinden' => $mrk_noinden,
-      'mrk2_kodvots'=>$mrk_kodvots
+      'mrk2_kodvots'=>$mrk_kodvots,
+      'mrk_mainid' => $mrk_mainid
     );
 
     return $this->db->insert('mrk_dua', $data);
@@ -1128,6 +1130,22 @@ class Mrk_model extends CI_Model{
     $this->db->from('kontraktor');
     $query = $this->db->get();
     return $query->result();
+  }
+
+  public function mrkpupdate($id)
+  {
+   
+    $data = array(
+      'mrk_majukerja' => $this->input->post('peratusan')
+    );
+
+    $this->db->where('mrk_mainid', $id);
+    $this->db->update('mrk_dua', $data);
+  }
+
+  public function bindmrkdua()
+  {
+    
   }
 
 

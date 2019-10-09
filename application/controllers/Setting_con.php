@@ -446,4 +446,17 @@ class Setting_con extends CI_Controller{
 
   }
 
+  public function delkusus($value="")
+  {
+    $this->load->database();
+
+    $this->Setting_model->delkursus($value);
+    redirect(base_url('Setting_con/khususkod'));
+  }
+
+  public function kk()
+  {
+    
+  }
+
 }
