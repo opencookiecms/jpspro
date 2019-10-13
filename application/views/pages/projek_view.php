@@ -28,7 +28,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                   <h2 class="card-title text-primary">No Sebutharga : <?php echo $get_detail[0]->df_nosebutharga ?></h2>
                 </p>
                 <br>
-                 <h2 class="card-title text-primary">Peratusan Kerja :</h2>
+                 <h2 class="card-title text-primary">Peratusan Kerja : <?php echo $get_progress[0]->mrk_majukerja ?> % </h2>
                 <p class="card-description">
                  <?php echo form_open('mrk/mrkp'); ?>
                      <div class="row">

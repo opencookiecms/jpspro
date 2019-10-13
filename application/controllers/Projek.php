@@ -182,6 +182,8 @@ class Projek extends CI_Controller
    $this->load->view('template/sidebar');
    $data['get_progress']=$this->Projek_model->get_projectprogress($value);
    $data['get_detail']=$this->Projek_model->get_projekdetailbyid($value);
+   //$data['get_mrk'] =  $this->Projek_model->get_projectp();
+  
    $this->load->view('pages/projek_view', $data);
    $this->load->view('template/footer');
 

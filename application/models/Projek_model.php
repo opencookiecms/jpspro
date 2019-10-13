@@ -553,6 +553,16 @@ class Projek_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_projectp()
+  {
+    $this->db->select('*');
+    $this->db->from('dp_projek');
+    $this->db->join('mrk_dua','mrk_dua.mrk_mainid = dp_projek.projek_id','left' );
+
+    $this->db->where('mrk_mainid', 69);
+    $query = $this->db->get();
+  }
+
   public function getsungai()
   {
     $this->db->select('*');
