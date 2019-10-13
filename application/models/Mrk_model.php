@@ -781,7 +781,9 @@ class Mrk_model extends CI_Model{
       'mrk_pekerja' => $mrk_pekerja,
       'mrk_tapak' =>$mrk_tapak,
       'mrk_cuaca'=>$mrk_cuaca,
+	  'mrk_mainid' => $this->input->post('hiddenid'),
       'mrksatu_id' => $mrk_satuid
+	  
     );
 
     $this->db->where('mrksatu_id', $update);
