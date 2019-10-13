@@ -91,24 +91,59 @@ class Projek extends CI_Controller
 
   public function lantikan_terus()
   {
-   $this->load->database();
+      $this->load->database();
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $jenisprojek = "Lantikan Terus";
+        if($this->session->userdata('roles')=='user')
+        {
+        
+          $username = $this->session->userdata('name');
+          $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek);
+        }
+        else
+        {
+          $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek);
+        }
+
+        $this->load->view('pages/projek', $data);
+        $this->load->view('template/footer');
+  }
+
+  public function senarai_projek_tahunan()
+  {
+    $data['title'] = "Senarai Projek Mengikut Tahunan";
+    $this->load->database();
     $this->load->view('template/header');
     $this->load->view('template/nav');
     $this->load->view('template/sidebar');
-    $jenisprojek = "Lantikan Terus";
+    $this->load->view('pages/senarai_projek_tahunan',$data);
+    $this->load->view('template/footer');
+  }
+
+  public function maklumat_tahunan()
+  {
+    $years = $this->input->post('tahun');
+    $maklumat = $this->input->post('maklumat');
+    $data['y'] = $years;
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+
     if($this->session->userdata('roles')=='user')
     {
-    
       $username = $this->session->userdata('name');
-      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek);
+      $data['get_projek']=$this->Projek_model->get_projekviewbyut($username,$maklumat,$years);
     }
     else
     {
-      $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek);
+       $data['get_projek']=$this->Projek_model->get_projekviewt($maklumat,$years);
     }
 
-    $this->load->view('pages/projek', $data);
+    $this->load->view('pages/senarai_projek_tahunan_get',$data);
     $this->load->view('template/footer');
+
   }
 
 

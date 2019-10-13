@@ -75,6 +75,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('projek/undi')?>">Undi</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('projek/senarai_projek_tahunan')?>">Tahunan</a>
+                </li>
               </ul>
             </div>
           </li>
@@ -156,6 +159,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('projek/undi')?>">Undi</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('projek/tahunan')?>">Tahunan</a>
+                </li>
               </ul>
             </div>
           </li>
@@ -214,6 +220,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('projek/undi')?>">Undi</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('projek/senarai_projek_tahunan')?>">Tahunan</a>
                 </li>
               </ul>
             </div>
@@ -278,6 +287,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('projek/undi')?>">Undi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('projek/senarai_projek_tahunan')?>">Tahunan</a>
                 </li>
               </ul>
             </div>

@@ -96,7 +96,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-4">
                       <label class="tl">Tarikh Siap Sebenar:</label>
-                      <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="tarikhsiapsebenar" name="tarikhsiapsebenar" value="<?php echo $get_detail[0]->lsk_tarikhkerjasiap?>">
+                      <input type="text" data-toggle="datepicker" class="form-control ts" style="font-weight:bold;" id="tarikhsiapsebenar" name="tarikhsiapsebenar" value="<?php echo $get_detail[0]->mrk_tarikhsiapsebenar?>">
                     </div>
                     <div class="col-sm-4">
                       <label class="tl">Tarikh Ambil Milik:</label>
