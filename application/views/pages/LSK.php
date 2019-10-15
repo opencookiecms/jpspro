@@ -291,24 +291,30 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <label class="tl">Perkeso / Workmen's</label>
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="perkeso" name="perkeso" value="<?php echo $get_detail[0]->lsk_perkeso?>">
                   </div>
-                  <div class="col-sm-6">
-                      <label class="tl">Public Liability</label>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="publiability" name="publiability" value="<?php echo $get_detail[0]->lsk_liability?>">
-                  </div>
+             
                 </div>
               </div>
             </div>
 
              <div class="row">
               <div class="col-md-12">
+              <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">PL - Public Liability</h4>
+              <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">AR - All Risk</h4>
+              <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">IK - Insurans Kerja</h4>
                 <div class="form-group row">
-                  <div class="col-sm-6">
-                    <label class="tl">Insuran Kerja</label>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="insurans" name="insurankerja" value="<?php echo $get_detail[0]->lsk_insurans?>">
+                
+                  <div class="col-sm-2">
+                    <label class="tl">Jenis Insurans</label>
+                      <select class="form-control ts" style="font-weight:bold;" id="insurans" name="jenisi">
+                        <option value="<?php echo $get_detail[0]->jenis_insuran?>"><?php echo $get_detail[0]->jenis_insuran?></option>
+                        <option value="PL">PL</option>
+                        <option value="AR">AR</option>
+                        <option value="IK">IK</option>
+                      </select>
                   </div>
                  <div class="col-sm-6">
-                    <label class="tl">All Risk</label>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="allrisk" name="allrisk" value="<?php echo $get_detail[0]->lsk_allrisk?>">
+                    <label class="tl">No Insurans</label>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="noi" name="noi" value="<?php echo $get_detail[0]->insurans_no?>">
                   </div>
                 </div>
               </div>
