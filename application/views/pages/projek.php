@@ -31,7 +31,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           </th>
                           <th>% Pengisian Data</th>
                           <th>
-                            No Sebutharga
+                            No Perolehan
                           </th>
                           <th>
                             Tarikh

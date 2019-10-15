@@ -48,6 +48,18 @@ class Projek_model extends CI_Model{
     return $query->result();
   }
 
+  public function listOrderbytahun($m,$tahun)
+  {
+    $this->db->select('*');
+    $this->db->from('order_nsh');
+    $this->db->join('dp_projek','dp_projek.df_nosebutharga=order_nsh.no_sebutharga','left');
+    $this->db->where('no_jenis',$m);
+     $this->db->where('year(no_tarikh)',$tahun);
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
 
   public function updateOrder($value)
   {

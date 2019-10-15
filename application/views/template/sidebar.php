@@ -48,6 +48,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tempahan')?>">Senarai Pendaftaran</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tahunan')?>">Mengikut Tahunan</a>
+                </li>
               
               </ul>
             </div>
@@ -137,6 +140,9 @@
              
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tempahan')?>">Senarai Pendaftaran</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tahunan')?>">Mengikut Tahunan</a>
                 </li>
               
               </ul>
@@ -260,6 +266,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tempahan')?>">Senarai Pendaftaran</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('Daftar/senarai_tahunan')?>">Mengikut Tahunan</a>
                 </li>
               
               </ul>

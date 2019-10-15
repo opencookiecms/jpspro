@@ -39,7 +39,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
             <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
             <input type="hidden" name="kodvodss" value="<?php echo $get_detail[0]->df_kodvot?>">
              <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
-             <input type="text" name="mrkid" value="<?php echo $get_detail[0]->mrksatuid?>">
+             <input type="hidden" name="mrkid" value="<?php echo $get_detail[0]->mrksatuid?>">
             <div class="card" style="border-radius:10px;">
               <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
                 <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Kategori Pendaftaran</h4>

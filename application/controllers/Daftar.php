@@ -264,4 +264,31 @@ class Daftar extends CI_Controller{
     } 
   }
 
+  public function senarai_tahunan()
+  {
+    $data['title'] = "Senarai Daftar No Perolehan Mengikut Tahunan";
+    $this->load->database();
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+    $this->load->view('pages/senarai_perolehan_tahunan',$data);
+    $this->load->view('template/footer');
+  }
+
+  public function maklumat_tahunan()
+  {
+    $years = $this->input->post('tahun');
+    $maklumat = $this->input->post('maklumat');
+    $data['y'] = $years;
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+
+    $data['noperolehan']=$this->Projek_model->listOrderbytahun($maklumat,$years);
+    
+    $this->load->view('pages/senarai_perolehan',$data);
+    $this->load->view('template/footer');
+
+  }
+
 }
