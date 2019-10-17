@@ -337,10 +337,14 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
 
               <script>
               function nospaces(t){
-  if(t.value.match(/\s/g)){
-    t.value=t.value.replace(/\s/g,'-');
-  }
-}
+                if(t.value.match(/\s/g)){
+                  t.value=t.value.replace(/\s/g,'-');
+                 }
+               if(t.which == 92 || t.which == 47){
+                 return false;
+               }
+                
+              }
               </script>
               <div class="row">
                 <div class="col-md-12">

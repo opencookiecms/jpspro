@@ -314,7 +314,7 @@ class Mrk extends CI_Controller{
 		else
 		{
 			$this->Mrk_model->mrk01update($data ,$this->input->post('nokon'));//load from model and call last id
-		  $this->Mrk_model->update_kosprojek01($data ,$this->input->post('nokon'));//load from model and call last id
+		    $this->Mrk_model->update_kosprojek01($data ,$this->input->post('nokon'));//load from model and call last id
 			//$KodVod=$this->Mrk_model->getLastKodVod();
 			$id = $this->input->post('hiddenid');
 			$this->session->set_userdata('mrk01','Data MRK_01 berjaya dikemaskini');
