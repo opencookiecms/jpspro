@@ -190,10 +190,12 @@ class Report extends CI_Controller{
 
   public function laporan_kodvot($kodvot)
   {
+    $u = $this->session->userdata('name');
+
     $data['getkos']=$this->Record_model->gettotalkosprojekkodvot($kodvot);
     $data['getbelanja']=$this->Record_model->gettotalbelanjakodvot($kodvot);
     $data['getwaran']=$this->Record_model->gettotalwarankodvot($kodvot);
-    $data['laporan_sb']=$this->Record_model->getdetailkodvot($kodvot);
+    $data['laporan_sb']=$this->Record_model->getdetailkodvot($kodvot,$u);
     $this->load->view('pages/laporan',$data);
   }
 

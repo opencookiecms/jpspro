@@ -167,7 +167,7 @@ class Record_model extends CI_Model{
     return $query->result();
   }
 
-  public function getdetailkodvot($id)
+  public function getdetailkodvot($id,$x)
   {
     $this->load->helper('url');
 
@@ -186,6 +186,7 @@ class Record_model extends CI_Model{
     $this->db->join('mrk_suratwjp', 'mrk_suratwjp.swjp_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('kos_projek', 'kos_projek.kos_nosebut=mrk_satu.mrk_nokontrak','left');
     $this->db->where('dp_projekinfo.df_kodvot',$id); 
+    $this->db->where('dp_projekinfo.df_penolong',$x);
 
    $query = $this->db->get();
 
