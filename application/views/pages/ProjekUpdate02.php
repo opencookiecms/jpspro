@@ -329,7 +329,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Kod Vot (Tanpa Space)</label>
-                        <input type="text" class="form-control" onkeyup="nospaces(this)" name="vot" placeholder="Vot" value="<?php echo $get_detail[0]->df_kodvot?>">
+                        <input type="text" class="form-control" id="vot" onkeyup="nospaces(this)" name="vot" placeholder="Vot" value="<?php echo $get_detail[0]->df_kodvot?>">
                     </div>
                   </div>
                 </div>
@@ -340,11 +340,16 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 if(t.value.match(/\s/g)){
                   t.value=t.value.replace(/\s/g,'-');
                  }
-               if(t.which == 92 || t.which == 47){
-                 return false;
-               }
                 
               }
+              $(function(){
+  $('#vot').keypress(function(e){
+    if(e.which == 92 || e.which == 47){
+    } else {
+      return false;
+    }
+  });
+});
               </script>
               <div class="row">
                 <div class="col-md-12">
