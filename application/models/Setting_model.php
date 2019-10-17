@@ -49,7 +49,7 @@ class Setting_model extends CI_Model{
       'set_id'=> $id
     );
 
-    
+
     $this->db->where('set_id', $id);
 
     $this->db->update('mrk_setting', $data);
@@ -163,12 +163,12 @@ class Setting_model extends CI_Model{
 
     $password = $this->input->post('pass');
     $id = $value;
- 
+
     $data = array(
-  
+
       'jps_password'=> md5($password),
       'user_id'=>$id
- 
+
     );
 
 
@@ -286,7 +286,7 @@ class Setting_model extends CI_Model{
 
   public function updatesungai($id)
   {
-   
+
      $data = array(
       'sg_name'=> $this->input->post("sungainama"),
       'sg_cabang'=> $this->input->post("sungaicabang"),

@@ -14,8 +14,8 @@ class Daftar extends CI_Controller{
   public function index()
   {
 
-    $ss = $this->session->userdata("nama");
-	echo $ss;
+    $ss = $this->session->userdata("name");
+
     $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
     $data['get_count'] = $this->Setting_model->getcount($ss);
     $data['get_list']=$this->Projek_model->listOrder();
@@ -31,7 +31,7 @@ class Daftar extends CI_Controller{
 
   public function senarai_tempahan()
   {
- 
+
     $data['thistempahan'] = "Semua";
     $ss = $this->session->userdata("nama");
     $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
@@ -99,7 +99,7 @@ class Daftar extends CI_Controller{
      echo $datas, $data2;
   }
 
-     
+
 
   public function stepsatu()
   {
@@ -252,7 +252,7 @@ class Daftar extends CI_Controller{
     {
       $isistem = $this->Projek_model->isubsistem($sistem);
       echo $isistem;
-    } 
+    }
   }
 
   public function isComponent()
@@ -262,7 +262,7 @@ class Daftar extends CI_Controller{
     {
       $issubsistem = $this->Projek_model->iscomponent($subsistem);
       echo $issubsistem;
-    } 
+    }
   }
 
   public function senarai_tahunan()
@@ -286,7 +286,7 @@ class Daftar extends CI_Controller{
     $this->load->view('template/sidebar');
 
     $data['noperolehan']=$this->Projek_model->listOrderbytahun($maklumat,$years);
-    
+
     $this->load->view('pages/senarai_perolehan',$data);
     $this->load->view('template/footer');
 
