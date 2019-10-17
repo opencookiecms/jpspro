@@ -214,6 +214,8 @@ class Mrk_model extends CI_Model{
       'lsk_perkeso' => $mrk_perkeso,
       'jenis_insuran' => $this->input->post('jenisi'),
       'insurans_no' => $this->input->post('noi'),
+      'jenis_insuran2' => $this->input->post('jenisi2'),
+      'insurans_no2' => $this->input->post('noi2'),
       'lskmrksatuid' =>$mrk_hiddenid
     );
 
@@ -830,6 +832,8 @@ class Mrk_model extends CI_Model{
       'lsk_perkeso' => $mrk_perkeso,
       'jenis_insuran' => $this->input->post('jenisi'),
       'insurans_no' => $this->input->post('noi'),
+      'jenis_insuran2' => $this->input->post('jenisi2'),
+      'insurans_no2' => $this->input->post('noi2'),
     
       'lskmrksatuid' =>$mrk_hiddenid
 

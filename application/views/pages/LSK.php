@@ -295,7 +295,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 </div>
               </div>
             </div>
-
+                    
              <div class="row">
               <div class="col-md-12">
               <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">PL - Public Liability</h4>
@@ -304,16 +304,16 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                 
                   <div class="col-sm-2">
-                    <label class="tl">Jenis Insurans</label>
+                    <label class="tl">Jenis Insurans 01</label>
                       <select class="form-control ts" style="font-weight:bold;" id="insurans" name="jenisi">
-                        <option value="<?php echo $get_detail[0]->jenis_insuran?>"><?php echo $get_detail[0]->jenis_insuran?></option>
+                        <option value=" <?php echo $get_detail[0]->jenis_insuran?>"> <?php echo $get_detail[0]->jenis_insuran?></option>
                         <option value="PL">PL</option>
                         <option value="AR">AR</option>
                         <option value="IK">IK</option>
                       </select>
                   </div>
                  <div class="col-sm-6">
-                    <label class="tl">No Insurans</label>
+                    <label class="tl">No Insurans 01</label>
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="noi" name="noi" value="<?php echo $get_detail[0]->insurans_no?>">
                   </div>
                 </div>
@@ -321,17 +321,17 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 <div class="form-group row">
                 
                   <div class="col-sm-2">
-                    <label class="tl">Jenis Insurans</label>
+                    <label class="tl">Jenis Insurans 02 </label>
                       <select class="form-control ts" style="font-weight:bold;" id="insurans2" name="jenisi2">
-                        <option value="<?php echo $get_detail[0]->jenis_insuran?>"><?php echo $get_detail[0]->jenis_insuran?></option>
+                        <option value="<?php echo $get_detail[0]->jenis_insuran?>"><?php echo $get_detail[0]->jenis_insuran2?></option>
                         <option value="PL">PL</option>
                         <option value="AR">AR</option>
                         <option value="IK">IK</option>
                       </select>
                   </div>
                  <div class="col-sm-6">
-                    <label class="tl">No Insurans</label>
-                      <input type="text" class="form-control ts" style="font-weight:bold;" id="noi2" name="noi2" value="<?php echo $get_detail[0]->insurans_no?>">
+                    <label class="tl">No Insurans 02</label>
+                      <input type="text" class="form-control ts" style="font-weight:bold;" id="noi2" name="noi2" value="<?php echo $get_detail[0]->insurans_no2?>">
                   </div>
                 </div>
               </div>
