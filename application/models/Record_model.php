@@ -363,19 +363,21 @@ class Record_model extends CI_Model{
 
   //report user
 
-  public function gettotalkosprojekkodvotu()
+  public function gettotalkosprojekkodvotu($x)
   {
     $this->db->select('SUM(kos_tanggung) AS totalkos');
     $this->db->from('kos_projek');
+    $this->db->where('kos_user',$x);
     $query = $this->db->get();
 
     return $query->result();
   }
 
-  public function gettotalbelanjakodvotu()
+  public function gettotalbelanjakodvotu($x)
   {
     $this->db->select('SUM(kos_belanja) AS totalbelanha');
     $this->db->from('kos_projek');
+    $this->db->where('kos_user',$x);
     $query = $this->db->get();
 
     return $query->result();

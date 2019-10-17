@@ -72,7 +72,7 @@ class Mrk extends CI_Controller{
 		}
 		else
 		{
-		  $lass = $this->input->post('hiddenid');
+		    $lass = $this->input->post('hiddenid');
 			$this->Mrk_model->create_mrksatu();//load from model and call last id
 			$this->Mrk_model->create_kosprojek();
 		

@@ -203,8 +203,8 @@ class Report extends CI_Controller{
   {
     $u = $this->session->userdata('name');
 
-    $data['getkos']=$this->Record_model->gettotalkosprojekkodvotu();
-    $data['getbelanja']=$this->Record_model->gettotalbelanjakodvotu();
+    $data['getkos']=$this->Record_model->gettotalkosprojekkodvotu($u);
+    $data['getbelanja']=$this->Record_model->gettotalbelanjakodvotu($u);
     $data['getwaran']=$this->Record_model->gettotalwarankodvotu($u);
     $data['laporan_sb']=$this->Record_model->getdetailkodvotu($u);
     $this->load->view('pages/laporan',$data);
