@@ -31,7 +31,13 @@ $jawatanketuabahagian = $get_detail[0]->lsk_jawatanketuab;
 $juruterajs = $get_detail[0]->lsk_juruteraj;
 $jawatanj = $get_detail[0]->lsk_jawatanjuruteraj;
 
-$incode = "WK";
+$ins1 = $get_detail[0]->insurans_no;
+$ins2 = $get_detail[0]->insurans_no2;
+
+$jins1 = $get_detail[0]->jenis_insuran;
+$jins2 = $get_detail[0]->jenis_insuran2;
+
+
 
 
 
@@ -81,8 +87,21 @@ $pdf->Write(0,$wc,0,1,'C');
 $pdf->SetXY(134, 113);
 $pdf->Write(0,$liabili,0,1,'C');
 
-$pdf->SetXY(126, 113);
-$pdf->Write(0,$incode,0,1,'C');
+$pdf->SetXY(105, 113);
+$pdf->SetFont('Times','B',10);
+$pdf->Write(0,$jins1.' - ',0,1,'C');
+
+$pdf->SetFont('Times','',10);
+$pdf->SetXY(114, 113);
+$pdf->Write(0,$ins1,0,1,'C');
+
+$pdf->SetXY(144, 113);
+$pdf->SetFont('Times','B',10);
+$pdf->Write(0,$jins2.' - ',0,1,'C');
+
+$pdf->SetFont('Times','',10);
+$pdf->SetXY(153, 113);
+$pdf->Write(0,$ins2,0,1,'C');
 
 $pdf->SetXY(69, 122);
 $pdf->Write(0,$kodperuntukan,0,1,'C');
