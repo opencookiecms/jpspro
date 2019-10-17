@@ -345,9 +345,8 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               $(function(){
   $('#vot').keypress(function(e){
     if(e.which == 92 || e.which == 47){
-    } else {
       return false;
-    }
+    } 
   });
 });
               </script>
