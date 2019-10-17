@@ -156,12 +156,12 @@ class Record_model extends CI_Model{
     return $query->result();
   }
 
-  public function gettotalwarankodvot($id,$x)
+  public function gettotalwarankodvot($id)
   {
     $this->db->select('SUM(df_bakiperuntukan) AS totalwaran');
     $this->db->from('dp_projekinfo');
     $this->db->where('df_kodvot',$id);
-    $this->db->where('df_penolong',$x);
+    //$this->db->where('df_penolong',$x);
 
     $query = $this->db->get();
 
