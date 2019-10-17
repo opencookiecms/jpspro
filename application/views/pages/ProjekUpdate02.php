@@ -329,11 +329,19 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   <div class="form-group row">
                     <div class="col-sm-3">
                       <label class="tl">Kod Vot (Tanpa Space)</label>
-                        <input type="text" class="form-control"  name="vot" placeholder="Vot" value="<?php echo $get_detail[0]->df_kodvot?>">
+                        <input type="text" class="form-control" onkeyup="nospaces(this)" name="vot" placeholder="Vot" value="<?php echo $get_detail[0]->df_kodvot?>">
                     </div>
                   </div>
                 </div>
               </div>
+
+              <script>
+              function nospaces(t){
+  if(t.value.match(/\s/g)){
+    t.value=t.value.replace(/\s/g,'');
+  }
+}
+              </script>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group row">
