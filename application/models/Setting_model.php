@@ -63,28 +63,15 @@ class Setting_model extends CI_Model{
     $this->db->delete('mrk_setting');
   }
 
-  public function getcount($user,$r)
+  public function getcount()
   {
    
-    if($r =="user")
-    {
-         $this->db->select("projek_id, COUNT(*) AS TOTAL, COUNT(IF(df_jsebutharga='Lantikan Terus',1,null)) AS lt, COUNT(IF(df_jsebutharga='Undi',1,null)) AS undi, COUNT(IF(df_jsebutharga='Sebutharga',1,null)) AS sb");
-         $this->db->from('dp_projek');
-         $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id','right');
-         $this->db->where('dp_projekinfo.df_penolong',$user);
-         $query = $this->db->get();
-         return $query->result();
-    }
-    else
-    {
-         $this->db->select("projek_id, COUNT(*) AS TOTAL, COUNT(IF(df_jsebutharga='Lantikan Terus',1,null)) AS lt, COUNT(IF(df_jsebutharga='Undi',1,null)) AS undi, COUNT(IF(df_jsebutharga='Sebutharga',1,null)) AS sb");
-         $this->db->from('dp_projek');
-          $query = $this->db->get();
-          return $query->result();
-    }
   
-
-
+    $this->db->select("projek_id, COUNT(*) AS TOTAL, COUNT(IF(df_jsebutharga='Lantikan Terus',1,null)) AS lt, COUNT(IF(df_jsebutharga='Undi',1,null)) AS undi, COUNT(IF(df_jsebutharga='Sebutharga',1,null)) AS sb");
+    $this->db->from('dp_projek');
+    $query = $this->db->get();
+    return $query->result();
+  
   }
 
   public function getjawatan()
