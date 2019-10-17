@@ -1133,7 +1133,7 @@ class Mrk_model extends CI_Model{
   {
    
     $data = array(
-      'mrk_majukerja' => $this->input->post('peratusan')
+      'mrk_psebenar' => $this->input->post('peratusan')
     );
 
     $this->db->where('mrk_mainid', $id);
