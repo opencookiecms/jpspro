@@ -255,6 +255,14 @@
               <span class="menu-title">Dokumen Bayaran</span>
             </a>
           </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('report/laporan_semua_user')?>">
+              <i class="menu-icon mdi mdi-content-copy"></i>
+              <span class="menu-title">Laporan</span>
+            </a>
+          </li>
+
           <li class="nav-item">
              <a class="nav-link" href="<?php echo base_url()?>assets/docx/user_manual.pdf" download="User Manual">
               <i class="menu-icon mdi  mdi-home-modern"></i>
