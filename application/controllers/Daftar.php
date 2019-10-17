@@ -14,7 +14,8 @@ class Daftar extends CI_Controller{
   public function index()
   {
 
-    $ss = $this->session->userdata("nama");
+    $ss = $this->session->userdata("name");
+
     $profile['get_sessionprofile'] = $this->Setting_model->getprofiledetails($ss);
     $data['get_count'] = $this->Setting_model->getcount($ss);
     $data['get_list']=$this->Projek_model->listOrder();
