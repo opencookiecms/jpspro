@@ -199,6 +199,18 @@ class Report extends CI_Controller{
     $this->load->view('pages/laporan',$data);
   }
 
+  public function laporan_semua_user()
+  {
+    $u = $this->session->userdata('name');
+
+    $data['getkos']=$this->Record_model->gettotalkosprojekkodvotu();
+    $data['getbelanja']=$this->Record_model->gettotalbelanjakodvotu();
+    $data['getwaran']=$this->Record_model->gettotalwarankodvotu($u);
+    $data['laporan_sb']=$this->Record_model->getdetailkodvotu($u);
+    $this->load->view('pages/laporan',$data);
+  }
+
+
   public function addtext()
   {
     $this->load->view('print/apdf');
