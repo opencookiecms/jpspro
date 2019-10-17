@@ -48,6 +48,10 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <div class="col-sm-4">
                             <button type="submit" name="submit" data-toggle="tooltip" data-placement="bottom" title="Kemaskini maklumat peratusan semasa" class="btn btn-primary mr-2 btn-rounded ">Simpan</button>
                           </div>
+                         <div class="col-sm-4">
+                         <p>
+                          <a target="_blank" class="btn btn-dark"href="<?php  echo site_url('Report/laporan_kodvot/'.$get_detail[0]->df_kodvot); ?>">Laporan</a>
+                         </div>
                         </div>
                       </div>
                     </div>
