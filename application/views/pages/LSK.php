@@ -303,7 +303,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
               <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">IK - Insurans Kerja</h4>
                 <div class="form-group row">
                 
-                  <div class="col-sm-2">
+                  <div class="col-sm-3">
                     <label class="tl">Jenis Insurans 01</label>
                       <select class="form-control ts" style="font-weight:bold;" id="insurans" name="jenisi">
                         <option value=" <?php echo $get_detail[0]->jenis_insuran?>"> <?php echo $get_detail[0]->jenis_insuran?></option>
@@ -320,7 +320,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
 
                 <div class="form-group row">
                 
-                  <div class="col-sm-2">
+                  <div class="col-sm-3">
                     <label class="tl">Jenis Insurans 02 </label>
                       <select class="form-control ts" style="font-weight:bold;" id="insurans2" name="jenisi2">
                         <option value="<?php echo $get_detail[0]->jenis_insuran?>"><?php echo $get_detail[0]->jenis_insuran2?></option>
