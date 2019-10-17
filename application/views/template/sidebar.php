@@ -120,6 +120,13 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url()?>assets/pdf/user_manual.pdf" download="User Manual">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">User Manual</span>
+            </a>
+          </li>
+
           <?php break; ?>
 
           <?php case "special": ?>
@@ -197,6 +204,13 @@
               <span class="menu-title">Dokumen Bayaran</span>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url()?>assets/pdf/user_manual.pdf" download="User Manual">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">User Manual</span>
+            </a>
+          </li>
  
     
       
@@ -241,13 +255,19 @@
               <span class="menu-title">Dokumen Bayaran</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url()?>assets/pdf/user_manual.pdf" download="User Manual">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">User Manual</span>
+            </a>
+          </li>
       
   
           <?php break;?>
 
 
           <?php case "clerk": ?>
-        <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('mydashboard')?>">
               <i class="menu-icon mdi  mdi-home-modern"></i>
               <span class="menu-title">Halaman Utama</span>
@@ -303,6 +323,13 @@
               </ul>
             </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url()?>assets/pdf/user_manual.pdf" download="User Manual">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">User Manual</span>
+            </a>
+          </li>
+          
       
           <?php break; ?>
 
