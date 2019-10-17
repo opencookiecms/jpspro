@@ -194,7 +194,7 @@ class Report extends CI_Controller{
 
     $data['getkos']=$this->Record_model->gettotalkosprojekkodvot($kodvot);
     $data['getbelanja']=$this->Record_model->gettotalbelanjakodvot($kodvot);
-    $data['getwaran']=$this->Record_model->gettotalwarankodvot($kodvot);
+    $data['getwaran']=$this->Record_model->gettotalwarankodvot($kodvot,$u);
     $data['laporan_sb']=$this->Record_model->getdetailkodvot($kodvot,$u);
     $this->load->view('pages/laporan',$data);
   }
