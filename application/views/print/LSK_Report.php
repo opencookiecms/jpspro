@@ -31,6 +31,8 @@ $jawatanketuabahagian = $get_detail[0]->lsk_jawatanketuab;
 $juruterajs = $get_detail[0]->lsk_juruteraj;
 $jawatanj = $get_detail[0]->lsk_jawatanjuruteraj;
 
+$incode = "WK";
+
 
 
 $tarikhjangka = $get_detail[0]->mrk_tarikhjangkasiap;
@@ -78,6 +80,9 @@ $pdf->Write(0,$wc,0,1,'C');
 
 $pdf->SetXY(134, 113);
 $pdf->Write(0,$liabili,0,1,'C');
+
+$pdf->SetXY(126, 113);
+$pdf->Write(0,$incode,0,1,'C');
 
 $pdf->SetXY(69, 122);
 $pdf->Write(0,$kodperuntukan,0,1,'C');
