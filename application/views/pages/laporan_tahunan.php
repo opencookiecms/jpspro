@@ -71,7 +71,7 @@ word-wrap: break-word;
                 <th class="br">
                 Butiran Kontrak</br>(1)Nama Kontraktor</br>(2)No.Kontrak/Sebutharga</br>(3)Mula/Siap</br>(4)EOT</br>
                 </th>
-                <th>Waran Diterima (A)</th>
+                <th>Waran Diterima (A) test</th>
                 <th>Perbelanjaan (B)</th>
                 <th>Tanggungan (C)</th>
                 <th>Baki</th>
@@ -91,25 +91,16 @@ word-wrap: break-word;
             ?>
             <tr>
                 <td><?php echo $bil ?></td>
-                <td><a target="_blank" href="
-                          <?php 
-                          if($this->session->userdata('roles')=="clerk")
-                          {
-
-                          }
-                          else{
-                            echo site_url('Report/laporan_kodvot/'.$row->df_kodvot); 
-                          }
-                          ?>" >
+                     <td>
                           
-                          <?php echo $row->df_kodvot?></a></td>
+                          <?php echo $row->df_kodvot?></td>
                 <td><?php echo $row->df_tajuk?></td>
                 <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
                 <td>
-                (1) <?php echo $row->mrk_namakon?></br>
-                (2) <?php echo $row->df_nosebutharga?></br>
-                (3) <?php echo $row->mrk_tarikhmulakon?> / <?php echo $row->mrk_tarikhjangkasiap?></br>
-                (4) <?php echo $row->mrk_laddari?> / <?php echo $row->mrk_ladsehingga?></br>
+                <div class="sp1">(1) <?php echo $row->mrk_namakon?> test</div>
+                <div class="sp2">(2) <?php echo $row->df_nosebutharga?></div>
+                (3) <?php echo $row->mrk_tarikhmulakon?> / <?php echo $row->mrk_tarikhjangkasiap?>
+                (4) <?php echo $row->mrk_laddari?> / <?php echo $row->mrk_ladsehingga?>
                 </td>
                 <td><?php echo number_format($row->df_bakiperuntukan,2)?></td>
                 <td><?php echo number_format($row->kos_belanja,2)?></td>
@@ -200,9 +191,10 @@ word-wrap: break-word;
                $('row c[r^="E"]', sheet).attr( 's', '55' );
                $('row c[r*="A"]', sheet).attr( 's', '25' );
                $('row c[r*="B"]', sheet).attr( 's', '25' );
-               $('row c[r*="C"]', sheet).attr( 's', '25' );
+               $('row c[r*="C"]', sheet).attr( 's', '55' );
+               //$('row c[r*="C"]', sheet).attr( 'ht', '60' );
                $('row c[r*="D"]', sheet).attr( 's', '25' );
-               $('row c[r*="E"]', sheet).attr( 's', '25' );
+               $('row c[r*="E"]', sheet).attr( 's', '55' );
                $('row c[r*="F"]', sheet).attr( 's', '25' );
                $('row c[r*="G"]', sheet).attr( 's', '25' );
                $('row c[r*="H"]', sheet).attr( 's', '25' );
@@ -215,10 +207,15 @@ word-wrap: break-word;
                   format: {
                     body: function ( data, row, column, node ) {
                         // Strip $ from salary column to make it numeric
-                         return column === 4 ?
-                         data.replace( /<br\s*\/?>/ig, "\n" ):
-                         data;
-                          }
+                         //return column === 4 ? data.replace( /<br\s*\/?>/ig, "\n" ):data;
+                         //return column >= 7 && column <= 9 ? 
+                        return column >= 7 && column <= 9 ?
+                        
+                         data.replace( /[$,.]/g, '' ) : 
+                         data.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+                         data.replace( /[Waran]/g, 'test' );
+                           
+                       }
                      }
                 },
             },

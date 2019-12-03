@@ -25,8 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://www.jpskmsb.gov.my/jpspro';
-//$config['base_url'] = 'http://localhost/jpspro';
+//config['base_url'] = 'http://www.jpskmsb.gov.my/jpspro';
+$config['base_url'] = 'http://localhost/jpspro';
 //$c/onfig['base_url'] = 'http://192.168.64.2/jpspro';
 
 /*
