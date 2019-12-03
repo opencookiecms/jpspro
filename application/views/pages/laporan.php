@@ -95,11 +95,11 @@ word-wrap: break-word;
                           <?php echo $row->df_kodvot?></td>
                 <td><?php echo $row->df_tajuk?></td>
                 <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
-                <td></br>
-                (1)<?php echo $row->mrk_namakon?></br>
-                (2)<?php echo $row->df_nosebutharga?></br>
-                (3)<?php echo $row->mrk_tarikhmulakon?> / <?php echo $row->mrk_tarikhjangkasiap?></br>
-                (4)<?php echo $row->mrk_laddari?> / <?php echo $row->mrk_ladsehingga?></br>
+                 <td>
+                (1) <?php echo $row->mrk_namakon?>
+                (2) <?php echo $row->df_nosebutharga?>
+                (3) <?php echo $row->mrk_tarikhmulakon?> / <?php echo $row->mrk_tarikhjangkasiap?>
+                (4) <?php echo $row->mrk_laddari?> / <?php echo $row->mrk_ladsehingga?>
                 </td>
                 <td><?php echo number_format($row->df_bakiperuntukan,2)?></td>
                 <td><?php echo number_format($row->kos_belanja,2)?></td>

@@ -91,14 +91,12 @@ word-wrap: break-word;
             ?>
             <tr>
                 <td><?php echo $bil ?></td>
-                     <td>
-                          
-                          <?php echo $row->df_kodvot?></td>
+                <td><?php echo $row->df_kodvot?></td>
                 <td><?php echo $row->df_tajuk?></td>
                 <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
                 <td>
-                <div class="sp1">(1) <?php echo $row->mrk_namakon?> test</div>
-                <div class="sp2">(2) <?php echo $row->df_nosebutharga?></div>
+                (1) <?php echo $row->mrk_namakon?>
+                (2) <?php echo $row->df_nosebutharga?>
                 (3) <?php echo $row->mrk_tarikhmulakon?> / <?php echo $row->mrk_tarikhjangkasiap?>
                 (4) <?php echo $row->mrk_laddari?> / <?php echo $row->mrk_ladsehingga?>
                 </td>
@@ -211,10 +209,9 @@ word-wrap: break-word;
                          //return column >= 7 && column <= 9 ? 
                         return column >= 7 && column <= 9 ?
                         
-                         data.replace( /[$,.]/g, '' ) : 
-                         data.replace(/(&nbsp;|<([^>]+)>)/ig, "");
-                         data.replace( /[Waran]/g, 'test' );
-                           
+                         //data.replace( /[$,.]/g, '' ) : data.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+                         data.replace( /(&nbsp;|<([^>]+)>)/ig, ""):data;
+                         
                        }
                      }
                 },
