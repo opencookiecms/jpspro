@@ -22,6 +22,39 @@ class Report extends CI_Controller{
     
   }
 
+  public function Report_xls()
+
+  {
+    $data['getkos']=$this->Record_model->gettotalkosprojek();
+    $data['getbelanja']=$this->Record_model->gettotalbelanja();
+    $data['getwaran']=$this->Record_model->gettotalwaran();
+    $data['laporan_sb']=$this->Record_model->getdetail();
+    $data['kira']=$this->Record_model->count_row_rows();
+    $this->load->view('print/laporan_excel',$data);
+  }
+
+  public function Report_xls_kod_vod($kodvot="")
+
+  {
+    $data['getkos']=$this->Record_model->gettotalkosprojekkodvot($kodvot);
+    $data['getbelanja']=$this->Record_model->gettotalbelanjakodvot($kodvot);
+    $data['getwaran']=$this->Record_model->gettotalwarankodvot($kodvot);
+    $data['laporan_sb']=$this->Record_model->getdetailkodvot($kodvot);
+    $data['kira']=$this->Record_model->count_row_row($kodvot);
+    $this->load->view('print/laporan_excel',$data);
+  }
+
+  public function Report_xls_tahunan($years="")
+
+  {
+    $data['getkos']=$this->Record_model->gettotalkosprojekbyyear($years);
+    $data['getbelanja']=$this->Record_model->gettotalbelanjabyyear($years);
+    $data['getwaran']=$this->Record_model->gettotalwaranbyyear($years);
+    $data['laporan_sb']=$this->Record_model->getdetailbyyear($years);
+    $data['kira']=$this->Record_model->count_row_rowy($kodvot);
+    $this->load->view('print/laporan_excel',$data);
+  }
+
   public function Report_MRK_02($value="")
   {
     $this->load->database();
@@ -190,14 +223,17 @@ class Report extends CI_Controller{
 
   public function laporan_kodvot($kodvot)
   {
-    $u = $this->session->userdata('name');
+   // $u = $this->session->userdata('name');
 
     $data['getkos']=$this->Record_model->gettotalkosprojekkodvot($kodvot);
     $data['getbelanja']=$this->Record_model->gettotalbelanjakodvot($kodvot);
-    $data['getwaran']=$this->Record_model->gettotalwarankodvot($kodvot,$u);
-    $data['laporan_sb']=$this->Record_model->getdetailkodvot($kodvot,$u);
-    $this->load->view('pages/laporan',$data);
+    $data['getwaran']=$this->Record_model->gettotalwarankodvot($kodvot);
+    $data['laporan_sb']=$this->Record_model->getdetailkodvot($kodvot);
+    $this->load->view('pages/laporan_kodvot',$data);
+    
   }
+
+
 
   public function laporan_semua_user()
   {
