@@ -51,7 +51,7 @@ class Report extends CI_Controller{
     $data['getbelanja']=$this->Record_model->gettotalbelanjabyyear($years);
     $data['getwaran']=$this->Record_model->gettotalwaranbyyear($years);
     $data['laporan_sb']=$this->Record_model->getdetailbyyear($years);
-    $data['kira']=$this->Record_model->count_row_row($kodvot);
+    $data['kira']=$this->Record_model->count_row_rowy($kodvot);
     $this->load->view('print/laporan_excel',$data);
   }
 
