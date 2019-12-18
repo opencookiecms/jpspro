@@ -60,6 +60,9 @@ word-wrap: break-word;
     <!-- Begin page content -->
     <main role="main" class="container">
     <div class="mt-5"></div>
+    <a href="<?php echo site_url('Report/report_xls') ?>" class="btn btn-success">Excel</a>
+    <p>
+    
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
@@ -90,15 +93,13 @@ word-wrap: break-word;
             ?>
             <tr>
                 <td><?php echo $bil ?></td>
-                <td>
-                          
-                          <?php echo $row->df_kodvot?></td>
+                <td><a href="<?php echo site_url('report/laporan_kodvot/'.$row->df_kodvot)?>"><?php echo $row->df_kodvot?></a></td>
                 <td><?php echo $row->df_tajuk?></td>
                 <td><?php echo number_format($row->mrk_kosprojek,2)?></td>
                  <td>
-                (1) <?php echo $row->mrk_namakon?>
-                (2) <?php echo $row->df_nosebutharga?>
-                (3) <?php echo $row->mrk_tarikhmulakon?> / <?php echo $row->mrk_tarikhjangkasiap?>
+                (1) <?php echo $row->mrk_namakon?></br>
+                (2) <?php echo $row->df_nosebutharga?></br>
+                (3) <?php echo $row->mrk_tarikhmulakon?> / <?php echo $row->mrk_tarikhjangkasiap?></br>
                 (4) <?php echo $row->mrk_laddari?> / <?php echo $row->mrk_ladsehingga?>
                 </td>
                 <td><?php echo number_format($row->df_bakiperuntukan,2)?></td>
@@ -175,55 +176,7 @@ word-wrap: break-word;
                 head.appendChild(style);
          }
         },
-         
-              
-            {
-               extend: 'excelHtml5',
-               footer: true,
-               text: '<i class="text-primary"></i> <strong>Export to Excel</strong>',
-          
-               
-               className: 'btn btn-primary', 
-                customize: function(xlsx) {
-                var sheet = xlsx.xl.worksheets['sheet1.xml'];
-               $('row c[r^="E"]', sheet).attr( 's', '55' );
-               $('row c[r*="A"]', sheet).attr( 's', '25' );
-               $('row c[r*="B"]', sheet).attr( 's', '25' );
-               $('row c[r*="C"]', sheet).attr( 's', '55' );
-               $('row c[r*="D"]', sheet).attr( 's', '25' );
-               $('row c[r*="E"]', sheet).attr( 's', '55' );
-               //$('row c[r*="E"]', sheet).attr( 's', '52' );
-               $('row c[r*="F"]', sheet).attr( 's', '25' );
-               $('row c[r*="G"]', sheet).attr( 's', '25' );
-               $('row c[r*="H"]', sheet).attr( 's', '25' );
-               $('row c[r*="I"]', sheet).attr( 's', '25' );
-               $('row c[r*="J"]', sheet).attr( 's', '25' );
-               $('row c[r*="K"]', sheet).attr( 's', '25' );
-                
-              },
-                  exportOptions: {
-                      //columns: ':visible',
-            // rows: ':visible',
-        
-                  format: {
-                    body: function ( data, row, column, node ) {
-                        // Strip $ from salary column to make it numeric
-                        return column >= 7 && column <= 9 ? 
-                         data.replace( /[$,.]/g, '' ) : data.replace(/(&nbsp;|<([^>]+)>)/ig, "");
-                         data.replace( /<li\s*\/?>/gmi, "\n" );
-                         
-                        }
-                     },
-                      modifier : {
-             order : 'index', // 'current', 'applied','index', 'original'
-             page : 'all', // 'all', 'current'
-             search : 'none' // 'none', 'applied', 'removed'
-         },
-                  
-                },
-            },
 
-          
             {
                extend: 'pdfHtml5',
                footer: true,
