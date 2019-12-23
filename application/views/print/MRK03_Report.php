@@ -42,7 +42,7 @@ $pdf->useTemplate($tplIdx, 0, 0, 210);
 
 
 $pdf->SetFont('Times','',11);
-$pdf->SetTextColor('black');
+$pdf->SetTextColor(0,0,0);
 
 $pdf->SetXY(58,31);
 $pdf->Write(0,$nopkk,0,1,'C'); 
@@ -93,7 +93,7 @@ $pdf->SetXY(84, 205);
 $pdf->MultiCell(110,5,$ulasan,0,'J');
 
 $pdf->SetFont('Times','',12);
-$pdf->SetTextColor('black');
+$pdf->SetTextColor(0,0,0);
 $pdf->SetXY(44, 246);
 $pdf->Write(0,$pegawai,0,1,'C');
 $pdf->SetXY(44, 255);

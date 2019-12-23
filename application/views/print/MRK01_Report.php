@@ -27,7 +27,7 @@ $pdf->useTemplate($tplIdx, 5, 5, 200);
 
 // now write some text above the imported page
 $pdf->SetFont('Arial','',12);
-$pdf->SetTextColor('black');
+$pdf->SetTextColor(0,0,0);
 $pdf->SetXY(75, 51);
 $pdf->Write(0,$nopkk,0,1,'C');
 $pdf->SetXY(75, 59);

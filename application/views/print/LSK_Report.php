@@ -61,7 +61,7 @@ $pdf->SetFont('Times','',14);
 $pdf->Write(0,$gred,0,1,'C');
 // now write some text above the imported page
 $pdf->SetFont('Times','',10);
-$pdf->SetTextColor('black');
+$pdf->SetTextColor(0,0,0);
 
 $pdf->SetXY(69, 45);
 $pdf->Write(0,$kontraktor,0,1,'C');

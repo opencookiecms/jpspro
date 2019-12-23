@@ -54,7 +54,7 @@ $pdf->useTemplate($tplIdx, 5, 5, 200);
 
 // now write some text above the imported page
 $pdf->SetFont('Times','',11);
-$pdf->SetTextColor('black');
+$pdf->SetTextColor(0,0,0);
 $pdf->SetXY(73, 36);
 $pdf->Write(0,$nopkk,0,1,'C');
 $pdf->SetXY(73, 42);
