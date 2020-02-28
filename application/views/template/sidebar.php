@@ -123,7 +123,14 @@
           <li class="nav-item">
              <a class="nav-link" href="<?php echo base_url()?>assets/docx/user_manual.pdf" download="User Manual">
               <i class="menu-icon mdi  mdi-home-modern"></i>
-              <span class="menu-title">User Manual</span>
+              <span class="menu-title">User Manual 1</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+             <a class="nav-link" href="<?php echo base_url()?>assets/docx/MANUAL_SISTEM.doc" download="User Manual">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">Manual Sistem</span>
             </a>
           </li>
 
@@ -211,6 +218,13 @@
               <span class="menu-title">User Manual</span>
             </a>
           </li>
+
+          <li class="nav-item">
+             <a class="nav-link" href="<?php echo base_url()?>assets/docx/MANUAL_SISTEM.doc" download="User Manual">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">Manual Sistem</span>
+            </a>
+          </li>
  
     
       
@@ -267,6 +281,13 @@
              <a class="nav-link" href="<?php echo base_url()?>assets/docx/user_manual.pdf" download="User Manual">
               <i class="menu-icon mdi  mdi-home-modern"></i>
               <span class="menu-title">User Manual</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+             <a class="nav-link" href="<?php echo base_url()?>assets/docx/MANUAL_SISTEM.doc" download="User Manual">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">Manual Sistem</span>
             </a>
           </li>
       
@@ -335,6 +356,13 @@
             <a class="nav-link" href="<?php echo base_url()?>assets/docx/user_manual.pdf" download="User Manual">
               <i class="menu-icon mdi  mdi-home-modern"></i>
               <span class="menu-title">User Manual</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+             <a class="nav-link" href="<?php echo base_url()?>assets/docx/MANUAL_SISTEM.doc" download="User Manual">
+              <i class="menu-icon mdi  mdi-home-modern"></i>
+              <span class="menu-title">Manual Sistem</span>
             </a>
           </li>
           
