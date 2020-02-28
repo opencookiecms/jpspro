@@ -30,6 +30,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                 echo form_open('mrk/SS_Update');
               }
         ?>
+         <input type="hidden" name="main_id" value="<?php echo $get_detail[0]->projek_id?>">
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#747d8c;border-radius:10px;">
             <h4 class="card-title ts" style="color:#ffda79;font-weight:bold;">Senarai Semakan</h4>

@@ -42,6 +42,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <input type="hidden" value="<?php echo $get_detail[0]->df_kodvot ?>" name="kodvods">
                       <input type="hidden" name="mrksatuid" value="<?php echo $get_detail[0]->mrksatuid?>">
                       <input type="hidden" name="hiddenids" value="<?php echo $get_detail[0]->projek_id ?>">
+                       <input type="hidden" name="main_id" value="<?php echo $get_detail[0]->projek_id?>">
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="nopkk" name="nopkk" value="<?php echo $get_detail[0]->mrk_nopkk ?>" placeholder="No Pendaftaran PKK" readonly>
                     </div>
                   </div>

@@ -31,6 +31,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                   echo form_open('Surat/Surat_WJP_Update/'.$get_detail[0]->projek_id);
                 }
           ?>
+           <input type="hidden" name="main_id" value="<?php echo $get_detail[0]->projek_id?>">
         <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
             <h4 class="card-title ts" style="color:#38ada9;font-weight:bold;">Surat Pelepasan WJP</h4>

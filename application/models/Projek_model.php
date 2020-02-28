@@ -30,8 +30,10 @@ class Projek_model extends CI_Model{
   public function listOrder()
   {
     $this->db->select('*');
-    $this->db->from('order_nsh');
+    $this->db->from('order_nsh');  
     $this->db->join('dp_projek','dp_projek.df_nosebutharga=order_nsh.no_sebutharga','left');
+    $this->db->where('YEAR(order_nsh.no_tarikh)','2020');
+    
     $query = $this->db->get();
 
     return $query->result();
@@ -43,6 +45,7 @@ class Projek_model extends CI_Model{
     $this->db->from('order_nsh');
     $this->db->join('dp_projek','dp_projek.df_nosebutharga=order_nsh.no_sebutharga','left');
     $this->db->where('no_jenis',$tempahan);
+    $this->db->where('YEAR(order_nsh.no_tarikh)','2020');
     $query = $this->db->get();
 
     return $query->result();
@@ -220,7 +223,7 @@ class Projek_model extends CI_Model{
 
   ///////end of update function//////////////////////////////////////////////////////////////////
 
-  public function get_projekview($jp)
+  public function get_projekview($jp, $y)
   {
 
     $this->db->select('*');
@@ -230,6 +233,7 @@ class Projek_model extends CI_Model{
     $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id');
     $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
     $this->db->where('dp_projek.df_jsebutharga',$jp);
+    $this->db->where('YEAR(dp_projek.df_tarikmohon)', $y);
     $query = $this->db->get();
     return $query->result();
   }
@@ -261,7 +265,7 @@ class Projek_model extends CI_Model{
     return $query->result();
   }
 
-  public function get_projekviewbyu($user,$jp)
+  public function get_projekviewbyu($user,$jp,$y)
   {
 
     $this->db->select('*');
@@ -272,6 +276,7 @@ class Projek_model extends CI_Model{
     $this->db->join('dp_gps', 'dp_gps.dp_id = dp_projek.projek_id');
     $this->db->where('dp_projekinfo.df_penolong',$user);
     $this->db->where('dp_projek.df_jsebutharga',$jp);
+    $this->db->where('YEAR(dp_projek.df_tarikmohon)', $y);
    
     $query = $this->db->get();
     return $query->result();

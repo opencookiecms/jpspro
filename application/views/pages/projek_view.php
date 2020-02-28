@@ -7,7 +7,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
     <div class="row purchace-popup">
       <div class="col-12">
         <span class="d-block d-md-flex align-items-center">
-          <p class="tls text-white">Senarai Dokument Berkaitan Sebutharga.</p>
+          <p class="tls text-white">Senarai Dokumen Berkaitan Sebutharga.</p>
         </span>
       </div>
     </div>

@@ -49,6 +49,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                     <div class="col-md-12">
                         <div class="form-group row">
                               <div class="col-sm-8">
+                              <input type="hidden" name="main_id" value="<?php echo $get_detail[0]->projek_id?>">
                           <label class="tl">**No Sebutharga</label>
                           <input type="text" class="form-control ts" style="font-weight:bold;" id="nokon" readonly name="nokon" value="<?php echo $get_detail[0]->df_nosebutharga ?>" placeholder="No Kontrak">
                         </div>

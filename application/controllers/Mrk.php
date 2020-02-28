@@ -19,6 +19,7 @@ class Mrk extends CI_Controller{
 
 	public function index()
 	{
+		//echo "efdfdfdf";
 		$this->load->view('template/header');
 		$this->load->view('template/nav');
 		$this->load->view('template/sidebar');

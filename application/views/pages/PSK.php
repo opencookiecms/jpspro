@@ -40,6 +40,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
                       <label class="tl">Nama Pemborong</label>
                       <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->mrksatuid?>">
                       <input type="hidden" name="hiddenids" value="<?php echo $get_detail[0]->projek_id?>">
+                       <input type="hidden" name="main_id" value="<?php echo $get_detail[0]->projek_id?>">
                       <input type="text" class="form-control ts" style="font-weight:bold;" id="namapombr" name="namapomb" value="<?php echo $get_detail[0]->mrk_namakon?>" placeholder="Nama Pemborong" readonly>
                     </div>
                   </div>

@@ -69,6 +69,7 @@ class Setting_model extends CI_Model{
   
     $this->db->select("projek_id, COUNT(*) AS TOTAL, COUNT(IF(df_jsebutharga='Lantikan Terus',1,null)) AS lt, COUNT(IF(df_jsebutharga='Undi',1,null)) AS undi, COUNT(IF(df_jsebutharga='Sebutharga',1,null)) AS sb");
     $this->db->from('dp_projek');
+    $this->db->where('YEAR(df_tarikmohon)', date('Y'));
     $query = $this->db->get();
     return $query->result();
   

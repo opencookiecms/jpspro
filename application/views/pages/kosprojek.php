@@ -36,6 +36,7 @@ background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, F
             }
 
             ?>
+             <input type="hidden" name="main_id" value="<?php echo $get_detail[0]->projek_id?>">
             <input type="hidden" name="kodvods" value="<?php echo $get_detail[0]->df_kodvot?>">
              <input type="hidden" name="hiddenid" value="<?php echo $get_detail[0]->projek_id?>">
              <input type="text" name="mrkid" value="<?php echo $get_detail[0]->mrksatuid?>">

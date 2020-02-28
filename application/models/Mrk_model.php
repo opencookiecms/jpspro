@@ -34,6 +34,7 @@ class Mrk_model extends CI_Model{
     $mrk_kosprojek = $this->input->post("kosprojek");
     $mrk_tarikh = $this->input->post("tarikh");
     $mrk_kodvots = $this->input->post("kodvods");
+    
 
     $data = array(
       'mrk_nopkk' => $mrk_nopkk,
@@ -53,7 +54,9 @@ class Mrk_model extends CI_Model{
       'mrk_jawatan' => $mrk_jawatan,
       'mrk_kosprojek' => $mrk_kosprojek,
       'mrk_tarikh' => $mrk_tarikh,
-      'mrks_kodvot'=>$mrk_kodvots
+      'mrksatu_id' => 0,
+      'mrks_kodvot'=>$mrk_kodvots,
+      'main_id'=>$this->input->post('main_id')
     );
 
     return $this->db->insert('mrk_satu', $data);
@@ -158,7 +161,7 @@ class Mrk_model extends CI_Model{
       'mrksatu_id' => $mrk_satuid,
       'mrk2_noinden' => $mrk_noinden,
       'mrk2_kodvots'=>$mrk_kodvots,
-      'mrk_mainid' => $mrk_mainid
+      'main_id'=>$this->input->post('main_id')
     );
 
     return $this->db->insert('mrk_dua', $data);
@@ -218,7 +221,8 @@ class Mrk_model extends CI_Model{
       'insurans_no' => $this->input->post('noi'),
       'jenis_insuran2' => $this->input->post('jenisi2'),
       'insurans_no2' => $this->input->post('noi2'),
-      'lskmrksatuid' =>$mrk_hiddenid
+      'lskmrksatuid' =>$mrk_hiddenid,
+      'main_id'=>$this->input->post('main_id')
     );
 
     return $this->db->insert('mrk_laporansiap', $data);
@@ -279,7 +283,8 @@ class Mrk_model extends CI_Model{
       'tiga_catat6'=>  $tiga_catat6,
       'tiga_catat7'=>  $tiga_catat7,
       'tiga_catat8'=>  $tiga_catat8,
-      'mrk_ulasan'=> $ulasan
+      'mrk_ulasan'=> $ulasan,
+      'main_id'=>$this->input->post('main_id')
 
 
     );
@@ -306,7 +311,8 @@ class Mrk_model extends CI_Model{
       'mrk_tarikhtamattanggungcacat' => $mrk_tarikhtamattanggungcacat,
       'pskmrksatuid'=>$mrk_pskmrkid,
       'mrk_pskinden'=>$mrk_pskinden,
-      'psk_kodvots' =>$psk_kodvots
+      'psk_kodvots' =>$psk_kodvots,
+      'main_id'=>$this->input->post('main_id')
     );
 
     return $this->db->insert('mrk_perakuansiap', $data);
@@ -365,7 +371,8 @@ class Mrk_model extends CI_Model{
       'ss_mrkid'=>   $ss_mrkid,
       'ss_kodvot' => $ss_kodvot,
       'ss_disediakan' => $ss_disediakan,
-      'ss_date' =>  $ss_date
+      'ss_date' =>  $ss_date,
+      'main_id'=>$this->input->post('main_id')
 
 
     );
@@ -404,7 +411,8 @@ class Mrk_model extends CI_Model{
       'mrk_jawatanpp' => $mrk_jawatanpp,
       'mrkid_id' => $mrk_satuid,
       'psmk_kodvots' => $mrk_mrkkodvot,
-      'psmk_inden' => $mrk_noinden
+      'psmk_inden' => $mrk_noinden,
+      'main_id'=>$this->input->post('main_id')
     );
 
     return $this->db->insert('mrk_perakuansiapbaikicacat', $data);
@@ -428,7 +436,8 @@ class Mrk_model extends CI_Model{
       'jb_alamatsurat' =>$alamatsurat,
       'js_mrkid' => $js_mrkid,
       'js_kodvot' => $js_kodvot,
-      'js_inden' => $js_inden
+      'js_inden' => $js_inden,
+      'main_id'=>$this->input->post('main_id')
 
 
 
@@ -464,7 +473,8 @@ class Mrk_model extends CI_Model{
       'ppwjp_jawatan' => $ppwjp_jawatan,
       'ppwjp_mrkid' => $ppwjp_mrkid,
       'ppwjp_inden' => $ppwjp_inden,
-      'ppwjp_kodvot' => $ppwjp_kodvot
+      'ppwjp_kodvot' => $ppwjp_kodvot,
+      'main_id'=>$this->input->post('main_id')
     );
 
     return $this->db->insert('mrk_ppwjp', $data);

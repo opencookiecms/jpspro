@@ -197,7 +197,17 @@ class Report extends CI_Controller{
     $data['getkos']=$this->Record_model->gettotalkosprojekbyyear($years);
     $data['getbelanja']=$this->Record_model->gettotalbelanjabyyear($years);
     $data['getwaran']=$this->Record_model->gettotalwaranbyyear($years);
-    $data['laporan_sb']=$this->Record_model->getdetailbyyear($years);
+  
+    if($this->session->userdata('roles')=='user')
+    {
+      $username = $this->session->userdata('name');
+      $data['laporan_sb']=$this->Record_model->getdetailbyyear($years,$username);
+    }
+    else
+    {
+      $data['laporan_sb']=$this->Record_model->getdetailbyyear($years);
+    }
+    
     $this->load->view('pages/laporan_tahunan',$data);
    // $this->load->view('template/footer');
   }

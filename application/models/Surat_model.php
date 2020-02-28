@@ -33,7 +33,8 @@ class Surat_model extends CI_Model{
   		's_pegawaikuasa' => $s_pegawaikuasa,
   		's_jawatanpp' => $s_jawatanpp,
       's_mrkid' => $s_mrkid,
-      's_kodvot'=> $s_kodvot
+      's_kodvot'=> $s_kodvot,
+      'main_id'=>$this->input->post('main_id')
   		);
 
   	return $this->db->insert('mrk_suratmrk', $data);
@@ -58,7 +59,8 @@ class Surat_model extends CI_Model{
   		'skhas_jawatanpp' => $skhas_jawatanpp,
       'skhas_inden' => $skhas_inden,
       'skhas_kodvot'=> $skhas_kodvot,
-      'skhas_mrkid' => $skhas_mrkid
+      'skhas_mrkid' => $skhas_mrkid,
+      'main_id'=>$this->input->post('main_id')
   		);
 
   	return $this->db->insert('mrk_suratkhas', $data);
@@ -91,7 +93,8 @@ class Surat_model extends CI_Model{
   		'swjp_jawatanpp' => $swjp_jawatanpp,
       'swjp_inden' => $swjp_inden,
       'swjp_kodvot'=> $swjp_kodvot,
-      'swjp_mrkid'=> $swjp_mrkid
+      'swjp_mrkid'=> $swjp_mrkid,
+      'main_id'=>$this->input->post('main_id')
   		);
 
   	return $this->db->insert('mrk_suratwjp', $data);

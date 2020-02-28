@@ -52,15 +52,16 @@ class Projek extends CI_Controller
     $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $jenisprojek = "Sebutharga";
+    $d = date("Y");
     if($this->session->userdata('roles')=='user')
     {
     
       $username = $this->session->userdata('name');
-      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek);
+      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek,$d);
     }
     else
     {
-      $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek);
+      $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek,$d);
     }
 
     $this->load->view('pages/projek', $data);
@@ -74,15 +75,16 @@ class Projek extends CI_Controller
     $this->load->view('template/nav');
     $this->load->view('template/sidebar');
     $jenisprojek = "Undi";
+    $d = date("Y");
     if($this->session->userdata('roles')=='user')
     {
     
       $username = $this->session->userdata('name');
-      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek);
+      $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek,$d);
     }
     else
     {
-      $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek);
+      $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek, $d);
     }
 
     $this->load->view('pages/projek', $data);
@@ -96,15 +98,16 @@ class Projek extends CI_Controller
       $this->load->view('template/nav');
       $this->load->view('template/sidebar');
       $jenisprojek = "Lantikan Terus";
+      $d = date("Y");
         if($this->session->userdata('roles')=='user')
         {
         
           $username = $this->session->userdata('name');
-          $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek);
+          $data['get_projek']=$this->Projek_model->get_projekviewbyu($username,$jenisprojek,$d);
         }
         else
         {
-          $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek);
+          $data['get_projek']=$this->Projek_model->get_projekview($jenisprojek,$d);
         }
 
         $this->load->view('pages/projek', $data);
