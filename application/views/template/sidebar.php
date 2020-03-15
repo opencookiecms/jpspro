@@ -40,7 +40,7 @@
               <span class="menu-title">Daftar No.Perolehan</span>
                 <i class="menu-arrow"></i>
             </a>
-               <div class="collapse" id="ui">
+            <div class="collapse" id="ui">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo site_url('Daftar/orderSebutharga')?>">Pendaftaran</a>
@@ -55,12 +55,25 @@
               </ul>
             </div>
           </li>
-           <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('daftar/stepsatu')?>">
-              <i class="menu-icon mdi  mdi-source-fork"></i>
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basicss" aria-expanded="false" aria-controls="ui-basicss">
+              <i class="menu-icon mdi  mdi-elevation-rise"></i>
               <span class="menu-title">Maklumat Perolehan</span>
+                <i class="menu-arrow"></i>
             </a>
+            <div class="collapse" id="ui-basicss">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('daftar/stepsatu')?>">Pendaftaran</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo site_url('daftar/semakdaftar')?>">Senarai Semak</a>
+                </li> 
+              </ul>
+            </div>
           </li>
+
           <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi  mdi-source-fork"></i>

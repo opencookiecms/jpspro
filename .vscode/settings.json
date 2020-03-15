@@ -2,7 +2,7 @@
     "editor.find.autoFindInSelection": true,
     "workbench.colorTheme": "Sublime Material Theme - Dark",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
     "editor.formatOnPaste": true,
     
 }

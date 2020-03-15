@@ -131,7 +131,7 @@ class Daftar extends CI_Controller{
 
   }
 
-  public function stepdua($idvalue='')
+    public function stepdua($idvalue='')
   {
     $data['title'] = 'Maklumat Perolehan';
     $data['idval'] = $idvalue;
@@ -160,6 +160,63 @@ class Daftar extends CI_Controller{
       redirect(base_url('daftar/steptiga/'.$lastId ));
     }
 
+
+  }
+
+  public function stepdua_dua($idvalue='')
+  {
+    $data['title'] = 'Maklumat Perolehan';
+    $data['idval'] = $idvalue;
+    $data['get_user']=$this->Setting_model->get_userdatasetting();
+    $data['get_keypeople']=$this->Setting_model->get_Datasetting();
+
+    echo $idvalue;
+
+    $this->form_validation->set_rules('dp_idpost','must have one unique id','required');
+
+
+    if($this->form_validation->run() === FALSE)
+    {
+
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/steptwotwo',$data);
+      $this->load->view('template/footer');
+    }
+    else
+    {
+
+      $this->projek_model->create_steptwo();//load from model
+      redirect(base_url('daftar/semakdaftar'));
+    }
+
+
+  }
+
+  public function steptiga_tiga($idvalue='')
+  {
+
+    $data['get_sungai'] = $this->Projek_model->getsungai();
+    $data['get_sistem'] = $this->Projek_model->issistem();
+    $data['title'] = 'Maklumat Perolehan';
+    $data['idval'] = $idvalue;
+
+    $this->form_validation->set_rules('dp_idpost','must have one unique id','required');
+
+
+    if($this->form_validation->run() === FALSE)
+    {
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/stepthreethree',$data);
+      $this->load->view('template/footer');
+    }
+    else {
+      $this->projek_model->create_stepthree();//load from model
+      redirect(base_url('daftar/semakdaftar'));
+    }
 
   }
 
@@ -292,4 +349,16 @@ class Daftar extends CI_Controller{
 
   }
 
+
+  public function semakdaftar()
+  {
+    $this->load->view('template/header');
+    $this->load->view('template/nav');
+    $this->load->view('template/sidebar');
+
+    $data['semakdaftar'] = $this->Projek_model->getSemakDaftar();
+    $this->load->view('pages/semakdaftar',$data);
+    
+    $this->load->view('template/footer');
+  }
 }

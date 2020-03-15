@@ -651,6 +651,26 @@ class Projek_model extends CI_Model{
   }
 
 
+  public function getSemakDaftar()
+  {
+    
+      $this->db->select('*, dp_gps.dp_id AS gps_dp_id, dp_projekinfo.dp_id AS dp_idinfo');
+      $this->db->from('dp_projek');
+
+      //Tambah join 2 table.,.,
+      $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id','LEFT');
+      $this->db->join('dp_gps','dp_gps.dp_id = dp_projek.projek_id','LEFT');
+
+      $query = $this->db->get();
+      return $query->result();
+
+  }
+
+  
+
+
+ 
+
 
 
 

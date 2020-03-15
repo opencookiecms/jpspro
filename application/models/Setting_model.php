@@ -344,9 +344,7 @@ class Setting_model extends CI_Model{
   public function delkursus($id)
   {
     $this->load->helper('url');
-    //$this->db->
     $this->db->where('ks_id', $id);
-    $this->db->delete('mrk_kursus');
+    $this->db->delete('mrk_khusus');
   }
-
 }

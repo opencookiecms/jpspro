@@ -75,7 +75,7 @@ word-wrap: break-word;
                 </th>
                 <th>Waran Diterima (A)</th>
                 <th>Perbelanjaan (B)</th>
-                <th>Tanggungan (C) test</th>
+                <th>Tanggungan (C)</th>
                 <th>Baki</th>
                 <th>Perbelanjaan<br> Sehingga<br> 2019</th>
                 <th>Kemajuan Projek</th>

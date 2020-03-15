@@ -71,7 +71,7 @@ word-wrap: break-word;
                 <th class="br">
                 Butiran Kontrak</br>(1)Nama Kontraktor</br>(2)No.Kontrak/Sebutharga</br>(3)Mula/Siap</br>(4)EOT</br>
                 </th>
-                <th>Waran Diterima (A) test</th>
+                <th>Waran Diterima (A)</th>
                 <th>Perbelanjaan (B)</th>
                 <th>Tanggungan (C)</th>
                 <th>Baki</th>
