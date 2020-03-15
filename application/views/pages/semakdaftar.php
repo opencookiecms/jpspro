@@ -41,7 +41,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                         <?php $bil=0;?>
                         <?php foreach ($semakdaftar as $row): $bil++?>
                          <tr>
-                          <td class="py-1"><?php echo $bil?> <?php echo $row->projek_id?>   <?php echo $row->dp_idinfo?> <?php echo $row->gps_dp_id?>  </td>
+                          <td class="py-1"><?php echo $bil?></td>
                           <td style="white-space: normal !important;word-wrap: break-word;min-width: 250px;max-width: 250px;"><?php echo $row->df_tajuk?><br><br><a class="text-primary"><?php echo $row->df_penolong?></a></td>
                           <td class="py-1"><?php echo $row->df_nosebutharga?></td>
                           <td>
@@ -82,6 +82,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <?php else: ?>
                           <a class="text-danger">Error</a>
                           <?php endif; ?>
+
+                          <a href="<?php echo site_url("projek/deletedelete/" . $row->projek_id); ?>" class="btn btn-danger" role="button" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Delete Data?')"><i class="menu-icon mdi mdi-content-cut"></i>delete</a>
 
                           </td>
                           

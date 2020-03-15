@@ -293,6 +293,17 @@ class Projek extends CI_Controller
   }
 
 
+ public function deletedelete($id)
+  {
+  
+    $this->Projek_model->delete1($id);
+    $this->Projek_model->delete2($id);
+    $this->Projek_model->delete3($id);
+    redirect(base_url('daftar/semakdaftar'));
+
+  }
+
+
 
 }
 
