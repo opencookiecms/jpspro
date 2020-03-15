@@ -68,7 +68,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           </td>
                           <td>
                           <?php if($row->dp_idinfo != $row->projek_id):?>
-                          <a href="<?php echo site_url("daftar/stepdua_dua/" . $row->projek_id); ?>" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Update" role="button" onclick="return confirm('Update Data?')">2</a> 
+                          <a href="<?php echo site_url("daftar/stepdua_dua/" . $row->projek_id); ?>" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Update" role="button" onclick="return confirm('Update Data?')">Tahap 2</a> 
                           <?php elseif($row->dp_idinfo == $row->projek_id): ?>
                           <button type="button" class="btn btn-primary" disabled>Tahap 2</button>
                           <?php else: ?>
@@ -76,7 +76,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <?php endif; ?>
 
                           <?php if($row->gps_dp_id != $row->projek_id):?>
-                          <a href="<?php echo site_url("daftar/steptiga_tiga/" . $row->projek_id); ?>" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Update" role="button" onclick="return confirm('Update Data?')">3</a>
+                          <a href="<?php echo site_url("daftar/steptiga_tiga/" . $row->projek_id); ?>" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Update" role="button" onclick="return confirm('Update Data?')">Tahap 3</a>
                           <?php elseif($row->gps_dp_id == $row->projek_id): ?>
                          
                           <button type="button" class="btn btn-primary"disabled>Tahap 3</button>
