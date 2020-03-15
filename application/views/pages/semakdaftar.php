@@ -70,7 +70,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <?php if($row->dp_idinfo != $row->projek_id):?>
                           <a href="<?php echo site_url("daftar/stepdua_dua/" . $row->projek_id); ?>" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Update" role="button" onclick="return confirm('Update Data?')">2</a> 
                           <?php elseif($row->dp_idinfo == $row->projek_id): ?>
-                          <img src="<?php echo base_url()?>assets/images/success.png" alt="error">
+                          <button type="button" class="btn btn-info" disable>2</button>
                           <?php else: ?>
                           <a class="text-danger">Error</a>
                           <?php endif; ?>
@@ -78,7 +78,8 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
                           <?php if($row->gps_dp_id != $row->projek_id):?>
                           <a href="<?php echo site_url("daftar/steptiga_tiga/" . $row->projek_id); ?>" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Update" role="button" onclick="return confirm('Update Data?')">3</a>
                           <?php elseif($row->gps_dp_id == $row->projek_id): ?>
-                          <img src="<?php echo base_url()?>assets/images/success.png" alt="error">
+                         
+                          <button type="button" class="btn btn-success" disable>3</button>
                           <?php else: ?>
                           <a class="text-danger">Error</a>
                           <?php endif; ?>
