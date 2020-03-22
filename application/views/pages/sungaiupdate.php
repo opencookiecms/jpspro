@@ -8,7 +8,7 @@ background: linear-gradient(to bottom, #516395, #614385); /* W3C, IE 10+/ Edge, 
     <div class="col-12 grid-margin">
 
 
-      <?php echo form_open('setting_con/sungaiupdate'); ?>
+      <?php echo form_open('Setting_con/sungaiupdate'); ?>
       <div class="card" style="border-radius:10px;">
           <div class="card-body" style="background-color:#dfe4ea;border-radius:10px;">
     

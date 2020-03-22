@@ -334,10 +334,33 @@ class Setting_model extends CI_Model{
 
     $data = array(
       'ks_kscode' => $this->input->post("kkode"),
-      'ks_ksname' => $this->input->post("kname")
+      'ks_ksname' => $this->input->post("kname"),
+      'ks_desc' => $this->input->post("discrip")
     );
 
     return $this->db->insert('mrk_khusus',$data);
+  }
+
+  public function get_kkodebyid($val)
+  {
+    $this->db->select('*');
+    $this->db->from('mrk_khusus');
+    $this->db->where('ks_id',$val);
+
+    $query = $this->db->get();
+    return $query->result();
+  }
+
+  public function updatekhususset($data, $val)
+  {
+    $data = array(
+      'ks_kscode' => $this->input->post("kkode"),
+      'ks_ksname' => $this->input->post("kname"),
+      'ks_desc' => $this->input->post("discrip")
+    );
+
+    $this->db->where('ks_id',$val);
+    $this->db->update('mrk_khusus', $data);
   }
 
 

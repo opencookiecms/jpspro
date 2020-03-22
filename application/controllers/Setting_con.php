@@ -343,7 +343,7 @@ class Setting_con extends CI_Controller{
     redirect('Setting_con/senarai_sungai');
   }
 
-  public function sungaiupdate($value)
+  public function sungaiupdate($value="")
   {
     $this->load->database();
     $check = $this->input->post("hiddenid");
@@ -418,6 +418,26 @@ class Setting_con extends CI_Controller{
 			$this->Setting_model->addkhususset();//load from model and call last id
       redirect(base_url('Setting_con/khususkod')); //redirect last id to another step
 		}
+  }
+
+  public function khususkodupdate($id="")
+  {
+    
+    $this->form_validation->set_rules('kkode', 'Kode', 'required');
+    $data['get_kodebyid'] = $this->Setting_model->get_kkodebyid($id);
+
+    if ($this->form_validation->run() ==  FALSE) {
+      $this->load->view('template/header');
+      $this->load->view('template/nav');
+      $this->load->view('template/sidebar');
+      $this->load->view('pages/updatekhusus', $data);
+      $this->load->view('template/footer');
+    } else {
+      $this->Setting_model->updatekhususset($data,$this->input->post('ksid')); //load from model and call last id
+      redirect(base_url('Setting_con/khususkod')); //redirect last id to another step
+    }
+    
+
   }
 
 
