@@ -52,7 +52,7 @@ $spreadsheet->getActiveSheet()->getCell('F2')->setValue("Waran Diterima (A)");
 $spreadsheet->getActiveSheet()->getCell('G2')->setValue("Perbelanjaan (B)");
 $spreadsheet->getActiveSheet()->getCell('H2')->setValue("Tanggungan (B)");
 $spreadsheet->getActiveSheet()->getCell('I2')->setValue("Baki");
-$spreadsheet->getActiveSheet()->getCell('J2')->setValue("Perbelanjaan Sehingga 2019");
+$spreadsheet->getActiveSheet()->getCell('J2')->setValue("Perbelanjaan Sehingga 2020");
 $spreadsheet->getActiveSheet()->getCell('K2')->setValue("Kemajuan Projek");
 
 $no = 1;

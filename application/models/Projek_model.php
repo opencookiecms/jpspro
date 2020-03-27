@@ -660,6 +660,7 @@ class Projek_model extends CI_Model{
       //Tambah join 2 table.,.,
       $this->db->join('dp_projekinfo', 'dp_projekinfo.dp_id = dp_projek.projek_id','LEFT');
       $this->db->join('dp_gps','dp_gps.dp_id = dp_projek.projek_id','LEFT');
+      $this->db->where('year(df_tarikmohon)','2020');
 
       $query = $this->db->get();
       return $query->result();

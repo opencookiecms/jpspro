@@ -28,6 +28,7 @@ class Record_model extends CI_Model{
     $this->db->join('mrk_suratwjp', 'mrk_suratwjp.swjp_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('kos_projek', 'kos_projek.kos_nosebut=mrk_satu.mrk_nokontrak','left');
     $this->db->order_by('dp_projekinfo.df_kodvot');
+    $this->db->where('year(dp_projek.df_tarikmohon)','2020');
 
 
     $query = $this->db->get();
@@ -92,6 +93,8 @@ class Record_model extends CI_Model{
   {
     $this->db->select('SUM(kos_belanja) AS totalbelanha');
     $this->db->from('kos_projek');
+    $this->db->like('kos_nosebut','2020');
+
 
     $query = $this->db->get();
 
@@ -115,6 +118,8 @@ class Record_model extends CI_Model{
   {
     $this->db->select('SUM(df_bakiperuntukan) AS totalwaran');
     $this->db->from('dp_projekinfo');
+    $this->db->join('dp_projek', 'dp_projekinfo.dp_id = dp_projek.projek_id');
+    $this->db->where('year(dp_projek.df_tarikmohon)','2020');
 
     $query = $this->db->get();
 
@@ -139,6 +144,7 @@ class Record_model extends CI_Model{
   {
     $this->db->select('SUM(kos_tanggung) AS totalkos');
     $this->db->from('kos_projek');
+    $this->db->like('kos_nosebut','2020');
 
     $query = $this->db->get();
 

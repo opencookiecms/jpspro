@@ -70,14 +70,14 @@ word-wrap: break-word;
                 <th>Kod Peruntukan</th>
                 <th>Tajuk Projek</th>
                 <th>Harga Kontrak</th>
-              <th class="br">
+                <th>
                 Butiran Kontrak</br>(1)Nama Kontraktor</br>(2)No.Kontrak/Sebutharga</br>(3)Mula/Siap</br>(4)EOT</br>
                 </th>
                 <th>Waran Diterima (A)</th>
                 <th>Perbelanjaan (B)</th>
                 <th>Tanggungan (C)</th>
                 <th>Baki</th>
-                <th>Perbelanjaan<br> Sehingga<br> 2019</th>
+                <th>Perbelanjaan<br> Sehingga<br> 2020</th>
                 <th>Kemajuan Projek</th>
             </tr>
         </thead>
@@ -137,6 +137,20 @@ word-wrap: break-word;
     </main>
     <script>
     $(document).ready(function(){   
+
+    var fixNewLine = {
+        exportOptions: {
+            format: {
+                body: function ( data, column, row ) {
+                    // Strip $ from salary column to make it numeric
+                    return column === 4 ?
+                        data.replace(/test/ig, "blablabla"):
+                        //data.replace( /<br\s*\/?>/ig, "\n" ):
+                        data;
+                }
+            }
+        }
+    };
     $('#example').DataTable({
       
        responsive: true,
@@ -184,12 +198,23 @@ word-wrap: break-word;
                pageSize: 'LEGAL',
                className: 'btn btn-primary',
                exportOptions:{
-                 stripNewlines:false
+                 stripNewlines:false,
+                 stripHtml:true, 
+                 //columns: [1,2,4,5,6,7,8,9],
+                 format  : {
+                   header : function (data, column, row){
+      
+                     return data.replace( /<br\s*\/?>/ig, "\n" );
+                   }
+                 }
                },
                customize:function(doc){
                   doc.content[1].table.body[0][4].alignment = 'left';
+                  doc.content[1].table.body[0][0].alignment = 'center';
+                  doc.content[1].table.widths = ['5%','8%','15%','10%','20%','7%','7%','7%','7%','7%','7%']
+               
                }
-              
+           
             } 
         ]
    
