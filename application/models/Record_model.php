@@ -648,6 +648,7 @@ class Record_model extends CI_Model{
     $this->db->join('mrk_suratkhas', 'mrk_suratkhas.skhas_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('mrk_suratwjp', 'mrk_suratwjp.swjp_mrkid=mrk_satu.mrksatuid','left');
     $this->db->join('kos_projek', 'kos_projek.kos_nosebut=mrk_satu.mrk_nokontrak','left');
+    $this->db->where('year(dp_projek.df_tarikmohon)','2020');
     //$this->db->where('dp_projekinfo.df_kodvot',$id); 
     //$this->db->where('dp_projekinfo.df_penolong',$x);
 
